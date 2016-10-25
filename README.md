@@ -1,7 +1,8 @@
 # article-reconstruction
 
 
-
+## Tesseract Output Format (hOCR)
+See the /examples directory for an hOCR file and the image it came from.
 
 
 ## Article Reconstructor Output Format
