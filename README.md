@@ -4,7 +4,7 @@
 
 
 
-# Article Recontstructor Output Format
+## Article Reconstructor Output Format
 
 - The fields which are decided as final output for the Article regeneration, are mentioned below as JSON. These fields will act as input to search module for indexing and searching. {Items commented still TBD}
 ```
