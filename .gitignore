@@ -3,9 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# tagged data files
-/tagged_data
-
 # Vim files
 *.swp
 *~
+_vimrc
+
