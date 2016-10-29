@@ -2,9 +2,10 @@
 
 import calendar
 import glob
-import re
 import regex
+import sys
 
+from nltk.metrics import distance
 import pandas as pd
 
 
@@ -14,25 +15,35 @@ def main():
     paths = glob.glob("tagged_data/*.csv")
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
     issue = pd.read_csv(paths[0], header = None, names = columns)
-    find_date(issue)
+    print(find_date(issue))
 #    construct_tagged(issue)
 
 
-def find_date(issue):
+def find_date(issue, max_error = 5):
     dows = "|".join(calendar.day_name)
     months = "|".join(calendar.month_name)[1:]
-    fmt_str = r"(?:\s*({0})\s*.\s*({1})\s*([1-3]*[0-9]+)\s*.\s*"
-    pattern = fmt_str.format(dows, months) + "((?:19|20)[0-9]{2})\s*){e<5}"
-    compiled = regex.compile(pattern, flags = regex.ENHANCEMATCH)
-    print(fmt_str.format(dows, months) + "((?:19|20)[0-9]{2})\s*){e<10}")
+    fmt_str = "(?:\s*({0})\s*.\s*({1})\s*([1-3]*[0-9]+)\s*.\s*" + \
+              "((?:19|20)[0-9]{{2}})\s*){{e<{2}}}"
+    pattern = regex.compile(fmt_str.format(dows, months, max_error),
+                            flags = regex.ENHANCEMATCH)
+    best_match = None
+    best_counts = sys.maxsize
     for _, row in issue[issue.function == "PI"].iterrows():
-        print(row)
-        match = regex.search(compiled, row.text, concurrent = True)
+        match = regex.search(pattern, row.text, concurrent = True)
         if match:
-            print("-" * 40)
-            print(match.group(1), match.group(2), match.group(3),
-                  match.group(4))
-            print("-" * 40)
+            if best_match is None or match.fuzzy_counts < best_counts:
+                best_match = match
+                best_counts = match.fuzzy_counts
+    dow = edit_match(match.group(1), calendar.day_name)
+    month = edit_match(match.group(2), calendar.month_name)
+    day = edit_match(match.group(3), map(str, range(1, 32)))
+    year = edit_match(match.group(4), map(str, range(1901, 2021)))
+    return dow, month, day, year
+
+
+def edit_match(match, candidates):
+    return min(candidates,
+               key = lambda candidate: distance.edit_distance(match, candidate))
 
 
 def construct_tagged(issue):
