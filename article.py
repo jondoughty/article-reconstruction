@@ -2,7 +2,7 @@
 
 import calendar
 import glob
-import re
+import regex
 import sys
 import json
 
@@ -101,8 +101,10 @@ def check_article(article):
 
 def get_text(article):
     '''Return joined article text.'''
-    # FIXME: this function doesn't work correctly when paragraph numbering
-    # is out of order from the OCR.
+    # sort article by paragraph numbering before join
+    article.sort_values(by='paragraph', ascending=True)
+
+    # reconstruct text in order.
     return " ".join(article[article.function == "TXT"].text.values)
 
 
