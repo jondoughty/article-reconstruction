@@ -64,9 +64,9 @@ def construct_tagged(issue):
             check_article(article)
             headline = get_headline(article)
             author = get_byline(article)
+            text = get_text(article)
             pages = get_pages(article)
             article_number = int(article.article.values[0])
-            text = " ".join(article[article.function == "TXT"].text.values)
             article_data = {"article_date": "today",
                             "article_headline": headline, "page_number": pages,
                             "author": author, "article_number": n,
@@ -76,6 +76,7 @@ def construct_tagged(issue):
     issue_df.index.name = "id"
     print(issue_df)
 
+
 def check_article(article):
     '''Assertions to confirm the article is tagged as expected'''
     # check correct paragraph ordering
@@ -83,21 +84,29 @@ def check_article(article):
     lst = list(range(1, len(paragraph_nums) + 1))
     if paragraph_nums != lst:
         article_num = article.article.unique()[0]
-        # print ('article number: ', article_num)
+        print ('Paragraph numbering for article {} appears incorrect,'\
+               ' please check.'.format(article_num))
         print ('paragraph numbering used: ', paragraph_nums)
         print ('paragraphs should be: ', lst)
-        raise Exception('Paragraph numbering for article {} appears incorrect,'\
-                         ' please check.'.format(article_num))
+        print ('\n')
+
+
+def get_text(article):
+    '''Return joined article text.'''
+    # FIXME: this function doesn't work correctly when paragraph numbering
+    # is out of order from the OCR.
+    return " ".join(article[article.function == "TXT"].text.values)
+
 
 def get_headline(article):
     '''Extract headline from article.'''
-    headline = None
     try:
         headline = article[article.function == "HL"].text.values[0]
     except:
-        pass
+        headline = None
 
     return headline
+
 
 def get_byline(article):
     '''Extract author from article.'''
@@ -109,20 +118,22 @@ def get_byline(article):
         author = None
     return author
 
+
 def get_pages(article):
     '''Extract pages from article.'''
-    pages = None
     try:
         pages = list(map(int, article.page.unique()))
     except Exception as e:
         print ('Page exception: ', e)
-        pass
+        pages = None
     return pages
+
 
 def set_pd_options():
     '''Set option for pandas.'''
     pd.set_option("display.width", None)
     pd.set_option("display.max_rows", None)
+
 
 if __name__ == "__main__":
     main()
