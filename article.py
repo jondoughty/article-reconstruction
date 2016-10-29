@@ -4,6 +4,7 @@ import calendar
 import glob
 import re
 import sys
+import json
 
 from nltk.metrics import distance
 import pandas as pd
@@ -54,7 +55,8 @@ def edit_match(match, candidates):
 
 
 def construct_tagged(issue):
-    '''Reconstruct articles from manually tagged csv files.'''
+    '''Reconstruct all articles of a single issue from a manually tagged csv
+       file.'''
     article_nums = issue[(issue.article.notnull()) &
                          (issue.article != 0)].article.unique()
     articles = []
@@ -75,6 +77,12 @@ def construct_tagged(issue):
     issue_df = pd.DataFrame(articles, index = range(1, len(articles) + 1))
     issue_df.index.name = "id"
     print(issue_df)
+
+
+def json_dump(issue_df):
+    '''Dump an entire issue to json.'''
+    tmp = issue_df.to_dict('records')
+    print (json.dumps(tmp, indent=4))
 
 
 def check_article(article):
