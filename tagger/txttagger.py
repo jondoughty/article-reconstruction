@@ -4,13 +4,13 @@
 from basetagger import *
 
 
-def tag():
-   pass
+def tag(issue):
+    return issue
 
 
 def main():
-   pass
+    pass
 
 
 if __name__ == "__main__":
-   main()
+    main()

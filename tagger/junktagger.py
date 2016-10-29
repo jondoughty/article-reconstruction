@@ -4,13 +4,14 @@
 from basetagger import *
 
 
-def tag():
-   pass
+def tag(issue):
+    return issue
 
 
 def main():
-   pass
+    issues = get_issues(folder='tagged_data',
+                              clear_columns=[''])
 
 
 if __name__ == "__main__":
-   main()
+    main()
