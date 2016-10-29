@@ -10,11 +10,19 @@ import pandas as pd
 
 
 def main():
-    pd.set_option("display.width", None)
-    pd.set_option("display.max_rows", None)
+    # set panda options
+    set_pd_options()
+
+    # get all csv files in tagged_data directory
     paths = glob.glob("tagged_data/*.csv")
+
+    # set columns for csv file
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
-    issue = pd.read_csv(paths[0], header = None, names = columns)
+
+    # load csv
+    issue = pd.read_csv(paths[0], header = 2, names = columns)
+
+    #
     print(find_date(issue))
 #    construct_tagged(issue)
 
@@ -77,6 +85,9 @@ def construct_tagged(issue):
     issue_df.index.name = "id"
     print(issue_df)
 
+def set_pd_options():
+    pd.set_option("display.width", None)
+    pd.set_option("display.max_rows", None)
 
 if __name__ == "__main__":
     main()
