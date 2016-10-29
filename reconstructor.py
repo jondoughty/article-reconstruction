@@ -1,4 +1,6 @@
 #!/usr/local/bin/python3
+# reconstructor.py
+# Jon Doughty
 
 import calendar
 import glob
