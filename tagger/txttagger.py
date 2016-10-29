@@ -1,5 +1,5 @@
-# junktagger.py
-# Brandon Livitski
+# txttagger.py
+# Vivian Fong
 
 from basetagger import *
 
