@@ -76,7 +76,8 @@ def construct_tagged(issue):
         articles.append(pd.Series(article_data))
     issue_df = pd.DataFrame(articles, index = range(1, len(articles) + 1))
     issue_df.index.name = "id"
-    print(issue_df)
+    # print(issue_df)
+    json_dump(issue_df)
 
 
 def json_dump(issue_df):
@@ -84,6 +85,15 @@ def json_dump(issue_df):
     tmp = issue_df.to_dict('records')
     print (json.dumps(tmp, indent=4))
 
+#  "id": "001",
+#  "article_date": "<DATE/PL>",
+#  "article_headline": "title/HL",
+#  "page_number": "<number/PL>",
+#  "author": "<BY LINE/BL>",
+#  "article_number": "<number>/PL",
+#  "article_text": "text/TXT",
+#  "article_subheading": "XYZ/TXT", //TBD
+#  "number_of_paragraphs": "3/TXT" //TBD
 
 def check_article(article):
     '''Assertions to confirm the article is tagged as expected'''
