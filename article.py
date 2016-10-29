@@ -2,7 +2,7 @@
 
 import calendar
 import glob
-import regex
+import re
 import sys
 
 from nltk.metrics import distance
@@ -16,15 +16,15 @@ def main():
     # get all csv files in tagged_data directory
     paths = glob.glob("tagged_data/*.csv")
 
+    print (paths)
     # set columns for csv file
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
 
     # load csv
-    issue = pd.read_csv(paths[0], header = 2, names = columns)
+    issue = pd.read_csv(paths[0], header=2, names=columns)
 
-    #
-    print(find_date(issue))
-#    construct_tagged(issue)
+    # print(find_date(issue))
+    construct_tagged(issue)
 
 
 def find_date(issue, max_error = 5):
@@ -55,24 +55,16 @@ def edit_match(match, candidates):
 
 
 def construct_tagged(issue):
+    '''Reconstruct articles from manually tagged csv files.'''
     article_nums = issue[(issue.article.notnull()) &
                          (issue.article != 0)].article.unique()
     articles = []
     for n in article_nums:
         article = issue[issue.article == n]
         if len(article) > 0:
-            paragraph_nums = article.paragraph[article.paragraph != 0].unique().tolist()
-            assert(paragraph_nums == list(range(1, len(paragraph_nums) + 1)))
-            try:
-                headline = article[article.function == "HL"].text.values[0]
-            except:
-                headline = None
-            try:
-                byline = article[article.function == "BL"].text.values[0]
-                match = re.match("[Bb][Yy]\s+(.*)", byline)
-                author = match.group(1) if match else byline
-            except:
-                author = None
+            check_article(article)
+            headline = get_headline(article)
+            author = get_byline(article)
             pages = list(map(int, article.page.unique()))
             article_number = int(article.article.values[0])
             text = " ".join(article[article.function == "TXT"].text.values)
@@ -85,7 +77,34 @@ def construct_tagged(issue):
     issue_df.index.name = "id"
     print(issue_df)
 
+def check_article(article):
+    '''Assertions to confirm the article is tagged as expected'''
+    # check correct paragraph ordering
+    paragraph_nums = article.paragraph[article.paragraph != 0].unique().tolist()
+    assert(paragraph_nums == list(range(1, len(paragraph_nums) + 1)))
+
+def get_headline(article):
+    '''Extract headline from article.'''
+    headline = None
+    try:
+        headline = article[article.function == "HL"].text.values[0]
+    except:
+        pass
+
+    return headline
+
+def get_byline(article):
+    '''Extract author from article.'''
+    try:
+        byline = article[article.function == "BL"].text.values[0]
+        match = re.match("[Bb][Yy]\s+(.*)", byline)
+        author = match.group(1) if match else byline
+    except:
+        author = None
+    return author
+
 def set_pd_options():
+    '''Set option for pandas.'''
     pd.set_option("display.width", None)
     pd.set_option("display.max_rows", None)
 
