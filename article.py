@@ -16,15 +16,14 @@ def main():
     # get all csv files in tagged_data directory
     paths = glob.glob("tagged_data/*.csv")
 
-    print (paths)
     # set columns for csv file
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
 
     # load csv
-    issue = pd.read_csv(paths[0], header=2, names=columns)
-
-    # print(find_date(issue))
-    construct_tagged(issue)
+    for path in paths:
+        issue = pd.read_csv(path, header=2, names=columns)
+        # print(find_date(issue))
+        construct_tagged(issue)
 
 
 def find_date(issue, max_error = 5):
@@ -65,7 +64,7 @@ def construct_tagged(issue):
             check_article(article)
             headline = get_headline(article)
             author = get_byline(article)
-            pages = list(map(int, article.page.unique()))
+            pages = get_pages(article)
             article_number = int(article.article.values[0])
             text = " ".join(article[article.function == "TXT"].text.values)
             article_data = {"article_date": "today",
@@ -81,7 +80,14 @@ def check_article(article):
     '''Assertions to confirm the article is tagged as expected'''
     # check correct paragraph ordering
     paragraph_nums = article.paragraph[article.paragraph != 0].unique().tolist()
-    assert(paragraph_nums == list(range(1, len(paragraph_nums) + 1)))
+    lst = list(range(1, len(paragraph_nums) + 1))
+    if paragraph_nums != lst:
+        article_num = article.article.unique()[0]
+        # print ('article number: ', article_num)
+        print ('paragraph numbering used: ', paragraph_nums)
+        print ('paragraphs should be: ', lst)
+        raise Exception('Paragraph numbering for article {} appears incorrect,'\
+                         ' please check.'.format(article_num))
 
 def get_headline(article):
     '''Extract headline from article.'''
@@ -102,6 +108,19 @@ def get_byline(article):
     except:
         author = None
     return author
+
+def get_pages(article):
+    '''Extract pages from article.'''
+    pages = None
+    print ('article.page value: ', article.page)
+    try:
+        pages = list(map(int, article.page.unique()))
+    except Exception as e:
+        print ('unique pages: ', article.page.unique())
+        print ('Page exception: ', e)
+        pass
+    # input()
+    return pages
 
 def set_pd_options():
     '''Set option for pandas.'''
