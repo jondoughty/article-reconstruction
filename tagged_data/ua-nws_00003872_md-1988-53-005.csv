@@ -1,0 +1,1202 @@
+"Function Key: TXT = article text; HL = headline; BL = byline; PH = photo caption/information; ME = meta directives outside of an article; NA = unintelligible; NP = nameplate; PI = publication information; B = blank; AT = advertisement text; MH = masthead; BQT = block quote text; BQA = block quote attribution; CN = comic strip title; CT = comic strip text",,,,,,,
+"LINE","PAGE # TEXT IS ON (1 for front page, 0 if unintelligable)","ARTICLE NUMBER (use 0 if outside of text of any article/letter)","FUNCTION (see key above)","PARAGRAPH NUMBER (start with the first content paragraph, 0 if not part of the main text)","JUMP (if line contains a ""jump to"" directive, it's the page target. If it's a ""jumped from"" directive then the negative (-) of the soure page. otherwise 0)","AD #. If line is part of advertisement, it is the number of the ad. Start from top left column. 0 otherwise.","SCANNED TEXT"
+1,1,0,"NP","0",0,0,"California Polytechnic State University San Luis Obispo"
+2,1,0,"PI","0",0,0,"Volume 53."
+3,1,2,"HL","0",0,0,"Poly students watch hopefuls’ first dehate"
+4,1,2,"BL","0",0,0,"By Tara Giambalvo"
+5,1,2,"BL","0",0,0,"St>M WrlUf"
+6,1,2,"PH","0",0,0,"AHI* Baalla, aaronautleal anginaarlwg communication aanlor, watch tha dabata"
+7,1,2,"PH","0",0,0,"Kivm MAarauMMiMa oaMy"
+8,1,2,"PH","0",0,0,", and Eric LInxwtIar, apaach"
+9,1,2,"TXT","1",0,0,"About 20 members of the Young Democrats turned out at Osos Street’s Rose and Crown while the College Republicans gathered in the University Union lounge to cheer their respective candidates in last night’s presidential debate."
+10,1,2,"TXT","2",0,0,"Massachusetts Gov. Michael Dukakis and Vice President George Bush faced off in the televised debate Sunday night."
+11,1,2,"TXT","3",0,0,"“We’re very serious ... about knowing what’s going on,’’ said Shara Peters, Young Democrats president and cofounder."
+12,1,2,"TXT","4",0,0,"The Democratic Central Committee of San Luis Obispo sponsored the event at Rose and Crown to “make people aware of the issues,’’ said Tom Ferraro, president of the DCC."
+13,1,2,"TXT","5",0,0,"The mostly partisan crowd watched the screen closely, though the waitresses were kept running by a few who seemed to have come chiefly for the beer and food."
+14,1,2,"TXT","6",0,0,"Applause for Dukakis broke out early as he lambasted Bush’s participation in the Reagan administration’s dealings with Panamanian President’Manuel Noriega."
+15,1,2,"TXT","7",0,0,"Bush’s rebuttal that the CIA could find no proof of Noriega’s wrongdoing was met with scattered grumblings and hisses."
+16,1,2,"TXT","8",0,0,"As a result, Ferraro said, “Bush never quite recover^. I think Dukakis rattled Bush. Dukakis came across as more of a leader.’’"
+17,1,2,"TXT","9",0,0,"Cal Poly student Brendan Martin agreed. “Bush seemed to stumble ... teemed unorganized,’’ he said."
+18,1,2,"TXT","10",0,0,"Martin said Bush, however, did seem"
+19,1,2,"TXT","10",0,0,"“better at off-the-cuff remarks.’’"
+20,1,2,"TXT","11",0,0,"The College Republicans reserved the television lounge in the University Union for viewing the debate, according to president Andrea Mundorf."
+21,1,2,"TXT","12",0,0,"The Republican Party of San Luis Obispo County did not sponsor any special events; volunteer Gary Kunkel said there were possibly some private parties planned."
+22,1,2,"TXT","13","BACK PAGE",0,"Richard Kranzdorf, political science professor and adviser to the Young Democrats, said there were “no major gaffes.’’ Members of the Young Democrats saw Sec DEBATE, back page"
+23,1,3,"HL","0",0,0,"Panel: Dukakis wins small edge"
+24,1,3,"TXT","1",0,0,"WINSTON-SALEM, N.C. (AP) — George Bush and Michael Dukakis clashed over deficits, drugs and the Pledge of Allegiance in a crackling campaign debate Sunday night. Bush said, “I hope people don’t think I’m questioning his patriotism,’’ but Dukakis retorted that he was and added, “I resent it.’’"
+25,1,3,"TXT","2",0,0,"Bush sought repeatedly in the 90-minute debate to depict Dukakis as a liberal Democrat who is “out there out of the mainstream.’’ Dukakis challenged the vice president’s judgment and ticked off a string of what he called Reagan administration failures, with emphasis on the Iran-Contra affair."
+26,1,3,"TXT","3",0,0,"He said it was a “tragedy” for the president to sell arms to Iran in exchange for hostages, and said Bush endorsed it."
+27,1,3,"ME","0","BACK PAGE",0,"Sac CLASH, hack page"
+28,1,1,"HL","0",0,0,"Cal Poly professors get six NSF grants for lab equipment"
+29,1,4,"HL","0",0,0,"Temporary shelter might close"
+30,1,1,"BL","0",0,0,"By Alison Skratl"
+31,1,1,"BL","0",0,0,"Managing Cdllof"
+32,1,1,"TXT","1",0,0,"Six Cal Poly departments received almost S278,000 in grants from the National Science Foundation’s 1988 Instrumentation and Laboratory Program to fund equipment for various labs across campus."
+33,1,1,"TXT","2",0,0,"The program is in its fourth year. And Cal Poly has had an excellent record for the previous three, said Margaret Cardoza, director of grants development. Cal Poly had two grants in 1985, two in 1986 and three in 1987, totalling about S210,000."
+34,1,1,"TXT","3",0,0,"So, she said, getting six grants this year, totalling more than the three years before, was quite an accomplishment."
+35,1,1,"TXT","4",0,0,"Cal Poly’s President Warren Baker was reappointed last year to the NSF’s governing body, the National Science Board."
+36,1,1,"TXT","5",0,0,"The grants, ranging from $15,000 to $100,000, will help enormously in stretching Cal Poly’s equipment budget, said Cor-doza. They will provide matching funds for new equipment in these departments:	industrial"
+37,1,1,"TXT","5",0,0,"engineering, biological sciences, natural resource management, metallurgical and materials engineering, electronic and electrical engineering and architecture."
+38,1,1,"TXT","6",0,0,"This year’s winning proposals"
+39,1,1,"TXT","6",0,0,"are;"
+40,1,1,"TXT","7",0,0,"•	$100,000 for a new, nondestructive evaluation facilty for the meullurgical and materials engineering department. Professor Daniel Walsh wrote the proposal."
+41,1,1,"TXT","8",0,0,"•	$50,000 for a data aquisition, analysis and presentation system for the natural resource management department. Department head Norman Pillsbury’s proposal secured the sum."
+42,1,1,"TXT","9",0,0,"•	$45,900 to complete an electro-optics laboratory that will allow for broadening courses in fiber optics, and creates new ones in electro-optical engineering. Professor Michael Wollman wrote this winning proposal for the electronic and electrical engineering department."
+43,1,1,"TXT","10",0,0,"•	$48,850 to initiate three core lab courses for the new biotechnology minor program. Professor Raul Cano wrote the proposal for the biological sciences department."
+44,1,1,"TXT","11",0,0,"•	$18,400 for a pneumatic automation simulator for the industrial engineering department. Professor K.N. Balasubramanian wrote the proposal."
+45,1,1,"TXT","12",0,0,"•	$14,600 to buy equipment for an architectural science lab. Professor Donald Wollard wrote the proposal for this grant for the architecture department."
+46,1,4,"BL","0",0,0,"By ChrifdBC C. Temple"
+47,1,4,"BL","0",0,0,"SUWWiWf___________________________"
+48,1,4,"TXT","1",0,0,"If a permanent building location for a homeless shelter is not found by Oct. 31, the Salvation Army announced that it will fold the umbrella it has held over the San Luis Obispo homeless since Feb. I."
+49,1,4,"TXT","2",0,0,"The Salvation Army has been providing a small van to transport the homeless from City Hall to its shelter on Kansas Avenue."
+50,1,4,"TXT","3",0,0,"The shelter has an open fire and grill to heat canned foods, two 6B-by-2(>-foot open trailers and 20 cots with blankets for overnight lodging. Without refrigeration, storage and washing facilities, the Salvation Army says it feels its efforts to provide humane protectorship have been crippled."
+51,1,4,"TXT","4",0,0,"Of the two trailers provided, only one has electricity, said Site Director Jennifer Abbott, emphasizing that exposed electrical wires in the one trailer endanger nighttime users. Leaks in both trailers also cause the growth of mold and mildew, she said."
+52,1,4,"TXT","5",0,0,"Abbott said the shelter would close if thoroughly inspected by health officials."
+53,1,4,"TXT","6",0,0,"Captain Dan Hughes of the Salvation Army told Coun-cilmembers that because the health and safety of the program coordinators is at risk, he feels it is time to find a more permanent facility."
+54,1,4,"TXT","7",0,0,"San Luis Obispo Coalition for the Homeless Chairman George Moylan said the community must find something workable that will continue to be sup-"
+55,1,4,"TXT","7",0,0,"ported."
+56,1,4,"TXT","8",0,0,"“Any proposal in any zone does not specifically allow for a shelter ... but this leaves an opening for legal problems,” he said."
+57,1,4,"TXT","9",0,0,"Moylan pointed out that there are only three options in dealing with the homeless iuiie."
+58,1,4,"TXT","10",0,0,"“These people can either be eliminated, institutionalized or sheltered,” Moylan said. “The first went out with Hitler, the second is more than society is willing to pay and the third is one way of inexpensively confronting the problem.”"
+59,1,4,"TXT","11",0,0,"The homeless coalition includes representatives from the Economic Opportunity Council, Women’s and People’s Shelter, Red Cross, city and county officials and other non-profit organizations within the county."
+60,1,4,"TXT","12",0,0,"From November 1987 to June 1988, the city provided the Salvation Army with $17,172. An additional $18,000, only 14 percent of the Salvation Army’s budget, will be given by the end of 1988. The county gave the Salvation Army $45,000 from November 1987 through June 1988 and will finish the year with another $39,750 allotment."
+61,1,4,"TXT","13",0,0,"Abbott said the funding is approximately one quarter of what they need to provide a quality shelter and staff to handle the number of homeless."
+62,1,4,"TXT","14",0,0,"Councilmembers have received complaints from parents that their children are being frightened by the irrational behavior of the homeless."
+63,1,4,"TXT","15",0,0,"Reports of homeless people defecating on private property also angered Mayor Ron Dunin."
+64,1,4,"TXT","16",0,0,"Dunin repremanded the Salvation Army, telling them to supervise their clients more thoroughly so they would not disrupt the lives of residents."
+65,1,4,"TXT","17",0,0,"Dunin also threatened to stop city support of the program."
+66,1,4,"TXT","18",0,0,"“The population of San Luis Obipso is becoming hostage to this small group of people,” Dunin told Salvation ficials."
+67,1,4,"TXT","19",0,0,"Director Toni Flynn responded by saying that the Salvation Army cannot monitor the behavior of the homeless after they leave their pick up site, shelter and drop off location."
+68,1,4,"TXT","20",0,0,"""We’re doing the best we can, but we can’t follow them around all day. They are citizens and we have no authority to tell them what they can and cannot do,” said Flynn."
+69,1,4,"TXT","21",0,0,"Councilmembers last week concluded."
+70,1,4,"ME","0",7,0,"Sac HOMELESS, page 7"
+71,1,0,"ME","0",0,0,"I'VSlGt"
+72,1,0,"ME","0",0,0,"'tvMion'M-j-'"
+73,1,0,"ME","0",0,0,". i: iirumiic''. SvC"
+74,1,0,"ME","0",0,0,"( t>mi!!c‘iitary page 3."
+75,1,0,"ME","0",0,0,"New bulimia re>earch sheds light on ircaiincut. Sec age 4"
+76,1,0,"ME","0",0,0,"; ipian ik‘i' Jo^'iisnn I' '.pi’cd oI ' I l‘> i.' Picdai"
+77,1,0,"NA","0",0,0,"' > i ' t ■' pii'ce ''"
+78,2,0,"SH","0",0,0,"Opinion ["
+79,2,0,"PI","0",0,0,"Tuesday, September 27, 1988 Mustang Daily"
+80,2,0,"NA","0",0,0,"□"
+81,2,0,"MH","0",0,0,"Mustang"
+82,2,0,"MH","0",0,0,"Daily"
+83,2,0,"MH","0",0,0,"The newspaper for Cal Poly."
+84,2,0,"MH","0",0,0,"Since 1916"
+85,2,0,"MH","0",0,0,"April Karys, editor Anna Cekola, managing editor Alison Skratt, managing editor Coieen Bondy, opinion editor Terry Lightfoot, sports editor Donna Taylor, spotlight editor Nicole Jones, insight editor Shelly Evans, lifestyle editor John S. Baker III, commentary editor K.M. Cannon, photo editor Amber Wisdom, asst, photo editor Peggy Yeyna, business manager Jacqueline Tasch, faculty adviser"
+86,2,5,"HL","0",0,0,"Round one: Won?"
+87,2,5,"TXT","1",0,0,"Round one of this great presidential boxing match is over, and the results are of course mixed. Both parties threw their best one-liner punches, but few crucial answers were voiced. That makes it even more imperative that the public tunc in to the second debate, scheduled for Oct. 13 or 14. On Oct. 5 the running mates will have at it."
+88,2,5,"TXT","2",0,0,"In this day of the 30-second spot, one-liners often get more attention than real answers. Disappointingly, neither candidate gave many substantial answers. They dressed for success, polished their public images, had a wealth of information about their opponents’ weak points, but neither provided brilliant answers to problems. For some viewers, off-the-cuff remarks become the focus of the debates, with little else to go by."
+89,2,5,"TXT","3",0,0,"Don’t give up, however tempting it may be. It is important to pay attention to the debates, to the media blitz (not the 10-second televsion bleeps, but in-depth articles in better publications)."
+90,2,5,"TXT","4",0,0,"If Bush is elected, he will most certainly pack in a solidly conservative Supreme Court, a legacy that will live with us well into the next century. The next president may be able to appoint as many as 160-200 lower court judges. The conservatives are systematically trying to reverse the gains of the whole civil rights era."
+91,2,5,"TXT","5",0,0,"Women seeking abortions will be branded criminals if Bush is elected. And what leaps will Bush make in the quest for better race relations? Who will he be accountable to, if even now we can’t get him to account for his role in the Iran-Contra scandal? A long resume is OK, if quantity is complemented by quality."
+92,2,5,"TXT","6",0,0,"Then there is Senator Dan Quayle. If the phrase “President Quayle” isn’t enough to make America wake up sweating in the middle of the night, Americans are sleeping much too soundly."
+93,2,5,"TXT","7",0,0,"There are still a few months before the election. If you haven’t been paying attention, start now. This election is not unimportant. As students, think what the Reagan/Bush administration has done for financial aid. What financial aid, you might rightly ask."
+94,2,5,"TXT","8",0,0,"At this point in the election, the Mustang Daily editorial staff is endorsing Michael Dukakis as the candidate of choice."
+95,2,0,"SH","0",0,0,"Letters to the Editor"
+96,2,7,"HL","0",0,0,"Quayle has many faults"
+97,2,7,"TXT","1",0,0,"Editor — Who is Dan Quayle? The uproar over his use of family influence to avoid military service in Vietnam is obscuring other defects in his background."
+98,2,7,"TXT","2",0,0,"Quayle's close friends and family acknowledge his glaring lack of intellectual ability. Theodore Bendall, Quayles’s family attorney, recently said if he could change the Indiana senator he would “increase his I.Q. He is not an intellect.” Quayle’s father freely admits that his son’s main"
+99,2,7,"TXT","2",0,0,"interest in school was “broads and booze.”"
+100,2,7,"TXT","3",0,0,"Dan Quayle’s mediocre academic standing in high school apparently prevented him from applying to major universities. Instead he went to little DePauw University where his grandfather was a member of the board of trustees and a major contributor."
+101,2,7,"TXT","4",0,0,"In college Quayle had a reputation for being a poor student, frequently drinking to excess, and dating many women. A former professor says Quayle received mostly C’s and he got a D in at least one course in his major, political science. His good looks and nonintellectual image led some classmates to nickname him derisively as “face man.”"
+102,2,6,"HL","1",0,0,"Poly: cultural wasteland"
+103,2,6,"TXT","1",0,0,"When 1 first started at Cal Poly, in fall 1986, I was immediately struck by how few minority students attend this school. As I walked around the campus my first few days here, 1 kept looking for Hispanic, Black and Asian students but what I mostly saw was white students."
+104,2,6,"TXT","2",0,0,"I had a hard time adjusting to this since I came from a university that was much more racially diverse than Cal Poly. I attended the University of Kansas, Lawrence, Kan., where students from Mexico, South America, the Middle East, Africa, Asia and the United States learned and lived together. Mexicans, Nicaraguans, Africans, Chinese, Koreans and students from many other countries and from here learned about each other by studying, partying and living together. 1 learned quite a bit about myself and about other races when I lived with a black student from Kansas City, Kan. and later, with a student from Cuba."
+105,2,6,"TXT","3",0,0,"I did not realize when I applied to Cal Poly that it was for the most part an all-white university. But I soon realized it after my first week here."
+106,2,6,"TXT","4",0,0,"Granted, there are minority students attending school here, but they are few in number. When I last worked for the Mustang Daily, as the minority affairs reporter, there were about 72 white students for every black student. 1 doubt that number has changed very much since then."
+107,2,6,"TXT","5",0,0,"By attending school here, students are being deprived of real education: how to get along with, learn about and understand students who come from a different racial background and culture than themselves. When white students graduate from Cal Poly they are in for a rude awakening if they think the outside world is just like life on campus. White students will have to learn on their own how to get along with clients, customers, coworkers, and bosses who are minorities."
+108,2,6,"TXT","6",0,0,"Has Cal Poly failed in teaching its white students about other cultures and races by having so few minority students attend this school? I think so. By lacking in the cultural diversity found at"
+109,2,6,"SH","0",0,0,"Reporter’s Notebook"
+110,2,6,"BL","0",0,0,"By Jeff Blizzard"
+111,2,6,"TXT","6",0,0,"other universities. Cal Poly is depriving its students of an important, and essential, aspect of college education — learning how to accept others by talking, socializing and learning together."
+112,2,6,"TXT","7",0,0,"I know many people at Cal Poly are working hard to increase the number of minority students on campus, but they are facing an uphill battle. Some black students I’ve talked with, and I’m certain other minority students feel the same, feel out of place and unwelcome on this campus sometimes, simply because they are a different race."
+113,2,6,"TXT","8",0,0,"It would be difficult, if not impossible, for recruiters to drastically increase the minority population on campus because minority high school students realize how few blacks, Hispanics and Asians attend Cal Poly. How can you sell minority students on this school if you can’t guarantee them they will feel welcome or have a large support network of other minority students?"
+114,2,6,"TXT","9",0,0,"It disturbs me when 1 hear white students question how minority students can get into school here. I’ve heard some white students say blacks and other minorities only get into Cal Poly because of minority quotas. How ignorant, cruel and small-minded can students be? I hope that is not the prevailing attitude white students hold toward minority students. When I see blacks, hispanics and Asians on campus I do not question how they got here. Instead, I wish there were more minority students like them here."
+115,2,6,"TXT","10",0,0,"The next time you are walking to class in a sea of white faces think about what you are missing out on by attending Cal Poly."
+116,2,7,"TXT","5",0,0,"Clark Adams, a former classmate, said “He was not a guy to take a position on anything except who his date was on Friday night and where to get drunk on Saturday night.” Another classmate, Joseph Wirt, said Quayle majored in “girls, golf, and alcohol” at DePauw."
+117,2,7,"TXT","6",0,0,"Quayle’s college record was so spotty that a furor erupted in 1982 when the college announced it would award an honorary doctor of laws degree to Quayle. The faculty secretly voted 32-24 against awarding the degree."
+118,2,7,"TXT","7",0,0,"Despite Quayle’s assertion that he joined the National Guard to go to law school as soon as possible, he did not go to law school right away. He did not meet Indiana University law school’s academic requirements. “They wouldn’t take him in,” his"
+119,2,7,"TXT","7",0,0,"father, James Quayle, told the Washington Post. A year later, “somehow he got in, he talked his way in” and attended night school, James Quayle said."
+120,2,7,"TXT","8",0,0,"Quayle said he wanted to bypass the military because of his interest in law, but there is no evidence that he accomplished anything as an attorney. Quayle’s friends in the legal profession cannot remember any cases that he handled. Almost immediately after opening his law practice, Quayle told his father he wanted to do something else and became assistant publisher of his father’s newspaper."
+121,2,7,"TXT","9",0,0,"His grandfather, Eugene Pulliam, who headed the most powerful newspaper empire in Indiana, was famous for blatantly mixing right wing politics and"
+122,2,7,"TXT","9",0,0,"newspaper journalism with impunity. Quayle’s father was a member of the John Birch Society in the 1960s."
+123,2,7,"TXT","10",0,0,"The financial and editorial backing of his father got Quayle elected to the House in 1976. With the strong backing of his uncle’s Indianapolis newspapers he became a U.S. senator in 1980."
+124,2,7,"TXT","11",0,0,"Voters have an opportunity to beat Bush and bag Quayle in November. Dan Quayle is another example of the intellectually bankrupt yuppie scum the country club Republicans are trying to foist on the American public as a poor excuse for leadership. The voters can see through their goody-two-shoes facade and trite cliches."
+125,2,7,"BL","0",0,0,"Jim Senyszyn Connecticut"
+126,2,0,"CN","0",0,0,"BLOOM COUNTY"
+127,2,0,"NA","0",0,0,"^!)owsf>tBAP<MCKLy fteour ou^iTi ñvRAcie cm mm sotL^ Tmmme^r.."
+128,2,0,"CN","0",0,0,"by Berke Breathed"
+129,2,0,"B","0",0,0,
+130,2,0,"B","0",0,0,"		"
+131,2,0,"NA","0",0,0,"	TVOhiifrS	"
+132,2,0,"NA","0",0,0,"/*»'	m cuRy	"
+133,2,0,"NA","0",0,0,".7WÍ mrmLVf p/rpf^5im"
+134,2,0,"NA","0",0,0,"ONPmPUCWN. _"
+135,2,0,"MH","0",0,0,"Mustang Daily is published daily by the Cal Poly journalism department Unsigned editorials reflect the majority view of the the Editorial Board Advertising it solely for informatiortal purposes and does not represent an endorsement by the publisher or the university. Mustang Daily office is located in Room 226 of the Graphic Arts Building, San Luis Obispo, CA 93407. (005)756-1143."
+136,2,0,"MH","0",0,0,"Advertising Director: A J. Schuermann Jr."
+137,2,0,"MH","0",0,0,"Account Executives; John Alexkxj, Mark Azevedo, Katy Bartiebaugh,"
+138,2,0,"MH","0",0,0,"Chuck Bartunek, Larry Bittleston, Kim Carlson. Marisa Fujikake, Lysa Francis."
+139,2,0,"MH","0",0,0,"Bret Goodman, Kristi Honda, Ron Same, Mike Weiser Ciattified Advertising: Larry Bittleston: Manager, Kathy Conlan, Tracy Fowler, Dan Malone. Dani Quittner. Business Directory Circulation Staff: Darin Hershberger."
+140,2,0,"MH","0",0,0,"Computer Operations: Dan Malone Production Manager: Sarxfy Kolbe"
+141,2,0,"MH","0",0,0,"University Graphic Systems: Kevin Elder, General Mgr, Bill Naritomi, Pre-Press Mgr, Tony Cerrato, Press Mgr, Tom Connelly. Asst. Mgr. Paste-Up; John Grubb, Asst Mgr. Electronic Imaging; Mark Ford. Asst Mgr. Web Publications."
+142,3,0,"B","0",0,0,
+143,3,0,"SH","0",0,0,"Commentary"
+144,3,0,"PI","0",0,0,"Mustang Daily Tuesday, September 27, 1988 3"
+145,3,0,"B","0",0,0,1
+146,3,0,"OT","1",0,0,"Behold, a new page in the Mustang Daily — Commentary."
+147,3,0,"OT","1",0,0,"In the Tuesdays to come, students will be exposed to the commentary of writers from one end of the political and philosophical spectrum to the other — from students, professors and outside sources."
+148,3,0,"OT","2",0,0,"Ideas and issues discussed won’t always be contemporary per se, and readers shouldn’t expect extraordinary insight or mind boggling profundities; writings of this nature are located in prestigious publications and books, penned by well-paid professionals or sagacious authors. Contributors to this page are not paid.'"
+149,3,0,"OT","3",0,0,"Articles and illustrations are welcomed and appreciated."
+150,3,0,"OT","4",0,0,"Enjoy!"
+151,3,0,"OT","0",0,0,"□"
+152,3,8,"TXT","1",0,0,"Reading philosophy can do wonders for anyone concerned about increasing self-understanding and metaphysical awareness. This summer my philosophy professor required the class to read Plato’s Republic. I benefited tremendously."
+153,3,8,"TXT","2",0,0,"In the course of reading this classic and taking notes on the corresponding lectures, I began to understand why Plato is a philosophical giant — he has scattered pearls of wisdom throughout his works."
+154,3,8,"TXT","3",0,0,"To my delight, one of the pearls 1 discovered was quite simply the value of truth. And I learned that it is not important to be victorious in an argument; it is important to discover the truth, or learn what was formerly thought to be the truth was not that at all. This aided me, a habitual sophist, immensely."
+155,3,8,"TXT","4",0,0,"Needless to say, this pearl is all too scarce in our nation’s courtrooms and forums of political debate. ‘ Imagine the turmoil that would exist if this pearl were to come into vogue among lawyers and politicians. Yes, imagining the unimaginable is difficult."
+156,3,8,"TXT","5",0,0,"But perhaps I am too harsh. There are certainly many of the forementioned actors who realize the value of truth; however, they also know the odds against them succeeding in those media, should they hold this value in high regard, and thus reflect it in their comportment. It is no wonder legal and political mavericks are few and far between."
+157,3,8,"TXT","6",0,0,"Crusading to revolutionize those media is not an attractive prospect. It’s a cruel world to say the least and I am but a feeble and fragile creature. Sensible spirits often die bitter and resentful when they forsake their needs and desires, and those of their loved ones, in order to combat the seemingly ubiquitous dragons."
+158,3,8,"TXT","7",0,0,"For those not so brave and daring souls, that is, for the more selfish folk, myself included, I recommend seeking pearls of wisdom instead of clawing a way to the top of the manure heap. Beneficial change would occur more rapidly if a greater number of humans chose this path."
+159,3,8,"TXT","8",0,0,"The treasure maps to these pearls of wisdom are not so hard to find. One place they are located is in classic works of philosophy."
+160,3,8,"BL","0",0,0,"Commentary Editor, John S. Baker ///"
+161,3,0,"AT","0",0,1,"“One set d pictures just"
+162,3,0,"AT","0",0,1,"isn’t enough!”"
+163,3,0,"AT","0",0,1,"Get 2 sets"
+164,3,0,"AT","0",0,1,"of KODAK Color Prints for the price of 1!"
+165,3,0,"AT","0",0,1,"Order one set of KODAK Color Prints at the regular price and get a second set to share. So hurry! Bring in your film today for quality developing and printing hy Kodak. And ask for full details."
+166,3,0,"AT","0",0,1,"Offer good through October 1."
+167,3,9,"HL","0",0,0,"Environomically speaking"
+168,3,9,"BL","0",0,0,"By Ron Bearce"
+169,3,9,"TXT","1",0,0,"Students during the ‘60s and ‘70s more than any other group led America to a new way of thinking. No other issue more illustrated this than the environmentalist movement."
+170,3,9,"TXT","2",0,0,"What has become of the passion surrounding this issue? While it has far from died out, with attention put on the greenhouse effect and other subjects, it seems to have taken a back seat to economic isues."
+171,3,9,"TXT","3",0,0,"Those ‘60s and ‘70s students now turned teachers, office workers, parents and even business people, seem to put more attention on mortgages, car payments and their children’s own education than the environmental idealism of the recent past."
+172,3,9,"TXT","4",0,0,"And what of America’s current students? Is the economic emphasis, including future careers and making big money, much more important than any ecological idealism?"
+173,3,9,"TXT","5",0,0,"Has the 1980s environmentalism simply become a negative movement, one that says ‘No!’ to needed housing, new businesses, new energy sources, etc., dividing communities into uncompromising factions?"
+174,3,9,"TXT","6",0,0,"As both a ‘70s envrionmentalist student and an ‘80s parent who owns a small business. I’ve seen both the environmental and economic sides of many issues in the last 10 years. Any questions that arise may be answered by solving one final question: What is the true relationship between basic economic laws and environmental causes?"
+175,3,9,"TXT","7",0,0,"After studying hundreds of environmental and economic issues there is almost without exception only one answer: The more that basic free market economic laws are violated, the greater the en-"
+176,3,9,"TXT","7",0,0,"vironmental destruction."
+177,3,9,"TXT","8",0,0,"This blending of environmentalism and economic laws is a new approach 1 call Environomics."
+178,3,9,"TXT","9",0,0,"There are basic Environomic laws that, if followed, will limit both environmental and economic damages:"
+179,3,9,"TXT","10",0,0,"* Pricing all commodities such as water, metals, energy and houses at free market rates that include all costs of obtaining, manufacturing and distributing the commodities;"
+180,3,9,"TXT","11",0,0,"•Not subsidizing these commodities with government funding;"
+181,3,9,"TXT","12",0,0,"•In supplying these commodities, do not set up government mandated monopolies distorting the pricing, costs, supplies and need for each commodity;"
+182,3,9,"TXT","13",0,0,"•Allowing the supply of these commodities to be provided privately based on free market supply and demand laws;"
+183,3,9,"TXT","14",0,0,"•Protecting the rights of property owners or those using the property with permission of the property owner from dangerous pollution, radiation, loss of property and other property violations;"
+184,3,9,"TXT","15",0,0,"•Protecting the property rights from government intervention destructive to aesthetics or property environment."
+185,3,9,"TXT","16",0,0,"Here are some examples of how Environomics works:"
+186,3,9,"TXT","17",0,0,"Nuclear power:	the Price-"
+187,3,9,"TXT","17",0,0,"Anderson Congressional Act limits a nuclear plant’s liablility in case of an accident — no other industry gets this limitation — and nuclear power plants are built and run by government subsidized monopolies; violates my first four laws, sometimes the fifth and sixth."
+188,3,9,"TXT","18",0,0,"Water: federal, state and local governments first subsidize water projects then sell the water below market rates, both preventing"
+189,3,9,"TXT","18",0,0,"private companies from becoming involved in supplying water and resulting in huge amounts of “cheap” water to be wasted; also violates laws 1-4, and sometimes S and 6 with dam and underground projects."
+190,3,9,"TXT","19",0,0,"Offshore oil: leases of federal waters, the property of U.S. citizens, sometimes is below market rates, without the consent of a majority of citizens or results in significant air or water pollution; violates laws 1-3,5 and 6."
+191,3,9,"TXT","20",0,0,"By combining the environmentalism fo the ‘60s and ‘70s with the economic realities of the ‘80s, a new coalition of business and property owners, fiscal conservatives and environmentalists can carry the concept of of Environomics on into the 1990s and beyond in a cooperative manner that will resolve many of the environmental and economic issues facing us today."
+192,3,9,"TXT","21",0,0,"The idea that the economy and the environment are inseperable should be no suprise. Nearly all of what we put into the economy comes out of the natural environment. The natural environment is huge compared to the size or number of people, meaning, (with the exception of a few very toxic substances), that it takes huge, economically-expensive efforts to change it. Also, most pollution is simply waste that hurts the economies of polluted areas."
+193,3,9,"TXT","22",0,0,"So, can a person of the ‘80s be oriented toward a more economically prosperous future and not feel guilty about neglecting the environment we live in?"
+194,3,9,"TXT","23",0,0,"Yes, by understanding the concept of Environomics and working together for a better future."
+195,3,9,"BL","0",0,0,"Ron Bearce is currently writing a book entitled Environomics. He is the director of the Concerned Citizens of SLO County."
+196,3,0,"AT","0",0,2,"BREAKFAST"
+197,3,0,"AT","0",0,2,"LUNCH"
+198,3,0,"AT","0",0,2,"w"
+199,3,0,"B","0",0,2,
+200,3,0,"AT","0",0,2,"w"
+201,3,0,"AT","0",0,2,"^8^"
+202,3,0,"AT","0",0,2,"Snack Bar 7:00-10:00"
+203,3,0,"AT","0",0,2,"•	Eggs"
+204,3,0,"AT","0",0,2,"•	Bacon"
+205,3,0,"AT","0",0,2,"•	Sausage"
+206,3,0,"AT","0",0,2,"•	Potatoes"
+207,3,0,"AT","0",0,2,"•	Pancakes"
+208,3,0,"AT","0",0,2,"• French Toast"
+209,3,0,"AT","0",0,2,"•	Creative Omelettes"
+210,3,0,"AT","0",0,2,"Sandwich Plant 6:30-10:00"
+211,3,0,"AT","0",0,2,"• Breakfast Burritos"
+212,3,0,"AT","0",0,2,"•	Breakfast Croissarüs"
+213,3,0,"AT","0",0,2,"•	Custom Sandwiches"
+214,3,0,"AT","0",0,2,"Snack Bar 10:30-4:00"
+215,3,0,"AT","0",0,2,"•	Taco Bar"
+216,3,0,"AT","0",0,2,"•	Chicken Strips"
+217,3,0,"AT","0",0,2,"•	Grilled Sandwiches"
+218,3,0,"AT","0",0,2,"• Charbroiled Hamburgers"
+219,3,0,"AT","0",0,2,"•Custom"
+220,3,0,"AT","0",0,2,"Sandwiches"
+221,3,0,"AT","0",0,2,"Sandwich Plant 10:30-4:00"
+222,3,0,"AT","0",0,2,"•	Custom Sandwiches"
+223,3,0,"AT","0",0,2,"•	Croissant Sandwiches"
+224,3,0,"AT","0",0,2,"•	Fast Ready"
+225,3,0,"AT","0",0,2,"togo"
+226,3,0,"AT","0",0,2,"Sandwiches"
+227,3,0,"AT","0",0,2,"The Express Window"
+228,3,0,"AT","0",0,2,"•	Hot Dogs"
+229,3,0,"AT","0",0,2,"•	Beverages"
+230,3,0,"AT","0",0,2,"•	Snacks"
+231,3,0,"B","0",0,2,
+232,3,0,"B","0",0,2,
+233,3,0,"B","0",0,2,
+234,3,0,"B","0",0,2,
+235,3,0,"B","0",0,2,
+236,3,0,"AT","0",0,2,"Snack Bar & Sandwich Plant also offer"
+237,3,0,"AT","0",0,2,"• Fresh Baked Pastries	• Desserts	• Yogurt"
+238,3,0,"AT","0",0,2,"Hot and Cold Beverages	• Salads	• Soup"
+239,3,0,"AT","0",0,1,"EIGdííoI BcxDkstore"
+240,4,0,"AT","0",0,1,"When it comes to copying, We’ve got the Right Stuff!"
+241,4,0,"AT","0",0,1,"fOOR MCNARVS OQP^ CCNIER"
+242,4,0,"AT","0",0,1,"THB FA8TI8T OOP1B18 H TOWV"
+243,4,0,"AT","0",0,1,"850 Foothill • University Square • 7 till Midnight • 541-COPY"
+244,4,0,"PI","0",0,0,"Tuesday, September 27, 1988 Mustang Daily"
+245,4,10,"HL","0",0,0,"Bulimia linked to hormone level"
+246,4,10,"BL","0",0,0,"By Laura Fleischer"
+247,4,10,"BL","0",0,0,"Staff Writer"
+248,4,0,"AT","0",0,2,"UGARLESS HACK"
+249,4,0,"AT","0",0,2,"and HEALTHY HAVEN RESTAURANT"
+250,4,0,"AT","0",0,2,"486 Marsh St. SLO Open 10am to 10pm"
+251,4,0,"AT","0",0,2,"ATTENTION: ICE CREAM AND YOGURT LOVERS"
+252,4,0,"AT","0",0,2,"""Sugarfree & Fatfree'* Skinny Lite."
+253,4,0,"AT","0",0,2,"Only 11.5 cal per fl. oz Frozen Dairy Dessert"
+254,4,0,"AT","0",0,2,"'""It Doesn't Have to he Fattening to he fantastic!"""
+255,4,10,"TXT","1",0,0,"The results of a study on bulimia published in the Sept. 15 issue of the New England Journal of Medicine will not affect the treatment of bulimia victims at Cal Poly, said a mental health nurse at the Cal Poly Health Center."
+256,4,10,"TXT","2",0,0,"The study, conducted by Drs. Rodger Liddle and Thomas Geracioti Jr. concluded that there is an association between women suffering from bulimia and a gastrointestinal hormone which induces a feeling of fullness."
+257,4,10,"TXT","3",0,0,"“What we have at this point is an association where bulimics have low levels of a hormone,” Liddle said in a telephone interview. “It’s the first indication that there may be a hormonal abnormality involved. Bulimia is certainly a very complicated il-"
+258,4,10,"TXT","3",0,0,"lness.”"
+259,4,10,"TXT","4",0,0,"Bulimia, an eating disorder characterized by uncontrollable binge eating, is estimated to affect one in 10 to one in six college women ages 18 to 24."
+260,4,10,"TXT","5",0,0,"In the study, 14 bulimics were compared to a 10-member control group. Those suffering from bulimia were found to have lower levels of the hormone cholecystokinin than those in the control group."
+261,4,10,"TXT","6",0,0,"Rita Rich, mental health nurse at the Cal Poly Health Center, said she feels that although the study’s conclusion is based on legitimate facts, it is generally inconclusive at this time due to the limited number of people tested."
+262,4,10,"TXT","7",0,0,"“I think that it is probably something we need to continue to look at,” Rich said."
+263,4,10,"TXT","8",0,0,"The study also found that antidepressant treatment helped some bulimics and raised their"
+264,4,10,"TXT","8",0,0,"levels of the hormone."
+265,4,10,"TXT","9",0,0,"“There are a number of women who are depressed as well as bulimic, but that isn’t true with all of them,” Rich said."
+266,4,10,"TXT","10",0,0,"Rich said she feels that factors in the cause of the disease can be sociological as well as psychological and are frequently related to poor self-esteem."
+267,4,10,"TXT","11",0,0,"The treatment of bulimic students at Cal Poly includes nutritional assessment and planning, a physical exam, individual counseling, group counseling and in some cases, antidepressants."
+268,4,10,"TXT","12",0,0,"Liddle said there are still many unanswered questions as to why the hormone level was low to begin with and why it improved with antidepressants."
+269,4,11,"TXT","13",0,0,"“We need to look at a larger number of patients ... at other treatments ... at patients with other types of eating disorders,” Liddle said."
+270,4,0,"AT","0",0,2,"I SUGARLESS SHACK and HEALTHY HAVEN RESTAURANT"
+271,4,0,"AT","0",0,2,"New Yogurt Lite & Improved Skinny Lite"
+272,4,0,"AT","0",0,2,"FREE SMALL CONE"
+273,4,0,"AT","0",0,2,". (W/ANY BAGEL SANDWICH PURCHASE)"
+274,4,0,"AT","0",0,2,"486 Marsh St."
+275,4,0,"AT","0",0,2,"EXP 1/10"
+276,4,0,"AT","0",0,3,"Textbook refunds"
+277,4,0,"AT","0",0,3,"Friday, October 7"
+278,4,0,"AT","0",0,3,"EIGsnoJßl^BookstDie"
+279,4,0,"AT","0",0,3,"RISERVI OrriCERS' TRAIHIHG CORPS"
+280,4,0,"AT","0",0,3,"Start practicing for the real world."
+281,4,0,"AT","0",0,4,"IBM PS/2 BONANZA II"
+282,4,0,"AT","0",0,4,"The IBM Personal System/2 is being offered now at a special promotional price. Visit El Corral Bookstore to see the system that is right for today and ready for tomorrow."
+283,4,0,"AT","0",0,5,"BELIEVE IT OR NOT, THIS GUT IS IN CLASS."
+284,4,0,"AT","0",0,5,"If you'r* looking for •xcitemont and advmt-tura, youll find it when you enroll in Army ROTC. R’a not your ordinary college elective."
+285,4,0,"AT","0",0,5,"Find out more. Contact Larry Stayton,"
+286,4,0,"AT","0",0,5,"Dexter Room 118. Or call 786-ROTC."
+287,4,0,"AT","0",0,5,"ARMY ROTC"
+288,4,0,"NA","0",0,0,"miminncQuia"
+289,4,0,"NA","0",0,0,"OOlIRSimCilTlIL"
+290,5,0,"PI","0",0,0,"MusTong uaiiy mesday. September 27,1988 5"
+291,5,0,"SH","0",0,0,"Sports"
+292,5,11,"PH","0",0,0,"DARRELL MIHO/Mu«lan0 Dally"
+293,5,11,"HL","0",0,0,"‘Terminator’ Carey Defensive stalwart"
+294,5,11,"TXT","1",0,0,"Tom Carey, defensive lineman for the Cal Poly Mustangs, was named the Western Football Conference’s Defensive Player of the Week."
+295,5,11,"TXT","2",0,0,"The 6-2, 233-pound senior, had 11 tackles Saturday night against Angelo State, seven of which were solo and several that were for 50 negative yards."
+296,5,11,"TXT","3",0,0,"Carey State"
+297,5,11,"TXT","3",0,0,"Mickey Russell well acquainted recorded 4 sacks."
+298,5,11,"TXT","4",0,0,"On the year the second tackier for the with 20 tackles."
+299,5,11,"TXT","5",0,0,"Carey was named to the WFC All-Conference second team last season for his defensive prowess."
+300,5,11,"TXT","3",0,0,"and Angelo quarterback became as Carey"
+301,5,11,"TXT","4",0,0,"Carey is leading Mustangs"
+302,5,12,"HL","0",0,0,"Big Ben Busted"
+303,5,12,"TXT","1",0,0,"SEOUL, South Korea (AP) — Canadian Olympic champion Ben Johnson tested positive for anabolic steroids after breaking the world record in the 100-meter dash, the International Olympic Committee’s medical commission said Tuesday. Johnson’s manager said it was a mistake or sabotage."
+304,5,12,"TXT","2",0,0,"Dr. Gustavo Tuccimei, president of the Italian Sports Doctors Association and a member of the medical commission, said the IOC executive board was given the test result late Monday night and was to decide Tuesday what action to take."
+305,5,12,"TXT","3",0,0,"’’The only thing we can say at this stage is that it is a tragedy, a mistake or a sabotage,” Johnson’s manager, Larry Heidebrecht, said. “Up to five"
+306,5,12,"TXT","3",0,0,"days before the race, Ben was in perfect condition. Something has happened in those days."
+307,5,12,"TXT","4",0,0,"”We do not know what happened and how it happened, but apparently somebody has sabotaged Ben and we will find out who it was and how it was done.”"
+308,5,12,"TXT","5",0,0,"Johnson won his long-awaited showdown with American rival Carl Lewis on Saturday in an astonishing 9.79 seconds, four-hundredths of a second under his own world record set at the 1987 world championships in Rome. Lewis was second in an American-record 9.92 seconds."
+309,5,12,"TXT","6",0,0,"If Johnson is disqualified, it could open the way for Lewis to be awarded the gold medal, reviving his bid to win an unprecedented four gold medals in two successive Olympics."
+310,5,0,"AT","0",0,1,"Students, faculty & staff can om rasB on OLO Tram nuses ANVWNBRB In San Luis OMspol"
+311,5,0,"AT","0",0,1,"SNOW YOUR ID a RIDS PRSBI"
+312,5,0,"AT","0",0,1,"For more information CALL 541-BUSS"
+313,5,0,"AT","0",0,2,"at"
+314,5,0,"AT","0",0,2,"Copeland’s Sports"
+315,5,0,"AT","0",0,2,"NEW BALANCE RUNNING SHOES"
+316,5,0,"AT","0",0,2,"new balance*"
+317,5,0,"B","0",0,2,475
+318,5,0,"AT","0",0,2,"Durable IVA midsol«. SHght blemished. If perfect"
+319,5,0,"AT","0",0,2,"SSI"
+320,5,0,"AT","0",0,2,"54?-?"
+321,5,0,"AT","0",0,2,"new balance"
+322,5,0,"B","0",0,2,675
+323,5,0,"AT","0",0,2,"Comprettlon molded EVA midtole."
+324,5,0,"AT","0",0,2,"Sold in 1987 for"
+325,5,0,"AT","0",0,2,"$70"
+326,5,0,"AT","0",0,2,"new balance"
+327,5,0,"B","0",0,2,990
+328,5,0,"AT","0",0,2,"Pigskin t nylon mesh upper sold in 1987 for"
+329,5,0,"AT","0",0,2,"$100"
+330,5,0,"AT","0",0,2,"AQ99"
+331,5,0,"AT","0",0,2,"A PAIR"
+332,5,0,"AT","0",0,2,"WOMEN'S SPECIALS"
+333,5,0,"AT","0",0,2,"AVIA W470 BLACK"
+334,5,0,"AT","0",0,2,"Dual density EVA t PU midtoie. sold in 87 for"
+335,5,0,"AT","0",0,2,"$54"
+336,5,0,"AT","0",0,2,"TIGER LADY CEL 100"
+337,5,0,"AT","0",0,2,"ASKS cel In midsole."
+338,5,0,"AT","0",0,2,"SOM In 1987 for"
+339,5,0,"AT","0",0,2,"$52"
+340,5,0,"AT","0",0,2,"PUMA LADY AERIAL"
+341,5,0,"AT","0",0,2,"Garment leather upper with EVA midsoie"
+342,5,0,"AT","0",0,2,".AVIA LADY"
+343,5,0,"AT","0",0,2,"YOUR"
+344,5,0,"AT","0",0,2,"CHOICE"
+345,5,0,"AT","0",0,2,"54?J!"
+346,5,0,"AT","0",0,2,"ADIDAS MICRO PACER"
+347,5,0,"AT","0",0,2,"Tri-den«itv pre-molded midtole."
+348,5,0,"AT","0",0,2,"SOM In 1987 for $120"
+349,5,0,"AT","0",0,2,"PAIR OR"
+350,5,0,"AT","0",0,2,"CONVERSE AB-M 600"
+351,5,0,"B","0",0,2,
+352,5,0,"AT","0",0,2,"A PAIR FOR"
+353,5,0,"AT","0",0,2,"CHILDREN'S I WOMEN'S"
+354,5,0,"AT","0",0,2,"ADIDAS JR"
+355,5,0,"AT","0",0,2,"TIGER LADY"
+356,5,0,"AT","0",0,2,"PRINCE SPECTRUM"
+357,5,0,"AT","0",0,2,"PuH grain leather upper. SoM In 1987 for"
+358,5,0,"AT","0",0,2,"$40"
+359,5,0,"AT","0",0,2,"HI"
+360,5,0,"AT","0",0,2,"TRANSTAR"
+361,5,0,"AT","0",0,2,"Dual demity midtole with padded collar"
+362,5,0,"AT","0",0,2,"NIKE LADY RACOUETTB"
+363,5,0,"AT","0",0,2,"9ll8tt1/3-8 oniy. SoM In 1988"
+364,5,0,"AT","0",0,2,"for"
+365,5,0,"AT","0",0,2,"YOUR CHOICE"
+366,5,0,"AT","0",0,2,"24?2"
+367,5,0,"AT","0",0,2,"PAIR OR"
+368,5,0,"B","0",0,2,
+369,5,0,"AT","0",0,2,"PAIR FOR"
+370,5,0,"AT","0",0,2,"$40"
+371,5,0,"AT","0",0,2,"EXERCISE"
+372,5,0,"AT","0",0,2,"PACinC 110 DELUXE BARBELL SET"
+373,5,0,"AT","0",0,2,"With S Dehiae Chrome Bar"
+374,5,0,"B","0",0,2,4999
+375,5,0,"AT","0",0,2,"smi^"
+376,5,0,"AT","0",0,2,"ASS0CIAT80"
+377,5,0,"AT","0",0,2,"¥Y»acler"
+378,5,0,"AT","0",0,2,"R4S0"
+379,5,0,"AT","0",0,2,"89»»"
+380,5,0,"AT","0",0,2,"BnUai."
+381,5,0,"AT","0",0,2,"TITAN"
+382,5,0,"AT","0",0,2,"INCUNE"
+383,5,0,"AT","0",0,2,"BENCH"
+384,5,0,"AT","0",0,2,"Great starter Bench"
+385,5,0,"AT","0",0,2,"19»»"
+386,5,0,"AT","0",0,2,"ATHLETICS"
+387,5,0,"AT","0",0,2,"SOCCER"
+388,5,0,"AT","0",0,2,"site A Synthetic Leather"
+389,5,0,"AT","0",0,2,"10»»"
+390,5,0,"AT","0",0,2,"100% COTTON JERSEY"
+391,5,0,"AT","0",0,2,"CYCLE"
+392,5,0,"AT","0",0,2,"with 40 LB. Ptywheel"
+393,5,0,"B","0",0,2,14999
+394,5,0,"AT","0",0,2,"RAWUNGS"
+395,5,0,"AT","0",0,2,"NEL"
+396,5,0,"AT","0",0,2,"OR"
+397,5,0,"AT","0",0,2,"LEATHER"
+398,5,0,"AT","0",0,2,"14»»"
+399,5,0,"AT","0",0,2,"SPORTSWEAR"
+400,5,0,"AT","0",0,2,"workout 8 coverupt."
+401,5,0,"AT","0",0,2,"Choote from a food leiectloH of coMrt"
+402,5,0,"AT","0",0,2,"24»»"
+403,5,0,"AT","0",0,2,"lOCfel"
+404,5,0,"AT","0",0,2,"oraw"
+405,5,0,"B","0",0,2,
+406,5,0,"AT","0",0,2,"Attorted ttyiet to choote from"
+407,5,0,"AT","0",0,2,"29"""
+408,5,0,"AT","0",0,2,"THREE DAYS ONLY!"
+409,5,0,"AT","0",0,2,"BONUS COUPONS"
+410,5,0,"AT","0",0,2,"EXTRA"
+411,5,0,"AT","0",0,2,"10%"
+412,5,0,"AT","0",0,2,"EXTRA"
+413,5,0,"AT","0",0,2,"10%"
+414,5,0,"AT","0",0,2,"EXTRA"
+415,5,0,"AT","0",0,2,"10%"
+416,5,0,"AT","0",0,2,"9/J7-29"
+417,5,0,"AT","0",0,2,"9 27 291"
+418,5,0,"AT","0",0,2,"EXTRA"
+419,5,0,"AT","0",0,2,"10%"
+420,5,0,"AT","0",0,2,"PFF"
+421,5,0,"AT","0",0,2,"9 27 29"
+422,5,0,"AT","0",0,2,"Al."
+423,5,0,"AT","0",0,2,"Each coupon may be applied to the purchase of any item in stock. Limit (5) coupons per person, one coupon per item. Coupons cannot be used for layaways or gift certificate. 3 days only."
+424,5,0,"AT","0",0,2,"L W9 9CC9Rt VH* • MtttBff n*<"
+425,5,0,"AT","0",0,2,"PtICfS COCO TNiU 10/S/M"
+426,5,0,"AT","0",0,2,"Copeland^s Sports"
+427,6,0,"AT","0",0,1,"Los Hermnos"
+428,6,0,"AT","0",0,1,"AMryantas ■ Tacos a few Weicdos"
+429,6,0,"AT","0",0,1,"PROGRESSIVE HAPPY HOUR"
+430,6,0,"AT","0",0,1,"Monday-Friday"
+431,6,0,"AT","0",0,1,"4pm-5pm Margaritas Liter $4.00"
+432,6,0,"AT","0",0,1,"Glass $1.00 5pm-6pm Liter $5.00 Glass $1.50 6pm*7pm Liter $6.00 Glass $1.75"
+433,6,0,"AT","0",0,1,"975 Osos"
+434,6,0,"B","0",0,1,
+435,6,0,"AT","0",0,3,"F O O TH I L L H A C I END A I"
+436,6,0,"AT","0",0,3,"190 California Blvd ■"
+437,6,0,"AT","0",0,3,"Large, Fully Furnished Apartments Private & Shared Rooms Available No Charge Reserved Parking"
+438,6,0,"AT","0",0,3,"See Chús in Apt 102"
+439,6,0,"AT","0",0,3,"546-0520 or 543-6819"
+440,6,0,"AT","0",0,5,"Make Yourself a Home ..."
+441,6,0,"AT","0",0,5,"Lloyd Wicker, naturally beautiful dining sets, rockers, dressers, and headboards."
+442,6,0,"AT","0",0,5,"Rattan white wicker loveseats"
+443,6,0,"AT","0",0,5,"Natural rattan core/steel frame four shelf eteg^e."
+444,6,0,"AT","0",0,5,"Futons"
+445,6,0,"AT","0",0,5,"M III"
+446,6,0,"AT","0",0,5,"II III"
+447,6,0,"AT","0",0,5,"ft*"
+448,6,0,"AT","0",0,5,"L.	<^1"
+449,6,0,"AT","0",0,5,"Full size 6"" with rattan"
+450,6,0,"AT","0",0,5,"frame $249."
+451,6,0,"AT","0",0,5,"Storage Systems"
+452,6,0,"AT","0",0,5,"•Wiregrid Wall Systems •Cube Systems with shelving and glass doors •Closet storage baskets •Many other multifunctional accessories"
+453,6,0,"AT","0",0,5,"Telescope Beach Chairs. 4 colors, the best."
+454,6,0,"AT","0",0,5,135.95
+455,6,0,"AT","0",0,5,"Houseplants"
+456,6,0,"AT","0",0,5,"* -15 gallon in stock"
+457,6,0,"AT","0",0,5,"$2 OFF."
+458,6,0,"AT","0",0,5,"Furniture-All on sale starting with 3 pc. group $99."
+459,6,0,"AT","0",0,5,"Seletjted chaise lounges 50%"
+460,6,0,"AT","0",0,5,"i. OFF."
+461,6,0,"AT","0",0,5,"And check"
+462,6,0,"AT","0",0,5,"out the mbrellas!"
+463,6,0,"AT","0",0,5,"C GARDENS)"
+464,6,0,"AT","0",0,5,"OPEN 10-6,"
+465,6,0,"AT","0",0,5,"7 days 1998 Santa Barbara St, SLO 541-3166"
+466,6,0,"B","0",0,2,
+467,6,0,"B","0",0,2,
+468,6,0,"AT","0",0,2,"V"
+469,6,0,"AT","0",0,2,"All you can eatn"
+470,6,0,"AT","0",0,2,"All you can eat beef rib dinner with soup or salad, ranch beans and san Luis Sourdough for only $7.95. Wednesday nights only from"
+471,6,0,"AT","0",0,2,"X 5:30- 9:00pm."
+472,6,0,"AT","0",0,2,"^774 Higuera, in the Cellar of the Network ^	543-4488	^"
+473,6,0,"AT","0",0,4,"VOICEMAIL"
+474,6,0,"AT","0",0,4,"YOUR OWN ANSWERING SERVICE FOR $15 A MONTH!!"
+475,6,0,"AT","0",0,4,"WITH TAS-COMM’s VOICEMAIL. THERE’S NO EQUIPMENT TO BUY. NOTHING TO INSTALL. YOU ARE ASSIGNED YOUR OWN LOCAL PHONE NUMBER. WHERE MESSAGES CAN BE DEPOSITED 24 HOURS/DAY. 7 DAYS/WEEK. USE YOUR OWN PRIVATE PASSWORD FOR COMPLETE CONFIDENTIALLITY. RETRIEVE YOUR MESSAGE FROM ANY TOUCH TONE PHONE. ANYWHERE."
+476,6,0,"AT","0",0,4,"CALL TAS-COMM AT 543-5800 FOR DETAILS."
+477,6,0,"AT","0",0,6,"ARE YOU PLANNING TO MEET THE GRADUATION WRITING REQUIREMENT BY TAKING THE WRITING PROFICIENCY EXAMINATION (WPE-formerly the JWT)?"
+478,6,0,"AT","0",0,6,"September 30th Is the deadline to sign up for the fall quarter exam at the cashier's office in the administration building."
+479,6,0,"AT","0",0,6,"WPE preparation workshops will be offered 9/27, 9/29, and 10/4 from 11AM to Noon in Science (52) B-5."
+480,6,0,"AT","0",0,6,"Questions? Call Writing Skills at 756-2067 or visit our new office in the Agriculture Bldg. (10), Rm 130."
+481,6,0,"AT","0",0,7,"uCREST CREST CREST CREST CREST"
+482,6,0,"AT","0",0,7,"Qe"
+483,6,0,"AT","0",0,7,"W)"
+484,6,0,"AT","0",0,7,"Ui"
+485,6,0,"AT","0",0,7,"QB"
+486,6,0,"AT","0",0,7,"U"
+487,6,0,"AT","0",0,7,"$"
+488,6,0,"AT","0",0,7,":q"
+489,6,0,"B","0",0,7,
+490,6,0,"AT","0",0,7,"YOUR VERY O"
+491,6,0,"AT","0",0,7,"ZZA!"
+492,6,0,"AT","0",0,7,"Uj"
+493,6,0,"AT","0",0,7,"OB"
+494,6,0,"AT","0",0,7,"U"
+495,6,0,"AT","0",0,7,"Uj"
+496,6,0,"AT","0",0,7,"OB"
+497,6,0,"AT","0",0,7,"U"
+498,6,0,"AT","0",0,7,"goSE YOUR"
+499,6,0,"AT","0",0,7,"8”"
+500,6,0,"AT","0",0,7,"OB"
+501,6,0,"AT","0",0,7,"Ui"
+502,6,0,"AT","0",0,7,"OB"
+503,6,0,"AT","0",0,7,"u"
+504,6,0,"AT","0",0,7,"n"
+505,6,0,"AT","0",0,7,"ao"
+506,6,0,"AT","0",0,7,"n"
+507,6,0,"AT","0",0,7,"bq"
+508,6,0,"AT","0",0,7,"bd"
+509,6,0,"AT","0",0,7,"Uj"
+510,6,0,"AT","0",0,7,"OB"
+511,6,0,"AT","0",0,7,"CREST PIZZfl 179 SRNTR ROSn,"
+512,6,0,"AT","0",0,7,"BV LUILLIRMS BROS. 541-2285"
+513,6,0,"AT","0",0,7,"mis Coupon"
+514,6,0,"AT","0",0,7,"I"
+515,6,0,"AT","0",0,7,"GOOD UNTIL OCT. 4."
+516,6,0,"AT","0",0,7,"n"
+517,6,0,"B","0",0,7,30
+518,6,0,"B","0",0,7,30
+519,6,0,"AT","0",0,7,"^ISJUJ 1S3UJ 1S3R3 1S3R3 1S3R3 1S3R3^"
+520,6,0,"AT","0",0,7,
+521,7,0,"NA","0",0,0,"s. r —"
+522,7,4,"HL","0",0,0,"^MELESS"
+523,7,0,"PI","0",0,0,"Mustang Daily Tuesday, September 27.1988"
+524,7,4,"ME","0",-1,0,"liom page 1"
+525,7,4,"TXT","22",0,0,"t|at the safety and welfare of the neighborhood holds priority over tie needs of the homeless. But i3)w workers at City Hall are ^mplaining about the loitering fad use of bathroom facilities. jCity officials continue to jscuss possible solutions to the ])meless problem. The problems"
+526,7,4,"TXT","23",0,0,"are said to continue regardless of the pick up and drop off location."
+527,7,4,"TXT","24",0,0,"The problem is not lack of money or too few volunteers. The problem is locating an acceptable shelter for the homeless. Salvation Army representatives said they feel that their requests for property are rejected because no one wants the homeless next door."
+528,7,0,"AT","0",0,1,"Help create the first 21st century company."
+529,7,0,"AT","0",0,1,"Apple has always been a little ahead of its time. From the introduction of the hrst popular personal computer, to the first system to use graphic user interface, to the first desktop publishing s\^tem, our goal has alwa\s been the same: to change the world with computers"
+530,7,0,"AT","0",0,1,"That goal results in a company that is ever\ bit as advanced as its products In many wa«, Apple is well on its way to becoming the first 21st centur\’ company in the Fortune 200."
+531,7,0,"AT","0",0,1,"Vtliere the typical company emphasizes hierarchy, at Apple we stress networks. Instead of mandates coming down from the top. ideas percolate throughout the organization. We give our people unusual amounts of responsibility. Extraordinary tools to let them do their best work. And an eclectic envirofiment conducive to changing the world"
+532,7,0,"AT","0",0,1,"Add to that unusual environment all of the resources a major corporation can pmvide. Sophisticated management Astute marketing. International distribution. And you have the elements of the first company of the next century; Apple"
+533,7,0,"AT","0",0,1,"If you’re ready to lead the way beyond the year 2000, and you’re about to receive a degree in engineering or computer science, why not join a company as eager to see vv^at you can do as you are—Apple."
+534,7,0,"AT","0",0,1,"Come hear our engineers and MIS managers talk about our future and vour future with"
+535,7,0,"AT","0",0,1,"Wll be on Campus: Monday; October 3rd Staff Dining Room 7 pim. - 9 |km."
+536,7,0,"AT","0",0,1,"TTie power to be your best."
+537,7,0,"AT","0",0,1,"An equal opportunity employer"
+538,7,0,"AT","0",0,1,"* IW Apple (>wipulff Inc Apple iitd the Apple lonn are fenisleted irademarfc. ai Apple Cnenpulrr Iik"
+539,7,0,"OT","0",0,0,"ACCOUNTING CLUB"
+540,7,0,"OT","0",0,0,"MEETING"
+541,7,0,"OT","0",0,0,"TUES AT 11:00 RM 02-214"
+542,7,0,"OT","0",0,0,"AHS"
+543,7,0,"OT","0",0,0,"FIRST MEETING"
+544,7,0,"OT","0",0,0,"TUESDAY SEPT. 27 5PM AERO HANGAR"
+545,7,0,"OT","0",0,0,"AMERICAN MARKETING ASSOCIATION"
+546,7,0,"OT","0",0,0,"★ ^ ^ ****"
+547,7,0,"OT","0",0,0,"JOIN US FOR FREE FOOD,’ DRINKS, AND TONS OF FUN! A.M.A. MEMBERSHIP BBQ AT CUESTA PARK, FRI. SEPT. 30. 4:00 PM ■ ???"
+548,7,0,"OT","0",0,0,"BICYCLE RIDERS"
+549,7,0,"OT","0",0,0,"WHEELMEN CYCLING CLUB"
+550,7,0,"OT","0",0,0,"is for youlmtn,road.leisure riding.Lots of fun.no hard rides in fall 1/4 MTG WED 9/28 DEXTER 227,7pm BE THERE"
+551,7,0,"OT","0",0,0,"BOWLING LEAGUE STARTS WED. at 8pm. Laurel Bowl- exist is $45/quarter."
+552,7,0,"OT","0",0,0,"Call to res. spot 543-7492/544-3230"
+553,7,0,"OT","0",0,0,"^ CAL POLY CREW"
+554,7,0,"OT","0",0,0,"Gen Mtg Wed 6-^m or Thurs.11-12 Fischer Science Room 286 ALL INTERESTED PLEASE ATTEND No experience nescessary"
+555,7,0,"OT","0",0,0,""" chi EPSILON"
+556,7,0,"OT","0",0,0,"Meeting for all members Thurs. 9/29 in 13-202 Certificates will be given out and REFRESHMENTS will be served!"
+557,7,0,"OT","0",0,0,"CREW CLUB MFO MEETMG"
+558,7,0,"OT","0",0,0,"ALL INTERESTED WELCOME NO EXPERIENCE NECESSARY"
+559,7,0,"OT","0",0,0,"FISHER SCI 286"
+560,7,0,"OT","0",0,0,"SEPT. 28 6-7PM AND SEPT 29 11-12PM"
+561,7,0,"OT","0",0,0,"Doni put off until tomorrow,"
+562,7,0,"OT","0",0,0,"what you can do TODAY! JOM AMAI"
+563,7,0,"OT","0",0,0,"Meetings: Tues, 11:00 AM Arch"
+564,7,0,"OT","0",0,0,"225. Guest Speaker today"
+565,7,0,"OT","0",0,0,"Jay Hoey, a product manager from"
+566,7,0,"OT","0",0,0,"Varian Aasociatea. Check it out!___"
+567,7,0,"OT","0",0,0,"ENGMEERMO STUDENTS Get involved in Engineering Council. Apply in Dean's Office (bldg. 13) by October 3."
+568,7,0,"OT","0",0,0,"GAY AND LESBIAN STUDENT UNION MEETMG FOB 24B TUESDAY 7PM."
+569,7,0,"OT","0",0,0,"MECHA First Meeting WM Sept 28 at 6PM Sa North RM 206 REFRESHMENTS SERVED"
+570,7,0,"OT","0",0,0,"POLO CLUB"
+571,7,0,"OT","0",0,0,"WED.9/28 6:30 IN AG 111 LET'S GET STARTED ALL WELCOME"
+572,7,0,"OT","0",0,0,"RECYCLMG CAN BE FUN! Campus Recyckno meetirio tonight at 7 00pm Rm E28 of the Science bldg, members encouraged to participate."
+573,7,0,"OT","0",0,0,"SCE"
+574,7,0,"OT","0",0,0,"1st MEETMG WED. SEP 28. 7 30pm GUEST SPEAKERS-DEAN LEE. ASCE. APWk. ITEiENGMEERMG 13 RM118"
+575,7,0,"OT","0",0,0,"SKI CLUB MEETMGfl"
+576,7,0,"OT","0",0,0,"WEDS.28lh 8:00pm Fiscber Science 288 New Membership & tailgates Winter Break And More'"
+577,7,0,"OT","0",0,0,"Cut Looee. Eh!"
+578,7,0,"OT","0",0,0,"THE ENTREPRENEUR'S ACE CLUB During Fafl Ouarter only.jom for free 543-8914 Mark B mlo_"
+579,7,0,"OT","0",0,0,"VVATER SKIERS"
+580,7,0,"OT","0",0,0,"You are invited to come check the Waterski Club & Intercollegiate team Meeting Wbd9/28 8C0 Sa Bldg 52-E27 ALL LEVELS WELCOME___________"
+581,7,0,"OT","0",0,0,"WELCOME BACK GOLDEN KEY MEMBERS"
+582,7,0,"OT","0",0,0,"Don't miss our 1st mtg.l!!"
+583,7,0,"OT","0",0,0,"WED 9/28 in UU216 AT 5PM SHARP'"
+584,7,0,"OT","0",0,0,"YOUNG"
+585,7,0,"OT","0",0,0,"DEMOCRATS"
+586,7,0,"OT","0",0,0,"First meeting Tues Sept 27 at 8PM Sa North Rm 213"
+587,7,0,"OT","0",0,0,"BE MVOLVED WITH POLY ROYAL Executive board i^icatlons available in uu 209 due Oa 3"
+588,7,0,"OT","0",0,0,"COLLEGE REPUBLICANS meeting- Tuesday September 27 7:00 pm Ag 227 speaker:"
+589,7,0,"OT","0",0,0,"Dr Stan Monteith- running for congress"
+590,7,0,"OT","0",0,0,"DAY & TIME TO BE SCHEDULED BULIMIA SUPPORT GROUP 7S8-2S11"
+591,7,0,"OT","0",0,0,"MTERSTED M SPORTSCASTMG FOR KCPR? Meet in Graphic Arts bldg. 26 Rm 201, Tues Sept 27th at fPM. If you cani make the meeting, please contaa Bobby Rowell or Brenda Corrie at 544-7783"
+592,7,0,"OT","0",0,0,"MAKE SOMEONE'S DAY BY SENDMG THEM A COLORFUL BALLOON BOUQUET!"
+593,7,0,"OT","0",0,0,"13 BALLOONS $11.95 6 FOR $6.00 CALL HERE'S TO YOU AT 546-8215 FREE DELIVERY"
+594,7,0,"OT","0",0,0,"MEMORY IMPROVEMENT SEMINAR THUR SEPT 29th 10AM-12NOON CAHSE HALL RM 104 756-1256"
+595,7,0,"SH","0",0,0,"Classified"
+596,7,0,"OT","0",0,0,"DO YOUR SENIOR PROJECT"
+597,7,0,"OT","0",0,0,"for the Tipsy Taxi Program!"
+598,7,0,"OT","0",0,0,"Art Bus Jour/PR Mktg Stat Majors Welcome - Call Frank at 543-2968"
+599,7,0,"OT","0",0,0,"MONDAYS 3-5PM"
+600,7,0,"OT","0",0,0,"756-2511"
+601,7,0,"OT","0",0,0,"STRESS MANAGEMENT GROUP CAREER PLANNING WORKSHOPS OCT 24th, 31st, NOV 7th"
+602,7,0,"OT","0",0,0,"POLY PALS"
+603,7,0,"OT","0",0,0,"BIG FRIENDS FOR LITTLE PEOPLE' Pals is having an orientation meeting for people interested OCT. 4 & 6 7PM AG BLDG. RM227 All returning pals please contact pals office. For info: 756-2476"
+604,7,0,"OT","0",0,0,"Test Preparation Seminar Tues Sept 27th 10am-12pm Chase Hall Rm 104 756-1256"
+605,7,0,"OT","0",0,0,"THURSDAYS"
+606,7,0,"OT","0",0,0,"756-2511"
+607,7,0,"OT","0",0,0,"RE-ENTRY DISCUSSION GROUP 11AM- 12PM"
+608,7,0,"OT","0",0,0,"INTERPERSONAL GROUP 3-5PM"
+609,7,0,"OT","0",0,0,"TUESDAYS 3-4:30 PM 756-2511 ASSERTIVENESS TRAINING"
+610,7,0,"OT","0",0,0,"WEDNESDAYS 3-4:30 PM 756-2511 INCEST: A SUPPORT GROUP FOR WOMEN"
+611,7,0,"OT","0",0,0,"BIOFEEDBACK FOR STRESS, ANXIETY 3-5PM"
+612,7,0,"OT","0",0,0,"GAY & LESBIAN SUPPORT GROUP 6-8 PM"
+613,7,0,"OT","0",0,0,"YOU OWN A8I! GET MVOLVED"
+614,7,0,"OT","0",0,0,"APPLICATIONS FOR COMMITTEE APPOINTMENTS AVAILABLE. SEE LINDA LEE IN UU217. BY OCT 6"
+615,7,0,"OT","0",0,0,"CHANGE OF ADDRESS"
+616,7,0,"OT","0",0,0,"Rec Sports has moved! Stop by our new office -UU 119- and pick up your copy of Rec Sports Calendar of events for Fall 1988."
+617,7,0,"OT","0",0,0,"MELISSA"
+618,7,0,"OT","0",0,0,"Welcome back. I missed you over the break I miss you now, but I'm glad you're playing it safe."
+619,7,0,"OT","0",0,0,"Stop by dunng the middle of the"
+620,7,0,"OT","0",0,0,"sometime___________________"
+621,7,0,"OT","0",0,0,"NON-CAPTURED CRAFT CLASSES Sign-up for a fun, nonacademic aaft class in your UU Craft Center -downstairs in the U.U. b/w Photo, woodworking.silkscreening.bike repair and rrKxelUse your Craft Center' Could be fun!"""
+622,7,0,"OT","0",0,0,"AXA’S"
+623,7,0,"OT","0",0,0,"1968 THRA8HATHON... BE THERE OR DON'T... THE CHOtCE IS YOURS. 9/28-9/30"
+624,7,0,"OT","0",0,0,"IFC Meetings Every Tuesday 6PM U.U."
+625,7,0,"B","0",0,0,220
+626,7,0,"OT","0",0,0,"Gamee People Play I Playing and Board Gamee 1080 Broad V SLO 54S-8447 Opan Gammlng-FREE-Sat and Sun."
+627,7,0,"OT","0",0,0,"FOUND. White kitten 10-12 wks old near Foothill & Ferrini. 543-2575 evenings"
+628,7,0,"OT","0",0,0,"LOST: Decorative wooden box. Important to family. Lost in Poly Groves Wsd Sep 14 about 7pm Please return to Judy Phillips 544-9499"
+629,7,0,"OT","0",0,0,"SUNGLASSES"
+630,7,0,"OT","0",0,0,"Blue & gold prescription Raybands Can Charlotte 543-8992"
+631,7,0,"OT","0",0,0,"Bring him to his knees with a Strip-tease! Catalina 772-5809"
+632,7,0,"OT","0",0,0,"544-1305 SR PROJECT SPECIALIST LMDA BLACK - 983 OSOS SLO________"
+633,7,0,"OT","0",0,0,"DOCUGRAPHICS: Word Processing Fast Service • Student Rates 937-6992/Santa Mana-7 days/wk	__"
+634,7,0,"OT","0",0,0,"RAR WORD PROCESSING AND TYPM^ (Rona).LASER PRINTER w/100-i-type fonts. student rates.544-2591, by appt only_"
+635,7,0,"OT","0",0,0,"RESUME, PAPERS, PROJECTS, WORD PROCESSMG DONE IN SO CTY CONSHA'S OFFICE SUPPLY PISMO BEACH 773-5851 OR 489-0724 EVE"
+636,7,0,"OT","0",0,0,"WORDPROCESSING-FAST-REASONABLE"
+637,7,0,"OT","0",0,0,"LOCAL-PAPERS-PROJECTS-RESUMES 528-7078 (L.O) 7 DAYS/WK"
+638,7,0,"OT","0",0,0,"DEPT OF FOREIGN LANG NEEDS READER/GRADERS. WORK STUDY STUDENTS ENCOURAGED TO APPLY CALL 2585 OR 1205 FOR DETAILS"
+639,7,0,"OT","0",0,0,"EXPERIENCED PHOTOTECHNICIAN; AUDIOVISUAL DEPT General lab work, photocopy, slide duplicating. Contaa Joe Codispoti 756-2211"
+640,7,0,"OT","0",0,0,"Mustang Daily"
+641,7,0,"OT","0",0,0,"IS LOOKING FOR ONE OUALIFIED PERSON TO JOIN OUR ADVERTISING STAFF. CANDIDATE MUST BE AN AGGRESSIVE SELF-STARTER WITH RELIABLE TRANSPORTATION. TELEMARKETING AND/OR SALES EXPERIENCE PREFERRED. MUST H/WE EXCELLENT COMMUNICATION AND ORGANIZATIONAL SKILLS. CALL A. J. AT THE MUSTANG DAILY."
+642,7,0,"OT","0",0,0,"Preschool teacher must love work with 2’/2-6 yr olds ECE preferred not required flex, schedule 927-5795"
+643,7,0,"OT","0",0,0,"SALES"
+644,7,0,"OT","0",0,0,"MAKE YOUR OWN HOURS."
+645,7,0,"OT","0",0,0,"WE ARE LOOKING FOR A HIGHLY MOTIVATED PERSON TO SELL VOICE MAIL BOXES TO STUDENTS AND CAMPUS"
+646,7,0,"OT","0",0,0,"CLUBS AND ORGINIZATIONS."
+647,7,0,"OT","0",0,0,"CALL 549-6460 TO LEAVE A MESSAGE"
+648,7,0,"OT","0",0,0,"WORK STUDY JOB"
+649,7,0,"OT","0",0,0,"If you like working with people"
+650,7,0,"OT","0",0,0,"This Jobs For You!"
+651,7,0,"OT","0",0,0,"$5.50/hr. Flexible Hrs."
+652,7,0,"OT","0",0,0,"Call Kathy 541-6751"
+653,7,0,"OT","0",0,0,"Cheap Pine Shelf units.desk.end & coffee tables S15to$69 541-1365"
+654,7,0,"OT","0",0,0,"Couch.loveseat.coffee table.end table.$200 for all,544-0721 Steve"
+655,7,0,"OT","0",0,0,"Olympia RO Pnnter.custom sound cover and ribbons. Great for home use $225.00 Call 756-2676."
+656,7,0,"OT","0",0,0,"Typewriter IBM selearic IT $340 correaing. wide carriage 489-1097"
+657,7,0,"OT","0",0,0,"1985 Yamaha OT50 praaically new, only 400 miles.$350/bo 544-0721"
+658,7,0,"OT","0",0,0,"For sale 87 Yamaha 50CC scooter XLNT condition 541-9364 Julie"
+659,7,0,"OT","0",0,0,"1967 Mustang 289 Automatic Great condition in and out $3800 OBO Scott 461-9307 541-3737"
+660,7,0,"OT","0",0,0,"1979 Toyota Corolla Sp Cpe 5 spd 108k miles Excit cond. $2250/b o. 544-0721"
+661,7,0,"OT","0",0,0,"83 NISSAN SENTRA $2300 O B O. XLNT COND CALL PRATISH 756-3837"
+662,7,0,"OT","0",0,0,"CLASSIC MUSTANG 66 RED CALL JOHN 528-5711 $5.400 00 REAL CLEAN RUNS EXCELLENT"
+663,7,0,"OT","0",0,0,"GMC 1965 S-10 BLAZER 4x4 Auto A/C /KM/FM Cassette New Tires & Brakes xkit cond must sell!"
+664,7,0,"OT","0",0,0,"$9000 or best otter 489-2858/1"
+665,7,0,"OT","0",0,0,"Fern Rmmtes needed 4 Pine Creek condo w/d mrcrowve, call 544-0841______"
+666,7,0,"OT","0",0,0,"FEMALE TO SHARE OWN ROOM IN 3 ROOM MORRO BAY HOUSE WITH 2 NICE GUYS OCEAN VIEW BUS ACESS DEREK OR ANDY 772-1642"
+667,7,0,"OT","0",0,0,"FM RMMT WANTED TO SHARE MASTER BDRM IN LAGUNA HOUSE washer/dryer/lots or room $195/share.541-3273"
+668,7,0,"OT","0",0,0,"OWN ROOM W/DR MICRO Close to school Pinecreek FaH $275 541-4936"
+669,7,0,"OT","0",0,0,"FURNISHED 3 BDM APT 10 OR 12 MONTH LEASE 543-1452_____________"
+670,7,0,"OT","0",0,0,"OCEAN VIEWDECK.1 BD.1 BA.Microwv DEN/KITCHENETTE.FURNISHED.UTI. PD 15 M TO POLY.400/MO (818)348-2503"
+671,7,0,"OT","0",0,0,"AAAIBEST PRICED CONDOS & HOMES LISTED FREE INFORMATION PACKET AVAILABLE ON CAMPUS CALL MARGUERITE CENTURY 21 841-3432"
+672,7,0,"OT","0",0,0,"Perfea (or student 12x45 Mobile Home in SLO Kids and Pets ok $20,000 549-8528"
+673,7,0,"OT","0",0,0,"TUESDAY, SEPTEMBER 27,1988"
+674,8,0,"PI","0",0,0,"8 Tuesday, September 27.1988 Mustang Dally"
+675,8,3,"HL","0",0,0,"CLASH"
+676,8,3,"ME","0",-1,0,"From page 1"
+677,8,3,"TXT","4",0,0,"The vice president replied, “Yes, we shouldn’t trade arms for hostages, but we have made vast improvements in our antiterrorism.’’ Some hostages were freed during the arms dealing with Iran, but others were seized"
+678,8,3,"TXT","4",0,0,"and nine Americans remain in captivity."
+679,8,3,"TXT","5",0,0,"A question about Republican vice presidential candidate Dan Quayle brought another lively exchange. Bush defended his youthful running mate, said he had been subjected to unfair"
+680,8,0,"AT","0",0,1,"EVENING Child Care"
+681,8,0,"AT","0",0,1,"•	Evoning Child Coro for chHdron, ogos 3 to 8,"
+682,8,0,"AT","0",0,1,"•	A now program dosignod for working poronts and for poronts attonding night classos."
+683,8,0,"AT","0",0,1,"•Monday through Friday, 6:30 pm to 10:30 pm. •Staffod by crodontialod toochors."
+684,8,0,"AT","0",0,1,"•Quality Christian Caro."
+685,8,0,"AT","0",0,1,"•Discounts for famiUos with two or moro chlldron. •ChikJron must orvoN for a minimum of ono night por wook. No Drop-ins allowod."
+686,8,0,"AT","0",0,1,"Evoning Child Coro bogint on Mornkiy, Soplombor 26. For moro IntormoNon, caN 643*8469"
+687,8,0,"AT","0",0,1,"Zion"
+688,8,0,"AT","0",0,1,"Christian"
+689,8,0,"AT","0",0,1,"School"
+690,8,0,"AT","0",0,1,"ZION CHRISTIAN SCHOOL"
+691,8,0,"AT","0",0,1,"10)0 Foothill Blvd San luis Obispo CA 93-JOl"
+692,8,3,"TXT","5",0,0,"speculation and added, “he has my confidence.’’ Dukakis guessed that “for most people the notion of President Quayle is a very, very troubling notion.’’"
+693,8,3,"TXT","6",0,0,"The vice president and the Massachusetts governor shook hands at center stage before the debate and again after. “Good job,’’ Dukakis said to his Republican rival after their 90-minute clash."
+694,8,3,"TXT","7",0,0,"Both men then headed for post-debate rallies."
+695,8,3,"TXT","8",0,0,"“I enjoyed it. I thought it was a good night,” said Dukakis. Asked if he won, he replied, “People seemed to be pretty enthusiastic.”"
+696,8,3,"TXT","9",0,0,"Bush campaign chairman James A. Baker III said, “The vice president did an extraordinarily good job in our opinion.” He said he thought Bush “reinforced the differences we’ve been talking about.”"
+697,8,3,"TXT","10",0,0,"The combatants argued their case a little more than six weeks before Election Day from behind wooden lecterns on a stage at Wait Chapel on Wake Forest University’s campus. The live audience at Wait Chapel on the"
+698,8,3,"TXT","10",0,0,"Wake Forest University’s campus numbered a few thousand — but the television audience was in the millions. And with many voters still undecided, the campaigns treated the debate as a pivotal event."
+699,8,3,"TXT","11",0,0,"Neither man committed an obvious gaffe during the 90 minutes. An Associated Press panel of six veteran debate judges gave Dukakis a narrow edge over Bush. Three judges thought Dukakis won and three picked Bush, but the Democrat got the most points overall. Dukakis got top marks for presentation and organization, while Bush bested his opponent in refutation and reasoning."
+700,8,3,"TXT","12",0,0,"An ABC News poll of 639 debate-watchers taken immediately after the debate found that 44 percent rated Dukakis the winner, 36 percent gave the edge to Bush and 20 percent said it was a tie."
+701,8,3,"TXT","13",0,0,"The formal debate rules were designed to prohibit direct can-didate-to-candidate comment, but there was no shortage of hostilities."
+702,8,3,"TXT","14",0,0,"Dukakis was asked to specify"
+703,8,3,"TXT","14",0,0,"three programs he would cut to curb the federal budget, and said he would reduce ’’certain weapons systems, which we don’t need and can’t afford.”"
+704,8,3,"TXT","15",0,0,"With that, he focused on Bush, and said the Republican wants to spend more on defense, cut capital gains taxes, spend more money on other programs yet impose no new taxes."
+705,8,3,"TXT","16",0,0,"“If he’s serious about what he’s saying the only way he can do it is by raiding the Social Security trust fund,” Dukakis said."
+706,8,3,"TXT","17",0,0,"“If he keeps this up, he’s going to be the Joe Isuzu of American politics,” he said, drawing laughter from the audience with his reference to the television advertising character who exaggerates everything he says about the cars he’s selling."
+707,8,3,"TXT","17",0,0,"“Is this the time to unleash our one liners?” Bush said in response. “That answer was about as clear as Boston Harbor,” he said in reference to environmental problems in Dukakis’ home state."
+708,8,3,"TXT","18",0,0,"Running mates Dan Quayle and Lloyd Bentsen meet in Omaha, Neb., on Oct. S."
+709,8,0,"AT","0",0,2,"CARLOS SOSA"
+710,8,0,"AT","0",0,2,"GRANT JONES"
+711,8,0,"B","0",0,2,
+712,8,0,"B","0",0,2,
+713,8,0,"AT","0",0,2,"SUSAN KRUSE______HOLLY A. VAN DEURSEN Ï1 DEBATE"
+714,8,0,"AT","0",0,2,"Mix Structunl IngioMring."
+715,8,0,"AT","0",0,2,"Analyzing and designing bridges. Developed virorking model of a dout^ spandrel arch bridge.The HP-28S helps him analyze structural stress and"
+716,8,0,"AT","0",0,2,"(Jniwtriity of Virginia, Finança. Studies fluctuating stock and money market trends. Assisted head trader in Yen at Chicago Mercantile Exchange. The HP-12C with"
+717,8,0,"AT","0",0,2,"IJcSanu Crus, Marina Biol- ||nhrawityof Mk!iigan,MBA ogi^ Studies behavior of blue candidata. Assisted on pric-whales and effect of environ- ing projects for QM.The HP-ment on distribution of mar- ITBoffeiseasyalgebraicentry. ine mammals. The new, easy	Plus time value of money, cash"
+718,8,0,"AT","0",0,2,"to use HP-22S has a built-in flows and linear regression to"
+719,8,0,"AT","0",0,2,"geometry. It’s the only calcu- RPN lets him analyze prices, equation library with solver, analyze budgets and forecasts, lator that lets him do both sym-*B	fl	HP Solve lets her enter her own"
+720,8,0,"AT","0",0,2,"bolic algebra and calculus. XllW W iT*wJLUiW W wXM XXX formulas and solve for any"
+721,8,0,"AT","0",0,2,":r: ifeavy Swing Blues"
+722,8,0,"AT","0",0,2,"andA^itown."
+723,8,0,"AT","0",0,2,"matrix math and graphics capabilities. And HP Solve lets him solve custom formulas without programming. With more than 1500 functions, 32K RAM and both RPN and algebraic entry, the HP-28S is the ultimate sci entific calculator"
+724,8,0,"AT","0",0,2,"ratios, net present value and internal rate of return. He can even create his own custom programs . The HP- 12C is the established standard in financial calculators."
+725,8,0,"AT","0",0,2,"giving her access to the most commonly used scientific equations. Statistics with linear regression. And algebraic entry. The ideal student science calculator"
+726,8,0,"AT","0",0,2,"Packard's calculators are built for your success. Look for them at your campus bookstore. Or call 1-800-752-0900, Ext. 658E, for your nearest dealer WetieverstopMikitig""Wlmtif..."
+727,8,0,"AT","0",0,2,"HEWLETT PACKARD"
+728,8,0,"AT","0",0,2,"fiflj"
+729,8,0,"AT","0",0,2,"ran«-'"
+730,8,0,"AT","0",0,2,"HP-28S SCIENTIFIC CALCULATOR"
+731,8,0,"AT","0",0,2,"HP-12C FINANCIAL CALCULATOR"
+732,8,0,"AT","0",0,2,"HP-22S SCIENTIFIC CALCULATOR"
+733,8,0,"AT","0",0,2,"HP-17B BUSINESS CALCULATOR"
+734,8,2,"ME","0",-1,0,"FroMpsgcl"
+735,8,2,"TXT","14",0,0,"the debate more in Dukakis’ favor."
+736,8,2,"TXT","15",0,0,"Member Stephanie Ball said Dukakis did a good job covering such issues as the homeless, defense spending and the concerns of the middle class."
+737,8,2,"TXT","16",0,0,"Other viewers remained confused with the outcome."
+738,8,2,"TXT","17",0,0,"Halfway through the debate, Eric Linxwiler, a senior speech communications/political science major, said disgustedly, “(Dukakis) comes out with these cute one-liners and everyone claps."
+739,8,2,"TXT","18",0,0,"“(The audience) was indirectly led to support Dukakis” because “obviously the panel was leaning toward Dukakis,” he said."
+740,8,2,"TXT","19",0,0,"Organizers and participants were pleased with the 73 to l(X) viewers who attended the debate at Roae and Crown."
+741,8,0,"AT","0",0,3,"ChaM|iiigae"
+742,8,0,"AT","0",0,3,"Mnner"
+743,8,0,"AT","0",0,3,"Caiabfote mosa lost wealM ot ichoot with your Mandi"
+744,8,0,"AT","0",0,3,"All the diMUMiaiM you con hondlo with any dinnor."
+745,8,0,"AT","0",0,3,"Tuodoy Nlghto Only &30-9XK)pni munbo21 yoonoroklar"
+746,8,0,"AT","0",0,3,"Win« Street Inn"
+747,8,0,"AT","0",0,3,"1« i"
+748,8,0,"AT","0",0,3,"reíTIiehíelweHi"
+749,8,0,"AT","0",0,4,"CHAPTER ONE QUIZ"
+750,8,0,"AT","0",0,4,"Where can you get:"
+751,8,0,"AT","0",0,4,"*	25c Draft Beer refills"
+752,8,0,"AT","0",0,4,"from 2-3P.M."
+753,8,0,"AT","0",0,4,"*	Best Burgers in town"
+754,8,0,"AT","0",0,4,"*	T.V. Sports"
+755,8,0,"AT","0",0,4,"*	Darts"
+756,8,0,"AT","0",0,4,"*	Food to Go"
+757,8,0,"AT","0",0,4,"*	Free Parking"
+758,8,0,"AT","0",0,4,"Answer"
+759,8,0,"AT","0",0,4,"ezBid IHMlood 3NO tiaidVHO Wltíd-NOi/'l"
+760,,,,,,,
+761,,,,,,,
+762,,,,,,,
+763,,,,,,,
+764,,,,,,,
+765,,,,,,,
+766,,,,,,,
+767,,,,,,,
+768,,,,,,,
+769,,,,,,,
+770,,,,,,,
+771,,,,,,,
+772,,,,,,,
+773,,,,,,,
+774,,,,,,,
+775,,,,,,,
+776,,,,,,,
+777,,,,,,,
+778,,,,,,,
+779,,,,,,,
+780,,,,,,,
+781,,,,,,,
+782,,,,,,,
+783,,,,,,,
+784,,,,,,,
+785,,,,,,,
+786,,,,,,,
+787,,,,,,,
+788,,,,,,,
+789,,,,,,,
+790,,,,,,,
+791,,,,,,,
+792,,,,,,,
+793,,,,,,,
+794,,,,,,,
+795,,,,,,,
+796,,,,,,,
+797,,,,,,,
+798,,,,,,,
+799,,,,,,,
+800,,,,,,,
+801,,,,,,,
+802,,,,,,,
+803,,,,,,,
+804,,,,,,,
+805,,,,,,,
+806,,,,,,,
+807,,,,,,,
+808,,,,,,,
+809,,,,,,,
+810,,,,,,,
+811,,,,,,,
+812,,,,,,,
+813,,,,,,,
+814,,,,,,,
+815,,,,,,,
+816,,,,,,,
+817,,,,,,,
+818,,,,,,,
+819,,,,,,,
+820,,,,,,,
+821,,,,,,,
+822,,,,,,,
+823,,,,,,,
+824,,,,,,,
+825,,,,,,,
+826,,,,,,,
+827,,,,,,,
+828,,,,,,,
+829,,,,,,,
+830,,,,,,,
+831,,,,,,,
+832,,,,,,,
+833,,,,,,,
+834,,,,,,,
+835,,,,,,,
+836,,,,,,,
+837,,,,,,,
+838,,,,,,,
+839,,,,,,,
+840,,,,,,,
+841,,,,,,,
+842,,,,,,,
+843,,,,,,,
+844,,,,,,,
+845,,,,,,,
+846,,,,,,,
+847,,,,,,,
+848,,,,,,,
+849,,,,,,,
+850,,,,,,,
+851,,,,,,,
+852,,,,,,,
+853,,,,,,,
+854,,,,,,,
+855,,,,,,,
+856,,,,,,,
+857,,,,,,,
+858,,,,,,,
+859,,,,,,,
+860,,,,,,,
+861,,,,,,,
+862,,,,,,,
+863,,,,,,,
+864,,,,,,,
+865,,,,,,,
+866,,,,,,,
+867,,,,,,,
+868,,,,,,,
+869,,,,,,,
+870,,,,,,,
+871,,,,,,,
+872,,,,,,,
+873,,,,,,,
+874,,,,,,,
+875,,,,,,,
+876,,,,,,,
+877,,,,,,,
+878,,,,,,,
+879,,,,,,,
+880,,,,,,,
+881,,,,,,,
+882,,,,,,,
+883,,,,,,,
+884,,,,,,,
+885,,,,,,,
+886,,,,,,,
+887,,,,,,,
+888,,,,,,,
+889,,,,,,,
+890,,,,,,,
+891,,,,,,,
+892,,,,,,,
+893,,,,,,,
+894,,,,,,,
+895,,,,,,,
+896,,,,,,,
+897,,,,,,,
+898,,,,,,,
+899,,,,,,,
+900,,,,,,,
+901,,,,,,,
+902,,,,,,,
+903,,,,,,,
+904,,,,,,,
+905,,,,,,,
+906,,,,,,,
+907,,,,,,,
+908,,,,,,,
+909,,,,,,,
+910,,,,,,,
+911,,,,,,,
+912,,,,,,,
+913,,,,,,,
+914,,,,,,,
+915,,,,,,,
+916,,,,,,,
+917,,,,,,,
+918,,,,,,,
+919,,,,,,,
+920,,,,,,,
+921,,,,,,,
+922,,,,,,,
+923,,,,,,,
+924,,,,,,,
+925,,,,,,,
+926,,,,,,,
+927,,,,,,,
+928,,,,,,,
+929,,,,,,,
+930,,,,,,,
+931,,,,,,,
+932,,,,,,,
+933,,,,,,,
+934,,,,,,,
+935,,,,,,,
+936,,,,,,,
+937,,,,,,,
+938,,,,,,,
+939,,,,,,,
+940,,,,,,,
+941,,,,,,,
+942,,,,,,,
+943,,,,,,,
+944,,,,,,,
+945,,,,,,,
+946,,,,,,,
+947,,,,,,,
+948,,,,,,,
+949,,,,,,,
+950,,,,,,,
+951,,,,,,,
+952,,,,,,,
+953,,,,,,,
+954,,,,,,,
+955,,,,,,,
+956,,,,,,,
+957,,,,,,,
+958,,,,,,,
+959,,,,,,,
+960,,,,,,,
+961,,,,,,,
+962,,,,,,,
+963,,,,,,,
+964,,,,,,,
+965,,,,,,,
+966,,,,,,,
+967,,,,,,,
+968,,,,,,,
+969,,,,,,,
+970,,,,,,,
+971,,,,,,,
+972,,,,,,,
+973,,,,,,,
+974,,,,,,,
+975,,,,,,,
+976,,,,,,,
+977,,,,,,,
+978,,,,,,,
+979,,,,,,,
+980,,,,,,,
+981,,,,,,,
+982,,,,,,,
+983,,,,,,,
+984,,,,,,,
+985,,,,,,,
+986,,,,,,,
+987,,,,,,,
+988,,,,,,,
+989,,,,,,,
+990,,,,,,,
+991,,,,,,,
+992,,,,,,,
+993,,,,,,,
+994,,,,,,,
+995,,,,,,,
+996,,,,,,,
+997,,,,,,,
+998,,,,,,,
+999,,,,,,,
+1000,,,,,,,
+1001,,,,,,,
+1002,,,,,,,
+1003,,,,,,,
+1004,,,,,,,
+1005,,,,,,,
+1006,,,,,,,
+1007,,,,,,,
+1008,,,,,,,
+1009,,,,,,,
+1010,,,,,,,
+1011,,,,,,,
+1012,,,,,,,
+1013,,,,,,,
+1014,,,,,,,
+1015,,,,,,,
+1016,,,,,,,
+1017,,,,,,,
+1018,,,,,,,
+1019,,,,,,,
+1020,,,,,,,
+1021,,,,,,,
+1022,,,,,,,
+1023,,,,,,,
+1024,,,,,,,
+1025,,,,,,,
+1026,,,,,,,
+1027,,,,,,,
+1028,,,,,,,
+1029,,,,,,,
+1030,,,,,,,
+1031,,,,,,,
+1032,,,,,,,
+1033,,,,,,,
+1034,,,,,,,
+1035,,,,,,,
+1036,,,,,,,
+1037,,,,,,,
+1038,,,,,,,
+1039,,,,,,,
+1040,,,,,,,
+1041,,,,,,,
+1042,,,,,,,
+1043,,,,,,,
+1044,,,,,,,
+1045,,,,,,,
+1046,,,,,,,
+1047,,,,,,,
+1048,,,,,,,
+1049,,,,,,,
+1050,,,,,,,
+1051,,,,,,,
+1052,,,,,,,
+1053,,,,,,,
+1054,,,,,,,
+1055,,,,,,,
+1056,,,,,,,
+1057,,,,,,,
+1058,,,,,,,
+1059,,,,,,,
+1060,,,,,,,
+1061,,,,,,,
+1062,,,,,,,
+1063,,,,,,,
+1064,,,,,,,
+1065,,,,,,,
+1066,,,,,,,
+1067,,,,,,,
+1068,,,,,,,
+1069,,,,,,,
+1070,,,,,,,
+1071,,,,,,,
+1072,,,,,,,
+1073,,,,,,,
+1074,,,,,,,
+1075,,,,,,,
+1076,,,,,,,
+1077,,,,,,,
+1078,,,,,,,
+1079,,,,,,,
+1080,,,,,,,
+1081,,,,,,,
+1082,,,,,,,
+1083,,,,,,,
+1084,,,,,,,
+1085,,,,,,,
+1086,,,,,,,
+1087,,,,,,,
+1088,,,,,,,
+1089,,,,,,,
+1090,,,,,,,
+1091,,,,,,,
+1092,,,,,,,
+1093,,,,,,,
+1094,,,,,,,
+1095,,,,,,,
+1096,,,,,,,
+1097,,,,,,,
+1098,,,,,,,
+1099,,,,,,,
+1100,,,,,,,
+1101,,,,,,,
+1102,,,,,,,
+1103,,,,,,,
+1104,,,,,,,
+1105,,,,,,,
+1106,,,,,,,
+1107,,,,,,,
+1108,,,,,,,
+1109,,,,,,,
+1110,,,,,,,
+1111,,,,,,,
+1112,,,,,,,
+1113,,,,,,,
+1114,,,,,,,
+1115,,,,,,,
+1116,,,,,,,
+1117,,,,,,,
+1118,,,,,,,
+1119,,,,,,,
+1120,,,,,,,
+1121,,,,,,,
+1122,,,,,,,
+1123,,,,,,,
+1124,,,,,,,
+1125,,,,,,,
+1126,,,,,,,
+1127,,,,,,,
+1128,,,,,,,
+1129,,,,,,,
+1130,,,,,,,
+1131,,,,,,,
+1132,,,,,,,
+1133,,,,,,,
+1134,,,,,,,
+1135,,,,,,,
+1136,,,,,,,
+1137,,,,,,,
+1138,,,,,,,
+1139,,,,,,,
+1140,,,,,,,
+1141,,,,,,,
+1142,,,,,,,
+1143,,,,,,,
+1144,,,,,,,
+1145,,,,,,,
+1146,,,,,,,
+1147,,,,,,,
+1148,,,,,,,
+1149,,,,,,,
+1150,,,,,,,
+1151,,,,,,,
+1152,,,,,,,
+1153,,,,,,,
+1154,,,,,,,
+1155,,,,,,,
+1156,,,,,,,
+1157,,,,,,,
+1158,,,,,,,
+1159,,,,,,,
+1160,,,,,,,
+1161,,,,,,,
+1162,,,,,,,
+1163,,,,,,,
+1164,,,,,,,
+1165,,,,,,,
+1166,,,,,,,
+1167,,,,,,,
+1168,,,,,,,
+1169,,,,,,,
+1170,,,,,,,
+1171,,,,,,,
+1172,,,,,,,
+1173,,,,,,,
+1174,,,,,,,
+1175,,,,,,,
+1176,,,,,,,
+1177,,,,,,,
+1178,,,,,,,
+1179,,,,,,,
+1180,,,,,,,
+1181,,,,,,,
+1182,,,,,,,
+1183,,,,,,,
+1184,,,,,,,
+1185,,,,,,,
+1186,,,,,,,
+1187,,,,,,,
+1188,,,,,,,
+1189,,,,,,,
+1190,,,,,,,
+1191,,,,,,,
+1192,,,,,,,
+1193,,,,,,,
+1194,,,,,,,
+1195,,,,,,,
+1196,,,,,,,
+1197,,,,,,,
+1198,,,,,,,
+1199,,,,,,,
+1200,,,,,,,
