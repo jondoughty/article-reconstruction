@@ -1,6 +1,9 @@
-import csv
+#!/usr/local/bin/python3
+
+import calendar
 import glob
 import re
+import regex
 
 import pandas as pd
 
@@ -11,10 +14,31 @@ def main():
     paths = glob.glob("tagged_data/*.csv")
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
     issue = pd.read_csv(paths[0], header = None, names = columns)
+    find_date(issue)
+#    construct_tagged(issue)
+
+
+def find_date(issue):
+    dows = "|".join(calendar.day_name)
+    months = "|".join(calendar.month_name)[1:]
+    fmt_str = r"(?:\s*({0})\s*.\s*({1})\s*([1-3]*[0-9]+)\s*.\s*"
+    pattern = fmt_str.format(dows, months) + "((?:19|20)[0-9]{2})\s*){e<5}"
+    compiled = regex.compile(pattern, flags = regex.ENHANCEMATCH)
+    print(fmt_str.format(dows, months) + "((?:19|20)[0-9]{2})\s*){e<10}")
+    for _, row in issue[issue.function == "PI"].iterrows():
+        print(row)
+        match = regex.search(compiled, row.text, concurrent = True)
+        if match:
+            print("-" * 40)
+            print(match.group(1), match.group(2), match.group(3),
+                  match.group(4))
+            print("-" * 40)
+
+
+def construct_tagged(issue):
     article_nums = issue[(issue.article.notnull()) &
                          (issue.article != 0)].article.unique()
     articles = []
-    print(article_nums)
     for n in article_nums:
         article = issue[issue.article == n]
         if len(article) > 0:
