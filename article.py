@@ -112,14 +112,11 @@ def get_byline(article):
 def get_pages(article):
     '''Extract pages from article.'''
     pages = None
-    print ('article.page value: ', article.page)
     try:
         pages = list(map(int, article.page.unique()))
     except Exception as e:
-        print ('unique pages: ', article.page.unique())
         print ('Page exception: ', e)
         pass
-    # input()
     return pages
 
 def set_pd_options():
