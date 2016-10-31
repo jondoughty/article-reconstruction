@@ -2,6 +2,7 @@
 
 import pandas as pd
 import numpy as np
+import copy
 import os
 
 
@@ -57,7 +58,8 @@ def check_tags_exist(issue, tags):
 
 def get_issues(folder='tagged_data', columns=None, tags=None):
     """
-    Gets all the Issue objects from the folder.
+    Gets all the Issue objects from the folder. Returns original issues and
+    filtered issues with certain columns and tags set to np.nan.
     Owner: Nupur Garg
 
     folder: str 
@@ -69,6 +71,7 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
     """
     files = []
     issues = []
+    filtered_issues = []
 
     # Get test files in the folder.
     foldername = os.path.abspath(folder)
@@ -80,6 +83,8 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
     # Create issue objects from the test files.
     for csv_file in files:
         issue = Issue(Issue.generate_tags_df(csv_file))
+        issues.append(issue)
+        issue = copy.deepcopy(issue)
 
         # Sets columns to None.
         if columns:
@@ -92,6 +97,42 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
             remove_tags = set(unique_tags) - set(tags)
             for tag in remove_tags:
                 issue.tags_df.function.replace(tag, np.nan, inplace=True)
-        issues.append(issue)
+        filtered_issues.append(issue)
 
-    return issues
+    return issues, filtered_issues
+
+
+def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
+    """
+    Prints the accuracy of the function tag for the given issue.
+
+    orig_issues: list
+        Issue objects with original tags.
+    tagged_issues: list
+        Issue objects with code produced tags.
+    tag: str
+        Function tag to test.
+    print_incorrect: bool
+        Prints the incorrectly tagged lines (default: False).
+    """
+    print('tag \'%s\'' %tag)
+    for orig_issue, tagged_issue in zip(orig_issues, tagged_issues):
+        expected_tags = orig_issue.tags_df[orig_issue.tags_df.function == tag]
+        expected_tags_idx = set(expected_tags.index.values)
+
+        actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.function == tag]
+        actual_tags_idx = set(actual_tags.index.values)
+
+        missing_tags = expected_tags_idx - actual_tags_idx
+        extra_tags = actual_tags_idx - expected_tags_idx
+
+        # print(actual_tags[missing_tags])
+        # exit()
+
+        # for tag in missing_tags:
+        #     print('\tMISSING\t%s' %actual_tags[missing_tags])
+        # for tag in extra_tags:
+        #     print('\tEXTRA\t%s' %actual_tags)
+
+    # accuracy = 0.0
+    # print("accuracy of %s: %.3f" %(tag, accuracy))

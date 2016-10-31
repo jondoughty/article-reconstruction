@@ -2,19 +2,40 @@
 # Nupur Garg
 
 import copy
+import re
 
 from basetagger import *
 
 
+# TODO: Ideas for future tagging:
+#   - NA: 1) Above & below row have row.function == 'NA'
+#         2) 3 or less consequtive alphanumerics in row.text
+
+
 def _tag_blank(row):
     """
-    Tags the row as blank.
+    Tags the row as blank (B) if the row's text is np.nan.
 
     row: obj
         DataFrame row to return value for.
     """
-    if pd.isnull(row.text) and pd.isnull(row.function):
+    if pd.isnull(row.function) and pd.isnull(row.text):
         return "B"
+    return row.function
+
+
+def _tag_unintelligible(row):
+    """
+    Tags the row as unintelligible (NA) if there are not two consequtive
+    alphanumeric characters.
+
+    row: obj
+        DataFrame row to return value for.
+    """
+    if (pd.isnull(row.function) and 
+        not pd.isnull(row.text) and
+        not re.search(r"\w\w+", row.text)):
+        return "NA"
     return row.function
 
 
@@ -22,6 +43,7 @@ def tag(issue):
     """
     Tags the issue with the following extraneous tags:
         B - Blank line
+        NA - Unintelligible
 
     issue: obj
         Issue object to apply tags to.
@@ -29,18 +51,20 @@ def tag(issue):
     assert check_tags_exist(issue, ["PI", "HL", "BL"])
 
     issue = copy.deepcopy(issue)
-    issue.apply(col='function', func=_tag_blank)
+    issue.apply(col="function", func=_tag_blank)
+    issue.apply(col="function", func=_tag_unintelligible)
 
     return issue
 
 
 def main():
-    issues = get_issues(columns=["article", "paragraph", "jump", "ad"],
-                        tags=["PI", "HL", "BL"])
+    issues, filtered_issues = get_issues(columns=["article", "paragraph", "jump", "ad"],
+                                         tags=["PI", "HL", "BL"])
+    tagged_issues = [tag(issue) for issue in filtered_issues]
+    tagged_issues[1].to_csv('test.csv')
 
-    issue = issues[1]
-    issue = tag(issue)
-    issue.to_csv('test.csv')
+    print_accuracy_tag(issues, tagged_issues, tag="B")
+    print_accuracy_tag(issues, tagged_issues, tag="NA")
 
 
 if __name__ == "__main__":

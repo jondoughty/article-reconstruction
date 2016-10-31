@@ -9,9 +9,9 @@
 
   Labeled
     B       Blank line              junktagger.py
+    NA      Unidentifiable          junktagger.py
 
   Not Labeled
-    NA      Unidentifiable
     NP      Nameplate
     PI      Publication info
     SH      Section heading
