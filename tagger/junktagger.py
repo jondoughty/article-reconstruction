@@ -1,7 +1,6 @@
 # junktagger.py
 # Nupur Garg
 
-import copy
 import re
 
 from basetagger import *
@@ -58,13 +57,13 @@ def tag(issue):
 
 
 def main():
-    issues, filtered_issues = get_issues(columns=["article", "paragraph", "jump", "ad"],
+    issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump", "ad"],
                                          tags=["PI", "HL", "BL"])
-    tagged_issues = [tag(issue) for issue in filtered_issues]
-    tagged_issues[1].to_csv('test.csv')
+    tagged_issues = [tag(issue) for issue in untagged_issues]
+    tagged_issues[2].to_csv('test.csv')
 
-    print_accuracy_tag(issues, tagged_issues, tag="B")
-    print_accuracy_tag(issues, tagged_issues, tag="NA")
+    print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=True)
+    print_accuracy_tag(issues, tagged_issues, tag="NA", print_incorrect=True)
 
 
 if __name__ == "__main__":

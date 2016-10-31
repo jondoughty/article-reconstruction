@@ -17,12 +17,15 @@ class Issue(object):
         Date the issue was published.
     edition: (int, int)
         Represents (volume #, issue #).
+    filename: str
+        Filename of the issue.
     """
 
     COLUMNS = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
 
-    def __init__(self, tags_df):
+    def __init__(self, tags_df, filename=None):
         self.tags_df = tags_df
+        self.filename = filename
         self.date = None
         self.edition = None
 
@@ -59,7 +62,7 @@ def check_tags_exist(issue, tags):
 def get_issues(folder='tagged_data', columns=None, tags=None):
     """
     Gets all the Issue objects from the folder. Returns original issues and
-    filtered issues with certain columns and tags set to np.nan.
+    untagged issues with certain columns and tags set to np.nan.
     Owner: Nupur Garg
 
     folder: str 
@@ -71,7 +74,7 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
     """
     files = []
     issues = []
-    filtered_issues = []
+    untagged_issues = []
 
     # Get test files in the folder.
     foldername = os.path.abspath(folder)
@@ -82,7 +85,8 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
 
     # Create issue objects from the test files.
     for csv_file in files:
-        issue = Issue(Issue.generate_tags_df(csv_file))
+        issue = Issue(Issue.generate_tags_df(csv_file),
+                      os.path.basename(os.path.normpath(csv_file)))
         issues.append(issue)
         issue = copy.deepcopy(issue)
 
@@ -97,9 +101,9 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
             remove_tags = set(unique_tags) - set(tags)
             for tag in remove_tags:
                 issue.tags_df.function.replace(tag, np.nan, inplace=True)
-        filtered_issues.append(issue)
+        untagged_issues.append(issue)
 
-    return issues, filtered_issues
+    return issues, untagged_issues
 
 
 def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
@@ -115,7 +119,12 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
     print_incorrect: bool
         Prints the incorrectly tagged lines (default: False).
     """
-    print('tag \'%s\'' %tag)
+    total_missing = 0.0
+    total_tags = 0.0
+
+    print("=================================")
+    print("============ Tag \'%s\' ============" %tag)
+    print("=================================\n")
     for orig_issue, tagged_issue in zip(orig_issues, tagged_issues):
         expected_tags = orig_issue.tags_df[orig_issue.tags_df.function == tag]
         expected_tags_idx = set(expected_tags.index.values)
@@ -126,13 +135,18 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
         missing_tags = expected_tags_idx - actual_tags_idx
         extra_tags = actual_tags_idx - expected_tags_idx
 
-        # print(actual_tags[missing_tags])
-        # exit()
+        total_missing += len(missing_tags)
+        total_tags = len(expected_tags)
 
-        # for tag in missing_tags:
-        #     print('\tMISSING\t%s' %actual_tags[missing_tags])
-        # for tag in extra_tags:
-        #     print('\tEXTRA\t%s' %actual_tags)
+        if print_incorrect:
+            print("----------- %s -----------" %orig_issue.filename)
+            if missing_tags:
+                print("\t\t----------- Missing -----------")
+                print(expected_tags.loc[list(missing_tags)].text)
+            if extra_tags:
+                print("\t\t----------- Extra -----------")
+                print(actual_tags.loc[list(extra_tags)].text)
 
-    # accuracy = 0.0
-    # print("accuracy of %s: %.3f" %(tag, accuracy))
+    if total_tags > 0:
+        accuracy = (total_tags - total_missing) / total_tags
+        print("accuracy of %s: %.3f\n" %(tag, accuracy))
