@@ -2,7 +2,7 @@
 "LINE","PAGE # TEXT IS ON (1 for front page, 0 if unintelligable)","ARTICLE NUMBER (use 0 if outside of text of any article/letter)","FUNCTION (see key above)","PARAGRAPH NUMBER (start with the first content paragraph, 0 if not part of the main text)","JUMP (if line contains a ""jump to"" directive, it's the page target. If it's a ""jumped from"" directive then the negative (-) of the soure page. otherwise 0)","AD #. If line is part of advertisement, it is the number of the ad. Start from top left column. 0 otherwise.","Hurley"
 1,1,0,"NA",0,0,0,"___i_ -"
 2,1,0,"NP",0,0,0,"Mustang Dafly"
-3,1,0,"B",0,0,0,"HURLEY's"
+3,1,0,"NA",0,0,0,"HURLEY's"
 4,0,0,"B",0,0,0,
 5,1,0,"PI",0,0,0,"Monday, January 17,1983"
 6,1,0,"NP",0,0,0,"California Polytechnic State University, San Luis Obispo"

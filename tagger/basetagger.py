@@ -6,6 +6,9 @@ import copy
 import os
 
 
+# TODO(ngarg): CHANGE 'NA' to 'N' becuase pandas processes 'NA' as np.nan
+
+
 class Issue(object):
     """
     Represents a newspaper issue.

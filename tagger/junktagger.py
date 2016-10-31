@@ -6,7 +6,7 @@ import re
 from basetagger import *
 
 
-# TODO: Ideas for future tagging:
+# TODO(ngarg): Ideas for future tagging:
 #   - NA: 1) Above & below row have row.function == 'NA'
 #         2) 3 or less consequtive alphanumerics in row.text
 
@@ -18,7 +18,8 @@ def _tag_blank(row):
     row: obj
         DataFrame row to return value for.
     """
-    if pd.isnull(row.function) and pd.isnull(row.text):
+    if (pd.isnull(row.function) and
+        (pd.isnull(row.text) or re.search(r"^[\t\s]+$", row.text))):
         return "B"
     return row.function
 
@@ -63,7 +64,7 @@ def main():
     tagged_issues[2].to_csv('test.csv')
 
     print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=True)
-    print_accuracy_tag(issues, tagged_issues, tag="NA", print_incorrect=True)
+    # print_accuracy_tag(issues, tagged_issues, tag="NA", print_incorrect=True)
 
 
 if __name__ == "__main__":
