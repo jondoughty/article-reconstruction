@@ -4,7 +4,7 @@
 from .basetagger import *
 
 
-def tag():
+def tag(issue):
    pass
 
 
