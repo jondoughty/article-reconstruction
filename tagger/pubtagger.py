@@ -5,7 +5,7 @@ from .basetagger import *
 
 
 def tag(issue):
-   pass
+   return issue
 
 
 def main():
