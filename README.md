@@ -9,7 +9,7 @@
 
   Labeled
     B       Blank line              junktagger.py
-    NA      Unidentifiable          junktagger.py
+    N       Unidentifiable          junktagger.py
 
   Not Labeled
     NP      Nameplate

@@ -7,8 +7,8 @@ from basetagger import *
 
 
 # TODO(ngarg): Ideas for future tagging:
-#   - NA: 1) Above & below row have row.function == 'NA'
-#         2) 3 or less consequtive alphanumerics in row.text
+#   - N: 1) Above & below row have row.function == 'N'
+#        2) 3 or less consequtive alphanumerics in row.text
 
 
 def _tag_blank(row):
@@ -26,7 +26,7 @@ def _tag_blank(row):
 
 def _tag_unintelligible(row):
     """
-    Tags the row as unintelligible (NA) if there are not two consequtive
+    Tags the row as unintelligible (N) if there are not two consequtive
     alphanumeric characters.
 
     row: obj
@@ -35,7 +35,7 @@ def _tag_unintelligible(row):
     if (pd.isnull(row.function) and 
         not pd.isnull(row.text) and
         not re.search(r"\w\w+", row.text)):
-        return "NA"
+        return "N"
     return row.function
 
 
@@ -43,7 +43,7 @@ def tag(issue):
     """
     Tags the issue with the following extraneous tags:
         B - Blank line
-        NA - Unintelligible
+        N - Unintelligible
 
     issue: obj
         Issue object to apply tags to.
@@ -64,7 +64,7 @@ def main():
     tagged_issues[2].to_csv('test.csv')
 
     print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=True)
-    # print_accuracy_tag(issues, tagged_issues, tag="NA", print_incorrect=True)
+    print_accuracy_tag(issues, tagged_issues, tag="N", print_incorrect=True)
 
 
 if __name__ == "__main__":

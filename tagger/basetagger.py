@@ -90,6 +90,8 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
     for csv_file in files:
         issue = Issue(Issue.generate_tags_df(csv_file),
                       os.path.basename(os.path.normpath(csv_file)))
+        # TODO(ngarg): Remove next line. Use anther approach to replace N.
+        issue.tags_df.function.replace(np.nan, "N", inplace=True)
         issues.append(issue)
         issue = copy.deepcopy(issue)
 
@@ -139,7 +141,7 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
         extra_tags = actual_tags_idx - expected_tags_idx
 
         total_missing += len(missing_tags)
-        total_tags = len(expected_tags)
+        total_tags += len(expected_tags)
 
         if print_incorrect:
             print("----------- %s -----------" %orig_issue.filename)
