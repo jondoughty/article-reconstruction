@@ -1,16 +1,18 @@
-#!/usr/local/bin/python3
 # reconstructor.py
 # Jon Doughty
 
-import calendar
 import glob
-import regex
 import sys
 import json
-from tagger import *
 
-from nltk.metrics import distance
-import pandas as pd
+from tagger.basetagger import *
+import tagger.pubtagger as pbt
+import tagger.hltagger as hlt
+import tagger.bltagger as blt
+import tagger.junktagger as jkt
+import tagger.txttagger as ttt
+import tagger.jumptagger as jpt
+import tagger.articlenumtagger as ant
 
 
 def main():
@@ -23,38 +25,22 @@ def main():
     # set columns for csv file
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
 
+    # create empty DataFrame
+    tmp_df = pd.DataFrame()
+
+    # create Issue object
+    issue_obj = Issue(tmp_df)
+
+    # call respective tag functions
+    taggers = [pbt.tag, hlt.tag, blt.tag, jkt.tag, ttt.tag, jpt.tag, ant.tag]
+
+    for tag in taggers:
+        issue_obj = tag(issue_obj)
+
     # load csv
-    for path in paths:
-        issue = pd.read_csv(path, header=2, names=columns)
-        # print(find_date(issue))
-        construct_tagged(issue)
-
-
-def find_date(issue, max_error = 5):
-    dows = "|".join(calendar.day_name)
-    months = "|".join(calendar.month_name)[1:]
-    fmt_str = "(?:\s*({0})\s*.\s*({1})\s*([1-3]*[0-9]+)\s*.\s*" + \
-              "((?:19|20)[0-9]{{2}})\s*){{e<{2}}}"
-    pattern = regex.compile(fmt_str.format(dows, months, max_error),
-                            flags = regex.ENHANCEMATCH)
-    best_match = None
-    best_counts = sys.maxsize
-    for _, row in issue[issue.function == "PI"].iterrows():
-        match = regex.search(pattern, row.text, concurrent = True)
-        if match:
-            if best_match is None or match.fuzzy_counts < best_counts:
-                best_match = match
-                best_counts = match.fuzzy_counts
-    dow = edit_match(match.group(1), calendar.day_name)
-    month = edit_match(match.group(2), calendar.month_name)
-    day = edit_match(match.group(3), map(str, range(1, 32)))
-    year = edit_match(match.group(4), map(str, range(1901, 2021)))
-    return dow, month, day, year
-
-
-def edit_match(match, candidates):
-    return min(candidates,
-               key = lambda candidate: distance.edit_distance(match, candidate))
+    # for path in paths:
+    #     issue = pd.read_csv(path, header=2, names=columns)
+    #     construct_tagged(issue)
 
 
 def construct_tagged(issue):
@@ -88,15 +74,6 @@ def json_dump(issue_df):
     tmp = issue_df.to_dict('records')
     print (json.dumps(tmp, indent=4))
 
-#  "id": "001",
-#  "article_date": "<DATE/PL>",
-#  "article_headline": "title/HL",
-#  "page_number": "<number/PL>",
-#  "author": "<BY LINE/BL>",
-#  "article_number": "<number>/PL",
-#  "article_text": "text/TXT",
-#  "article_subheading": "XYZ/TXT", //TBD
-#  "number_of_paragraphs": "3/TXT" //TBD
 
 def check_article(article):
     '''Assertions to confirm the article is tagged as expected'''
@@ -156,6 +133,33 @@ def set_pd_options():
     '''Set option for pandas.'''
     pd.set_option("display.width", None)
     pd.set_option("display.max_rows", None)
+
+
+# def find_date(issue, max_error = 5):
+#     dows = "|".join(calendar.day_name)
+#     months = "|".join(calendar.month_name)[1:]
+#     fmt_str = "(?:\s*({0})\s*.\s*({1})\s*([1-3]*[0-9]+)\s*.\s*" + \
+#               "((?:19|20)[0-9]{{2}})\s*){{e<{2}}}"
+#     pattern = regex.compile(fmt_str.format(dows, months, max_error),
+#                             flags = regex.ENHANCEMATCH)
+#     best_match = None
+#     best_counts = sys.maxsize
+#     for _, row in issue[issue.function == "PI"].iterrows():
+#         match = regex.search(pattern, row.text, concurrent = True)
+#         if match:
+#             if best_match is None or match.fuzzy_counts < best_counts:
+#                 best_match = match
+#                 best_counts = match.fuzzy_counts
+#     dow = edit_match(match.group(1), calendar.day_name)
+#     month = edit_match(match.group(2), calendar.month_name)
+#     day = edit_match(match.group(3), map(str, range(1, 32)))
+#     year = edit_match(match.group(4), map(str, range(1901, 2021)))
+#     return dow, month, day, year
+
+
+# def edit_match(match, candidates):
+#     return min(candidates,
+#                key = lambda candidate: distance.edit_distance(match, candidate))
 
 
 if __name__ == "__main__":
