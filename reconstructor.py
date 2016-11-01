@@ -26,7 +26,7 @@ def main():
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
 
     # create empty DataFrame
-    tmp_df = pd.DataFrame()
+    tmp_df = pd.DataFrame(columns=columns)
 
     # create Issue object
     issue_obj = Issue(tmp_df)
