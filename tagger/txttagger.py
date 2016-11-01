@@ -2,7 +2,7 @@
 # Vivian Fong
 
 
-from basetagger import *
+from .basetagger import *
 from nltk import word_tokenize
 
 
@@ -34,8 +34,8 @@ def tag(issue):
 
     issue = copy.deepcopy(issue)
     # TODO; Fix this.
-    #issue.apply(col="function", func=_tag_txt) 
-    
+    #issue.apply(col="function", func=_tag_txt)
+
     return issue
 
 

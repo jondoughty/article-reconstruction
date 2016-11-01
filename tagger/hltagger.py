@@ -1,7 +1,7 @@
 # hltagger.py
 # Daniel Kauffman
 
-from basetagger import *
+from .basetagger import *
 
 
 def tag(issue):

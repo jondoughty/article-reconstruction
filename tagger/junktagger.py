@@ -3,7 +3,7 @@
 
 import re
 
-from basetagger import *
+from .basetagger import *
 
 
 # TODO(ngarg): Ideas for future tagging:
@@ -32,7 +32,7 @@ def _tag_unintelligible(row):
     row: obj
         DataFrame row to return value for.
     """
-    if (pd.isnull(row.function) and 
+    if (pd.isnull(row.function) and
         not pd.isnull(row.text) and
         not re.search(r"\w\w+", row.text)):
         return "N"

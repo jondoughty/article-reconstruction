@@ -1,7 +1,7 @@
 # junktagger.py
 # Brandon Livitski
 
-from basetagger import *
+from .basetagger import *
 
 
 def tag():
