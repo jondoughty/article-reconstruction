@@ -8,16 +8,18 @@
 ## Tag Information
 
   Labeled
+
+    TXT     Article text            txttagger.py
     B       Blank line              junktagger.py
     N       Unidentifiable          junktagger.py
 
   Not Labeled
+
     NP      Nameplate
     PI      Publication info
     SH      Section heading
     HL      Headline
     BL      Byline
-    TXT     Article text
     ME      Meta directives
     MH      Masthead
     PH      Photo caption
