@@ -16,7 +16,7 @@ def _tag_txt(row):
     row: obj
         DataFrame row to return value for.
     """
-    if row.text:
+    if not pd.isnull(row.text):
         words = word_tokenize(row.text)
         if pd.isnull(row.function) and len(words) >= 10:
             return "TXT"
@@ -30,22 +30,21 @@ def tag(issue):
     issue: obj
         Issue object to apply tags to.
     """
-    assert check_tags_exist(issue, ["PI", "HL", "BL", "B"])#, "NA"])
+    assert check_tags_exist(issue, ["PI", "HL", "BL", "B", "N"])
 
     issue = copy.deepcopy(issue)
-    # TODO; Fix this.
-    #issue.apply(col="function", func=_tag_txt)
+    issue.apply(col="function", func=_tag_txt)
 
     return issue
 
 
 def main():
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump", "ad"],
-                                         tags=["PI", "HL", "BL", "B", "NA"])
+                                         tags=["PI", "HL", "BL", "B", "N"])
     tagged_issues = [tag(issue) for issue in untagged_issues]
     tagged_issues[2].to_csv('txt_test.csv')
 
-    #print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=True)
+    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=False)
 
 
 if __name__ == "__main__":
