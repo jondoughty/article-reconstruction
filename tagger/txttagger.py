@@ -2,7 +2,7 @@
 # Vivian Fong
 
 
-from .basetagger import *
+from tagger.basetagger import *
 from nltk import word_tokenize
 
 

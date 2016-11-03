@@ -1,7 +1,7 @@
 # bltagger.py
 # Daniel Kauffman
 
-from .basetagger import *
+from tagger.basetagger import *
 
 
 def tag(issue):

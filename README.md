@@ -2,8 +2,8 @@
 
 ## Running Taggers
 
-  Junk Tagger     python3 tagger/junktagger.py      Ads, classifiers, BQT
-  Text Tagger     python3 tagger/texttagger.py      TXT
+  Junk Tagger     python3 -m tagger.junktagger      Ads, classifiers, BQT
+  Text Tagger     python3 -m tagger.txttagger       TXT
 
 ## Tag Information
 

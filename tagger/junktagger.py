@@ -3,7 +3,7 @@
 
 import re
 
-from .basetagger import *
+from tagger.basetagger import *
 
 
 # TODO(ngarg): Ideas for future tagging:
@@ -63,8 +63,8 @@ def main():
     tagged_issues = [tag(issue) for issue in untagged_issues]
     tagged_issues[2].to_csv('test.csv')
 
-    print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=True)
-    print_accuracy_tag(issues, tagged_issues, tag="N", print_incorrect=True)
+    print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="N", print_incorrect=False)
 
 
 if __name__ == "__main__":
