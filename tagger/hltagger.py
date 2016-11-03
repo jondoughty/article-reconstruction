@@ -1,15 +1,18 @@
 # hltagger.py
 # Daniel Kauffman
 
+import copy
+
 from basetagger import *
 
 
-def tag():
-   pass
-
-
 def main():
-   pass
+    pass
+
+
+def tag():
+    issue = copy.deepcopy(issue)
+    return issue
 
 
 if __name__ == "__main__":

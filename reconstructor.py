@@ -2,14 +2,10 @@
 # reconstructor.py
 # Jon Doughty
 
-import calendar
 import glob
-import regex
-import sys
 import json
 from tagger import *
 
-from nltk.metrics import distance
 import pandas as pd
 
 
@@ -28,33 +24,6 @@ def main():
         issue = pd.read_csv(path, header=2, names=columns)
         # print(find_date(issue))
         construct_tagged(issue)
-
-
-def find_date(issue, max_error = 5):
-    dows = "|".join(calendar.day_name)
-    months = "|".join(calendar.month_name)[1:]
-    fmt_str = "(?:\s*({0})\s*.\s*({1})\s*([1-3]*[0-9]+)\s*.\s*" + \
-              "((?:19|20)[0-9]{{2}})\s*){{e<{2}}}"
-    pattern = regex.compile(fmt_str.format(dows, months, max_error),
-                            flags = regex.ENHANCEMATCH)
-    best_match = None
-    best_counts = sys.maxsize
-    for _, row in issue[issue.function == "PI"].iterrows():
-        match = regex.search(pattern, row.text, concurrent = True)
-        if match:
-            if best_match is None or match.fuzzy_counts < best_counts:
-                best_match = match
-                best_counts = match.fuzzy_counts
-    dow = edit_match(match.group(1), calendar.day_name)
-    month = edit_match(match.group(2), calendar.month_name)
-    day = edit_match(match.group(3), map(str, range(1, 32)))
-    year = edit_match(match.group(4), map(str, range(1901, 2021)))
-    return dow, month, day, year
-
-
-def edit_match(match, candidates):
-    return min(candidates,
-               key = lambda candidate: distance.edit_distance(match, candidate))
 
 
 def construct_tagged(issue):
@@ -79,8 +48,8 @@ def construct_tagged(issue):
         articles.append(pd.Series(article_data))
     issue_df = pd.DataFrame(articles, index = range(1, len(articles) + 1))
     issue_df.index.name = "id"
-    # print(issue_df)
-    json_dump(issue_df)
+    print(issue_df)
+    #json_dump(issue_df)
 
 
 def json_dump(issue_df):
