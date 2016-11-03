@@ -5,6 +5,8 @@ import glob
 import sys
 import json
 
+import pandas as pd
+
 from tagger.basetagger import *
 import tagger.pubtagger as pbt
 import tagger.hltagger as hlt
@@ -65,8 +67,8 @@ def construct_tagged(issue):
         articles.append(pd.Series(article_data))
     issue_df = pd.DataFrame(articles, index = range(1, len(articles) + 1))
     issue_df.index.name = "id"
-    # print(issue_df)
-    json_dump(issue_df)
+    print(issue_df)
+    #json_dump(issue_df)
 
 
 def json_dump(issue_df):

@@ -4,12 +4,13 @@
 from tagger.basetagger import *
 
 
-def tag(issue):
-    return issue
-
-
 def main():
     pass
+
+
+def tag():
+    issue = copy.deepcopy(issue)
+    return issue
 
 
 if __name__ == "__main__":
