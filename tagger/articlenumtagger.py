@@ -1,11 +1,11 @@
 # junktagger.py
 # Brandon Livitski
 
-from basetagger import *
+from .basetagger import *
 
 
-def tag():
-   pass
+def tag(issue):
+   return issue
 
 
 def main():

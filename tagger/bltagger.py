@@ -1,7 +1,6 @@
 # bltagger.py
 # Daniel Kauffman
 
-
 import copy
 
 from basetagger import *
@@ -17,4 +16,4 @@ def tag():
 
 
 if __name__ == "__main__":
-   main()
+    main()
