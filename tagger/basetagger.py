@@ -197,7 +197,6 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
         print("precision \'%s\': %.3f\n" %(tag, precision))
 
 
-# Splits the data made of ({features}: truth) into training and test.
 def split_training_test(data, percent=0.75):
     """
     Splits the data into training and test.
@@ -214,6 +213,26 @@ def split_training_test(data, percent=0.75):
     training = data[:split]
     test = data[split:]
     return training, test
+
+
+def create_features_for_ranges(feature_name, variable, ranges):
+    """
+    Generate features based on a range.
+
+    feature_name: str
+        Name of feature.
+    variable: int
+        Value of variable.
+    ranges: list
+        Ranges to check variable on.
+    """
+    features = {'%s_<_%.2f' %(feature_name, ranges[0]): variable < ranges[0]}
+    if len(ranges) > 1:
+        features['%s_>=_%.2f' %(feature_name, ranges[-1])] = variable >= ranges[-1]
+        for min_range, max_range in zip(ranges, ranges[1:]):
+            feature = '%s_%.2f_to_%.2f' %(feature_name, min_range, max_range)
+            features[feature] = variable >= min_range and variable < max_range
+    return features
 
 
 def _print_statistics(classifier, test, score, stats, debug):
@@ -239,9 +258,8 @@ def _print_statistics(classifier, test, score, stats, debug):
             print('%s\t\t%s' %(result, actual))
     if stats:
         print('Score: %.4f' %score)
-        # TODO(ngarg): Comment back in.
-        # if not isinstance(classifier, nltk.DecisionTreeClassifier):
-        #     classifier.show_most_informative_features(30)
+        if not isinstance(classifier, nltk.DecisionTreeClassifier):
+            classifier.show_most_informative_features(30)
 
 
 def create_naive_bayes_classifier(training, test, stats=True, debug=False):
@@ -263,7 +281,7 @@ def create_naive_bayes_classifier(training, test, stats=True, debug=False):
     classifier = nltk.NaiveBayesClassifier.train(training)
     score = nltk.classify.accuracy(classifier, test)
 
-    _print_statistics(training, test, score, stats, debug)
+    _print_statistics(classifier, test, score, stats, debug)
     return classifier, score
 
 
@@ -307,9 +325,11 @@ def create_classifier(issues, classifier_func, features_func, tags,
     tagged_df = pd.DataFrame(tagged_data, columns=Issue.COLUMNS)
     other_df = pd.DataFrame(other_data, columns=Issue.COLUMNS)
     for index, row in tagged_df.iterrows():
-        features.append((features_func(row), True))
+        if not pd.isnull(row.text) and row.text.strip():
+            features.append((features_func(row), True))
     for index, row in other_df.iterrows():
-        features.append((features_func(row), False))
+        if not pd.isnull(row.text) and row.text.strip():
+            features.append((features_func(row), False))
 
     # Generate classifier.
     training, test = split_training_test(features)

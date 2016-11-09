@@ -20,6 +20,58 @@ _JUNKTAGGER_CLASSIFIERS = []
 # ========================================
 
 
+def _features_stats_alphabetic(text):
+    """
+    Gets features on the alphabetic characteristics of the text.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    alphabetic = [char for char in text if char.isalpha() or char == ' ']
+    percent = len(alphabetic) / float(len(text))
+    features = create_features_for_ranges(feature_name='percent_alphabetic',
+                                          variable=percent,
+                                          ranges=[0.1, 0.5, 0.7, 0.8, 0.9])
+    features['start_alphabetic'] = text[0].isalpha()
+    return features
+
+
+def _features_stats_uppercase(text):
+    """
+    Gets features on the uppercase characteristics of the text.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    alphabetic = [char for char in text if char.isupper()]
+    percent = len(alphabetic) / float(len(text))
+    features = create_features_for_ranges(feature_name='percent_uppercase',
+                                          variable=percent,
+                                          ranges=[0.05, 0.1, 0.2, 0.8, 0.9, 0.95])
+    return features
+
+
+def _features_stats_non_ascii(text):
+    """
+    Gets features on the ascii vs non-ascii characteristics of the text.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    alphabetic = [char for char in text if ord(char) < 128]
+    percent = len(alphabetic) / float(len(text))
+    features = create_features_for_ranges(feature_name='percent_ascii',
+                                          variable=percent,
+                                          ranges=[0.8, 0.9, 0.96])
+    return features
+
+
 def _generate_features_advertisement(data):
     """
     Generates a classifier that identify an advertisement (AT).
@@ -30,6 +82,13 @@ def _generate_features_advertisement(data):
     returns: dict
     """
     features = {}
+    text = data.text.strip()
+
+    # TODO: Percent of tokens in a dictionary
+    features.update(_features_stats_non_ascii(text))
+    features.update(_features_stats_uppercase(text))
+    features.update(_features_stats_alphabetic(text))
+
     return features
 
 
@@ -75,9 +134,10 @@ def _generate_features_comic(data):
 
 # Updates junk classifiers.
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_AT_naive_bayes.pickle", _generate_features_advertisement, ["AT"]))
-_JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_unintelligible, ["N"]))
-_JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_other, ["OT"]))
-_JUNKTAGGER_CLASSIFIERS.append(("junktagger_C_naive_bayes.pickle", _generate_features_comic, ["CN", "CT"]))
+# TODO(ngarg): Comment back in.
+# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_unintelligible, ["N"]))
+# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_other, ["OT"]))
+# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_C_naive_bayes.pickle", _generate_features_comic, ["CN", "CT"]))
 
 
 # =====================================
@@ -112,7 +172,7 @@ def _tag_unintelligible(row):
     """
     if (pd.isnull(row.function) and
         not pd.isnull(row.text) and
-        not re.search(r"\w\w+", row.text)):
+        not re.search(r"\w+", row.text)):
         return "N"
     return row.function
 
@@ -137,11 +197,10 @@ def tag(issue):
     issue.apply(col="function", func=_tag_blank)
     issue.apply(col="function", func=_tag_unintelligible)
 
-    # TODO(ngarg): Comment in classifiers once generated.
+    # # TODO(ngarg): Comment in once apply_classifier is finalized.
     # for classifiers in _JUNKTAGGER_CLASSIFIERS:
     #     filename = classifiers[0]
     #     func = classifiers[1]
-    #
     #     full_filename = os.path.join(os.path.abspath(DEFAULT_CLASSIFIER_PATH), filename)
     #     issue.apply_classifier(col="function", file=filename, func=func)
 
