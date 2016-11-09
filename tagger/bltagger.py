@@ -8,7 +8,7 @@ def main():
     pass
 
 
-def tag():
+def tag(issue):
     issue = copy.deepcopy(issue)
     return issue
 

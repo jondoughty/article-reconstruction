@@ -1,12 +1,22 @@
 # basetagger.py
 
+from random import shuffle
 import pandas as pd
 import numpy as np
+import pickle
 import copy
+import nltk
 import os
 
 
 # TODO(ngarg): CHANGE 'NA' to 'N' becuase pandas processes 'NA' as np.nan
+
+DEFAULT_CLASSIFIER_PATH = "tagger/classifiers"
+
+
+# ===========================================
+# ========= ISSUE CLASS & FUNCTIONS =========
+# ===========================================
 
 
 class Issue(object):
@@ -44,6 +54,12 @@ class Issue(object):
         # Applies function to column col.
         self.tags_df[col] = self.tags_df.apply(lambda row: func(row), axis=1)
 
+    def apply_classifier(self, col, file):
+        # Applies function to column col.
+        # TODO(ngarg): Read in classifier.
+        # TODO(ngarg): On each line --> create features, create classifiers.
+        pass
+
     def print_rows(self, rows):
         # Prints the rows with the given index of the DataFrame.
         print(self.tags_df.iloc[rows])
@@ -55,8 +71,15 @@ class Issue(object):
 
 def check_tags_exist(issue, tags):
     """
-    Determines if issue.tags_df has been tagged with the tags.
+    Determines if function column in issue.tags_df contains tags.
     Owner: Nupur Garg
+
+    issue: obj
+        Issue to check tags for.
+    tags: list
+        Tags to check.
+
+    returns: obj
     """
     unique_tags = issue.tags_df.function.unique()
     return set(tags).issubset(unique_tags)
@@ -74,6 +97,8 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
         Columns to set to None.
     tags: list
         Function tags to keep.
+
+    returns: (list, list)
     """
     files = []
     issues = []
@@ -111,9 +136,15 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
     return issues, untagged_issues
 
 
+# ========================================
+# ========= CLASSIFIER FUNCTIONS =========
+# ========================================
+
+
 def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
     """
     Prints the accuracy of the function tag for the given issue.
+    Owner: Nupur Garg
 
     orig_issues: list
         Issue objects with original tags.
@@ -123,13 +154,17 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
         Function tag to test.
     print_incorrect: bool
         Prints the incorrectly tagged lines (default: False).
+
+    returns: None
     """
     total_missing = 0.0
-    total_tags = 0.0
+    total_expected = 0.0
+    total_extra = 0.0
+    total_actual = 0.0
 
     print("=================================")
     print("============ Tag \'%s\' ============" %tag)
-    print("=================================\n")
+    print("=================================")
     for orig_issue, tagged_issue in zip(orig_issues, tagged_issues):
         expected_tags = orig_issue.tags_df[orig_issue.tags_df.function == tag]
         expected_tags_idx = set(expected_tags.index.values)
@@ -141,17 +176,147 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
         extra_tags = actual_tags_idx - expected_tags_idx
 
         total_missing += len(missing_tags)
-        total_tags += len(expected_tags)
+        total_expected += len(expected_tags)
+
+        total_extra += len(extra_tags)
+        total_actual += len(actual_tags)
 
         if print_incorrect:
             print("----------- %s -----------" %orig_issue.filename)
             if missing_tags:
                 print("\t\t----------- Missing -----------")
-                print(expected_tags.loc[list(missing_tags)].text)
+                print(tagged_issue.tags_df.loc[list(missing_tags)][["text", "function"]])
             if extra_tags:
                 print("\t\t----------- Extra -----------")
-                print(actual_tags.loc[list(extra_tags)].text)
+                print(orig_issue.tags_df.loc[list(extra_tags)][["text", "function"]])
 
-    if total_tags > 0:
-        accuracy = (total_tags - total_missing) / total_tags
-        print("accuracy of %s: %.3f\n" %(tag, accuracy))
+    if total_expected > 0 and total_actual > 0:
+        accuracy = (total_expected - total_missing) / total_expected
+        precision = (total_actual - total_extra) / total_actual
+        print("\naccuracy \'%s\': %.3f" %(tag, accuracy))
+        print("precision \'%s\': %.3f\n" %(tag, precision))
+
+
+# Splits the data made of ({features}: truth) into training and test.
+def split_training_test(data, percent=0.75):
+    """
+    Splits the data into training and test.
+
+    data: list
+        List of data made of ({features}: truth) tuples.
+    percent: int
+        Percentage of training vs test data.
+
+    returns: (obj, obj)
+    """
+    shuffle(data)
+    split = int(len(data) * percent)
+    training = data[:split]
+    test = data[split:]
+    return training, test
+
+
+def _print_statistics(classifier, test, score, stats, debug):
+    """
+    Prints statistics for a given classifier and test set.
+    Owner: Nupur Garg
+
+    classifier: obj
+        Classifier.
+    test: list
+        Test data.
+    stats: bool
+        Whether to print summary statistics.
+    debug: bool
+        Whether to debug.
+
+    returns: None
+    """
+    if debug:
+        print('__Result__\t\t__Actual__')
+        for features, actual in test:
+            result = classifier.classify(features)
+            print('%s\t\t%s' %(result, actual))
+    if stats:
+        print('Score: %.4f' %score)
+        # TODO(ngarg): Comment back in.
+        # if not isinstance(classifier, nltk.DecisionTreeClassifier):
+        #     classifier.show_most_informative_features(30)
+
+
+def create_naive_bayes_classifier(training, test, stats=True, debug=False):
+    """
+    Creates a Naive Bayes classifier. Returns the classifier and score.
+    Owner: Nupur Garg
+
+    classifier: obj
+        Classifier.
+    test: list
+        Test data.
+    stats: bool
+        Whether to print summary statistics (default: True).
+    debug: bool
+        Whether to debug (default: False).
+
+    returns: (obj, int)
+    """
+    classifier = nltk.NaiveBayesClassifier.train(training)
+    score = nltk.classify.accuracy(classifier, test)
+
+    _print_statistics(training, test, score, stats, debug)
+    return classifier, score
+
+
+def create_classifier(issues, classifier_func, features_func, tags,
+                      filename, path=DEFAULT_CLASSIFIER_PATH, stats=True, debug=False):
+    """
+    Creates a classifier based on the classifier function and features function
+    provided and stores it in a filename.
+    Owner: Nupur Garg
+
+    issues: list
+        Issues to test on.
+    classifier_func: func
+        Function that generates the classifier.
+    features_func: func
+        Function that generates the features.
+    tags: List
+        Function tags to create classifier for.
+    filename: str
+        Name of pickle file.
+    path: str
+        Path to pickle file.
+    stats: bool
+        Whether to print summary statistics (default: True).
+    debug: bool
+        Whether to debug (default: False).
+
+    returns: None
+    """
+    tagged_data = []
+    other_data = []
+    features = []
+
+    # Split data into tagged with tags and other tags.
+    for issue in issues:
+        matches = issue.tags_df.function.isin(tags)
+        tagged_data.extend(issue.tags_df.loc[matches].values)
+        other_data.extend(issue.tags_df.loc[np.logical_not(matches)].values)
+
+    # Generate tagged and other features.
+    tagged_df = pd.DataFrame(tagged_data, columns=Issue.COLUMNS)
+    other_df = pd.DataFrame(other_data, columns=Issue.COLUMNS)
+    for index, row in tagged_df.iterrows():
+        features.append((features_func(row), True))
+    for index, row in other_df.iterrows():
+        features.append((features_func(row), False))
+
+    # Generate classifier.
+    training, test = split_training_test(features)
+    classifier, score = classifier_func(training, test, stats=stats, debug=debug)
+
+    # Stores classifier.
+    full_filename = os.path.join(os.path.abspath(path), filename)
+    pfile = open(full_filename, "wb")
+    pickle.dump(classifier, pfile)
+

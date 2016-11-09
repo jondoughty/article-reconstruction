@@ -12,6 +12,10 @@
     TXT     Article text            txttagger.py
     B       Blank line              junktagger.py
     N       Unidentifiable          junktagger.py
+    AT      Advertisement text      junktagger.py
+    OT      Other                   junktagger.py
+    CN      Comic strip title       junktagger.py
+    CT      Comic strip text        junktagger.py
 
   Not Labeled
 
@@ -23,11 +27,7 @@
     ME      Meta directives
     MH      Masthead
     PH      Photo caption
-    AT      Advertisement text
     BQT     Block quote text
-    CN      Comic strip title
-    CT      Comic strip text
-    OT      Other
 
 ## Tesseract Output Format (hOCR)
 See the **/examples** directory for an hOCR file and the image it came from. See [the hOCR spec](https://kba.github.io/hocr-spec/1.2/) for more info. Note that Tesseract may use an older version of the spec.
