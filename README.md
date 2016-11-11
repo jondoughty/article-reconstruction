@@ -29,6 +29,10 @@
     PH      Photo caption
     BQT     Block quote text
 
+## Setup
+
+  pip3 install pyenchant
+
 ## Tesseract Output Format (hOCR)
 See the **/examples** directory for an hOCR file and the image it came from. See [the hOCR spec](https://kba.github.io/hocr-spec/1.2/) for more info. Note that Tesseract may use an older version of the spec.
 

@@ -1,6 +1,8 @@
 # junktagger.py
 # Nupur Garg
 
+from nltk.corpus import names
+import enchant
 import re
 
 from tagger.basetagger import *
@@ -13,11 +15,27 @@ from tagger.basetagger import *
 
 
 _JUNKTAGGER_CLASSIFIERS = []
+_ENGLISH_DICTIONARY = enchant.Dict("en_US")
+_ENGLISH_NAMES = [word.lower() for word in (names.words("female.txt") + names.words("male.txt"))
+                               if not _ENGLISH_DICTIONARY.check(word)]
+_ENGLISH_NAMES_STR = "\W|\W".join(_ENGLISH_NAMES)
 
 
-# ========================================
-# ========= CLASSIFIER FUNCTIONS =========
-# ========================================
+# ===============================================
+# ========= CLASSIFIER HELPER FUNCTIONS =========
+# ===============================================
+
+
+def _has_page_jump(text):
+    """
+    Determines if the text has a page jump.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: bool
+    """
+    return bool(re.search(r"page \d+", text))
 
 
 def _features_stats_alphabetic(text):
@@ -29,12 +47,29 @@ def _features_stats_alphabetic(text):
 
     returns: dict
     """
-    alphabetic = [char for char in text if char.isalpha() or char == ' ']
+    features = {}
+
+    # Percent alphabetic.
+    alphabetic = re.sub(r"[^A-Za-z\ ]+", "", text)
     percent = len(alphabetic) / float(len(text))
-    features = create_features_for_ranges(feature_name='percent_alphabetic',
-                                          variable=percent,
-                                          ranges=[0.1, 0.5, 0.7, 0.8, 0.9])
-    features['start_alphabetic'] = text[0].isalpha()
+    features.update(create_features_for_ranges(feature_name="percent_alpha",
+                                               variable=percent,
+                                               ranges=[0.05, 0.1, 0.5, 0.7, 0.8, 0.9]))
+
+    # Number of words.
+    words = alphabetic.split(" ")
+    features.update(create_features_for_ranges(feature_name="avg_num_alpha_words",
+                                               variable=len(words),
+                                               ranges=[2, 5, 11, 25, 30, 40, 50]))
+
+    # Average number of words.
+    len_words = [len(word) for word in words]
+    avg_len_words = sum(len_words) / float(len(len_words))
+    features.update(create_features_for_ranges(feature_name="avg_len_alpha_words",
+                                               variable=avg_len_words,
+                                               ranges=[2, 3, 4, 5, 6, 8]))
+
+    features["start_alphabetic"] = text[0].isalpha()
     return features
 
 
@@ -47,11 +82,72 @@ def _features_stats_uppercase(text):
 
     returns: dict
     """
-    alphabetic = [char for char in text if char.isupper()]
+    features = {}
+
+    # Percent uppercase.
+    alphabetic = re.sub(r"[^A-Z]+", "", text)
     percent = len(alphabetic) / float(len(text))
-    features = create_features_for_ranges(feature_name='percent_uppercase',
-                                          variable=percent,
-                                          ranges=[0.05, 0.1, 0.2, 0.8, 0.9, 0.95])
+    features.update(create_features_for_ranges(feature_name="percent_uppercase",
+                                               variable=percent,
+                                               ranges=[0.05, 0.1, 0.2, 0.8, 0.9, 0.95]))
+
+    features['start_uppercase'] = text[0].isupper()
+    return features
+
+
+def _features_stats_dictionary(text):
+    """
+    Gets features on the numerals of the text.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    features = {}
+    words = text.lower().split(" ")
+    words_synset = [word for word in words
+                         if word and _ENGLISH_DICTIONARY.check(word)]
+
+    # Percent words in dictionary.
+    percent = len(words_synset) / float(len(words))
+    features.update(create_features_for_ranges(feature_name="percent_dict_words",
+                                               variable=percent,
+                                               ranges=[0.9]))
+                                               # ranges=[0.05, 0.33, 0.9, 0.98]))
+
+    # Number distinct dictionary words.
+    features.update(create_features_for_ranges(feature_name="count_dict_words",
+                                               variable=len(set(words_synset)),
+                                               ranges=[30]))
+                                               # ranges=[1, 5, 10, 15, 20, 25, 30, 40]))
+
+    # Length dictionary words.
+    len_words = [len(word) for word in words_synset]
+    avg_len_words = sum(len_words) / float(len(len_words)) if len_words else 0
+    features.update(create_features_for_ranges(feature_name="avg_len_dict_words",
+                                               variable=avg_len_words,
+                                               ranges=[10]))
+                                               # ranges=[2, 3, 4, 5, 6, 8]))
+
+    return features
+
+
+def _features_stats_numerals(text):
+    """
+    Gets features on the numerals of the text.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    features = {}
+    numerals = re.sub(r"\d+", "", text)
+    percent = len(numerals) / float(len(text))
+    features.update(create_features_for_ranges(feature_name="percent_numerals",
+                                               variable=percent,
+                                               ranges=[0.35, 0.7, 0.9, 0.98]))
     return features
 
 
@@ -64,12 +160,49 @@ def _features_stats_non_ascii(text):
 
     returns: dict
     """
-    alphabetic = [char for char in text if ord(char) < 128]
+    features = {}
+    alphabetic = re.sub(r"[^\x00-\x7F]+", "", text)
     percent = len(alphabetic) / float(len(text))
-    features = create_features_for_ranges(feature_name='percent_ascii',
-                                          variable=percent,
-                                          ranges=[0.8, 0.9, 0.96])
+    features.update(create_features_for_ranges(feature_name='percent_ascii',
+                                               variable=percent,
+                                               ranges=[0.8, 0.9, 0.96]))
     return features
+
+
+def _features_stats_patterns(text):
+    """
+    Gets features on the patterns within the text.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    features = {}
+    text = text.lower()
+
+    # Special number types to exclude.
+    features["has_page_jump"] = _has_page_jump(text)
+    features["has_year"] = bool(re.search(r"[^\d]((1[7-9])|2[0-1])\d{2}([^\d]|$)", text))
+    features["has_full_phone_number"] = bool(re.search(r"\(\d{3}\) \d{3}\-\d{4}", text))
+    features["has_thousands"] = bool(re.search(r"\d+\,\d{3}", text))
+    features["has_keyword"] = bool(re.search(r"editor|manager|adviser|mustang", text))
+
+    # Special number types to include.
+    features["has_phone_number"] = (False if features["has_full_phone_number"] else
+                                    bool(re.search(r"[^\d]\d{3}\-\d{4}", text)))
+    features["has_money"] = bool(re.search(r"\$\d+|\d+\$", text))
+    features["has_elipses"] = bool(re.search(r"\.\.\.", text))
+    features["has_percent"] = bool(re.search(r"\d+\%", text))
+    features["has_time"] = bool(re.search(r"\d+ (a\.m\.|p\.m\.|am|pm)", text))
+    features["has_name"] = bool(re.search(_ENGLISH_NAMES_STR, text))
+
+    return features
+
+
+# ========================================
+# ========= CLASSIFIER FUNCTIONS =========
+# ========================================
 
 
 def _generate_features_advertisement(data):
@@ -84,10 +217,13 @@ def _generate_features_advertisement(data):
     features = {}
     text = data.text.strip()
 
-    # TODO: Percent of tokens in a dictionary
-    features.update(_features_stats_non_ascii(text))
-    features.update(_features_stats_uppercase(text))
+    # TODO: Determine if names are in the text.
     features.update(_features_stats_alphabetic(text))
+    features.update(_features_stats_uppercase(text))
+    features.update(_features_stats_dictionary(text))
+    features.update(_features_stats_numerals(text))
+    features.update(_features_stats_non_ascii(text))
+    features.update(_features_stats_patterns(text))
 
     return features
 
@@ -182,6 +318,7 @@ def _tag_advertisement(row, classifier, features_func):
     """
     if (pd.isnull(row.function) and
         not pd.isnull(row.text) and
+        not _has_page_jump(row.text) and
         classifier.classify(features_func(row))):
         return "AT"
     return row.function
@@ -233,7 +370,7 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
     if replace_nan:
         tags.append(np.nan)
     if replace_all:
-        tags.extend(["N", "B", "AT"]) # "AT", "OT", "CN", "CT"])
+        tags.extend(["N", "B", "AT", "OT"]) # "AT", "OT", "CN", "CT"])
 
     for tag in tags:
         issue.tags_df.function.replace(tag, "JNK", inplace=True)
@@ -280,7 +417,7 @@ def main():
     jnk_issues[2].to_csv("test3.csv")
 
     # Prints the accuracy of the results.
-    print_accuracy_tag(jnk_issues, final_issues, tag="JNK", print_incorrect=False)
+    print_accuracy_tag(jnk_issues, final_issues, tag="JNK", print_incorrect=True)
 
 
 if __name__ == "__main__":
