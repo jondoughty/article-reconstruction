@@ -132,14 +132,6 @@ def _generate_features_comic(data):
     return features
 
 
-# Updates junk classifiers.
-_JUNKTAGGER_CLASSIFIERS.append(("junktagger_AT_naive_bayes.pickle", _generate_features_advertisement, ["AT"]))
-# TODO(ngarg): Comment back in.
-# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_unintelligible, ["N"]))
-# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_other, ["OT"]))
-# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_C_naive_bayes.pickle", _generate_features_comic, ["CN", "CT"]))
-
-
 # =====================================
 # ========= TAGGING FUNCTIONS =========
 # =====================================
@@ -177,6 +169,24 @@ def _tag_unintelligible(row):
     return row.function
 
 
+def _tag_advertisement(row, classifier, features_func):
+    """
+    Tags the row as advertisement (AT) if the classifier indicates True.
+
+    row: obj
+        DataFrame row to return value for.
+    features_func: func
+        Function that generates the features.
+
+    returns: str
+    """
+    if (pd.isnull(row.function) and
+        not pd.isnull(row.text) and
+        classifier.classify(features_func(row))):
+        return "AT"
+    return row.function
+
+
 # ==================================
 # ========= MAIN FUNCTIONS =========
 # ==================================
@@ -194,15 +204,15 @@ def tag(issue):
     assert check_tags_exist(issue, ["PI", "HL", "BL"])
 
     issue = copy.deepcopy(issue)
-    issue.apply(col="function", func=_tag_blank)
-    issue.apply(col="function", func=_tag_unintelligible)
+    issue.apply(col="function", label_func=_tag_blank)
+    issue.apply(col="function", label_func=_tag_unintelligible)
 
-    # # TODO(ngarg): Comment in once apply_classifier is finalized.
-    # for classifiers in _JUNKTAGGER_CLASSIFIERS:
-    #     filename = classifiers[0]
-    #     func = classifiers[1]
-    #     full_filename = os.path.join(os.path.abspath(DEFAULT_CLASSIFIER_PATH), filename)
-    #     issue.apply_classifier(col="function", file=filename, func=func)
+    for classifiers in _JUNKTAGGER_CLASSIFIERS:
+        filename = classifiers[0]
+        features_func = classifiers[1]
+        label_func = classifiers[3]
+        issue.apply_classifier(col="function", filename=filename,
+                               features_func=features_func, label_func=label_func)
 
     return issue
 
@@ -223,11 +233,20 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
     if replace_nan:
         tags.append(np.nan)
     if replace_all:
-        tags.extend(["N", "B"]) # "AT", "OT", "CN", "CT"])
+        tags.extend(["N", "B", "AT"]) # "AT", "OT", "CN", "CT"])
 
     for tag in tags:
         issue.tags_df.function.replace(tag, "JNK", inplace=True)
     return issue
+
+
+# TODO: Determine a better place/method to do this.
+# Updates junk classifiers.
+_JUNKTAGGER_CLASSIFIERS.append(("junktagger_AT_naive_bayes.pickle", _generate_features_advertisement, ["AT"], _tag_advertisement))
+# TODO(ngarg): Comment back in.
+# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_unintelligible, ["N"]))
+# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_other, ["OT"]))
+# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_C_naive_bayes.pickle", _generate_features_comic, ["CN", "CT"]))
 
 
 def main():
@@ -252,6 +271,7 @@ def main():
     # Prints the accuracy of the results.
     print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=False)
     print_accuracy_tag(issues, tagged_issues, tag="N", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="AT", print_incorrect=False)
 
     # Replaces the tags in the issues with JNK.
     final_issues = [tag_junk(issue, replace_nan=False, replace_all=True) for issue in tagged_issues]

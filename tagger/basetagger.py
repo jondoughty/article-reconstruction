@@ -11,7 +11,7 @@ import os
 
 # TODO(ngarg): CHANGE 'NA' to 'N' becuase pandas processes 'NA' as np.nan
 
-DEFAULT_CLASSIFIER_PATH = "tagger/classifiers"
+_DEFAULT_CLASSIFIER_PATH = "tagger/classifiers"
 
 
 # ===========================================
@@ -50,15 +50,19 @@ class Issue(object):
         # Generates a DataFrame from the csv_file provided.
         return pd.read_csv(csv_file, header=1, names=Issue.COLUMNS)
 
-    def apply(self, col, func):
+    def apply(self, col, label_func):
         # Applies function to column col.
-        self.tags_df[col] = self.tags_df.apply(lambda row: func(row), axis=1)
+        self.tags_df[col] = self.tags_df.apply(lambda row: label_func(row), axis=1)
 
-    def apply_classifier(self, col, file):
-        # Applies function to column col.
-        # TODO(ngarg): Read in classifier.
-        # TODO(ngarg): On each line --> create features, create classifiers.
-        pass
+    def apply_classifier(self, col, filename, features_func, label_func):
+        # Applies classifier to column col.
+        full_filename = os.path.join(os.path.abspath(_DEFAULT_CLASSIFIER_PATH), filename)
+        pickle_file = open(full_filename, "rb")
+        classifier = pickle.load(pickle_file)
+
+        # Applies classifier.
+        self.tags_df[col] = self.tags_df.apply(
+            lambda row: label_func(row, classifier, features_func), axis=1)
 
     def print_rows(self, rows):
         # Prints the rows with the given index of the DataFrame.
@@ -286,7 +290,7 @@ def create_naive_bayes_classifier(training, test, stats=True, debug=False):
 
 
 def create_classifier(issues, classifier_func, features_func, tags,
-                      filename, path=DEFAULT_CLASSIFIER_PATH, stats=True, debug=False):
+                      filename, path=_DEFAULT_CLASSIFIER_PATH, stats=True, debug=False):
     """
     Creates a classifier based on the classifier function and features function
     provided and stores it in a filename.
