@@ -1,22 +1,40 @@
+#!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-import locale
+import re
 import os
 import sys
 import xml.etree.ElementTree as ET
 
 
 class BBox:
-    def __init(self, parseMe):
-        #TODO set member variables instead of string
-        self.parseMe = parseMe
+    def __init__(self, values):
+        self.values = values
 
+class Word:
+    def __init__(self, xmlNode):
+        self.text=""
+        #TODO check if this actually iterates over everything, in order
+        for childNodeText in xmlNode.itertext():
+            self.text += childNodeText
+
+        self._rawProperties = xmlNode.get("title")
+
+        self._propertyMap = {}
+        for propString in self._rawProperties.split(";"):
+            items = propString.split()
+            self._propertyMap[items[0]] = items[1:]
+
+        self.bbox = BBox(self._propertyMap["bbox"])
+        self.confidence = self._propertyMap["x_wconf"][0]
 
 def main():
     ART_HOME=os.getcwd()
+    NUM_WORDS=5
     #TODO validate arguments
+    #TODO usage?
     hOCRFilePath = sys.argv[1]
-    abbyFilePath = sys.argv[2]
+    abbyyFilePath = sys.argv[2]
 
     hOCRTree = ET.parse(hOCRFilePath)
 
@@ -26,6 +44,11 @@ def main():
     # nodes = treeRoot.findall(".//*[@class='ocr_line']")
     # All descendants of "ocrx_word" elements
     #nodes = treeRoot.findall(".//*[@class='ocrx_word']//*")
+
+    # TODO check for meta ocr-capabilities (ocrx_word vs ocr_word)
+    # TODO if that doesn't work, look at actual tags
+    # TODO Maybe we should find lines first so that we can preserve the association
+    # between words and the line bbox
     nodes = treeRoot.findall(".//*[@class='ocrx_word']")
 
 #1 find all ocrx_word elements
@@ -38,16 +61,26 @@ def main():
 #      node.itertext?
 #      node.tail?
 
-
     print("Nodes found:", len(nodes))
-    for node in nodes:
-        #TODO bbox = BBox(node.get('title'))
-        nodeText = ""
-        #TODO check if this actually iterates over everything, in order
-        for childText in node.itertext():
-            nodeText += childText
-        print(node.get('title'), nodeText)
 
+    hocrLines = []
+    i = 0
+    phraseLength = 3
+    while i < len(nodes):
+        j = 0
+        while j < phraseLength & i + j < len(nodes):
+            hocrLines += nodes[i + j]
+            j+=1
+        i+=phraseLength
+
+    for node in nodes:
+        w = Word(node)
+        print(w.text, w.bbox.values)
+
+    abbyyLines = open(abbyyFilePath, encoding="utf-8").readlines()
+
+    #for line in abbyyLines:
+        #print(line)
 
 
 if __name__ == "__main__":
