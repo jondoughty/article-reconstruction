@@ -264,6 +264,7 @@ def _print_statistics(classifier, test, score, stats, debug):
         print('Score: %.4f' %score)
         if not isinstance(classifier, nltk.DecisionTreeClassifier):
             classifier.show_most_informative_features(30)
+            print("")
 
 
 def create_naive_bayes_classifier(training, test, stats=True, debug=False):

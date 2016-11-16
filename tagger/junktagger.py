@@ -19,6 +19,7 @@ _ENGLISH_DICTIONARY = enchant.Dict("en_US")
 _ENGLISH_NAMES = [word.lower() for word in (names.words("female.txt") + names.words("male.txt"))
                                if not _ENGLISH_DICTIONARY.check(word)]
 _ENGLISH_NAMES_STR = "\W|\W".join(_ENGLISH_NAMES)
+_REQUIRED_TAGS = ["PI", "HL", "BL", "SH"]
 
 
 # ===============================================
@@ -36,6 +37,22 @@ def _has_page_jump(text):
     returns: bool
     """
     return bool(re.search(r"page \d+", text))
+
+
+def _features_stats_length(text):
+    """
+    Gets features on the length of the text.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    features = {}
+    features.update(create_features_for_ranges(feature_name="text_len",
+                                               variable=len(text),
+                                               ranges=[10, 20, 70, 100]))
+    return features
 
 
 def _features_stats_alphabetic(text):
@@ -83,6 +100,7 @@ def _features_stats_uppercase(text):
     returns: dict
     """
     features = {}
+    words = text.split(" ")
 
     # Percent uppercase.
     alphabetic = re.sub(r"[^A-Z]+", "", text)
@@ -91,7 +109,10 @@ def _features_stats_uppercase(text):
                                                variable=percent,
                                                ranges=[0.05, 0.1, 0.2, 0.8, 0.9, 0.95]))
 
-    features['start_uppercase'] = text[0].isupper()
+    # Uppercase words statistics.
+    uppercase_words = [word for word in words if word and word[0].isupper()]
+    features["all_words_start_uppercase"] = len(uppercase_words) == len(text[0])
+    features["start_uppercase"] = text[0].isupper()
     return features
 
 
@@ -187,6 +208,7 @@ def _features_stats_patterns(text):
     features["has_full_phone_number"] = bool(re.search(r"\(\d{3}\) \d{3}\-\d{4}", text))
     features["has_thousands"] = bool(re.search(r"\d+\,\d{3}", text))
     features["has_keyword"] = bool(re.search(r"editor|manager|adviser|mustang", text))
+    features["has_quotes"] = bool(re.search(r"\“.*\”", text))
 
     # Special number types to include.
     features["has_phone_number"] = (False if features["has_full_phone_number"] else
@@ -194,8 +216,10 @@ def _features_stats_patterns(text):
     features["has_money"] = bool(re.search(r"\$\d+|\d+\$", text))
     features["has_elipses"] = bool(re.search(r"\.\.\.", text))
     features["has_percent"] = bool(re.search(r"\d+\%", text))
-    features["has_time"] = bool(re.search(r"\d+ (a\.m\.|p\.m\.|am|pm)", text))
+    features["has_time"] = bool(re.search(r"\d\:\d\d", text))
+    features["has_time_am_pm"] = bool(re.search(r"\d+ (a\.m\.|p\.m\.|am|pm)", text))
     features["has_name"] = bool(re.search(_ENGLISH_NAMES_STR, text))
+    features["has_underscores"] = bool(re.search(r"(\_{5})+", text))
 
     return features
 
@@ -217,7 +241,6 @@ def _generate_features_advertisement(data):
     features = {}
     text = data.text.strip()
 
-    # TODO: Determine if names are in the text.
     features.update(_features_stats_alphabetic(text))
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_dictionary(text))
@@ -241,9 +264,9 @@ def _generate_features_unintelligible(data):
     return features
 
 
-def _generate_features_other(data):
+def _generate_features_general(data):
     """
-    Generates features that identify other (OT).
+    Generates all of the features that are general to junk tags.
 
     data: obj
        Series containing issue data.
@@ -251,20 +274,14 @@ def _generate_features_other(data):
     returns: dict
     """
     features = {}
-    return features
+    text = data.text.strip()
 
+    features.update(_features_stats_alphabetic(text))
+    features.update(_features_stats_uppercase(text))
+    features.update(_features_stats_numerals(text))
+    features.update(_features_stats_non_ascii(text))
+    features.update(_features_stats_patterns(text))
 
-def _generate_features_comic(data):
-    """
-    Generates features that identify comic strip titles (CN) or
-    comic strip text (CT).
-
-    data: obj
-       Series containing issue data.
-
-    returns: dict
-    """
-    features = {}
     return features
 
 
@@ -288,6 +305,7 @@ def _tag_blank(row):
     return row.function
 
 
+# TODO(ngarg): Merge the two unintelligible classes.
 def _tag_unintelligible(row):
     """
     Tags the row as unintelligible (N) if there are not two consequtive
@@ -301,6 +319,25 @@ def _tag_unintelligible(row):
     if (pd.isnull(row.function) and
         not pd.isnull(row.text) and
         not re.search(r"\w+", row.text)):
+        return "N"
+    return row.function
+
+
+def _tag_unintelligible_classifier(row, classifier, features_func):
+    """
+    Tags the row as unintelligible (N) with classifier
+
+    row: obj
+        DataFrame row to return value for.
+    features_func: func
+        Function that generates the features.
+
+    returns: str
+    """
+    if (pd.isnull(row.function) and
+        not pd.isnull(row.text) and
+        not _has_page_jump(row.text) and
+        classifier.classify(features_func(row))):
         return "N"
     return row.function
 
@@ -324,6 +361,25 @@ def _tag_advertisement(row, classifier, features_func):
     return row.function
 
 
+def _tag_other(row, classifier, features_func):
+    """
+    Tags the row as other (OT) if the classifier indicates True.
+
+    row: obj
+        DataFrame row to return value for.
+    features_func: func
+        Function that generates the features.
+
+    returns: str
+    """
+    if (pd.isnull(row.function) and
+        not pd.isnull(row.text) and
+        not _has_page_jump(row.text) and
+        classifier.classify(features_func(row))):
+        return "OT"
+    return row.function
+
+
 # ==================================
 # ========= MAIN FUNCTIONS =========
 # ==================================
@@ -338,7 +394,7 @@ def tag(issue):
     issue: obj
         Issue object to apply tags to.
     """
-    assert check_tags_exist(issue, ["PI", "HL", "BL"])
+    assert check_tags_exist(issue, _REQUIRED_TAGS)
 
     issue = copy.deepcopy(issue)
     issue.apply(col="function", label_func=_tag_blank)
@@ -377,19 +433,21 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
     return issue
 
 
-# TODO: Determine a better place/method to do this.
+# TODO(ngarg): Determine a better place/method to do this.
 # Updates junk classifiers.
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_AT_naive_bayes.pickle", _generate_features_advertisement, ["AT"], _tag_advertisement))
+_JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_general, ["N"], _tag_unintelligible_classifier))
+
 # TODO(ngarg): Comment back in.
-# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_unintelligible, ["N"]))
-# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_other, ["OT"]))
-# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_C_naive_bayes.pickle", _generate_features_comic, ["CN", "CT"]))
+# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_CT_naive_bayes.pickle", _generate_features_general, ["CN"], _tag_comic_text))
+# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_general, ["OT"], _tag_other))
 
 
+# TODO(ngarg): Combine CT, CN with OT.
 def main():
     # Gets issues with and without tags.
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump", "ad"],
-                                         tags=["PI", "HL", "BL"])
+                                         tags=_REQUIRED_TAGS)
 
     # Create classifiers.
     for classifiers in _JUNKTAGGER_CLASSIFIERS:
@@ -409,6 +467,7 @@ def main():
     print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=False)
     print_accuracy_tag(issues, tagged_issues, tag="N", print_incorrect=False)
     print_accuracy_tag(issues, tagged_issues, tag="AT", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="OT", print_incorrect=False)
 
     # Replaces the tags in the issues with JNK.
     final_issues = [tag_junk(issue, replace_nan=False, replace_all=True) for issue in tagged_issues]
