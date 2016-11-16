@@ -11,7 +11,6 @@ from tagger.basetagger import *
 # TODO(ngarg): Ideas for future tagging:
 #   - N: 1) Above & below row have row.function == 'N'
 #        2) 3 or less consequtive alphanumerics in row.text
-# TODO(ngarg): Add connection for classifier into the code.
 
 
 _JUNKTAGGER_CLASSIFIERS = []
@@ -251,19 +250,6 @@ def _generate_features_advertisement(data):
     return features
 
 
-def _generate_features_unintelligible(data):
-    """
-    Generates features that identify unintelligible text (N).
-
-    data: obj
-       Series containing issue data.
-
-    returns: dict
-    """
-    features = {}
-    return features
-
-
 def _generate_features_general(data):
     """
     Generates all of the features that are general to junk tags.
@@ -305,27 +291,10 @@ def _tag_blank(row):
     return row.function
 
 
-# TODO(ngarg): Merge the two unintelligible classes.
-def _tag_unintelligible(row):
+def _tag_unintelligible(row, classifier, features_func):
     """
     Tags the row as unintelligible (N) if there are not two consequtive
-    alphanumeric characters.
-
-    row: obj
-        DataFrame row to return value for.
-
-    returns: str
-    """
-    if (pd.isnull(row.function) and
-        not pd.isnull(row.text) and
-        not re.search(r"\w+", row.text)):
-        return "N"
-    return row.function
-
-
-def _tag_unintelligible_classifier(row, classifier, features_func):
-    """
-    Tags the row as unintelligible (N) with classifier
+    alphanumeric characters or if the classifier indicates True.
 
     row: obj
         DataFrame row to return value for.
@@ -334,11 +303,11 @@ def _tag_unintelligible_classifier(row, classifier, features_func):
 
     returns: str
     """
-    if (pd.isnull(row.function) and
-        not pd.isnull(row.text) and
-        not _has_page_jump(row.text) and
-        classifier.classify(features_func(row))):
-        return "N"
+    if pd.isnull(row.function) and not pd.isnull(row.text):
+        if not re.search(r"\w+", row.text):
+            return "N"
+        if not _has_page_jump(row.text) and classifier.classify(features_func(row)):
+            return "N"
     return row.function
 
 
@@ -353,11 +322,9 @@ def _tag_advertisement(row, classifier, features_func):
 
     returns: str
     """
-    if (pd.isnull(row.function) and
-        not pd.isnull(row.text) and
-        not _has_page_jump(row.text) and
-        classifier.classify(features_func(row))):
-        return "AT"
+    if pd.isnull(row.function) and not pd.isnull(row.text):
+        if not _has_page_jump(row.text) and classifier.classify(features_func(row)):
+            return "AT"
     return row.function
 
 
@@ -372,11 +339,9 @@ def _tag_other(row, classifier, features_func):
 
     returns: str
     """
-    if (pd.isnull(row.function) and
-        not pd.isnull(row.text) and
-        not _has_page_jump(row.text) and
-        classifier.classify(features_func(row))):
-        return "OT"
+    if pd.isnull(row.function) and not pd.isnull(row.text):
+        if not _has_page_jump(row.text) and classifier.classify(features_func(row)):
+            return "OT"
     return row.function
 
 
@@ -398,7 +363,6 @@ def tag(issue):
 
     issue = copy.deepcopy(issue)
     issue.apply(col="function", label_func=_tag_blank)
-    issue.apply(col="function", label_func=_tag_unintelligible)
 
     for classifiers in _JUNKTAGGER_CLASSIFIERS:
         filename = classifiers[0]
@@ -420,13 +384,15 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
         Whether to replace np.nan with JNK.
     replace_all: bool
         Whether to replace the tag on other junk coumns with JNK.
+
+    returns: obj
     """
     issue = copy.deepcopy(issue)
     tags = []
     if replace_nan:
         tags.append(np.nan)
     if replace_all:
-        tags.extend(["N", "B", "AT", "OT"]) # "AT", "OT", "CN", "CT"])
+        tags.extend(["B", "AT", "N", "CT", "CN", "OT"]) # "PH", "MH", "OT"])
 
     for tag in tags:
         issue.tags_df.function.replace(tag, "JNK", inplace=True)
@@ -434,16 +400,12 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
 
 
 # TODO(ngarg): Determine a better place/method to do this.
-# Updates junk classifiers.
+# List of junk classifiers.
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_AT_naive_bayes.pickle", _generate_features_advertisement, ["AT"], _tag_advertisement))
-_JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_general, ["N"], _tag_unintelligible_classifier))
-
-# TODO(ngarg): Comment back in.
-# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_CT_naive_bayes.pickle", _generate_features_general, ["CN"], _tag_comic_text))
-# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_general, ["OT"], _tag_other))
+_JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_general, ["N", "CT", "CN"], _tag_unintelligible))
+# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_general, ["OT", "PH"], _tag_other))
 
 
-# TODO(ngarg): Combine CT, CN with OT.
 def main():
     # Gets issues with and without tags.
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump", "ad"],
@@ -467,7 +429,9 @@ def main():
     print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=False)
     print_accuracy_tag(issues, tagged_issues, tag="N", print_incorrect=False)
     print_accuracy_tag(issues, tagged_issues, tag="AT", print_incorrect=False)
-    print_accuracy_tag(issues, tagged_issues, tag="OT", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="CT", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="CN", print_incorrect=False)
+    # print_accuracy_tag(issues, tagged_issues, tag="OT", print_incorrect=False)
 
     # Replaces the tags in the issues with JNK.
     final_issues = [tag_junk(issue, replace_nan=False, replace_all=True) for issue in tagged_issues]
