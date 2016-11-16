@@ -15,7 +15,12 @@ from tagger.basetagger import *
 
 _JUNKTAGGER_CLASSIFIERS = []
 _ENGLISH_DICTIONARY = enchant.Dict("en_US")
-_ENGLISH_NAMES = [word.lower() for word in (names.words("female.txt") + names.words("male.txt"))
+
+_ENGLISH_ALL_NAMES = names.words("female.txt") + names.words("male.txt")
+_ENGLISH_ALL_NAMES_STR = "|".join(_ENGLISH_ALL_NAMES)
+
+# TODO: Try without making lower
+_ENGLISH_NAMES = [word.lower() for word in _ENGLISH_ALL_NAMES
                                if not _ENGLISH_DICTIONARY.check(word)]
 _ENGLISH_NAMES_STR = "\W|\W".join(_ENGLISH_NAMES)
 _REQUIRED_TAGS = ["PI", "HL", "BL", "SH"]
@@ -36,22 +41,6 @@ def _has_page_jump(text):
     returns: bool
     """
     return bool(re.search(r"page \d+", text))
-
-
-def _features_stats_length(text):
-    """
-    Gets features on the length of the text.
-
-    text: str
-        Text to perform analysis on.
-
-    returns: dict
-    """
-    features = {}
-    features.update(create_features_for_ranges(feature_name="text_len",
-                                               variable=len(text),
-                                               ranges=[10, 20, 70, 100]))
-    return features
 
 
 def _features_stats_alphabetic(text):
@@ -117,7 +106,7 @@ def _features_stats_uppercase(text):
 
 def _features_stats_dictionary(text):
     """
-    Gets features on the numerals of the text.
+    Gets features on the dictionary from the text.
 
     text: str
         Text to perform analysis on.
@@ -150,6 +139,33 @@ def _features_stats_dictionary(text):
                                                ranges=[10]))
                                                # ranges=[2, 3, 4, 5, 6, 8]))
 
+    return features
+
+
+def _features_stats_names(text):
+    """
+    Gets features on the names in the text.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    features = {}
+    words = text.split(" ")
+    words_synset = [word for word in words
+                         if (word and _ENGLISH_DICTIONARY.check(word) and
+                             word not in _ENGLISH_ALL_NAMES)]
+
+    # Number of names.
+    features.update(create_features_for_ranges(feature_name="num_names",
+                                               variable=len(words_synset),
+                                               ranges=[1, 3, 10, 40]))
+
+    # Number of non-name words.
+    features.update(create_features_for_ranges(feature_name="num_non_names",
+                                               variable=len(words),
+                                               ranges=[1, 3, 5]))
     return features
 
 
@@ -208,6 +224,7 @@ def _features_stats_patterns(text):
     features["has_thousands"] = bool(re.search(r"\d+\,\d{3}", text))
     features["has_keyword"] = bool(re.search(r"editor|manager|adviser|mustang", text))
     features["has_quotes"] = bool(re.search(r"\“.*\”", text))
+    # features["encoded_apostrophe"] = bool(re.search(r"â€™", text))
 
     # Special number types to include.
     features["has_phone_number"] = (False if features["has_full_phone_number"] else
@@ -217,7 +234,6 @@ def _features_stats_patterns(text):
     features["has_percent"] = bool(re.search(r"\d+\%", text))
     features["has_time"] = bool(re.search(r"\d\:\d\d", text))
     features["has_time_am_pm"] = bool(re.search(r"\d+ (a\.m\.|p\.m\.|am|pm)", text))
-    features["has_name"] = bool(re.search(_ENGLISH_NAMES_STR, text))
     features["has_underscores"] = bool(re.search(r"(\_{5})+", text))
 
     return features
@@ -241,6 +257,7 @@ def _generate_features_advertisement(data):
     text = data.text.strip()
 
     features.update(_features_stats_alphabetic(text))
+    features.update(_features_stats_names(text))
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_dictionary(text))
     features.update(_features_stats_numerals(text))
@@ -250,9 +267,9 @@ def _generate_features_advertisement(data):
     return features
 
 
-def _generate_features_general(data):
+def _generate_features_unintelligible(data):
     """
-    Generates all of the features that are general to junk tags.
+    Generates a classifier that identify text as unintelligible (N).
 
     data: obj
        Series containing issue data.
@@ -263,6 +280,7 @@ def _generate_features_general(data):
     text = data.text.strip()
 
     features.update(_features_stats_alphabetic(text))
+    features.update(_features_stats_names(text))
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_numerals(text))
     features.update(_features_stats_non_ascii(text))
@@ -270,6 +288,43 @@ def _generate_features_general(data):
 
     return features
 
+
+def _generate_features_other(data):
+    """
+    Generates a classifier that identify text as other (OT).
+
+    data: obj
+       Series containing issue data.
+
+    returns: dict
+    """
+    features = {}
+    text = data.text.strip()
+
+    features.update(_features_stats_uppercase(text))
+    features.update(_features_stats_non_ascii(text))
+    features.update(_features_stats_patterns(text))
+
+    return features
+
+
+def _generate_features_header(data):
+    """
+    Generates a classifier that identify text as photo header (PH) or masthead (MH).
+
+    data: obj
+       Series containing issue data.
+
+    returns: dict
+    """
+    features = {}
+    text = data.text.strip()
+
+    features.update(_features_stats_names(text))
+    features.update(_features_stats_uppercase(text))
+    features.update(_features_stats_patterns(text))
+
+    return features
 
 # =====================================
 # ========= TAGGING FUNCTIONS =========
@@ -345,6 +400,22 @@ def _tag_other(row, classifier, features_func):
     return row.function
 
 
+def _tag_headers(row, classifier, features_func):
+    """
+    Tags the row as masthead (MH) if the classifier indicates True.
+
+    row: obj
+        DataFrame row to return value for.
+    features_func: func
+        Function that generates the features.
+
+    returns: str
+    """
+    if pd.isnull(row.function) and not pd.isnull(row.text):
+        if not _has_page_jump(row.text) and classifier.classify(features_func(row)):
+            return "MH"
+    return row.function
+
 # ==================================
 # ========= MAIN FUNCTIONS =========
 # ==================================
@@ -392,7 +463,7 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
     if replace_nan:
         tags.append(np.nan)
     if replace_all:
-        tags.extend(["B", "AT", "N", "CT", "CN", "OT"]) # "PH", "MH", "OT"])
+        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH"])
 
     for tag in tags:
         issue.tags_df.function.replace(tag, "JNK", inplace=True)
@@ -402,8 +473,9 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
 # TODO(ngarg): Determine a better place/method to do this.
 # List of junk classifiers.
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_AT_naive_bayes.pickle", _generate_features_advertisement, ["AT"], _tag_advertisement))
-_JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_general, ["N", "CT", "CN"], _tag_unintelligible))
-# _JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_general, ["OT", "PH"], _tag_other))
+_JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_unintelligible, ["N", "CT", "CN"], _tag_unintelligible))
+_JUNKTAGGER_CLASSIFIERS.append(("junktagger_MH_naive_bayes.pickle", _generate_features_header, ["MH", "PH"], _tag_headers))
+_JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_other, ["OT"], _tag_other))
 
 
 def main():
@@ -429,9 +501,8 @@ def main():
     print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=False)
     print_accuracy_tag(issues, tagged_issues, tag="N", print_incorrect=False)
     print_accuracy_tag(issues, tagged_issues, tag="AT", print_incorrect=False)
-    print_accuracy_tag(issues, tagged_issues, tag="CT", print_incorrect=False)
-    print_accuracy_tag(issues, tagged_issues, tag="CN", print_incorrect=False)
-    # print_accuracy_tag(issues, tagged_issues, tag="OT", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="OT", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="MH", print_incorrect=False)
 
     # Replaces the tags in the issues with JNK.
     final_issues = [tag_junk(issue, replace_nan=False, replace_all=True) for issue in tagged_issues]

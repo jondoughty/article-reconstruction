@@ -16,6 +16,8 @@
     OT      Other                   junktagger.py
     CN      Comic strip title       junktagger.py
     CT      Comic strip text        junktagger.py
+    MH      Masthead                junktagger.py
+    PH      Photo caption           junktagger.py
 
   Not Labeled
 
@@ -25,8 +27,6 @@
     HL      Headline
     BL      Byline
     ME      Meta directives
-    MH      Masthead
-    PH      Photo caption
     BQT     Block quote text
 
 ## Setup
