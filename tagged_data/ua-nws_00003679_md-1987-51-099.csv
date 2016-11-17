@@ -1,0 +1,1202 @@
+"Function Key: TXT = article text; HL = headline; BL = byline; PH = photo caption/information; ME = meta directives outside of an article; NA = unintelligible; NP = nameplate; PI = publication information; B = blank; AT = advertisement text; MH = masthead; BQT = block quote text; BQA = block quote attribution; CN = comic strip title; CT = comic strip text; SH = section heading; OT = other text",,,,,,,
+"LINE","PAGE (0 if unintelligable)","ARTICLE NUMBER (use 0 if outside of text of any article/letter)","FUNCTION (see key above)","PARAGRAPH NUMBER (start with the first content paragraph, 0 if not part of the main text)","JUMP (if line contains a ""jump to"" directive, it's the page target. If it's a ""jumped from"" directive then the negative (-) of the soure page. otherwise 0)","AD #. If line is part of advertisement, it is the number of the ad. Start from top left column. 0 otherwise.","SCANNED TEXT"
+1,1,0,"NP","0",0,0,"Mustang Daily"
+2,1,0,"NP","0",0,0,"California Polytechnic State University San Luis Obispo"
+3,1,0,"PI","0",0,0,"Volume 51 No. 99"
+4,1,0,"PI","0",0,0,"Thursday, April 2,1987"
+5,1,1,"HL","0",0,0,"14-year-old student tackles Poly"
+6,1,1,"BL","0",0,0,"By Christine C. Temple"
+7,1,1,"BL","0",0,0,"Staff Writer"
+8,1,1,"TXT","1",0,0,"If a dark-brown haired, hazeleyed girl quotes a few excerpts from Hamlet or Chaucer’s Canterbury Tales, and in the same breath says she’s 14 years old, it’s not April Fools’ Day. Christ! Jones, a 5’2” resident of Grover City, began classes at Cal Poly this quarter without receiving a high school diploma."
+9,1,1,"TXT","2",0,0,"Exhibiting intelligence beyond her junior high school peers, Jones and her mother began a “home school’’ where she studied an average of eight hours per day in her home. Before then, Jones attended public schools through seventh grade, but like many other students, grew bored with the environment. The lack of academic challenge left her unsatisfied with her formal education."
+10,1,1,"TXT","3",0,0,"Eventually a Cal Poly admissions officer heard of her situation and, with his help, Jones found herself at Cal Poly."
+11,1,1,"TXT","4",0,0,"Jones accepted Cal Poly’s invitation to attend because “of their genuine interest in the students’ welfare,’’ she said. “Cal Poly was interested in my ability to get an education, and the food was amazingly good.’’"
+12,1,1,"TXT","5",0,0,"Having spent most of her life around adults and feeling less comfortable with children her own age put quite a strain on Jones. “It was almost as though there were two me’s,” she said."
+13,1,1,"TXT","6",0,0,".At home, however, her mother could match subject matter with her level of understanding. “I could be me, a whole person,’’ Jones said."
+14,1,1,"TXT","7",0,0,"When she was younger, she completed the standard I.Q. tests, but the results weren’t revealed until many years later. Jones said she believes this was because of the faculty’s unjustified perception that her parents would push her too hard."
+15,1,1,"TXT","8",0,0,"Jones considered going to continuation school to earn her high school diploma until she discovered it was only an option"
+16,0,0,"NA","0",0,0,"\"
+17,0,0,"B","0",0,0,
+18,0,0,"B","0",0,0,
+19,1,1,"PH","0",0,0,"Student Christ! Jones heads for class."
+20,1,1,"TXT","8",0,0,"available for those 16 years and older. Although test results placed her at a post-high school level, she would be unable to accumulate the necessary credits for a diploma."
+21,1,1,"TXT","9",0,0,"Advised to proceed in her education with an organization for children like herself called Gifted and Talented Education,"
+22,0,0,"B","0",0,0,
+23,1,1,"PH","0",0,0,"SHIRLEY THOMPSON/Mustang Daily"
+24,1,1,"TXT","9",0,0,"Jones seemed to have hit a dead end."
+25,1,1,"TXT","10",0,0,"Once the media got wind of Jones’ situation, Dave Snyder, Cal Poly admissions officer, called Jones and offered her his support."
+26,1,1,"TXT","11",7,0,"With the completion of a SAT test with a score 70 points See JONES, page 7"
+27,1,2,"HL","0",0,0,"A. Senate group to examine faculty merit award funds"
+28,1,2,"BL","0",0,0,"By Kim Holweger"
+29,1,2,"BL","0",0,0,"staff Writer"
+30,1,2,"TXT","1",0,0,"A proposal to channel funds used for faculty merit awards to alternative programs will go before the executive committee of the Academic Senate Tuesday."
+31,1,2,"TXT","2",0,0,"The proposal, authored by Academic Senate Chairman Lloyd Lamouria, would eliminate the Meritorious Performance and Professional Promise (MPPP) awards distributed annually to faculty members. It suggests the distribution of funds currently used for the award to “enrich such already established, but inadequately funded, faculty development programs.’’"
+32,1,2,"TXT","3",0,0,"These programs include sabbatical leaves, travel funds, grants for research and conferences to be used for professional development."
+33,1,2,"TXT","4",0,0,"The 123 awards of $2,500 each are distributed proportionately to the seven schools on campus. Funds were allocated from the state budget to create the MPPP."
+34,1,2,"TXT","5",0,0,"Approval by the executive committee would send the proposal to a meeting of the full senate April 14. Although passage of the proposal would not initiate action on the part of the senate, it would represent “the Academic Senate’s stand on the issue,’’ said Lamouria."
+35,1,2,"TXT","6",0,0,"Lamouria said the proposal reiterates the position taken by the senate a few years ago."
+36,1,2,"TXT","7",0,0,"“We didn’t agree with the MPPP awards to start with,’’ he said. “We feel that they are divisive as far as the faculty goes.’’"
+37,1,2,"TXT","8",0,0,"Adelaide Harmon-Elliott, Cal Poly president of the California Faculty Association, said that the MPPP awards were agreed on as a compromise’ during the final round of contract negotiations three years ago. The CFA is a union that serves as the elected bargaining agen\ for Cal"
+38,1,2,"TXT","8",0,0,"Poly faculty members."
+39,1,2,"TXT","9",0,0,"“The CFA asked for more money for professional develop-"
+40,1,2,"TXT","9",0,0,"ment."
+41,1,2,"TXT","9",0,0,"said Harmon-Elliott."
+42,1,2,"TXT","9",0,0,"“The eSU ^ wanted a merit system. The compromise ended up to be the MPPP.’’ A factfinder settled the dispute with the following agreement:	the"
+43,1,2,"TXT","9",0,0,"faculty through the Academic Senate would devise the criteria for the awards, and deans would make the final decision based on faculty input."
+44,1,2,"TXT","10",0,0,"Physics professor Thomas Schumann said, however, that faculty members have little input into who receives the awards aside from the nomination of potential recipients. “There’s no clear criteria for the award,’’ he said. “The final decision is President (Warren) Baker’s. He can veto any nominee.’’"
+45,1,2,"TXT","11",0,0,"Schumann added that administrators work as a team, and that the Academic Senate accepts what the Administration asks for"
+46,1,2,"TXT","12",0,0,"“The decision is made, and you never know who made it or who they discussed it with. The whole thing is very nebulous,’’ he said. “I think there is a possibility of misuse.’’"
+47,1,2,"TXT","13",0,0,"Articles appearing in Mustang Daily in May 1985 reported a “purely random selection process’’ used by schools such as Professional Studies to select nominees for approval by the dean. Five of the seven schools, however, said that no random selection process was used. At that time, only 39 awards for a total of nearly $100,000 were given."
+48,1,2,"TXT","14","back page",0,"Lamouria said nominations for the award are forwarded by department heads to an elected school committee, which forwards its recommendations to the school dean. If the dean ap-See MERIT, back page"
+49,1,3,"HL","0",0,0,"Enduro race held"
+50,1,3,"HL","0",0,0,"Poly motorcyclists compete"
+51,1,3,"BL","0",0,0,"By Victor Allen"
+52,1,3,"BL","0",0,0,"staff Writer"
+53,1,3,"TXT","1",0,0,"For the past 37 years a Cal Poly tradition has survived despite a lack of publicity —• a tradition rich with intensity and skill perfect for those who like to live life on the edge."
+54,1,3,"TXT","2",0,0,"This tradition, the Hi-Mountain Enduro race, began in 1950 and is an annual event organized by the Cal Poly Penguins Motorcycle Club. March 29, the Enduro race went off without a hitch with more than 4(X) riders participating in the event."
+55,1,3,"TXT","3",0,0,"“This is the most challenging event we put on,’’ said Poly Penguins President Kevin Lalor. “It is very intense and demanding"
+56,1,3,"ME","0",8,0,"See ENDURO, page 8"
+57,1,4,"TXT","1",5,0,"Do Soviet and American governments purposefully cloud communications between their countries and citizens, creating mistrust and misconceptions? See INSIGHT, page 5."
+58,1,0,"SH","0",0,0,"IN QUOTES"
+59,1,0,"OT","0",0,0,"I’ll support prayer in schools when they put algebra in church."
+60,1,0,"OT","0",0,0,"— Fran Leibowitz"
+61,0,0,"B","0",0,0,
+62,2,0,"PI","0",0,0,"Thursday, April 2,1987"
+63,2,0,"SH","0",0,0,"on the street"
+64,2,0,"SH","0",0,0,"Will you give money to Poly after graduation?"
+65,0,0,"NA","0",0,0,"j >"
+66,0,0,"B","0",0,0,
+67,2,0,"OT","0",0,0,"Kim Erasmy, art freshman:"
+68,2,0,"OT","0",0,0,"If 1 have extra money, it would be a possibility. It depends on my financial status. I would probably donate money to the art department."
+69,0,0,"NA","0",0,0,"m"
+70,2,0,"OT","0",0,0,"Kelly Pratt, physical education freshman:"
+71,2,0,"OT","0",0,0,"1 came from a private high school and they came knocking on my door a month after graduation. If I’m doing well. I’ll give them money. If I’m poor. I’ll say to heck with it."
+72,0,0,"B","0",0,0,
+73,0,0,"B","0",0,0,
+74,2,0,"OT","0",0,0,"Debbie Oakland, physical education freshman:"
+75,2,0,"OT","0",0,0,"It would depend on how much I’m making. I will have a brother going here and I want to support the school."
+76,0,0,"B","0",0,0,
+77,2,0,"OT","0",0,0,"Chris Reade, agricultural management freshman:"
+78,2,0,"OT","0",0,0,"I’d give them money if it was going to a good cause like scholarships. I would give because it is a good school and it could use the help."
+79,0,0,"B","0",0,0,
+80,0,0,"B","0",0,0,
+81,0,0,"B","0",0,0,
+82,2,5,"HL","0",0,0,"Oscar’s turning over in his grave"
+83,2,5,"TXT","1",0,0,"Well, it’s over. Finally. And not a minute too soon. In fact, the Academy Awards show lasted exactly three hours and 21 minutes too long."
+84,2,5,"TXT","2",0,0,"On Monday this annual Hollywood extravaganza forced itself upon the American public and was received about as warmly as a pop quiz."
+85,2,5,"TXT","3",0,0,"Except, unlike a pop quiz, we were warned about the Academy Awards. We knew they were coming. They’ve been coming at us live from Hollywood for 59 obnoxious years. And they’ll keep coming, just like the flu."
+86,2,5,"TXT","4",0,0,"Actually, the show wouldn’t be so bad if only the meaningful parts were televised. Does the television audience really need to know that “ ’Round Midnight” had the best score? What was the score, anyway? By how much did it win?"
+87,2,5,"TXT","5",0,0,"And does the man on the street really care that “Precious Images” was the best live-action short film? Maybe. But then why"
+88,2,5,"SH","0",0,0,"REPORTER’S"
+89,2,5,"SH","0",0,0,"NOTEBOOK"
+90,2,5,"TXT","9",0,0,"talk turkey and award prizes for the things people are really interested in."
+91,2,5,"BL","0",0,0,"Stacey Myers"
+92,2,5,"TXT","5",0,0,"don’t they give an award for the best non-action long film? Ronald Reagan’s last news conference would be a good nominee."
+93,2,5,"TXT","6",0,0,"To continue in the true spirit of the awards, perhaps the academy ought to consider the following meaningful categories for next year’s presentation:"
+94,2,5,"TXT","7",0,0,"Best Valet Parker at the Studio Parking Lot — Nominees will be judged on their speed, attire and knowledge of restaurants within a 10-mile radius."
+95,2,5,"TXT","8",0,0,"Most Original Excuse for the Film Going Over Budget — Directors and producers have come up with some creative ones and the Academy should recognize the genius of these artists."
+96,2,5,"TXT","9",0,0,"Worst Actor/Actress — Let’s"
+97,2,5,"TXT","10",0,0,"The awards are well on their way to becoming the most lavish, excessive and exorbitant non-event in the history of mankind. All the show needs is a few extra categories to stretch the presentation into a two-day fashion parade and it would be, without a doubt, the most worthless program ever endured by human audiences."
+98,2,5,"TXT","11",0,0,"Although the Academy Awards are based on an ideal of recognizing artistic excellence in the movie industry, they’ve become an evening devoted to activities that don’t interest anybody but the actors and ac- t tresses themselves. Maybe if the television viewing public is lucky, next year’s envelope will say “Program canceled due to lack of interest.”"
+99,2,5,"BL","0",0,0,"Stacey Myers is a journalism senior."
+100,2,0,"SH","0",0,0,"letters to the editor"
+101,2,6,"HL","0",0,0,"Athletes don’t warrant priority registration"
+102,2,6,"TXT","1",0,0,"Editor — Last quarter ASI asked the students to agree to a $4 registration fee increase. This allowed for the generation of new scholarships and the increase of existing ones. In appreciation to Cal Poly students, Athletic Director Ken Walker has slapped us in the face by now incorporating priority registration for athletes."
+103,2,6,"TXT","2",0,0,"As a proud business student, I am appalled by this notion that because a student has chosen to play a sport, he or she should be rewarded by priority registration. Many students in all departments have taken the initiative to excel in their studies, but no priority registration has been suggested to reward them for their accomplishments."
+104,2,6,"TXT","3",0,0,"In Walker’s quote, “ ... players’ unusual circumstances justify the privilege,"" he implies that all other students do not have unusual cir-"
+105,2,6,"TXT","3",0,0,"cumstances. Band, speech and drama participants have the same responsibilities as do football and baseball players. Both groups must practice regularly and adjust their class schedules to fit their practice schedules."
+106,2,6,"TXT","4",0,0,"It Is not the responsibility of other students to give up their right of priority registration and allow a select few to take a prima donna role on campus."
+107,2,6,"BL","0",0,0,"WILLIAM WITT"
+108,2,7,"TXT","1",0,0,"around $275, up an astounding 362 percent from just seven years ago ($76 per quarter in 1980.)"
+109,2,7,"TXT","2",0,0,"Fortunately for us, a small technicality in our democratic process can halt the flagrant abuse of our fees. The process is known as our VOTE. It is time to reverse the trend of spiraling student fees by voting against all future fee increases. If we don’t, and they go up at their present rate, it will cost over $3,500 per year to attend Cal Poly in the year 1995."
+110,2,7,"BL","0",0,0,"KENT NIELSEN"
+111,2,7,"HL","0",0,0,"Student votes can halt future fee increases"
+112,2,7,"HL","1",0,0,"Editor — An appalling precedence has been set by the past two referendums on campus. Through our haphazard voting, we have volunteered to raise our annual student fees about $109. Following the lead of the athletic and recreation center supporters, ASI is now proposing to raise fees again. With that increase, quarterly fees will be"
+113,2,0,"SH","0",0,0,"Letters policy"
+114,2,0,"OT","0",0,0,"Mustang Daily encourages readers’ opinions, criticisms and comments. Letters should be submitted to Room 226 of the Graphic Arts Building."
+115,2,0,"OT","0",0,0,"Letters should be shorter than 250 words, must be typewritten and must include the writer’s signature and telephone number."
+116,2,0,"MH","0",0,0,"Mustang Daily	"
+117,2,0,"MH","0",0,0,"Susan Edmondson	Editor"
+118,2,0,"MH","0",0,0,"Sue Harris	Managing Editor"
+119,2,0,"MH","0",0,0,"Mary Anne Talbott	Spotlight Editor"
+120,2,0,"MH","0",0,0,"Pamela Varma	Pulse Editor"
+121,2,0,"MH","0",0,0,"Matt Weiser	Insight Editor"
+122,2,0,"MH","0",0,0,"Elmer Ramos	Editorial Page Editor"
+123,2,0,"MH","0",0,0,"Dan Ruthemeyer	Sports Editor"
+124,2,0,"MH","0",0,0,"Shirley Thompson	Photo Editor"
+125,2,0,"MH","0",0,0,"Daryl Shoptaugh	Asst. Photo Editor"
+126,2,0,"MH","0",0,0,"Grant Shaffer	Illustrator"
+127,2,0,"MH","0",0,0,"Alan MacKenzie	Faculty Adviser"
+128,2,0,"MH","0",0,0,"University Graphic Systems	"
+129,2,0,"MH","0",0,0,"Katie Dougherty	General Manager"
+130,2,0,"MH","0",0,0,"Rob Newlin	Publishing Manager"
+131,2,0,"MH","0",0,0,"Sandy Kolbe	Asst. Mgr. Newspaper Production"
+132,2,0,"MH","0",0,0,"Robin Beck	Asst. Mgr. Special Publications"
+133,2,0,"CN","0",0,0,"BLOOM COUNTY"
+134,2,0,"CN","0",0,0,"by Berke Breathed"
+135,2,0,"CT","0",0,0,"ôKeAT. mmp 7Ü(M !5 ñ òtG/tr ñN AismeRQtÆ 'Mooôe Lûpoe’ MP m coRfmrt 5PON60R seni ""opoR-efims:"
+136,2,0,"CT","0",0,0,"wm FumeR wtoNmed couLP possm ue mñp r"
+137,0,0,"NA","0",0,0,"1"
+138,0,0,"NA","0",0,0,"ihiOt"
+139,2,0,"CT","0",0,0,"jñ Kfm m msp OF V/ FCrm UKB mce mluô mp"
+140,2,0,"CT","0",0,0,"PON J0HN60N PROmPm mY'FF ROCK mRi, MIRINO /ŸlUSmNO MP THeN cmwo M"
+141,0,0,"NA","0",0,0,"/"
+142,0,0,"B","0",0,0,
+143,2,0,"CT","0",0,0,"yes. 50"
+144,2,0,"CT","0",0,0,"WHO'S ON"
+145,2,0,"CT","0",0,0,"PON"
+146,2,0,"CT","0",0,0,"KNOm."
+147,0,0,"NA","0",0,0,"\"
+148,0,0,"NA","0",0,0,"o\"
+149,0,0,"NA","0",0,0,"is?"
+150,2,0,"OT","0",0,0,"Mustang Daily is published daily (except weekends, holidays and exam periods) by the journalism department, California Polytechnic State University, San Luis Obispo. Advertising appearing herein is solely for informational purposes and does not represent an endorsement by the Publisher or the University. Unsigned editorials reflect the majority of the Editorial Board, consisting of the editor, managing editor, special sections editors, sports editor and opinion page editor. Produced by University Graphic Systems Mustang Daily office is located in Graphic Arts Building, Room 226. Telephone (805) 546-1143 Copyright 1987 by Mustang Daily."
+151,3,0,"PI","0",0,0,"Mustang Daily Thursday, April 2,1987 3"
+152,3,0,"SH","0",0,0,"Newsbriefs"
+153,3,0,"SH","0",0,0,"Thursday, April A, 1987"
+154,3,8,"HL","0",0,0,"Senate fails to override veto"
+155,3,8,"TXT","1",0,0,"WASHINGTON (AP) — The Senate Wednesday tentatively sustained President Reagan’s veto of an $88 billion highway bill on a vote of 65-35, but majority Democrats moved immediately for another vote in a high-stakes political showdown."
+156,3,8,"TXT","2",0,0,"“The American people are being shafted by this vote,” said Senate Democratic Leader Robert C. Byrd of West Virginia, who switched his vote at the last minute in a parliamentary maneuver that enabled him to seek a second roll call."
+157,3,8,"TXT","3",0,0,"But Senate GOP Leader Bob Dole of Kansas said, “In my view it’s over. We’ve won it fair and square.’’"
+158,3,8,"TXT","4",0,0,"Among the California Senators, Democrat Alan Cranston and Republican Pete Wilson were among the 65 votes “for” the override, which required a two-thirds approval of the Senators to pass."
+159,3,10,"HL","0",0,0,"US agrees to discuss trade"
+160,3,10,"TXT","1",0,0,"WASHINGTON (AP) — The Reagan administration, while standing fast to its plans for sanctions on Japanese electronics imports, has agreed to a Japanese request for “emergency consultations’’ in the intensifying dispute over computer chips, U.S. officials said Wednesday."
+161,3,10,"TXT","2",0,0,"A team of Japanese trade specialists will arrive in Washington on Friday for negotiations with their counterparts in the departments of State, Commerce and office of U.S. trade representative, the officials said."
+162,3,10,"TXT","3",0,0,"The semiconductor talks, to get under way in earnest on Monday, will be followed later in the week with meetings in Washington among higher-level trade officials of both nations, government spokesmen said."
+163,3,11,"TXT","0",0,0,"Pope arrives in Chile for visit"
+164,3,11,"TXT","1",0,0,"SANTIAGO, Chile (AP) — Pope John Paul II called for the victory of	peace over	violence as he arrived	Wednesday in	this"
+165,3,11,"TXT","1",0,0,"nation he	has called	“dictatorial.” Police	used tear	gas	to"
+166,3,11,"TXT","1",0,0,"disperse crowds pushing toward him."
+167,3,11,"TXT","2",0,0,"President Augusto Pinochet, the leader of Chile’s right-wing military regime, met the pontiff at the airport and told	him	the"
+168,3,11,"TXT","2",0,0,"country is	a victim of	a foreign campaign of	“hate, lies	and	the"
+169,3,11,"TXT","2",0,0,"culture of death.”"
+170,3,11,"TXT","3",0,0,"“God bless Chile,” the pope said, declaring he wanted Chile to work for “forgiveness and reconciliation, with the victory of good over evil, peace over violence.”"
+171,3,11,"TXT","4",0,0,"Later the police used tear gas to disjjerse crowds trying to push past government cordons. Policemen ripped away a sign held by a young man that asked in Spanish, “Holy father, what is freedom like?”"
+172,3,0,"AT","0",0,3,"ROSS"
+173,3,0,"AT","0",0,3,"JEWELERS"
+174,3,0,"AT","0",0,3,"THE DIAMOND STORE OF SAN LUIS OBISPO,"
+175,3,0,"CN","0",0,0,"CLASS CNOOUNTCRS"
+176,3,0,"CT","0",0,0,"tve oot AOOM IN MV"
+177,3,0,"CT","0",0,0,"UASS To APPOtf hM"
+178,0,0,"NA","0",0,0,"SOSOlMTq"
+179,0,0,"NA","0",0,0,"-----"
+180,0,0,"NA","0",0,0,"Ci^"
+181,3,0,"CT","0",0,0,"HAUUWAV AMO PC* CiOC> AM9N&ST yi V^p li dlUAUPlCP/*"
+182,0,0,"NA","0",0,0,"VOUAIS M0S1"
+183,3,0,"AT","0",0,4,"THI lAZARi DIAMOND"""
+184,3,0,"AT","0",0,4,"ABOVE ALL... BRILLIANCE."
+185,3,0,"AT","0",0,4,"For brilliance beyond compare, only The Lazare Diamond will do. Cut to ideal proportions, it achieves the ultimate in brilliance, beauty and quality. One look, and you^ll see a difference that's perfeedy brilliant."
+186,3,0,"AT","0",0,4,"The Lazare Diamond Setting the standard for brWiance^"
+187,3,0,"AT","0",0,4,"At the comer of Chorro & Higuera 543-6364"
+188,3,0,"AT","0",0,4,"Owner Larry Van Gundy"
+189,3,0,"AT","0",0,4,"THEWEDDING RING PROFESSIONALS"
+190,3,0,"CT","0",0,0,"	...eoTtVS tvoo „ UNI'T'S? 1"
+191,0,0,"NA","0",0,0,"tVt A SgHtOli-	"
+192,3,0,"B","0",0,0,"	"
+193,3,0,"B","0",0,0,"	"
+194,3,0,"CT","0",0,0,"IM"
+195,3,0,"CT","0",0,0,"Í WCIGH Z90 tbs. AtJP VO"
+196,3,0,"CT","0",0,0,"Kat"
+197,3,0,"CT","0",0,0,"POR tVlIS"
+198,3,0,"CT","0",0,0,"CLASS."
+199,0,0,"B","0",0,0,
+200,3,0,"CT","0",0,0,"cof)dRmiicftfioi4sr"
+201,0,0,"NA","0",0,0,"■ ^ ^"
+202,0,0,"B","0",0,0,
+203,3,9,"HL","0",0,0,"Study concerning drug education released"
+204,3,9,"TXT","1",0,0,"LOS ANGELES (AP) — A survey studying the effectiveness of drug education in elementary schools showed that 15 percent of the sixth-graders surveyed said kids who drink alcohol are more grown up than"
+205,3,9,"TXT","1",0,0,"their non-drinking peers."
+206,3,9,"TXT","2",0,0,"Of 1,200 Los Angeles Unified School District students surveyed, 32 percent said they had tried beer, while 1 percent and 1.5 percent said they had used marijuana and cocaine"
+207,3,9,"TXT","2",0,0,"respectively."
+208,3,9,"TXT","3",0,0,"While 28 percent said they drank wine at least once, half said it was only once."
+209,3,9,"TXT","4",0,0,"Only 1 percent said they tried either heroin, LSD, angel dust or Valium."
+210,3,0,"AT","0",0,1,"WHY BUY IMPORT QUALITY BEER WHEN YOU CAN BREW YOUR OWN FOR Vs THE COST?"
+211,3,0,"AT","0",0,1,"Complete Beer Making Kits for Only $31.95 -I- tax"
+212,3,0,"AT","0",0,1,"Then Brew your own Beer for only $9-$12 per Batch. (2 cases)"
+213,3,0,"AT","0",0,1,"CALL U-BREW TODAY 543-6392	528-4518"
+214,3,0,"AT","0",0,2,"P"
+215,3,0,"AT","0",0,2,"U"
+216,3,0,"AT","0",0,2,"WHERE'S BUTCH CASSIDY? Tell him we'y^e got"
+217,3,0,"AT","0",0,2,"Sundance Coolers that is."
+218,3,0,"AT","0",0,2,"A free cooler to the 1st 50 people who present this coupon at the Campus Store"
+219,3,0,"AT","0",0,5,"want ^my N,T.V."
+220,3,0,"AT","0",0,5,"Nero’s Toppings Value"
+221,3,0,"AT","0",0,5,"Now with 20% more cheese and toppings on every delicious pizza, Nero’s is an even better value. Have your N.T.V. today. Delivery is free."
+222,3,0,"AT","0",0,5,"c Æa.» )"
+223,3,0,"AT","0",0,5,"1017 Monterey St, SLO"
+224,3,0,"AT","0",0,5,"543-1114"
+225,0,0,"B","0",0,0,
+226,4,0,"AT","0",0,1,"6th Annual Season Opening"
+227,4,0,"AT","0",0,1,"Super Sale"
+228,0,0,"NA","0",0,0,"TKrAj"
+229,4,0,"AT","0",0,1,"SPECIAL HOURS Three Days Only Mark Your Calendar Friday, April 3 Noon — 8 p.m. Saturday, April 4"
+230,4,0,"AT","0",0,1,"10	a.m. — 7 p.m. Sunday, April 5"
+231,4,0,"AT","0",0,1,"11	a.m. — 4 p.m."
+232,4,0,"AT","0",0,1,"Save up to 80% During this fantastic “Season-Starter” sales event. Hundreds of sale Items “ pick up a complex list at the door during sale hours."
+233,4,0,"AT","0",0,1,"Three Days Only April 3-5"
+234,4,0,"AT","0",0,1,"Super Deals on 86 Bikes Everything on Sale"
+235,4,0,"AT","0",0,1,"Jerseys"
+236,4,0,"AT","0",0,1,"Shorts"
+237,4,0,"AT","0",0,1,"Eyewear"
+238,4,0,"AT","0",0,1,"Gloves"
+239,4,0,"AT","0",0,1,"Helmets"
+240,4,0,"AT","0",0,1,"Spenco products Shoes"
+241,4,0,"AT","0",0,1,"Tires & Pumps"
+242,4,0,"AT","0",0,1,"And Much More!"
+243,4,0,"AT","0",0,1,"ìirÉm"
+244,4,0,"AT","0",0,1,"CYCLE WORKS"
+245,4,0,"AT","0",0,1,"san luis obispo"
+246,4,0,"AT","0",0,1,"fíne bicycles, components ¿i accessories"
+247,4,0,"AT","0",0,1,"399 Foothill 541-5672"
+248,4,0,"AT","0",0,2,"QüintesBence Serica PreaenU:"
+249,4,0,"AT","0",0,2,"THE M2DEN TGIO"
+250,4,0,"AT","0",0,2,"April 4, 1987, 8:00 pm"
+251,4,0,"AT","0",0,2,"The Cal Poly^ Theatre (Sponsored by:"
+252,4,0,"AT","0",0,2,"The Cal Poly Center for the Arts"
+253,4,0,"AT","0",0,2,"PQOGDAM: Beethoven (Trio in E-Flat, Op. 1 No. 1), Mendel&sohn (Trio in C Minor, Op. 66), Ôchwartz (Trio)."
+254,4,0,"AT","0",0,2,"TICKETS:"
+255,4,0,"AT","0",0,2,"$6 Students. $8 Premium Qeserved, $10 Premium Peserved"
+256,4,0,"AT","0",0,2,"Deaervations: 546-1421 (M-F 10 am - 4 pm)"
+257,4,0,"AT","0",0,2,"Not a piano trio at all, but a single musical instrument, played with iminent virtuosity and sensitivity. Mature musical personality, passionate temperament, conviction and intelligence.^"
+258,4,0,"AT","0",0,2,"-The New York Times"
+259,4,0,"PI","0",0,0,"4 Thursday, April 2,1987 Mustang Daily"
+260,4,10,"HL","0",0,0,"Baby M case will spur new surrogate laws"
+261,4,10,"TXT","1",0,0,"HACKENSACK, N.J. (AP) — A judge’s upholding of a surrogate parent contract in New Jersey after an Indiana judge ruled one invalid last year heightens the need for laws to clarify the sensitive issue, lawyers said Wednesday."
+262,4,10,"TXT","2",0,0,"“Surrogacy has potentially devastating civil liberties implications for all parties involved. We have to proceed very carefully and very thoughtfully,’’ said Susan Sangree, an attorney with the American Civil Liberties Union’s Reproductive Freedom Project in New York City."
+263,4,10,"TXT","3",0,0,"Superior Court Judge Harvey R. Sorkow’s 121-page decision in the “Baby M’’ case Tuesday granted custody of the year-old girl known as Baby M to her father, William Stern. It denied parental rights to Mary Beth Whitehead, who had agreed to bear the child for Stern and his wife, Elizabeth, via artificial insemination. Mrs. Stern adopted the baby Tuesday."
+264,4,10,"TXT","4",0,0,"Attorneys for Whitehead, who had changed her mind after agreeing to a $10,000 surrogate contract, filed for a stay of the decision Tuesday. They said the case probably will be appealed directly to the New Jersey Supreme Court, and that arguments are expected within four months."
+265,4,10,"TXT","5",0,0,"Sorkow’s strongest message, legal experts said, was a call for help from the nation’s legislatures."
+266,4,10,"TXT","6",0,0,"No state regulates surrogate parenting. Sixteen states have delved into the issue, with bills either pending or defeat^ in"
+267,4,10,"TXT","6",0,0,"their Legislatures."
+268,4,10,"TXT","7",0,0,"The New Jersey and Indiana rulings set precedents for those states only, but lawyers and judges can refer to them while considering similar cases nationwide."
+269,4,10,"TXT","8",0,0,"In the Indiana case, Superior Court Judge Victor S. Pfau invalidated a surrogate contract, saying fees paid to the surrogate mother constitute profiting from adoption, a Class D felony under state law. He ruled a mother cannot agree to give up her child until after birth."
+270,4,10,"TXT","9",0,0,"“1 think that there is always going to be a lot of conflicting law out there,’’ said Nadine Taub, a Rutgers University law professor. “This shows we need legislative clarification.’’"
+271,4,10,"TXT","10",0,0,"Sorkow called for laws to, establish standards for sperm donors, legitimacy of the child, and the rights of the parents’ spouses. He also suggested there should be laws to determine the qualifications of a surrogate, whether payment to the mother should be allowed and remedies if the child is born impaired."
+272,4,10,"TXT","11",0,0,"“It took years of legislative debate and judicial inquiry to define and develop today’s laws of abortion and artificial insemination,’’ Sorkow said. “The issues of surrogacy are still evolving, but it is necessary that laws be adopted to give our society a sense of definition and direction if the concept is to be allowed to further develop.’’"
+273,4,10,"TXT","12",0,0,"Attorneys agreed that most states will likely pass laws regulating surrogate motherhood."
+274,0,0,"B","0",0,0,
+275,0,0,"B","0",0,0,
+276,0,0,"B","0",0,0,
+277,0,0,"B","0",0,0,
+278,0,0,"B","0",0,0,
+279,4,0,"AT","0",0,2,"m of"
+280,4,0,"AT","0",0,2,"iries"
+281,4,0,"AT","0",0,2,"198 South Sl Next to the bus depot San Luis Obispo"
+282,4,0,"AT","0",0,2,"Phone:"
+283,4,0,"AT","0",0,2,"543^16"
+284,4,0,"B","0",0,0,
+285,4,0,"AT","0",0,2,"SUPER SALE"
+286,4,0,"AT","0",0,2,"SUPER SAVINGS«— lirllMdumiaim"
+287,4,0,"B","0",0,0,
+288,4,0,"B","0",0,0,
+289,4,0,"B","0",0,0,
+290,4,0,"NA","0",0,0,"smammismet"
+291,4,0,"NA","0",0,0,"'l-i, 'Íí"
+292,4,0,"NA","0",0,0,"T-"
+293,4,0,"NA","0",0,0,"ÉIÉI'"
+294,4,0,"AT","0",0,2,"tags)"
+295,4,0,"B","0",0,0,
+296,4,0,"AT","0",0,2,"Great Savings on Many Other Items!"
+297,0,0,"B","0",0,0,
+298,0,0,"NA","0",0,0,"I"
+299,0,0,"B","0",0,0,
+300,5,0,"PI","0",0,0,"Thursday, April 2, 1987 5"
+301,5,0,"PI","0",0,0,"Mustang daily"
+302,5,12,"HL","0",0,0,"Russia"
+303,5,12,"HL","0",0,0,"Real"
+304,0,0,"B","0",0,0,
+305,0,0,"B","0",0,0,
+306,0,0,"B","0",0,0,
+307,5,12,"HL","0",0,0,"Tension between the superpowers is hiding the truth about their people"
+308,0,0,"B","0",0,0,
+309,5,12,"BL","0",0,0,"By Floyd Jones, Staff Writer"
+310,0,0,"B","0",0,0,
+311,5,12,"TXT","1",0,0,"Imagine sitting down to dinner with a family in the Soviet Union. There would be talk, some joking (perhaps aimed at the KGB), a generous helping of steaming borscht and a few good belts of vodka. Yep, that’s what it would be like."
+312,5,12,"TXT","2",0,0,"At least that’s probably how a lot of Americans see the Soviet Union — like a scene out of the movie “Moscow on the Hudson.’’"
+313,5,12,"TXT","3",0,0,"Likewise, many Soviets probably see the United States as one big slum. Tattered buildings pack the streets like a crowded elevator and give meager shelter to masses of homeless — the victims of an exploitative capitalistic system. Those are the types of films the Soviet government broadcasts."
+314,5,12,"TXT","4",0,0,"The truth is, neither country’s citizens, on the whole, have a comprehensive view of the “other side of the fence.’’ After all, said Cal Poly professor of Russian culture Bianca Rosenthal, Soviets aren’t supposed to make contact with foreigners. The Soviet government doesn’t want its people to know what Americans have that Soviets don’t, she added. So not only are Soviet citizens “discouraged’’ from making contact with foreigners, but foreigners, Americans in particular, are “discouraged’’ from rubbing elbows with the natives."
+315,5,12,"TXT","5",0,0,"One Cal Poly student got a taste of Soviet life in the summer of 1985, though he admits the weekend trip to the “tourist trap’’ of Leningrad in western Russia left him little insight into the lives and thoughts of the Soviet people."
+316,5,12,"TXT","6",0,0,"Joe Flatley, a 20-year-old sophomore, flew to Finland to meet his girlfriend and the two hopped on a Finnish tour bus into Leningrad. Most of the Fins on the trip only crossed the border to get drunk, the same reason many Americans go to Tijuana, Flatley said. While most Fins on the tour seemed content to stay in the hotel and drink vodka, Flatley hit the streets and began piecing together his impressions of Russia."
+317,5,12,"TXT","7",0,0,"“Before I went in there (on the bus),’’ he said, “I had a lot of opinions about Russia.” But these preconceptions were later changed by what he saw there. At first, he said, all he saw was army bases and military trucks that made it seem like he was “walking into a big trap ... It felt like the farther I got in — it’s not like I felt in danger — it was just a strange feeling,” he remembers. “It felt like kind of a taboo for an American to go in there. Really pretty countryside, though. Nice drive.”"
+318,0,0,"NA","0",0,0,"t W"
+319,5,12,"TXT","8",0,0,"Flatley said he was paid extra attention by the KGB because he was American."
+320,5,12,"TXT","8",0,0,"They went through all his bags and quizzed him on his ID. He also couldn’t bring his camera in with him."
+321,5,12,"TXT","9",0,0,"Conversation was one-track at times, when people he talked with dug into their English repertoire."
+322,5,12,"TXT","9",0,0,"They all seemed to know the phrases,"
+323,5,12,"TXT","9",0,0,"“Do you have sports clothes?” and “Do you have Nike?”"
+324,5,12,"TXT","10",0,0,"“They all could ask me if I had blue jeans,” he said. “I sold a pair. I needed the money.” The incident he mentioned involved a woman in the hotel where he was staying. She dragged him into a dark room, he said, where they haggled over the price for a pair of Levi’s. Flatley sold them to her for $40. “I could have gotten $50, but I would have felt too guilty.”"
+325,5,12,"TXT","11",0,0,"Aside from typical blue jean-centered conversations, Flatley noticed that people of different age groups reacted to him dif-"
+326,0,0,"B","0",0,0,
+327,0,0,"B","0",0,0,
+328,0,0,"NA","0",0,0,"s ■"
+329,0,0,"B","0",0,0,
+330,0,0,"B","0",0,0,
+331,5,12,"BQT","0",0,0,"‘It felt like the farther I got in (Russia) ..."
+332,5,12,"BQT","0",0,0,"— It was just a strange feeling."
+333,5,12,"BQT","0",0,0,"It felt like kind of a taboo for an American to go in there’"
+334,5,12,"BQA","0",0,0,"—Joe Flatley"
+335,5,12,"TXT","11",0,0,"ferently	after they	found	out	he	was"
+336,5,12,"TXT","11",0,0,"American. Middle generation Russians seemed interested in meeting him and talking with him, he said. So were women, but the males his age and younger “got hostile”	when they	found	out	he	was"
+337,5,12,"TXT","11",0,0,"American."
+338,5,12,"TXT","12",0,0,"“Some (people) were scared to talk to you, seems like,” he said. Others seemed interested but wouldn’t approach him."
+339,0,0,"B","0",0,0,
+340,5,12,"TXT","12",0,0,"“There are some good-looking girls there,” he quickly added."
+341,5,12,"TXT","13",0,0,"Flatley said the natives “probably thought the tourists were jerks,” and that Leningrad by no means represents the rest of the Soviet Union.	“I’m	sure	if you go"
+342,5,12,"TXT","13",0,0,"out in the	countryside it	would be dif-"
+343,5,12,"TXT","13",0,0,"ferent,” he said."
+344,5,12,"TXT","14",0,0,"One stereotype that happens to be true is that Soviets spend a lot of time standing in line for food and other needs. “There was	the meat	store	and	a big line"
+345,5,12,"TXT","14",0,0,"in front of	that, and	there	was	the bread"
+346,5,12,"TXT","14",0,0,"store and a big line in front of that and there was the vegetable store and a big line in front of that!” he said. One thing that bothered Flatley, though, was that the stores would put him at the front of the line because he was American. “People didn’t say anything,” he said. “They just stared.”"
+347,5,12,"TXT","15",0,0,"Despite the military cars and taxis speeding and swerving chaotically through the streets and obeying no traffic laws (because there aren’t any), Flatley was impressed by the beauty of the architecture in the clean but colorless city. The Catholic Russian Orthodox church “was the hugest, most immense church I’ve ever seen in my life,” he said. “There was gold everywhere — a lot of statues and paintings, and a lot of old ladies would walk around to each and say a little prayer and kiss it ... and you couldn’t touch anything unless you were an old lady,” he joked."
+348,5,12,"TXT","16",0,0,"What Flatley did regret, though, was"
+349,5,12,"PH","0",0,0,"SHIRLEY THOMPSON/Muctang Daily"
+350,5,12,"TXT","16",0,0,"that he hadn’t spent a lot of time talking to the Russian people. He would love to sit down to dinner with a Soviet family, learn about them, tell them about America, and perhaps down a few shots of vodka. “But obviously I didn’t get a chance to do that,” he said."
+351,5,12,"TXT","17",0,0,"Professor Rosenthal, though, said the Soviet Union is loosening up a bit. Soviet leader Mikhail Gorbachev’s recent policy of openness is changing things rapidly in Russia and the rest of the USSR, Rosenthal said. Gorbachev’s move to create more work initiative and even small family businesses might allow Soviets to meet more foreigners and learn about America through Americans rather than just literature. “1 think there’s a good chance (for it to happen), but that remains to be seen,” she said."
+352,5,12,"TXT","18",0,0,"Rosenthal will teach on the London Study Program, in which students will take a trip into the Soviet Union. Rosenthal and others will try for more contact betweeen Americans and Soviet citizens. “Though group efforts to meet Soviets may not work, students talking to Soviets on their own might be more successful,” she said. “The trip will certainly be worthwhile. That’s what everyone’s said who has gone there. It makes them more aware of the world we live in.”"
+353,5,12,"TXT","19",0,0,"Rosenthal said students on London Study will probably find what her students in the Russian culture class and Flatley have found — that the Soviets are people, quite a bit like them."
+354,6,0,"AT","0",0,1,"The pregnancy test for your"
+355,6,0,"AT","0",0,1,"eyes only."
+356,6,0,"AT","0",0,1,"Private, portable, and easy to read, e.p.t. Plus""“ can tell you if you’re pregnant in as fast as 10 minutes. And in 30 minutes if you’re not You can use it as soon as one day after a missed period. e.p.t Plus, a fast and easy way to know for sure."
+357,6,0,"AT","0",0,1,"1 TEST H<T"
+358,0,0,"B","0",0,0,
+359,0,0,"B","0",0,0,
+360,6,0,"AT","0",0,2,"CAN SUCH THIN6S"
+361,0,0,"B","0",0,0,
+362,0,0,"B","0",0,0,
+363,0,0,"B","0",0,0,
+364,6,0,"AT","0",0,2,"stonishing"
+365,6,0,"AT","0",0,2,"Carver quality from"
+366,6,0,"AT","0",0,2,"CAHfER RECEIIER 900"
+367,6,0,"AT","0",0,2,"■ITI UnMETIICAl CMME CIIUI FM"
+368,6,0,"AT","0",0,2,"mm lETECTH	*635°°"
+369,6,0,"AT","0",0,2,"■ Power; 100 w/per Channel into 8 OHMS"
+370,6,0,"AT","0",0,2,"CARVER M-I.Ot"
+371,6,0,"AT","0",0,2,"FM» aaFUFIEI"
+372,6,0,"AT","0",0,2,"•499°° I"
+373,6,0,"AT","0",0,2,"CARKR On-50"
+374,6,0,"AT","0",0,2,"CMFMTIIK FUT» «mi *559°°"
+375,6,0,"AT","0",0,2,"■IIITAl TIM Un"
+376,6,0,"AT","0",0,2,"■ 9-function infrared wireless remote"
+377,6,0,"AT","0",0,2,"itly"
+378,6,0,"AT","0",0,2,"staid audiophile world by winning a challenge that no other amplifier could ever consider.The new M-VOt was judged, in extensive listening tests oy one of Americaf s most respected audiophile publications, to be the sonic equivalent of a pair of Iraendary esoteric mono amplifiers which retail for $3000 each!"
+379,6,0,"AT","0",0,2,"■ Come in and hear this 200 w/per channel (RMS 8ohm 20-20kHz) giant killer for only $49911 Such things can be."
+380,6,0,"AT","0",0,2,"THE AMAZIRS LOUDSPEAKER"
+381,6,0,"AT","0",0,2,"llract Irtn FM RIMm St*Ik: «Mi HMfln Ftaur tabaMlir SyttM"
+382,6,0,"AT","0",0,2,"■	Iipill» Um neiRWM. When Bob Carver designs a loudspeaker,"
+383,6,0,"AT","0",0,2,"ou can be assured of three things, irst, it will be out of the ordinary; Bob simply does not approach design problems in stale, traditional ways. Second, the result will be powerful, musical and accurate. And finally, it will deliver superlative performance at an affordable prica"
+384,6,0,"AT","0",0,2,"■	TIm taaztai iMtftpiator is all"
+385,6,0,"AT","0",0,2,"this and more A pure, uninterrupted line source of proprietary ribbon drivers edge—mounted in a trapezoidal panel. With an array of state-of-the-art planar subwoofer drivers delivering solid bass support"
+386,6,0,"AT","0",0,2,"•rMn RmTiIm *1 576°°	|"
+387,6,0,"AT","0",0,2,"1110 GARDEN ST SUITE A"
+388,6,0,"AT","0",0,2,"SAN tUIS OB(S»>0 (80S) SA4 8392"
+389,0,0,"NA","0",0,0,"rtaii"
+390,0,0,"NA","0",0,0,"IMiaOM«"
+391,0,0,"NA","0",0,0,"«88MM ktrt"
+392,6,0,"AT","0",0,2,"THE PROGRESSIVE AUDIO STORE"
+393,6,0,"PI","0",0,0,"6 Thursday, April 2, 1987 Mustang Daily"
+394,6,13,"HL","0",0,0,"AIDS education is needed, Reagan says"
+395,6,13,"TXT","1",0,0,"PHILADELPHIA (AP) — President Reagan, in his first major speech on the health crisis, said Wednesday that local schools and parents must decide how to educate children on the threat of AIDS but also must stress morality and avoid a “value neutral” approach."
+396,6,13,"TXT","2",0,0,"“All the vaccines and medications in the world won’t change one basic truth — that prevention is better than cure,” Reagan told the Philadelphia College of Physicians, one of the nation’s oldest professional medical associations."
+397,6,13,"TXT","3",0,0,"“We’ve declared AIDS public health enemy No. 1,” the president said. And he pledged, “I’m determined we’ll find a cure for AIDS ... we’ll find a way or make one.”"
+398,6,13,"TXT","4",0,0,"Supporting statements by Education Secretary William Bennett, he also said the dissemination of such information “must be up to the schools and the parents, not government.”"
+399,6,13,"TXT","5",0,0,"Until now, the administration’s principal spokesman on the issue has been Surgeon General C. Everett Koop. He has taken a more aggressive stance than Bennett, saying that beyond abstinence, the surest protection is the use of condoms and the education of children as early as the third grade."
+400,6,13,"TXT","6",0,0,"But Reagan also told reporters that he doesn’t quarrel with Koop’s advice on prevention."
+401,6,13,"TXT","7",0,0,"Asked earlier if people should “just say no,” Reagan replied, “That’s a pretty good answer. Yes.”"
+402,6,13,"TXT","8",0,0,"AIDS,	or	acquired	immune"
+403,6,13,"TXT","8",0,0,"deficiency syndrome, is a contagious,	fatal	disease	that at-"
+404,6,13,"TXT","8",0,0,"tacks the body’s immune system, redering it incapable of resisting other diseases and infections. In most cases it is	spread	by sexual"
+405,6,13,"TXT","8",0,0,"contact,	and	health	officials"
+406,6,13,"TXT","8",0,0,"estimate that between 1 million and 1.5 million Americans have been exposed to the virus."
+407,6,13,"TXT","9",0,0,"While the president has spoken on the AIDS issue before — requesting Koop last Feb. 5 to undertake a study of the problem — he has been largely silent on the issue of giving advice to Americans on preventive and protective measures."
+408,6,13,"TXT","10",0,0,"In his speech, Reagan noted that the Public Health Service has issued an information and education plan to help control the spread of the disease, which has no known cure."
+409,6,13,"TXT","11",0,0,"“But let’s be honest with ourselves,” the president continued. “AIDS information cannot be what some call ‘value neutral.’ After all, when it comes to preventing AIDS, don’t medicine and morality teach the same lessons?”"
+410,6,0,"AT","0",0,3,"Are You Ready For Your Own Private Room in an Exclusive Student Residence?"
+411,6,0,"AT","0",0,3,"•	Completely furnished including double-beds and walk-in closets"
+412,6,0,"AT","0",0,3,"•	Beautifully landscaped exteriors with modern and attractively furnished interiors"
+413,6,0,"AT","0",0,3,"•	Ample reserved and non-reserved on-site parking for residents!"
+414,6,0,"AT","0",0,3,"•	A quiet, mature environment that caters to the conscientious and discriminating student"
+415,6,0,"AT","0",0,3,"•	Attentive, caring management staff thot recognizes our residents as our clients"
+416,6,0,"AT","0",0,3,"•	Rents that are competitive, affordable and include a reduced rate for summer months."
+417,6,0,"AT","0",0,3,"Woodside’s limited openings rent quickly!"
+418,6,0,"AT","0",0,3,"Applications are now being accepted for the"
+419,6,0,"AT","0",0,3,"1987-88 contract year. Don’t wait..."
+420,6,0,"AT","0",0,3,"Pick up an application today!"
+421,0,0,"NA","0",0,3,"HCCDSICIi"
+422,0,0,"NA","0",0,3,"I «ai	GACCCS"
+423,6,0,"AT","0",0,3,"UllMlJilM0 APARTMENTS"
+424,6,0,"AT","0",0,3,"an exclusive Student Residence"
+425,6,0,"AT","0",0,3,"200 N. Santo Rosa St."
+426,6,0,"AT","0",0,3,"San Luis Obispo, Co 544-7007"
+427,7,0,"PI","0",0,0,"Mustang Daily Thursday, April 2, 1987 7"
+428,7,14,"HL","0",0,0,"Services held for son of Dean Martin"
+429,7,14,"TXT","1",0,0,"LOS ANGELES (AP) — Dean Martin’s family and celebrity friends gathered Wednesday at a brief memorial service for son Dean Paul Martin, the actor-pilot killed with another flier on a California Air National Guard training flight."
+430,7,14,"TXT","2",0,0,"The private 25-minute military service at Los Angeles National Cemetery in West Los Angeles included a fly-over in missing-man formation of four planes from the 163rd Tactical Fighter Group, the unit in which Martin, 35, was a captain."
+431,7,14,"TXT","3",0,0,"Among those attending the service along with Dean Martin were longtime show business friends Frank Sinatra and Sammy Davis Jr. and Martin’s former comedy team partner, Jerry Lewis."
+432,7,14,"TXT","4",0,0,"Also attending were Lucille Ball and producer-husband Gary Morton, composer Henry Man-cini, actor-singer Shaun Cassidy, entertainer Danny Thomas, boyhood friend and former bandmate Desi Arnaz Jr. and Martin’s former wife, ice skater Dorothy Hammill."
+433,7,14,"TXT","5",0,0,"Meanwhile Wednesday, recovery teams continued searching 90 miles east of Los .Angeles for remains of Martin of West Los Angeles and weapons officer Ramon Ortiz, 39, of Las Vegas, Nev., whose jet crashed March 21 in the San Bernardino National Forest."
+434,7,1,"HL","0",0,0,"JONES"
+435,7,1,"ME","0",-1,0,"From page 1"
+436,7,1,"TXT","12",0,0,"higher than freshman entrance requirements, combined with work approved by faculty members, Jones was allowed to enroll at Cal Poly."
+437,7,1,"TXT","13",0,0,"Jones likes music and the works of Shakespeare and Hawthorne, but said she is no more intelligent than the average person, “just a little more motivated.” She was so motivated she attended class with her mother at Santa Barbara Business College. After that — her first college class: “I knew that’s what I wanted,’’ she said."
+438,7,1,"TXT","14",0,0,"Her first quarter here began with a schedule of five classes. So far, she said, “I love the atmosphere. I feel very comfortable.’’ She has made several friends already. Some know how old she is, she said, and others don’t, but they don’t treat her any differently."
+439,7,1,"TXT","15",0,0,"“I am happy to be with people who care about learning. They aren’t here because it’s required.’’"
+440,7,0,"AT","0",0,7,"Ladies * Sports Shop"
+441,7,0,"AT","0",0,7,"Featuring a unique selection of stylish sports gear for the active woman WARM-UPS • SWEATS WINDBREAKERS ACCESSORIES"
+442,7,0,"AT","0",0,7,"886 Monterey"
+443,7,0,"AT","0",0,7,"543-2197"
+444,7,0,"SH","0",0,0,"calendar"
+445,7,0,"SH","0",0,0,"thursday 2"
+446,7,0,"OT","0",0,0,"•Ian Cannon, a member of the technical staff for the Rocket-dyne Division of Rockwell International, will present a speech entitled “Rocketdyne Presents Robotics.’’ The program is sponsored by the Cal Poly student chapters of the American Welding Society and the Society of Manufacturing Engineers and will be held today in Room B-5 of the Science Building. Admission is free."
+447,7,0,"OT","0",0,0,"•The Cal Poly English department will sponsor Helge Ronning, professor of Scandinavian studies at the University of Oslo, Norway. Today Ronning will discuss “Ibsen and Liberal 19th Century Society’’ at 11 a.m. in Room 221 of the Erhart Agriculture Building. At 4 p.m., Ronning will speak in Room 211 of the English Building on “Recent Scan^navian Literature.’’"
+448,7,0,"AT","0",0,3,"Servicing"
+449,7,0,"OT","0",0,0,"Both presentations are free."
+450,7,0,"OT","0",0,0,"•Mette Masst, a developmental sociologist and Norwegian diplomat, will examine “The Role of Women in African Agriculture’’ at 7:30 p.m. today in Room 286 of the Fisher Science Building. The presentation is sponsored by the Cal Poly Schools of Agriculture and Liberal Arts and admission is free."
+451,7,0,"OT","0",0,0,"•The Cal Poly Sports Club Council will sponsor Sports Club Day, at 11 a.m. today in the University Union Plaza. More than 25 sports clubs will present demonstrations and provide information on joining and participating."
+452,7,0,"SH","0",0,0,"friday 3"
+453,7,0,"OT","0",0,0,"•Mette Masst, a developmental sociologist and Norwegian diplomat, will explore “Current Race Relations in African Society’’ at 3 p.m. Friday in Room B-5 of the Science Building. The lecture is sponsored by the Cal Poly Schools of Agriculture and Liberal Arts and admission is free."
+454,7,0,"AT","0",0,3,"VW • PORSCHE • AUDI • BMW"
+455,7,0,"AT","0",0,3,"SINCE 1971"
+456,7,0,"AT","0",0,3,"273 PACIFIC ST., SLO CALL FOR APPOINTMENT"
+457,7,0,"AT","0",0,3,"543-7473"
+458,7,0,"AT","0",0,3,"Tuesday - Saturday 8:30-5:30"
+459,7,0,"AT","0",0,3,"GERMAN AUTO"
+460,7,0,"AT","0",0,5,"art supplies	crafts • leather (Tandy] • models"
+461,7,0,"AT","0",0,5,"Downtown San Luis Obispo 855 Marsh Street"
+462,7,0,"AT","0",0,5,"for your convienence, open Sunday 12:00-4:00 544-5518"
+463,7,0,"AT","0",0,6,"CHILI FRIES"
+464,7,0,"AT","0",0,6,"French Fries smothered in homemade chili and cheese."
+465,7,0,"AT","0",0,6,"FowndaléoA Food Sorvtc«"
+466,0,0,"NA","0",0,0,"r^lil"
+467,7,0,"AT","0",0,1,"Happy Hour at Uptown Liquor"
+468,7,0,"AT","0",0,1,"10% OFF all liquor,"
+469,7,0,"AT","0",0,1,"b©6r and win© (excluding kegs) Monday through Friday 4 to 6pm 1248 Monterey St, SLO 543-6721"
+470,0,0,"NA","0",0,0,"s;"
+471,0,0,"NA","0",0,0,"/'vh„/"
+472,7,0,"AT","0",0,2,"ACCOUNTING & BUSINESS"
+473,7,0,"AT","0",0,2,"MAJORS"
+474,7,0,"AT","0",0,2,"The Internal Revenue Service offers “Careers” not “jobs” in tax administration to accounting graduates or business students who have 24 semester/36 quarter units of accounting."
+475,7,0,"AT","0",0,2,"We have many full time and Co-op Revenue Agent positions available in our San Jose Office. No written test Is required. For further Information, visit your Placement Office or call Nadine McPhall at (805) 543-4732."
+476,7,0,"AT","0",0,2,"INTERNAL REVENUE SERVICE"
+477,7,0,"AT","0",0,2,"An equal opportunity employer U S. Citizenship required"
+478,0,0,"B","0",0,0,
+479,7,0,"AT","0",0,4,"<WOODSTpCK’S"
+480,7,0,"AT","0",0,4,"‘TTZZA"
+481,7,0,"AT","0",0,4,"There is no other!"
+482,7,0,"AT","0",0,4,"We Deliver	541-4420"
+483,7,0,"AT","0",0,4,"1015 Court St. SLO"
+484,7,0,"AT","0",0,4,"(across from Osos St. Subs)"
+485,7,0,"AT","0",0,4,"$1.50 OFF"
+486,7,0,"AT","0",0,4,"any"
+487,7,0,"AT","0",0,4,"WOODSTOCKS SPECIAL"
+488,0,0,"NA","0",0,0,"I"
+489,7,0,"AT","0",0,4,"(5 items for the price of 4)"
+490,7,0,"AT","0",0,4,"j	541-4420	¡"
+491,7,0,"AT","0",0,4,"I one coupon per pizza expires 6/15/871"
+492,8,0,"PI","0",0,0,"8 Thursday, April 2, 1987 Mustang Daily"
+493,8,0,"AT","0",0,1,"Shop Copeland’s Sports for the competative edge!"
+494,8,0,"AT","0",0,1,"new balance Iff special purchase"
+495,8,0,"AT","0",0,1,"new balance iff 470"
+496,8,0,"AT","0",0,1,"new balance iff"
+497,8,0,"AT","0",0,1,"Sold in in '85"
+498,8,0,"AT","0",0,1,"$60"
+499,8,0,"AT","0",0,1,"Men's & women's Running Shoe"
+500,8,0,"AT","0",0,1,"Hiah mileage shoe; EVA midsole; external heel counter for support."
+501,8,0,"AT","0",0,1,"Walking & Fitness Shoe"
+502,8,0,"AT","0",0,1,"soft, full-grain leather upper; great support; width sizing available."
+503,8,0,"AT","0",0,1,"9Q99 9A99"
+504,8,0,"AT","0",0,1,"ám PAIR *Va pair"
+505,8,0,"AT","0",0,1,"new balance iff CT 650"
+506,8,0,"AT","0",0,1,"Slight Blem If perfect"
+507,8,0,"AT","0",0,1,"in '85"
+508,8,0,"AT","0",0,1,"$6"
+509,8,0,"AT","0",0,1,"ALL IBASEBALL"
+510,8,0,"AT","0",0,1,"SOFTBALL CLOVES^ lA/o"
+511,8,0,"AT","0",0,1,"Tennis Shoe"
+512,8,0,"AT","0",0,1,"Rubberthane^** sole with visa* mesh upper to provide high performance."
+513,8,0,"AT","0",0,1,"Soma"
+514,8,0,"AT","0",0,1,"■xamplas:"
+515,8,0,"AT","0",0,1,"Rawlings RBG 70 Little League Rawlings R3G 36 Softball/Baseball Uizuno MT 3001 Little League SSK DPG 590 Softball Wilson Ultra Softball/Baseball Louisville LSG10 Big Daddy"
+516,8,0,"AT","0",0,1,"JANUARVI PRICES"
+517,8,0,"AT","0",0,1,"$a? S2»® $64 44>o $21 14’» $46 32*» $76 S3*» $68 47®»"
+518,8,0,"AT","0",0,1,"LEATHER COURT"
+519,8,0,"AT","0",0,1,"117.^"
+520,8,0,"AT","0",0,1,"FIRST"
+521,8,0,"AT","0",0,1,"HIGH TOP SPECIALS"
+522,8,0,"AT","0",0,1,"JORDAN"
+523,8,0,"AT","0",0,1,"Michael Jordan colors, sold in '85 for $6S"
+524,8,0,"AT","0",0,1,"CONVENTION"
+525,8,0,"AT","0",0,1,"White with red blue or black"
+526,8,0,"AT","0",0,1,"CONVERSE"
+527,8,0,"AT","0",0,1,"PATRON"
+528,8,0,"AT","0",0,1,"sold in '85 for"
+529,8,0,"AT","0",0,1,"sso"
+530,8,0,"AT","0",0,1,"STARTEC"
+531,8,0,"AT","0",0,1,"HI"
+532,8,0,"AT","0",0,1,"sold in '85 for $SS"
+533,8,0,"AT","0",0,1,"BROOKS UNIQUE HI"
+534,8,0,"AT","0",0,1,"light Blem If perfect in '86 SSO"
+535,8,0,"AT","0",0,1,"PUMA FIRST"
+536,8,0,"AT","0",0,1,"ROUND"
+537,8,0,"AT","0",0,1,"sold in '85 for"
+538,8,0,"AT","0",0,1,"YOUR 9 PAIR ¿/III CHOICE A FOR 5411"
+539,8,0,"AT","0",0,1,"ALL"
+540,8,0,"AT","0",0,1,"BASEBALL & SOFTBALL"
+541,8,0,"AT","0",0,1,"BATS"
+542,8,0,"AT","0",0,1,"EXTRA"
+543,8,0,"AT","0",0,1,"%"
+544,8,0,"AT","0",0,1,"OFF"
+545,8,0,"AT","0",0,1,"JAN PRICES"
+546,8,0,"AT","0",0,1,"Choose from: Easton. Steeles Louisville, SSK worth, Spalding & morel"
+547,8,0,"AT","0",0,1,"RUNNING & TENNIS"
+548,8,0,"AT","0",0,1,"j.ightweight; long wear"
+549,8,0,"AT","0",0,1,"IKE MCS SLUGGER"
+550,8,0,"AT","0",0,1,"Durable Dynalite upper"
+551,8,0,"AT","0",0,1,"BLUE LITE REG 10* MUMM BAG"
+552,8,0,"AT","0",0,1,"New for '87 Oualofil filled Total Wt 4 lbs 13 oz"
+553,8,0,"AT","0",0,1,"119^9"
+554,8,0,"AT","0",0,1,"2-PERSON TENT"
+555,8,0,"AT","0",0,1,"2-3 PERSON • 3 SEASON TOTAL Wt. 7 lbs. 5 OZ."
+556,8,0,"AT","0",0,1,"iiy«"
+557,8,0,"AT","0",0,1,"Quanttttes L sizes limited to stock on hand we resarvc ttia rtotit to refusa sarvice to daaiars. visa L Mastarcard accepted"
+558,8,0,"AT","0",0,1,"PmCf$ GOOD THau 4'9/S7"
+559,8,0,"AT","0",0,1,"Copeland’s Sports"
+560,8,0,"AT","0",0,1,"962 Monterey"
+561,8,0,"AT","0",0,1,"San Luis Obispo. 545-3663"
+562,8,0,"AT","0",0,1,"Mon-Fri 9:30-5:30, Thurs til 9, Sat 10-7, Sun 10-6"
+563,8,3,"HL","0",0,0,"ENDURO"
+564,0,0,"NA","0",0,0,"->ror-"
+565,0,0,"NA","0",0,0,"'f<,, ie*"
+566,8,3,"PH","0",0,0,"Student Scott Elder tackles Queen Bee Trail during Enduro."
+567,8,3,"TXT","5",-1,0,"From page 1	riders and work on	getting per-"
+568,8,3,"TXT","4",0,0,"and this year ran	about	seven	mits, road blocks,	etc.,” said"
+569,8,3,"TXT","5",0,0,"hours.”	Lalor. “We also have search and"
+570,8,3,"TXT","5",0,0,"There are many people involv-	'h« '“P*"
+571,8,3,"TXT","5",0,0,"ed in the Enduro. The number of"
+572,8,3,"TXT","5",0,0,"those necessary to coordinate The Enduro is split up into such an event	is	roughly	150.	rider classes A, B, or	C according"
+573,8,3,"TXT","5",0,0,"“You need that many people to	to rider skill and	experience,"
+574,8,3,"TXT","5",0,0,"organize between 400 and 500	“Within these classes there are"
+575,8,0,"AT","0",0,2,"OFF-CAMPUS STUDENTS"
+576,0,0,"NA","0",0,0,"SBe"
+577,0,0,"NA","0",0,0,"fiÁo ¿u'ncA—lí'f^ne"
+578,8,0,"AT","0",0,2,"buy the"
+579,8,0,"AT","0",0,2,"4-LUNCH PLAN"
+580,8,0,"AT","0",0,2,"10=30 AM-4-00 PM"
+581,8,0,"AT","0",0,2,"4 different locatio ,"
+582,8,0,"AT","0",0,2,"^ 546-1175 or pufcHase at U.U. cashier"
+583,9,0,"PI","0",0,0,"Mustang Daily Thursday, April 2,1987 9"
+584,9,3,"HL","0",0,0,"ENDURO"
+585,9,3,"TXT","7",0,0,"other divisions based on age, bike size, etc.,” said Lalor. The A class is the most difficult run, B is intermediate, and C class is the least difficult set of loops. ‘‘The terrain for the race is near High Mountain in Pozo, California,” said Lalor, ‘‘and is a great setting for this type of Enduro racing.”"
+586,9,3,"TXT","8",0,0,"Riders also draw for starting numbers in the Enduro. ‘‘Four riders leave every minute,” said Lalor, ‘‘and must maintain constant speeds between checkpoints to avoid being penalized for going too fast or too slow.”"
+587,9,3,"TXT","9",0,0,"‘‘The race is really about rider ability, endurance, and overall skill,” said Poly Penguin treasurer Mark Bader. This year class A and B riders rode for about 85 miles and those in the C class rode 65 miles. ‘‘Speed does not win the Enduro,” said Bader. ‘‘Keeping a certain speed over a difficult terrain does.”"
+588,9,3,"TXT","10",0,0,"Overall winners of this year’s Enduro were Pete Postel on a 125 Honda CR in class A, Jim Williams on a 250 KTM in class B, and Michael Nichols on an OPE Honda in class C."
+589,9,3,"TXT","11",0,0,"’ Trophies, ribbons and finishing pins were just some of the prizes that went out to riders in the Enduro. ‘‘We try to congratulate all the riders,” said Bader, ‘‘even for just being able to complete the race.”"
+590,9,3,"TXT","12",0,0,"‘‘Sunday was the perfect day for the race because the rain earlier in the week settled down j the dust and made for good traction.”"
+591,9,3,"TXT","13",0,0,"There were few complaints from the riders who participated in the Enduro. Mike Spanger, an Enduro rider said, ‘‘It was a real-"
+592,9,0,"AT","0",0,2,"Lose"
+593,9,0,"AT","0",0,2,"17-25 lb&"
+594,9,0,"AT","0",0,2,"in 6 weeks."
+595,9,0,"AT","0",0,2,"lou CcW do it...without shots, druijs. pills, or sp(Tinl foods.. .and without feclinij hungry.\our own [M'i’sonal ('ounselor will show you how.. .and slay with you every step of the way.Vour first eonsullalion is fn*e.Call now."
+596,9,0,"AT","0",0,2,"Diet®"
+597,9,0,"AT","0",0,2,"Center"
+598,9,0,"AT","0",0,2,"1504 Marsh at Calif. Blvd."
+599,9,0,"AT","0",0,2,"541-DIET"
+600,9,0,"AT","0",0,2,"Mon.-Fri. 6:30-Noon"
+601,9,0,"AT","0",0,2,"3:30 PM-6PM Sat. 7:30-10AM"
+602,9,3,"TXT","13",0,0,"ly good race. It wasn’t as technical as it had been in the past so it was more enjoyable. The last six miles of the loop were the best and were a challenge because of the risks of bottlenecks.”"
+603,9,3,"TXT","14",0,0,"Bottleneck is a term used in motorcycle racing where there is one trail up-hill and a rider stalls, backing up all riders behind him. ‘‘This is the biggest problem with any race,” said Bader."
+604,9,3,"TXT","15",0,0,"Poly Penguins are part of District 37, which includes the Los Angeles area. Bader said the Enduro is a good race for this area. ‘‘Most of the riders in this district don’t get the chance to ride this type of terrain that often,” he said. ‘‘All the riders look"
+605,9,3,"TXT","15",0,0,"forward to the event — 60 percent of them being riders from previous years.”"
+606,9,3,"TXT","16",0,0,"When the race started in 1950, riders went through the city and out to Avila. ‘‘Now the competition is strictly off-road,” Bader said."
+607,9,3,"TXT","17",0,0,"Participants in the Enduro race also include former Poly Penguins. ‘‘They come back not only to race,” said Lalor, ‘‘but also to see films of previous years’ races and just to have a good time.”"
+608,9,3,"TXT","18",0,0,"Cal Poly Penguins is one of the only college motorcycle clubs around. ‘‘No one has ever challenged this claim,” said Lalor, ‘‘and we even get students coming to Poly because of the"
+609,9,3,"TXT","18",0,0,"club.”"
+610,9,3,"TXT","19",0,0,"Engineering technology, mechanical engineering major Pete Robinson is just one example of this. ‘‘Granted, I was considering Poly for other reasons,” he said. ‘‘The fact that they had a motorcycle club just made it that much more attractive.”"
+611,9,3,"TXT","20",0,0,"While the Enduro race is the biggest event of the year for the Penguins, the group is planning another event for Poly Royal, Lalor said."
+612,9,3,"TXT","21",0,0,"Trails riding is scheduled to take place during Poly Royal. ‘‘These are events that concentrate on rider balance,” said Bader. ‘‘The bikes are lightweight and the riders go over vans and cars.”"
+613,9,15,"HL","0",0,0,"Court gives OK to airline merger"
+614,9,15,"TXT","1",0,0,"WASHINGTON (AP) — A Supreme Court justice cleared the way Wednesday for the $860 million merger of Delta Air Lines and Western Airlines, vacating a lower court injunction that would have blocked the merger due to a dispute over union representation."
+615,9,15,"TXT","2",0,0,"Supreme Court Justice Sandra Day O’Connor approved the application by Western and Delta attorneys to vacate Tuesday’s ruling by a three-judge panel of the 9th U.S. Circuit Court of Appeals in San Francisco, said Kathy Arberg, Supreme Court spokeswoman."
+616,9,15,"TXT","3",0,0,"‘‘That means the merger can take place,” Arberg said."
+617,9,0,"AT","0",0,1,"Clarion"
+618,9,0,"AT","0",0,1,"UltraPure®"
+619,9,0,"AT","0",0,1,"Fragrance-free"
+620,9,0,"AT","0",0,1,"Sensitivity-tested"
+621,9,0,"AT","0",0,1,"5 Qanor)"
+622,9,0,"AT","0",0,1,"Qarion"
+623,9,0,"AT","0",0,1,"New"
+624,9,0,"AT","0",0,1,"a EIGorrol"
+625,9,0,"AT","0",0,1,"Bookstoie"
+626,9,0,"AT","0",0,3,"Break out of that winter slump . •. Shed those extra pounds today! ~"
+627,0,0,"NA","0",0,3,"r /"
+628,9,0,"AT","0",0,3,"Now is the time to shape up and lose those excess pounds. Talk to one of our qualified instructors who will fit you with a free personalized program."
+629,9,0,"AT","0",0,3,"3546 S. HIGUERA, SLO"
+630,9,0,"AT","0",0,3,"541-5180"
+631,9,0,"AT","0",0,3,"3 months.........59*’"
+632,9,0,"AT","0",0,3,"6 months.........9900"
+633,9,0,"AT","0",0,3,"Gyna & Aerobics. New members only."
+634,9,0,"AT","0",0,3,"■Serving San Luis Obispo County 7years and running-"
+635,10,0,"PI","0",0,0,"10"
+636,0,0,"B","0",0,0,
+637,0,0,"B","0",0,0,
+638,0,0,"NA","0",0,0,"i***"" -"
+639,0,0,"NA","0",0,0,
+640,0,0,"NA","0",0,0,"....l«^^-	, . .."
+641,0,0,"NA","0",0,0,"isp-"
+642,0,0,"B","0",0,0,
+643,0,0,"B","0",0,0,
+644,0,0,"NA","0",0,0,":N"
+645,0,0,"B","0",0,0,
+646,0,0,"NA","0",0,0,"4"
+647,0,0,"NA","0",0,0,"*'#'"
+648,0,0,"B","0",0,0,
+649,0,0,"NA","0",0,0,"‘ *1-1*' j** -"
+650,0,0,"NA","0",0,0,"f’A"
+651,0,0,"NA","0",0,0,"*74"
+652,0,0,"NA","0",0,0,"i'f.'"
+653,0,0,"B","0",0,0,
+654,0,0,"NA","0",0,0,"4ÌU^^;"
+655,0,0,"NA","0",0,0,"-iéi0i"
+656,0,0,"NA","0",0,0,"T"
+657,0,0,"NA","0",0,0,"%"
+658,0,0,"NA","0",0,0,"If"
+659,0,0,"B","0",0,0,
+660,0,0,"NA","0",0,0,"¥'-^iS:i,"
+661,0,0,"B","0",0,0,
+662,0,0,"B","0",0,0,
+663,0,0,"NA","0",0,0,"IP'-- '"
+664,0,0,"NA","0",0,0,"■'«•*♦ —* v':-^	«iPC?*' >"
+665,0,0,"NA","0",0,0,"**•-"
+666,0,0,"NA","0",0,0,"' «I"
+667,0,0,"B","0",0,0,
+668,0,0,"B","0",0,0,
+669,0,0,"B","0",0,0,
+670,0,0,"B","0",0,0,
+671,0,0,"B","0",0,0,
+672,0,0,"NA","0",0,0,"a<s*."
+673,0,0,"NA","0",0,0,"-s»"""" «. *	”*.3*!^**^ .« 'V ^'•’‘.«w	4"
+674,10,0,"PI","0",0,0,"DARYL SHOPTJ^GH/Muslang Daily"
+675,10,16,"PH","0",0,0,"Cal Poly’s Heather Mackey slides safely into second in a game against Cal State Bakersfield on Tuesday."
+676,0,0,"NA","0",0,0,"1 /"
+677,0,0,"B","0",0,0,
+678,10,0,"AT","0",0,1,"You don't have to be in the tropics to get the feeling..."
+679,10,0,"AT","0",0,1,"Come to Moondoggie’s"
+680,10,0,"AT","0",0,1,"Beach Club"
+681,10,0,"AT","0",0,1,"868 Monterey St. SLO 541-1"
+682,0,0,"B","0",0,0,
+683,0,0,"B","0",0,0,
+684,0,0,"NA","0",0,0,"y'f"
+685,0,0,"B","0",0,0,
+686,0,0,"B","0",0,0,
+687,0,0,"NA","0",0,0,"bfi*"
+688,0,0,"B","0",0,0,
+689,0,0,"B","0",0,0,
+690,0,0,"B","0",0,0,
+691,10,0,"PI","0",0,0,"Thursday, April 2,1987"
+692,0,0,"NA","0",0,0,"'	V. s-/"
+693,0,0,"NA","0",0,0,"®;;:	i-'	5.'v .■/.■"
+694,10,0,"NA","0",0,0,"I '	>xf	'"
+695,10,16,"HL","0",0,0,"Softball team earns split of doubleheader"
+696,10,16,"BL","0",0,0,"By Anthony Lopez"
+697,10,16,"BL","0",0,0,"Staff Writer"
+698,10,16,"TXT","1",0,0,"The Cal Poly women’s softball team split a doubleheader with Cal State Bakersfield on Tuesday."
+699,10,16,"TXT","2",0,0,"The Lady Mustangs won the first game 3-0 behind a strong pitching performance by freshman hurler Missy Bausch. Bausch limited the leagueleading Roadrunners to seven hits and no runs and allowed only two baserunners beyond first base the entire game."
+700,10,16,"TXT","3",0,0,"Bausch was backed up in the field by some fine defensive plays. Right fielder Michelle Gardiner made a diving catch that prevented an extra base hit in the third inning, while third baseman Shirley Tuttle made an excellent catch for the game’s final out. Cal Poly played an error-free game."
+701,10,16,"TXT","4",0,0,"Offensively, Cal Poly managed just five hits off Bakersfield’s Shannon Oaks, but two of them came in the fourth inning when the Mustangs broke a scoreless tie with a pair of runs."
+702,10,16,"TXT","5",0,0,"Mustang center fielder Penny Parker went 2-for-3 at the plate and had 2 RBIs. First baseman Ellen Clark also had a pair of hits."
+703,10,16,"TXT","6",0,0,"It was only the second loss in nine conference games for the first-place Roadrunners. The win improved the Mustangs’ league record to 5-3 and their overall record to 11-14."
+704,10,16,"TXT","7",0,0,"Cal Poly wasn’t as fortunate in"
+705,10,16,"TXT","7",0,0,"the second game, dropping a 4-2 extra-inning decision to the Roadrunners. In that contest, Bakersfield started out fast, scoring single runs in the first two innings to take an early lead."
+706,10,16,"TXT","8",0,0,"The Mustangs answered with single runs in the first and fourth to tie the game at 2-2."
+707,10,16,"TXT","9",0,0,"In the third inning Cal Poly had three hits, but had runners thrown out at third base and home plate to kill the rally."
+708,10,16,"TXT","10",0,0,"The game remained tied after the regulation seven innings. In the Roadrunner half of the eighth they combined three hits to score two runs, and took a 4-2 lead."
+709,10,16,"TXT","11",0,0,"Bakersfield pitcher Margaret Harvey retired the Mustangs in order in the bottom half of the inning to secure the win."
+710,10,16,"TXT","12",0,0,"Mustang hitters Parker, Pamela Bales and Gardiner each had two hits in the second game."
+711,10,16,"TXT","13",0,0,"Cal Poly stranded 11 baserunners and committed four errors in the losing effort. The winning pitcher was Harvey while Lisa Ferguson suffered the loss for the Mustangs."
+712,10,16,"TXT","14",0,0,"The loss moves Cal Poly’s conference record to 5-4, and keeps them in third place behind Cal State Northridge and Cal State Bakersfield iw the California Collegiate Athletic Association."
+713,10,16,"TXT","15",0,0,"The Lady Mustangs will be back in action this Friday and Saturday when they travel to the Bay Area for single games with UC Berkeley and the University of San Francisco."
+714,0,0,"NA","0",0,0,"«"
+715,10,0,"NA","0",0,0,"A ^"
+716,10,17,"HL","0",0,0,"Cal Poly crew team wins five races in Sacramento"
+717,10,17,"TXT","1",0,0,"Poly crew team won at Lake Natoma in during the weekend, the men’s varsity"
+718,10,17,"TXT","1",0,0,"The Cal five races Sacramento including heavyweight race."
+719,10,17,"TXT","2",0,0,"The Mustangs, who in their third year of competition are quickly establishing themselves as a strong West Coast team."
+720,10,0,"AT","0",0,1,"Have Fun Losing Pounds & Inches For Only $19.50/mo."
+721,10,0,"AT","0",0,1,"No membership fees when you bring in this ad. (For 1 yr. program)"
+722,10,0,"AT","0",0,1,"•10 Aerobic Classes Daily (low impact/intermediate/advanced)"
+723,10,0,"AT","0",0,1,"•	Personalized weight training"
+724,10,0,"AT","0",0,1,"•	Springboard floor"
+725,10,0,"AT","0",0,1,"•	Passive Exercise (E.M.S.j"
+726,10,0,"AT","0",0,1,"•	Exclusively for women"
+727,10,0,"AT","0",0,1,"•	Check free accounts"
+728,10,0,"AT","0",0,1,"•	Jaccuzzi, sauna, tanning bed, lockers, showers and more!"
+729,10,0,"AT","0",0,1,"We freeze programs over the summerl"
+730,0,0,"B","0",0,0,
+731,0,0,"B","0",0,0,
+732,10,0,"AT","0",0,1,"Calendar Girl, Inc. Health Club for Women"
+733,0,0,"NA","0",0,0,".iH"
+734,10,0,"AT","0",0,1,"964 Foothill"
+735,10,0,"AT","0",0,1,"543-3465"
+736,10,17,"TXT","2",0,0,"beat such teams as Sacramento State, UC Santa Barbara and Santa Clara."
+737,10,17,"TXT","3",0,0,"Aside from the men’s varsity heavyweight race, the Mustangs scored wins in the men’s varsity lightweight eight division, men’s novice lightweight eight division, men’s novice lightweight four division and the women’s varsity lightweight eight division."
+738,10,17,"TXT","4",0,0,"In addition to their first place finishes, the Mustangs also placed second in several of the events."
+739,10,17,"TXT","5",0,0,"One of the stronger performances of the day was turned in by the men’s novice lightweight eight, which won its race by three boat-lengths and 17 seconds."
+740,10,17,"TXT","6",0,0,"In an equally impressive race, the women’s first-place varsity lightweight eight team won by 18 seconds."
+741,10,17,"TXT","7",0,0,"This weekend the crew team will compete in the San Diego Crew Classic, which is one of the largest and most competitive crew events on the West Coast."
+742,10,17,"TXT","8",0,0,"The Mission Bay event, which annually attracts 15,000 spectators, will begin Friday and run through Sunday."
+743,10,17,"ME","0",11,0,"See SPORTSBRIEFS, page 11"
+744,11,0,"PI","0",0,0,"Mustang Daily Thursday, April 2,1987 11"
+745,11,0,"SH","0",0,0,"SPORTSBRIEFS"
+746,11,17,"ME","0",-10,0,"From page 10"
+747,11,17,"TXT","9",0,0,"The Cal Poly lacrosse team"
+748,11,17,"TXT","9",0,0,"had its two games during the break rained out and has scheduled to make up one of them. Now 4-4 overall, lacrosse will make up its March 14 road game against UC Berkeley on April 14 in Berkeley."
+749,11,17,"TXT","10",0,0,"The Mustangs had arrived in Berkeley for the March game."
+750,11,17,"TXT","10",0,0,"but it was determined that the field was too wet. Cal Poly also had its March 22 game against Occidental rained out and will not make it up."
+751,11,17,"TXT","11",0,0,"This weekend the Mustangs will travel to Arizona for games with the University of Arizona and Arizona State."
+752,11,17,"TXT","12",0,0,"They will take the following weekend off to prepare for the game against the Golden Bears, which is important in that the"
+753,11,17,"TXT","12",0,0,"loser will be dropped to a lower division."
+754,11,17,"TXT","13",0,0,"After picking up a 19-4 win over the University of San Diego, the rugby team will travel to Long Beach this weekend to play in a tournament that will feature both college and club teams."
+755,11,17,"TXT","14",0,0,"Against San Diego,' the Mustangs earned a 6-4 first-half"
+756,0,0,"NA","0",0,0,">5'"
+757,11,17,"TXT","14",0,0,"lead before scoring 13 unanswered points in the second half."
+758,11,17,"TXT","15",0,0,"Among those scoring trys for the Mustangs were Randy Croyts and Aaron Barcellos, while Jeff Magwood added several kicks."
+759,11,17,"TXT","16",0,0,"Remaining on the Mustangs’ schedule are a pair of tournaments in Long Beach and the 29th Annual Pebble Beach Rugby Classic in Monterey."
+760,0,0,"NA","0",0,0,">v.-.vwX-z-;':4«<;<48I888888»-'-"
+761,11,17,"TXT","17",0,0,"Sherrie Atteberry, center on the women’s basketball team, was named to the 1986-87 Women’s Basketball Coaches Association all-District 8 team."
+762,11,17,"TXT","18",0,0,"The five-member all-district team also includes Debra Larsen and Michelle McCoy of Cal Poly Pomona, Denise Sitton of Cal State Northridge and Antoinette Goode of Cal State Hayward."
+763,11,0,"OT","0",0,0,"ROSE FLOATERS"
+764,11,0,"OT","0",0,0,"DISCOUNT MELODRAMA TICKETS"
+765,11,0,"OT","0",0,0,"are yours If you help"
+766,11,0,"OT","0",0,0,"out with Poly Royal"
+767,11,0,"OT","0",0,0,"Find out more Thurs. 8PM UU220"
+768,11,0,"OT","0",0,0,"• • ♦ SAM • * •"
+769,11,0,"OT","0",0,0,"Meeting Thur AG ENG 123 11AM"
+770,0,0,"B","0",0,0,
+771,11,0,"OT","0",0,0,"Meeting Thursday 6PM MEP"
+772,11,0,"OT","0",0,0,"ADULT CHILDREN OF ALCOHOLICS Will begin meeting Wednesday April 8,1987 in the Health Center Conference room from 12:00 to 1;30PM Confidential. For more information, contact Yvonne at 546-1211"
+773,11,0,"OT","0",0,0,"Fun,Cheap and Recreational Craft Class sign ups are now taking place at the UU Craft Center. For more Info. Call 546-1266"
+774,11,0,"OT","0",0,0,"KOPPERS”"
+775,11,0,"OT","0",0,0,"Rich Chocolate Covered Cordials Available only at Julian's"
+776,11,0,"OT","0",0,0,"POSITIVE ADDICTION-SIgn up NOW Rec Sports Fitness & Leisure Classes. Most classes begin 4/13. Come toUU118or Call 546-1366."
+777,11,0,"OT","0",0,0,"SENIOR PORTRAITS $25 TO $165"
+778,11,0,"OT","0",0,0,"ON CAMPUS-APRIL 6th THRU 19th MAKE APPT NOW AT ROOM 218 UNIVERSITY UNION OR PH772-5661"
+779,11,0,"OT","0",0,0,"TheTasaday"
+780,11,0,"OT","0",0,0,"Hoax/Fact?"
+781,11,0,"OT","0",0,0,"Come find out April 6 Chumash 7:30 PM Lecture & Film by John Nance $2.00 student $3.00 General 'Sponsored by ASI Speaker’s Forum"
+782,11,0,"OT","0",0,0,"WELCOME BACK CAL POLY! I THIS WEEKS MIDNIGHT MOVIE AT THE FREMONT IS REPO MAN APRIL 3&4 DOOR PRIZES"
+783,11,0,"OT","0",0,0,"BIKINI GIVE AWAY! DRAWING THIS SUNDAY. REGISTER AT THE SEA BARN IN AVILA BEACH. NO PURCHASE REO."
+784,11,0,"OT","0",0,0,"BILLIARDS LADDER Sign up at Rec Sports, UU118 Play starts April 9."
+785,11,0,"OT","0",0,0,"COUNTRY WESTERN Dance classes begin 4/7 -4 weeks-Info at Rec Sports UU118 or call 546-1366."
+786,11,0,"OT","0",0,0,"DARCY"
+787,11,0,"OT","0",0,0,"To the girl with the cute smile who was at the Pub on Thursday of finals week. I had fun dancing."
+788,11,0,"OT","0",0,0,"I’m sorry you had to leave. If boyfriend less, how about lunch Monday at 1:30 in front of the Sandwich Plant. -Eric-"
+789,11,0,"OT","0",0,0,"GUAG"
+790,11,0,"OT","0",0,0,"Sunset by the ocean, drinks, dinner & your company...What more can a couple guys ask for? That night will be etched In our memory for eternity. We’re looking forward to a lasting, memorable & prosperous relationship together. Love"
+791,11,0,"OT","0",0,0,"HAPPY BIRTHDAY MARIA!"
+792,11,0,"OT","0",0,0,"ONE MORE YEAR TO GO TILL YOU CAN’T DRINK IN MEXICO."
+793,11,0,"OT","0",0,0,"BUT ALSO IN SLO Thanks for everything!"
+794,11,0,"OT","0",0,0,"REFEREES"
+795,11,0,"OT","0",0,0,"Mandatory clinic for intramural softball referees, Sun, April 5, 10am, at Women’s Softball Field."
+796,11,0,"OT","0",0,0,"THERE WILL BE A DRAWING EVERY SUNDAY DURING APRIL FOR A PAIR OF SKI-OPTIKS SUNGLASSES. NO PURCHASE NECESSARY.REGISTER WEEKLY AT THE SEA BARN IN AVILA BEACH WINNERS WILL BE POSTED."
+797,11,0,"OT","0",0,0,"Try a new fun kicking dance"
+798,11,0,"OT","0",0,0,"CLOGGING. Begins 4/9. Info at"
+799,11,0,"OT","0",0,0,"Rec Sports UU 118,	546-1366."
+800,11,0,"OT","0",0,0,"Get into Shape this quarter-Try an AEROBICS CLASS. Begins 4/13. Rec Sports Fitness Class-UU118"
+801,11,0,"OT","0",0,0,"ALPHA SIGMA LIL’ SISTER RUSH"
+802,11,0,"OT","0",0,0,"4/2 Games Night *:0OPM 4/3 Shorts and Shades Party 9:00 4/4 BBQ and Volleyball 2:00PM 4/5 Indoctrination 7:00PM 1681 Phillips Ln."
+803,11,0,"OT","0",0,0,"For more Info Call 543-5438 or 543-0283"
+804,11,0,"OT","0",0,0,"KAPPA DELTA SORORITY SPRING RUSH!"
+805,11,0,"OT","0",0,0,"Wed 4/1 6:30 Fri 4/3 6:30 QUESTIONS? Call 541-0731"
+806,11,0,"OT","0",0,0,"Lambda Chi,"
+807,11,0,"OT","0",0,0,"Do you promise to love, honor, and cherish till death do us part? I guess we will find out Sat. night!?!"
+808,11,0,"OT","0",0,0,"Ciao Baby,"
+809,11,0,"OT","0",0,0,"Alpha Chi"
+810,11,0,"OT","0",0,0,"LOOK OUT ‘CAUSE WE’RE “STEPPING OUT IN STYLE” ZETA TAU ALPHA PRESENTS A SPRING FASHION SHOW/LUNCHEON TICKET SALES NEXT WEEK IN UU!!"
+811,11,0,"OT","0",0,0,"BEACH,SWIM OR ACTIVE WEAR! FOR 1987 WE’VE GOT THE MOST OF THE BEST TH ATS JUST THE WAY IT IS."
+812,11,0,"OT","0",0,0,"THE SEA BARN AVILA BEACH."
+813,11,0,"OT","0",0,0,"OMEGA PSI PHI Lampados Club"
+814,11,0,"OT","0",0,0,"DANCE/PARTY"
+815,11,0,"OT","0",0,0,"April 3rd 9PM-?"
+816,11,0,"OT","0",0,0,"At the Basale House Avila Rd. Exit (Frontage Rd.) 3.00 DONATION"
+817,11,0,"OT","0",0,0,"THE WAIT IS OVER"
+818,11,0,"OT","0",0,0,"Beta Rush"
+819,11,0,"OT","0",0,0,"IS HERE!!"
+820,11,0,"OT","0",0,0,"BETA THETA PI SPRING RUSH"
+821,11,0,"OT","0",0,0,"4/1 Meet the Betas at Yosemite Hall 4/2 Casablanca night at house 4/3 Exchange w/ lovely Gamma Phi 4/4 BBQ at house -2pm 4/7 Black and white party 4/9Tahiti time!!"
+822,11,0,"OT","0",0,0,"4/10 Smoker"
+823,11,0,"OT","0",0,0,"CHECK TABLE IN UU FOR INFO OR CALL 546-9425"
+824,11,0,"OT","0",0,0,"TKF"
+825,11,0,"OT","0",0,0,"LITTLE SISTER RUSH"
+826,11,0,"OT","0",0,0,"Thursday, April 2nd “Coat and Bow Tie’’ Party 8pm Grange Hall Friday, 4/3 Game Night Sunday, 4/5 Volieybali & Rib BBQ Monday, 4/6 Interviews For more info call 544-TEKE"
+827,11,0,"OT","0",0,0,"CONCERT/DANCEWITH ALTAR BOYS"
+828,11,0,"OT","0",0,0,"FRIDAY, APRIL 10 AT 9:00 PM CHUMASH AUDITORIUM $5 IN ADVANCE AT UU BOX OFFICE $6 AT DOOR"
+829,11,0,"OT","0",0,0,"The Tasaday"
+830,11,0,"OT","0",0,0,"Hoax/Fact?"
+831,11,0,"OT","0",0,0,"Come find out April 6 Chumash 7:30PM Lecture & film by John Nance $2.(X) student $3.00 General Sponsored by ASI Speaker’s Forum"
+832,11,0,"OT","0",0,0,"LOST: SMALL BLUE BOUND DATA BOOK. CONTAINS IMPORTANT INFORMATION. $25 REWARD 546-1220"
+833,11,0,"OT","0",0,0,"MANAGERS AND COACHES FOR SLO BABE RUTH BASEBALL. CALL MIKE JOHNSON DAYS. 541-2500"
+834,11,0,"OT","0",0,0,"WANTED: 30 OVERWEIGHT PEOPLE SERIOUS ABOUT LOSING UP TO 29lbs IN 30 DAYS. GUARANTEED! 481-1128"
+835,11,0,"OT","0",0,0,"Access Cal Poly computers from home. Terminal and modem for rent • $75 per qtr. 528-8671"
+836,11,0,"OT","0",0,0,"***FREE***FREE***FREE*** ATTIC INSULATION-Waterheater blankets-Weatherstripping Sponsor So Cal Gas CALL ENERGY 544-4335 HELEN OR MICKI Call and save $$ on utility bills"
+837,11,0,"OT","0",0,0,"FREE PREGNANCY TEST, COUNSELING, REFERRALS, HELP. ALPHA 541-3367"
+838,11,0,"OT","0",0,0,"Professional Word Processing by SUPERSEC. Campus P/U. Call Madolyn collect, 466-1484 eves."
+839,11,0,"OT","0",0,0,"R4R WORD PROCESSING AND TYPING (Rona), laser printer w/ lOOplus fonts, student rates, 9am-6pm, M-Sat, 544-2591"
+840,11,0,"OT","0",0,0,"DO YOU LIKE BEER? Then call us at U-BRU. You can brew import quality homebrew for about 25 cents each. Call 543-6392 and start brewing."
+841,11,0,"OT","0",0,0,"TAX PREPARATION BY IN THE BLACK 10.00 OFF ANY TAX RETURN, IN HOUSE COMPUTER, 3DAY TURN-A -ROUND, CALL 481-3502 FOR APPOIN TMENT"
+842,11,0,"OT","0",0,0,"COME TO JAMAICA"
+843,11,0,"OT","0",0,0,"7 Days/Seawind Resort on the beach MONTEGO BAY-TROPICAL SUNSHINE, REGGAE & JAMAICAN HOSPITALITY SEPT 4-11 ONLY $598 -NO PROBLEM-"
+844,11,0,"OT","0",0,0,"CALL LINDA AT GULLIVER TRAVEL CENTRE IN THE UU 546-8612"
+845,11,0,"OT","0",0,0,"EUROPE"
+846,11,0,"OT","0",0,0,"2 weeks w/leader-then on your own Depart June 22-Pick your return date/eurail,hostels,etc. approx.$1399 CALL LINDA/GULLIVERS TRAVEL Next to Julians in the UU 546-8612"
+847,11,0,"OT","0",0,0,"FREE TRIP TO MAZATLAN JUNE 13-20 JUNE 20-27"
+848,11,0,"OT","0",0,0,"Train from Mexicali Rt/5nts. Hotel PARTIES, etc./BrIng 7 PAID PSGRS. YOU GO FREE. $222 RT. CALL LINDA/ GULLIVERS TRAVEL CENTRE 546-8612 OR STOP BY DOWNSTAIRS IN THE UU"
+849,11,0,"OT","0",0,0,"7 DAYS IN"
+850,11,0,"OT","0",0,0,"HAWAII"
+851,11,0,"OT","0",0,0,"Leave June 18, from LA PRICES START AT $439.00 CALL TERI AT GULLIVERS TRAVEL 546-8612 Next to Julians In UU"
+852,11,0,"OT","0",0,0,"AEROBICS INSTRUCTORS NEEDED ALL LEVELS GREAT PAY CALL KELLY RELLIE OR DAVE 541-1951"
+853,11,0,"OT","0",0,0,"AIRLINES CRUISELINES HIRING! Summer.Career!Good Pay.Travel."
+854,11,0,"OT","0",0,0,"Call For Gulde,cassette,newsservice! (916) 944-4444 Ext.*21"
+855,11,0,"OT","0",0,0,"Fire fighters needed for seasonal work. Those interested need to enroll in Fire Control Class being taught this quarter. Lecture Friday 8:00AM Bldg 02 RM 114. FOR MORE INFO Call Kevin at 541-4681"
+856,11,0,"OT","0",0,0,"IF YOU ARE INTERESTED IN BECOMING A RESIDENT ADVISOR IN ONE OF CAL POLY’S RESICENCE HALLS FOR THE SUMMER OF 1987, JOIN US AT ONE OF THE FOLLOWING INFORMATION SESSIONS:"
+857,11,0,"OT","0",0,0,"THURSDAY April 2,1987 7 P.M. at MUIR HALL"
+858,11,0,"OT","0",0,0,"IF YOU WOULD LIKE MORE INFORMATION, JUST CALL THE RESIDENT STUDENT DEVELOPMENT OFFICE AT 546-3396."
+859,11,0,"OT","0",0,0,"POLY ROYAL BUS DRIVERS NEEDED class 2 drivers $5/hr April 24-25 Call Eric 546-2487 or APC Box 19"
+860,11,0,"OT","0",0,0,"I’LL SIGNIFICANTLY BEAT PCA’S Prices on any IBM Compatible system.John 544-3602"
+861,11,0,"OT","0",0,0,"MONOLTA 35mm LENSES/RANDY 546-4771"
+862,11,0,"OT","0",0,0,"Real Sheepskin seat covers, used-but in great shape. Off white, $50 for 1 pair. Call 543-5722-Babs"
+863,11,0,"OT","0",0,0,"WINDSURFERS - Rocket Express & 83, excel. Complete.$500 & $400 Joe 544-3384,6-9PM."
+864,11,0,"OT","0",0,0,"HONDA AERO 50 Scooter,exc cond. Exercise Bike $20 Call Kim 549-8325"
+865,11,0,"OT","0",0,0,"MOTORCYCLE"
+866,11,0,"OT","0",0,0,"79 HONDA CX500 xlent cond. water cooled. Must sell. $1700 OBO 544-0939"
+867,11,0,"OT","0",0,0,"Yamaha RD4(X) Daytona Special 79 5000 Miles Great shape $950. 546-9425 Mason Keep Trying"
+868,11,0,"OT","0",0,0,"82 HNDA 450 NIGHTHAWK, GREAT COND. $800. SCOTT AT 541-2199, 543-8637. LEAVE MESSAGE."
+869,11,0,"OT","0",0,0,"MOUNTAIN BIKE 86 ROSS 18 SPEED EXC. COND. $375 CALL 541-0834"
+870,11,0,"OT","0",0,0,"1957 KarmanGia Good Body&Engine Excllent interior $2600 OBO 466-3349 or 543-6821 Ask for Nick"
+871,11,0,"OT","0",0,0,"1968 MUSTANG KEYSTONE MAGS, 351 CLEVELAND,BODY&INTERIOR GOOD MUST SEE $2250.00 481-6347 9-6 489-3177 EVE. ASK FOR CHRIS"
+872,11,0,"OT","0",0,0,"1970 VW Ghia Rebuilt Engine plus more Good Condition %2,000 544-7143"
+873,11,0,"OT","0",0,0,"1973 914 PORSCHE ~"
+874,11,0,"OT","0",0,0,"2500 OBO"
+875,11,0,"OT","0",0,0,"EVEN 544-4773___________________"
+876,11,0,"OT","0",0,0,"’71 Volks Sqbk. Interior like new, AM/FM cassett, -25,000 on now eng, runs exint. $18^ OBO 528-5671."
+877,11,0,"OT","0",0,0,"Avail. NOW! Fern Roommate needed to share condo. Fully furnlshed,wash dryer,bckyd,frplc,cable,dlshwash."
+878,11,0,"OT","0",0,0,"No deposit, $205/mo. CALL NOW 541-1764"
+879,11,0,"OT","0",0,0,"BEACH HOUSE"
+880,11,0,"OT","0",0,0,"Roommate needed for 3-bdrm house on the beach in Cayucos. 995-0277"
+881,11,0,"OT","0",0,0,"Garth 544-8909."
+882,11,0,"OT","0",0,0,"FEMALE needed to share rm In LARGE furnished apt 2 blocks to Poly SO RENT NEGOTIABLE! Call 549-9341"
+883,11,0,"OT","0",0,0,"FEMALE NEEDED/SHARE ROOM CLOSE TO POLY,W/D,FUNISHED $200 546-8554"
+884,11,0,"OT","0",0,0,"FM RMMATE WANTED TO SHARE MSTR BDRM/BATH IN NICE CONDO IN LAGUNA LK.FP,WASHER/DRYER,PLUS! GRT RMTEIONLY 175/mo. 546-9448"
+885,11,0,"OT","0",0,0,"Jacuzzi,Utilities Paid.Wsh/dry/ micro. Female to share room $200 Call evenings 544-0368"
+886,11,0,"OT","0",0,0,"Murray St Stat apts available I need a roommate for Spring Arch major encouraged, share ideas and all nighters 549-9203."
+887,11,0,"OT","0",0,0,"Newer SLO condo one bedroom available in large two bedroom condo. 1 1/2 bath, private washer/dryer fireplace, deck, dishwasher, partly furnished, garage, avail immediately $190/month to share or $380. $150 deposit 544-7279 or 1-644-6558."
+888,11,0,"OT","0",0,0,"Only $2(X) Own Big Room.Clean Quiet and much more F. Call 543-5160"
+889,11,0,"OT","0",0,0,"OWN BDRM 4 Bdrm Hs $250 1 BIk Poly 544-3345 after 5:00"
+890,11,0,"OT","0",0,0,"Own Ig rm w ba M or F 235/mo must see to appr. Call Steve 541-3287"
+891,11,0,"OT","0",0,0,"OWN ROOM IN GREAT APT SPRING QUARTER. FURNISHED INCLUDING 2 FUN GIRLS. JUST $230/mo. 544-3751"
+892,11,0,"OT","0",0,0,"OWN ROOM. HOUSE CLOSE TO POLY. $150/MO. CALL 544-3868."
+893,11,0,"OT","0",0,0,"OWN YOUR OWN ROOM 135 / MO 2 STORY TOWN HOUSE ON CASA NEAR POLY CALL 549-8162 LESLIE OR DANA"
+894,11,0,"OT","0",0,0,"WANTED: Male to share master bedroom In Laguna condo $200/mo. plus $100dep-544-8831"
+895,11,0,"OT","0",0,0,"WHAT A DEAL!"
+896,11,0,"OT","0",0,0,"Pool/MIcro/Cable/Walk-in-closet Spring lease at Murray St Station for 1FM $185mo/neg Angela 544-3938y"
+897,11,0,"OT","0",0,0,"1-4 Rmates needed spr or spr&sum Close to Poly $150 Negot. 544-8399"
+898,11,0,"OT","0",0,0,"$146/MO! Share 2bdr2ba furn APT! Near Poly,parking,ldry,TV,QUIET. SPR or longer!Male call 543-5952"
+899,11,0,"OT","0",0,0,"Áre you looking for Infor on SLO homes for sale? Call Kent Mazzia, County Properties for list. 544-5777."
+900,11,0,"OT","0",0,0,"BUYING A HOUSE?"
+901,11,0,"OT","0",0,0,"For a free list of all the affordable houses & condos for sale In SLO, including condos near Poly.cali STEVE NELSON F/S Inc 543-8370/mess."
+902,11,0,"OT","0",0,0,"Selling your house'^ How much is It worth? For a free apralsal, call Steve Nelson,F/S Inc. 543-8370."
+903,0,0,"NA","0",0,0,"ÿ/elc^^"
+904,12,0,"AT","0",0,1,"SacU IT'S SPRING"
+905,12,0,"AT","0",0,1,"FOUNDATION FOOD SERVICES PROUDLY PRESENTS TO YOU..."
+906,0,0,"B","0",0,0,
+907,12,0,"AT","0",0,1,"MON - FRI 7:30am-10pm"
+908,12,0,"AT","0",0,1,"MON-FRI 10am-7:30pm SAT 10am - Midnight SUN Noon-10:30"
+909,12,0,"AT","0",0,1,"MON - FRI 7:30 am-3:00"
+910,12,0,"AT","0",0,1,"’ll open -kot ijou. In ^out Xlnlvetiliij Union"
+911,12,0,"PI","0",0,0,"12 Thursday, April 2, 1987 Mustang Daily"
+912,12,2,"HL","0",0,0,"MERIT"
+913,12,2,"ME","0",-1,0,"From page 1"
+914,12,2,"TXT","15",0,0,"proves the nominee, the awards are announced. In the case of a disagreement on the dean’s part, the nominee’s application is forwarded to Baker. Only a small percentage of the nominations ever reach the president, he said."
+915,12,2,"TXT","16",0,0,"The awards exist throughout the CSU system, and are encouraged by the Chancellor’s Office and the state Legislature, said Lamouria."
+916,12,0,"AT","0",0,2,"WbrdFferfect"
+917,12,0,"AT","0",0,2,"CORPORATION"
+918,12,0,"AT","0",0,2,"School Software Program"
+919,12,0,"AT","0",0,2,"Qualifying college, university, and other post-secondary students and teachers can now purchase WordPerfect Corporation (WPCORP) software directly from WPCORP at a reduced price. To qualify, a participant must be currently teaching or enrolled as a full-time student, and must agree in writing not to resell or transfer any package purchased under this program."
+920,12,0,"AT","0",0,2,"If you satisfy these qualifying conditions and would like to purchase software directly from WPCORP under the School Software Program, complete the following seven steps and sign at the bottom of the form."
+921,12,0,"AT","0",0,2,"Step 1. From the list below, select the appropriate software for your computer (please note that each student is limited to one package of WordPerfect) and mark an “x"" in the corresponding box(es)."
+922,12,0,"AT","0",0,2,"Product"
+923,12,0,"AT","0",0,2,"WordPerfect 4 2 WordPerfect 4 2 WordPerfect 11 WordPerfect 11 MathPlanS.O WordPerfect Library WordPerfect Library"
+924,12,0,"AT","0",0,2,"Computer"
+925,12,0,"AT","0",0,2,"(IBM PC'XT/AT/Compatibles) (IBM PC/XT/AT/Compatibles) (Apple lle/llc)"
+926,12,0,"AT","0",0,2,"(Apple lies)"
+927,12,0,"AT","0",0,2,"(IBM PC'XT/AT/Compatibles) (IBM PC. XT/AT/Compatibles) (IBM PC. XT/AT/Compatibles)"
+928,12,0,"AT","0",0,2,"Your Price	Retail	Save"
+929,12,0,"AT","0",0,2,"$125.00	$495.00	$375.00"
+930,12,0,"AT","0",0,2,"125.00	495.00	375.00"
+931,12,0,"AT","0",0,2,"59.00	179.00	120.00"
+932,12,0,"AT","0",0,2,"59.00	179.00	120.00"
+933,12,0,"AT","0",0,2,"100,00	395.00	295.00"
+934,12,0,"AT","0",0,2,"59.00	129.00	70.00"
+935,12,0,"AT","0",0,2,"59.00	129.00	70.00"
+936,12,0,"AT","0",0,2,"Step 2."
+937,12,0,"AT","0",0,2,"Make a photo-copy of your current Student ID card or Faculty card and a photo-copy of some well known form of identification displaying your social security number, such as your Driver License or Social Security Card. (WPCORP will hold this information strictly confidential and use It only to guard against duplicate purchases.) If you do not want to provide WPCORP with a social security number, you must provide alternative verifiable information sufficient to protect against duplicate purchases."
+938,12,0,"AT","0",0,2,"Enter your social security number- __________ _____ ____-___________-______, _	_______ ,"
+939,12,0,"AT","0",0,2,"Enclose payment for the total cost of the package(s) ordered with personal check money order. Visa or MasterCard"
+940,12,0,"AT","0",0,2,"Account #"
+941,12,0,"AT","0",0,2,"Expiration Date"
+942,12,0,"AT","0",0,2,"VISA"
+943,12,0,"AT","0",0,2,"MasterCard"
+944,12,0,"AT","0",0,2,"Step 5."
+945,12,0,"AT","0",0,2,"(Make check or money order payable to WordPerfect Corporation )"
+946,12,0,"AT","0",0,2,"List your shipping address and the address of your local computer store (dealer) m the space provided"
+947,12,0,"AT","0",0,2,"Ship to _____________________ Your dealer. ComputefUincI"
+948,12,0,"AT","0",0,2,"____________________________ 1422 Monterey Street___________"
+949,12,0,"AT","0",0,2,"San Luis Obispo, CA 93401"
+950,12,0,"AT","0",0,2,"Phone"
+951,12,0,"AT","0",0,2,"Phone (805)541-4884"
+952,12,0,"AT","0",0,2,"Step 6. Address a stamped envelope to Student Software Program. WordPerfect Corporation. 288 West Center Street. Orem. UT 84057"
+953,12,0,"AT","0",0,2,"Step 7. Enclose this signed and completed form, the photo-copies of your identification cards, and your signed check or money order (or Visa or MasterCard account number and expiration date) in the envelope and seal it securely Then mail it"
+954,12,0,"AT","0",0,2,"The information provided herein is correct and accurate, and I will abide by the restricting conditions outlined by WPCORP in this document I understand that at its sole discretion. WPCORP may refuse any order for any reason"
+955,12,0,"AT","0",0,2,"Signature"
+956,12,0,"AT","0",0,2,"Date"
+957,12,2,"TXT","17",0,0,"Schumann said the yearly total of 123 awards totalling $300,000 could influence people’s behavior. “It could cause them to not criticize. the Administration in fear that their nomination might be turned down,’’ he said."
+958,12,2,"TXT","18",0,0,"Threats to faculty members’ tenure or promotions could inhibit instructors from voicing an opinion on university and controversial issues, said Schumann."
+959,12,2,"BQT","0",0,0,"‘We feel (the awards) are divisive as far as the faculty goes.’"
+960,12,2,"BQA","0",0,0,"— Lloyd Lamouria"
+961,12,2,"TXT","18",0,0,"“There is a history of fear of retaliation at this university.’’"
+962,12,2,"TXT","19",0,0,"He added that professors often speak up on issues after they have become tenured, but non-tenured faculty members “just don’t like to make waves.’’"
+963,12,2,"TXT","20",0,0,"Although the awards have been opposed by both the CFA and the Academic Senate, faculty members stand on both sides of the issue. Lamouria said that like any issue, MPPP awards have those who support the idea and those who don’t."
+964,12,2,"TXT","21",0,0,"Harmon-Elliott said current contract negotiations are in the fact-finding stage, and that the CFA has asked for MPPP awards to be eliminated in the new contract. “We have asked for the money to be dumped into professional development,” she said, adding that faculty members are required by contract to participate in professional development activities."
+965,12,2,"TXT","22",0,0,"She said the CFA hopes to have its answer on the issue by the end of April."
+966,0,0,"B","0",0,0,
+967,0,0,"NA","0",0,0,"k"
+968,12,0,"AT","0",0,3,"733 Higuera St., SLO"
+969,,,,,,,
+970,,,,,,,
+971,,,,,,,
+972,,,,,,,
+973,,,,,,,
+974,,,,,,,
+975,,,,,,,
+976,,,,,,,
+977,,,,,,,
+978,,,,,,,
+979,,,,,,,
+980,,,,,,,
+981,,,,,,,
+982,,,,,,,
+983,,,,,,,
+984,,,,,,,
+985,,,,,,,
+986,,,,,,,
+987,,,,,,,
+988,,,,,,,
+989,,,,,,,
+990,,,,,,,
+991,,,,,,,
+992,,,,,,,
+993,,,,,,,
+994,,,,,,,
+995,,,,,,,
+996,,,,,,,
+997,,,,,,,
+998,,,,,,,
+999,,,,,,,
+1000,,,,,,,
+1001,,,,,,,
+1002,,,,,,,
+1003,,,,,,,
+1004,,,,,,,
+1005,,,,,,,
+1006,,,,,,,
+1007,,,,,,,
+1008,,,,,,,
+1009,,,,,,,
+1010,,,,,,,
+1011,,,,,,,
+1012,,,,,,,
+1013,,,,,,,
+1014,,,,,,,
+1015,,,,,,,
+1016,,,,,,,
+1017,,,,,,,
+1018,,,,,,,
+1019,,,,,,,
+1020,,,,,,,
+1021,,,,,,,
+1022,,,,,,,
+1023,,,,,,,
+1024,,,,,,,
+1025,,,,,,,
+1026,,,,,,,
+1027,,,,,,,
+1028,,,,,,,
+1029,,,,,,,
+1030,,,,,,,
+1031,,,,,,,
+1032,,,,,,,
+1033,,,,,,,
+1034,,,,,,,
+1035,,,,,,,
+1036,,,,,,,
+1037,,,,,,,
+1038,,,,,,,
+1039,,,,,,,
+1040,,,,,,,
+1041,,,,,,,
+1042,,,,,,,
+1043,,,,,,,
+1044,,,,,,,
+1045,,,,,,,
+1046,,,,,,,
+1047,,,,,,,
+1048,,,,,,,
+1049,,,,,,,
+1050,,,,,,,
+1051,,,,,,,
+1052,,,,,,,
+1053,,,,,,,
+1054,,,,,,,
+1055,,,,,,,
+1056,,,,,,,
+1057,,,,,,,
+1058,,,,,,,
+1059,,,,,,,
+1060,,,,,,,
+1061,,,,,,,
+1062,,,,,,,
+1063,,,,,,,
+1064,,,,,,,
+1065,,,,,,,
+1066,,,,,,,
+1067,,,,,,,
+1068,,,,,,,
+1069,,,,,,,
+1070,,,,,,,
+1071,,,,,,,
+1072,,,,,,,
+1073,,,,,,,
+1074,,,,,,,
+1075,,,,,,,
+1076,,,,,,,
+1077,,,,,,,
+1078,,,,,,,
+1079,,,,,,,
+1080,,,,,,,
+1081,,,,,,,
+1082,,,,,,,
+1083,,,,,,,
+1084,,,,,,,
+1085,,,,,,,
+1086,,,,,,,
+1087,,,,,,,
+1088,,,,,,,
+1089,,,,,,,
+1090,,,,,,,
+1091,,,,,,,
+1092,,,,,,,
+1093,,,,,,,
+1094,,,,,,,
+1095,,,,,,,
+1096,,,,,,,
+1097,,,,,,,
+1098,,,,,,,
+1099,,,,,,,
+1100,,,,,,,
+1101,,,,,,,
+1102,,,,,,,
+1103,,,,,,,
+1104,,,,,,,
+1105,,,,,,,
+1106,,,,,,,
+1107,,,,,,,
+1108,,,,,,,
+1109,,,,,,,
+1110,,,,,,,
+1111,,,,,,,
+1112,,,,,,,
+1113,,,,,,,
+1114,,,,,,,
+1115,,,,,,,
+1116,,,,,,,
+1117,,,,,,,
+1118,,,,,,,
+1119,,,,,,,
+1120,,,,,,,
+1121,,,,,,,
+1122,,,,,,,
+1123,,,,,,,
+1124,,,,,,,
+1125,,,,,,,
+1126,,,,,,,
+1127,,,,,,,
+1128,,,,,,,
+1129,,,,,,,
+1130,,,,,,,
+1131,,,,,,,
+1132,,,,,,,
+1133,,,,,,,
+1134,,,,,,,
+1135,,,,,,,
+1136,,,,,,,
+1137,,,,,,,
+1138,,,,,,,
+1139,,,,,,,
+1140,,,,,,,
+1141,,,,,,,
+1142,,,,,,,
+1143,,,,,,,
+1144,,,,,,,
+1145,,,,,,,
+1146,,,,,,,
+1147,,,,,,,
+1148,,,,,,,
+1149,,,,,,,
+1150,,,,,,,
+1151,,,,,,,
+1152,,,,,,,
+1153,,,,,,,
+1154,,,,,,,
+1155,,,,,,,
+1156,,,,,,,
+1157,,,,,,,
+1158,,,,,,,
+1159,,,,,,,
+1160,,,,,,,
+1161,,,,,,,
+1162,,,,,,,
+1163,,,,,,,
+1164,,,,,,,
+1165,,,,,,,
+1166,,,,,,,
+1167,,,,,,,
+1168,,,,,,,
+1169,,,,,,,
+1170,,,,,,,
+1171,,,,,,,
+1172,,,,,,,
+1173,,,,,,,
+1174,,,,,,,
+1175,,,,,,,
+1176,,,,,,,
+1177,,,,,,,
+1178,,,,,,,
+1179,,,,,,,
+1180,,,,,,,
+1181,,,,,,,
+1182,,,,,,,
+1183,,,,,,,
+1184,,,,,,,
+1185,,,,,,,
+1186,,,,,,,
+1187,,,,,,,
+1188,,,,,,,
+1189,,,,,,,
+1190,,,,,,,
+1191,,,,,,,
+1192,,,,,,,
+1193,,,,,,,
+1194,,,,,,,
+1195,,,,,,,
+1196,,,,,,,
+1197,,,,,,,
+1198,,,,,,,
+1199,,,,,,,
+1200,,,,,,,

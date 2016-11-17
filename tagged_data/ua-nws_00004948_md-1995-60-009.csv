@@ -1,0 +1,1202 @@
+"Function Key: TXT = article text; HL = headline; BL = byline; PH = photo caption/information; ME = meta directives outside of an article; NA = unintelligible; NP = nameplate; PI = publication information; B = blank; AT = advertisement text; MH = masthead; BQT = block quote text; BQA = block quote attribution; CN = comic strip title; CT = comic strip text; SH = section heading; OT = other text",,,,,,,
+"LINE","PAGE (0 if unintelligable)","ARTICLE NUMBER (use 0 if outside of text of any article/letter)","FUNCTION (see key above)","PARAGRAPH NUMBER (start with the first content paragraph, 0 if not part of the main text)","JUMP (if line contains a ""jump to"" directive, it's the page target. If it's a ""jumped from"" directive then the negative (-) of the soure page. otherwise 0)","AD #. If line is part of advertisement, it is the number of the ad. Start from top left column. 0 otherwise.","SCANNED TEXT"
+1,1,0,"NP","0",0,0,"CALIFORNIA POLYTECHNIC STATE UNIVERSITY SAN LUIS OBISPO"
+2,1,0,"NP","0",0,0,"MusmNG Daiiy"
+3,1,0,"PI","0",0,0,"(XTOBER4, 1995"
+4,1,0,"PI","0",0,0,"WEDNESDAY"
+5,1,0,"PI","0",0,0,"VOLUME LX, No. 9"
+6,1,1,"HL","0",0,0,"over! O.J. freed"
+7,1,1,"BL","0",0,0,"ly Undo Dwtsdi"
+8,1,1,"BL","0",0,0,"Asocioted Piess"
+9,1,1,"TXT","1",0,0,"LOS ANGELES — He never wore chain! in court, but as O.J. Simpson heard the words *Not guilty,” his was the face of a prisoner removing his shackles, a captive breathing the air of freedom."
+10,1,1,"TXT","2",0,0,"He sighed, pressed his hands together and smiled as a tide of emotions engulfed the courtroom of Judge Lance Ito. The wails of a victim’s relatives and the joyous gasps of Simpson’s mother, sisters and grown children broke the tense silence that preceded the reading of the jury’s ver> diet IViesday."
+11,1,1,"TXT","3",0,0,"For a moment, the judge’s clerk, Dierdre Robertson, had moved from her supporting role to the spotlight as she was called upon to read the two verdict forms. She stumbled on Simpson’s first name, Oren-thal, betraying the same nervousness that gripped everyone in the courtroom."
+12,1,1,"TXT","4",0,0,"Hers was the task of breaking a suspense which had intensified during 19 hours of cliff-hanger waiting for the verdicts to be announced. The two climactic words fell lightly from her lips but resonated with the power of a megaton bombshell: “Not guilty.”"
+13,1,1,"TXT","5",0,0,"Simpson was now set free to pick up a life of privilege instead of a life in prison. Acquitted of murdering his ex-wife and her friend, he pledged to track down the real killers who are “out there somewhere.”"
+14,1,1,"TXT","6",0,0,"Simpson smiled, mouthed the words, “Thank you,” at the jury, then clasped his hands together. Lead attorney Johnnie Cochran Jr., standing behind Simpson, slapped him on the back and laid his forehead on his shoulder. Attorney Shawn Chapman cried and clutched jury consultant Jo-Ellan Dimitri us’ hand."
+15,1,1,"TXT","7",0,0,"Tears of anguish and shouts of joy burst"
+16,1,1,"TXT","7",0,0,"from the three families whose lives were tom apart by the bloody June 12, 1994, slayings of Nicole Brown Simpson and Ronald Goldman."
+17,1,1,"TXT","8",0,0,"“Oh my God!” exclaimed Simpson’s grown daughter, Amelle, embracing her brother Jason."
+18,1,1,"TXT","9",0,0,"“We did it!” a family member exulted to lead defense attorney Johnnie Cochran Jr."
+19,1,1,"TXT","10",0,0,"Eerily, the Simpson saga ended much as it had begun, with the fidlen football superstar being transported in a white van to"
+20,1,1,"PH","0",0,0,"OJ. Simpson clenches his Rsh in victory after the jury said on Tuesday he was not guilty in rders of his ax-wife Nicole Brown Sinr^sson and her friend Ronald Goldman / As-"
+21,0,0,"NA","0",0,0,"nuir"
+22,1,1,"PH","0",0,0,"the nuirders or his ex-wira iNicoie Drown Dimpsi sodotad Press photo courtesy of the San Luis Ooispo County Telegrcun-Tribuna"
+23,1,1,"TXT","10",0,0,"his estate while news helicopters tracked him overhead. Ibesday’s televised verdicts were the most-watched event since June 17,1994, when Simpson, in a white Bronco with his friend A1 “A.C.” Cowlings driving, led police on a surreal slow-speed chase viewed by millions."
+24,1,1,"TXT","11",0,0,"Cowlings was at the door to embrace Simpson when he arrived home about one hour after the verdicts were read. Later, family members gathered for a party on the lawn of Simpson’s lush estate."
+25,1,1,"TXT","12",0,0,"Florists, caterers and musicians pulled up to the house and told reporters surrounding the estate that they were there"
+26,1,1,"TXT","12",0,0,"for a celebration."
+27,1,1,"TXT","13",0,0,"“Last June 13, *94 (the day he learned of his son’s death), was the worst nightmare of my life. This is the second,” Goldman’s father, Fred, said at a prosecution news conference. This prosecution team didn’t lose today. I deeply believe this country lost today. Justice was not served.”"
+28,1,1,"TXT","14",0,0,"At a defense team news conference, Cochran insisted the issue of race, which he played heavily in the trial, did not overcome the facte."
+29,1,1,"TXT","15",0,0,"“This verdict speaks justice,” Cochran said. “This was a case based upon the"
+30,1,1,"ME","0",2,0,"See O J. page 2"
+31,1,2,"HL","0",0,0,"Verdict draws mixed responses from Poly crowd glued to sets"
+32,1,2,"BL","0",0,0,"ly Fawn DaroHIo"
+33,1,2,"BL","0",0,0,"Daly Staff Repcxtei"
+34,1,2,"TXT","1",0,0,"Students crowded together in the San Lt^is Lounge as millions around the world anxiously awaited the O.J. Simpson verdict."
+35,1,2,"TXT","2",0,0,"By 9:20 a.m., 40 minutes before the jury was to read its verdict, dozens of students stared anxiously at the lounge’s large-screen television."
+36,1,2,"TXT","3",0,0,"On the screen, KTLA reporters discussed possible verdicts, crowd control and other issues surrounding the case."
+37,1,2,"TXT","4",0,0,"By 9:30 a.m., the flow into the lounge was at a dead stop. That is, no more people could fit."
+38,1,2,"TXT","5",0,0,"Those not lucky enough to grab a seat, stood or sat on tables and the floor. Some faces were anxious, others dimly attentive. Many had opinions about the case."
+39,1,2,"TXT","6",0,0,"“I think the verdict will probably be ‘not guilty,’ though it’s not my opinion that O.J. isn’t guilty,” said physical education senior lyier Wiggins. “I think money can basically buy freedom. It makes me question our judicial system. Two people got murdered — who’s going to pay for that?*"
+40,1,2,"TXT","7",0,0,"While those ‘ in San Luis Lounge got caught up in the excitement of the trial, many Pbly students and staff seemed disgusted."
+41,1,2,"TXT","8",0,0,"“I think it doesn't matter because the media turned it into such a circus,” said architecture senior Mike Campos. “It’s all about ratings and making money.”"
+42,1,2,"TXT","9",0,0,"Andrea Kerns, the department secretary for Student Life and Activities, shared the same view."
+43,1,2,"TXT","10",0,0,"“People get murdered every day,” she said. “I^ven firemen died the day this all happened; you didn’t hear about them. Those firemen ... matter.”"
+44,1,2,"TXT","11",0,0,"Back in the lounge and minutes before the reading of the verdict, students and staff — disgusted and not — waited."
+45,1,2,"TXT","12",0,0,"One could hear the breaths of the people crowded in the lounge when the verdict was read — not guilty."
+46,1,2,"ME","0",2,0,"See REACTION page 2"
+47,1,3,"HL","0",0,0,"Noisy parties get S.N.A.P. response"
+48,1,3,"BL","0",0,0,"By Val ásoIm"
+49,1,3,"BL","0",0,0,"Daly Staff Wrifef"
+50,0,0,"B","0",0,0,
+51,0,0,"B","0",0,0,
+52,0,0,"NA","0",0,0,"M."
+53,1,3,"PH","0",0,0,"SNAP members like these help police and students by responding to complaints in San Luis Obispo / Daily photo by Dawn Kainxir"
+54,1,3,"PH","0",0,0,"noise"
+55,1,3,"TXT","1",0,0,"Noisy parties have kept the San Luis Obispo Police Department busy the first two weekends of the quarter."
+56,1,3,"TXT","2",0,0,"Police received over 90 noise complaints the first weekend, and over 60 more last weekend, said Chief Jim Gardiner."
+57,1,3,"TXT","3",0,0,"The overabundance of complaints is not a new problem for the police department. In fact, three years ago the city of San Luis Obispo, ASI and Cal Poly formed a collaborate program called Student Neighborhood Assistance Program (S.N.A.P.) to assist the Pclice department in responding to these calls."
+58,1,3,"TXT","4",0,0,"According to Gardiner, a SJ4A.P. team of two people help"
+59,1,3,"TXT","4",0,0,"police handle routine noise complaints on Thursday, Friday and Saturday nights from 8 p.m. to 3 a.m."
+60,1,3,"TXT","5",0,0,"“They are the first respondents to noise complaints,” Gardiner said. “The S.N.A.P. person is the first (contact) and should be treated seriously.”"
+61,1,3,"TXT","6",0,0,"Once the team arrives at the scene, they have the authority to issue a verbal warning or a Disturbance Advisement Card (DAC) as a warning."
+62,1,3,"TXT","7",0,0,"A DAC is a 24-hour warning. If a second visit is made within 24 hours, a police officer may issue a noise citation, which could result in a fine of $80 to $100, Gardiner said."
+63,1,3,"TXT","8",0,0,"The person cited can also be billed for the officer’s time, he added. This amount may vary"
+64,1,3,"TXT","8",0,0,"because of the time the officer spends at the cite but it averages about $50 an hour."
+65,1,3,"TXT","9",0,0,"Noise violations not only affect those living at the residence, but the landlords as well."
+66,1,3,"TXT","10",0,0,"The SLO City Council passed the Nuisance Abatement Ordinance around four years ago because of the high number of rentals, Gardiner said."
+67,1,3,"TXT","11",0,0,"With the ordinance, if two DACs are issued to a tenant within 60 days, the landlord is sent a nuisance letter describing the disturbances and the consequences the landlord will face if this continues."
+68,1,3,"TXT","12",0,0,"If a third DAC or citation is issued in the 60 days, the landlord will face criminal char-"
+69,1,3,"ME","0",2,0,"***'	See S.N.A.P. page 2"
+70,2,0,"PI","0",0,0,"2 WEDNESDAY, COOBER 4, 1995"
+71,2,0,"PI","0",0,0,"MUSTANG DAILY"
+72,2,0,"SH","0",0,0,"Oct."
+73,2,0,"SH","0",0,0,"Wednesday"
+74,2,0,"OT","0",0,0,"35 school days remaining in fall quarter."
+75,2,0,"OT","0",0,0,"TODAY'S WEATHER: Fair skies , warmer temperatures TOMORROW'S WEATHER: Fair skies, coastal morning clouds Today's high/low: high 80s/mid 50s Tomorrow's high/tow: high 80s/mid 50s"
+76,2,0,"OT","0",0,0,"Hate violence is an act of intimidation, harassment or violence motivated by a perceived difference between people. If you are a victim of hate violence, call the SLO County Hate Violenc^Prevention Coalition (""HAVE PEACE"") at 541-7616"
+77,2,0,"OT","0",0,0,"The Newman Catholic Center invites students to participate in scriptures and social events at 7:30 p.m. in the Newman Center (located behind the Health Center). For more information, call 543-4105."
+78,2,0,"OT","0",0,0,"Upcoming"
+79,2,0,"OT","0",0,0,"Psychological Services/Student Affairs will be meeting in building 124, room 227 Oct. 5 to discuss reactions to the O.J. Simpson trial. The meeting will begin at 9 a.m. For more information, coll 756-2600."
+80,2,0,"OT","0",0,0,"A half-day conference on obesity will take place Oct. 7 at Sierra Visto Regional Medical Center beginning at 8:30 a.m. The cost of the conference is $40 and preregistration is requested. For more information, or to register, call 781-5940."
+81,2,0,"OT","0",0,0,"A one-day consumer seminar designed to create greater awareness about the pitfalls of building a house is being offered ot Cal Poly on Oct 7. The program will be held in Engineering West, B-lab at 9 a.m."
+82,2,0,"OT","0",0,0,"SCS's Environmental Council needs volunteers for tree watering and litter remaval Oct. 7 and Oct. 8. For more information, call 756-5834."
+83,2,0,"OT","0",0,0,"Agendo Items: c/o Notosho Collins, Graphic Arts 226, Col Poly 93407 — Phone:746-1796 Fax:756-6784"
+84,2,0,"OT","0",0,0,"***Pleose submit information at least three days prior to the event***"
+85,2,1,"HL","0",0,0,"O.J.: Cochran denies using race to sway jury,‘This verdict speaks justice.’"
+86,2,3,"HL","0",0,0,"S.N.A.P.: cooperation of local landlords sought"
+87,2,3,"ME","0",-1,0,"From page 1"
+88,2,3,"TXT","13",0,0,"*We need absentee landlords to be more responsible,” Gardiner said. ”We really want to work with the property owners. But the issue is to get the disturbances to stop.”"
+89,2,3,"TXT","14",0,0,"S.NA.P. member Ray FVigil-lana thinks the program is successful in stopping disturbances and in most cases people quiet down."
+90,2,3,"TXT","15",0,0,"*A lot of the people we talk to are real cooperative toward us,” FVigillana said. *We haven’t met much resistance.”"
+91,2,3,"TXT","16",0,0,"Frigillana estimates that 90 percent of the noise disturbance calls are student-party related, and that SJ4A.P. has decreased police responses by about 50 percent."
+92,2,3,"TXT","17",0,0,"This gives police time to respond to more important calls."
+93,2,1,"TXT","13",-1,0,"From page 1 evidence.”"
+94,2,1,"TXT","14",0,0,"He denied playing ”the race card,” saying instead that credibility had won out."
+95,2,1,"TXT","15",0,0,"‘Race plays a part in everything in America,” he said. ""But this stuff about playing a race card is preposterous.”"
+96,2,1,"TXT","16",0,0,"The bitter differences that were known to be racking the defense team diiring the trial finally erupted after the verdict when defense attorney Robert Shapiro, original architect of the Simpson strategy, blasted two Dream Team colleagues."
+97,2,1,"TXT","17",0,0,"He said Cochran ii\jected race as an issue over his objections. ”Not only did they play the race card, but we dealt it from the bottom of the deck,” he told Barbara Walters in an interview for ABC News."
+98,2,1,"TXT","18",0,0,"Shapiro, who is Jewish, also said he was deeply offended by Cochran’s comparison of a detective to Adolf Hitler and told Cochran so."
+99,2,1,"TXT","19",0,0,"He said he would not work with Cochran again and his longtime friendship with F. Lee Bailey was shattered by the case and they would never speak again."
+100,2,1,"TXT","20",0,0,"Cochran said he hoped the Los Angeles Police Department would alter shoddy investigative practices exposed in the trial."
+101,2,1,"TXT","21",0,0,"As the words setting Simpson free were spoken in court, his elderly mother, Eunice, seated in"
+102,0,0,"B","0",0,0,
+103,2,1,"PH","0",0,0,"Fred Goldman and his wife Patti after hearing the not-guilty verdicts Tuesday / Associated Press photo courtesy of the San Luis Obispo County Telegram-Tribune"
+104,2,1,"TXT","21",0,0,"a wheelchair, wiped her eyes, held up her hands prayerfully and murmured words of thanks."
+105,2,1,"TXT","22",0,0,"*I was always in prayer. I knew my son was innocent,” she said at the defense meeting with reporters."
+106,2,1,"TXT","23",0,0,"Across the room, Goldman mouthed the word ‘murderer” as the verdict was announced. Kim Goldman, who spent most of a year in court honoring her dead brother’s memory, doubled over and sobbed along with a younger brother and sister."
+107,2,1,"TXT","24",0,0,"At the courthouse, Simpson’s older son, Jason, read a statement from his father:"
+108,2,1,"TXT","25",0,0,"”My first obligation is to my young children, who will be raised the way that Nicole and I had always planned. ... But when things have settled a bit, I will pursue as my primary goal in life the killer or killers who slaughtered Nicole and Mr. Goldman. They are out there somewhere. Whatever it takes to identify them and bring them in, I will provide somehow.”"
+109,2,2,"HL","0",0,0,"REACTION: Poly students, staff expected best, worst from trial of century"
+110,2,3,"TXT","17",0,0,"he said."
+111,2,3,"TXT","18",0,0,"‘If they’re dealing with a loud party, they can’t apply themselves to more important issues,” Gardiner said."
+112,2,3,"TXT","19",0,0,"The program benefits students as well, Frigillana added."
+113,2,3,"TXT","20",0,0,"‘It’s students talking to students to take care of the problem,” he said. ‘It gives them a chance to (avoid) a ticket."
+114,2,3,"TXT","21",0,0,"‘An officer doesn’t have to give a warning,” he continued. ‘He can cite a person for the first call. I’d rather not see students get records — it could make it difficult for them to get a job in the future.”"
+115,2,3,"TXT","22",0,0,"SJ4A.P. is always looking for people interested in joining, and is tidung applications at the ASI office, Frigillana said."
+116,2,2,"ME","0",-1,0,"From page 1"
+117,2,2,"TXT","13",0,0,"Some in the lounge smiled, others frowned. Soon students and staff trailed out of the lounge."
+118,2,2,"TXT","14",0,0,"Some students, while they feel O.J. is guilty, said they expected he would be acquitted."
+119,2,2,"TXT","15",0,0,"‘I thought he was guilty, but I knew he was going to walk,” said architectru*al engineering senior Ibm Lopez. ‘After listening to the Mark Fuhrman testimony, there was a lot of doubt.”"
+120,2,2,"TXT","16",0,0,"‘Money is a wonderful thing,” said physical education senior Kenny Craig. ”I kind of thought they would let him off.”"
+121,2,2,"TXT","17",0,0,"Others said they were pleased with the verdict, believing the jury did its best with the evidence presented to them."
+122,2,2,"TXT","18",0,0,"Director of the Multicultural Center Everado Martinez-Inzun-za said he views the verdict as the judicial system going through its process."
+123,2,2,"TXT","19",0,0,"”Having not had the opportunity to have sat through all of the trial and having listened to all the media, I ^1 Fm too biased to make a judgment call,” he said. “Twelve jurors sat"
+124,2,2,"TXT","19",0,0,"through the whole thing and weighed out that evidence. Justice has been done.”"
+125,2,2,"TXT","20",0,0,"‘I’m kind of happy,” said engineering senior Leonard Pimen-til. “I believe the evidence found was too circumstantial. Hopefully people can realize the problem racism is in the LAPD and something will be done.”"
+126,2,2,"BQT","0",0,0,"I think more than anything the LAPD messed up what seemed to be an open and shut case."
+127,2,2,"BQA","0",0,0,"Mike Flippin"
+128,2,2,"BQA","0",0,0,"biochemistry senior"
+129,2,2,"TXT","21",0,0,"Others disagreed, however, and weren't as happy with the verdict"
+130,2,2,"TXT","22",0,0,"“Who else would have killed them?” said engineering sophomore Doug Cox. “This is just an example of how the system fails.”"
+131,2,2,"TXT","23",0,0,"There were mumbles from students about reverse racism"
+132,2,2,"TXT","23",0,0,"and other references to racism within the LAPD. With few exceptions, people didn’t feel race had much to do with the verdict."
+133,2,2,"TXT","24",0,0,"‘I’m not happy,” said business senior Patric ^gong. “I just think high-prohle celebrities tend to get off. It’s like they flash a gold card at the jury and they're off. Race doesn’t have anything to do with it.”"
+134,2,2,"TXT","25",0,0,"Many students were more surprised that the verdict was reached so soon."
+135,2,2,"TXT","26",0,0,"‘I was surprised it was ’not guilty* * as opposed to a hung jury,” said biochemistry senior Mike Flippin. *1 think more than anything the LAPD messed up what seemed to be an open and shut case.”"
+136,2,2,"TXT","27",0,0,"Biology freshman Darcy Johnson summarized one feeling that most students, staff and many of tho;o involved the trial seem to have."
+137,2,2,"TXT","28",0,0,"*TYie media has publicized the trial so much,” she caid. “It’s just weird that it’s over.”"
+138,0,0,"B","0",0,0,
+139,2,0,"AT","0",0,1,"SIGMA cm..."
+140,2,0,"AT","0",0,1,"mn look v^here I am now"
+141,2,0,"AT","0",0,1,"-David Lcllcrmaii, Ball State '69"
+142,2,0,"AT","0",0,1,"EX FALL RUSH SCHEDULE"
+143,2,0,"AT","0",0,1,"Tonight, Oct.4 Dessert with ^ FOB House 7:30 Thursday, 0«.5 Fight Night @ ZX House 7:30 Saturday, Ort.7 Open House @ ZX House 1:00 Monday, Oct.9 Smoker @ Sandwich Plant 7:30"
+144,0,0,"B","0",0,0,
+145,0,0,"B","0",0,0,
+146,2,0,"AT","0",0,1,"For rides and info call Kevin @ 546-8746"
+147,2,0,"AT","0",0,2,"Wednesday 6:oo - 9:oo Suds n Slides ( 1\ House Casual attire"
+148,2,0,"AT","0",0,2,"Thursday 6:Oo - 9:oo Pizza and Bowling McPhee s Casual attire"
+149,2,0,"AT","0",0,2,"Friday 4;oo - 7.00 LUAUW/\()||( 1\house HAWIIANj ATTIRE"
+150,2,0,"AT","0",0,2,"Saturday 6:oo - 9 00 Smdker < IK Sorority House • Coat and Tie Recommended"
+151,3,0,"PI","0",0,0,"MUSTANG DAILY"
+152,3,0,"PI","0",0,0,"uMiLi_____________________________________________________ WEDNESDAY, OCTOBER 4, 1995"
+153,3,4,"HL","0",0,0,"Depressed? Free testing for the blues in the U.U."
+154,3,4,"TXT","4",0,0,"ly Gtm MaatfoU	their result«.	There’s a real movement to raise million Americans are affected oarente and fnends. Out of that"
+155,3,4,"BL","0",0,0,"ly Gref MaatfeU"
+156,3,4,"BL","0",0,0,"Staff Wiitx___________________"
+157,3,4,"TXT","1",0,0,"With a new quarter beginning, stress and expectations for students are high, and so is the possibility of depression if the stress becomes too much and expectations are not met."
+158,3,4,"TXT","2",0,0,"But how do you know if your depression is bad enough that you need help?"
+159,3,4,"TXT","3",0,0,"Peer Health Educators, along with workers from Health Services, Psychological Services, and the Employee Assistance Program (EAP), will be screening for depression from 11 a.m. to 4 p.m. Thursday in the UU Plaza. The free screening is part of National Depression Screening Day (NDSD)."
+160,3,4,"TXT","4",0,0,"Students, faculty and staff can take the anonymous 10 to 15 minute assessment tool — a series of questions to determine your emotional health — then go upstairs to UU 219 to go over"
+161,3,4,"TXT","4",0,0,"their results."
+162,3,4,"TXT","5",0,0,"*At that time they can meet with a therapist or a Peer Health educator to review their test scores,” Employee Assistance Program (EAP) Coordinator Jean DeCosta explained. ”Those that need it are referred for follow-up counseling.”"
+163,3,4,"TXT","6",0,0,"There will also be a presentation on depression, including a slide show and video, at 1 p.m. in UU219."
+164,3,4,"TXT","7",0,0,"NDSD began five years ago, but this is the first year Cal Poly has participated. Last year, 82,000 people attended screenings nationwide."
+165,3,4,"TXT","8",0,0,"*Cal Poly wants their students to be successful,” DeCosta said. ”This is one of the programs that ensiu'es that students will do well."
+166,3,4,"TXT","9",0,0,"*We know more about depression than ever before,” Def^osta continued. ”We can do more for depression as far as treatment, counseling and medical help."
+167,3,4,"TXT","9",0,0,"There’s a real movement to raise awareness."
+168,3,4,"TXT","10",0,0,"Depression is an illness, not a weakness. \bu can’t snap out of it like a cold,” she continued. *With early detection though, you can do something about it. You don’t have to live with it.” EAP Specialist Bob Negranti, explained an interesting aspect of the screening day."
+169,3,4,"TXT","11",0,0,"It seems most programs are either just for students, or just for employees,” Negranti said. This program is for the entire campus population.”"
+170,3,4,"TXT","12",0,0,"Student Affairs provides medical help, psychological help and counseling to students through Peer Health Education. Help for faculty and staff is available through EAP."
+171,3,4,"TXT","13",0,0,"The screening day lets everyone know that the resources to treat depression are available on campus,” Negranti said."
+172,3,4,"TXT","14",0,0,"According to the National Institute of Mental Health, over 17"
+173,3,4,"TXT","14",0,0,"million Americans are affected by depression each year, but only half actually receive treatment. Twice as many women suffer from depression than men."
+174,3,4,"TXT","15",0,0,"Some of the warning signs that someone may be depressed include: a significant change in appetite, sleep disturbances, fatigue and feelings of worthlessness."
+175,3,4,"TXT","16",0,0,"The major difference between just feeling down and having the blues has to do with the intensity and longevity of the sadness. When someone is depressed, it affects the entire body. The way in which they eat, sleep and think may change."
+176,3,4,"TXT","17",0,0,"DeCosta explained that even when something positive happens to someone, depression can strike."
+177,3,4,"TXT","18",0,0,"Sometimes when something good happens, like getting into Cal Poly, it can cause you to get depressed,” DeCosta said. Lots of freshman feel the loss of their"
+178,3,4,"TXT","18",0,0,"parents and friends. Out of that good event, you can wind up getting depressed."
+179,3,4,"TXT","19",0,0,"Generally, depression runs in the family,” she continued. If parents or close family suffer from depression, then they may have a higher propensity to be depressed.”"
+180,3,4,"TXT","20",0,0,"For anyone who does not feel comfortable taking the assessment test at the screening booth, an appointment can be made with counseling services for assessment and possible treatment of depression."
+181,3,4,"TXT","21",0,0,"There’s nothing to be ashamed of. You’re not ashamed when you have a common cold,” DeCosta said."
+182,3,4,"TXT","22",0,0,"Many times people feel bad about feeling depressed. So they wouldn’t treat themselves,” she said. If you have depression don’t be ashamed of it - we’ll try to get you the help you need.”"
+183,3,5,"HL","0",0,0,"County candidates campaigning"
+184,3,5,"BL","0",0,0,"ly Rsbscco Stvrkk"
+185,3,5,"BL","0",0,0,"Doiy Staff WíiiBí"
+186,3,5,"TXT","1",0,0,"The 1996 primary election in March may seem far away, but prospective candidates will soon begin pounding the pavement for registered voter signatures."
+187,3,5,"TXT","2",0,0,"Because California is a ""big swing-vote state,” its primary is a month earlier than in previous years, said Craig Driver, San Luis Obispo County elections clerk."
+188,3,5,"TXT","3",0,0,"In the past, California’s votes were among the last to get tallied, he said. But this year, the state’s primary is one of the first."
+189,3,5,"TXT","4",0,0,"In a 1994 California State Senate bill, the March primary became enacted into law."
+190,3,5,"TXT","5",0,0,"The new primary election date was passed on a trial period and will be effective until Jan. 1, 1998, unless another law repeals or extends it."
+191,3,5,"TXT","6",0,0,"In preparation for the primary, campaigning will begin early as well, l^e first step in this year’s political joust is candidates’ declaration of intent to run for office."
+192,3,5,"TXT","7",0,0,"Next, most applicants will tiy to get their candidacy filing fee waived. Credit toward the fee, which amounts to 1 percent of the candidate’s salary, is earned at the rate of 44 cents per valid signature. Candidates can start accumulating signatures Oct. 21 to Nov. 29, Driver said."
+193,3,5,"TXT","8",0,0,"Congresswoman Andrea Seastrand (R-Calif.) will need over 3,000 registered voter’s signatures to get her $1,336 fee waived,” he said."
+194,3,5,"TXT","9",0,0,"Perspective congressional opponent Walter Capps, who lost to Seastrand last year by less than a 1 percent margin, plans to run again and is already formulating his campaign strategy."
+195,3,5,"TXT","10",0,0,"Capps, a religious studies professor at the University of California, Santa Barbara for the past 30 years, attributed his approximate 1,500-vote defeat to his late start in the race. He did not begin campaigning until February 1994."
+196,3,5,"TXT","11",0,0,"lb combat last year’s campaign setbacks, Capps has already made a few low-profile visits to Cal Poly’s campus in order to make his name known to students."
+197,3,5,"TXT","12",0,0,"Capps plans on making several highly-publicized visits to Pbly within the next few weeks."
+198,3,5,"TXT","13",0,0,"Another candidate who plans on speaking to prospective student voters is Tbm Bordonaro. Bordonaro will lecture to several Cal Pbly business classes on Oct. 4."
+199,3,5,"TXT","14",0,0,"Although campaigning is well on its way, the 1996 campaign issues are still unclear."
+200,3,5,"TXT","15",0,0,"It will depend on the presidential election issues and what Congress accomplishes in welfare and Medicare and"
+201,3,5,"TXT","15",0,0,"Medicaid reform,” Capps said."
+202,3,5,"TXT","16",0,0,"Capps, who favors Medicare reform, feels that the Republican party is not giving FVesident Clinton legislation he will be able to approve."
+203,3,5,"TXT","17",0,0,"The way the Republicans are going about it is deceptive,” he said. Integrity clearly remains the issue.”"
+204,3,5,"TXT","18",0,0,"Capps aims to ""re-create the bond of trust between the people and Washington, D.C.”"
+205,3,5,"TXT","19",0,0,"He urges voters to vote for what they hope will be accomplished not the lesser of two evils."
+206,3,5,"TXT","20",0,0,"Balancing the budget is the top priority for incumbent Seastrand, according to her press secretary Stuart Roy."
+207,3,5,"TXT","21",0,0,"In Congress, Seastrand believes she is doing the right things,” Roy said."
+208,3,5,"TXT","22",0,0,"Her first priority is reducing the deficit to spur economic growth, which would in turn create more jobs, Roy said. Therefore, she is in Washington, D.C. working on Medicare reform and will not begin campaigning until January."
+209,3,5,"TXT","23",0,0,"Since April, she had three town meetings in San Luis Obispo, Santa Barbara and Santa Maria targeted toward senior citizen constituents, he said."
+210,3,5,"TXT","24",5,0,"Once constituents realized that Medicare reform was neces-___________See	CAMRMGN poge 5"
+211,3,6,"HL","0",0,0,"Pi Kappa Alpha earns national award again"
+212,3,6,"BL","0",0,0,"ly CoIsM M. Ralsy"
+213,3,6,"BL","0",0,0,"Doly Staff Writef"
+214,3,6,"TXT","1",0,0,"Discipline, determination and organization have earned Cal Poly’s Pi Kappa Alpha fraternity (Pikes) three national awards in the past five years."
+215,3,6,"TXT","2",0,0,"According to Grant Watkins, chapter president, the fraternity is one of 10 to receive the national award this year."
+216,3,6,"TXT","3",0,0,"We are the only (Pikes) in the Golden West region that received the award this year,” Watkins said."
+217,3,6,"TXT","4",0,0,"The Robert Adger Smythe award is based on numerous aspects of a fraternity: rush programs, membership development, management and operations, risk management awareness, alumni relations, finance, scholarship programs, public relations and community service."
+218,3,6,"TXT","5",0,0,"San Luis Obispo Mayor Allen Settle, who is the Pi Kappa Alpha faculty adviser, said winning the award for the third time was particularly impressive because the chapter is relatively new."
+219,3,6,"TXT","6",0,0,"They have only been on campus since 1987,” little said. It’s"
+220,3,6,"TXT","6",0,0,"highly unusual that a fraternity, in the amount of time it has been on campus, has received such recognition.”It’s like winning three Academy Awards."""
+221,3,6,"TXT","7",0,0,"Settle bases the fraternity’s success on the hard work of its members."
+222,3,6,"TXT","8",0,0,"This is a group of young people who have done a great job,” Settle said. ’They have the desire to get things done right the first time around.”"
+223,3,6,"TXT","9",0,0,"According to Watkins, the fraternity members completed 3,400 hours of community service last year, which helped gain national recognition. The group chose to support the Dr^ Abuse Resistance Education program, their main philanthropy, and donated volunteer time and $250 from fund-raisers."
+224,3,6,"TXT","10",0,0,"Pi Kappa Alpha was started in the 1860s and has since included some prominent names. Settle said."
+225,3,6,"TXT","11",0,0,"You would be surprised to find out some of the people who are Pikes,” he said. *^d Koppel is a Pi Kappa Alpha. It’s a very well-recognized fraternity.”"
+226,3,0,"AT","0",0,1,"in"
+227,3,0,"AT","0",0,1,"TONIGHT I!"
+228,3,0,"AT","0",0,1,"Casino Night at"
+229,3,0,"AT","0",0,1,"the Avenue with"
+230,3,0,"AT","0",0,1,"AO SORORITY"
+231,3,0,"AT","0",0,1,"COME SOCIALIZE AND HAVE DINNER WITH THE BROTHERS OF zn & A<b SORORITY"
+232,3,0,"AT","0",0,1,"FRI Smoker at £11 House S AT Sports at Santa Rosa (12-2 PM)"
+233,3,0,"AT","0",0,1,"SUN Pref Dinner (Invite Only)"
+234,3,0,"AT","0",0,1,"FOR INFO CAUU 544-6574"
+235,3,0,"AT","0",0,2,"RUSH SIGMA PI"
+236,3,0,"AT","0",0,2,"rVOICE MAIL"
+237,3,0,"AT","0",0,2,"If you want it, we have the best..."
+238,3,0,"AT","0",0,2,"MClFICQBELLe"
+239,3,0,"AT","0",0,2,"A«ckocis«4 Sale* llepre*eei*iivc"
+240,3,0,"AT","0",0,2,"781-7676"
+241,3,0,"AT","0",0,2,"Extension 7000"
+242,3,0,"AT","0",0,3,"Terrific Cuts"
+243,3,0,"AT","0",0,3,"hil \ Kin I Idtr Diskjii"
+244,3,0,"AT","0",0,3,"Cal Poly Student Discount Hair Cut -$ 8.00"
+245,3,0,"AT","0",0,3,"5% Off Products"
+246,3,0,"AT","0",0,3,"590 California Blvd/Taft San Luis Obispo, CA Phone# 542-9960"
+247,3,0,"AT","0",0,3,"MiDatrlx"
+248,3,0,"AT","0",0,3,"t S S E N T I A I S"
+249,3,0,"AT","0",0,3,"TIME: Mon-Sat 9am-7pm"
+250,3,0,"AT","0",0,4,"Ziff-Davis■ Computer Books"
+251,3,0,"AT","0",0,4,"OCT.^2-31"
+252,3,0,"AT","0",0,4,"- on the spinner display in General Books"
+253,3,0,"AT","0",0,4,"ElQirral"
+254,3,0,"AT","0",0,4,"Bookstore"
+255,4,0,"PI","0",0,0,"4 TUESDAY, OaOBER 4, 1995"
+256,4,0,"SH","0",0,0,"OPINION"
+257,4,0,"PI","0",0,0,"MUSTANG DAILY"
+258,4,7,"HL","0",0,0,"Operation; O.J."
+259,4,7,"TXT","1",0,0,"Unless you’ve been gagged, handcuffed, lobotomized and hiding in a cave for the past year, you have heard about the O.J. Simpson case. The Mustang Daily, through a wise editorial decision reached through deep deliberation, debate, and being heartily sick of the whole thing by the first week of jury selection, has had very light coverage of the proceedings."
+260,4,7,"TXT","2",0,0,"But now that the jury has decided that OJ. is absolutely, 100 percent not guilty, it is time to talk about it. Did you breathe a sigh of relief when he was acquitted? Did you jump up, grab your shotgun and mutter ^at you were going to get him yourself? Were you dissappointed because there wont be any riots? You must have some opinion, and we want to know about it."
+261,4,7,"TXT","3",0,0,"Can you believe the coverage of his return home? How many of the jurors do you think will write books? Will Robert Shapiro end up doing commercials for the Hair Club for Men? How much credit in their “Oh God, we feel so guilty about slavery” account did the black community use up in this fiasco? Any aspect of this festival of madness is open to your inspection."
+262,4,7,"TXT","4",0,0,"So fire up your computer (or typewriter if you’re Paleolithic) and write up your opinions (double-spaced, s’il vous plait) with some degree of conciseness. Add your name, major, year and phone number and drop it off or mail it to the Daily at Graphic Arts Bldg. #226, fai: to 756-6784, or e-mail it to the address below."
+263,4,7,"TXT","5",0,0,"And we’ll thank you not to keep your opinions to yourself. -D.P."
+264,4,8,"TXT","1",0,0,"Editor,"
+265,4,8,"TXT","2",0,0,"Re: Ben Schein’s “Accomplishment, not affirmative action” on Sept. 28"
+266,4,8,"TXT","3",0,0,"Although I was slightly coerced by my English teacher to write a response to Ben Schein’s article, I too am unsatisfied with his presented “arguments.”"
+267,4,8,"TXT","4",0,0,"What is the point of Ben’s argument regarding people’s inequalities? Is he suggesting that if you are not naturally brilliant, it is the “minority’s” obligation to negate education and live a life based on athletic ability? And in the same paragraph he states, “If none of us had our own separate gifts and talents, we would not be able to tell each other apart.” How do you tell people apart in your everyday life? I use such criteria as personality and physical api>earance. This statement is too vague to effectively support his argument"
+268,4,8,"TXT","5",0,0,"My second and last rebuttal concerns Ben Schein’s hard work to increase his SAT score. How many financially challenged families have the money to send their child to a workshop such as the Princeton Review? Not too many. Ben Schein ignores the realization that not everybody can participate in specialized workshops to improve their SAT scores. It is important to be sensitive and considerate when judging other people and the situation they are in. Oddly enough, there are students who want to succeed in their stupes,, but their surrounding environment prevents them from doing so. For example, what if you go to school in a poor community and getting good grades includes getting beat up after school each day because your classmates feel you are too studious. Education quickly develops a bitter taste."
+269,4,8,"TXT","6",0,0,"I agree with Ben Schein’s view that people should be accepted an merit, not ethnicity, but it is important to be considerate of other people’s backgrounds. Unfortunately some students abuse the system, but we must not label every minority student as a lazy parasite. In closing, it is my advice to Ben Schein to, for starters, calm down and then rethink his arguments. In the words of my English teacher, if you are willing to give your opinion, you should also be willing to accept honest criticism."
+270,4,8,"BL","0",0,0,"Keith Elliot Biology junior"
+271,4,9,"TXT","1",0,0,"Editor,"
+272,4,9,"TXT","2",0,0,"Once again, in a feeble attempt to raise oontroveny and broaden the minds of its readers, the Mustang Daily has chosen yet another vmdereducated, irrational columnist to meet the deadlines of the Opinion section."
+273,4,9,"TXT","3",0,0,"Brian Johnson’s Monday column on atheism only furthered my theory of the growing number of fanatics religion has created. I am not opposed to religion, nor am I opposed to speaking your mind, but I am opposed to poor attempts to rsuse consciousness on our campus as Johnson did in his column."
+274,4,9,"TXT","4",0,0,"Being an atheist goes far beyond anarchy and lack of moral judgment as Johnson assumes in his column. It is based on belief in yourself. 'The reason for atheism is largely due to pressure to conform to the numerous restrictions laid out by the church."
+275,4,0,"SH","0",0,0,"COMMENTARY"
+276,0,0,"B","0",0,0,
+277,0,0,"B","0",0,0,
+278,0,0,"NA","0",0,0,"ui"
+279,0,0,"NA","0",0,0,"I"
+280,0,0,"B","0",0,0,
+281,0,0,"B","0",0,0,
+282,0,0,"NA","0",0,0,"f"
+283,0,0,"B","0",0,0,
+284,0,0,"B","0",0,0,
+285,0,0,"NA","0",0,0,"y"
+286,0,0,"B","0",0,0,
+287,0,0,"NA","0",0,0,"\\\"
+288,0,0,"B","0",0,0,
+289,4,10,"HL","0",0,0,"The horror that is O.J."
+290,4,10,"BL","0",0,0,"hy Erin Massey"
+291,4,10,"TXT","1",0,0,"ha I sat there at 10 o’clock in the morning sipping my Yes, Simpson is a national celebrity and there has been a oj. (naturally) and anxiously waiting to hoar the verdict lot of controversy but the trial is sUll a trial. How many of whAt has been called “the trial of the century,” I felt an abusive husbands have been accused of killing their inn^ fear and dread. _ ,	« ,, wives? More than we would care to admit. And how many"
+292,4,10,"TXT","2",0,0,"Why did I care about O.J. Simpson’s fate? He was people, cops or not, have been accused of racial slurs?"
+293,4,10,"TXT","2",0,0,"fonce™ Jo before or after the murders. How many people are bona-fide racisU? Probably a lot Why did I sit there with the rest of the world, completely more than we care to ever know"
+294,4,10,"TXT","2",0,0,"engrailed wth ^e decision of 12 ji^rs?	My point is this: this kind of trial and the issues it has"
+295,4,10,"TXT","3",0,0,"Because the OJ. Simpson case is merely a convenient raised are nothing new. 'They have been around for years, covw to a much wder, more terrifying problem.	This trial is a soapbox for different groups to rile up the"
+296,4,10,"TXT","4",0,0,"The case single-handedly brings every hot issue into masses for their cause"
+297,4,10,"TXT","4",0,0,"A. m«lia ligh^ U«.in* controy.riy Mid uph.av«l in Loa The media ie not without fault aithor. Every channel"
+298,4,10,"TXT","5",0,0,"tK.^*	”i* i'*^*	**“J*<* •>“* cut off a week ago, I found great joy watching the newe"
+299,4,10,"TXT","5",0,0,"the verdict wae a potential epark to a bigger bomb of ra- „chor awkwardly try to fill air time."
+300,4,10,"TXT","5",0,0,"cial diacnmination. If Simeon had been foimd guilty. The media, ever hot for newiworthy conllicU, had a CHM of racial liyuatice would have run rampant.	fi,|a	„¡th more than a year of controverey - diecuaa-"
+301,4,10,"TXT","5",0,0,"But with his acquittal, speculation that his skin color protected him from punishment will surface. I have heard fellow students waging bets on how long before someone"
+302,4,10,"TXT","12",0,0,"ing every angle of the trial from legal analysis to jury fashion reviews."
+303,4,10,"TXT","13",0,0,"This bombardment of stories and issues might be ar-"
+304,4,10,"TXT","5",0,0,"gils Simpson. With the current state of affairs, they may gu.d toT^ng XuT sol^rions Tth. coX^^^^^ by"
+305,4,10,"TXT","6",0,0,"mess, this doesn’t stop	-	.	,	,	. .	/"
+306,4,10,"TXT","6",0,0,"with race. This trial dips into women’s issues as well. .	® 'V""®® *'®''®"
+307,4,10,"TXT","6",0,0,"Women’s activists everywhere rallied for Nicole Brown ?®®"".	]^® »‘melight before with no solutions or"
+308,4,10,"TXT","6",0,0,"Simpson’s plight as the batUred woman struggling to beighUned awweness. -nie images seen throi^h the ov^rcoma h®r abusive husband.	Simpson tnal will not help bnng awareness to the mas-"
+309,4,10,"TXT","14",0,0,"If anjrthing, it will give people a false sense of the"
+310,4,10,"TXT","7",0,0,"Once again, the verdict holds the reins to start a rebellion of angry women fighting against the system to ensure that battered women are given their justice. You can see why I grip my orange juice while the jury reveals the future of politics in America."
+311,4,10,"TXT","8",0,0,"As Simpson broke into a smile at news of his acquittal,"
+312,4,10,"TXT","14",0,0,"ses."
+313,4,10,"TXT","14",0,0,"real issues."
+314,4,10,"TXT","15",0,0,"With all the cross coverage of ev«y an^e of the trial, the real issue of whether OJ, Simpson actually did kill his ex-wife and her friend are lost in the shuffle."
+315,4,10,"TXT","16",0,0,"People need to look at this former footbadl star and decide if he committed two murders. The othwr issues are"
+316,4,10,"TXT","8",0,0,"I could hear the roars of ii\justice from men and women	“ bf coran^tt^ two murders, ^e othwr"
+317,4,10,"TXT","16",0,0,"alike at what they would call orotectiiur abusive men and	• «»trfction from his gmlt or innocence."
+318,4,10,"TXT","8",0,0,"•like at what they would call protecting iJiusive men and ignoring women’s rights."
+319,4,10,"TXT","9",0,0,"All I can say to the cries of inequality and outright claims of prejudice is this: Get a grip."
+320,4,10,"TXT","10",0,0,"This trial has been completely blown out of proportion."
+321,4,10,"TXT","17",0,0,"But this distraction was an ingenious move by the defense. After all, Simpson is a free man, regardless of his race or wife-beater status."
+322,4,10,"BL","0",0,0,"Erin Mo9$€y i$ the Daily ArU and Entertainment editor."
+323,4,9,"TXT","5",0,0,"I cannot speak for all people who do not follow a religion, jiut as I understand Johnson doesn’t speak for all those who do, but the question of whether there is a divins power is not what makes someone an atheist. It is the loss of faith in the institutions that forces it upon us."
+324,4,9,"TXT","6",0,0,"A god is something more than the founder of right and wrong or good and bad, he is a faith that carries one through life. I choose to follow my own faith than that of someone who existed 2,000 years ago."
+325,4,9,"TXT","7",0,0,"It saddens me to hear someone speak like Johnson did became he is missing the point of his own god, and transforming his S3rmbd of good into a rule book."
+326,4,9,"TXT","8",0,0,"“Everything we do (and don’t do) is based on a belief in God,” Johnson said."
+327,4,9,"TXT","9",0,0,"I hope someday he can leam to do something for himself."
+328,4,9,"BL","0",0,0,"Matthow Berger Journalism sophomore"
+329,4,0,"MH","0",0,0,"MusiangDaiiy"
+330,4,0,"MH","0",0,0,"'Wr’rr all O J u^ay!"""
+331,4,0,"MH","0",0,0,"Editofifll Offices: Graphic Arts 226, Col Poly, Son Luis Obispo, CA, 93407."
+332,4,0,"MH","0",0,0,"Editofiol; (805) 756-1796;"
+333,4,0,"MH","0",0,0,"Advertising; (805) 756-1143;"
+334,4,0,"MH","0",0,0,"Fox; (805) 756-6784;"
+335,4,0,"MH","0",0,0,"E-moil: dpillsburY@oboe.colpoly.edu."
+336,4,0,"MH","0",0,0,"All moteriol © 1995 Mustang Doily."
+337,4,0,"MH","0",0,0,"Printed by University Graphic Systems."
+338,4,0,"MH","0",0,0,"Jxson D. Plemons, Editor in Chief Garre« M Mcttler, Managing Editor Karen Spaeder, (ktmpus Editor Natasha Collins, City Editor Franco Cjistaldini, Sports Editor Justine Frederiksen, Copy Editor F.rin Massef, Arts Editor Kri.stin OLson, Art Director Dawn Pillsbury, Opinion Editor Melissa M CmsXer, Assistant Sports Editor Herb Kamm, Adtiser"
+339,4,0,"MH","0",0,0,"Photo EdtOfs: Larry Rodenbom, Juan Martinez. Pbotograpbors: Joe Johnston, Dawn Kalmar, Maureen McDowell, Shoshi, Je.ssica Yamada Msstrotors: Josh Swanbeck, Elixs Crouch EdHorisI Prodsctios: Anne Krueger, Manager Grace Tsai, Jennifer Dunton, Shelly Schweigerdt Advertisisf Prodsctios: Wendy Vl'ood, Manager Dosigsors: Luc Chueh, Dylan Gold,"
+340,4,0,"MH","0",0,0,"Carlos Hernandez, Sabrina Li, F.rin Martin, Ryan Pennington, Jeff Reber, Miles Stegall, Josh Swanbeck, Cxtrina Warren"
+341,4,0,"MH","0",0,0,"Advortisisf dkocton Matt Boyd Ad reprosostotivos: Bijan Achak, Ryan Azus, Nick Barelli, Anthony Bartolotto, Brian Buizer, Shannon (Collins, Derek Holman, Monique LeFors, Jason Lind, Nichole Montgomery, Mitch Peters, E.J. Tavella. Jeff Thompson, Will Vandeiuyster."
+342,4,0,"MH","0",0,0,"CrodH siosogor. Su.san O'Shea dossifiod Advortisjsf:Janc Wooding, Manager, Janell Bogue, Jessica Guagliardo, Alma Rodriguez hifonsatio« Systosis: Chris Fdwards Grcslofios: Ben Mello."
+343,4,0,"MH","0",0,0,"Bssisoss SNMger. A. J. Schuermann"
+344,5,0,"PI","0",0,0,"MUSTANG DAILY"
+345,5,0,"PI","0",0,0,"WEDNESDAY, OaOBER 4,"
+346,5,5,"HL","0",0,0,"CAMBUGN: Seastrand voices Central Coast needs U.S. eagerly awaiting Pope’s visit"
+347,5,5,"ME","0",-3,0,"From pog« 3"
+348,5,5,"TXT","25",0,0,"■ary to prevent bankruptcy by the year 2002, they were open to give suggestions on reform."
+349,5,5,"TXT","26",0,0,"The meetings allowed Seastrand to go before Congress and share her constituents’ concerns for having a choice of doctors and health care options, Roy ■aid."
+350,5,5,"TXT","27",0,0,"Seastrand has also represented the voice of other Central Coast concerns throughout the year."
+351,5,5,"TXT","28",0,0,"Over the last year Seastrand has restored $2 million to the National Marine Sanctuary Program to protect the Channel Islands in Santa Barbara."
+352,5,5,"TXT","29",0,0,"She also lobbied the federal"
+353,5,5,"TXT","29",0,0,"government to reimburse California for the costs of housing convicted illegal aliens in state facilities."
+354,5,5,"TXT","30",0,0,"Although the early primary affects Congressional candidates and state politicians, local government is not affected by the new primary legislation."
+355,5,5,"TXT","31",0,0,"Local campaigning will be handled in the following ways:"
+356,5,5,"TXT","32",0,0,"*	The mayor and the board of supervisors do not have a municipal primary election so their campaigning is not expected to begin until the summer of 1996."
+357,5,5,"TXT","33",0,0,"•	California’s two Senate' ■eats are not up for re-election iintil 2000."
+358,5,11,"BL","0",0,0,"ly Heÿ A. MuBigo"
+359,5,11,"BL","0",0,0,"AÓocioted Press"
+360,5,0,"AT","0",0,1,"Mustang Daily"
+361,5,0,"AT","0",0,1,"You should hove seen what we didn't print"
+362,5,11,"TXT","1",0,0,"NEW YORK — Placido Domingo, Natalie Cole and Roberta Flack will warm up his audiences."
+363,5,11,"TXT","2",0,0,"Free tickets to his outdoor events are being scalped at prices that might be whispered in Shubert Alley for sold-out Broadway musicals — upwards of $100."
+364,5,11,"TXT","3",0,0,"A healthier Pope John Paul II returns to the United States Wednesday with popularity ratings any politician would covet. A New Y>rk Times-CBS News poll released over the weekend found 92 percent of U.S. Catholic adults view him favorably and only 4 percent unfavorably."
+365,5,11,"TXT","4",0,0,"During his five-day visit, the pope will confer with President Clinton, address the United Nations General Assembly and preach to huge crowds at the outdoor Masses in Giants Stadium in the New Jersey Meadowlands, at Aqueduct race track, on the Great Lawn in New York’s Central Park and at Oriole Park in Baltimore."
+366,5,11,"TXT","5",0,0,"Even if the pope faces little visible opposition, polls show many American Catholics reject his views on sexual morality and other issues."
+367,5,11,"TXT","6",0,0,"Critics inside the church object to the pope’s vehement opposition to birth control and want him to at least consider allowing married priests and the ordination of women. The number of U.S. priests is falling even as the niunber of Catholics rises."
+368,5,11,"TXT","7",0,0,"The pope began 1995 as Time Magazine’s Man of the Ybar, his 12Ui appearance on ’Time’s cover."
+369,5,11,"TXT","7",0,0,"His book, “Crossing the Threshold of Hope,” was a bestseller in 20 countries."
+370,5,11,"TXT","8",0,0,"The English translation of the new Catechism of the Catholic Church, a major project of his papacy, has sold an astonishing 2.3 million copies in hardback."
+371,5,11,"TXT","9",0,0,"At the outset of his 18th year on the throne of Peter, Catholic population worldwide has passed the billion mark."
+372,5,11,"TXT","10",0,0,"John Paul II has made a remarkable comeback from the effects of a partial thigh bone replacement after a bathroom fall that caused the cancellation of a planned U.S. visit a year ago. Journeying to his fifth continent since then, the 75-year-old pontiff has thrown away his cane, and walks with less of the pronounced stoop observed during his recovery."
+373,5,11,"TXT","11",0,0,"Occasionally however, especially when he is climbing steps, the ruddy face is caught by the TV cameras grimacing in pain. Tb assist him during the recent African trip, elevators or hydraulic lifts were installed at several altar sites."
+374,5,11,"TXT","12",0,0,"In addressing the United Nations on Thurs^y, John Paul II will have a far greater presence than when he faced the world body at the outset of his papacy in 1979."
+375,5,11,"TXT","13",0,0,"Such diverse figures as Czech President Vaclav Havel, Ronald Reagan, Zbigniew Brzezinski, who was Jimmy Carter’s national security adviser, and the Rev. Vincent O’Keefe, whom he removed as acting Superior General of the Jesuits, look upon this Pope as a moral battering ram in bringing down the Berlin Wall and European Communism."
+376,5,11,"TXT","14",0,0,"In the wor^ of Mikhail Gor-"
+377,5,11,"TXT","14",0,0,"bachev, “Everything that has happened in Eastern Europe these last few years would be impossible without the pope and without the important role, including the political role, he played on the world stage.”"
+378,5,11,"TXT","15",0,0,"More recently the pope has energized Vatican diplomats to exert formidable pressure on two United Nations conferences, on population and development in Cairo,.Egypt, and on women in Beijing."
+379,5,11,"TXT","16",0,0,"For months now, the most polyglot pope ever to evangelize in Peter’s footsteps has been studying Chinese in order to deliver his address in all the major languages used in conducting daily business at the U.N."
+380,5,11,"TXT","17",0,0,"Away from the seats of power and the crowded bleacher seats, the shepherd from Rome will"
+381,5,11,"TXT","17",0,0,"■pend some time with the powerless and the unempowered. He will have a casserole lunch with the homeless at a soup kitchen in Baltimore jvist down the block from the nation’s oldest Catholic cathedral."
+382,5,11,"TXT","18",0,0,"At Newark’s Sacred Heart cathedral he will greet more than 120 cloistered nuns, some going out of their convents for the first time since taking their vows a half century ago."
+383,5,11,"TXT","19",0,0,"“Excitement has been running high here since the day his visit was announced,” Sister Mary Martin, prioress of the Dominican monastery of Our Lady of the Rosary in Summit, NJ., said in an interview on the eve of the pope’s arrival."
+384,5,0,"AT","0",0,2,"c"
+385,5,0,"AT","0",0,2,"u"
+386,5,0,"AT","0",0,2,"T"
+387,5,0,"AT","0",0,2,"8"
+388,5,0,"AT","0",0,2,"s"
+389,5,0,"AT","0",0,2,"A"
+390,5,0,"AT","0",0,2,"TRAFFIC SCHOOL"
+391,5,0,"AT","0",0,2,"One FREE Tuition Drawing Euery Class"
+392,5,0,"AT","0",0,2,"805-582-0505"
+393,5,0,"AT","0",0,2,"Taught by Cal Poly Students Fun and Upbeat Classes '\ 1 1/2 Hours of Videos"
+394,5,0,"AT","0",0,2,"\"
+395,5,0,"AT","0",0,2,"Sabudays Evenings LCIasscs Near Campus"
+396,5,0,"AT","0",0,2,"»Ml Vo ^	W9"
+397,5,0,"AT","0",0,2,"$15"
+398,5,0,"AT","0",0,2,"WHh this AD"
+399,5,0,"AT","0",0,2,"Bring any Competitor’s Coupon and Receive an Additional $S.OO Off ,"
+400,0,0,"B","0",0,0,
+401,5,0,"AT","0",0,3,"IFC Founders • Delta T^u Fraternity"
+402,5,0,"AT","0",0,3,"Established 1955 ^"
+403,5,0,"AT","0",0,3,"Delta ’Dm"
+404,5,0,"AT","0",0,3,"41st Anniversary Rush Schedule"
+405,5,0,"AT","0",0,3,"Monday, Oct 2 - 5KX): TW-Up BBQ at Mott Gym Uwn"
+406,5,0,"AT","0",0,3,"'lUcaday, Oct 3 — 6:30: Steak Dinner at Alpha Phi House"
+407,5,0,"AT","0",0,3,"Thnnday, Oct 5: BBQ wiA Ganuna Phi Beta at Delta Ikn"
+408,5,0,"AT","0",0,3,"Saturday, Oct 7: College Footiball Gameday with Pizza & Subs"
+409,5,0,"AT","0",0,3,"Sunday, Oct 8: Smoker (coat a He; invitation only)"
+410,5,0,"AT","0",0,3,"Monday, Oct 9 - 7KX): Interviews ABev«nntDdttTSnHonm. ri PaloMT Ave. (behindLnckyV) unto«othifwtoe•uied.' For Directions, Rides or More Info:"
+411,5,0,"AT","0",0,3,"Dave Filklns- 547-9365 • House 543-9656"
+412,0,0,"B","0",0,0,
+413,5,0,"AT","0",0,4,"Choose from 60 different recipes!"
+414,5,0,"AT","0",0,4,"Create your own persona! brew!"
+415,5,0,"AT","0",0,4,"It's easy and fun"
+416,5,0,"AT","0",0,4,"^ Makes a great gift!"
+417,5,0,"AT","0",0,4,"THE BREW FACTORY is a microbrewery where you get to brew your own beer. The finest ingredients from all over the world are available for your custom brew. Using our professional equipment you can select from 60 different recipes and brew any style of beer you desire. After two weeks, you come to our store, bottle and label your beer with your personalized label and take home 72-22oz. bottles of the best beer you've ever drank for around $100. Call today for more information!"
+418,5,0,"AT","0",0,4,"Monday bight footbad."
+419,5,0,"AT","0",0,4,"Come watch the game on our big screen T.V. while you brew your own beer!"
+420,5,0,"AT","0",0,4,"1422 MONTEW^r STREET SAN UL7IS OSISPO"
+421,5,0,"AT","0",0,4,"5-94- 16^9 S:"
+422,6,0,"PI","0",0,0,"WEDNESDAY, (XTOBER 4, 1995"
+423,6,0,"PI","0",0,0,"MUSTANG DAILY"
+424,6,12,"HL","0",0,0,"Gov. wants T.V. out of courts"
+425,6,12,"BL","0",0,0,"ly JoIm Howard"
+426,6,12,"BL","0",0,0,"AÓociated Piess"
+427,6,12,"TXT","1",0,0,"SACRAMENTO — Gov. PeU Wilson, responding to the acquit-tal of O.J. Simpson, said Tuesday that live television coverage of California criminal trials should be banned."
+428,6,12,"TXT","2",0,0,"The Republican governor also demanded that lawyers be barred from delivering political messages in their final arguments, and said he would ask the state Judicial Council to draw up his proposed rule changes."
+429,6,12,"TXT","3",0,0,"Most states allow some form of television coverage of criminal trials."
+430,6,12,"TXT","4",0,0,"*I would urge the removal of cameras from our courtrooms,” Wilson said at a Capitol briefing. ”We have survived the Simpson trial, but there is no reason to be forced to suffer through the theatrics of another ‘trial of the century' in this lifetime,” Wilson said."
+431,6,12,"TXT","5",0,0,"Turning a serious legal proceeding into a circus-like atmosphere is not in the interests of justice or public confidence in the justice system,” Wilson said, adding that television permits"
+432,6,12,"TXT","5",0,0,"*the possible abuse of the process that certainly carries a risk to its integrity.”"
+433,6,12,"TXT","6",0,0,"Wilson declined to talk about the verdict, but his comments suggested he was not pleased with the lengthy trial, which ended Tuesday with Simpson being acquitted of the June 1994 double murder of his former wife Nicole Brown Simpson and her friend Ronald Goldman."
+434,6,12,"TXT","7",0,0,"The governor said it was “particularly distressing” when lawyers “ask jurors to use a verdict as a means of sending a political message to law enforcement.”"
+435,6,12,"TXT","8",0,0,"He was apparently referring to defense attorney Johnnie Cochran Jr.'s closing argiunents in which he urged jurors to combat racism and deception in the Los Angeles Pblice Department by acquitting Simpson."
+436,6,12,"TXT","9",0,0,"California’s top parole official, the chairman of the Board of Prison Harms, suggested that highly paid lawyers can have an undue impact on verdicts."
+437,6,12,"TXT","10",0,0,"“I would say that very aggressive and competent attorneys do know how to utilize and or ex- >"
+438,6,12,"TXT","10",0,0,"ploit the nuances of law,” said chairman Jim Nielsen, who heads the panel that decides parole dates for prisoners sentenced to life."
+439,6,12,"TXT","11",0,0,"The 15-member Judicial Council is headed by the state chief jiutice. It serves as the administrative arm of California’s courts and sets procedural rules."
+440,6,12,"TXT","12",0,0,"Among other things, the council determines the use of cameras in California courtrooms. In 1984, it adopted rules allowing live courtroom television coverage. Prior to that, audio recordings and still photography were allowed, according to the governor’s office."
+441,6,12,"TXT","13",0,0,"It was uncertain whether the council has the authority to adopt rules governing the kinds of closing-argument changes Wilson seeks."
+442,6,12,"TXT","14",0,0,"The Republican governor said California should adopt coiulroom rules similar to those already in effect for federal courts, which preclude live television or audio coverage, and bar cameras and recorders from courthouse corridors."
+443,6,13,"HL","0",0,0,"THE O.J. SIMPSON TRIAL"
+444,6,13,"HL","0",0,0,"BY THE NUMBERS"
+445,6,13,"TXT","1",0,0,"Days Simpson spent in jail: 474"
+446,6,13,"TXT","2",0,0,"Days since jury selection began: 372"
+447,6,13,"TXT","3",0,0,"Days jurors were sequestered: 266"
+448,6,13,"TXT","4",0,0,"Length of deliberations: loss than four hours"
+449,6,13,"TXT","5",0,0,"Number of jurors dismissed: 10"
+450,6,13,"TXT","6",0,0,"Witnesses: doffonso 54; prosocution 99"
+451,6,13,"TXT","7",0,0,"Days of testimony: dofonso 369; prosocution 488"
+452,6,13,"TXT","8",0,0,"Number of times judge pulled the plug on T.V.: 2"
+453,6,13,"TXT","9",0,0,"COST: ••NmcH«4 $9 mIIIIm #»r AaR*l*s County, Includos"
+454,6,13,"TXT","9",0,0,"costs for court and prosocutlont dofonso flguros not avalloblo"
+455,6,13,"TXT","10",0,0,"Amount earned by each of the 12 jurors and two alternates:"
+456,6,13,"TXT","10",0,0,"$1,330 (at $5 a day for timo of soquosftration)"
+457,6,13,"TXT","11",0,0,"Length of official court transcript: moro than 50,000 pagos"
+458,6,13,"TXT","12",0,0,"Fines imposed on defense: $3,000"
+459,6,13,"TXT","13",0,0,"Fines imposed on prosecution: $850"
+460,6,13,"TXT","14",0,0,"Fines imposed on others: $1,800"
+461,6,13,"TXT","15",0,0,"PROSECUTORIAL AND INVESTIGATIVE EXPENSES: $3.6 MILLION SHERIFF'S DEPARTMENT EXPENSES: $2.7 MILLION (includes $1.8 million for round-the-clock jury protection) SUPERIOR AND MUNICIPAL COURT COSTS: $1.9 MILLION (includes $835,000 to feed and house jurors)"
+462,6,13,"TXT","18",0,0,"AUTOPSIES: $100,000 ACCOUNTING COSTS: $21,000 REVENUE TO COUNTY: $266,000"
+463,6,13,"TXT","20",0,0,"for rental of Hall of Justice parking lot space to media outlets."
+464,6,13,"BL","0",0,0,"-Daily Graphic by Wendy Wood	- Associated Press"
+465,6,0,"AT","0",0,3,"The Hair Den"
+466,6,0,"AT","0",0,3,"BARBER & HAIRSTYLING"
+467,0,0,"B","0",0,0,
+468,6,0,"AT","0",0,3,"$9"
+469,0,0,"B","0",0,0,
+470,0,0,"B","0",0,0,
+471,6,0,"AT","0",0,3,"HAIRCUTS"
+472,6,0,"AT","0",0,3,"779 POOTHILt. BLVO. San Luis Oeirso, CA 93405"
+473,6,0,"AT","0",0,4,"Art Prints"
+474,6,0,"AT","0",0,4,"Jewelry"
+475,0,0,"B","0",0,0,
+476,0,0,"NA","0",0,0,"'iJ' Æ ■"
+477,0,0,"NA","0",0,0,"%"
+478,6,0,"AT","0",0,4,"week!"
+479,0,0,"B","0",0,0,
+480,6,0,"AT","0",0,4,"EJCorfd"
+481,7,0,"PI","0",0,0,"MUSTANG DAILY"
+482,7,0,"PI","0",0,0,"WEDNESDAY, (XTOBER 4, 1995"
+483,7,14,"HL","0",0,0,"Clinton hits Congress hard with veto of budget bill"
+484,7,14,"BL","0",0,0,"ly Im Foorabr"
+485,7,14,"BL","0",0,0,"Asodoted Press"
+486,7,14,"TXT","1",0,0,"WASHINGTON — Hitting Congress in its pocketbook,"
+487,7,14,"TXT","1",0,0,"President Clinton vetoed the legislative branch budget Hies-day and told lawmakers he wouldn’t budge imtil they make concessions on a larger spending Though the"
+488,7,14,"TXT","3",0,0,"Leader Bob Dole and House Speaker Newt Gingrich said in a joint statement."
+489,7,14,"TXT","4",0,0,"The White House said Clinton supported the bill and its cuts, but vetoed it as a sign of his frustration over the slow progress of budget deliberations."
+490,7,14,"TXT","4",0,0,"fiscal year began"
+491,7,14,"TXT","1",0,0,"feud"
+492,7,14,"TXT","2",0,0,"Issuing the third veto of his presidency, Clinton rejected a measure that would let Congress spend $2.2 billion this fiscal year — a $200 million reduction from last year’s budget. The move opened Clinton to attack from Republicans."
+493,7,14,"TXT","3",0,0,"*President Clinton has put politics ahead of cutting govern- providing money for military ment spending,” Senate Majority construction projects, including"
+494,7,14,"TXT","4",0,0,"Sunday, only two of 13 spending bills have passed Congress."
+495,7,14,"TXT","5",0,0,"”I don’t think Congress shovild take care of its own business before it takes care of the people’s business,” Clinton said in his veto message."
+496,7,14,"TXT","6",0,0,"In another move aimed at putting Republicans on the defensive, Clinton approved a bill"
+497,7,14,"TXT","6",0,0,"family housing. The approval came despite the measure’s inclusion of $70 million in projects Clinton said amounted to wasteful GOP spending and pointed up the need for a line-item veto."
+498,7,14,"TXT","7",0,0,"Both actions carried political risks for Clinton. In the latest round of political gamesmanship over the budget, the president actually approv^ one bill he said wasted taxpayers’ money and vetoed another that would cut government spending — a bill he said he liked."
+499,7,14,"TXT","8",0,0,"Clinton’s action and the GOP response were the latest tit-for-tat in a war between the White House and Republicans over spending priorities, especially on Medicare, Medicaid, education"
+500,7,14,"TXT","8",0,0,"and the environment."
+501,7,14,"TXT","9",0,0,"The president has threatened to veto eight of the 13 spending bills."
+502,7,14,"TXT","10",0,0,"House Appropriations Committee Chairman Bob Livingston said Clinton had “no substantive grounds for a veto” of the congressional budget."
+503,7,14,"TXT","11",0,0,"*The president can’t have it both ways,"" said Livingston, R-La. “He can’t lecture the Congress on political reform while vetoing the first real effort in 40 years to reform the Congress.”"
+504,7,14,"TXT","12",0,0,"White House aides said the veto carried out a threat Clinton made weeks ago, hoping that it would make Congress look like the selfish party in the budget debate. Approving the military"
+505,7,14,"TXT","12",0,0,"bill gave the president a chance to push again for the line-item veto."
+506,7,14,"TXT","13",0,0,"Clinton said the $70 million in military projects approved by Congress — but not requested by the Pentagon — illustrate why: “The taxpayers’ deserve protection from this kind of wasteful spending.”"
+507,7,14,"TXT","14",0,0,"Republicans made passage of the line-item veto a key part of their campaign “Contract With America” last year. While the House and Senate have passed different versions, negotiators have not yet developed a compromise measure. Democrats contend that the Republicans don’t want to give Clinton that power."
+508,0,0,"NA","0",0,0,"r."
+509,0,0,"NA","0",0,0,"I"
+510,0,0,"NA","0",0,0,"I"
+511,0,0,"NA","0",0,0,"I"
+512,0,0,"NA","0",0,0,"I"
+513,0,0,"NA","0",0,0,"I"
+514,0,0,"NA","0",0,0,"I"
+515,0,0,"NA","0",0,0,"I"
+516,0,0,"NA","0",0,0,"I"
+517,0,0,"NA","0",0,0,"I"
+518,0,0,"NA","0",0,0,"I"
+519,0,0,"NA","0",0,0,"■■"
+520,7,0,"AT","0",0,1,"KONA'S"
+521,7,0,"AT","0",0,1,"SELF"
+522,7,0,"AT","0",0,1,"SERVE"
+523,7,0,"AT","0",0,1,"FROZEN"
+524,7,0,"AT","0",0,1,"YOGURT"
+525,7,0,"AT","0",0,1,"Moke Your Yoaurt CreaHonl We Heveouar 90feppli>yll"
+526,7,0,"AT","0",0,1,"with this coupon"
+527,7,0,"AT","0",0,1,"One coupon per cuitemsr » exp. 10/18/95!"
+528,7,0,"AT","0",0,2,"LAST DAY"
+529,7,0,"AT","0",0,2,"FOR"
+530,7,0,"AT","0",0,2,"textbook"
+531,7,0,"AT","0",0,2,"FRIDAY"
+532,7,0,"AT","0",0,2,"OCTOBER 6"
+533,7,0,"AT","0",0,2,"QQ>nc3jG^Bcx)kstDfe"
+534,7,0,"AT","0",0,4,"UalcnciaW"
+535,7,0,"AT","0",0,4,"Yes, we have a few vacancies! Very few! Call today!"
+536,7,0,"AT","0",0,4,"Where Students Live to Learn!"
+537,7,0,"AT","0",0,4,"555 Ramoiia Dr., San Luis Obisf o 93405"
+538,7,0,"AT","0",0,4,"543-1450"
+539,7,0,"AT","0",0,5,"KAPPA CHI fraternity"
+540,7,0,"AT","0",0,5,"Fall Rush 1995"
+541,7,0,"AT","0",0,5,"TODAY: SOFTBALL AT PACHECO SCHOOL 5-7PM"
+542,7,0,"AT","0",0,5,"(CORNER OE GRAND AND SLACK)"
+543,7,0,"AT","0",0,5,"Come check out the real dirt."
+544,7,0,"AT","0",0,3,"got juice!"
+545,7,0,"AT","0",0,3,"^\ce • /o/cg^"
+546,7,0,"AT","0",0,3,"\jj\ce * yo/cg"
+547,7,0,"AT","0",0,3,"Too"
+548,7,0,"AT","0",0,3,"Downstairs In Dexter"
+549,7,0,"AT","0",0,3,"Mon-Fri 8:30am-4:00pm"
+550,7,0,"AT","0",0,3,"Next to Sandwich Plant"
+551,7,0,"AT","0",0,3,"Mon-Fri 7:30am-3:30pm"
+552,7,0,"AT","0",0,6,"October"
+553,7,0,"AT","0",0,6,"National Pizza"
+554,7,0,"AT","0",0,6,"Month"
+555,7,0,"AT","0",0,6,"Celebrate with a fresh, delicious pizza from"
+556,7,0,"AT","0",0,6,"EACII^"
+557,7,0,"AT","0",0,6,"Sl^CIE"
+558,7,0,"AT","0",0,6,")"
+559,7,0,"AT","0",0,6,"i"
+560,7,0,"AT","0",0,6,"Free.on-campus delivery of 16"" pizza call"
+561,7,0,"AT","0",0,6,"756-4089"
+562,8,0,"AT","0",0,1,"20E"
+563,8,0,"AT","0",0,1,"Rush Schedule"
+564,8,0,"AT","0",0,1,"Wed. 10/4 5pm Climbing and Pizza at U.U. Climbing Wall"
+565,8,0,"AT","0",0,1,"Thur. lO/S 6pm Inquisition B^Q at House"
+566,8,0,"AT","0",0,1,"Sat. 10/7 Upm Sports Day"
+567,8,0,"AT","0",0,1,"Sun 10/8 Stj^e (Invite"
+568,8,0,"PI","0",0,0,"8 WEDNESDAY, OaOBER 4, 1995"
+569,8,0,"PI","0",0,0,"/V\USTANG DAILY"
+570,8,15,"HL","0",0,0,"V.P.’s daughter cited for beer"
+571,8,15,"BL","0",0,0,"ly Sonya Rosi"
+572,8,15,"BL","0",0,0,"Agociotad Piess"
+573,0,0,"NA","0",0,0,"%fir"
+574,8,0,"AT","0",0,1,"For rides and information call 547-1901"
+575,8,15,"TXT","1",0,0,"WASHINGTON — It is distressing for any parent to have a teen-aged child cited by police for drinking. For a high-profile family like Vice President A1 Gore’s, things are hardly helped by having it all played out in public."
+576,8,15,"TXT","2",0,0,"Tipper Gore said Ibesday their 16-year-old daughter, given a ticket last weekend, is wrestling with the public attention as well as ""the severe disappointment of her family and friends and herself.”"
+577,8,15,"TXT","3",0,0,"Sarah Gore was cited Friday in suburban Montgomery County, Md., after a police officer saw her holding an open beer while sitting in a car outside a party. The driver of the car was not drinking."
+578,8,15,"TXT","4",0,0,"Civil citations also were issued to several other juveniles, police say. The maximum penalty for underage possession is $500."
+579,8,15,"TXT","5",0,0,"The family is dealing with Sarah’s situation privately, Mrs. Gore said, “talking to her like all families should to their teenagers about the availability of alcohol and the fact the temptations are out there.”"
+580,8,15,"TXT","6",0,0,"“She broke our rules and she broke the law. She’s extremely miserable and unhappy, I can tell you that,” Mrs. Gore said in an interview on Fox Morning News."
+581,8,15,"TXT","7",0,0,"But Mrs. Gore — a staunch supporter of drug and alcohol education efforts — also lamented the public attention."
+582,8,15,"TXT","8",0,0,"“Not only does she have to deal with the severe disappoint-"
+583,8,15,"TXT","8",0,0,"ment of her family and friends and herself, she has to deal with the news media’s attention too. And she’s only 16 years old,” Mrs. Gore said."
+584,8,15,"TXT","9",0,0,"The Gores’ situation underscores how pervasive teen-age drinking is in America."
+585,8,15,"TXT","10",0,0,"“The vice president and Mrs. Gore are in good company. Literally hundreds of thousand of American households are facing the same problem,” said Doug Hall,' vice president of the Parents Resource Institute for Drug Education."
+586,8,15,"TXT","11",0,0,"According to the National Council on Alcoholism and Drug Dependence Inc., 87 percent of high school seniors have used alcohol, and two-thirds of teenagers who drink say they can buy their own."
+587,8,16,"HL","0",0,0,"Low-fat diet slows prostate cancer"
+588,8,16,"BL","0",0,0,"ly Posi Ree«"
+589,8,16,"BL","0",0,0,"Associoted Press"
+590,8,0,"AT","0",0,2,"All show5.starLatnoon never-CLCOv^r"
+591,8,0,"AT","0",0,2,"and undef-2-l-glwxiy-SJvelcome"
+592,8,0,"AT","0",0,2,"locoted down"
+593,8,0,"AT","0",0,2,"stairs in the University Union next to MePhee’s Gomes Area Hours: lOom- Ppm |m-th lOom- 6pm IFn. Sot) noon- 9pm ISun"
+594,8,16,"TXT","1",0,0,"WASHINGTON — A low-fat diet substantially slowed the growth of prostate cancer in a laboratory experiment and researchers say the findings suggest eating lean could become a key part of treating the disease."
+595,8,16,"TXT","2",0,0,"Researchers at Memorial Sloan-Kettering Cancer Center in New York found that human prostate cancer tumors grew only half as fast in mice eating diets with about 21 percent fat as in those eating diets with about 40 percent fat — the level eaten by many American men."
+596,8,16,"TXT","3",0,0,"A report on the study will appear Wednesday in the Journal of the National Cancer Institute."
+597,8,16,"TXT","4",0,0,"“What we found was astonishing to us,” Dr. William R. Fair of Sloan-Kettering said TViesday. “TVunors didn’t disappear, but the decrease in growth was really impressive.”"
+598,8,0,"AT","0",0,3,"LARGE 16-or Medium 12-Pizza"
+599,8,0,"AT","0",0,3,"ioo8«S.!g?«m2o"
+600,8,0,"AT","0",0,3,"WSlM Rock your Senses"
+601,8,0,"AT","0",0,3,"S at Woodstock’s"
+602,8,0,"AT","0",0,3,"the socio-fiastronomic epicenter, around which ail others quake!"
+603,8,0,"AT","0",0,3,"Treat your body to SLO’s Best Pizzal"
+604,8,0,"AT","0",0,3,"Secret of our Tasty Pies:"
+605,8,0,"AT","0",0,3,"Whole Wheat or White Crust"
+606,8,0,"AT","0",0,3,"mck Zes^ sauce	October Monthly Special"
+607,8,0,"AT","0",0,3,"Mounds of Mozzarella Tons of Toppines Super Low Prices"
+608,8,0,"AT","0",0,3,"„ jSheck Out"
+609,0,0,"NA","0",0,0,"»PFV muR"
+610,8,0,"AT","0",0,3,"8-11 pm Mon-Wed is’^pizza"
+611,8,0,"AT","0",0,3,"EXTRA CHEESE a 'SHROOMS OR PEPPERONI"
+612,0,0,"NA","0",0,0,"=1! v:"
+613,8,0,"AT","0",0,3,"LARGE I6**"
+614,0,0,"NA","0",0,0,"g"
+615,0,0,"NA","0",0,0,"cMfatpapiSK^"
+616,0,0,"NA","0",0,0,")M (Mdwidi oMmt CBOMM W tSV« OM"
+617,8,0,"AT","0",0,3,"LARGE 16«"
+618,8,0,"AT","0",0,3,"NaltoodwUi oAtr opopem crcflkr« one covpoa p«r puzi. ■"
+619,0,0,"NA","0",0,0,"asll/]»M	I"
+620,8,0,"AT","0",0,3,"© Medium12-5-toppine Pizza"
+621,0,0,"NA","0",0,0,"lOOOHlRuera 541-4420"
+622,0,0,"NA","0",0,0,"NMfoodwMi otfNi ooiipm ar aAm ant «apea (Mr piai."
+623,0,0,"NA","0",0,0,"____________cq)ll/t5<95_______"
+624,0,0,"NA","0",0,0,"r."
+625,8,16,"TXT","5",0,0,"Prostate cancer generally is slow growing, said Fair, and if it can be slowed even more “then it is possible that many men wouldn’t need anything more than dietary manipulation.”"
+626,8,16,"TXT","6",0,0,"Most prostate cancers develop around the age of 60, said Fair, and “if we are able to a tell a 60-year-old that he could do something to slow growth of the cancer for 30 years, that’s the same as a cure for most men.”"
+627,8,16,"TXT","7",0,0,"In the mouse study. Fair and his colleagues ii\jected human róstate cancer cells into special aboratory mice that can grow human cancers. The mice, at the time, were being fed a com oil diet that included 40.5 percent fat, about the same fat content in the diet of the average American male adult."
+628,8,16,"TXT","8",0,0,"Once the prostate cancer tumors started growing in the mice, the animals were divided into four groups and each group started receiving different levels of fat, ranging from a high o( 40.5 percent to a low of 2.3 percent fat per calorie."
+629,8,16,"TXT","9",0,0,"After 11 weeks, the mice were killed and tumor growth was measured. Blood chemistry from"
+630,8,16,"TXT","9",0,0,"the animals was also compared."
+631,8,16,"TXT","10",0,0,"Himor growth was 2^2 times greater in mice on the high-fat ffiet than for mice on the lowest-fat diet. For mice on a 21.2 percent fat diet, the tumor growth was about half that of the mice on the highest-fat diet."
+632,8,16,"TXT","11",0,0,"Fair said the difference also was reflected in tested levels of prostate specific antigen, or PSA, in the rodents’ blood. High levels of PSA are often indicative of cancer growth."
+633,8,16,"TXT","12",0,0,"Mice on the leanest diet had PSA counts about 35 percent of the level of mice on the high-fat diets."
+634,8,16,"TXT","13",0,0,"Dr. J. Michael Gaxiano and Dr. Charles H. Hennekens, both of Harvard Medical School, said in a Journal editorial that the findings “have contributed important and relevant data to an emerging body of evidence on dietary fat and risk of prostate cancer.”"
+635,8,16,"TXT","14",0,0,"They said the studies raise the possibility that diet can play a role in both the prevention and treatment of prostate cancer, but warned that the findings have to be verified in human clinical trials."
+636,8,0,"AT","0",0,3,"Get Flvin* FREE Delivery!"
+637,8,0,"AT","0",0,4,"Menjw^ n"
+638,0,0,"NA","0",0,0,"Chiu^&Aii"
+639,0,0,"NA","0",0,0,"0b-9:rò;"
+640,8,0,"AT","0",0,4,"#edr#lay"
+641,8,0,"AT","0",0,4,"í'í>ool & P&á"
+642,8,0,"AT","0",0,4,"'j^Phees*# 8:^-tO:bOpm- Ì"
+643,0,0,"NA","0",0,0,"Sa"
+644,8,0,"AT","0",0,4,"^Invite/Only ^"
+645,0,0,"NA","0",0,0,"1 :Q0£ua[i-^0^4^"
+646,0,0,"NA","0",0,0,"-Poriiai"
+647,0,0,"NA","0",0,0,"M^dÄ^lub"
+648,0,0,"NA","0",0,0,"00-l0\0mm"
+649,0,0,"NA","0",0,0,"aj"
+650,8,0,"AT","0",0,4,"Interviews' t^nly"
+651,0,0,"NA","0",0,0,"@^e/6fd"
+652,0,0,"B","0",0,0,
+653,8,0,"AT","0",0,4,"For ria^s o//Info Mike Flip^./.....546-9061"
+654,0,0,"B","0",0,0,
+655,9,0,"PI","0",0,0,"MUSTANG DAILY"
+656,9,0,"PI","0",0,0,"WEDNESDAY, OaOBER 4, 1995	9"
+657,9,17,"HL","0",0,0,"Firefighters burned by budget cuts"
+658,9,17,"BL","0",0,0,"Asiodatwl PrMi"
+659,9,17,"TXT","1",,,"LOS ANGELES — The U.S. Forest Service has laid off hundreds of seasonal firefighters at the height of Southern California's fire season, leaving some officials worried about the agency’s ability to battle forest blazes."
+660,9,17,"TXT","2",,,"More than 130 temporary firefighters, who typically are hired to beef up crews from May to November, were laid off this week in the Angeles National Forest, as the start of the fiscal year forced forest officials to plan for an expected $2 million budget cut, officials said."
+661,9,17,"TXT","3",,,"In the San Bernardino National Forest, about 120 temporary firefighters were laid off, and similar layoffs were reported in the Los Padres and Cleveland National Forests."
+662,9,17,"TXT","4",,,"The layoffs will mean that engine companies will respond to fires with three-person rather than five-person crews and fire"
+663,9,17,"TXT","4",,,"stations will no longer operate seven days a week but will cover the forests on an overlapping five-day-a-week schedule. In ad-' dition, U.S. Forest Service firefighters will rely more heavily on help from municipal and county fire departments."
+664,9,17,"TXT","5",,,"Forest officials said the layoffs are risky."
+665,9,17,"TXT","6",,,"The key in wild-land forest management, as we say, is Tlit 'em hard and keep 'em small,’” said Angeles Forest fire management officer Tom Harbour. *If you hit a fire hard at the beginning, it won’t become a danger to anyone but the firefighters. It’s when a fire escapes that it causes problems.... And as far as what’s going to happen vdth fires escaping, well, that’s going to be a crapshoot now.”"
+666,9,17,"TXT","7",,,"Forest Service officials in Washington blamed a lack of planning at the national forest level for the sudden personnel"
+667,9,0,"AT","0",0,1,"I IMVO LVE O?"
+668,9,0,"AT","0",0,1,"Student"
+669,9,0,"AT","0",0,1,"Representatives Needed for University Committees and ASI Executive Staff Subcommittees"
+670,9,0,"AT","0",0,1,"Cal Poly Plan - Student Committee Athletics Governing Board Camp^s Dining Advisory Committee Long^ange Planning Committee Status of Women Committee El Corral Advisory Committee Curriculum Committee Budget Committee Greek Relations Subcommittee Equal Opportunity Advisory Council and many more."
+671,9,0,"AT","0",0,1,"Information and applications in the ASI Executive Staff Office, UU 2I7A. or call 756-1291 Applications needed bv Friday, October 6, 1995, at noon."
+672,9,0,"AT","0",0,1,"Paid for by El Corral Bookstore and Associated Students, Inc."
+673,9,0,"AT","0",0,2,"all that glitters ii"
+674,0,0,"B","0",0,0,
+675,0,0,"B","0",0,0,
+676,9,0,"AT","0",0,2,"We buy used jewelry"
+677,9,0,"AT","0",0,2,"A Custom Designing A Financing Available A Specializing In Wedding Rings A Jewelry Repair While You Wait A Watch Batteries & Watch Repair"
+678,9,0,"AT","0",0,2,"▼ 544-4367 V"
+679,9,0,"AT","0",0,2,"Mon. - Sat. 10-5:30 • Closed Sundays 279D Madonna Rd. Plaza • San Luis"
+680,9,17,"TXT","7",0,0,"cuts."
+681,9,17,"TXT","8",0,0,"Southern California forests have some of the biggest budgets in the Forest Service, said Harry Croft, assistant director for planning in the service's fire and aviation department."
+682,9,17,"TXT","9",0,0,"But a substantial amount of their funding year after year has been lost to high overhead costs, such as support staff and high rents, he said. Washington has warned Southern California officials to curb their overhead costs, ""but a lot of the line officers have either been in denial or reluctant to look at the issue,” Croft said."
+683,9,17,"TXT","10",0,0,"Harbour and others dispute this claim, saying the real problem stems from budget tightening at the federal level, increases in the cost of leasing firefighting equipment, changes in the way federal money has been spread among California’s national forests by the Forest Service’s regional office in San Francisco and a change in the rules regarding use of a special emergency fire fund."
+684,9,18,"HL","0",0,0,"Panhandle braces for Opal"
+685,9,18,"BL","0",0,0,"ly tin Koaor"
+686,9,18,"BL","0",0,0,"Associoted Piess"
+687,9,18,"TXT","1",0,0,"PENSACOLA, Fla. — With her roof still leaking Tuesday, two months after Hurricane Erin, Lisa Rosen didn’t plan to stick around for Opal as the season’s ninth hurricane headed toward the northeastern Gulf of Mexico."
+688,9,18,"TXT","2",0,0,"Erin tore off most of the roof from Rosen’s beachfront home. Plastic sheeting still flapped thunderously in the wind as a squall hit Itiesday."
+689,9,18,"TXT","3",0,0,"The house is livable but it leaks like mad,” said Rosen. It can’t take another beating, and I sure don’t want to be around to witness it.”"
+690,9,18,"TXT","4",0,0,"Rosen and her 7-year-old daughter rode out Erin at a hotel in Pensacola. For Opal they made a reservation farther inland, in Atlanta."
+691,9,18,"TXT","5",0,0,"This could very well be the worst system of the year for us,” said state meteorologist Mike Rucker in Tallahassee."
+692,9,18,"TXT","6",0,0,"A hurricane watch extended from Morgan City, La.,"
+693,9,18,"TXT","6",0,0,"eastward across the Florida Panhandle to the mouth of the Suwannee River on Florida’s northwest Gulf Coast."
+694,9,18,"TXT","7",0,0,"Opal had passed over Mexico’s Yucatan Peninsula, killing at least 10 people and leaving 20 missing, and causing flooding that drove more than 20,000 people from their homes in Campeche state."
+695,9,18,"TXT","8",0,0,"By late Tiesday afternoon it was centered about 380 miles south-southwest of the mouth of the Mississippi River, with maximum sustained wind about 100 mph, and its moisture had spread into the northeast-central Gulf Coast region."
+696,9,18,"TXT","9",0,0,"It already had caused coastal flooding in southern Texas. Workers were evacuated from offshore drilling rigs near Alabama’s Dauphin Island and elsewhere along the coast as gusty thunderstorms moved in."
+697,9,18,"TXT","10",0,0,"Residents of low-lying areas of far southern Louisiana also headed to higher ground."
+698,9,18,"TXT","11",0,0,"An abundance of caution is needed,” said Clyde Giordono,"
+699,0,0,"NA","0",0,0,"iili"
+700,0,0,"B","0",0,0,
+701,0,0,"NA","0",0,0,"lili"
+702,0,0,"B","0",0,0,
+703,0,0,"NA","0",0,0,"Ì ,.v'"
+704,0,0,"B","0",0,0,
+705,9,0,"AT","0",0,3,"(One out of 4 ain't bad.)"
+706,0,0,"NA","0",0,0,"mill"
+707,0,0,"NA","0",0,0,"!l!"
+708,0,0,"NA","0",0,0,"iitlili:"
+709,0,0,"NA","0",0,0,"yiliilidllil:"
+710,0,0,"NA","0",0,0,"liHiipiliii:"
+711,0,0,"B","0",0,0,
+712,0,0,"B","0",0,0,
+713,0,0,"NA","0",0,0,"if'"
+714,0,0,"NA","0",0,0,"*■"
+715,0,0,"NA","0",0,0,"II"
+716,0,0,"NA","0",0,0,"L*- e- V"
+717,0,0,"B","0",0,0,
+718,0,0,"B","0",0,0,
+719,0,0,"NA","0",0,0,"Im’iiiii"
+720,0,0,"B","0",0,0,
+721,0,0,"B","0",0,0,
+722,0,0,"B","0",0,0,
+723,0,0,"B","0",0,0,
+724,0,0,"NA","0",0,0,"r '"
+725,0,0,"B","0",0,0,
+726,0,0,"B","0",0,0,
+727,0,0,"NA","0",0,0,": t."
+728,0,0,"NA","0",0,0,"■l-'-"
+729,0,0,"NA","0",0,0,"iUt"
+730,9,0,"AT","0",0,3,"WITH ANY jANSPORT PURCHASE DURING jANSPORTWEEK"
+731,9,0,"AT","0",0,3,"(WHILE SUPPLIES LAST)"
+732,9,0,"AT","0",0,3,"OCTOBER 2-OCTOBER 6"
+733,0,0,"NA","0",0,0,"IlMliil-li'"
+734,0,0,"NA","0",0,0,"Ml I '	I'll i “ 'I"
+735,0,0,"NA","0",0,0,"iEloSmE"
+736,0,0,"B","0",0,0,
+737,0,0,"B","0",0,0,
+738,0,0,"NA","0",0,0,"' V. ■ ■ k ."
+739,0,0,"NA","0",0,0,"V	■	."
+740,0,0,"NA","0",0,0,"•*' -»V •	«Nk «<■ VW	- 1-"
+741,10,0,"AT","0",0,1,"Dexter^s not his usual self."
+742,10,0,"AT","0",0,1,"You suspect the salsa."
+743,10,0,"AT","0",0,1,"So you call Dt, IWtiSblcitt, your family vet back home."
+744,10,0,"AT","0",0,1,"The call is cheap,"
+745,10,0,"AT","0",0,1,"CToO bad about the COtlSUltUtion fee.)"
+746,10,0,"AT","0",0,1,"Si^n up for /Vl&r True Reach Savings'""' and save 25%"
+747,10,0,"AT","0",0,1,"no matter who, how, when or where"
+748,10,0,"AT","0",0,1,"you call in the T.S."
+749,10,0,"AT","0",0,1,"Life can be complicated. ATXT True Reach Savings^ is simple. Save 25% on every kind of call on your AT&T phone bill-direct dial, c'alling card, directory assistance, local toll, cellular, fax and modem -wtien you spend just $25 a monthf No other plan gives you all these different ways to save?*"
+750,10,0,"AT","0",0,1,"Just call 1800 TRUE-ATT to sign up. Save on every call. That’s Your True Choice?*"
+751,10,0,"AT","0",0,1,"AT&T"
+752,10,0,"AT","0",0,1,"Your True Choice"
+753,10,0,"AT","0",0,1,"•Rcfcni lo kw distance calls hilled tn ATST home or ATST Calling Card accounts. Discounts off ATIStT ha.sic rates. Certain exchisions apply Subject to hilling availability Offer available to residential AT&T customers: Minimum .spending requirement is per residential line “Compared to major lor^ distance carriers."
+754,10,0,"AT","0",0,1,"C 1995 ATST"
+755,11,0,"PI","0",0,0,"MUSTANG DAILY"
+756,11,0,"PI","0",0,0,"WEDNESDAY, OOOBER 4, 1995	11"
+757,11,19,"HL","0",0,0,"SECONDARY; System gives defense the edge"
+758,11,19,"ME","0",-12,0,"From page 12"
+759,11,19,"TXT","18",0,0,"James said the new defensive system, which implements zone coverage and mixes up defensive play calling, gives the secondary an advantage that they didn’t have last year."
+760,11,19,"TXT","19",0,0,"“When you’re lining up, playing bump *n run, it’s very tiring for the comers,” said Lombardi, speaking of last year’s defensive system."
+761,11,19,"TXT","20",0,0,"The new defensive system is not the only reason for their improvement. With the addition of Davis, who came to Cal Poly from Oregon State, where he red shirted for one year, the secondary gained speed and toughness."
+762,11,19,"TXT","21",0,0,"“He’s a big guy,” Lombardi said. “He can come in and lay a hit, and he’s got the athletic ability to cover guys.”"
+763,11,19,"TXT","22",0,0,"Patterson said that Davis’ potential is great. Davis hasn't played football since he"
+764,11,19,"TXT","22",0,0,"graduated from high school two years ago."
+765,11,19,"TXT","23",0,0,"“We haven’t seen how good he can be,” Patterson said. “He’s only just starting to get better.”"
+766,11,19,"TXT","24",0,0,"But without the leadership and the consistent play of Brown, who has NFL scouts coming to Cal Poly to watch video tape, the secondary wouldn’t be where it is now."
+767,11,19,"TXT","25",0,0,"Both Lombardi brothers said that Brown adds inspiration and leadership to the team. Just showing little tricks on the field that James didn’t know before help him improve his game every day."
+768,11,19,"TXT","26",0,0,"With the second half of the season starting Saturday at Southern Utah, the secondary looks to make an impression. They want to be considered as the best secondary in the AWC."
+769,11,19,"TXT","27",0,0,"“We’re pretty confident that well be the best in the AWC,” David said."
+770,11,0,"SH","0",0,0,"Sports"
+771,11,20,"HL","0",0,0,"Cal Poly football out of conference"
+772,11,20,"HL","0",0,0,"Big Sky Conference accepts CSU Sacramento, CSU Northridge"
+773,11,20,"BL","0",0,0,"Assodotsd Presi"
+774,11,20,"TXT","1",0,0,"The Big Sky Conference on Hiesday accepted the bids by California State-Sacramento and California State-Northridge to join the league."
+775,11,20,"TXT","2",0,0,"The conference’s Presidents Council voted unanimously to make the universities members-elect. Theyll begin competing in the conference next year."
+776,11,20,"TXT","3",0,0,"The Big Sky will then grow to a nine-member conference. Portland State, admitted last May, will join the conference, while Boise State and the University of Idaho will leave for the Big West Conference in July."
+777,11,20,"TXT","4",0,0,"Big Sky Commissioner Doug Fullerton said a committee had visited both campuses and the"
+778,11,20,"TXT","4",0,0,"presidents there had agreed to meet certain requirements."
+779,11,20,"TXT","5",0,0,"“While we plan to have all three schools begin play as early as 1996, this has become somewhat tricky because of the existing contracts the schools have with other institutions,” Fullerton said."
+780,11,20,"BQT","0",0,0,"It was logical for the league to expand into California, allowing us to enjoy quality conference competi* tion in a way that makes geographical sense."
+781,11,20,"BQA","0",0,0,"Marshall E. Drummond"
+782,11,20,"BQA","0",0,0,"Chairman of the Big Sky Presidential"
+783,11,20,"BQA","0",0,0,"Council"
+784,11,20,"TXT","6",0,0,"Marshall E. Drummond, chairman of the president’s coun-"
+785,11,20,"TXT","6",0,0,"cil, said the continuing conference members are enthusiastic. “This will be good for the Big Sky and provide stability,” said Drummond, president of Eastern Washington University."
+786,11,20,"TXT","7",0,0,"“It was logical for the league to expand into California, allowing us to enjoy quality conference competition in a way that makes geographical sense,” he said."
+787,11,20,"TXT","8",0,0,"Fullerton said that with the league’s 60-plus scholarship base, “... both Sacramento and Northridge will be very competitive in football, much like they already are in other sports.”"
+788,11,20,"TXT","9",0,0,"After the changes next summer, the Big Sky will include Portland State, Northridge, Sacramento, Eastern Washington, Idaho State, Montana, Montana State, Northern Arizona and Weber State."
+789,11,0,"OT","0",0,0,"SPJ MEMBERS"
+790,11,0,"OT","0",0,0,"MMlIngt êvêfy Wednesday O 11am ConipiXer Science Bldg (14) Rm 252"
+791,11,0,"OT","0",0,0,"UNDERGRAD LAW ASSN"
+792,11,0,"OT","0",0,0,"Thure 10/5,1M2pm, Bldg 10-241"
+793,11,0,"OT","0",0,0,"ROW i CAL POLY CREW ORIENTATION"
+794,11,0,"OT","0",0,0,"Ocl. 3rd & 4th 7pm Bldg 53 Rm 213 For Info Call Ertk 541-3246"
+795,11,0,"OT","0",0,0,"H20 SKI TEAM"
+796,11,0,"OT","0",0,0,"Slalom, Jump and Trick Sking, Men aral Women of al levels welcome. For more Mo. call Cel 54S-7624"
+797,11,0,"OT","0",0,0,"/.ti ll I 11 (»iiil iT-Í11"
+798,11,0,"OT","0",0,0,"FARMHOUSE RUSH ’95"
+799,11,0,"OT","0",0,0,"Monday:Huge BBQ 6pm Tues.:Female Entertalnmert 7pm Wedrwsday:NlgM Out 0pm Thursday:!rap Shoot 6pm Frtday:Martly Night & BBQ 5pm All events meet at ^Circle or FARMHOUSE 1020 O'Connor Way Cell Nathan 545-0532 4 rides"
+800,11,0,"OT","0",0,0,"MUSTANG DAILY..."
+801,11,0,"OT","0",0,0,"ONCE AGAIN LEADING THE WAY"
+802,0,0,"B","0",0,0,
+803,11,0,"OT","0",0,0,"ATTENTION FOB"
+804,11,0,"OT","0",0,0,"You are the BEST BIQQEST REDDEST TOMATOES. Keep Smilngll"
+805,11,0,"OT","0",0,0,"ZOE"
+806,11,0,"OT","0",0,0,"FALL RUSH 1005"
+807,11,0,"OT","0",0,0,"MON 10/2 6PM BBQ W/ACn • HOUSE TUE 10/3 6PM SOUTH OF THE BORDER"
+808,11,0,"OT","0",0,0,"•	HOUSE"
+809,11,0,"OT","0",0,0,"WED 10/4 5PM CLIMBING A PIZZA • UU THU 10« 6PM MQUISmON BBQ"
+810,11,0,"OT","0",0,0,"•	HOUSE"
+811,11,0,"OT","0",0,0,"SAT 10/7 12PM SPORTS DAY • HOUSE SUN 10« SMOKER (INVITE ONLY) FOR INFO 547-1001"
+812,11,0,"OT","0",0,0,"KAPPA SIGMA FALL RUSH"
+813,11,0,"OT","0",0,0,"THURS • MCPHEE'S PIZZA & GAMES 4pm • The University Union SAT - SPORTS C>AY 1pm - Saria Rosa Park"
+814,11,0,"SH","0",0,0,"CLASSIFIED"
+815,0,0,"B","0",0,0,
+816,11,0,"OT","0",0,0,"TO AOmTISE IH MU5TAHG DAIL Y (lASSIFIEDS, CALL 756 / Ì43"
+817,0,0,"B","0",0,0,
+818,11,0,"OT","0",0,0,"AXA RUSH"
+819,11,0,"OT","0",0,0,"WED: 10M TRFTIP BBQ O AXA 1617 SANTA ROSA 6:00P.M."
+820,11,0,"OT","0",0,0,"THUR: 10« SMOKER«LIOE SHOW AT SANDWICH PLANT SEMI-FORMAL 7:00PM SAT: 10/7 CASUAL NIGHT AT AXA 1617 SANTA ROSA 5;00P.M."
+821,11,0,"OT","0",0,0,"FOR RIDES OR INFO:541-5251"
+822,11,0,"OT","0",0,0,"PIKE RUSH!!"
+823,11,0,"OT","0",0,0,"WED-10/4 Pool & Pins w/ PIKES OMcPhee's Games Area 8:00pm FRhlO/6 Seml-Foimal with KA0 O Monday Club 7:00pm r-10/7 Sports BBQ"
+824,11,0,"OT","0",0,0,"8AT-"
+825,11,0,"OT","0",0,0,"(Invle Only) SUN-10/8 Interviews (InvRe Only) MON-10« Fireside (Invle Only)"
+826,11,0,"OT","0",0,0,"RUSH AY"
+827,11,0,"OT","0",0,0,"Wed-SororRy&SIkJes UU219 8pm Frt-House Touts 720 Foothll Sat-Dunes Day 11am Meet O SurvSmokar By Invite Any Questions Cal 544-9842"
+828,11,0,"OT","0",0,0,"BETA RUSH TRI-TIP BBQ"
+829,11,0,"OT","0",0,0,"Thursday Beta house 7p.m."
+830,11,0,"OT","0",0,0,"BBQ"
+831,11,0,"OT","0",0,0,"with Gamma Phi Bata sororty Saturday 12noon"
+832,11,0,"OT","0",0,0,"SMOKER"
+833,11,0,"OT","0",0,0,"IrwRe only"
+834,11,0,"OT","0",0,0,"GO BETA!!!!"
+835,11,0,"OT","0",0,0,"SIGMA PI"
+836,11,0,"OT","0",0,0,"RUSH"
+837,11,0,"OT","0",0,0,"WED: 6:30-8«0 CASINO • AVENUE W/A0 SORORITY FRI: S-7PM SMOKER • JX HOUSE SAT: 12-3PM SPORTS • SANTA ROSA SUN: S-7PM PREF DINNER (INVITE) CALL S44«574 OR S44-2S2S IF YOU HAVE ANY QUESTIONS."
+838,11,0,"OT","0",0,0,"RUSH zn"
+839,11,0,"OT","0",0,0,"TKE RUSH"
+840,11,0,"OT","0",0,0,"COME MEET THE BROS SINK A SUB « OSOS ST SUBS WED 6-8"
+841,11,0,"OT","0",0,0,"BBQ W/BROS O MOTT GYM THUR 5-7 CAMELOT PARK INVITE SAT"
+842,0,0,"B","0",0,0,
+843,11,0,"OT","0",0,0,"LACROSSE COACH WANTED Women's Lacrosse Team looking for an experienced coach. Call 594-0278"
+844,0,0,"NA","0",0,0,"iCii’idl"
+845,11,0,"OT","0",0,0,"—FREE TRIPS &CASH— Find out how hundreds of Students are already earning FREE TRIPS and LOTS OF CASH"
+846,11,0,"OT","0",0,0,"with America's #1 Spring Break psan"
+847,11,0,"OT","0",0,0,"free! Choose Cancún,"
+848,11,0,"OT","0",0,0,"Spring Bn"
+849,11,0,"OT","0",0,0,"companyl Sell only 15 trps and il fre< ■ “"
+850,11,0,"OT","0",0,0,"travel I"
+851,11,0,"OT","0",0,0,"Bahamas, Mazatlan, or Flortdal CALL NOW! TAKE A BREAK STUDENT TRAVEL (800) 95-BREAK"
+852,0,0,"B","0",0,0,
+853,11,0,"OT","0",0,0,"SCORE MORE!! GMAT 72 Pts GRE 214 Pts LSAT 7.5 Pts"
+854,11,0,"OT","0",0,0,"Princeton Review (805) 995-0176"
+855,11,0,"OT","0",0,0,"HUNDREDS A THOUSANDS OF GRANTS A SCHOLARSHIPS Available to All StudentsTI Immediate Quallflca-tloa CaH 800-270-2744 ToU Free"
+856,11,0,"OT","0",0,0,"FINANCIAL AID FOR COLLEGE!"
+857,11,0,"OT","0",0,0,"We heto you IItkI the money you need tor colege. Cal Golden Gate Computer Services for recorded message and details. 1-600-479-8333"
+858,0,0,"B","0",0,0,
+859,11,0,"OT","0",0,0,"CASH PAID FOR USED CO‘8,TAPE8.6 LP'S CHEAP THRXLS AND RECYCLED RECORDS 563 HIGUERA NEW RELEASE CD'S ONLY S12J6 OfRÉN M-SAT TO 8"
+860,11,0,"OT","0",0,0,"STUDENTS • BORED OF HOMEWORK? Have fun w/your PC. Order luly Meractlve AduN CO ROMs or videos. Send forisi of Rems 6 prices for 1 thin dotar."
+861,11,0,"OT","0",0,0,"P.O. Box 1382 Cambria, CA 93428"
+862,11,0,"OT","0",0,0,"CASH FOR COMICS 6 GAMING fTEMS~~ NEW COMICS THURSDAY MORNINGSI NEW GAMES WEEKLY. THE SUB COMICS GAMES S POSTERS 785 MARSH 541-3735"
+863,11,0,"OT","0",0,0,"GOT SOMETHIN’ TO SELL?"
+864,11,0,"OT","0",0,0,"Put N In the Mustang Dally and GET RESULTSI"
+865,0,0,"B","0",0,0,
+866,11,0,"OT","0",0,0,"IIICAUTIONIII"
+867,11,0,"OT","0",0,0,"Make No Investments Or Provide Banking or CredI iriormation WRhout Investigating Advertisements In The Opporiunlies Section"
+868,11,0,"OT","0",0,0,"BARTENPEHTBAINEE5NEEPEPI"
+869,11,0,"OT","0",0,0,"International Bartenders School wll be In town 1 week only Day /Ova classes Job plaoemsnl asst. Nationwide or local-eam to $20/hr Call today-Umled seating-Eam $ and have funll 800-8^109"
+870,11,0,"OT","0",0,0,"CASH FOR COLLEGE 900,000 GRANTS AVAIL. No re-payment - EVERI Qually Immed. 1(800)243-2435"
+871,11,0,"OT","0",0,0,"LEARN TO BE A TRAVEL AGENT!! Have fun and a career."
+872,11,0,"OT","0",0,0,"Reduced rate travel!"
+873,11,0,"OT","0",0,0,"Sal classes Cal now! 781-2630"
+874,11,0,"OT","0",0,0,"$1750 Weekly Posst>le mating our circulars. For Into cal; 301-306-1207"
+875,0,0,"B","0",0,0,
+876,11,0,"OT","0",0,0,"CPTV"
+877,11,0,"OT","0",0,0,"Business manager needed lor Campus TV station. Drop off resume In joumalsm office, building 26-228. No piw. For mors Into, cal 756-2^8."
+878,11,0,"OT","0",0,0,"BASKETBALL"
+879,11,0,"OT","0",0,0,"COACHES"
+880,11,0,"OT","0",0,0,"SLO PARKS AND REC DEPT IS LOOKING FOR VOLUNTEER COACHES FOR STUDENTS AT LAGUNA JR HIGH OCT 16-DEC 1 CALL RYAN OR MIKE AT 781-7282"
+881,11,0,"OT","0",0,0,"Seek FretKh tutor tor hg. s^ student, cal 541-0734. Lv mess"
+882,11,0,"OT","0",0,0,"Surfboard Laminator needed. Must have experience. CALL US AT 528^1."
+883,11,0,"OT","0",0,0,"HEARST CASTLE IS NOW ACCEPTINQ APPLICATIONS for trainee posUons."
+884,11,0,"OT","0",0,0,"Hourly rales are $6.81-$10.35. Employee must be available lo work summers, weekends, and holidays. Appicants must be able to apeak before large groups of people."
+885,11,0,"OT","0",0,0,"The Callomia parks system Is an E.O.E. employer. InlormatlorMU workshops wll be corxkjcled October 11S12, 1995 at the student services building In room 210. Cal Bruce Brown Ocl. 6 thru 9 between 10:00am and 3:30 pm. only, at 805-927-2086 lor an appointment. APPLICATION DE/^INE IS OCT. 21,1995"
+886,11,0,"OT","0",0,0,"Surfboard Ding needed. Must have"
+887,11,0,"OT","0",0,0,"CALL US AT 528-8961."
+888,0,0,"NA","0",0,0,"•i ^"
+889,0,0,"NA","0",0,0,"gJC"
+890,11,0,"CT","0",0,0,"IT'S k BEkUTIWL kFTtRH0C»4.' m HOT GOING TO XkSTE \T Doing WDIOJLOOS B^JS'(y(0RK POR .___ SOtoOL.' „"
+891,0,0,"NA","0",0,0,"V'"
+892,0,0,"NA","0",0,0,"r"
+893,11,0,"CT","0",0,0,"BUT Tms WOUO) BE ONE LESS LEAF YOU'D HEED TO collect later"
+894,0,0,"NA","0",0,0,"»"
+895,11,0,"CT","0",0,0,"TEAM. But its ONE Mon leaf THAN I NEED RitaiT NON"
+896,0,0,"NA","0",0,0,"A*"
+897,0,0,"B","0",0,0,
+898,11,0,"CT","0",0,0,"90MENOW. ITS ALYJAYS R\GUT NON UNTIL \TS LATER"
+899,0,0,"B","0",0,0,
+900,11,0,"CT","0",0,0,"NNATEVER rm WEANS"
+901,0,0,"B","0",0,0,
+902,0,0,"B","0",0,0,
+903,0,0,"NA","0",0,0,"Bl.òTOéMll"
+904,11,0,"OT","0",0,0,"Archleclural Career Opporiunlies wRh Cottle Qraybeal Yaw Archlects Arnerican Institute of Archlects Western Region Firm Of The Year. Offices in Telluride arxl Aspen with projects In most major ski resorts. Wll rrudce commiment to Project Architect with technical ability to coordinate largo-scale commercial, detailed custom resktonllal, fast-track constnjction and high design starrdards. Wll provide chalenging teaming environment lor DranspersorVJob Captain working toward archleclural Icense. Must be CADD llerate and hold 5 year/graduate degree In /Vchlecture. Please send resume I Archlects,"
+905,11,0,"OT","0",0,0,"East Hyman Ave, Aspen, CO 81611"
+906,11,0,"OT","0",0,0,") tw Oct. 30 to GCY I, Attn; Jem Carr, 510"
+907,11,0,"OT","0",0,0,"CRUISE SHIPS HIRING Earn up to $2,000 ♦ month. World Travel, Seasonal & full-time poslions. No exp necessary."
+908,11,0,"OT","0",0,0,"For Intormatlon cal: 1-206-634-0468 ext C60051"
+909,11,0,"OT","0",0,0,"RESORT JOBS Students needed! Earn lo $12/hr * tips. Theme Parks, Hotels, Spas ♦ rrwre. Destinations IrKiude Florida, Hawal, Colorado, ♦ So. CaM. Call Resort Employmenl Services 1-206-632-0150 ext. R60051"
+910,11,0,"OT","0",0,0,"SCrulse ships hiring! $$S ♦ Free Travel (Caribbean, Europe, Hawal!) Seasonal/Permanerl, No exper. necessary. Guide. 919-929-4396 ext C1043"
+911,11,0,"OT","0",0,0,"SKI RESORT HIRING Ski resorts are now hiring for many postions this wlrker. Up to $2,000 ♦ In salary ♦ berMfls Call Vertical Employmenl Group: (206)634-0469 ext. V60051"
+912,0,0,"B","0",0,0,
+913,11,0,"OT","0",0,0,"Surfer Roommatee Nonemokera"
+914,11,0,"OT","0",0,0,"Loe Oeoe House wlh garden Cuesta by the Sea-581 Michel Dr Right on Pine doubts $141 single ^4 Ist&last Ftelcher 534-1430-snowboarde:"
+915,11,0,"OT","0",0,0,"FREE LIST OF ALL HOUSES iTcONDOS FOR SALE IN SLO. Farrel Smyth R/E Steve Nelson -•543-8370*“"
+916,0,0,"NA","0",0,0,"esiäfflSü]"
+917,11,0,"OT","0",0,0,"Carrie/Karl?!"
+918,11,0,"OT","0",0,0,"wAhe whle Ford Escort. Met U In checksland O Madonna Lucky's on 10/1.Call Jon O 781-9816"
+919,0,0,"B","0",0,0,
+920,12,0,"PI","0",0,0,"12 TUESDAY, GOOBER 4, 1995"
+921,12,0,"SH","0",0,0,"SPORTS"
+922,12,0,"PI","0",0,0,"MUSTANG DAILY"
+923,12,0,"SH","0",0,0,"SPORTS"
+924,12,0,"SH","0",0,0,"bIaIr"
+925,12,0,"OT","0",0,0,"A TAVERN OF SPORTS NEWS"
+926,12,0,"OT","0",0,0,"SCORES"
+927,12,0,"OT","0",0,0,"VOLLEYBALL"
+928,12,0,"OT","0",0,0,"Cal Poly...............3"
+929,12,0,"OT","0",0,0,"USF....................1"
+930,12,0,"OT","0",0,0,"SCHEDULE"
+931,12,0,"OT","0",0,0,"TODAY’S GAMES"
+932,12,0,"OT","0",0,0,"•	Volleyball vs. St. Mary’s @ St. Mary’s, 7:00 p.m."
+933,12,0,"OT","0",0,0,"TOMORROW’S GAMES"
+934,12,0,"OT","0",0,0,"•	There are no games tomorrow"
+935,12,0,"SH","0",0,0,"iPOLYMB"
+936,12,21,"HL","0",0,0,"Golden State Warrior training camp starts this Friday"
+937,12,21,"TXT","1",0,0,"If you haven't heard already, the Golden State Warriors are coming to Cal Poly this weekend."
+938,12,21,"TXT","2",0,0,"For the first time since 1987, the Warriors are holding their training camp outside of the Bay Area."
+939,12,21,"TXT","3",0,0,"The team, their vice president and assistant general manager will hold a question and answer session during Sunday’s open to the public practice from 5:00-5:30 p.m."
+940,12,21,"TXT","4",0,0,"The Cal Poly media relations department is collecting questions for the Warriors until Friday, Oct. 6 and strongly encourages fans to send questions to: Eric McDowell Director of Media Relations Cal Poly, San Luis Obispo San Luis Obispo, CA 93407 FAX# (805) 756-2650 Office # (805) 756-6531"
+941,12,21,"TXT","5",0,0,"There is still the lingering possibility of #1 draft pick Joe Smith making his first public appearance as a Warrior at the camp. Golden State public relations are hopeful, but the Warriors have yet to officially announce signing the national collegiate player of the year"
+942,12,21,"TXT","6",0,0,"Warrior fans can expect to see NBA All-stars Chris Mullin, Tim Hardaway and Latrell Sprewell."
+943,12,21,"TXT","7",0,0,"The training camp, held in Mott Gym, will run from Friday, Oct. 6through Tues-day, Oct. 10."
+944,12,0,"SH","0",0,0,"NAnONAl%BBIEE^"
+945,12,22,"HL","0",0,0,"Chicago Bulls add “bad boy” Dennis Rodman to roster"
+946,12,22,"TXT","1",0,0,"(AP)--Dennis Rodman’s game is as unique as his personality and now he will have to blend those talents with two stars who were once bitter rivals, Michael Jordan and Scottie Pippen."
+947,12,22,"TXT","2",0,0,"Rodman, the NBA’s top rebounder for the last four years, was voted the league’s best defender in 1990 and 1991 and helped the Detroit Pistons win a pair of championships."
+948,12,22,"TXT","3",0,0,"Last season he collected 20 or more rebounds in a game 20 times, including a a season-high 30 against the Houston Rockets. Rodman, who averaged seven points during aturmoil-filled season with the Spurs last year, said he can play with or against anyone."
+949,12,22,"TXT","4",0,0,"But Rodman, who is set to make $2.5 million in the final year of a contract this season, said he isn’t going to Chicago just to play with certain players. And he’s not crazy about his contract, either."
+950,12,0,"SH","0",0,0,"QUOTE OE THE DAY ^"
+951,12,0,"OT","0",0,0,"“We’re pretty confident that we’ll be the best in the AWC."""
+952,12,0,"OT","0",0,0,"David Lombardi"
+953,12,0,"OT","0",0,0,"Junior cornerback about Cal Poly’s secondary’s chances in the AWC"
+954,12,0,"OT","0",0,0,"CAL POLY SPORTS HOTLINE"
+955,12,0,"OT","0",0,0,"(805) 756- SCOR"
+956,12,19,"HL","0",0,0,"The quartet of senior safety David Brown, sophomore safety Demetrius Davis, sophomore cornerback James Lombardi, and junior conerhack David Lombardi is earning some re-spect that could lead them to becoming the best secondary in the American West Conference."
+957,0,0,"B","0",0,0,
+958,0,0,"B","0",0,0,
+959,0,0,"B","0",0,0,
+960,0,0,"NA","0",0,0,"ì'm"
+961,0,0,"B","0",0,0,
+962,0,0,"B","0",0,0,
+963,12,19,"PH","0",0,0,"David Brown"
+964,0,0,"NA","0",0,0,"/"
+965,0,0,"NA","0",0,0,"V . ^"
+966,12,19,"PH","0",0,0,"David Lombardi"
+967,0,0,"NA","0",0,0,"'vf"
+968,0,0,"B","0",0,0,
+969,0,0,"B","0",0,0,
+970,12,19,"PH","0",0,0,"JomMlomboKi"
+971,12,19,"PH","0",0,0,"Domotriui Dovts U r>ol pkturvd"
+972,12,19,"PH","0",0,0,"Sophomor* conwiback Jonrm Lombardi is too üast for th« camoro / Daily photo by Dawn Kolmor"
+973,12,19,"BL","0",0,0,"By Frac» CostoldU"
+974,12,19,"BL","0",0,0,"Doly Sports Edit»"
+975,12,19,"TXT","1",0,0,"A new defensive system that includes three new defensive backs has dramatically changed Cal Poly’s secondary — for the better."
+976,12,19,"TXT","2",0,0,"It improved from a secondary that gave up just over 300 yards a game last year, to one that allowed no more than 200 yards in its hrst three games this year."
+977,12,19,"TXT","3",0,0,"This turnaround didn’t surprise coach Andre Patterson. He knew the capabilities of the secondary."
+978,12,19,"TXT","4",0,0,"Furthermore, Patterson said the gap is misleading to a degree because last year’s statistics do not adequately reflect the secondary."
+979,12,19,"TXT","5",0,0,"*It’s funny that pass defense always gets put on the secondary guys, but there’s more involved in being successful against the pass,” Patterson said. ""The rush that you get from defensive line and the second phase is what kind of coverage you're getting from the linebackers.”"
+980,12,19,"TXT","6",0,0,"At the start of the season there was speculation about the secondary. Could they stand tough against Big Sky opponents? Could they redeem themselves after last season?"
+981,12,19,"TXT","7",0,0,"The Mustangs have gone a long way toward putting those doubts to rest with solid numbers."
+982,12,19,"TXT","8",0,0,"Excluding Cal Poly’s game against Weber State when the Mustangs allowed 522 receiving yards, the secondary has erased the"
+983,12,19,"TXT","8",0,0,"negative specvilation."
+984,12,19,"TXT","9",0,0,"*We know what we need to do,” said sophomore safety Demetrius Davis. ”We’ve had a lot of speculation about us and I think we’ve proved them wrong.”"
+985,12,19,"TXT","10",0,0,"Against NAIA opponent Western Montana, Cal Poly shut down junior Jason Truman, regarded as one of the best quarterbacks at the NAIA level, holding him to only 174 yards."
+986,12,19,"TXT","11",0,0,"One week later, the secondary shut down Idaho State. And after that, Montana State."
+987,12,19,"TXT","12",0,0,"*We wanted to be a respectable secondary,” said sophomore defensive back James Lombardi. *Last year we didn't get a lot of respect.”"
+988,12,19,"TXT","13",0,0,"Lombardi and his brother Dave have added heart to the secondary, and their play at the ends of the field has earned them high praise."
+989,12,19,"TXT","14",0,0,"Dave was awarded the American West Defensive Player of the Week, after picking off Montana State’s quarterback and leading the Mustangs with seven tackles."
+990,12,19,"TXT","15",0,0,"”Y)U always want to show you brother what you’ve got, along with the rest of the world,” David said."
+991,12,19,"TXT","16",0,0,"For senior safety David Brown, who is unanimously regarded as the leader of the secondary, gaining respect is not an issue."
+992,12,19,"TXT","17",0,0,"”We know how good we were and how good we can be,” Brown said. ”We didn't really listen to that stuff too much.”"
+993,12,19,"ME","0",11,0,"See SECONDARY page 11"
+994,,,,,,,
+995,,,,,,,
+996,,,,,,,
+997,,,,,,,
+998,,,,,,,
+999,,,,,,,
+1000,,,,,,,
+1001,,,,,,,
+1002,,,,,,,
+1003,,,,,,,
+1004,,,,,,,
+1005,,,,,,,
+1006,,,,,,,
+1007,,,,,,,
+1008,,,,,,,
+1009,,,,,,,
+1010,,,,,,,
+1011,,,,,,,
+1012,,,,,,,
+1013,,,,,,,
+1014,,,,,,,
+1015,,,,,,,
+1016,,,,,,,
+1017,,,,,,,
+1018,,,,,,,
+1019,,,,,,,
+1020,,,,,,,
+1021,,,,,,,
+1022,,,,,,,
+1023,,,,,,,
+1024,,,,,,,
+1025,,,,,,,
+1026,,,,,,,
+1027,,,,,,,
+1028,,,,,,,
+1029,,,,,,,
+1030,,,,,,,
+1031,,,,,,,
+1032,,,,,,,
+1033,,,,,,,
+1034,,,,,,,
+1035,,,,,,,
+1036,,,,,,,
+1037,,,,,,,
+1038,,,,,,,
+1039,,,,,,,
+1040,,,,,,,
+1041,,,,,,,
+1042,,,,,,,
+1043,,,,,,,
+1044,,,,,,,
+1045,,,,,,,
+1046,,,,,,,
+1047,,,,,,,
+1048,,,,,,,
+1049,,,,,,,
+1050,,,,,,,
+1051,,,,,,,
+1052,,,,,,,
+1053,,,,,,,
+1054,,,,,,,
+1055,,,,,,,
+1056,,,,,,,
+1057,,,,,,,
+1058,,,,,,,
+1059,,,,,,,
+1060,,,,,,,
+1061,,,,,,,
+1062,,,,,,,
+1063,,,,,,,
+1064,,,,,,,
+1065,,,,,,,
+1066,,,,,,,
+1067,,,,,,,
+1068,,,,,,,
+1069,,,,,,,
+1070,,,,,,,
+1071,,,,,,,
+1072,,,,,,,
+1073,,,,,,,
+1074,,,,,,,
+1075,,,,,,,
+1076,,,,,,,
+1077,,,,,,,
+1078,,,,,,,
+1079,,,,,,,
+1080,,,,,,,
+1081,,,,,,,
+1082,,,,,,,
+1083,,,,,,,
+1084,,,,,,,
+1085,,,,,,,
+1086,,,,,,,
+1087,,,,,,,
+1088,,,,,,,
+1089,,,,,,,
+1090,,,,,,,
+1091,,,,,,,
+1092,,,,,,,
+1093,,,,,,,
+1094,,,,,,,
+1095,,,,,,,
+1096,,,,,,,
+1097,,,,,,,
+1098,,,,,,,
+1099,,,,,,,
+1100,,,,,,,
+1101,,,,,,,
+1102,,,,,,,
+1103,,,,,,,
+1104,,,,,,,
+1105,,,,,,,
+1106,,,,,,,
+1107,,,,,,,
+1108,,,,,,,
+1109,,,,,,,
+1110,,,,,,,
+1111,,,,,,,
+1112,,,,,,,
+1113,,,,,,,
+1114,,,,,,,
+1115,,,,,,,
+1116,,,,,,,
+1117,,,,,,,
+1118,,,,,,,
+1119,,,,,,,
+1120,,,,,,,
+1121,,,,,,,
+1122,,,,,,,
+1123,,,,,,,
+1124,,,,,,,
+1125,,,,,,,
+1126,,,,,,,
+1127,,,,,,,
+1128,,,,,,,
+1129,,,,,,,
+1130,,,,,,,
+1131,,,,,,,
+1132,,,,,,,
+1133,,,,,,,
+1134,,,,,,,
+1135,,,,,,,
+1136,,,,,,,
+1137,,,,,,,
+1138,,,,,,,
+1139,,,,,,,
+1140,,,,,,,
+1141,,,,,,,
+1142,,,,,,,
+1143,,,,,,,
+1144,,,,,,,
+1145,,,,,,,
+1146,,,,,,,
+1147,,,,,,,
+1148,,,,,,,
+1149,,,,,,,
+1150,,,,,,,
+1151,,,,,,,
+1152,,,,,,,
+1153,,,,,,,
+1154,,,,,,,
+1155,,,,,,,
+1156,,,,,,,
+1157,,,,,,,
+1158,,,,,,,
+1159,,,,,,,
+1160,,,,,,,
+1161,,,,,,,
+1162,,,,,,,
+1163,,,,,,,
+1164,,,,,,,
+1165,,,,,,,
+1166,,,,,,,
+1167,,,,,,,
+1168,,,,,,,
+1169,,,,,,,
+1170,,,,,,,
+1171,,,,,,,
+1172,,,,,,,
+1173,,,,,,,
+1174,,,,,,,
+1175,,,,,,,
+1176,,,,,,,
+1177,,,,,,,
+1178,,,,,,,
+1179,,,,,,,
+1180,,,,,,,
+1181,,,,,,,
+1182,,,,,,,
+1183,,,,,,,
+1184,,,,,,,
+1185,,,,,,,
+1186,,,,,,,
+1187,,,,,,,
+1188,,,,,,,
+1189,,,,,,,
+1190,,,,,,,
+1191,,,,,,,
+1192,,,,,,,
+1193,,,,,,,
+1194,,,,,,,
+1195,,,,,,,
+1196,,,,,,,
+1197,,,,,,,
+1198,,,,,,,
+1199,,,,,,,
+1200,,,,,,,

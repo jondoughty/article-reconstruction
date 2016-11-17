@@ -1,0 +1,1202 @@
+"Function Key: TXT = article text; HL = headline; BL = byline; PH = photo caption/information; ME = meta directives outside of an article; NA = unintelligible; NP = nameplate; PI = publication information; B = blank; AT = advertisement text; MH = masthead, BQT = block quote text; BQN = name in a block quote; CN = comic strip title; CT = comic strip text",,,,,,,
+"LINE","PAGE (0 if unintelligable)","ARTICLE NUMBER (use 0 if outside of text of any article/letter)","FUNCTION (see key above)","PARAGRAPH NUMBER (start with the first content paragraph, 0 if not part of the main text)","JUMP (if line contains a ""jump to"" directive, it's the page target. If it's a ""jumped from"" directive then the negative (-) of the soure page. otherwise 0)","ADVERTISEMENT NUMBER","SCANNED TEXT"
+1,0,0,"NA",0,"0",0,"/'*»"
+2,0,0,"B",0,"0",0,
+3,0,0,"NA",0,"0",0,"{ ?. - •'''"
+4,0,0,"NA",0,"0",0,"’.;32"
+5,1,0,"NP",0,"0",0,"Mustang Daily"
+6,0,0,"NA",0,"0",0,"^,.1 ■■ ■ ;"
+7,1,0,"PI",0,"0",0,"WediMsday, January 20,1962"
+8,1,0,"PI",0,"0",0,"Cattfornia Poljrtacluiic State University, San Lois Obispo"
+9,1,0,"PI",0,"0",0,"Volume 46, No. 47"
+10,1,1,"HL",0,"0",0,"Emergency worries top Diablo hearing agenda"
+11,1,1,"BL",0,"0",0,"BY SHARYN SEARS"
+12,1,1,"BL",0,"0",0,"8t«H Writer"
+13,1,1,"TXT",1,"0",0,"The function of pressure heaters and power-operated relief valves during an emergency at Diablo Canyon nuclear power plant topped the agenda at the first full-power testing license hearing Tuesday in Avila Beach."
+14,1,1,"TXT",2,"0",0,"Among those representing Pacific Gas and Electric Company were members of the consulting team that has been working on the reverification program since the firm’s low-power testing license was suspended last November."
+15,1,1,"TXT",3,"0",0,"During a discussion over operating procedure, project engineer John Houch said that in an emergency where the pressure heaters malfunctioned, the actions of the plant operator “would be committed to memory.”"
+16,1,1,"TXT",4,"0",0,"If the pressure heater malfunctioned, it would switch from automatic to manual control, Houch said. If the manual control effort proved unsuccessful, the operator would have to refer to the operating procedure manual and proceed to do a cold shutdown, he said."
+17,1,1,"SH",0,"0",0,"Wrong CUasincation"
+18,1,1,"TXT",5,"0",0,"The pressure heaters are not classifîed under what PG&E calls ""safety grade” equipment. In behalf of the opposition, Herbert Brown, attorney for Gov. Edmund Brown Jr., asked why the pressure heaters are not of safety grade classification and what would be involved in “upgrading” them so they would be of safety grade status."
+19,1,1,"TXT",6,"0",0,"‘""The cabling systems between the system’s pressure heaters would have to"
+20,0,0,"B",0,"0",0,
+21,1,1,"PH",0,"0",0,"Mothers for Peace attorney Joel Reynolds at the hearings."
+22,1,1,"TXT",6,"0",0,"be upgraded to safety grade,” a PG&E spokesman said. “To upgrade them would require...considerable effort.” Equipment is labeled “safety grade” if its malfunction would cause an accident or if its function is instrumental in an emergency situation, according to"
+23,1,1,"TXT",7,"0",0,"PG&E definition	."
+24,1,1,"ME",0,"2",0,"PleaM see paga 2"
+25,0,0,"B",0,"0",0,
+26,0,0,"B",0,"0",0,
+27,0,0,"B",0,"0",0,
+28,0,0,"B",0,"0",0,
+29,0,0,"NA",0,"0",0,"t ’Ç* ■"
+30,0,0,"B",0,"0",0,
+31,0,0,"B",0,"0",0,
+32,0,0,"B",0,"0",0,
+33,0,0,"B",0,"0",0,
+34,0,0,"B",0,"0",0,
+35,0,0,"B",0,"0",0,
+36,0,0,"B",0,"0",0,
+37,0,0,"B",0,"0",0,
+38,0,0,"NA",0,"0",0,"Vç -"
+39,1,2,"HL",0,"0",0,"Supervisors pass draft of SLO emergency plan"
+40,1,2,"BL",0,"0",0,"BY TWYLA THOMAS"
+41,1,2,"BL",0,"0",0,"Steff Writer"
+42,1,2,"TXT",1,"0",0,"Amid puUk opposition to its approval, the Board of Supervisors passed the county draft emergency disaster preparedness plan at its Monday ni^ meeting by a 3-2 vote."
+43,1,2,"TXT",2,"0",0,"Supervisors Kurt Küpper and Jeff Jorgensen voted against approval of the plan, while Howard Mankins, Jerry Diefenderfer and Steve MacEl-vaine voted in favor of it."
+44,1,2,"TXT",3,"0",0,"According to MacElvaine, the plan was given back a consultant who will make revisions in it before the board approves the final version. There is no specified due date for completion of the plan."
+45,1,2,"TXT",4,"0",0,"'The central issues discussed at the meeting were the lack of specific evacuation plans if there is a nuclear accident at Diablo Canyon, consequences of possible earthquake damage to Diablo, how to inform the public if a disaster pccurs and the lack of concrete disaster plans for surrounding cities and Cal Poly."
+46,1,2,"TXT",5,"0",0,"MacElvaine said the board was concerned primarily with the sections of the plan that have no detailed explanation of disaster procedures. He cites a “lack of coordination with other agencies” as a cause for the weaknesses in the plan and said the “higher echelons” were at fault for not making the plan more specific."
+47,1,2,"SH",0,"0",0,"Unnecessary Study"
+48,1,2,"TXT",6,"0",0,"Jorgensen said possible earthquake damage to Diablo should be determined before the plan is finaliz-"
+49,1,2,"TXT",6,"0",0,"ed, but MacElvaine claimed a $250,000 study to determine if an earthquake will destroy roads was unnecessary."
+50,1,2,"TXT",7,"0",0,"MacElvaine based his contention on Pacific Gas and Electric Co. studies that showed the Hosgri fault, which is 2.5 miles from Diablo, would not cause a severe enough quake to obliterate roads within a 10-mile radius of the plant."
+51,1,2,"TXT",8,"0",0,"Representatives from the League of Women Voters said they wanted public notification if there was an “alert stage” at the nuclear power plant, but this was disputed because alert status at EHablo Canyon could include things other than a nuclear accident."
+52,1,2,"TXT",9,"0",0,"For instance, a plane that runs out of gas and lands near Diablo would set an alert status in motion."
+53,1,2,"TXT",10,"0",0,"'The Office of Emergency Services has the responsibility to alert the public in case of disaster, said MacElvaine, so sirens aren't necessary for other problems."
+54,1,2,"SH",0,"0",0,"Shortcomings"
+55,1,2,"TXT",11,"0",0,"A major shortcoming in the plan, lack of detailed evacuation procedures, was discussed since many of the cities in the 20-mile radius of the plant have yet to develop their emergency preparedness plans."
+56,1,2,"TXT",12,"0",0,"MacElvaine said evacuation plans should be developed for situations other than an accident at Diablo Canyon, since other disasters could occur."
+57,1,3,"PH",0,"0",0,"Mu«t«ng —Oêvtd Mlddlecemp"
+58,1,3,"PH",0,"0",0,"The site of what was formerly the Poly Canyon trash dump, where toxic materials were once taken, Is shown here with the Dairy Unit In the foreground."
+59,1,3,"HL",0,"0",0,"Toxic waste site now “no problem”"
+60,1,3,"BL",0,"0",0,"BY SHARON REZAK"
+61,1,3,"BL",0,"0",0,"Steif Writer"
+62,1,3,"TXT",1,"0",0,"A once potentially dangerous toxic waste dump in Poly Canyon now poses ""no particular problem” to people or the environment, according to Cal Poly’s environmental health and safety officer."
+63,1,3,"TXT",2,"0",0,"Donald Van Acker said a number of chemicals were found disposed in the area in 1976, such as metals and acids which he said could “leech into the ground water, or a creek” and threaten the city’s drinking water. Not only could people’s health be harmed by this, but the plant life in Poly Canyon would be hurt by the strong acidic water, ^ said."
+64,1,3,"TXT",3,"0",0,"The dump site was once used by various campus departments and personnel, and was open to the"
+65,1,3,"TXT",3,"0",0,"general public from the early 1970's until about 1976. No records were kept of what went into the facility. Van Acker said."
+66,1,3,"TXT",4,"0",0,"Last summer, the California Regional Water Quality Control Board, and the state Health and Environmental Health Boards conducted tests at the dumpsite. The boards found the environment “stable and without leeching probims,” according to Van Acker."
+67,1,3,"TXT",5,"0",0,"He said water testing is still being conducted in the area by the Water Quality Control Board. The board had to wait for a heavy rain season for the water level to be high in order to have accurate tests. Van Acker said the results should be in his office within a couple of months."
+68,1,4,"HL",0,"0",0,"Music meyor being considered at Poly"
+69,1,4,"BL",0,"0",0,"BY NANCY LEWIS"
+70,1,4,"BL",0,"0",0,"SteH Wrtlw"
+71,1,4,"TXT",1,"0",0,"A proposed music major is currently being reviewed by the Curriculum Committee of the Academic Senate and may be instituted as part of the campus curriculum, according to the head of Poly’s Music Department."
+72,1,4,"TXT",2,"0",0,"Bessie Swanson said that although the proposal was made only last month, she hoped a major would be implemented because “it is valuable to the university.”"
+73,1,4,"TXT",3,"0",0,"A bachelor of arts degree would be offered if the major is adopted."
+74,1,4,"TXT",4,"0",0,"The main rationale for a music major. said Swanson, is ""Cal Poly is a university."
+75,1,4,"TXT",5,"0",0,"By definition, a university' is an institution of higher education where students, in addition to specialized studies in a particular professional field, should expect to enhance their preparation for life as educated persons, she said. The objective is achieved by participating as a member of a campus community that includes the intellectual, social and aesthetic elements of an educated society, as well as by enrolling in courses appropriate to the student s interest and ability ’"
+76,1,4,"TXT",6,"0",0,"In order for the Music Department to keep up its quality group performances, students are needed who can devote a lot of time to their music, according to Swanson."
+77,1,4,"TXT",7,"0",0,"This isn’t to say that students in other discipbnes can’t perform,” said Swanson."
+78,1,4,"TXT",8,"0",0,"But she feels that a major in music would make it easier for students who are interested in music to perform with various campus groups."
+79,1,4,"TXT",9,"0",0,"Because there is no music major, students who want to participate in the various performing groups on campus must do so along with their other classes."
+80,1,4,"TXT",10,"0",0,"According to Swanson, this limits the quality of performances, because pressures in other classes keep students from fully pursuing their musical interests."
+81,1,4,"TXT",11,"0",0,"“The cultural component of the campus needs to be developed, and can with a musk major on campus,” said Swanson."
+82,1,4,"TXT",12,"0",0,"A major'in musk at Cal Poly is valuable because there is no school within a 100-mile radius where students in the area can get a degree in musk, said Swanson."
+83,1,4,"ME",0,"2",0,"Plaaa« aaa paga 2"
+84,0,0,"B",0,"0",0,
+85,0,0,"B",0,"0",0,
+86,0,0,"NA",0,"0",0,"1 ,"
+87,0,0,"NA",0,"0",0,"*mt"
+88,2,0,"PI",0,"0",0,"Wediwedey, Jawfâiy 30,1SI2"
+89,2,5,"HL",0,"0",0,"School blast kills 6, Injures 36"
+90,0,0,"NA",0,"0",0,"*	■.	^r' ■"
+91,2,5,"TXT",1,"0",0,"SPENCER. Okla. (AP)—A natural pw tsplookm ripped through the kitchen of an elementary school as it was being evacuated Tueaday, and authorities said six people were idUed and 36 injured."
+92,2,5,"TXT",2,"0",0,"Helicopters were brought into the parking lot of a store across the street from the one-story brick Star Elementary School to airlift the more seriously injured to hospitals."
+93,2,5,"TXT",3,"0",0,"Ambulances and law enforcement officers rushed to the scene of the blast in Spencer, just east of Oklahoma City."
+94,2,6,"HL",0,"0",0,"Court okays death penalty"
+95,2,6,"TXT",1,"0",0,"WASHINGTON (API— The Supreme Court refusea Tuesday to ban capital punishment for teen-age killers, but told state judges to use more caution in sentencing young murderers to death."
+96,2,6,"TXT",2,"0",0,"The 5-4 decision left open the question of whether imposing the death penalty on teen-age killers vkdates the constitutional ban on cruel and imusual punishment."
+97,2,6,"TXT",3,"0",0,"In another action, the court allowed ""unauthorized"" political conunitteee to spend unlimited amounts of money to back officially recognized presidential campaigns."
+98,0,0,"B",0,"0",0,
+99,2,0,"SH",0,"0",0,"Newslííie"
+100,2,8,"HL",0,"0",0,"Jury to sentenco freeway kiHer"
+101,0,0,"NA",0,"0",0,"-	V. _"
+102,2,8,"TXT",1,"0",0,"LOS ANGELES (API — The fate of convicted Freeway Killer William B<min was placed in the hands of a jury Tuesday after a prosecutor, likening him to Hitler, urged hie exemtkm and a defiinse attorney pleaded for hie Ufe."
+103,2,7,"HL",0,"0",0,"No dues found in salvaged jet Music msyor would add culture"
+104,2,7,"TXT",1,"0",0,"- WAffiltNOTON (AP>-8alvage crews hoisted the tail of an Air Florida jetBner fnra the frigid grime of the Potonoac River on Monday, but the achievement turned sour when the crumpled section failed to yield two flight recorders which could unravel the causes of last week’s crash."
+105,2,7,"TXT",2,"0",0,"Investigators were initially extdtant when, after battling the frozen river for five days, divers managed to tie straps under the Boeing 737's tail and lift it ^m a crane on the bridge overhead."
+106,2,7,"TXT",3,"0",0,"As the 15-foot section was pulled up, it broke away from parts of the jetliner’s fuselage. An Associated Press photographer said he saw one body drop back to the water, as did much d^nla."
+107,2,4,"ME",0,"-1",0,"From paga 1"
+108,2,4,"TXT",13,"0",0,"In a survey conducted by the Cal Poly Music Department, 182 college-age students in the area over the past 10 years have either gone to other schools which offer majors in music or gone into other majors because Od Poly does not offer one in music."
+109,2,4,"TXT",14,"0",0,"This campus is a loser in that respect,” Swanson added."
+110,2,4,"TXT",15,"0",0,"In order to implement a nfusic major, the proposal"
+111,2,4,"TXT",15,"0",0,"must be ^iproved by the administrative officials both <m campus and at the chancelkw’s office, said Swanson. The curriculum for the noajor must also be submitted and approved."
+112,2,4,"TXT",16,"0",0,"A curriculum is also being developed for the proposed major, said Swan son. The music minor that was instituted in the fall helped add some more advanced courses, but she hopes to expand these courses and add others:'"
+113,2,1,"HL",0,"0",0,"Emergency functions discussed at Diablo hearing"
+114,2,1,"ME",0,"-1",0,"From pagel"
+115,2,1,"TXT",8,"0",0,"Pressure heaters are normal controling units and therefore would not be under a safety grade classification, he said."
+116,2,1,"TXT",9,"0",0,"PG&E established in its testimony that a cold shutdown—when	the"
+117,2,1,"TXT",9,"0",0,"plant is closed"
+118,2,1,"TXT",9,"0",0,"completely—is possible without pressure heaters. The opposition later established that while there may be alternative methods of shutdown^ the current operating plan does not discuss any."
+119,2,1,"TXT",10,"0",0,"In the discussion of the power-operated relief"
+120,2,1,"TXT",10,"0",0,"valves at Diablo Canyon, the inddsot involving valvee at *niree Mile Island was brought up by Joel Re3molds, public interest attorney."
+121,2,1,"TXT",11,"0",0,"‘T believe the valve opened but did not reclose (at Three Mile Island),"" Houch said."
+122,2,0,"AT",0,"0",1,"MUSTANO-YOUR DAILY PICKUP"
+123,2,0,"AT",0,"0",1,"A second order of Mustang Daily Baseball Jerseys.^ featuring Frawls is in progress"
+124,0,0,"B",0,"0",0,
+125,2,0,"AT",0,"0",1,"^	i"
+126,2,0,"AT",0,"0",1,"Only $6.00"
+127,0,0,"B",0,"0",0,
+128,0,0,"B",0,"0",0,
+129,2,0,"AT",0,"0",1,"To Oroet Slop bv lt>e M.D olWce(G.A 226) ond talk to Tom(the editofi"
+130,2,0,"AT",0,"0",1,"Om Yours NOW... and Iwt mraryon« know that you kewp inkxmod with THE MUSTANG DAILY."
+131,2,1,"TXT",12,"0",0,"No member of the PG&E panel could verify whether the relief valve at lliree Mile Island was classified safety grade."
+132,2,1,"TXT",13,"0",0,"' It was established in testimony that the relief valve at Three Mile Island was not the only component that malfunctioned and that inap-prc^triate action taken by a pUmt operator escalated the acddient."
+133,2,1,"SH",0,"0",0,"Two make the grade"
+134,2,1,"TXT",14,"0",0,"Two of the three power-operated reliei valves at Diablo are safety grade, the other “in some respects is not,"" said Houch."
+135,2,1,"TXT",15,"0",0,"If the valvee should stick open there is no way of manually closing them, Houch said."
+136,2,1,"TXT",16,"0",0,"The valves were purchased	from"
+137,2,1,"TXT",16,"0",0,"Westinghouse, according"
+138,2,1,"TXT",16,"0",0,"to Glenn Lange, Westinghouse engineer. The valvee were purchased in the early 1970's, he said."
+139,2,1,"TXT",17,"0",0,"The governor’s at-tornqr asked if the valves were up to coda."
+140,2,1,"TXT",18,"0",0,"Lange reqwnded, ""The valves met the standards and codes in effect at the time of purchase. Those codes may have changed.”"
+141,2,0,"AT",0,"0",3,"LetUsnilllHi"
+142,2,0,"AT",0,"0",3,"InOirFUire"
+143,2,0,"AT",0,"0",3,"isnS aiwitwe • Wnsncisl • Enatnaailng • laptoiaSon anS Sraduabit •"
+144,0,0,"B",0,"0",0,
+145,0,0,"NA",0,"0",0,"•i-"
+146,2,0,"AT",0,"0",2,"ATTENTION SENIORS! ON CAMPUS INTERVIEWING JANUARY 26 A 27"
+147,2,0,"AT",0,"0",2,"APPLIED MAGNETICS representativ« wilt be interviewing on campus this year."
+148,2,0,"AT",0,"0",2,"APPLIED MAGNETICS is the world's leading supplier of magnetic recording heads to the computer industry That's right Applied Magr>etics is * 1 And we ve grown from » single plant in Santa Barbara producing or>e product to a high technology research and manufacturing business with multiple products and facilities in several countries producing custom designed products"
+149,2,0,"AT",0,"0",2,"We h^e Engineering assignments m Mechanical. Electrical and Quality Assurance assignments that lead to personal development in Technical and Management fields For those qualified m"
+150,2,0,"AT",0,"0",2,"Manufacturing and Business studies there are career paths in Manufacturing Supervision, Production Control, Purchasing. Quality Control and Sales"
+151,2,0,"AT",0,"0",2,"If you prefer a work hard, learn to manage, share the profits environment and you won’t be distracted by working in Santa Barbara, California, then sign up NOW at the Placement Office for an interview, or write to Mr G Bruce at the address below We will take the time to tell you about our personal develop ment opportunities in a high technology manufacturing business"
+152,2,0,"AT",0,"0",2,"Apptod Magnotfc« Magn«ttcHMdDlvMon Corporation"
+153,2,0,"AT",0,"0",2,"^ I 75 Robin Hill Road Golata, CA 93117"
+154,2,0,"AT",0,"0",2,"An CqsMl Oppoftunity Employtr M/F^"
+155,0,0,"NA",0,"0",0,"CnwwMnlcaUew • TWInfnt"
+156,2,0,"AT",0,"0",3,"At Chevron we uee a broad range of tyatama software on large mainf ramea arsd smaM buainees mim-computera throughout our operation With theae tyatama. our computer aarvicea offer the moat coet affective problem aolving approach between OnMne/Batch. Remote Batch. Timaahanng. and Owtnbulad Data Proceaaing WV próvida accurate information tyatama to daciaion makers m a great variety of application areas irKluding Finance. Logistics. Planning. Manufacturing. Marketing and Chamicaia"
+157,2,0,"AT",0,"0",3,"Within the neat five yeais. more than 50% of our managers will be moving up to poai-tiona of even greeter reaponsibility or retiring This meens rapid advancement for thoae individúala being hired now and in the future If you’d like to plan a career with one of the country a leading energy companies, there may never be a better tune to atari You can choose the area of profeaaionai apecialuation that beat suits your interaets and get set to enjoy ChaHengea that lead to recognition and growth"
+158,2,0,"AT",0,"0",3,"When you put Chevron in your future youII not only be planning lor an exoellent rareai you’ll be letting yourself in for one of the fmeat iifeatylea you can fmd From Ghiradelli Square to the tea rooms arxj temples of Chinatown. San Francisco, and tha entire Bay Area offer countless opportunities lor fun and sxcitament"
+159,2,0,"AT",0,"0",3,"Find Out more about us We offer great compensation in addition to all the advantages mentioned above, and the environment in our offices is as inspiring as our location We II be on your campus February S-9 Contact your Placement Office for an intennew"
+160,2,0,"AT",0,"0",3,"An Equal Opportunity Emptoyer"
+161,2,0,"AT",0,"0",3,"Compulw-Servtcee Deperfrneot"
+162,2,0,"AT",0,"0",3,"CiMvron"
+163,2,0,"AT",0,"0",3,"■ I"
+164,2,0,"AT",0,"0",3,"Standani 01 ComiianY of Caifoma"
+165,0,0,"NA",0,"0",0,"1 ."
+166,0,0,"B",0,"0",0,
+167,0,0,"NA",0,"0",0,"'■	‘-■■i--“—■■■ ■"
+168,3,0,"PI",0,"0",0,"HMtMig Daily WadnMday, Jamiaiy 20,1M2"
+169,3,0,"PI",0,"0",0,"P«q»9"
+170,3,0,"SH",0,"0",0,"Outdoors"
+171,0,0,"B",0,"0",0,
+172,0,0,"NA",0,"0",0,",T---"
+173,0,0,"NA",0,"0",0,
+174,0,0,"B",0,"0",0,
+175,0,0,"NA",0,"0",0,"'-'Ijí']"
+176,3,9,"HL",0,"0",0,"Canoeiiig the Colorado"
+177,0,0,"NA",0,"0",0,"#»"
+178,3,9,"HL",0,"0",0,"or.. .being where the rain ain't during Christmas break"
+179,0,0,"B",0,"0",0,
+180,3,9,"BL",0,"0",0,"BY ROBIN LEWIS"
+181,3,9,"BL",0,"0",0,"Outdoor Editor"
+182,3,9,"TXT",1,"0",0,"Aui"
+183,3,9,"TXT",1,"0",0,"sixtaen of ua sit in the ASI van at the gate leading down to the Colorado River jiut bdow Hoover Dam. Black Canyon."
+184,3,9,"TXT",2,"0",0,"“Okay,"" aays the gray-haired, tigfatfaced ranger, “I arant you people down there and in the river quiddy. I don’t e-have time to atay with you all morning.^ Down there and in the river, fast."" He turns to his car."
+185,3,9,"TXT",3,"0",0,"“Sieg haU,’’ I say in my head and exchange “Wall, nah-nafa to him, too” glances with arith my fellow trip members. Half the group salutes this back of the ranger’s head as he climbs in his car. *"
+186,3,9,"TXT",4,"0",0,"Wa are in the water with such speed and efficiency even I am impressed. No rookies, us. We’re with ASI Outings."
+187,3,9,"TXT",4,"0",0,"We know a canoe when we See one, no problem. Some of us know how to steer one. too. The ranger scowls from the road."
+188,3,9,"TXT",5,"0",0,"Soon everyone is in the water and we turn downriver, we have miles to -•» before we sleep. Wa get three hundred-yards. I can still see where we put in upriver, but natural bot springs are hiu^ to pass up."
+189,3,9,"TXT",6,"0",0,"A showering waterfall of 100 degress Fahrenhait, poob in the rocks, and rain caves where drops of hot and cold water come from the ceiling along stalactites."
+190,3,9,"TXT",7,"0",0,"We find an old water tunnel drilled for the dam that struck hot water of its own. Inside is a sauna, tepid water flowing from the end of the tunnel a hundred feet back."
+191,3,9,"TXT",8,"0",0,"Hot springs, a sauna and a cool lagoon. I can tell some people are get-"
+192,3,9,"TXT",8,"0",0,"ting the “wilderness."
+193,3,9,"TXT",8,"0",0,"wrong impression of"
+194,3,9,"PH",0,"0",0,"Two canoeists, left, slide across the Ctrforado River in Black Canyon bdow Hoover Dam. Bdow: Bob tries to coax a little syrup from the bottle for his pancakes, aixl bdow left, strums his mandolin on the road back to Cal Pply."
+195,0,0,"B",0,"0",0,
+196,3,9,"TXT",9,"0",0,"Xt is still dusk. I would not know it if I did not look up out of the canyon. In hers; it is black already, tbs cliffs ranging against the deep blue of the sky. Venus is already out."
+197,3,9,"TXT",10,"0",0,"I sit on an outcropping over the river as it runs black beneath me, no moon to reflect. Tbs lapping of the water against the shore comes up to me. There is a motion out there, it is felt."
+198,3,9,"TXT",11,"0",0,".^Lnother 1"
+199,3,9,"TXT",11,"0",0,"- rock explodes in the campfire, shooting splintars into the crowd."
+200,3,9,"TXT",12,"0",0,"“I’m moving,’’ someone ssys for the fourteenth time. Crystal’s tennis shoe catches firs, I watch it with interest for several seconds before pointing the flames out to her. It is now a sandal."
+201,3,9,"TXT",13,"0",0,"Everyone’s knees touch, it is a warm night. I am trying to remember if I go to school, and. if I do, where? Is then s world outside of here, past the canoes, the cliffs and the Colorado River? (Now close to losing all pretensiona of being anything but the L. A. Canal.l"
+202,3,9,"TXT",14,"0",0,"A running $tory from amid tha laugh tor around tha campftrt:"
+203,3,9,"TXT",15,"0",0,"It starts with a 400-room mansion hotel on tha stormy coast of hfaina; it’s ~ propriator. Big Mama; and a thraa-hun-drad-pound cliant, Mr. Brown."
+204,3,9,"TXT",16,"0",0,"Mr. Brown dumps his thin, blonds girlfriend soon after orrivaL She returns to New York never to be heard from again. Mr. Brown goes on to have a few scrapes with some ghosts, finally seeking help from Mr. Wizard (""Hrip mel"") who sends him back to King Arthur’s time."
+205,3,9,"TXT",17,"0",0,"But he arrives as a small mouse with wings who wins the Singing Sword and is then trapped in a birdcage by an an-cestor/looh-a-lihe of Big Mama. She frees him to face the challenge of the Black Knight, whom Mr. Brown, the flying mouse, then beats in a Jousting match."
+206,3,9,"TXT",18,"0",0,"We then Jump back to the 400-room mansion: which is carried to an imaginary' land where\Uves Harold, the"
+207,0,0,"NA",0,"0",0,"- -w-"
+208,0,0,"NA",0,"0",0,"-V."
+209,3,9,"TXT",18,"0",0,"rabbit. This world, actually Oklahoma, descends into nuclear war and total annihilation begins. The Singing Sword rifts through Harold, killing him instantly."
+210,3,9,"TXT",19,"0",0,"A total reversal of world annihilation, but ru)t Harold’s death, is brought about by Mr. Brown, who is no longer a flying mouse, and the magic of the Siriging Sword. Then, Mr. Brown fights a long, final, pitched battle with the spies who have intermittently tried to steal the Singing Sword to aid their world domination. Mr. Brown kills all the spies and the world is safe again."
+211,3,9,"TXT",20,"0",0,"All this without hallucinogens."
+212,3,9,"TXT",21,"0",0,"People are going off to b^. I look up. tbs fin sprays rock again as-the sl^ across the canyon glows with the rising moon."
+213,3,9,"TXT",22,"0",0,"X he safl pops in the wind as we slice across the cho^MOR water of Lake Mojave, my h^ whipping around my head. Three canoM are tied together to use a ' huge plastk tarp tied to canoe paddles and held up to the wind for a sail."
+214,3,9,"TXT",23,"0",0,"Well, somsons has to rudder,’’ auyt Bob. “this is bard work.”"
+215,3,9,"TXT",24,"0",0,"’The human moats jerk again with the srind and look skeptical. But, hell, fifteen miles without paddling..."
+216,3,9,"TXT",25,"0",0,"X be sky in the east is barely light. I crunch through the gravel of the desert, scuffing my boots, grinding myself into the diirt. Sagebrush against my lag, clean, crisp."
+217,3,9,"TXT",26,"0",0,"'n»e sky grows lighter, the two of us keep walking toward the mountains of Nevada. ’Too far away, but a gbal, nonethelsee. ^Tbe clouds over Arisona are now shot through with pink, orange spreads across the horison, the land is rosy. detailed."
+218,3,9,"ME",0,"4",0,"PtMMSMpagag"
+219,0,0,"B",0,"0",0,
+220,4,0,"ME",0,"0",0,"Outdoorál"
+221,4,0,"PI",0,"0",0,"4wwyîO,1W2"
+222,4,9,"HL",0,"0",0,"Scenes from the river."
+223,4,9,"PH",0,"0",0,"ThrM canoM, riggad with a plastic tarp for a sail, oruisa across Lake Mtic^ava."
+224,4,9,"TXT",27,"0",0,"Tb* wind is light, not cold, hot warm. The Nevada hills in front of us ars now topped in red-orange sunlight, lava snow caps. It is getting too light too fast. Tlus is my first dawn outdoors in years, up before the sun."
+225,4,9,"TXT",28,"0",0,"We sit. <m f rock and watch the sunrise. There are no pretensions, either by us or the land. Thaw are no lush ferns or carpeting moss, no towering redwoods to block the mountains for the trees. Just"
+226,4,9,"TXT",28,"0",0,"hard rock, shards of gravsL cactqs. sage. We ars only a humfawd fsst above the level of Lake Mojave itwo hundred above the “Colorado River” but we can sea down the valley thirty milee."
+227,4,9,"TXT",29,"0",0,"The plain shoots away from the river and taker off up the mountains, capping wkh crags, lava red now almost to te valley. Ibe plains look like (me could run down them forever, never tiring, dashing for the river."
+228,4,9,"TXT",30,"0",0,"Finally, the sun hits our rock, bright in our eyes. ."
+229,4,0,"AT",0,"0",1,"JANUARY"
+230,4,0,"AT",0,"0",1,"W I II \\ 1 M \KKM) \ I II VS I"
+231,4,0,"AT",0,"0",1,"40%"
+232,4,0,"AT",0,"0",1,"OFF"
+233,0,0,"NA",0,"0",0,"I l-;l . I i h. I n I \1 \'- I1-! |i I -"
+234,0,0,"NA",0,"0",0,". ' \	■ ■ 1 , I \ I i , II 11 r N ■ 11"
+235,0,0,"NA",0,"0",0,"'HIM 1 ; i \1N"
+236,0,0,"NA",0,"0",0,"Ml \ S SfllK I S"
+237,0,0,"NA",0,"0",0,"a"
+238,0,0,"NA",0,"0",0,"I \I)I1 s"
+239,4,0,"AT",0,"0",1,"rops"
+240,0,0,"NA",0,"0",0,"e"
+241,4,0,"AT",0,"0",1,"C HII DKl \ S APP AHII"
+242,0,0,"NA",0,"0",0,"e"
+243,4,0,"AT",0,"0",1,"SKIWI AK"
+244,0,0,"NA",0,"0",0,"a"
+245,4,0,"AT",0,"0",1,"A I 111 I I K SHOTS"
+246,0,0,"NA",0,"0",0,"a"
+247,4,0,"AT",0,"0",1,"SKI"
+248,4,0,"AT",0,"0",1,"I iPMi \ I"
+249,0,0,"NA",0,"0",0,"a"
+250,4,0,"AT",0,"0",1,"I i:\\is KAC Ki: I S"
+251,4,0,"AT",0,"0",1,"AM) MOKi:"
+252,4,0,"AT",0,"0",1,"MIS( I I 1 AM ()l S I I I MS"
+253,0,0,"NA",0,"0",0,"I III ( K I i >K I III M’l ( I \l ! \(.N I IIK( II (,llnl I I III N 1 ( KI"
+254,0,0,"B",0,"0",0,
+255,4,9,"TXT",30,"0",0,"The i^ow has cMssipetsd. nowa fadnt pink. Tha plain is now lit ^o, shadows of sagebrush strstchhig back toward the hills. I try not to think."
+256,4,9,"TXT",31,"0",0,"As we hsad back down tha wash lor camp. I find a bone, bleached white. smaU. like a chicken leg. I stick it in tha bond of my hat with the feather already there."
+257,4,9,"TXT",32,"0",0,"Standing motionless tm minutes, we watch a covey of quail as they gurgle iq> the wash past us. The name of my scIkmI has not yet edged my memory."
+258,4,10,"HL",0,"0",0,"Kids get house in divorce case"
+259,4,10,"TXT",1,"0",0,"TRAVERSE CITY. Mich. |AP) - A judge in northern Michigan has taken an unusual approach in a divorce case, giving tfarse adolescent bi^s custody of their parents’ house whils the mother and father altar-nate month-long visits.	——"
+260,4,10,"TXT",2,"0",0,"' Grand Traverse Cemnty Circuit Judge Charles M. Forster granted a divorce on Jan. 6 to Allan and Cheryl Church of Interlochen. a community of 4,000 peopfo 16 miles from IVaverae City. Iheir children—David. 15, Dcmakl, 13 and Dale, 11—remain at home, while th^ parents move in and out and pay the bills."
+261,4,10,"TXT",3,"0",0,"Mrs. Church, a 37-3rear-old secretary who is spending'this month with the children, daacribed the judge’s settlamant as “a good third option for people who are getting a divorce.”"
+262,4,10,"TXT",4,"0",0,"“'This way no one loses.” she said."
+263,4,10,"TXT",5,"0",0,"The three children sD say they ars happy about the dedsiem."
+264,4,10,"TXT",6,"0",0,"“When my dad tpld ms about it, I couldn’t believe it.” Dcmald said. “I thought my ma would get us. I’m glad one of the parents wasn’t left out.”"
+265,4,10,"TXT",7,"0",0,"“The Idds love it.” said Church, a 42-3rear-old dectri-cian, who is spendhig this nxmth at his parents’ home after 17 years of marriage. “They (the children) don’t have to change schools or change friends, and they can come and visit ms after sclmoL”"
+266,4,10,"TXT",8,"0",0,"The residence is a few doors away fnmi the home of ^ the father’s parents and only a mOe or so away from where the nwther’s parents live."
+267,4,10,"TXT",9,"0",0,"Forster said his decision was “natural” because both parents testified that the other was a good parent and said the children loved each other."
+268,4,0,"AT",0,"0",1,"Prices good throttgh 1/24/82"
+269,4,0,"AT",0,"0",2,"BookstDie"
+270,5,0,"PI",0,"0",0,"Mustant MIy Wediwwley, Jiwmy ao, 1M2"
+271,5,0,"PI",0,"0",0,"PafaS"
+272,5,11,"HL",0,"0",0,"Building of agriculture bridge begun"
+273,5,11,"PH",0,"0",0,"Lark Carter, dean of the School of Agriculture smiles as he observes ground breaking ceremonies for the student designed bridge."
+274,5,11,"BL",0,"0",0,"BY STEPHANIE WINN ' SMIWiNar"
+275,5,11,"TXT",1,"0",0,"A tMm of four architecture and construction students, equipped with bronzed shovels and yellow hard hats, initiated construction of a pedestrian bridge 'niursday that will lead to the Erhalt Agriculture Building at ground breaking csrenxwiee."
+276,5,11,"TXT",2,"0",0,"The pedestrian bridge, which will extend fimn Inner Perimeter Road to the second floor of the Agriculture BuikUng, was designed and planned by studaats. Akoady ^tproved by the university, the bridge will be funded by outside sources."
+277,5,11,"TXT",3,"0",0,"Paul Dooley, chief architect and pro--Ject coordinator, said he is very ezdted about the i»oject, which has taken almost a year ami a half to finalize."
+278,5,11,"TXT",4,"0",0,"The bridge should cut down traffic in the buUding’a stairway, aid handicapped students and provide an educationid evperisnce for at least 20 students,” said Dooley."
+279,5,11,"TXT",5,"0",0,"The bridge should be completed sometime in May, according to Etooley. Not including labor costs, Dooley said the estimated costs of material and sot-vices are $15,000. Hm finished value of the {Hoject, including labor would be approximately $36,000."
+280,5,11,"TXT",6,"0",0,"Dooley said designs for the bridge began as his senior project, but because of the enthusiasm s^wn for the project he was joined by others who wishsd to see the bridge plans carried through."
+281,5,11,"TXT",7,"0",0,"Other meml^s of the planning team include Ralph Teysaier, chief engineer of the project, and Eric Dybevik and Joe Laidsinski, both construction majors. Along with the planning team, the 20 other students who participate in the project will enroll in a special project class and receive dective credits."
+282,5,11,"TXT",8,"0",0,"Tlie project is a tremendous learning experience and provides students with an understanding of the whole i»t)oess"
+283,5,11,"TXT",8,"0",0,"in the industry,"" said John Stuart, teculty adviser for the project."
+284,5,11,"TXT",9,"0",0,"Along with Stuart, othar guest speakarsMd the ground breaking cer-msoniee ware Lark Carter, dean for the School of Agriculture and Natiual Resources, Doug Gerard, executive déan of fadHtiee planning, ’George Hasalain, dean of the School of Architecture and Environmental Design, Beth Currier, assistant coordinator for Diaabled Student Services on campus and Ra^ CouncU, iwesident of Disabled Students Unlimited. Invited"
+285,5,11,"TXT",9,"0",0,"^leakers joined the four-man team by ^tcbj^ shovels and taking part in the ground breaking ceremonies."
+286,5,11,"TXT",10,"0",0,"Dean Carter said during ceramoniee, ""It is a thing of aesthetic beauty and will enhance the whole area as emO as"
+287,5,11,"TXT",10,"0",0,"the building itself."""
+288,5,11,"TXT",11,"0",0,"from a wheelchair, Currier . the bridge will be a great help to handicapped students who at the present time must travel to the other side of the building in order to get to the second flomr.	,"
+289,5,11,"TXT",11,"0",0,"^leaking said that thi"
+290,5,11,"PH",0,"0",0,"A model of the bridge that will connect Inner Perimeter Road with the ae> cond floor of the Erhart Agriculture building. The bridge was designed and will be built by students."
+291,5,12,"HL",0,"0",0,"Women's group rriaps strategy for final ERA battle"
+292,5,12,"BL",0,"0",0,"BYCINDY"
+293,5,12,"BL",0,"0",0,"BLANKENBURG"
+294,5,12,"BL",0,"0",0,"MbN WvUsf"
+295,5,12,"TXT",1,"0",0,"Although a recent Gallup* Poll showed Americana to be in favor of ths Equal Bights Admand-nwnt by a t-l margin, whan a rapraaantativo for the Nitlsnal Organiaatina for Woaaan aiappad in San Lnie OWape C mty, eaiy 23 paraoM at , aiii the talk."
+296,5,12,"TXT",2,"0",0,"Ghmy Ftai, Pieaidant of the CaMfomia branch of NOW, gave an npdnU on the ERA at the Arroyo Grande Woman’s Community Center Wednesday, Jan. 13 as part of her ERA Mobilization Campaign. 1110 Mobilization Cam-padgn is to prove the ""ERA is not dea<L"" she said."
+297,5,12,"TXT",3,"0",0,"Frat said the ERA has only six months to get"
+298,5,12,"TXT",3,"0",0,"three more states to join the ratification effort."
+299,5,12,"TXT",4,"0",0,"Thsre are 16 states that haven’t ratified the ERA. Of these 16, ei^t didn’t ratify the 19th Amendment until after 1960."
+300,5,12,"TXT",5,"0",0,"According to Frat, ratification in Florida, Oklahoma, North Carolina and Virginia looks hopeful."
+301,5,12,"TXT",6,"0",0,"In Florida, a state-wide rampatgn has been put into effect, said Frat. NOW has placed national offices up and'down the coast. Last time a vote was taken the ERA was defeated by two votes."
+302,5,12,"TXT",7,"0",0,"This time, Frat said, NOW is taking a different campaign aiqiroach. She said Florida has a lot of retired persons. So the campaign is showing that retiml women receive only $3,000 a year for Social"
+303,5,12,"TXT",7,"0",0,"Security benefits whereas the man reosivs $6,600. This strategy is causing the retired citizens to ban together, she said."
+304,5,12,"TXT",8,"0",0,"NOW has also established two Hispanic offices where the literature being distributed is in Spanish."
+305,5,12,"TXT",9,"0",0,"Florida looks the most positive, she said. *""niey will be voting on the issue very soon as the legislature is in session,’’ she said."
+306,5,12,"TXT",10,"0",0,"Oklahoma held a test vote on Jan. 13, Frat said."
+307,5,12,"TXT",11,"0",0,"We weren’t ready tor ths vote,” she said. The vote came out four short. The canqmign there will continue, she said. We should see another vote in a couple weeks,” she added."
+308,5,12,"TXT",12,"0",0,"In Illinois. NOW is trying to test Um three-fifths rule that was established"
+309,5,12,"TXT",12,"0",0,"for the approval of the ERA. She said that there has always been a majority approvaL but the ""problem hiw bean getting the three-fifths majority.”"
+310,5,12,"TXT",13,"0",0,"Frat arid she is confident that North Carolina will ratify the amendment. The only problem she sees there is that the legislature doesn’t meet until June."
+311,5,12,"TXT",14,"0",0,"Mississippi.” she said."
+312,5,12,"TXT",14,"0",0,"is a lost cause but the campaign will continue there. They are just too conservative.”"
+313,5,12,"TXT",15,"0",0,"Virginia ns the only state of the 16 that held elec-' tiods this year. Frat said she thinks this is a benefit. The elected Democratic lieutenant goverqor is the .deciding vote. Shé expects when the vote comes up in the next few weeks it will"
+314,5,12,"TXT",15,"0",0,"be pro ERA."
+315,5,12,"TXT",16,"0",0,"In California, money and support is being raised in an effort to persuade the legislatures of those 16 states to approve the amendment. Frat said California has raised the most money for thè NOW organization. Some of the money has gone to sending memore to unratified states."
+316,0,0,"NA",0,"0",0,"y»"
+317,0,0,"NA",0,"0",0,"Æ-"
+318,0,0,"B",0,"0",0,
+319,0,0,"B",0,"0",0,
+320,0,0,"B",0,"0",0,".c?'"
+321,5,0,"AT",0,"0",3,"SONY"
+322,0,0,"NA",0,"0",0,"VMMNnNWElO"
+323,0,0,"B",0,"0",0,
+324,5,0,"AT",0,"0",2,"EATI"
+325,5,0,"AT",0,"0",2,"iTiT"
+326,5,0,"AT",0,"0",2,"wru"
+327,5,0,"AT",0,"0",2,"BRimiT TO YOU!"
+328,0,0,"NA",0,"0",0,"ftUI"
+329,5,0,"AT",0,"0",2,"(wc deliver)"
+330,5,0,"AT",0,"0",2,"GUARANTEED 30 MIN. FREE DELIVERY 541-4090"
+331,5,0,"AT",0,"0",2,"SUN.-THURS. 11 AM-1 AM FRI.-SAT. 11 AM-2 AM"
+332,0,0,"NA",0,"0",0,"r"
+333,0,0,"NA",0,"0",0,"I I I I I I"
+334,5,0,"AT",0,"0",2,"r 541-4090"
+335,5,0,"AT",0,"0",2,"2 FREE CORES OR TAB"
+336,5,0,"AT",0,"0",2,"(with coupon)"
+337,5,0,"AT",0,"0",2,"Nsmc_"
+338,5,0,"AT",0,"0",2,"Phone."
+339,5,0,"AT",0,"0",3,"Stereo, Rodio $ TV"
+340,5,0,"AT",0,"0",3,"CAMPUS ™ CAMBIA"
+341,5,0,"AT",0,"0",3,"$ONT NiAOOUAmn TééHIgMSèB"
+342,5,0,"AT",0,"0",3,"OowoeBwwSonUiaOSlie"" Wnn*S43-30<7"
+343,5,0,"AT",0,"0",4,"HAPTY HOUR SITCIAL5 served from 8-10"
+344,5,0,"AT",0,"0",4,"GIRLS Pi ITE OUT"
+345,5,0,"AT",0,"0",4,"PasMon Mow at 9tOO"
+346,5,0,"AT",0,"0",4,"Meet me at ib^ncy's The"
+347,5,0,"AT",0,"0",4,"Cntlnfl. Drinking I flr Qatheilng Place"
+348,6,0,"PI",0,"0",0,"Mwlsiig Deiy Wt<n>td«y, Jtwwy M, II"
+349,6,13,"HL",0,"0",0,"Spikers to host No. 3 UCSB"
+350,6,13,"TXT",1,"0",0,"VoOqrbsH rsttnus to ÜM Cal Poty Main Gym Friday"
+351,6,13,"TXT",1,"0",0,"night at 7:90, as ths Muataiif omu op«i thsir 196S Sob Luis dabut with rival UC Santa Bailara."
+352,6,13,"TXT",2,"0",0,"Ths Gauchos ars currsotly ths third-ranksd tsam in ths nation, bsUnd USC and UClJ^ and havs nsvsr lost a match to ths Cal Ptoty man—ths woman's victocy in Santa Barbara last faO was ths first svsr for a Pbly voUaybafi tsam ovar UCSB."
+353,6,13,"TXT",3,"0",0,"“Our playws fail confidant anoogh to bast Santa Barbara."" linstang oosch Oaig Conmiings	""It's"
+354,6,13,"TXT",3,"0",0,"not th0 atrongast tsam wa'va had. bot ons of ths strongaot."""
+355,6,13,"TXT",4,"0",0,"IIm Mustangs opansd thafar saason two wuoks ago"
+356,6,13,"TXT",4,"0",0,"with a win ovar Sacramanto StaU and a first piaos finish in ths Northam CaUfomia CoO^iats VoUayball Townamant. Poly daiaatsd ths Horasto of Sac Stats. 16-2, 16-10 and 16-11. In toomamant pool play ths Mnatmigs downad FVaano SUts, Manlo rsnags. Chico Stats and UC Santa Oua."
+357,6,13,"TXT",5,"0",0,"Poly and Sacramento mat again in ths toomamant sami-finals with ths Mustangs coming out the winnar, 16-7, 2-16, 16-11. Cal-Barksiny proved to bs no match for the Poly aix in ths finals, loafaig 16-4 and 16-8."
+358,6,13,"TXT",6,"0",0,"Both Sacramanto and Cal ars conaidorsd to be two of Northam CaUfomia's bsttar t^T""t and will most Hi«» be in contention for the state rhamptnnaliip later in the season, Cummings said."
+359,6,13,"TXT",7,"0",0,"The Mustangs have five returning startaro back from last ya^4 Westara Collagiats VoOaybaO Con-farencs co-champtonship team, including confarsnca Moat Vahiabls Pkyar Eddis Pattit."
+360,6,13,"TXT",8,"0",0,"In thair first ssaaon in ths WCVC. ths Mustangs finishsd hi a thres-way tis for first with Cal Stats Nor-. thridgeand U.S, International University."
+361,6,13,"TXT",9,"0",0,"Joining Pettit for another season in the starting line-"
+362,6,13,"TXT",9,"0",0,"2are: third-year outside hitter KaUy Palmer, 6-8 mid-blodnr Thn Toon, 1^ fiy^ SooCt ""aiy POot” Tarry at outside hitter, and sopLwiare hitter Russ BM"
+363,6,13,"TXT",10,"0",0,"Competing for the remaining starting positions are Marii Booth. Psta Msartans. Dave Ronda, Carl Buaae and Haas Psdarson."
+364,6,13,"TXT",11,"0",0,"* Baaidas Santa Barbara the Mustangs will also .bs facing such nationally ranked teams as Stanford, U% and Papperdfaw—aO on the road."
+365,6,13,"TXT",12,"0",0,"“I am sspecting to take ths state championship.” Cummings said. But the state title hi^Mfully will not be ths and of the road for the Poly spikars."
+366,6,13,"TXT",13,"0",0,"Cummings saplained: ""If we play well against the big teams we omild possibly got a Md to the [NCAA] Wsetam Regional "" A spot in the Weetara Regional would give Cal Poly a chance for its first national championship in voU^ball."
+367,0,0,"NA",0,"0",0,"-\"
+368,6,0,"SH",0,"0",0,"ASI RECREATION AND TOURNAMENTS COMMIHEE"
+369,6,0,"SH",0,"0",0,"pros0nts"
+370,6,0,"SH",0,"0",0,"WINTER QUARTER MINI CLASSES"
+371,6,0,"OT",0,"0",0,"Doy/Week"
+372,6,0,"OT",0,"0",0,"•o("
+373,6,0,"OT",0,"0",0,"Ooss •	Classes Start	Time	Place	Cost	weejks	Instructor"
+374,6,0,"OT",0,"0",0,"Mossoge^l	Jan 20-Wed.	7:00-9:30 pm	UU219	S20 student $22 nonstudent	7	Faith Uyda"
+375,6,0,"OT",0,"0",0,"Massaged	, Jan21—Thurs.	7:00-9:30 pm	UU219	$20 student ^ $22 rwnstudent	7	Faith Uyda"
+376,6,0,"OT",0,"0",0,"Massage *3 ^	Jan 22-Ffl.	4:00-6:30 pm	ÜÜ219 t	$20 student ' $22 nonstudent	7	FcrithUyda"
+377,6,0,"OT",0,"0",0,"Aerobic Dance	*'Jan18-	6:00-	Mustang	$20stvxJent	7	Diane Grant A"
+378,6,0,"OT",0,"0",0,"	Mon.-Thurs.	7:30 pm	Lounge	$22 nonstudent		Christy Ausman"
+379,6,0,"OT",0,"0",0,"Beg Sign Longuoge	Jan 19—Tues.	7:30-9:30 pm	SciE-29	$15 student ’ $17 nonstudent	7	NanCy Dautermon"
+380,6,0,"OT",0,"0",0,"Aerobic Exercise	Jan 18— Mon.-Fri.	7:00-8:00 am	Crandall Gym	$15 student ' $17 rxxistudent	7	Donna Meyers"
+381,6,0,"OT",0,"0",0,"Tap Dance	Jan 18— ^Mon.fcWed. Jon 18— * Mon. 6 Wed.	7:30-8:30 pm	Mustang Lounge	$14 student ” $16 nonstudent	7	UsaDeipy"
+382,6,0,"OT",0,"0",0,"Exercise Ckass		3:00-5:00 pm	UU220	$14 student $16 nonstudent	7	Julie Samuels"
+383,6,0,"OT",0,"0",0,"Kineseoiogv *1	Jan 18—Mon.	7:00-8:00 pm	SdC-19	$15 student $18 nonstudent	6	DrCoka"
+384,6,0,"OT",0,"0",0,"Kineseotogy*2	Jon 20-Wed.	7:00- 8<X)pm	SdC-19	$15 student $18 nonstudent	6	Dr. Coirà"
+385,6,0,"OT",0,"0",0,"SIGN4)PS BEGIN JAN 11 - JAN 22 AT THE UNIVERSITY UNION TICKET OFFICE FOR FURTHER INFORMATION CALL 546-2476 OR 544^797"
+386,0,0,"NA",0,"0",0,"f"
+387,6,0,"OT",0,"0",0,"At Malon«ys Qym & Fitness Center vve recognized the need for a separate aerobics and gym facility Just for women. We have Just doubled the size of our gym and our programs offering classes hourly, ranging from novice to intermediate^ exercise. Calf us for details!"
+388,6,0,"OT",0,"0",0,"AEROBICS"
+389,6,0,"OT",0,"0",0,"3 MONTH"
+390,6,0,"OT",0,"0",0,"*"
+391,6,0,"OT",0,"0",0,"Tone up your body to feel good and look great Maloney's exercise specialist, Marcy Maloney, instructs aerobic classes daily."
+392,6,0,"OT",0,"0",0,"Marcy uses a variety of exercises to keep classes interesting, stretch, wamvup, set your heart pumping, and cool down with exercises to music, Don't let another day go by; join us at Maloney's."
+393,6,0,"OT",0,"0",0,"3546 8. HIguara, Suita 190 San Lula Oblapo, CA 83401 541-518Q"
+394,6,0,"SH",0,"0",0,"Sports"
+395,6,14,"HL",0,"0",0,"Matmen complete trip with 7 wins"
+396,6,14,"TXT",1,"0",0,"Th* Cal Poly wraatUng taam laft for Hampton. Va. laat VTadnoaday with a 8-4 dnatmaat raeord aftar loa-ing to atate rival Cal State Bakarafiald tha pravious night for the firat tima in 20 yuan. But aftar a fivwday tour of tha Eaat which alao included atopa in Cincinnati and Lazingtoii, Hy.. tha Muatanga ratumed to San Luia Obiapo Tuaaday, tha proud baarara of a 10-4 record and a aavoB-maat win atraak."
+397,6,14,"TXT",2,"0",0,"Cn Saturday, the Muatanga dafaated pravioualy unbeaten Navy. 20-14. to capture firat pliM» in the Virginia Duala."
+398,6,14,"TXT",3,"0",0,"llie Virginia Duala ia a very preatif^oua meat in the Eaat, Poly coach Vaughan Hitchcock aaid. ""We wreetled superbly throu^ut the maet...when one of the guya didn’t wrestle well another would pick up the alack."""
+399,6,14,"TXT",4,"0",0,"On thair way to the showdown with the Navy Midshipmen Cal Poly defeated Clemson and CXd Donunion University."
+400,6,14,"TXT",5,"0",0,"A1 Outierrec, Mike Barfuss, Chris Cain, Louie Montano. Joe Elinsky and Josh Washington paced Poly to"
+401,6,0,"AT",0,"0",2,"- ■ - Aio ycxj poyiR9 kxj much far hoacUs? Coil NOW—"
+402,6,0,"AT",0,"0",2,"IMTUMIL COOCIPT"
+403,6,0,"AT",0,"0",2,"Precision shoping SO OO Includes wash & blowout."
+404,0,0,"NA",0,"0",0,"SOM Mm SbMl"
+405,6,0,"AT",0,"0",2,"Smi Ijdi OhtaDO. CA"
+406,0,0,"NA",0,"0",0,"nOOT CM9W OTMe"
+407,6,0,"AT",0,"0",2,"IW App. MMfM"
+408,6,0,"AT",0,"0",2,"Women's Cuts Are Our Speclcritv"
+409,0,0,"B",0,"0",0,
+410,6,0,"AT",0,"0",3,"ENGINEERS ME, EE PHYSICISTS COMPHTER SCIENTISTS"
+411,6,0,"AT",0,"0",3,", BS/MS"
+412,6,0,"AT",0,"0",3,"ivnsi CuHMmIibs vvm proMus yn weryWm—"
+413,6,0,"AT",0,"0",3,"bat do thaydelvep?”"
+414,6,0,"AT",0,"0",3,"Some companies may promise the world."
+415,6,0,"AT",0,"0",3,"Aerofet ElectroSystems will rtot"
+416,6,0,"AT",0,"0",3,"But we try to deliver what we promise, and we promise you challenging working assign-- merits, and high rewards for	''"
+417,6,0,"AT",0,"0",3,"outstanding p^ormance."
+418,6,0,"AT",0,"0",3,"You won't be ignored or forgoden when you join us"
+419,6,0,"AT",0,"0",3,"A*k the Aerolet representatives. You con meet them at the Career Planning k Pkicemenf Center on campus. The Aeroiet representatives will be interviewing Friday, January 22."
+420,6,0,"AT",0,"0",3,"If you are looking for a company that lives up to its promise ... look 40 Aerojet, Azusa."
+421,6,0,"AT",0,"0",3,"We offer meny compeny-peid benefits, including dental, medicel,"
+422,6,0,"AT",0,"0",3,"•>. prescription drugs, etc., plus an excellent tuition reimbursement program for additional education"
+423,6,0,"AT",0,"0",3,"and a savings plan."
+424,0,0,"NA",0,"0",0,">"
+425,6,0,"AT",0,"0",3,"jtorajet"
+426,6,0,"AT",0,"0",3,"ElectroSystems"
+427,6,0,"AT",0,"0",3,"P.O. Box 296-OR, Azusa, Calif. 91702"
+428,6,0,"AT",0,"0",3,"U.S. Cltiftnthip Rpquirpd ,"
+429,6,0,"AT",0,"0",3,"An AffirmatlW Action Employtr"
+430,7,0,"PI",0,"0",0,"Mwetang DeMy Wedneedsy, January 20,1162"
+431,7,0,"PI",0,"0",0,"6aga7"
+432,7,16,"HL",0,"0",0,"Ex-Poly stars fulfilling a dream Poly sinks Midshipmen"
+433,7,16,"BL",0,"0",0,"BY8HARYN8EAB8"
+434,7,16,"BL",0,"0",0,"VlVff WffMr"
+435,7,16,"TXT",1,"0",0,"The dadkatkn doaan’t «id wh«i your laat college laaetm ItriT“"
+436,7,16,"TXT",2,"0",0,"“It'a a dream omning true that jroa’ve had aince you were eight yaan <4d playing Little League.” aaid Rob Vavrock, ex-Poly baaeball pitcher who now playa in tha Oakland A’a minor laague."
+437,7,16,"TXT",3,"0",0,"Vavrock, a boaineaa majOT. ia one of many ax-Ptdy baarimfl playera who haa been drafted to pro teama and ia finiahing hia achooling between aeaaona."
+438,7,16,"TXT",4,"0",0,"“To eee that paycheck eigned by a pro team ia a thrill you juat can’t bdieve,” aaid Mark Beraano, a aodal adencea majw who haa been recruited to pitch for the New York Yankeea."
+439,7,16,"TXT",5,"0",0,"After a lifetime of dedication and peraeverance, the dream becomea a reality “when vou realize. ‘Wow. they’re paying me to play baaeball’.” aaid Vavrock."
+440,7,16,"TXT",6,"0",0,"While aetting their aighta on major league ball, both men reflect on what college baaeball Ima meant to them."
+441,7,16,"TXT",7,"0",0,"“College ball ia a atepping-atone to pro ball.” Beraano aaid. If it weren’t for hia experience at Cal Poly, he adda. he probably wouldn’t be headed for the proa now."
+442,7,16,"TXT",8,"0",0,"Cal Poly haa proved a good recruiting reeervoir for pro baaeball and ia “luetty well repreaentad” in the minor leaguaa. according to Vavrock."
+443,7,16,"TXT",9,"0",0,"“Collage ball ia like another minor league to the"
+444,0,0,"B",0,"0",0,
+445,0,0,"B",0,"0",0,
+446,0,0,"B",0,"0",0,
+447,7,0,"AT",0,"0",2,"TERIYAKI HA WAHAN"
+448,7,0,"AT",0,"0",2,"Half pound of ground rirloin broilad to . your command and croumtd with Hawaiian Tariyaki $auct and grillad pineapple"
+449,7,0,"AT",0,"0",2,"Than Pick Your Price According to Your Appetite!"
+450,7,0,"AT",0,"0",2,"ECONOMY"
+451,7,0,"AT",0,"0",2,"PACKAGE"
+452,7,0,"AT",0,"0",2,"e"
+453,7,0,"AT",0,"0",2,"^up or Salad Bak^ Potato Hot Garlic Bread The Entree"
+454,7,0,"AT",0,"0",2,"$2.99"
+455,7,0,"AT",0,"0",2,"FULL"
+456,7,0,"AT",0,"0",2,"COURSE MEAL I"
+457,7,0,"AT",0,"0",2,"Soup du )our Criq> Green Sals Baked Potato Hot Garlic Bread The Entree"
+458,7,0,"AT",0,"0",2,"A Special Deseert Coconut Creme Pie"
+459,7,0,"AT",0,"0",2,"C uK\M<CiFMÜRKO & MARSH"
+460,7,0,"AT",0,"0",2,"AC ROSS 1 R( )M im; I’osT omo:"
+461,7,16,"TXT",9,"0",0,"acouta.” Beraano aaid. adding that if the baaeball program at Cal Ptdy were cut it would have tha aame impact on the playera aa dropping a major would have on other atudanta."
+462,7,16,"TXT",10,"0",0,"Vavrock agreed. “A lot of good athletea would be abot down if baadbaU wax cut. ”"
+463,7,16,"TXT",11,"0",0,"Beraano. Vavrock and other ex-Poly playera who are finjahing achool and awaiting a{wing training with pro teama have formed their own team, the Central Coaat AU-Stara."
+464,7,16,"TXT",12,"0",0,"'”nM reaaon for the team ia to keep in ahape and keep ua in contact with a game aituation.” aaid Beraano."
+465,7,16,"TXT",13,"0",0,"The Central Coaat All-Stara are in their aecond aeaaon and are compriaed almoat excluaively of ex-Periy playera who have turned pro. The lineup alao boaata two namea that have already made it to the major league ranka; Ruaty Kuntz of the Chicago White Sox ai^ Jim Wohlfard. of the San Frandaco Gianta. Kuntz and Wohlfard both live in thia area in the off-aeaaon."
+466,7,16,"TXT",14,"0",0,"Among thoae who teat their ability againat the |wo-feeakmal caliber team are baaeball teama from Cal Poly. Cueata College, and Hancock Cemununity Ctrilege in Santa Maria."
+467,7,16,"TXT",15,"0",0,"' “The gamea are for our benefit, but alao for the other team’a benefit.” Beraano aaid."
+468,7,0,"AT",0,"0",4,"CAREERS R4 ENERGY..."
+469,7,0,"AT",0,"0",4,"If you art looking for an netting and chalWnging earner in the field of energy. Ü« California Energy Commiteion i* now accepting applicaUona for poetittone at Energy Analyits."
+470,7,0,"AT",0,"0",4,"Pnaiein». offer reeponeibilily, challenge, competitive lalarica (Sl327-S2073/inonth) and comprehenaive benefit». All poaition» cx-iat in Sacramento."
+471,7,0,"AT",0,"0",4,"Opportunitie* cxiat for thoae individiial* with degree* in ecology, environmental étudié», energy economics, statistic», operation rceaarch. planning, land use, engineering, gsology, a physical or biological science or a closely related mergy field. (If you are mieSriiii as a senior you will be eligible to take the examination, but must graduate before you can be hired.) (If you have any prior work experience performing technical energy-reU ted dutiee you may »«ibstitute one year of the required education.)"
+472,7,0,"AT",0,"0",4,"The examination will cottsisi of a written test (pass/fall) and a oral interview."
+473,7,0,"AT",0,"0",4,"To apply, complete a California State applicalion (Form 67Z) postmarked no later than February 4,19g2 and send it to:"
+474,7,0,"AT",0,"0",4,"California Energy Commiseion nil Howe Avenue, MS SIA Sacramento. CA 95$25 Attn: Personnel (916) 9204436"
+475,7,0,"AT",0,"0",4,"Reoraltet* will be on campus February 1, 19U at Cal Poly Career Day, located In Chumash Auditorium."
+476,0,0,"NA",0,"0",0,"1"
+477,7,0,"AT",0,"0",5,"A Wukilus (tulunng"
+478,7,0,"AT",0,"0",5,"PersoatJ Growth InterperaoasJ"
+479,7,0,"AT",0,"0",5,"ConMnunication •ad _ Self Awereaeas"
+480,7,0,"AT",0,"0",5,"January ax-24"
+481,7,0,"AT",0,"0",5,"Rawcho El Chorio Coal tSSO studeata"
+482,7,0,"AT",0,"0",5,"More iSSc’ai SAM SPOOEN S46-2476"
+483,7,0,"AT",0,"0",5,"Sg6«66r6d kf Hm CMRggliiif Csmti iRd tht AIL H.1L&. CtamtUit"
+484,0,0,"NA",0,"0",0,"EX"
+485,0,0,"B",0,"0",0,
+486,7,15,"ME",0,"-6",0,"Frompagug"
+487,7,15,"TXT",6,"0",0,"victory in tha finale, each outpointing thair opponanta. Saan Shaa at 126 pounda. Pat O’Dobndl at 150 pounda. Howard Lawaon at 167 pounda and Dale Amblar at 177 pounda ware tha only Muatanga to go down to dafaat againat Navy."
+488,7,15,"TXT",7,"0",0,"Hia Muatanga flaw into Ctndnnati on Sunday for three meata with tha Univeraity of Qndnnati. Univar-aity of Tannaaaaa and the Univarxity of Tannaaaeer Chattanooga. Cal Poly had a ralativaly aaay time of it. defeating Cincinnati 46-0. Tenneaaee 22-13 and Tennaaeaa Chattanooga 26-17."
+489,7,15,"TXT",8,"0",0,"Poly’a winning waya. continued on Monday in Lexington with a 25-12 whipping of a highly-regarded Univeraity of Kentucky team."
+490,7,15,"TXT",9,"0",0,"Cal Poly travela to San Joae State on Friday and will host the Univeraity of Nevada-Laa Vegae on Saturday at 7:30 p.m.. in the Main Gym."
+491,7,0,"SH",0,"0",0,"Classifíed"
+492,7,0,"OT",0,"0",0,"SaMlw«l. toeully a staff dally ralee are tl.78 toe a S Hne mliilmum and .50e (or aaeh ad-dWonal iiw. Waakiy ratea ara ladlO tor Itw 3 Hiw lalnliiHiin and $1.78 tor aaeli iddUloiial Una. 6iialnaaafoff oaiapua ralea ara aiao avallaMa."
+493,7,0,"OT",0,"0",0,"Payaeia by oliacli oniy le Mealam OaHy. QRC IWe. Mía 228."
+494,7,0,"OT",0,"0",0,"KANm-nUNKt gonna dio aniaaa yaii pay torlMa ad. atoro Itar^TMt AWT1-PMAI4K8I (1-20»"
+495,7,0,"OT",0,"0",0,"Sapead aromen’s Mcyele. MIM eendWen. 28” «rtieala. WO Call Alan 888-231leiroa. d-20»"
+496,7,0,"OT",0,"0",0,"PRE-VET Studanta naeded; hard workirtg atudent wIMIrig to Mva In vet clinic. Janitorial and amergency work. Greet ax-periencel Call aHar 8:00 pm 777-7800 or apply at Coaat Vat Clinic 1000 (kilntaiMi Rd. Mono Bay	(1-20)"
+497,7,0,"OT",0,"0",0,"MICH LAUCHLAND HAPPY 18MIMHTHDAY LOVl: Carol. Qeralyn. A ManaWa 0-301"
+498,7,0,"OT",0,"0",0,"REWARO-Loat gold bracelet 1 pearl 1-11 call MBS 548-2048,641 8886 Bantimental"
+499,7,0,"OT",0,"0",0,"(1-20)"
+500,7,0,"OT",0,"0",0,"Bun Valley Ski Reaort needa Hakpra bag end Jan. Houaing Available. Mountain Reoorta PO Box 1710 Sun Valley Id 83363 208-728-8344	(1-22)"
+501,7,0,"OT",0,"0",0,"CAR STEREO:	Audlebahn"
+502,7,0,"OT",0,"0",0,"deeha Uta ge«, alee Kenweer and Cenceid. AT ENT 84441382."
+503,7,0,"OT",0,"0",0,"(1-20)"
+504,7,0,"OT",0,"0",0,"LooCTISdC ealo., 1/11.810 raarard 1er rafum PM843 8882	»"
+505,7,0,"OT",0,"0",0,"(1-20)"
+506,7,0,"OT",0,"0",0,"LOST-Tan. Poplin )aefcei wMi hir Mm heed, on Wad 1-13. Reward. Cad Marldath 613 28W"
+507,7,0,"OT",0,"0",0,"(1-21)"
+508,7,0,"OT",0,"0",0,"LOST-BLUE WILDERNESS EXPERIENCE POUCH PLZ RETURN GLASSES 844-2308"
+509,7,0,"OT",0,"0",0,"(1-30)"
+510,7,0,"OT",0,"0",0,"Ealabllahed Phelography Sludto In S.L.O. arlth very Reed SolaSoPwonly 820.000 for more doaU eaN PeSn, Trwehan 8 CeeperReemy 844-1310 (1-31)"
+511,7,0,"OT",0,"0",0,"STEREO SPEAKERS 3-way, MuM ha«, handlaa 80 watta eont. eall ' Mika 843-8308 SlOaOpr"
+512,7,0,"OT",0,"0",0,"MOTONCYCU PARTSI Bita 8"
+513,7,0,"OT",0,"0",0,"Pleoea la the Central Coaat'a Motorcycle Wracking Yard. 344 Higuera 54S0364"
+514,7,0,"OT",0,"0",0,"(1-22)"
+515,7,0,"OT",0,"0",0,"88 PORb P.U. OOOO CONOI-TION MUST sea. 8800 CALL JOHN AT 844-7007."
+516,7,0,"OT",0,"0",0,"' (1-22)"
+517,0,0,"NA",0,"0",0,"ma-^	a*-«—mi"
+518,0,0,"NA",0,"0",0,"A.l>iLA."
+519,7,0,"OT",0,"0",0,"FiLA. 841-8307"
+520,7,0,"OT",0,"0",0,"(1-10)"
+521,0,0,"NA",0,"0",0,"00. 70; S4C3SJMM"
+522,7,0,"OT",0,"0",0,"(Ubaen 0«l|« ES-17B, early 00*0. mbM eendlllen arHh eaee. OOOOAOCaMSIH 844-8702 (1-21)"
+523,7,0,"OT",0,"0",0,"PENDER BANDMASTER AMP. mM 00*0. EaeaHant eendRIen. 8378.00 CaW SM 844-8702 (1-21)"
+524,7,0,"OT",0,"0",0,"TYPNM4SM RARTVpIns."
+525,7,0,"OT",0,"0",0,"84IMSI"
+526,7,0,"OT",0,"0",0,"/ (2-18)"
+527,7,0,"OT",0,"0",0,"ENGLISH TUtORINQ get a lump on that EngHeh cleaal Call RoeeAnn 644«M0"
+528,7,0,"OT",0,"0",0,"(1-22)"
+529,7,0,"OT",0,"0",0,"Obirhalm Medal TUS-IA Syn-Ihaalaar. 1408.00 Never Uaed. caMDebbee 844-8703	(i.21)"
+530,7,0,"OT",0,"0",0,"PROFESSIONAL TYPING E0IT1NO4IEASONABLE CALL ETHEL 77S4088"
+531,7,0,"OT",0,"0",0,"(3-10)"
+532,7,0,"OT",0,"0",0,"FENDER DUAL SHOWMAN Cabinet aniy. ne apeahara. arHh raadeaaa 810800. CaS Dabbae"
+533,7,0,"OT",0,"0",0,"at 8448703	(1-21)"
+534,7,0,"OT",0,"0",0,"RED HONDA CT70 1080 Lika new only 300 milea on the bike. 8486. Call Mike or Llaa at 544-9790 or 541-8612."
+535,7,0,"OT",0,"0",0,"(1-22)"
+536,7,0,"OT",0,"0",0,"laaMy 8 I lael 1"
+537,7,0,"OT",0,"0",0,"FOR SALE; 1079 MOTOBECAN MOPED. 3360. 541-2776 _________________(1-12)"
+538,0,0,"B",0,"0",0,
+539,7,0,"OT",0,"0",0,"«11%«-CeB Jeff"
+540,7,0,"OT",0,"0",0,"n. Hairae"
+541,7,0,"OT",0,"0",0,"(1-28)"
+542,7,0,"AT",0,"0",3,"OFF CAMPUS STUDENTS"
+543,7,0,"AT",0,"0",3,"BUY THE"
+544,7,0,"AT",0,"0",3,"4- LUNCH PLAN"
+545,7,0,"AT",0,"0",3,"44 MEALS FOR $110.00"
+546,7,0,"AT",0,"0",3,"MAKE PURCHASES AT THE UNIV. UNION CASHIER"
+547,7,0,"AT",0,"0",3,"14 AND 19 Meal plans also available"
+548,7,0,"AT",0,"0",6,"Exciting Careers for BS/MS Engineering Graduates...."
+549,7,0,"AT",0,"0",6,"Puriian-Bcnnen, progressive leader in design, manufacture and marketing of state-of-the-art medical respiratory and pulmonary equipment, has positions in Los Angeles for;"
+550,0,0,"NA",0,"0",0,"k"
+551,7,0,"AT",0,"0",6,"ELECTRONIC, MECHANICAL & INDUSTRIAL DESIGN ENGINEERS"
+552,7,0,"AT",0,"0",6,"P-B IS medium si/ed with steady growth patterns and net sales of <1IV million"
+553,7,0,"AT",0,"0",6,"INTERVIEWS, TUES., JAN. 2(t"
+554,7,0,"AT",0,"0",6,"Sign up ai voiir cnilocc pliKVitH-nt oIIki- no» lor .in mlor\ k-» » ilh P-B"
+555,7,0,"AT",0,"0",6,"If inters’iew not convenient, send resume to Personnel Manager, Bennett Medical Division, Puritan-Bennett Corp., 126^1 Beatrice .St , I A., (a. 90066 We are an equal opportunity emplovcr M/F/H"
+556,0,0,"B",0,"0",0,"	"
+557,7,0,"AT",0,"0",6,"	PURITAN - BENNETT CORPORATION * ■I-"
+558,0,0,"NA",0,"0",0,"I ."
+559,0,0,"B",0,"0",0,
+560,8,0,"SH",0,"0",0,"OpiiiionZ!——-"
+561,8,17,"HL",0,"0",0,"Beneath the rocks"
+562,8,17,"TXT",1,"0",0,"liMt It how Nathan"
+563,8,17,"TXT",1,"0",0,"Natknal Diroetor of"
+564,8,17,"TXT",1,"0",0,"Tha Anti-DaCunatloii Loofiia raoaotly ralaaaed a raport-indteatinf thiA acta of violoDoa againat Jawa and JawUi in-atitotiooamoaa than dooMad in 1961. ^"
+565,8,17,"TXT",2,"0",0,"According to Pwhnottar, thoaa raaponaflbla for thaaa anti-Semitk Crimea ara taanagira—thoaa whoaa hatxad of Jawa flows from prsjndioa within thair famfliaa and aodaty in ganaraL It ia a tragk commentary not'ooly on tha Amarican aodaty of thapraeagt, hat iqwo our future aaw^"
+566,8,17,"TXT",3,"0",0,"Parfaapa it is no ooinddanca that the rise in thaaa Crimea comaa during a period when ultra-ri^t hate groiqw are becoming more vocal and more powarfdL The Mo^ Mnjoti-ty* Jolm Bhdi Society, U.S. Labor Party and nao-Nad elemente aawn to ba riding tha coat tails of the conaarvativa revival that haa awapt Waahington, D.C."
+567,8,17,"TXT",3,"0",0,"For yaare, the alhna haa been hiding banaath the rocks. Now it ia'incraaainiAf DM*« viaibla:"
+568,8,17,"TXT",4,"0",0,"—State San. John Schmita draw a etorm of media attention whan ha iaanad a praae laiaaaa that, in abort, aaid there waa a Jawiah laahian conaphraqr behind the pro-clioioe movement. Schmita. an opponent of abortion, haa alao caOad for a military coup in the United States in the event Reaganomics Mia."
+569,8,17,"TXT",5,"0",0,"—Mother Jont» recently reported that Lyndon LaRoucha and his U.S. Labor Party have now become cnnfidsTity iHth the higheat achelona of the Teomatera Union. LaRouche and hia fouowers, among othpr things, believe in the “immadiata elimination” of Jawa from “public Ufa” and the aatabliahment an “induatrial-capitaliat” aathorRariap dictatorehty that could ba mobiUaad for global warfare."
+570,8,17,"TXT",6,"0",0,"Perfaapa the rising power of anti-Semitic dements in the United States ia not too aurprioing iHian one looks at the aodaty wa now find ouraelvaa in: unemployment, inflation and a lack of tohranca have taken on now dimenaions as peo-pla lad boa and lass in control of their livoo. And tha myth of a rich, infloantbl “Jewish eUta” b an easy target for many to"
+571,8,17,"TXT",6,"0",0,"fthair friMSa-aHnM and aHatatinw mm th*y fS***^i*"
+572,8,17,"TXT",6,"0",0,"pb eohitiona to mmploT eodowconomic probbma."
+573,8,17,"TXT",7,"0",0,"A recent articb Ity historian Arthur ScJileainger Jr. notes that past conaervativa periods <rf thb century (such aa the 1920*0 and 1960'o) have been followed by reviv^ in activiam and innovation. But now there may be a new wrinkb in this historicd theory. If Raaganomica bib, a power struggb may devdop between far right. anti-Semitic extremists and those bvoring innovatian. It b a battb the innovators cannot afford to lose."
+574,8,0,"CT",0,"0",0,"SUR£ 6LV> 1 SPENT f/FTEEN -jO BUCKS ON A PARKIN6 rtWlI"
+575,0,0,"NA",0,"0",0,"i3>U"
+576,0,0,"NA",0,"0",0,"o"
+577,0,0,"NA",0,"0",0,"V"
+578,0,0,"NA",0,"0",0,"AS"
+579,0,0,"NA",0,"0",0,"____^ipewT"
+580,8,0,"CT",0,"0",0,"I'M A6AIMST"
+581,8,0,"CT",0,"0",0,"peAPT R66ts-"
+582,8,0,"CT",0,"0",0,"■ftiAnotJ^Nao"
+583,8,0,"CT",0,"0",0,"PÉFlCltSj A«0 rA)f(KJ6 AMf S'CHCD*'"
+584,0,0,"B",0,"0",0,
+585,8,0,"CT",0,"0",0,"ON IKE"
+586,0,0,"NA",0,"0",0,"(mHNID."
+587,8,0,"CT",0,"0",0,"■Casbiir&>^"
+588,8,0,"SH",0,"0",0,"Letters"
+589,8,18,"HL",0,"0",0,"Far-reaching concerns"
+590,0,0,"B",0,"0",0,
+591,0,0,"NA",0,"0",0,"C7i"
+592,0,0,"NA",0,"0",0,"hit"
+593,0,0,"B",0,"0",0,
+594,0,0,"NA",0,"0",0,"lOT"
+595,8,2,"TXT",1,"0",0,"Editor:"
+596,8,2,"TXT",2,"0",0,"This Irttor ia in regard to the article printed on Thnraday. Jan. 14. “Minoritiaa Copa with Poly."" I found the artide to be atatisticaQy informative. However, I alao found Um information praaantad to ba Umitod bacanaa racial, aodal or educational iaaoea • waren’t daah with in dapth."
+597,8,2,"TXT",3,"0",0,"It waa my underatanding that tha intention of the article waa to anMghton the misedncatod Cel Poly atudent body regarding problama in human ralationa—iocaHy and internationally. Tha probiemi which people of color deal with at Poly are “peannts” coci^Muwd with those faced ou a dobal perapective; for azamide, the failure of Uw worid to recognize the African culture aa the father of human civilization. A local example of this ignorance ia the Greek Pratomity/Sorority system, which waa stolen from the Ancient African Mystery System. In fact, the Greek philosophers Socrates, Plato and friends were students of the indigenous African Mystery System, from which the Greeks wrote Western philosophies about echication and human relations. What Western cultures accept as"
+598,8,2,"TXT",3,"0",0,"‘^original’'	thought—Greek"
+599,8,2,"TXT",3,"0",0,"Philosophy—cams from the African Mystery SyMam."
+600,8,2,"TXT",4,"0",0,"The Muêtang DaOy artide deale superficially with racial laenes by only quoting an unimportant inchiiuit I deacribed caauaOy during tha interview. Hie points not mantioned, which I amphasized, are to me much more dgnifi-eant and earious."
+601,8,2,"TXT",5,"0",0,"To overlook more complex local and International-iaaoea ia to continue to deny their existencs. It’s difficult to deny that a child bom on the continent of India or Africa is Uksly to die of starvation befoiwits fifth birthday. To deny the existence of this problem Is the same as pouring poison into the swollen belly of a starving infant. -"
+602,8,2,"TXT",6,"0",0,"We, the Omega Pai Phi Frstsmity, feel our obligation is to speak to thsss concerns and not allow ourselves or this community to live pleasantly amidst this blatant ignorance. We must destroy the blinders which obëcurs our global vision. The artide reduced world problème to mm local incidents. Our concerns extend much farther."
+603,8,2,"BL",7,"0",0,"Mark A. Ilea President. Omega Pai PU"
+604,0,0,"NA",0,"0",0,"i-"
+605,8,0,"OT",0,"0",0,"Daily policy"
+606,8,0,"OT",0,"0",0,"Letters and press releaws may be submitted to the MuMtang Dally by bringing them to the Daily office in Room 226 of the Graphic Arts building, or by sending them ""to: Editor, Mustang Daily, GrC 226, Cal Poly, San Luis Obispo, CA"
+607,8,0,"OT",0,"0",0,"93407. Letters must be typed and include writers' signature and phone number."
+608,8,0,"OT",0,"0",0,"Press releases should be submitted to the Daily at least a week before they should be run."
+609,8,0,"MH",0,"0",0,"Mustang Daily Publisher Joaraalism Department, CalUseaie MyteeSaic Stats Uahrstskr, Sea Lea OMspe	TOM JOHNSON, £<A/0r"
+610,8,0,"MH",0,"0",0,"	MIKE CARROLL, Monqfóg £<fùor CYNTHIA BARAKATT, Edsunial Atsistasu DAVID BRACKNEY, Editorial Atsiaasu DXnDMnmjBCAMP.PhoioDmaor TOM COHUm,Spdns Editor L. JOANN SEREMET, Gewro/Mmgvr PAULA DRAZEÉt, Adomiting Manager mike DAWSON, Ciraslation"
+611,8,0,"MH",0,"0",0,"fS rmsmm Srii pheee e w » he eewed *	"
+612,8,0,"MH",0,"0",0,"« CM» rwbUhit iMr Mb, «■ sMWc M ahW uww< *h » rfls mb—h Mr rain i . dm -i.	"
+613,8,0,"MH",0,"0",0,"	Prismi mamsfm by Uiutmsiy Orafise Symons miAMTRAVm, Oemns/Manaan TAMàlY SAMS, i'teèMsvMsa» WASRBN aBHD,v1flt. Mr-, Ofmasiom BAT Mat3nrrai,Aai. Mr-, timsfsfm Prsdsaian"
+614,,,,,,,
+615,,,,,,,
+616,,,,,,,
+617,,,,,,,
+618,,,,,,,
+619,,,,,,,
+620,,,,,,,
+621,,,,,,,
+622,,,,,,,
+623,,,,,,,
+624,,,,,,,
+625,,,,,,,
+626,,,,,,,
+627,,,,,,,
+628,,,,,,,
+629,,,,,,,
+630,,,,,,,
+631,,,,,,,
+632,,,,,,,
+633,,,,,,,
+634,,,,,,,
+635,,,,,,,
+636,,,,,,,
+637,,,,,,,
+638,,,,,,,
+639,,,,,,,
+640,,,,,,,
+641,,,,,,,
+642,,,,,,,
+643,,,,,,,
+644,,,,,,,
+645,,,,,,,
+646,,,,,,,
+647,,,,,,,
+648,,,,,,,
+649,,,,,,,
+650,,,,,,,
+651,,,,,,,
+652,,,,,,,
+653,,,,,,,
+654,,,,,,,
+655,,,,,,,
+656,,,,,,,
+657,,,,,,,
+658,,,,,,,
+659,,,,,,,
+660,,,,,,,
+661,,,,,,,
+662,,,,,,,
+663,,,,,,,
+664,,,,,,,
+665,,,,,,,
+666,,,,,,,
+667,,,,,,,
+668,,,,,,,
+669,,,,,,,
+670,,,,,,,
+671,,,,,,,
+672,,,,,,,
+673,,,,,,,
+674,,,,,,,
+675,,,,,,,
+676,,,,,,,
+677,,,,,,,
+678,,,,,,,
+679,,,,,,,
+680,,,,,,,
+681,,,,,,,
+682,,,,,,,
+683,,,,,,,
+684,,,,,,,
+685,,,,,,,
+686,,,,,,,
+687,,,,,,,
+688,,,,,,,
+689,,,,,,,
+690,,,,,,,
+691,,,,,,,
+692,,,,,,,
+693,,,,,,,
+694,,,,,,,
+695,,,,,,,
+696,,,,,,,
+697,,,,,,,
+698,,,,,,,
+699,,,,,,,
+700,,,,,,,
+701,,,,,,,
+702,,,,,,,
+703,,,,,,,
+704,,,,,,,
+705,,,,,,,
+706,,,,,,,
+707,,,,,,,
+708,,,,,,,
+709,,,,,,,
+710,,,,,,,
+711,,,,,,,
+712,,,,,,,
+713,,,,,,,
+714,,,,,,,
+715,,,,,,,
+716,,,,,,,
+717,,,,,,,
+718,,,,,,,
+719,,,,,,,
+720,,,,,,,
+721,,,,,,,
+722,,,,,,,
+723,,,,,,,
+724,,,,,,,
+725,,,,,,,
+726,,,,,,,
+727,,,,,,,
+728,,,,,,,
+729,,,,,,,
+730,,,,,,,
+731,,,,,,,
+732,,,,,,,
+733,,,,,,,
+734,,,,,,,
+735,,,,,,,
+736,,,,,,,
+737,,,,,,,
+738,,,,,,,
+739,,,,,,,
+740,,,,,,,
+741,,,,,,,
+742,,,,,,,
+743,,,,,,,
+744,,,,,,,
+745,,,,,,,
+746,,,,,,,
+747,,,,,,,
+748,,,,,,,
+749,,,,,,,
+750,,,,,,,
+751,,,,,,,
+752,,,,,,,
+753,,,,,,,
+754,,,,,,,
+755,,,,,,,
+756,,,,,,,
+757,,,,,,,
+758,,,,,,,
+759,,,,,,,
+760,,,,,,,
+761,,,,,,,
+762,,,,,,,
+763,,,,,,,
+764,,,,,,,
+765,,,,,,,
+766,,,,,,,
+767,,,,,,,
+768,,,,,,,
+769,,,,,,,
+770,,,,,,,
+771,,,,,,,
+772,,,,,,,
+773,,,,,,,
+774,,,,,,,
+775,,,,,,,
+776,,,,,,,
+777,,,,,,,
+778,,,,,,,
+779,,,,,,,
+780,,,,,,,
+781,,,,,,,
+782,,,,,,,
+783,,,,,,,
+784,,,,,,,
+785,,,,,,,
+786,,,,,,,
+787,,,,,,,
+788,,,,,,,
+789,,,,,,,
+790,,,,,,,
+791,,,,,,,
+792,,,,,,,
+793,,,,,,,
+794,,,,,,,
+795,,,,,,,
+796,,,,,,,
+797,,,,,,,
+798,,,,,,,
+799,,,,,,,
+800,,,,,,,
+801,,,,,,,
+802,,,,,,,
+803,,,,,,,
+804,,,,,,,
+805,,,,,,,
+806,,,,,,,
+807,,,,,,,
+808,,,,,,,
+809,,,,,,,
+810,,,,,,,
+811,,,,,,,
+812,,,,,,,
+813,,,,,,,
+814,,,,,,,
+815,,,,,,,
+816,,,,,,,
+817,,,,,,,
+818,,,,,,,
+819,,,,,,,
+820,,,,,,,
+821,,,,,,,
+822,,,,,,,
+823,,,,,,,
+824,,,,,,,
+825,,,,,,,
+826,,,,,,,
+827,,,,,,,
+828,,,,,,,
+829,,,,,,,
+830,,,,,,,
+831,,,,,,,
+832,,,,,,,
+833,,,,,,,
+834,,,,,,,
+835,,,,,,,
+836,,,,,,,
+837,,,,,,,
+838,,,,,,,
+839,,,,,,,
+840,,,,,,,
+841,,,,,,,
+842,,,,,,,
+843,,,,,,,
+844,,,,,,,
+845,,,,,,,
+846,,,,,,,
+847,,,,,,,
+848,,,,,,,
+849,,,,,,,
+850,,,,,,,
+851,,,,,,,
+852,,,,,,,
+853,,,,,,,
+854,,,,,,,
+855,,,,,,,
+856,,,,,,,
+857,,,,,,,
+858,,,,,,,
+859,,,,,,,
+860,,,,,,,
+861,,,,,,,
+862,,,,,,,
+863,,,,,,,
+864,,,,,,,
+865,,,,,,,
+866,,,,,,,
+867,,,,,,,
+868,,,,,,,
+869,,,,,,,
+870,,,,,,,
+871,,,,,,,
+872,,,,,,,
+873,,,,,,,
+874,,,,,,,
+875,,,,,,,
+876,,,,,,,
+877,,,,,,,
+878,,,,,,,
+879,,,,,,,
+880,,,,,,,
+881,,,,,,,
+882,,,,,,,
+883,,,,,,,
+884,,,,,,,
+885,,,,,,,
+886,,,,,,,
+887,,,,,,,
+888,,,,,,,
+889,,,,,,,
+890,,,,,,,
+891,,,,,,,
+892,,,,,,,
+893,,,,,,,
+894,,,,,,,
+895,,,,,,,
+896,,,,,,,
+897,,,,,,,
+898,,,,,,,
+899,,,,,,,
+900,,,,,,,
+901,,,,,,,
+902,,,,,,,
+903,,,,,,,
+904,,,,,,,
+905,,,,,,,
+906,,,,,,,
+907,,,,,,,
+908,,,,,,,
+909,,,,,,,
+910,,,,,,,
+911,,,,,,,
+912,,,,,,,
+913,,,,,,,
+914,,,,,,,
+915,,,,,,,
+916,,,,,,,
+917,,,,,,,
+918,,,,,,,
+919,,,,,,,
+920,,,,,,,
+921,,,,,,,
+922,,,,,,,
+923,,,,,,,
+924,,,,,,,
+925,,,,,,,
+926,,,,,,,
+927,,,,,,,
+928,,,,,,,
+929,,,,,,,
+930,,,,,,,
+931,,,,,,,
+932,,,,,,,
+933,,,,,,,
+934,,,,,,,
+935,,,,,,,
+936,,,,,,,
+937,,,,,,,
+938,,,,,,,
+939,,,,,,,
+940,,,,,,,
+941,,,,,,,
+942,,,,,,,
+943,,,,,,,
+944,,,,,,,
+945,,,,,,,
+946,,,,,,,
+947,,,,,,,
+948,,,,,,,
+949,,,,,,,
+950,,,,,,,
+951,,,,,,,
+952,,,,,,,
+953,,,,,,,
+954,,,,,,,
+955,,,,,,,
+956,,,,,,,
+957,,,,,,,
+958,,,,,,,
+959,,,,,,,
+960,,,,,,,
+961,,,,,,,
+962,,,,,,,
+963,,,,,,,
+964,,,,,,,
+965,,,,,,,
+966,,,,,,,
+967,,,,,,,
+968,,,,,,,
+969,,,,,,,
+970,,,,,,,
+971,,,,,,,
+972,,,,,,,
+973,,,,,,,
+974,,,,,,,
+975,,,,,,,
+976,,,,,,,
+977,,,,,,,
+978,,,,,,,
+979,,,,,,,
+980,,,,,,,
+981,,,,,,,
+982,,,,,,,
+983,,,,,,,
+984,,,,,,,
+985,,,,,,,
+986,,,,,,,
+987,,,,,,,
+988,,,,,,,
+989,,,,,,,
+990,,,,,,,
+991,,,,,,,
+992,,,,,,,
+993,,,,,,,
+994,,,,,,,
+995,,,,,,,
+996,,,,,,,
+997,,,,,,,
+998,,,,,,,
+999,,,,,,,
+1000,,,,,,,
+1001,,,,,,,
+1002,,,,,,,
+1003,,,,,,,
+1004,,,,,,,
+1005,,,,,,,
+1006,,,,,,,
+1007,,,,,,,
+1008,,,,,,,
+1009,,,,,,,
+1010,,,,,,,
+1011,,,,,,,
+1012,,,,,,,
+1013,,,,,,,
+1014,,,,,,,
+1015,,,,,,,
+1016,,,,,,,
+1017,,,,,,,
+1018,,,,,,,
+1019,,,,,,,
+1020,,,,,,,
+1021,,,,,,,
+1022,,,,,,,
+1023,,,,,,,
+1024,,,,,,,
+1025,,,,,,,
+1026,,,,,,,
+1027,,,,,,,
+1028,,,,,,,
+1029,,,,,,,
+1030,,,,,,,
+1031,,,,,,,
+1032,,,,,,,
+1033,,,,,,,
+1034,,,,,,,
+1035,,,,,,,
+1036,,,,,,,
+1037,,,,,,,
+1038,,,,,,,
+1039,,,,,,,
+1040,,,,,,,
+1041,,,,,,,
+1042,,,,,,,
+1043,,,,,,,
+1044,,,,,,,
+1045,,,,,,,
+1046,,,,,,,
+1047,,,,,,,
+1048,,,,,,,
+1049,,,,,,,
+1050,,,,,,,
+1051,,,,,,,
+1052,,,,,,,
+1053,,,,,,,
+1054,,,,,,,
+1055,,,,,,,
+1056,,,,,,,
+1057,,,,,,,
+1058,,,,,,,
+1059,,,,,,,
+1060,,,,,,,
+1061,,,,,,,
+1062,,,,,,,
+1063,,,,,,,
+1064,,,,,,,
+1065,,,,,,,
+1066,,,,,,,
+1067,,,,,,,
+1068,,,,,,,
+1069,,,,,,,
+1070,,,,,,,
+1071,,,,,,,
+1072,,,,,,,
+1073,,,,,,,
+1074,,,,,,,
+1075,,,,,,,
+1076,,,,,,,
+1077,,,,,,,
+1078,,,,,,,
+1079,,,,,,,
+1080,,,,,,,
+1081,,,,,,,
+1082,,,,,,,
+1083,,,,,,,
+1084,,,,,,,
+1085,,,,,,,
+1086,,,,,,,
+1087,,,,,,,
+1088,,,,,,,
+1089,,,,,,,
+1090,,,,,,,
+1091,,,,,,,
+1092,,,,,,,
+1093,,,,,,,
+1094,,,,,,,
+1095,,,,,,,
+1096,,,,,,,
+1097,,,,,,,
+1098,,,,,,,
+1099,,,,,,,
+1100,,,,,,,
+1101,,,,,,,
+1102,,,,,,,
+1103,,,,,,,
+1104,,,,,,,
+1105,,,,,,,
+1106,,,,,,,
+1107,,,,,,,
+1108,,,,,,,
+1109,,,,,,,
+1110,,,,,,,
+1111,,,,,,,
+1112,,,,,,,
+1113,,,,,,,
+1114,,,,,,,
+1115,,,,,,,
+1116,,,,,,,
+1117,,,,,,,
+1118,,,,,,,
+1119,,,,,,,
+1120,,,,,,,
+1121,,,,,,,
+1122,,,,,,,
+1123,,,,,,,
+1124,,,,,,,
+1125,,,,,,,
+1126,,,,,,,
+1127,,,,,,,
+1128,,,,,,,
+1129,,,,,,,
+1130,,,,,,,
+1131,,,,,,,
+1132,,,,,,,
+1133,,,,,,,
+1134,,,,,,,
+1135,,,,,,,
+1136,,,,,,,
+1137,,,,,,,
+1138,,,,,,,
+1139,,,,,,,
+1140,,,,,,,
+1141,,,,,,,
+1142,,,,,,,
+1143,,,,,,,
+1144,,,,,,,
+1145,,,,,,,
+1146,,,,,,,
+1147,,,,,,,
+1148,,,,,,,
+1149,,,,,,,
+1150,,,,,,,
+1151,,,,,,,
+1152,,,,,,,
+1153,,,,,,,
+1154,,,,,,,
+1155,,,,,,,
+1156,,,,,,,
+1157,,,,,,,
+1158,,,,,,,
+1159,,,,,,,
+1160,,,,,,,
+1161,,,,,,,
+1162,,,,,,,
+1163,,,,,,,
+1164,,,,,,,
+1165,,,,,,,
+1166,,,,,,,
+1167,,,,,,,
+1168,,,,,,,
+1169,,,,,,,
+1170,,,,,,,
+1171,,,,,,,
+1172,,,,,,,
+1173,,,,,,,
+1174,,,,,,,
+1175,,,,,,,
+1176,,,,,,,
+1177,,,,,,,
+1178,,,,,,,
+1179,,,,,,,
+1180,,,,,,,
+1181,,,,,,,
+1182,,,,,,,
+1183,,,,,,,
+1184,,,,,,,
+1185,,,,,,,
+1186,,,,,,,
+1187,,,,,,,
+1188,,,,,,,
+1189,,,,,,,
+1190,,,,,,,
+1191,,,,,,,
+1192,,,,,,,
+1193,,,,,,,
+1194,,,,,,,
+1195,,,,,,,
+1196,,,,,,,
+1197,,,,,,,
+1198,,,,,,,
+1199,,,,,,,
+1200,,,,,,,
