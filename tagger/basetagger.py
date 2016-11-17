@@ -145,9 +145,10 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
 # ========================================
 
 
+# TODO(ngarg): Confirm this calculates precision and recall correctly.
 def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
     """
-    Prints the accuracy of the function tag for the given issue.
+    Prints the precision, recall of the function tag for the given issue.
     Owner: Nupur Garg
 
     orig_issues: list
@@ -189,15 +190,19 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
             print("----------- %s -----------" %orig_issue.filename)
             if missing_tags:
                 print("\t\t----------- Missing -----------")
-                print(tagged_issue.tags_df.loc[list(missing_tags)][["text", "function"]])
+                diff = tagged_issue.tags_df.loc[list(missing_tags)][["text", "function"]]
+                diff.sort_index(inplace=True)
+                print(diff)
             if extra_tags:
                 print("\t\t----------- Extra -----------")
-                print(orig_issue.tags_df.loc[list(extra_tags)][["text", "function"]])
+                diff = orig_issue.tags_df.loc[list(extra_tags)][["text", "function"]]
+                diff.sort_index(inplace=True)
+                print(diff)
 
     if total_expected > 0 and total_actual > 0:
-        accuracy = (total_expected - total_missing) / total_expected
+        recall = (total_expected - total_missing) / total_expected
         precision = (total_actual - total_extra) / total_actual
-        print("\naccuracy \'%s\': %.3f" %(tag, accuracy))
+        print("\recall \'%s\': %.3f" %(tag, recall))
         print("precision \'%s\': %.3f\n" %(tag, precision))
 
 
@@ -264,6 +269,7 @@ def _print_statistics(classifier, test, score, stats, debug):
         print('Score: %.4f' %score)
         if not isinstance(classifier, nltk.DecisionTreeClassifier):
             classifier.show_most_informative_features(30)
+            print("")
 
 
 def create_naive_bayes_classifier(training, test, stats=True, debug=False):

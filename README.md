@@ -16,18 +16,19 @@
     OT      Other                   junktagger.py
     CN      Comic strip title       junktagger.py
     CT      Comic strip text        junktagger.py
+    MH      Masthead                junktagger.py
+    PH      Photo caption           junktagger.py
 
   Not Labeled
 
-    NP      Nameplate
     PI      Publication info
     SH      Section heading
     HL      Headline
     BL      Byline
+    NP      Nameplate
     ME      Meta directives
-    MH      Masthead
-    PH      Photo caption
     BQT     Block quote text
+    BQN     Block quote name
 
 ## Setup
 
