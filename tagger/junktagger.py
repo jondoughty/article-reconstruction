@@ -8,18 +8,12 @@ import re
 from tagger.basetagger import *
 
 
-# TODO(ngarg): Ideas for future tagging:
-#   - N: 1) Above & below row have row.function == 'N'
-#        2) 3 or less consequtive alphanumerics in row.text
-
-
 _JUNKTAGGER_CLASSIFIERS = []
 _ENGLISH_DICTIONARY = enchant.Dict("en_US")
 
 _ENGLISH_ALL_NAMES = names.words("female.txt") + names.words("male.txt")
 _ENGLISH_ALL_NAMES_STR = "|".join(_ENGLISH_ALL_NAMES)
 
-# TODO: Try without making lower
 _ENGLISH_NAMES = [word.lower() for word in _ENGLISH_ALL_NAMES
                                if not _ENGLISH_DICTIONARY.check(word)]
 _ENGLISH_NAMES_STR = "\W|\W".join(_ENGLISH_NAMES)
@@ -326,6 +320,7 @@ def _generate_features_header(data):
 
     return features
 
+
 # =====================================
 # ========= TAGGING FUNCTIONS =========
 # =====================================
@@ -353,6 +348,8 @@ def _tag_unintelligible(row, classifier, features_func):
 
     row: obj
         DataFrame row to return value for.
+    classifier: obj
+        Classifier.
     features_func: func
         Function that generates the features.
 
@@ -372,6 +369,8 @@ def _tag_advertisement(row, classifier, features_func):
 
     row: obj
         DataFrame row to return value for.
+    classifier: obj
+        Classifier.
     features_func: func
         Function that generates the features.
 
@@ -389,6 +388,8 @@ def _tag_other(row, classifier, features_func):
 
     row: obj
         DataFrame row to return value for.
+    classifier: obj
+        Classifier.
     features_func: func
         Function that generates the features.
 
@@ -406,6 +407,8 @@ def _tag_headers(row, classifier, features_func):
 
     row: obj
         DataFrame row to return value for.
+    classifier: obj
+        Classifier.
     features_func: func
         Function that generates the features.
 
@@ -415,6 +418,50 @@ def _tag_headers(row, classifier, features_func):
         if not _has_page_jump(row.text) and classifier.classify(features_func(row)):
             return "MH"
     return row.function
+
+
+def _tag_in_range(row):
+    """
+    Tags the row based on previous row if the previous or next row are:
+        - unintelligible (N)
+        - other (OT)
+        - advertisement (AT)
+
+    row: obj
+        DataFrame row to return value for.
+
+    returns: str
+    """
+    valid_funcs = ["N", "OT", "AT"]
+    if pd.isnull(row.function) and not pd.isnull(row.text):
+        if row.func_prev in valid_funcs and row.func_next in valid_funcs:
+            words = row.text.lower().split(" ")
+            words_synset = [word for word in words
+                                 if word and _ENGLISH_DICTIONARY.check(word)]
+            if len(words_synset) <= 5:
+                return row.func_prev
+            if row.func_prev_two in valid_funcs and row.func_next_two in valid_funcs:
+                return row.func_prev
+    return row.function
+
+
+def _apply_in_range(issue):
+    """
+    Determines unintelligible text based on surrounding the rows.
+
+    issue: obj
+        Issue object to apply tags to.
+
+    returns: None
+    """
+    issue.tags_df["func_prev"] = issue.tags_df['function'].shift(periods=1)
+    issue.tags_df["func_next"] = issue.tags_df['function'].shift(periods=-1)
+    issue.tags_df["func_prev_two"] = issue.tags_df['function'].shift(periods=2)
+    issue.tags_df["func_next_two"] = issue.tags_df['function'].shift(periods=-2)
+    issue.tags_df["function"] = issue.tags_df.apply(lambda row: _tag_in_range(row), axis=1)
+    issue.tags_df.drop(["func_prev", "func_next", "func_prev_two", "func_next_two"],
+                       axis=1, inplace=True)
+
 
 # ==================================
 # ========= MAIN FUNCTIONS =========
@@ -429,12 +476,16 @@ def tag(issue):
 
     issue: obj
         Issue object to apply tags to.
+
+    return: obj
     """
     assert check_tags_exist(issue, _REQUIRED_TAGS)
 
+    # Labels rows.
     issue = copy.deepcopy(issue)
     issue.apply(col="function", label_func=_tag_blank)
 
+    # Labels rows with classifiers.
     for classifiers in _JUNKTAGGER_CLASSIFIERS:
         filename = classifiers[0]
         features_func = classifiers[1]
@@ -442,6 +493,8 @@ def tag(issue):
         issue.apply_classifier(col="function", filename=filename,
                                features_func=features_func, label_func=label_func)
 
+    # Labels rows based labels on nearby rows.
+    _apply_in_range(issue)
     return issue
 
 
@@ -495,7 +548,7 @@ def main():
 
     # Tags the untagged issues.
     tagged_issues = [tag(issue) for issue in untagged_issues]
-    tagged_issues[2].to_csv("test.csv")
+    tagged_issues[0].to_csv("test.csv")
 
     # Prints the accuracy of the results.
     print_accuracy_tag(issues, tagged_issues, tag="B", print_incorrect=False)
@@ -507,8 +560,8 @@ def main():
     # Replaces the tags in the issues with JNK.
     final_issues = [tag_junk(issue, replace_nan=False, replace_all=True) for issue in tagged_issues]
     jnk_issues = [tag_junk(issue, replace_all=True) for issue in issues]
-    final_issues[2].to_csv("test2.csv")
-    jnk_issues[2].to_csv("test3.csv")
+    final_issues[0].to_csv("test2.csv")
+    jnk_issues[0].to_csv("test3.csv")
 
     # Prints the accuracy of the results.
     print_accuracy_tag(jnk_issues, final_issues, tag="JNK", print_incorrect=True)

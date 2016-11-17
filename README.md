@@ -21,13 +21,14 @@
 
   Not Labeled
 
-    NP      Nameplate
     PI      Publication info
     SH      Section heading
     HL      Headline
     BL      Byline
+    NP      Nameplate
     ME      Meta directives
     BQT     Block quote text
+    BQN     Block quote name
 
 ## Setup
 
