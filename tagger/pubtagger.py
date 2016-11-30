@@ -15,6 +15,8 @@ def main():
     pd.set_option("display.width", None)
     pd.set_option("display.max_rows", None)
     issue = pd.read_csv(path, header = 2, names = columns)
+    #TODO if ocr-aug option: "-o image1.tiff image2.tiff image3.tiff"
+    # then call ocrmerge.py and get back box data
     tag(issue)
 
 
