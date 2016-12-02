@@ -98,17 +98,17 @@ def _features_stats_readable_word_percentage(text):
 # ========================================
 
 
-def _generate_features_txt(data):
+def _generate_features_txt(row_data):
     """
     Generates a classifier that identifies article text (TXT).
 
-    data: obj
-        Series containing issue data.
+    row_data: obj
+        Series containing a row of issue data.
 
     returns: dict
     """
     features = {}
-    text = data.text.strip()
+    text = row_data.text.strip()
     features.update(_features_stats_sent_word_count(text))
     features.update(_features_stats_readable_word_percentage(text))
     return features
@@ -117,6 +117,34 @@ def _generate_features_txt(data):
 # =====================================
 # ========= TAGGING FUNCTIONS =========
 # =====================================
+
+
+def _setup_surrounding_funcs_references(issue):
+    """
+    Sets up references to surrounding functions.
+
+    issue: obj
+        Issue object to apply tags to.
+
+    returns: None
+    """
+    issue.tags_df["func_prev"] = issue.tags_df['function'].shift(periods=1)
+    issue.tags_df["func_next"] = issue.tags_df['function'].shift(periods=-1)
+    issue.tags_df["func_prev_two"] = issue.tags_df['function'].shift(periods=2)
+    issue.tags_df["func_next_two"] = issue.tags_df['function'].shift(periods=-2)
+
+
+def _drop_surrounding_funcs_references(issue):
+    """
+    Drops references to surrounding functions.
+
+    issue: obj
+        Issue object to apply tags to.
+
+    returns: None
+    """
+    issue.tags_df.drop(["func_prev", "func_next", "func_prev_two", "func_next_two"],
+                       axis=1, inplace=True)
 
 
 def _tag_txt(row, classifier, features_func):
@@ -130,10 +158,20 @@ def _tag_txt(row, classifier, features_func):
 
     returns: str
     """
-    if (pd.isnull(row.function) and
-        not pd.isnull(row.text) and
-        classifier.classify(features_func(row))):
-        return "TXT"
+    valid_funcs = ["HL", "BL"]
+
+    if pd.isnull(row.function) and not pd.isnull(row.text):
+        features = features_func(row)
+
+        # If row is directly after HL or BL.
+        if row.func_prev in valid_funcs:
+            # print("\nfunc_prev %s" %row.func_prev)
+            # print("function %s" %row.function)
+            features["after_HL_BL"] = True
+
+        if classifier.classify(features):
+            return "TXT"
+
     return row.function
 
 
@@ -153,6 +191,8 @@ def tag(issue):
 
     issue = copy.deepcopy(issue)
     # issue.apply(col="function", label_func=_tag_txt)
+    _setup_surrounding_funcs_references(issue)
+
 
     filename = _TXTTAGGER_CLASSIFIER[0]
     features_func = _TXTTAGGER_CLASSIFIER[1]
@@ -160,6 +200,7 @@ def tag(issue):
     issue.apply_classifier(col="function", filename=filename,
                             features_func=features_func, label_func=label_func)
 
+    _drop_surrounding_funcs_references(issue)
     return issue
 
 
