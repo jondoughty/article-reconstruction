@@ -93,6 +93,30 @@ def _features_stats_readable_word_percentage(text):
     return features
 
 
+def _features_stats_uppercase_percentage(text):
+    """
+    Gets the percentage of uppercased words.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    features = {}
+
+    words = word_tokenize(text)
+    alpha_only = [w for w in words if w not in _PUNCTUATION]
+    word_count = len(alpha_only)
+    uppercase_count = len([w for w in words if w.isupper()])
+    percent = uppercase_count / word_count if word_count else 0
+
+    features.update(create_features_for_ranges(feature_name="uppercase_percentage",
+                                                variable=percent,
+                                                ranges=[.25, .5, .75]))
+    return features
+
+
+
 # ========================================
 # ========= CLASSIFIER FUNCTIONS =========
 # ========================================
@@ -111,6 +135,7 @@ def _generate_features_txt(row_data):
     text = row_data.text.strip()
     features.update(_features_stats_sent_word_count(text))
     features.update(_features_stats_readable_word_percentage(text))
+    features.update(_features_stats_uppercase_percentage(text))
     return features
 
 
@@ -163,11 +188,17 @@ def _tag_txt(row, classifier, features_func):
     if pd.isnull(row.function) and not pd.isnull(row.text):
         features = features_func(row)
 
+        # features["func_prev_two"] = row.func_prev_two
+        # features["func_prev"] = row.func_prev
+
         # If row is directly after HL or BL.
-        if row.func_prev in valid_funcs:
-            # print("\nfunc_prev %s" %row.func_prev)
-            # print("function %s" %row.function)
-            features["after_HL_BL"] = True
+        # if row.func_prev in valid_funcs:
+        #     features["after_HL_BL"] = True
+
+        # # If previous row is TXT.
+        # if row.func_prev == "TXT":
+        #     print("**PREV_TXT**")
+        #     features["after_TXT"] = 2 if row.func_prev_two == "TXT" else 1
 
         if classifier.classify(features):
             return "TXT"
@@ -188,19 +219,14 @@ def tag(issue):
         Issue object to apply tags to.
     """
     assert check_tags_exist(issue, ["PI", "HL", "BL", "B", "N", "AT"])
-
     issue = copy.deepcopy(issue)
-    # issue.apply(col="function", label_func=_tag_txt)
-    _setup_surrounding_funcs_references(issue)
-
 
     filename = _TXTTAGGER_CLASSIFIER[0]
     features_func = _TXTTAGGER_CLASSIFIER[1]
     label_func = _TXTTAGGER_CLASSIFIER[3]
+
     issue.apply_classifier(col="function", filename=filename,
                             features_func=features_func, label_func=label_func)
-
-    _drop_surrounding_funcs_references(issue)
     return issue
 
 
@@ -213,9 +239,9 @@ def main():
                                          tags=["PI", "HL", "BL", "B", "N", "AT"])
 
     # Create classifier.
-    filename = _TXTTAGGER_CLASSIFIER[0]
-    features_func = _TXTTAGGER_CLASSIFIER[1]
-    tags = _TXTTAGGER_CLASSIFIER[2]
+    filename = _TXTTAGGER_CLASSIFIER[0]         # "txttagger_TXT_naive_bayes.pickle"
+    features_func = _TXTTAGGER_CLASSIFIER[1]    # _generate_features_txt
+    tags = _TXTTAGGER_CLASSIFIER[2]             # _tag_txt
     create_classifier(issues=issues,
                       classifier_func=create_naive_bayes_classifier,
                       features_func=features_func, tags=tags, filename=filename,
@@ -226,7 +252,7 @@ def main():
     tagged_issues[2].to_csv('txt_test.csv')
 
     # Print the accuracy of the results.
-    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=True)
 
 
 if __name__ == "__main__":
