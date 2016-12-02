@@ -69,11 +69,15 @@ def _features_stats_readable_word_percentage(text):
     words = word_tokenize(text)
     alpha_only = [w.lower() for w in words if w not in _PUNCTUATION]
     word_count = len(alpha_only)
-    percent = 0
+    readable_word_percent = 0
+    potential_word_percent = 0
 
     if word_count:
         readable_word_score = 0
+        potential_word_score = 0
+
         for word in alpha_only:
+            potential_word_score += 1
             if _ENGLISH_DICTIONARY.check(word):
                 readable_word_score += 1
             # else:
@@ -83,13 +87,15 @@ def _features_stats_readable_word_percentage(text):
             #         sim = matcher.real_quick_ratio()
             #         if sim > THRESHOLD:
             #             readable_word_score += sim
-        percent = readable_word_score / word_count
+        readable_word_percent = readable_word_score / word_count
+        potential_word_percent = potential_word_score / word_count
 
-    # print('Percent: %f' %percent)
     features.update(create_features_for_ranges(feature_name="readable_word_percent",
-                                                variable=percent,
-                                                ranges=[.25, .5, .75]))
-                                                #ranges=[.35, .65]))
+                                                variable=readable_word_percent,
+                                                ranges=[.75]))
+    features.update(create_features_for_ranges(feature_name="potential_word_percent",
+                                                variable=potential_word_percent,
+                                                ranges=[.90]))
     return features
 
 
@@ -227,6 +233,18 @@ def tag(issue):
 
     issue.apply_classifier(col="function", filename=filename,
                             features_func=features_func, label_func=label_func)
+
+    # Smoothing
+    _setup_surrounding_funcs_references(issue)
+    for index, row in issue.tags_df.iterrows():
+        # Fill in gaps
+        if pd.isnull(row.function) and row.func_prev == "TXT" and row.func_next == "TXT":
+            issue.tags_df.loc[index, "function"] = "TXT"
+        # Remove outliers
+        if row.function == "TXT" and pd.isnull(row.func_prev) and pd.isnull(row.func_next):
+            issue.tags_df.loc[index, "function"] = None
+    _drop_surrounding_funcs_references(issue)
+
     return issue
 
 
@@ -252,7 +270,7 @@ def main():
     tagged_issues[2].to_csv('txt_test.csv')
 
     # Print the accuracy of the results.
-    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=True)
+    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=False)
 
 
 if __name__ == "__main__":
