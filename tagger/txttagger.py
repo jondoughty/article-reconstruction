@@ -34,10 +34,10 @@ def _features_stats_sent_word_count(text):
     features = {}
 
     # Sentence count.
-    sent_count = len(sent_tokenize(text))
-    features.update(create_features_for_ranges(feature_name="sent_count",
-                                                variable=sent_count,
-                                                ranges=[1, 2, 3]))
+    # sent_count = len(sent_tokenize(text))
+    # features.update(create_features_for_ranges(feature_name="sent_count",
+    #                                             variable=sent_count,
+    #                                             ranges=[1, 2, 3]))
     # Word count.
     words = word_tokenize(text)
     alpha_only = [w for w in words if w not in _PUNCTUATION]
@@ -99,7 +99,27 @@ def _features_stats_readable_word_percentage(text):
     return features
 
 
-def _features_stats_uppercase_percentage(text):
+def _features_stats_alpha_char_percentage(text):
+    """
+    Gets the percentage of alphabetic characters.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    features = {}
+
+    char_count = len(text)
+    alpha_char_count = len([c for c in text if c.isalpha()])
+    percent = alpha_char_count / char_count
+    features.update(create_features_for_ranges(feature_name="alpha_char_percentage",
+                                                variable=percent,
+                                                ranges=[.25, .5, .75]))
+    return features
+
+
+def _features_stats_uppercase(text):
     """
     Gets the percentage of uppercased words.
 
@@ -119,6 +139,9 @@ def _features_stats_uppercase_percentage(text):
     features.update(create_features_for_ranges(feature_name="uppercase_percentage",
                                                 variable=percent,
                                                 ranges=[.25, .5, .75]))
+    # features.update(create_features_for_ranges(feature_name="uppercase_count",
+    #                                             variable=uppercase_count,
+    #                                             ranges=[0, 2]))
     return features
 
 
@@ -141,7 +164,8 @@ def _generate_features_txt(row_data):
     text = row_data.text.strip()
     features.update(_features_stats_sent_word_count(text))
     features.update(_features_stats_readable_word_percentage(text))
-    features.update(_features_stats_uppercase_percentage(text))
+    features.update(_features_stats_uppercase(text))
+    features.update(_features_stats_alpha_char_percentage(text))
     return features
 
 
@@ -270,7 +294,7 @@ def main():
     tagged_issues[2].to_csv('txt_test.csv')
 
     # Print the accuracy of the results.
-    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=True)
 
 
 if __name__ == "__main__":
