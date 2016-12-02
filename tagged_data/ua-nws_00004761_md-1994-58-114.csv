@@ -1,0 +1,1202 @@
+"Function Key: TXT = article text; HL = headline; BL = byline; PH = photo caption/information; ME = meta directives outside of an article; NA = unintelligible; NP = nameplate; PI = publication information; B = blank; AT = advertisement text; MH = masthead; BQT = block quote text; BQA = block quote attribution; CN = comic strip title; CT = comic strip text; SH = section heading",,,,,,,
+"LINE","PAGE (0 if unintelligable)","ARTICLE NUMBER (use 0 if outside of text of any article/letter)","FUNCTION (see key above)","PARAGRAPH NUMBER (start with the first content paragraph, 0 if not part of the main text)","JUMP (if line contains a ""jump to"" directive, it's the page target. If it's a ""jumped from"" directive then the negative (-) of the soure page. otherwise 0)","AD #. If line is part of advertisement, it is the number of the ad. Start from top left column. 0 otherwise.","SCANNED TEXT"
+1,1,0,"NP","0",0,0,"CALIFORNIA POLYTECHNIC STATE UNIVERSITY SAN LUIS OBISPO"
+2,1,0,"PI","0",0,0,"Musiang Daily"
+3,1,0,"PI","0",0,0,"_______________________MAY 3,1994	VOLUME LVIII, No. 114__________"
+4,1,1,"HL","0",0,0,"Time to grow up at Children s Center as debt restructuring begins"
+5,1,1,"BL","0",0,0,"By Shelly Korlson"
+6,1,1,"BL","0",0,0,"Doily Staff Wiitei"
+7,1,1,"TXT","1",0,0,"After less than a full year of operation, the ASI Children’s Center found itself last July more than $200,000 in debt. Since then, many have been left wondering just where it went wrong."
+8,1,1,"TXT","2",0,0,"For those who have sorted through the finances, it’s clear: planners expected to have it all — full occupancy and the fees that come along with it. The Center also was dependent on high enrollment and a portion of the ASI fees each student pays."
+9,1,1,"TXT","3",0,0,"But university enrollment has decreased and the Center has not filled with children."
+10,1,1,"TXT","4",0,0,"Last month, the ASI Board of Directors approved refinancing of the Center’s $1.2 million loan, hoping to control damages from runaway"
+11,,1,"TXT","4",0,0,"debts"
+12,1,1,"TXT","5",0,0,"The move — which extends the repayment period over 20 instead of 10 years — will decrease annual interest payments by $70,000."
+13,1,1,"TXT","6",0,0,"According to ASI Interim Executive Director Polly Harrigan, the refinancing is just the latest step in reorganizing the Center’s budget"
+14,1,1,"SH","0",0,0,"News Analysis"
+15,1,1,"TXT","6",0,0,"since its $200,000 deficit was reviewed in July 1993."
+16,1,1,"TXT","7",0,0,"Both Harrigan and ASI Vice President for Finance Shawn Reeves said the Children’s Center forecasting was flawed in assuming too high a number of students would be on campus paying ASI fees and putting their children in the daycare facility."
+17,1,1,"TXT","8",0,0,"Reeves said the basis of these problems, as well as others, was poor"
+18,1,1,"TXT","8",0,0,"planning on ASI’s part."
+19,1,1,"TXT","9",0,0,"“When we made the financial projections (for the new Center), enrollment was higher at the Center and the university,” Reeves said. “Once the operational realities kind of set in, we realized that the Center’s enrollment goals were too high and that we were not going to meet it now or in the future.”"
+20,1,1,"TXT","10",0,0,"The goal of ASI was to maintain the Center’s occupancy rate at 100 percent throughout the school year. Yet in July 1993 it was clear that the Center could not achieve that goal."
+21,1,1,"TXT","11",5,0,"“Last year our occupancy rate was fluctuating between 60 to 70 percent a quarter,” she said. “We now understand that our goal of 100 percent was unrealistic and are preparing a budget for next year that will allow See CHILDREN’S CENTER, page 5"
+22,1,1,"PH","0",0,0,"A young client plays in front of ASI's funding-plagued Children's Center / Daily Photo"
+23,1,2,"HL","0",0,0,"Suicide"
+24,1,2,"HL","0",0,0,"doctor"
+25,1,2,"HL","0",0,0,"acquitted"
+26,1,2,"HL","0",0,0,"Court agrees Kevorkian was trying to help"
+27,1,2,"BL","0",0,0,"By Julia Prodis"
+28,1,2,"BL","0",0,0,"Associated Ptess_"
+29,1,2,"TXT","1",0,0,"DETROIT — Dr. Jack Kevorkian was acquitted Monday of breaking Michigan’s assisted suicide law after a jury concluded he was only trying to help a gravely ill man end his suffering, not cause his death."
+30,1,2,"TXT","2",0,0,"After the verdict, the 65-year-old retired pathologist challenged doctors who have secretly supported his cmsade to go public."
+31,1,2,"TXT","3",0,0,"“I know there are doctors who want to come forward,” Kevorkian said. “I want this intimidation by medical politicians to stop.” Kevorkian also said he is still receiving letters from sick people who want his help, but refused to say whether he would resume his assisted suicide practice any time soon."
+32,1,2,"TXT","4",5,0,"“I think this opens the floodgates for Jack Kevorkian,” said Lynn Mills of the anti-abortion group Operation Rescue. Kevorkian was charged See KEVORKIAN, page 5"
+33,1,0,"PH","0",0,0,"K.C. and his kite"
+34,0,0,"B","0",0,0,
+35,0,0,"NA","0",0,0,"•Ki J \"
+36,0,0,"B","0",0,0,
+37,1,0,"PH","0",0,0,"Six-and-a-half-year-old K.C. Calvert (left) took advantage of Monda/s wind to fly his kite with some help from industrial technology freshman Mike Sasaki (right). The two were flyin the kite on Cal Pol/s soccer field / Daily photos by Scott Robinson"
+38,1,3,"HL","0",0,0,"Mandela will lead S. Africa into new era"
+39,1,3,"HL","0",0,0,"Thousands celebrate as he becomes its Democratically-elected president"
+40,1,3,"BL","0",0,0,"By John Daniszewsld"
+41,1,3,"BL","0",0,0,"^ssoc¡afed Piess"
+42,1,4,"HL","0",0,0,"Ag, NRM attempting to bolster number of minority students"
+43,1,3,"TXT","1",0,0,"JOHANNESBURG, South Africa — Nelson Mandela proclaimed victory Monday in his lifetime crusade: a non-racial democracy for South Africa."
+44,1,3,"TXT","2",0,0,"As his supporters let loose in ecstatic celebration, the nation’s first black president declared, “Free at last!”"
+45,1,3,"TXT","3",0,0,"“This is indeed a joyous night for the human spirit,” said the 75-year-old leader. “This is your victory too."
+46,1,3,"TXT","4",0,0,"Supporters shrieked with joy in a hotel ballroom draped in the green-gold-and-black colors of Mandela’s African National Congress. The celebrations spilled over into the black districts of Soweto and Alexandra, where thousands of people poured into the streets dancing ecstatically, laughing and waving ANC flags."
+47,1,3,"TXT","5",0,0,"Mandela himself joined in the jubilation with Coretta Scott King, widow of U.S. civil rights leader Martin Luther King Jr., and former Zambian President Kenneth Kaunda. A choir sang the praises of “Madiba,” Mandela’s traditional clan name."
+48,,3,"TXT","6",0,0,"Earlier, President F.W. de Klerk of the National Party acknowledged defeat in South Africa’s first democratic elections. He praised Mandela as “a man of destiny” and pledged to work with him in the new government of national unity scheduled to be installed in eight days."
+49,1,3,"TXT","7",0,0,"Mandela in turn congratulated de Klerk “for the many days, weeks and months and the four years that we have worked together, quarreled, addressed sensitive problems, and at the end of our heated exchanges were able to shake hands and to drink coffee.”"
+50,1,3,"TXT","8",0,0,"The two leaders navigated the country through an extraordinary transition in which an oppressive white"
+51,1,3,"ME","0",5,0,"See SOUTH AFRICA, page 5"
+52,1,0,"SH","0",0,0,"INSIDE TODAY'S MUSTANG DAILY"
+53,1,4,"BL","0",0,0,"By Brian Volk and Joy Nieman"
+54,1,4,"BL","0",0,0,"Daily Staff"
+55,1,4,"TXT","1",0,0,"In an effort to increase ethnic diversity in the College of Agriculture, Cal Poly announced in late April plans for an Equity Leadership Program to attract young minority students to careers in agriculture and natural resources management."
+56,1,4,"TXT","2",0,0,"The program was initiated in response to a proposal authored by Natural Resources Management Department Head Norman Pillsbury and natural resources management professor Richard Thompson."
+57,1,4,"TXT","3",0,0,"Their proposal described a need to attract potential leaders from a wider"
+58,1,4,"TXT","3",0,0,"source of ethnic backgrounds. Thompson said national statistics from the U.S. Department of Education show an overall lack of minorities in programs related to agriculture and natural resources management."
+59,1,4,"TXT","4",0,0,"“Part of it comes from misleading images of what these careers involve,” Thompson said. “I’m convinced that several ethnic groups don’t believe there are ... professions to be had in these fields because they have bad images of them.”"
+60,1,4,"TXT","5",0,0,"The program is the result of a joint partnership between Cal Poly, the Soil Conservation Service, the Bureau of Land Management and the U.S. Forest Service, Together, they will provide the $100,000 needed to co-"
+61,1,4,"TXT","5",0,0,"fund a liaison office and enact the program."
+62,1,4,"TXT","6",0,0,"The purpose of the program is to get a diverse population interested in agricultural and natural resource careers, according to Associate Dean of Agriculture Wally Mark."
+63,1,4,"TXT","7",0,0,"“There are a lot of stigmas about careers in agriculture and natural resources,” Mark said. “We have to overcome (them) in order for them to become interested.”"
+64,1,4,"TXT","8",0,0,"Animal Science sophomore Antonio Gutierrez, president of Latinos in Agriculture, said certain stigmas exist in terms of what kind of agriculture-related jobs are available."
+65,1,4,"TXT","9",5,0,"“I think it’s because a lot of people. See EQUITY, page 5"
+66,1,0,"OT","0",0,0,"1 1"
+67,1,0,"OT","0",0,0,"OPIHIOH"
+68,1,0,"OT","0",0,0,"Lori Wilmer says there are more elements than race to affirmative action"
+69,1,0,"OT","0",0,0,"Spouts"
+70,1,0,"OT","0",0,0,"One neighborhtKxl, two different stories of student/ resident relations"
+71,1,0,"OT","0",0,0,"ill Women’s tennis lil gets permission to attend seventh Nat’l Tournament"
+72,1,0,"OT","0",0,0,"Reaching Uv_ _"
+73,1,0,"OT","0",0,0,"Graphic Arts, 226 Cal Poly San Lub Orbpo, CA 93407"
+74,1,0,"OT","0",0,0,"Advertising: 756-1143 Editorial:	756-1796"
+75,1,0,"OT","0",0,0,"Fax:	756-6784"
+76,2,0,"PI","0",0,0,"2 TUESDAY, MAY 3,1994"
+77,2,0,"PI","0",0,0,"RGENDfl"
+78,2,0,"OT","0",0,0,"MUSTANG DAlij"
+79,2,0,"OT","0",0,0,"AAAY"
+80,2,0,"OT","0",0,0,"TUESDAY"
+81,2,0,"OT","0",0,0,"OF"
+82,2,0,"OT","0",0,0,"WEEK 6"
+83,2,0,"OT","0",0,0,"28 school (Jays left in term."
+84,2,0,"OT","0",0,0,"TODAY'S WEATHER:"
+85,2,0,"OT","0",0,0,"Mostly sunny"
+86,2,0,"OT","0",0,0,"Expected high/low: 69 / 46"
+87,2,0,"OT","0",0,0,"TODAY"
+88,2,0,"OT","0",0,0,"County Gov. • Board of Supervisors meeting, Board Chambers, (^)unty Government Cxnter, 8:30 a m."
+89,2,0,"OT","0",0,0,"Campus Gov. • Academic Senate meeting, U.U. 220,"
+90,2,0,"OT","0",0,0,"3 p m."
+91,2,0,"OT","0",0,0,"ASI • Outings Committee Leadership workshop,"
+92,2,0,"OT","0",0,0,"U.U. 204, 3:13 p.m."
+93,2,0,"OT","0",0,0,"ASI • Outings (xunmittce mtx-ting, U.U. 220, 7 p.m."
+94,2,0,"OT","0",0,0,"WEDNESDAY"
+95,2,0,"OT","0",0,0,"Seminar • Nutrition and fitness with Idlen Cxileman, MA, MPH, RD, Chumash,"
+96,2,0,"OT","0",0,0,"3 p m."
+97,2,0,"OT","0",0,0,"Performance • Xicano Teatro Ciroup, Sandwich Plant,"
+98,2,0,"OT","0",0,0,"6	p.m."
+99,2,0,"OT","0",0,0,"Cheerleading • i\x>tball and basketball season tryout info meeting, U.U. 219, 7 p.m. info: 349-0494"
+100,2,0,"OT","0",0,0,"UPCOMINO"
+101,2,0,"OT","0",0,0,"Gnco de Mayo • Carlebration with pinata, ntusic and dance, .May 3, U.U Plaza, 1 1 a.m. WriterSpeok • Gloria Velasquez., .May 3, Science 13-3,"
+102,2,0,"OT","0",0,0,"7	p.m."
+103,2,0,"OT","0",0,0,"Seminar • ""Lessons from the Northridge Larthquake,"""
+104,2,0,"OT","0",0,0,"May 6, R(H)m 03-105, 9 a m. info: 756-1314 Dinner/Doncing • CSA Senior Banquet, May 6, Marie Ciiallendar's, Pismo Beach,"
+105,2,0,"OT","0",0,0,"8:30 p.m. / 543-5946 ACLU Social • "" Lhe War on Crime: Death Knell for Civil Liberties?,"" ILimona Ripston, .May 8, Community Room, City/C^unty Library,"
+106,2,0,"OT","0",0,0,"2:30 p.m. / 544-0142 Conference • ""Keeping Current in the 1990's,"" May 13 For reservations: 543-0369 Seminar • ""The Concept of the Person: India and the West,"" Dr. Ninian Smart, May 13, U.U. 220, 3 p.m. Roily • ""Take Back the Night,"" May 19, Chumash Auditorium, 6:30 p.m. info: 756-2600 Discussion • League of Women Voters on the June State Ballot, May 20, 944 San Adriano St., 9:30 a.m. info: 543-2220 WriterSpeok • Glenn Irvin and Paula Huston, June 1, Sciencx B-5, 7 p.m."
+107,2,0,"OT","0",0,0,"Mountain Bike Race * Real Riders' Rendezvous, May 15, 1-ake San Antonio / 238-4343 WriterSpeok * J ane Hirshfield and Kim Addonizio, May 18, U.U. 204,7 p.m."
+108,2,0,"OT","0",0,0,"Agenda Items: Fax: 756-6784, or c/o Len Arends, Graphic Arts 226, Cal Poly 93407"
+109,2,0,"OT","0",0,0,"CnhPus Logbook"
+110,2,0,"OT","0",0,0,"IfyouTuveonylnfo^^ these crimes, contact Public Safety at:"
+111,2,0,"OT","0",0,0,"756-2281"
+112,2,0,"OT","0",0,0,"• Bicycle theft:"
+113,2,0,"OT","0",0,0,"April 30 —"
+114,2,0,"OT","0",0,0,"Yoscmite Hall, Tower 6: Purple Schwinn mountain bike;"
+115,2,0,"OT","0",0,0,"Serial number: S2l 1115%"
+116,0,0,"B","0",0,0,
+117,2,0,"HL","0",0,0,"A look at one SLO neighborhood that Poly students andpermanern residents both call home. When i\ comes to living in harmony..."
+118,0,5,"B","0",0,0,
+119,0,0,"B","0",0,0,
+120,0,0,"NA","0",0,0,"ri'd"
+121,0,0,"B","0",0,0,
+122,0,0,"NA","0",0,0,"aiOES OF"
+123,0,0,"NA","0",0,0,"/ ■"
+124,0,0,"NA","0",0,0,"yj"
+125,0,0,"B","0",0,0,
+126,0,0,"NA","0",0,0,"Si"
+127,0,0,"B","0",0,0,
+128,0,0,"B","0",0,0,
+129,0,0,"B","0",0,0,
+130,2,5,"TXT","1",0,0,"On the quiet street of Balboa near Laguna Lake, Cal Poly students live next to a retired couple."
+131,2,5,"TXT","2",0,0,"But the two households’ occupants don’t like each other much, and Alvin and Norma Rogers say that’s because the students lack basic respect."
+132,2,5,"TXT","3",0,0,"Two blocks over, on Coral Court, a similar living arrangement exists. But Ed and Gladys Fraund say their student neighbors are considerate."
+133,2,5,"TXT","4",0,0,"The two stories are on opposite sides of a spectrum of student-neighbor relations in San Luis Obispo that ranges from civility to outright enmity."
+134,2,5,"TXT","5",0,0,"Many Cal Poly students live in homes in residential areas because they like the freedom from the rules that go along with dorm and apartment living."
+135,2,5,"TXT","6",0,0,"Usually, students can live harmoniously with the families in their neighborhood."
+136,2,5,"TXT","7",0,0,"But sometimes things go wrong. Some say this is because many students don’t realize that living in a home has its limitations too."
+137,2,5,"TXT","8",0,0,"The Laguna Lake area is a neighborhood that only in recent years has acquired many student residents. With the influx, it has become a cross-section of San Luis Obispo, characterizing the gamut of neighborhoods’ attitudes toward students and the students’ own attitudes toward neighborhoods."
+138,2,5,"ME","0",3,0,"See AGENDA, page 3"
+139,2,5,"BL","0",0,0,"STORY BY DAILY STAFF WRITER CYNTHIA BUIZER • DAILY PHOTOS BY JUAN MARTINEZ AND MICHAEL DeMARTINI"
+140,2,0,"PH","0",0,0,"Meanwhile, Ed and Gladys Fraund get along well with student neighbors Melissa Nelson and Jenna Thompson, and their pets."
+141,3,0,"PI","0",0,0,"MUSTANG DAILY"
+142,3,0,"PI","0",0,0,"TUESDAY, MAY 3, 1 994	3"
+143,3,5,"HL","0",0,0,"AGENDA: On some SLO streets, every day is Good Neighbor Day — and then there are others..."
+144,3,5,"ME","0",-2,0,"From page 2 Fostering resentment"
+145,3,5,"TXT","1",0,0,"Alvin and Norma Rogers have lived in their family home on Balboa for nearly 30 years. Everything was fine until about five years ago when a Cal Poly student’s parents from the Bay Area purchased the home next door for their son to rent with his friends."
+146,3,5,"TXT","2",0,0,"At first the students living next door weren’t a problem. Then, the owners’ son moved out. Since then, it has been a matter of luck from quarter to quarter."
+147,3,5,"TXT","3",0,0,"The couple feels “most students are good, self-respecting people” and that they have had “some neat students next door.” But a few bad experiences, including their current situation, have made them averse to having students as neighbors."
+148,3,5,"TXT","4",0,0,"They said they have had problems with parties, noise, garbage, parking, unkempt yards, loud motorcycles and lights kept on all night."
+149,3,5,"TXT","5",0,0,"“If Cal Poly students continue to move into this area, we’ll be forced to move out,” said Norma Rogers. “And we don’t think that’s fair.”"
+150,3,5,"TXT","6",0,0,"The two don’t entirely blame students for their situation, though."
+151,3,5,"TXT","7",0,0,"“It’s a combination of factors,” said Alvin Rogers. “It’s not just the students, it’s the out-of-town landlords. And the city, too.”"
+152,3,5,"TXT","8",0,0,"The couple said if landlords cared about their property as more than just revenue, maybe their tenants would respect the property, too."
+153,3,5,"TXT","9",0,0,"They also said that the city should require landlords to maintain their rentals’ yards to avoid property devaluation. Much of the Rogers’ problem with students is that they don’t keep up their lawn."
+154,3,5,"TXT","10",0,0,"“The (grass) was four-feet high (recently),” said Norma Rogers."
+155,3,5,"TXT","11",0,0,"Their neighbors. Cal Poly students Randy Schultz, Gail Weaver, Buck Chow and Jason Curtis, agree:	Since their"
+156,3,5,"TXT","11",0,0,"landlord doesn’t care about the look of the property, they don’t either."
+157,3,5,"TXT","12",0,0,"“We can see where (our neigh-"
+158,3,5,"TXT","12",0,0,"bors) are coming from,” Curtis said. “Since we don’t own the house, we have a different mentality (about caring for it)."""
+159,3,5,"TXT","13",0,0,"“The yard is our responsibility,” Schultz said. “But we didn’t have $200 to $300 for a lawnmower. And the one the landlord provided doesn’t work.”"
+160,3,5,"TXT","14",0,0,"Last month, they borrowed some weed-eaters from friends and mowed the lawn. “We like it short, too, “ Curtis said."
+161,3,5,"TXT","15",0,0,"The students said they don’t dislike Alvin and Norma Rogers. “But we feel we were already on their s-----list before we intro-"
+162,3,5,"TXT","15",0,0,"duced ourselves,” Weaver said."
+163,3,5,"TXT","16",0,0,"“I wanted to make a good relationship with our neighbors, but I feel that there’s no way we’ll ever win because we’re students.”"
+164,3,5,"TXT","17",0,0,"Chow agreed."
+165,3,5,"TXT","18",0,0,"“If they would have asked us nicely instead of saying, ‘Hey, you’re students, and we know you don’t think about things,’ maybe we would try harder,” Chow said."
+166,3,5,"TXT","19",0,0,"But the Rogers feel they are reasonable because they didn’t approach the students with their concerns until there was a problem."
+167,3,5,"TXT","20",0,0,"Alvin and Norma Rogers feel that it’s the city’s responsibility to pass ordinances and enforce them."
+168,3,5,"TXT","21",0,0,"“The students need to made aware of the laws, too,” Norma Rogers said. “Maybe the city could publish handbooks for people living in single-family dwellings” which outline guidelines for cooperative and legal living, she said."
+169,3,5,"TXT","22",0,0,"Residents for Quality Neighborhoods has often lobbied the City Council to implement various restrictions in San Luis Obispo neighborhoods, often successfully. Its projects have ranged from overnight parking ordinances to restricting the number of people allowed to share a dwelling."
+170,3,5,"TXT","23",0,0,"“The people in RQN are not against students.” said RQN Co-Chair Tom Kay. “They’re against having their rights infringed upon.” He said the group realizes it’s a small percentage of the students that reinforce negative"
+171,3,5,"BQT","0",0,0,"wanted to moke a good relationship with our neighbors, but I feel that there^s no way well ever win because we^re students."""
+172,3,5,"BQA","0",0,0,"Gail Weaver"
+173,3,5,"BQA","0",0,0,"Cal Poly student"
+174,3,5,"BQT","0",0,0,"The people in (Residents for Quality Neighborhoods) are not against students. They^re against having their rights infringed upon."
+175,3,5,"BQA","0",0,0,"Tom Kay"
+176,3,5,"BQA","0",0,0,"RQN Chair"
+177,3,5,"TXT","23",0,0,"stereotypes of all the others."
+178,,5,"TXT","24",0,0,"Kay said he thinks Week of Welcome is a good time to give guidelines to new students about how to be good neighbors."
+179,3,5,"TXT","25",0,0,"“Maybe we could have a speaker come and discuss what’s acceptable behavior away from home,” he said."
+180,3,5,"TXT",,0,0,"A better understoncfitig"
+181,3,5,"TXT","26",0,0,"Not all situations where students live next door to family residences are unpleasant."
+182,3,5,"TXT","27",0,0,"'Two blocks over from Balboa, on Coral Court, Ed and Gladys Fraund live next door to Cal Poly students Melissa Nelson, Jenna Thompson, Cathy Bandy and Stephanie Boda. The students also have two dogs, a cat and a bunny."
+183,3,5,"TXT","28",0,0,"The students said they feel they have a good relationship with their neighbors because they try hard to be considerate."
+184,3,5,"TXT","29",0,0,"'The students said that the previous renters were problematic, and their landlord was rather skeptical about renting to students because of past"
+185,3,5,"TXT","29",0,0,"disasters."
+186,3,5,"TXT","30",0,0,"“They even tried to sell the house because they'didn’t want to rent to students,” Thompson said."
+187,3,5,"TXT","31",0,0,"But the Fraunds showed them the house for the owner and took a chance."
+188,3,5,"TXT","32",0,0,"“We’ve had no problems whatsoever with our neighbors,” Nelson said, “because we try to be courteous.”"
+189,3,5,"TXT","33",0,0,"“We are polite and don’t have huge parties. (The Fraunds) don’t mind as long as we don’t wake them up.”"
+190,3,5,"TXT","31",0,0,"The students said they get along with the Fraunds so well that they have fed their dogs and parked a car in their driveway when no one was home."
+191,3,5,"TXT","32",0,0,"The Fraunds agp-eed that the students next door are considerate. “But then, we don’t go looking for trouble,” said Gladys Fraund."
+192,3,5,"TXT","33",0,0,"“The girls next door are very nice,” she said. “We don’t even know they’re there usuallv.”"
+193,3,5,"TXT","34",0,0,"“You only hear about the bad kids, not the good ones,” said Ed Fraund. “On the whole, (students) have been in and out of the area for 10 to 12 years, and about 90 percent of them were fine.”"
+194,3,5,"TXT","35",0,0,"The Fraunds said when they have had problems with student neighbors, it was usually because of parties, noise and parked cars which filled the cul-de-sac so they couldn’t get out."
+195,3,5,"TXT","36",0,0,"“If the students and the people in the neighborhood talk with each other, usually they can work things out,” said Ed Fraund. “When students move in, we introduce ourselves.”"
+196,3,5,"TXT","37",0,0,"The Fraunds agreed with Norma and Alvin Rogers that responsibility does not lie entirely with the students."
+197,3,5,"TXT","38",0,0,"“The landlords or real estate people ought to take care of the yard maintenance. I don’t mind lending my mower and rakes and things to the students, but they should really take care of that for them,” Ed Fraund said."
+198,3,5,"TXT","39",0,0,"“I think students and residents can work together (living in the same neighborhood),” he added. “But you have to have consideration for each other.”"
+199,3,6,"HL","0",0,0,"Campus to take note of disabled students today"
+200,3,6,"BL","0",0,0,"By Jeffrey Jen and Joy Nieman"
+201,3,6,"BL","0",0,0,"Doily Staff_____________________"
+202,3,6,"TXT","1",0,0,"Celebrating the achievements of students with disabilities is the purpose planners say is behind today’s Disabled Awareness Day."
+203,3,6,"TXT","2",0,0,"“We’re really going for broke this year,” said architecture graduate student Michael Shannon, publicity chair for the event. “We want to set the precedent for new things in the future. We’re tired of just a token celebration of disabilities. We are going to have a lot of activities going on.”"
+204,3,6,"TXT","3",0,0,"The theme for this year’s Awareness Day is “The Seven Intelligences.” Diane Dempwolf, a staff development coordinator at the Oxnard School District, will speak on the theory by Harvard University professor Howard Gardner, who says people inherently have seven intelligent ways of learning."
+205,3,6,"TXT","4",0,0,"“It’s not just the traditional verbal and linguistic approach to learning taught in college,” Shannon said."
+206,3,6,"TXT","5",0,0,"The theory fits well into the message which DSS and the students it serves say they are trying to get across."
+207,3,6,"TXT","6",0,0,"“We all have different abilities and skills that we’re good at,” said Chris Parker-Kennedy, a Deaf Services Specialist with DSS. “With Awareness Day, we’re trying to promote all the ways people can be talented.”"
+208,3,6,"TXT","7",0,0,"DSS Coordinator Harriet Clendenen said Awareness Day also will help increase awareness in the campus community."
+209,3,6,"TXT","8",0,0,"“It gives (students with disabilities) an opportunity to demonstrate their abilities,” Clendenen said."
+210,3,6,"TXT","9",0,0,"As part of Awareness Day, Disabled Student Services has speakers, videos, displays and paintings."
+211,3,6,"TXT","10",0,0,"Landscape architecture junior Leo Simone, one of the coordinators of Awareness Day, said panel discussions also will be held regarding how people view disabilities."
+212,3,0,"AT","0",0,1,".Voir thru Muy 8"
+213,3,0,"AT","0",0,1,"Buy 2 Panties Get 1 Free!"""""
+214,3,0,"AT","0",0,1,"Wappen"
+215,3,0,"AT","0",0,1,"54.V0185 799 Higuera Street San Luis Obispo"
+216,3,0,"AT","0",0,1,"*<>/ i'i/Híi/ »r lí'sser valué"
+217,3,0,"AT","0",0,2,"APPLE POWERDAYS '94"
+218,3,0,"AT","0",0,2,"May 18 & 19 9am-4pm Dexter Lawn"
+219,3,0,"AT","0",0,2,"ofEvo^^^"
+220,3,0,"AT","0",0,2,"Trade-in your old computer for a new one"
+221,3,0,"AT","0",0,2,"See the latest in Power PC technology & Native Applications"
+222,3,0,"AT","0",0,2,"Purchase software & computer accessories at a discount"
+223,3,0,"AT","0",0,2,"EIG>rroJ"
+224,3,0,"AT","0",0,2,"Bookstore"
+225,3,0,"AT","0",0,2,"El Corral Bookstore Computer Department invites you to drop by!"
+226,4,0,"PI","0",0,0,"4 TUESDAY, MAY 3, 1994"
+227,4,0,"MH","0",0,0,"MusiangDaiiy"
+228,4,0,"MH","0",0,0,"Ve hue you. Long ùnte."
+229,4,0,"MH","0",0,0,"Eurocui B<mm)"
+230,4,0,"MH","0",0,0,"John Hubbell,£^i/or/ii Cbtef Mula R. Van ScìWìy^ttt.ManagingUUor Len Vends, Amstant Managing UUor Joy Nieinan, Auistanl .Managing Editor Silas Lyons, intiestigative Editor Cabe Joynl, Opinion Editor Bayne $ Takemolo,d>fs Editor Brad Hamdlon, Sports Editor Troy Pelersen, Assistant Iports Editor"
+231,4,0,"MH","0",0,0,"Aivber Marvin Sosna Bisbesszxj Schuennann,Bu^nessM9 ,Jeff HolUsier, Ad Dir,Dan Burke, AdlYod Dir , Lisa Mutile:, Nall Ad Mgr, MlcheOe Bishop, Dedii.Mgr. Adiertsingl^presmtiltves Nrk Enney, Heather Miller, Andy Price, Mary Kay Duffy, Brendan Ebason, Marianne Ouuen, Kalle Portillo, Rodney Blaco, Tamera Kourkos QassiiMs: TeresBOarcia, Amy Huiiunei, Jane Wooding bidyc George (3ien,Edilotlal Deagn Editor, Oalg Stout, Assoc Design Editor, Vis; Sieve Mortensen, Editorial Illustrator, George Oien, Jason Silva, DJ Taylor, Layne B Lev. Danid Chacon, Mike Ritiary, Ross Gecrdes, Nl Designerv"
+232,4,0,"MH","0",0,0,"Scott Robtnson, Bditoc, Chrt Laansky, Baine Taylor, Cole Stephens, Mlchul DeMaruni, Allyson Still, Mark Gewerli, Alex Oirtstensen, Juvi MarUne:, Lorena Vnold, Rioiographers.John iIvTdd, Amie Smith, Hans Mess, Lab Technicians Caoiput« Db: Oiris Edwards. PradoslUa: Amy Hooper. Prod. .Mgr, Al StalU, Larry Rodenborn, Jane Wooding, Malt Hoy, Lori Winner, Sieve Tanasse, Prod Assistants CbtultlltK Scon Karle"
+233,4,0,"HM","0",0,0,"1 dH»«i Ofites (vaili im ?26, Cd Pdi, Sontui GUx«;, (A, 93i07 Idiuid (001) 714-1796. Mwiians (001) 7141 lii ►« 7166704 >ji -TQia a C 1994 Moiang OoA hmtai tu llfivy»t> 6mh( Simms"
+234,4,0,"SH","0",0,0,"EDITORIALS"
+235,4,7,"HL","0",0,0,"‘Sousaphone’ decision just won’t do"
+236,4,7,"TXT","1",0,0,"If Cal Poly’s Judicial Affairs office is going to continue legislating on free speech issues, it had better start taking them seriously."
+237,4,7,"TXT","2",0,0,"The Daily recently reported the punishments handed to several Cal Poly Marching Band members for their part in a raunchy newsletter that ridiculed several other students. For their offensive comments and drawings attacking fellow band members, the editors of the “Swinging Sousaphone” had to answer to the university’s administrative justice system — and we question the “justice” they’ve been dealt."
+238,4,7,"TXT","3",0,0,"The offending students, our aiiministration says, will remunerate their offenses by performing such trivial tasks as writing a two-page paper on what they learned from the incident and attend a seminar on gay and lesbian issues."
+239,4,7,"TXT","4",0,0,"What a joke!"
+240,4,7,"TXT","5",0,0,"We have trouble swallowing the idea that Judicial Affairs should even be serving judgement in this case, and, regardless, we think its solution is ludicrous."
+241,4,7,"TXT","6",0,0,"If what those band members wrote was obscene, libelous, or indecent, why can’t the dispute be settled in a public court? If it must be settled on campus, and libel or obscenity is shown, why did Judicial Affairs hand down such silly punishments?"
+242,4,7,"BQT","0",0,0,"Bui the perverted minds that created the ‘Sousaphone’ were adult minds — at least legally. Why shouldn 7 they be treated like adults? Why aren’t adult laws and norms appropriate?"
+243,0,0,"B","0",0,0,
+244,4,7,"TXT","7",0,0,"And what justice has been served to the people ridiculed in the “Sousaphone?” They get a letter of apology. The same kind your first-grade teacher would make you write."
+245,4,7,"TXT","8",0,0,"But the perverted minds that created the “Sousaphone” were adult minds — at least legally. Why shouldn’t they be treated like adults? Why aren’t adult laws and norms appropriate?"
+246,4,7,"TXT","9",0,0,"If a public court found the publication of the “Sousaphone” a hate crime — and it seems obvious it was created out of hate and ignorance — the students who created it would be doing a lot more than the juvenile punishments currently assigned to them."
+247,4,7,"TXT","10",0,0,"Hate crime is a serious offense that has no place at a university. Did a hate crime take place in the publication of the “Sousaphone?” Without a public trial, who’s to say?"
+248,4,7,"TXT","11",0,0,"But based on Judicial Affairs’ resolution, this looks like a pretty trivial offense."
+249,4,7,"TXT","12",0,0,"But we’re not convinced. We saw the “Sousaphone.” We were disgusted. If we were the students whom the newsletter riduculed, we’d likely feel betrayed by the Judicial Affairs Department."
+250,4,7,"TXT","13",0,0,"As journalists, we would be the last to advocate a limit on legal free speech, but we must be fully aware of the laws that govern obscenity and libel."
+251,4,7,"TXT","14",0,0,"To hand down such a trivial punishment to the “Sousaphone” creators is to say that they are guilty, but not of a serious offense."
+252,4,7,"TXT","15",0,0,"We urge Judicial Affairs officials to make up its mind: Did a serious offense occur, or should the whole issue just be pushed aside? We hope they consider this the next time they are deciding an important campus issue — the victims of the “Sousaphone” deserve better."
+253,4,0,"SH","0",0,0,"MUSTANG DAILY"
+254,4,0,"SH","0",0,0,"REPORTER'S NOTEB O 0_K"
+255,0,0,"B","0",0,0,
+256,0,0,"B","0",0,0,
+257,4,8,"HL","0",0,0,"Tolerance goes deeper than skin"
+258,4,8,"BL","0",0,0,"By Lori Witmer"
+259,4,8,"TXT","1",0,0,".Rejection. It can be devastating. It hurts."
+260,4,8,"TXT","2",0,0,"I was trying to become a Residential Adviser for next year and went through the recruitment process a little while ago."
+261,4,8,"TXT","3",0,0,"There were approximately 125 applicants, and after each day of the recruitment weekend, about 35 were cut. I made it through the first two cuts, which allowed me to come back to each of the recruitment days."
+262,4,8,"TXT","4",0,0,"During those days all applicants went through a series of tests geared towards screening. The tests were elaborate role playing games that sometimes called for team work and other times called for individualism."
+263,4,8,"TXT","5",0,0,"Unfortunately, I received notice that I wasn’t among those chosen for the position next year. At first I was upset and a bit irate. I thought I had wasted my precious time going through stupid role playing games and made a fool of myself in the process by yelling, “It’s a great day to be an R.A.!”"
+264,4,8,"TXT","6",0,0,"Each of the days started at 8:30 a.m. and lasted until about 5 p.m. — a time that I could have spent more wisely by doing homework or at least sleeping in. I even missed my first intramural softball game! OK — it was rained out, but that’s not the point. There were many other productive things that 1 could have been doing during that weekend."
+265,4,8,"TXT","7",0,0,"But then I remembered the fun I really had during the process. I met a lot of wonderful people and made some new friends. Who knows, some of them might be my R.A.S next year!"
+266,4,8,"TXT","8",0,0,"I even learned something that will last throughout my lifetime."
+267,4,8,"TXT","9",0,0,"You see, I am naive. I’m sure after reading this you will agree. I’m not used to big city life, as I come from a small conservative valley just south of here."
+268,4,8,"TXT","10",0,0,"For example. Cal Poly’s student population is around 15,000; my valley is composed of five towns with a combined population of approximately 13,000."
+269,4,8,"TXT","12",0,0,"Also, this is my first year here and I live in one of the red brick halls. There are about 200 students living in my residence hall; my graduating class from the only high school in the valley was 180."
+270,4,8,"TXT","13",0,0,"I hope you get the point."
+271,4,8,"TXT","14",0,0,"Living in such a small valley has sheltered me from diversity. I could probably go through my high school yearbook and count the number of Asians and African Americans on my fingers and toes."
+272,4,8,"TXT","15",0,0,"However, dealing with people from diverse ethnic backgrounds has never been a problem for me. I have no prejudices towards skin color. I believe we are all the same inside, it’s just the outside that looks a little different."
+273,4,8,"TXT","16",0,0,"I’m afraid that when I say this, though, I am being hypocritical. It seems that I only relate this to ethnic backgrounds, yet there is much more to people than the color of their skin."
+274,4,8,"TXT","17",0,0,"Along with not knowing very many people of color, my small town sheltered me from homosexuals. I think I knew only two male couples living in my town, 'They were all very nice and acted nothing like any of the stereotypes."
+275,4,8,"TXT","18",0,0,"I don’t think I ever thought of them as “gay.” To me they were just friends of my parents who might wave to me on the street."
+276,4,8,"TXT","19",0,0,"These couples were much older than I, the youngest was in his early forties. I believe this is the main reason I had no problems with any of them. Also, the fact that they were men helped."
+277,4,8,"TXT","20",0,0,"I have never known a woman that was homosexual, nor have I known any homosexuals my age."
+278,4,8,"TXT","21",0,0,"I used to think homosexuality was disgusting and bad because it isn’t the “norm.” I also would be scared to be around a gay woman because I thought she might try to hit on me. I am afraid that both of these reactions stem from ideas planted in my head by stereotypes."
+279,4,8,"TXT","22",0,0,"However, my eyes were opened during the R.A. recruitment process."
+280,4,8,"TXT","23",0,0,"Each of the two days I was assigned to a group of ten applicants like myself. We had to cooperate with and trust each other to accomplish the tasks set forth by the facilitators (current R.A.’s and other Residential Life and Education department heads)."
+281,4,8,"TXT","24",0,0,"During some of the activities personal views came out causing tension, but my group worked around them well. For instance: One exercise that turned out to be very emotional was a simulation of a world without freedom during which some of the members religious beliefs and sexual preferences came out."
+282,4,8,"TXT","25",0,0,"I was surprised to find out some of the people in my group (my teammates) were homosexual. I felt a little strange and a bit nervous around those people after learning this."
+283,4,8,"TXT","26",0,0,"Then I thought about what we had accomplished during the weekend, how we had become friends through it all, and I realized that someone’s sexual preference, skin color or religion made no difference."
+284,4,8,"TXT","27",0,0,"So I guess I was being too harsh when I said I wasted my time with the recruitment weekend. Actually, it was very exciting for me — not only did I have fun meeting people from all walks of life, but I grew a little more through the process."
+285,4,8,"TXT","28",0,0,"I learned that we are all equal — it’s not just a saying. Not only does skin color not matter, but religion and sexual preference don’t either. Because, when it comes down to it, everyone can work together to accomplish even the craziest of tasks."
+286,4,8,"TXT","29",0,0,"As I thought about it more, I realized my rejection wasn’t the end of the world. I hope that the other applicants that weren’t selected feel the same."
+287,4,8,"TXT","30",0,0,"As they say, “When the Lord closes a door, somewhere he opens a window.” I can’t wait to see where it is!"
+288,4,8,"BL","0",0,0,"• Lori Witmer is a computer science freshman. This is her first quarter reporting for the Daily."
+289,4,0,"OT","0",0,0,"Lehers Policy"
+290,4,0,"OT","0",0,0,"Mustang Daily welcomes letters and commentaries from students, staff, and other community members. Letters typed, double spaced and under 250 words, ifaries should be typed, double spaced and 750-1 ,(X)(3 words."
+291,4,0,"OT","0",0,0,"should be Commen"
+292,4,0,"OT","0",0,0,"All authors must include a name, signature and phone number. Students should include their major and class standing. Mustang Daily reserves the right to edit letters for clarity, grammar, and length."
+293,4,0,"OT","0",0,0,"Submissions can be brought, mailed, faxed or E-mailed to: Mustang Daily"
+294,4,0,"OT","0",0,0,"Graphic Arts Bldg #226, Cal Poly, San Luis Obispo, CA. 93407 FAX: 1805) 756-6784"
+295,4,0,"OT","0",0,0,"E-Mail: gjoynt@ocx>e.calpoly.edu (letters only)"
+296,4,0,"OT","0",0,0,"Commentary submissions on 3.5"" disks are encouraged. Files should be in Word 4.0. MacWrite, or other common Macintosh software."
+297,4,0,"OT","0",0,0,"Please submit a hard copy with your disk.____"
+298,5,0,"PI","0",0,0,"MUSTANG DAILY"
+299,5,,"PI","0",0,0,"TUESDAY, MAY 3, 1994"
+300,5,2,"HL","0",0,0,"KEVORKIAN: Jury finds Kevorkian not guilty EQUITY: New minority recruitment program developed for Ag, NRM"
+301,5,2,"ME","0",-1,0,"From page 1"
+302,5,2,"TXT","5",0,0,"in the Aug. 4 death of Thomas Hyde, 30, who suffered from the degenerative nerve disorder Lou Gehrig’s disease."
+303,5,2,"TXT","6",0,0,"By the time Kevorkian hooked Hyde up to a canister of carbon monoxide on a mattress in the back of his old, rusty van, Hyde could bare’y walk, talk or feed himself,"
+304,5,2,"TXT","7",0,0,"Kevorkian, who had faced up to four years in prison and a $2,000 fine if convicted, acknowledged he supplied the carbon monoxide and placed the clear plastic mask over Hyde’s nose and mouth."
+305,5,2,"TXT","8",0,0,"Three jurors interviewed after the verdict cited a legal loophole and a technicality as reasons for acquittal."
+306,5,2,"TXT","9",0,0,"They concluded that Kevorkian’s main intent was to relieve Hyde’s suffering, not cause his death. Prosecutors had argued that part of the law was meant to apply to physicians prescribing experimental drugs for terminal patients."
+307,5,2,"TXT","10",0,0,"“We believe the intent was not to help Hyde commit suicide,"" juror Gwen Bryson said. “We believe it was to relieve pain and suffering.”"
+308,5,2,"TXT","11",0,0,"Some jurors also didn’t believe"
+309,5,2,"TXT","11",0,0,"the prosecution proved where the suicide took place. Kevorkian had initially told authorities the suicide took place in a Detroit park but testified at trial that it happened in the parking lot behind his apartment building in a different county."
+310,5,2,"TXT","12",0,0,"“I don’t think it’s our obligation to choose for someone else how much pain and suffering they should endure,” said juror Gail Donaldson."
+311,5,2,"TXT","13",0,0,"Assistant Wayne County Prosecutor Timothy Kenny said he believes the evidence supported the charge, but “there were a lot of emotional hurdles to get over.”"
+312,5,2,"TXT","14",0,0,"The verdict raises more questions about the future of Michigan’s assisted-suicide ban, which expires Nov. 25."
+313,5,2,"TXT","15",0,0,"Kevorkian’s five-day trial was the first time charges under the law had gone before a jury. His lawyer, Geoffrey Fieger, said the verdict “drives a stake” into the ban’s heart."
+314,5,2,"TXT","16",0,0,"“This is the first chance for the people to decide,” Fieger said. “It wasn’t Dr. Kevorkian on trial here. It was everyone’s rights on trial hero,”"
+315,5,4,"ME","0",-1,0,"From page 1"
+316,5,4,"TXT","10",0,0,"especially Latinos, think they’re going to go out in the field and work,“ Gutierrez said. “A lot of their parents think they’d be better off as engineers."
+317,5,4,"TXT","11",0,0,"“Some parents don’t understand that you can get the same kind of jobs as an ag major.”"
+318,5,4,"TXT","12",0,0,"Gutierrez added his club actively recruits high school students and encourages them to think about careers in agriculture."
+319,5,4,"TXT","13",0,0,"“I feel that the more you expose it to minorities, the more you will get,” Gutierrez said."
+320,5,4,"TXT","14",0,0,"According to a report published by the Institutional Studies Office in winter quarter, minorities make up 16 percent of the Natural Resources Management Department. In the College of Agriculture, 17 percent are minority students."
+321,5,4,"TXT","15",0,0,"Thompson said ethnic minorities statistically pursue an education in business, engineering or liberal arts. Many minority students, he said, do not realize the career opportunities in environmental and forestry consulting, such as with the U.S. Forest Service or the National Park Service."
+322,5,4,"TXT","16",0,0,"Pillsbury said part of the"
+323,5,3,"HL","0",0,0,"SOUTH AFRICA: De Klerk, Mandela pledge to forgive past, build future"
+324,5,3,"ME","0",-1,0,"From page 1"
+325,5,3,"TXT","9",0,0,"minority surrendered its privileges to the black majority. Both sides promised to forgive the past and build one nation."
+326,5,3,"TXT","10",0,0,"ANC officials stood before their new national flag and raised their glasses in a toast in honor of outgoing President de Klerk, incoming President Mandela and the “new South Africa.”"
+327,5,3,"TXT","11",0,0,"“I stand before you filled with deep pride and joy — pride in the ordinary, humble people of this country,” said Mandela. “You have shown such a calm, patient determination to reclaim this country as your own. And joy that we can loudly proclaim from the rooftops — free at last!”"
+328,5,3,"TXT","12",0,0,"Although ballot officials remained less than halfway through the counting, an ANC landslide was indisputable."
+329,5,3,"TXT","13",0,0,"With about 44 percent of the estimated 22.7 million votes counted, the ANC .had 62.6 percent to 23.7 percent for de Klerk’s National Party. The Zulu nationalist Inkatha Freedom"
+330,5,3,"TXT","13",0,0,"Party was a distant third with 6.2 percent, followed by the proapartheid Freedom Front with 2.8 percent."
+331,5,3,"TXT","14",0,0,"The ANC was projected to win around 240 seats in the new 400-seat Parliament, which will select Mandela as president Friday."
+332,5,3,"TXT","15",0,0,"De Klerk’s concession speech was attended by about 300 people at National Party headquarters in Pretoria."
+333,5,3,"TXT","16",0,0,"“Next Tuesday I shall lay down my responsibilities as state president,” de Klerk said. “I shall be handing over the presidency to Mr. Mandela.”"
+334,5,3,"TXT","17",0,0,"“Mr. Mandela has walked a long road and now stands at the top of the hill,” he said of the ANC leader, who spent 27 years in prison for opposing the policies imposed by de Klerk’s party. “I hold out my hand to Mr. Mandela in friendship and in cooperation.”"
+335,5,3,"TXT","18",0,0,"De Klerk is expected to serve as one of two vice presidents."
+336,5,3,"TXT","19",0,0,"“During the past four years."
+337,5,3,"TXT","19",0,0,"we have proved that we can work together,” de Klerk said. “Our relationship has become a symbol of the ability of South Africans from widely different backgrounds to cooperate in the national interest.”"
+338,5,3,"TXT","20",0,0,"De Klerk told The Associated Press that the National Party “will in due course become the biggest party in South Africa."
+339,5,3,"TXT","21",0,0,"“This was the freedom election, the next will be about economic policy. In the 1999 election, the National Party will be the winning party,” he said."
+340,5,3,"TXT","22",0,0,"De Klerk, 58, took office in 1989 and was expected to continue the hard-line policies of his predecessor, P.W. Botha. He shocked the world by announcing the imminent end of apartheid, and freed Mandela from a life prison term."
+341,5,3,"TXT","23",0,0,"Within months the two men had launched negotiations that led to a new constitution guaranteeing equal rights for blacks and whites, and clearing the way for all-race elections."
+342,5,1,"HL",,0,0,"CHILDREN’S CENTER: Officials say debt refinancing is crucial first step"
+343,5,1,"ME","0",-1,0,"From page 1"
+344,5,1,"TXT","12",0,0,"us to meet our financial obligations.“"
+345,5,1,"TXT","13",0,0,"Reeves said ASI has based the Center’s 1994-95 budget projections around an 86 percent occupancy rate in hopes of balancing its loudget."
+346,,1,"TXT","14",0,0,"“I think it’s something that is definitely attainable, but the Center will have to make this budget in order to make next year work.”"
+347,5,1,"TXT","15",0,0,"'The budget problem doesn’t just affect the Children’s Center. Because of the money the Center has lost, ASI has made cutbacks in other programs and has instituted a hiring freeze throughout the corporation."
+348,5,1,"TXT","16",0,0,"“ASI has left a couple of job positions vacant in order to help the Center meet this year’s budget,” Harrigan said. “This basically means that we haven’t hired any nonstudent staff since we found about the deficit.”"
+349,5,1,"TXT","17",0,0,"According to Reeves, ASI has limited the funds given to the Program Board and Instructional Related Activities."
+350,5,1,"TXT","18",0,0,"“In order to save the Center, ASI has issued a moratorium of Program Board events in excess of $7,500,” he said. “We also were"
+351,5,1,"TXT","18",0,0,"not able to grant an extra $20,000 to other ASI organizations such as the Cal Poly Crew or the MEChA club.”"
+352,5,1,"TXT","19",0,0,"ASI isn’t the only one that’s had to sacrifice. Employees at the Center also have made several changes in efforts to ease the burden of the deficit."
+353,5,1,"TXT","20",0,0,"Children’s Center Director Haila Hafley said the Center is making drastic changes with assistance from employees, parents, ASI and other departments on campus."
+354,5,1,"TXT","21",0,0,"With help from Campus Dining and the Nutrition and Food Science departments, the Center has learned how to control food preparation costs."
+355,5,1,"TXT","22",0,0,"The Center also is making cutbacks within the organization."
+356,5,1,"TXT","23",0,0,"High staffing costs have been among the biggest contributors to the deficit, and the Center managers say they already are addressing those."
+357,5,1,"TXT","24",0,0,"“We have decided to eliminate one classroom and limit the amount of children per classroom in order to keep our child-teacher ratio low,” Hafley said."
+358,5,1,"TXT","25",0,0,"“We realize that some of our cutbacks are small, but every lit-"
+359,5,4,"TXT","16",0,0,"problem is these careers are not typically viewed as science-based professions."
+360,5,4,"TXT","17",0,0,"“These are professions that require a solid science base, mathematical and statistical expertise and good public skills,” Pillsbury said. “People need to see role models working in these kinds of fields in a way that is realistic.”"
+361,5,4,"TXT","18",0,0,"But Pillsbury said the program is not only for minorities."
+362,5,4,"TXT","19",0,0,"“It would be impossible to build leaders in an environment that is not representative of the real workplace where all ethnic groups are present,” he said."
+363,5,4,"TXT","20",0,0,"Pillsbury plans to use the 3,800-acre Swanton Pacific Ranch in Santa Cruz County as an integral part of the program. Cal Poly acquired the ranch from alumnus A1 Smith, who willed it to the school upon his death early in winter quarter."
+364,5,4,"TXT","21",0,0,"Pillsbury said the progi’am would use existing facilities. The students, he added, also would be able to use the land’s resources."
+365,5,4,"TXT","22",0,0,"In addition, he said the department is seeking funding to build new facilities. Pillsbury said the students also will visit Bureau of Land Management"
+366,5,4,"TXT","22",0,0,"sites, soil conservation field stations and many forests and parks."
+367,,4,"TXT","23",0,0,"But details still need to be worked out, according to Pillsbury and Thompson."
+368,5,4,"TXT","24",0,0,"Thompson said the program would probably create environmental camps for students in elementary school where they would learn how to take water quality measurements and how to identify various animal species. Older students would probably participate in internships, Thompson said."
+369,5,4,"TXT","25",0,0,"Regardless of exactly how the program will be designed, both Pillsbury and Thompson agree it will teach students about careers in agriculture and natural resources."
+370,5,4,"TXT","26",0,0,"“There is none quite like this program,” Pillsbury said. “There are a number of programs that are nature camps, but this one is focused on careers. Right from the very beginning, they are going to see that they can be this professional person out there helping to make decisions.”"
+371,5,0,"AT","0",0,1,"O U T LET"
+372,5,0,"AT","0",0,1,"$ A L E"
+373,5,1,"TXT","25",0,0,"tie bit helps,” she added. “These changes will alter the Center in some ways, but we are determined to provide the high quality care we always have.”"
+374,5,1,"TXT","26",0,0,"According to Hafley, the Center also has made cuts in personnel areas that would least effect the program. These cutbacks include a small decrease in student starting pay along with limited pay increases. The Center also has eliminated one office manager position in hopes of decreasing all unnecessary costs."
+375,5,1,"TXT","27",0,0,"“In conjunction with these changes we have increased parent fees by a minimal amount,” Hafley said. “And we now are recruiting volunteers to help in classrooms, kitchen and office areas in hopes to reduce student staff hours."""
+376,5,1,"TXT","28",0,0,"Agricultural science senior Jennifer Raia said as an employee of the Center she feels the program is too important to lose and supports all the changes."
+377,5,1,"TXT","29",0,0,"“We don’t have as much as we did before, but we need to save the Center because it has too many wonderful things to offer the children, parents, students, and the university,” she said."
+378,5,0,"AT","0",0,1,"50""""-80"
+379,5,0,"AT","0",0,1,"OFF RETAIL"
+380,5,0,"AT","0",0,1,"%"
+381,5,0,"AT","0",0,1,"Veteran's Building"
+382,5,0,"AT","0",0,1,"801 Grand Avenue (Corner of Monterey and Grand)"
+383,5,0,"AT","0",0,1,"San Luis Obispo 528-2947"
+384,5,0,"AT","0",0,1,"Men's & Women's Clothing Victorian Lingerie, Career Wear & Sportswear (from that Oh-So Secret Catalogue) Tweeds Catalogue Shoes • Boots Jewelry • Swimwear & Much Much More!"
+385,0,0,"B","0",0,0,
+386,5,0,"AT","0",0,1,"THÜR5.. MAY 5, 11 AM TO 9 PM"
+387,5,0,"AT","0",0,1,"FRI-, MAY 6, 10 AM TO 6 PM"
+388,5,0,"AT","0",0,1,"SAT., MAY 7, 10 AM TO 6 PM"
+389,5,0,"AT","0",0,1,"'?//"
+390,0,0,"B","0",0,0,
+391,0,0,"B","0",0,0,
+392,0,0,"B","0",0,0,
+393,0,0,"B","0",0,0,
+394,0,0,"B","0",0,0,
+395,5,0,"AT","0",0,1,"Just think! You could have spent yesterday stressing out about what to fill this space with."
+396,6,0,"AT","0",0,1,"Applications are now being accepted to become Mustang Daily’s next editor in chief. Applicants should submit a proposal they feel explains their vision for the newspaper’s future. The position is vacant for both summer quarter and the 1994-95 regular academic year. Applications are due at the Daily office by May 9 at 9 a.m. An interview with the Daily Publisher’s"
+397,6,0,"AT","0",0,1,"Board will follow on May 11."
+398,6,0,"AT","0",0,1,"If you have questions, call current editor in chief John Hubbell at 756-1796. He’ll be busy worrying about what to put on page six tomorrow."
+399,6,0,"AT","0",0,1,"Like Ole Man River, we just keep rolling along."
+400,6,0,"AT","0",0,1,"Musiang Daiiy"
+401,0,0,"NA","0",0,0,"«AMU1"
+402,0,0,"B","0",0,0,
+403,0,0,"B","0",0,0,
+404,0,0,"B","0",0,0,
+405,6,0,"AT","0",0,2,"Now open for all your needs"
+406,6,0,"AT","0",0,2,"© Cap and Gowns © Diploma Orders © Announcements"
+407,6,0,"AT","0",0,2,"© Thank you notes © And morel!"
+408,6,0,"AT","0",0,2,"The Grad Center is open Sam - 4:30pm, Monday through Friday"
+409,6,0,"AT","0",0,2,"EIG>nall^l^Baokstoie"
+410,6,0,"AT","0",0,0,
+411,6,0,"AT","0",0,3,"94"
+412,6,0,"AT","0",0,3,"1 St Week"
+413,6,0,"AT","0",0,3,"ONLY THE STRONG SURVIVE"
+414,6,0,"AT","0",0,3,"f. MAY 2"
+415,6,0,"AT","0",0,3,"Obsfade Course Dexter Lawn 4p.m. • 6p.m."
+416,6,0,"AT","0",0,3,"Pizza Feed U.U. Goinei Area • 8p.m."
+417,6,0,"AT","0",0,3,"Bowlinq U.U. Plala 8p.m. - 1 1 p.m."
+418,6,0,"AT","0",0,3,"TUESDAY. MAY 3"
+419,6,0,"AT","0",0,3,"3-pt. Snoot-oyt/ Arouna the World Tourney Mott Gym 7p.m. - midnight"
+420,6,0,"AT","0",0,3,"WEDNESDAY. MAY 4"
+421,6,0,"AT","0",0,3,"Trap Shoot"
+422,6,0,"AT","0",0,3,"San Luis Obispo Shooting"
+423,6,0,"AT","0",0,3,"I 5 mi óp.m"
+424,6,0,"AT","0",0,3,"Range • 101)"
+425,6,0,"AT","0",0,3,"9p.m."
+426,6,0,"AT","0",0,3,"Sorority Soccer Rec Center field 3p.m. • 7p.m."
+427,6,0,"AT","0",0,3,"THURSDAY. MAY"
+428,6,0,"AT","0",0,3,"Volreyball Mott Gym 7p.m. - midnight"
+429,6,0,"AT","0",0,3,"Fun Run Mott Gym Lawn 6p.m."
+430,6,0,"AT","0",0,3,"FRIDAY. MAY 6"
+431,6,0,"AT","0",0,3,"Volleyball Mott Gym 7p.m. - midnight"
+432,6,0,"AT","0",0,2,"Sorojity Soccer Rec Center field 3p./n. • 7p.ra."
+433,6,0,"AT","0",0,2,"Dexter Lawn 8a.m. - noon"
+434,6,0,"AT","0",0,2,"Wrestling Mott CWm 7a.m. * 3p.m"
+435,6,0,"AT","0",0,2,"Tenni^i:"
+436,6,0,"AT","0",0,2,"Mott Gym Tennis Courts noon • midnight"
+437,0,0,"B","0",0,0,
+438,6,0,"AT","0",0,2,"lY; may 8"
+439,6,0,"AT","0",0,2,"^ ^mpiad Col F^oly Track 8a.m. - 2p.m."
+440,6,0,"AT","0",0,2,"Tub Race"
+441,6,0,"AT","0",0,2,"Cal Poly OH Unit Hill 8a.m. • 2p.m."
+442,6,0,"AT","0",0,2,"Sorority Soccer Rec. Center field 3p.m. • 7p.m."
+443,6,0,"AT","0",0,2,"Tennis"
+444,6,0,"AT","0",0,2,"2p.m. • 7p.m."
+445,6,0,"AT","0",0,2,"Volleyball Championships Mott Gym .m. - midnic"
+446,6,0,"AT","0",0,2,"7p."
+447,6,0,"AT","0",0,2,"ight"
+448,7,0,"PI","0",0,0,"MUSTANG DAILY"
+449,7,0,"SH","0",0,0,"Sports"
+450,7,0,"PI","0",0,0,"TUESDAY, MAY 3, 1994"
+451,7,0,"OT",0,0,0,"Major League Baseball"
+452,7,0,"OT",0,0,0,"National League"
+453,7,0,"OT",0,0,0,"West	W	L	Pet.	GB"
+454,7,0,"OT",0,0,0,"San Francisco 12		12	.500"
+455,7,0,"OT",0,0,0,"Colorado	11	12	.478	.5"
+456,7,0,"OT",0,0,0,"Los Angeles	11	13	.458	1"
+457,7,0,"OT",0,0,0,"San Diego	7	18	.280	5.5"
+458,7,0,"OT",0,0,0,"Central	W	L	Pet.	GB"
+459,7,0,"OT",0,0,0,"Cincinnati	15	8	.652"
+460,7,0,"OT",0,0,0,"St. Louis	13	9	.591	1.5"
+461,7,0,"OT",0,0,0,"Pittsburgh	13	10	.565	2"
+462,7,0,"OT",0,0,0,"Houston	13	11	.542	2.5"
+463,7,0,"OT",0,0,0,"Chicago	ó	16	.273	8.5"
+464,7,0,"OT",0,0,0,"East	W	L	Pet.	GB"
+465,7,0,"OT",0,0,0,"Atlanta	15	9	.625	—"
+466,7,0,"OT",0,0,0,"Montreal	14	10	.583	1"
+467,7,0,"OT",0,0,0,"New York	12	11	.522	2.5"
+468,7,0,"OT",0,0,0,"Florida	13	12	.520	2.5"
+469,7,0,"OT",0,0,0,"Philadelphia 10		14	.417	5"
+470,7,0,"OT",0,0,0,"American League"
+471,7,0,"OT",0,0,0,"West	W	I	Pet.	GB"
+472,7,0,"OT",0,0,0,"Seattle	11	13	.458"
+473,7,0,"OT",0,0,0,"Texas	10	12	.455	i—."
+474,7,0,"OT",0,0,0,"California	9	17	.346	3"
+475,7,0,"OT",0,0,0,"Oakland	8	17	.320	3.5"
+476,7,0,"OT",0,0,0,"Central	W	L	Pet.	GB"
+477,7,0,"OT",0,0,0,"Cleveland	13	10	.565"
+478,7,0,"OT",0,0,0,"Milwaukee	13	11	.542	.5"
+479,7,0,"OT",0,0,0,"Chicago	13	11	.542	.5"
+480,7,0,"OT",0,0,0,"Kansas City	11	11	.500	1.5"
+481,7,0,"OT",0,0,0,"Minnesota	10	1Ó	.385	4.5"
+482,7,0,"OT",0,0,0,"East	W	L	Pet.	GB"
+483,7,0,"OT",0,0,0,"Boston	18	7	.720"
+484,7,0,"OT",0,0,0,"Baltimore	15	9	.625	2.5"
+485,7,0,"OT","0",0,0,"New York	15	9	.625	2.5"
+486,7,0,"OT","0",0,0,"Toronto	14	11	.560	4"
+487,7,0,"OT","0",0,0,"Detroit	8	14	.364	8.5"
+488,7,0,"OT","0",0,0,"Number Crunch"
+489,7,0,"OT","0",0,0,"Hockey Playoffs y Basketball Playoffs"
+490,7,0,"OT","0",0,0,"G>nii»renc* Quartvrfinals (Best-of-7)"
+491,7,0,"OT","0",0,0,"San Jose over Detroit, 4*3 Vancouver over Calgary, 4-3 Toronto over Chicago, 4-2 Dallas over St. Louis, 4-0 N.Y. Rangers over N.Y. Islanders, 4-0 Washington over Pittsburgh, 4-2 New Jersey over Buffalo, 4-2 Boston over AAontreol, 4-3"
+492,7,0,"OT","0",0,0,"Gniferance SemiPinab (Best-of-7)"
+493,7,0,"OT","0",0,0,"Suixlay, May 1"
+494,7,0,"OT","0",0,0,"Boston 2, New Jersey 1,"
+495,7,0,"OT","0",0,0,"Boston leads series 1 -0 New York Rangers 6, Washington 3 New York leads series 1 -0 MorKloy, May 2 San Jose at Toronto, NA Vancouver at Dallas, NA Tuesday, May 3 Boston at New Jersey, 4:38 p.m. Washington at New York Rangers, 4:38 p.m."
+496,7,0,"OT","0",0,0,"Wednesday, May 4"
+497,7,0,"OT","0",0,0,"San Jose at Toronto, 4:38 p.m. Vancouver at Dallas, 5:38 p.m."
+498,7,0,"OT","0",0,0,"Thursday, May 5 New Jersey at Boston, 4:38 p.m. New York Rangers at Washington, 4:38 p.m."
+499,7,0,"OT","0",0,0,"Conference Quarterfinals (Best-of-5)"
+500,7,0,"OT","0",0,0,"Saturday, April 30"
+501,,0,"OT","0",0,0,"Utah 96, San Antonio 84, series tied 1 -1"
+502,7,0,"OT","0",0,0,"Indiana 103, Orlando 101, Indiana leads series 2-0 Atlanta 104, Miami 86, series tied 1 -1 Seattle 97, Denver 87,"
+503,7,0,"OT","0",0,0,"Seattle leads series 2-0 Sunday, May 1 New York 90, New Jersey 81,"
+504,7,0,"OT","0",0,0,"New York leads series 2-0 Chicago 105, Cleveland 96, Chicago leads series 2-0 Phoenix 1 17, Golden State 111, Phoenix leads series 2-0 Houston 11 5, Portland 104, Houston leads series 2-0 Monday, May 2"
+505,7,0,"OT","0",0,0,"Orlando at Indiana, 5 p.m., (TNT) Seattle at Denver, 7:30 p.m., (TNT) Tuesday, May 3 Atlanta at Miami, 5 p.m., (TNT) Chicago at Cleveland, 5 p.m., (TNT) Houston at Portland, 7:30 p.m. (TBS) San Antonio at Utah, 7:30 p.m. (TNT) Wednesday, May 3 New York at New Jersey, 5 p.m. (TNT) Phoenix at Golden State, 7:30 p.m. (TNT)"
+506,7,9,"HL","0",0,0,"TENNIS: Entire line up qualifies for Nationals"
+507,7,9,"ME","0",-8,0,"From page 8"
+508,7,9,"TXT","10",0,0,"only ones (in the West Region) that haven’t beaten Os this year. They have beaten the teams that beat us pretty badly.”"
+509,7,9,"TXT","11",0,0,"Top-seeded Northern Florida matches up against eighth-seeded Northern Colorado. The winner of that contest advances to play the winner between fourth-seeded Grand Canyon and fifth-seeded Pace University (NY.)."
+510,7,9,"TXT","12",0,0,"The winner of the match between third-seeded Cal Poly Pomona and sixth-seeded Air Force faces the winner of the Mustangs vs. Aggies contest."
+511,7,9,"TXT","13",0,0,"“It would be nice to ruin their (the Aggies’) year,” Eppright"
+512,7,9,"TXT","13",0,0,"said."
+513,7,9,"TXT","14",0,,"The Mustangs will have to do without the services of freshman Gina Chelli. Eppright is suspending her for three matches for violating team rules. He would not elaborate on the infraction."
+514,7,9,"TXT","15",0,,"Junijr Alissa Bailey will move from her usual sixth spot to the fifth court in Chelli’s absence. Sophomore Emily Schuch will fill in for Bailey."
+515,7,9,"TXT","16",0,,"The Mustangs also qualified their normal starting lineup for the NCAA singles and doubles tournaments."
+516,7,9,"TXT","17",0,,"Nationals begin Friday and continue through Thursday, May 12."
+517,7,11,"HL","0",0,0,"TRACK & FIELD: Poly finishes near middle"
+518,7,11,"ME","0",-8,0,"From page 8 practice.“"
+519,7,11,"TXT","12",0,0,"His effort paid off as he jumped 50-4.5, a personal record and enough to qualify for Nationals."
+520,7,11,"TXT","13",0,0,"“That’s the kind of effort you hope for — individuals rising to"
+521,7,11,"TXT","13",0,0,"the competition,” Crawford said.. “If we would have gotten that kind of effort throughout, we would have done spectacular.”"
+522,7,11,"TXT","14",0,0,"The women’s team showed just as well as the men’s, with many members qualifying for the finals of the meet."
+523,7,0,"SH","0",0,0,"CLASSIFIED"
+524,7,0,"OT","0",0,0,"TO ADVERTISE IN MUSTANG DAILY CLASSIFIEDS, CALL 75Ó-1143"
+525,7,0,"OT","0",0,0,"Campus Clubs"
+526,7,0,"OT","0",0,0,"ATHEISTS ASSOCIATION MEETING Every WED 7:30pm Bldg 10 Rm 200"
+527,7,0,"OT","0",0,0,"VINES TO WINE"
+528,7,0,"OT","0",0,0,"YOU SAW OUR BOOTH! NOW SEE THE CLUB. EXCLUSIVE MARKETERS OF CAL POLY WINE. MTG TUES. MAY 3RD. BLDG. 10 RM. 206 0 7:00 PM"
+529,7,0,"OT","0",0,0,"Announcements"
+530,7,0,"OT","0",0,0,"NUTRITION AND FITNESS"
+531,7,0,"OT","0",0,0,"WORKSHOP PRESENTED BY PEER HEALTH EDUCATORS WED MAY 4TH 3-5PM CHUMASH RM 204 GUEST SPEAKERS"
+532,7,0,"OT","0",0,0,"ASI UNION EXECUTIVE COMMITTEE APPLICATIONS ARE NOW AVAILABLE APPLY NOW UU 212 OR CALL x1281 DUE 5/4,"
+533,7,0,"OT","0",0,0,"Sigma Nu MOTHER'S DAY *• ORCHID SALE “"
+534,7,0,"OT","0",0,0,"10-2 UU April 29. May 2-3 DEXTER May 2-3, Last Day May 3!"
+535,7,0,"OT","0",0,0,"STUDY SPANISH IN CUERNAVACA, MEXICO THIS SUMMER!! If you are interested in finding out about Cal Poly's new study program in Mexico, come to a G^^NERAL INFO MEETING on WED. May 4 from 2-3pm in Bldg 10-220."
+536,7,0,"OT","0",0,0,"TRAVEL"
+537,7,0,"OT","0",0,0,"WORKSHOP"
+538,7,0,"OT","0",0,0,"TRAVEL ON EURAIL INFORMATION MAY 3RD & 4TH FROM 6-7 IN UU #219"
+539,7,0,"OT","0",0,0,"ESL! ESU"
+540,7,0,"OT","0",0,0,"Conversation class-Free & Fun! Meet internationat students improve your speaking skills learn idioms & vocabulary-Relaxed environment! Fridays 2pm - 4pm In Bldg 10-138 call x2067 lor info."
+541,7,0,"OT","0",0,0,"EVER THOUGHT BOUT"
+542,7,0,"OT","0",0,0,"CHEERLEADING?"
+543,7,0,"OT","0",0,0,"FOOTBALL AND BASKETBALL SEASON CHEERLEADING TRYOUT AND GENERAL"
+544,7,0,"OT","0",0,0,"INFORMATION MEETING: WEDNESDAY, MAY 4th in UU 219 ® 7pm Tryout date: Sunday, May 15 Call 549-0494 (Cailin)"
+545,7,0,"OT","0",0,0,"Video purchase necessary for tryout DON'T MISS THE LAST INFORMATION MEETING!!!"
+546,7,0,"OT","0",0,0,"Greek News"
+547,7,0,"OT","0",0,0,"AT-Thanks for the BBQ-it was a splash! Watch out we're still chalking up points In this war!"
+548,7,0,"OT","0",0,0,"* The Sisters of Zela Tau Alpha *"
+549,7,0,"OT","0",0,0,"zn"
+550,7,0,"OT","0",0,0,"Batter up Sun Lookout ZXE!"
+551,7,0,"OT","0",0,0,"ZTA CONGRATS"
+552,7,0,"OT","0",0,0,"to our new initiates! We love you!!"
+553,7,0,"OT","0",0,0,"BABES, DRINKS AND DANCING WHAT MORE COULD YOU ASK FOR? TORTILLA FLATS NIGHT WEDNESDAY MAY 11th WITH"
+554,7,0,"OT","0",0,0,"Aon"
+555,7,0,"OT","0",0,0,"Events"
+556,7,0,"OT","0",0,0,"ONLY 364 MORE SHOPPING DAYS TIL"
+557,7,0,"OT","0",0,0,"APRIL ELLIS 24th BIRTHDAY"
+558,7,0,"OT","0",0,0,"Lost & Found"
+559,7,0,"OT","0",0,0,"LOST"
+560,7,0,"OT","0",0,0,"KEYS AT WILDFLOWERIN STAGEAJVKE AREA.REWARDICALL SUSAN 546-8863"
+561,7,0,"OT","0",0,0,"Wanted"
+562,7,0,"OT","0",0,0,"AM GRAD TICKETS"
+563,7,0,"OT",0,0,0,"NEEDEDI! WILL PAY. CALL 544-2556"
+564,7,0,"OT",0,0,0,"Services"
+565,7,0,"OT",0,0,0,"MASSAGE NECK & SHOULDERISTUDENT SPECIAL $10 CALL VICTORIA 543-4222"
+566,7,0,"OT",0,0,0,"Math tutor PhD College Prof. Courses 100-500 tel. 528-0625"
+567,7,0,"OT",0,0,0,"SCORE MORE!! GMAT 72 Pts GRE 214 Pts LSAT 7.5 Pts"
+568,7,0,"OT",0,0,0,"PRINCETON REVIEW (805)995-0176"
+569,7,0,"OT",0,0,0,"TUTORING, EDITING. WRD PROCSNG CALL JACKIE 546-9905 MA ENGLISH"
+570,7,0,"OT",0,0,0,"Personals"
+571,7,0,"OT",0,0,0,"QUICK WARNING 4 APRIL ELLIS"
+572,7,0,"OT",0,0,0,"PRETTY SOON YOU WILL BE MY AGE!"
+573,7,0,"OT",0,0,0,"EYE LUFF EWE HAPPY BIRTHDAY xoxo MR. DOE"
+574,7,0,"OT",0,0,0,"Employment"
+575,7,0,"OT","0",0,0,"NURSERY-ASST. TO GEN. MANAGER Vegetable Transplant Nursery on California Central Coast Seeks Individual w/Horticulture Crop Science Degree to Develop Into A Technical/Mngmt Position."
+576,7,0,"OT",0,0,0,"Skills Required Include Plant Science Knowledge, Production, Planning, Computer Literacy (Spreadsheet), Excellent Communication & Ability to Handle Many Tasks Simultaneously. Mechanical Aptitude & Spanish Speaking Skills A Definite Plus. Please Send Resume to P.O. Box 1510, Arroyo Grande, CA 93421"
+577,7,0,"OT",0,0,0,"LEASING ASSISTANT WANTED. PLEASE CALL 544-7007 FOR MORE DETAILS"
+578,7,0,"OT",0,0,0,"$750/wk. Alaska fisheries this summer. Maritime Services 1-208-860-0219."
+579,7,0,"OT",0,0,0,"Alaska Fisheries Summer Employment EARN UP TO $15,000 THIS SUMMER IN CANNERIES, PROCESSORS, ETC. MALE/ FEMALE. NO EXPER. NECESSARY. Room/ Board/Travel Often Provided! GUARANTEED SUCCESS!"
+580,7,0,"OT",0,0,0,"(919) 929-4398 Ext A163"
+581,7,0,"OT",0,0,0,"INTERNATIONAL EMPLOYMENT - Make up to $2,000 - $4,000.)^/mo. teaching basic conversational English in Japan, Taiwan, or South Korea. No teaching background or Asian languages required. For information call: 1(206)632-1146 exi. J6005"
+582,7,0,"OT",0,0,0,"MUSTANG"
+583,7,0,"OT",0,0,0,"DAILY"
+584,7,0,"OT",0,0,0,"Employment"
+585,7,0,"OT",0,0,0,"DAY CAMPS serving San Fernando & Conejo Valleys, Simi, Malibu & Camarillo seek fun. caring general counselors & special instructors lor nature, gym, horseback riding, swimming, tishing/boating, crafts, song leading, ropes course & more. Now inten/iewing 818-865-6263."
+586,7,0,"OT",0,0,0,"CRUISE SHIPS HIRING - Earn up to $2,000+/mo. on Cruise Ships or Land-Tour companies. Summer & Full-Time employment available."
+587,7,0,"OT",0,0,0,"No experience necessary! Call: 1-206-634-0468 ext. C6005"
+588,7,0,"OT",0,0,0,"ALASKA SUMMER EMPLOYMENT -Earn up to $8,000-f in two months."
+589,7,0,"OT",0,0,0,"Room & Board! Transportation! Male/Female. No experience necessary! For information call: 1(206)545-4155 exi. A6005"
+590,7,0,"OT",0,0,0,"Word Processing"
+591,7,0,"OT",0,0,0,"Resumes, Sr. Projects Etc. Mac w/ Laser Printer **549-8966’*"
+592,7,0,"OT",0,0,0,"Opportunities"
+593,7,0,"OT",0,0,0,"!!! CAUTION I!!"
+594,7,0,"OT",0,0,0,"Make No Investments Or Provide Banking or Credit Information Without Investigating Advertisements In The Opportunities Section"
+595,7,0,"OT",0,0,0,"CASH FOR COLLEGE 900,000 GRANTS AVAILABLE NO REPAYMENT EVER QUALIFY IMMEDIATELY 1-800-243-2435"
+596,7,0,"OT",0,0,0,"MONEY FOR COLLEGE AVAILABLE Write For Details! COUNTY ENTERPRISES BOX 1492 MB 93443-1492"
+597,7,0,"OT",0,0,0,"Roommates"
+598,7,0,"OT",0,0,0,"•••ROOMMATE NEEDED NOW^ OWN ROOM FOR $300 CLOSE TO DOWNTOWN. 1/4 UTILITIES LEASE UNTIL JULY. SEPT. OR FOR YEAR! CALL JULIE 0 546-0911"
+599,7,0,"OT",0,0,0,"*""WANTED**"
+600,7,0,"OT",0,0,0,"ROOMATE TO SHARE 4-BEDROOM APARTMENT AT WOODSIDE WITH 3 FEMALES FOR NEXT YEAR. 10-MONTH LEASE, CLOSE TO POLY. MOST UTL. PAID. PLEASE CALL ALISON. JOY OR SABRINA AT 547-9756."
+601,7,0,"CT",0,0,0,"CAUllM, OlOHt '(OO SIGN UP TO PIAT"
+602,7,0,"CT",0,0,0,"AT	/"
+603,0,0,"B",0,0,0,
+604,7,0,"OT","0",0,0,"% 1990 Untver&al Press Syndicale"
+605,7,0,"CT","0",0,0,"lou HUS! BE IWt ONOl BOT WWO 0\DNt."
+606,7,0,"CT","0",0,0,"AU. TUt OWEßS Aßt PLATING IN TME BAC< PIEIDS"
+607,7,0,"CT","0",0,0,"Xtou"
+608,7,0,"CT","0",0,0,"lAEAN I’N\ TME ONLT BOT ON A"
+609,7,0,"CT","0",0,0,"PLATGPOUNO Pulì OF G/RLSP.'"
+610,7,0,"CT","0",0,0,"IT SURE LOOKS X LIKE IT. WANT TO RIDE ON TUE TEETER-TOTTER NITM VIE?"
+611,7,0,"CT","0",0,0,"N________"
+612,7,0,"CT","0",0,0,"OWNO/ VN IN C007/£ CENTRAL!"
+613,7,0,"CT","0",0,0,"I UAVENT MAO N\T SWOTS.'"
+614,0,0,"B","0",0,0,
+615,0,0,"NA","0",0,0,"<"
+616,7,0,"CT","0",0,0,"S-i"
+617,7,0,"CT","0",0,0,"RELAX."
+618,7,0,"CT","0",0,0,"STUPID ITT	AIRPILTER.'"
+619,7,0,"CT","0",0,0,"PRODUCES	AIR FILTER.'"
+620,7,0,"CT","0",0,0,"ANTIBODIES."
+621,0,0,"NA","0",0,0,"I"
+622,0,0,"NA","0",0,0,"/"
+623,0,0,"B","0",0,0,
+624,0,0,"B","0",0,0,
+625,7,0,"OT",0,0,0,"Rental Housing"
+626,7,0,"OT",0,0,0,"1 BDRM 2 STORY - GREAT LOCATION NO SMOKING, NO DOGS 461-5756 ATAS"
+627,7,0,"OT",0,0,0,"3 BEDROOM-2 1/2 BATH LUXURY CONDO $1200/mo. PICK UP FLYER FOR INFO 0 415 NORTH CHORRO (NEAR BOYSEN)"
+628,7,0,"OT",0,0,0,"1 BDR PARTIAL. FURNISHED W/D HOOKUPS OFF STREET PARKING-NEXT TO POLY S450/MO 543-5011"
+629,7,0,"OT",0,0,0,"3 SUMMER SUBLETS $200/mo Laguna Lake - Call Joy 0 544-2860"
+630,7,0,"OT",0,0,0,"60 CASA ST. TOWNHOUSES NOW TAKING APPLICATIONS FOR JUNE OR SEPTEMBER. Non-Smoker, Quiet."
+631,7,0,"OT",0,0,0,"No Pets. 543-7555 * Ask lor Bea ‘ Also. 4Bd lor July 1st lease or a 3 Bd for Sept 1st lease"
+632,7,0,"OT",0,0,0,"AVL SUMMER-CEDAR CREEK STUDENT CONDO. $500/mo Fum. 2Bd 2Ba Walk to school. Pool 967-6634"
+633,7,0,"OT",0,0,0,"CEDAR CREEK CONDO Available for Summer & Fall '94- 95. Pool, BBQ, Free Parking. Walk to school. Furnished. Summer-$125; Fall-$195 Call Steve 702-267-4393 or Mike 702-267-4393 (Collect OK)"
+634,7,0,"OT","0",0,0,"FREE RENT"
+635,7,0,"OT",0,0,0,"ALMOST"
+636,7,0,"OT",0,0,0,"FOOTHILL HACIENDA APARTMENTS SECURE YOUR APT FOR NEXT YEAR 2 BIG BEDROOMS. 2 BATHROOMS 2 MINUTE WALK TO CAMPUS CALL GREG OR TREVOR AT 545-0667"
+637,7,0,"OT",0,0,0,"FREE SUMMER/FALL RENTAL LIST! NOW AVAILABLE"
+638,7,0,"OT",0,0,0,"FARRELL SMYTH PROPERTY MGMT. 141 MARSH ST., SUITE 101"
+639,7,0,"OT",0,0,0,"FEMALE ROOMATE NEEDED TO SHARE 3 BDRM CONDO NEXT YEAR $280/MO CALL TAMI 544-2860"
+640,7,0,"OT",0,0,0,"LARGE 2-BDRM CONDO 1 1/2 BATH AVAIL 6/15, 542-9923 OR 733-3116"
+641,7,0,"OT",0,0,0,"Homes for Sale"
+642,7,0,"OT",0,0,0,"BEST PRICED HOMES & CONDOS Free List & Information Available On Campus - Call Marguerite CENTURY 21 SLO 549-0456"
+643,7,0,"OT",0,0,0,"FREE LIST of all HOUSES & CONDOS FOR SALE IN SLO. Farrell Smyth R/E Steve Nelson***543-8370***"
+644,7,0,"OT","0",0,0,"• COME TO ACCEPT IT *"
+645,7,0,"OT","0",0,0,"RECYCLE MUSTANG DAILY"
+646,7,0,"OT","0",0,0,"AT ANY OF OUR SIX CONVENIENT LOCATIONS: KENNEDY LIBRARY, AG BRIDGE (BLDG 10) CAMPUS STORE, THE CELLAR. THE UNIVERSITY UNION. FISHER SCIENCE."
+647,8,0,"PI","0",0,0,"8 TUESDAY, MAY 3, 1994"
+648,8,0,"SH","0",0,0,"SPORTS"
+649,8,0,"PI","0",0,0,"MUSTANG DAILY"
+650,8,9,"HL","0",0,0,"Women’s tennis gets NCAA’s nod"
+651,8,9,"BL","0",0,0,"Daily Staff Repoit"
+652,8,9,"TXT","1",0,0,"DaMberations on a National Tournament invitation policy has been hovering like a hatchet over Cal Poly women’s tennis during the team’s season, at times threatening to sever the Mustangs chances of a playoff berth."
+653,8,9,"TXT","2",0,0,"But those dangers evaporated Sunday when Tennis Head Coach Chris Eppright received a call from an NCAA official saying the Mustangs would be permitted to compete in their seventh consecutive Nationals."
+654,8,9,"TXT","3",0,0,"Eppright said he and his team were not sure they would receive an invitation to the eight-team tournament hosted by Cal Poly Pomona. He had his doubts because he did not know if the NCAA was going to allow four teams from the West Region into the tournament."
+655,8,9,"TXT","4",0,0,"The NCAA invites the top team in each of the four regions and then offers four at-large bids. In the past the NCAA has limited the number of teams it invited from a single region. So,"
+656,8,9,"TXT","4",0,0,"despite the Mustangs being ranked sixth in the nation, there was a chance the NCAA might overlook them in favor of balancing the tournament with less representatives from the West."
+657,8,9,"TXT","5",0,0,"The NCAA eventually decided to allow four teams from the West including Cal Poly, UC-Davis, Cal Poly Pomona and Grand Canyon University (Ariz.)."
+658,8,9,"TXT","6",0,0,"In their first contest, the seventh-seeded Mustangs face defending champions UC-Davis. The Friday contest is a rematch of last year’s finals, which the Aggies won 5-1."
+659,8,9,"TXT","7",0,0,"The teams’ opener in the tournament marks the first time the two rivals clash this year — an early season match was rained out."
+660,8,9,"TXT","8",0,0,"“For us, the draw (to play UC-Davis) was not bad,” Eppright said. “UC-Davis got the worst draw. We match up against UC-Davis better than any other team."
+661,8,9,"ME","9",7,0,"“They (the Aggies) are the See TENNIS, page 7"
+662,0,0,"NA","0",0,0,"1"
+663,0,0,"B","0",0,0,
+664,8,0,"AT","0",0,1,"20% off"
+665,8,0,"AT","0",0,1,"In the Marketplace at #6 So. Higuera St. (sos) 541-2517 Crabtree & Evelyn"
+666,8,0,"AT","0",0,1,"Haifa block souch of Madonna Rd.	for Mother's Day"
+667,0,0,"B","0",0,,
+668,8,0,"AT","0",0,2,"Custom Printed"
+669,8,0,"AT","0",0,2,"GRADUATION ANNOUNCEMENTS"
+670,8,0,"AT","0",0,2,"On Our Stationary Prices Starting At Only $20 for 25 Announcements"
+671,8,0,"AT","0",0,2,"OGDEN’S"
+672,8,0,"AT","0",0,2,"894 Foothill • University Square 544-3303"
+673,8,0,"AT","0",0,3,"0LoCk"
+674,0,0,"NA","0",0,0,"1?"
+675,0,0,"NA","0",0,0,"rm"
+676,0,0,"B","0",0,0,
+677,8,0,"AT","0",0,3,"What do you like most about the lease options at Woodside?"
+678,8,0,"AT","0",0,3,"It's awesome to be able to pick between a 10 or 12 month contract and whether it will be an individual lease or with a group. ^"
+679,8,0,"AT","0",0,3,"#4^ Woodside"
+680,8,0,"AT","0",0,3,"V Al'AU I MION rs"
+681,8,0,"AT","0",0,3,"^	(805) 544-7007"
+682,8,0,"AT","0",0,3,"200 N. Santa Rosa. SLO. CA 93405 OFFICE: M-F, 10-12 & 1-6; SAT 10-4;"
+683,8,0,"AT","0",0,3,"SUN 12-4"
+684,0,0,"B","0",0,0,
+685,0,0,"B","0",0,0,
+686,0,0,"B","0",0,0,
+687,0,0,"B","0",0,0,
+688,0,0,"B","0",0,0,
+689,0,0,"B","0",0,0,
+690,0,0,"NA","0",0,0,"-y	....."
+691,0,0,"B","0",0,0,
+692,8,0,"PH","0",0,0,"A Dominguez Hills batter watches a strike. Mustang pitchers hope to continue their strikeout rampxiqe against UCSB. Two pitchers set season highs in strikeouts against San Bernardino / Daily photo by Scott Robinson"
+693,8,10,"HL","0",0,0,"Mustangs limp into UCSB game"
+694,8,10,"BL","0",0,0,"Doily Stoff Repoit"
+695,8,10,"TXT","1",0,0,"Nursing several injuries, the Cal Poly baseball team takes a much-needed break from the California Collegiate Athletic Association playoff race today with an afternoon contest against Division I UC-Santa Barbara."
+696,8,10,"TXT","2",0,0,"The Mustangs host the Gauchos (18-28, 6-9 in the Big West Conference) today at Sinsheimer Park at 3 p.m."
+697,8,10,"TXT","3",0,0,"Cal Poly (26-18, 13-10 in CCAA) will be without the productive bats of freshman second baseman Andy Hall (.349) and junior left fielder Bret Mueller (.333). Both are sidelined with back problems. This leaves the Mustangs with little depth on the bench but time to heal before resuming CCAA action Friday against Cal Poly Pomona."
+698,8,10,"TXT","4",0,0,"The Mustangs will likely rely on the offensive prowess of sophomore third baseman Jon Macalutas (.350) and senior center fielder Jeff Higbee (.340). Senior right fielder Kevin 'Tucker and junior designated hitter Rob Neal, both"
+699,8,10,"TXT","4",0,0,"hovering around the .300 mark at the plate, could also prove dangerous to opposing pitchers."
+700,8,10,"TXT","5",0,0,"Senior Robbie Weeks (2-5) or freshman Tony Kuper (2-0) will get the nod for the Mustangs, who downed the Gauchos 9-6 the last time the two teams came together Feb. 23."
+701,8,10,"TXT","6",0,0,"“When you get down to it, we’re not going to look past this game,” Interim Head Coach Kent Agler said. “We’re going to concentrate on doing the little things and keep the momentum up for this weekend’s contest.”"
+702,8,10,"TXT","7",0,0,"The Mustangs got back into the CCAA title hunt with a three-game sweep over Cal State San Bernardino last weekend, pulling to within two games of conference-leading UC-Riverside (34-15 and 16-9)."
+703,8,10,"TXT","8",0,0,"UC-Santa Barbara looks to bounce back after dropping two of three games to UNLV last weekend and five of their last six Big West matchups."
+704,8,10,"TXT","9",0,0,"The Mustangs host Cal Poly Pomona for a three-game series starting Friday night."
+705,8,11,"HL","0",0,0,"Triple-jumper lands first at UCLA track"
+706,8,11,"BL","0",0,0,"By Lori Witmer"
+707,8,11,"BL","0",0,0,"Doily Staff Wiiler"
+708,8,11,"TXT","1",0,0,"Cal Poly men’s and women’s track and field joined 21 other schools from California and Nevada in one of the largest meets in California last Saturday."
+709,8,11,"TXT","2",0,0,"The Mustangs traveled to UCLA to join other four-year universities from a mixture of divisions as all were allowed to compete in the first ever California-Nevada Men’s and Women’s 'Track and Field Collegiate Championships."
+710,8,11,"TXT","3",0,0,"The meet came as a preview to the Nationals, where nine Mustangs have qualified to this date."
+711,8,11,"TXT","4",0,0,"“We were competing against individuals going to Division I Nationals to run against some of the best athletes in the nation,” Head Coach Terry Crawford said."
+712,8,11,"TXT","5",0,0,"With the tough competition, Cal Poly gave a good showing as the men’s team finished 10th and the women’s team took ninth."
+713,8,11,"TXT","6",0,0,"“I thought overall it was a good meet,” Crawford said. “It was not a 100 percent good performance by the team. Some people faltered a little bit, but we had a solid representation in the finals (Sunday).”"
+714,8,11,"TXT","7",0,0,"Many of the athletes turned in seasonal bests. During Saturday’s qualifying rounds, senior Dan Held topped his season’s best in the 800-meter with a time of 1:50.79."
+715,8,11,"TXT","8",0,0,"Teammate and fellow senior Coley Candaele did the same in the 1,500-meter, as he surpassed his season’s best by .5 seconds with a time of 3:49.1. Candaele went on to take third in the finals the following day."
+716,8,11,"TXT","9",0,0,"Sophomore Chris Bane beat his top performance of the season by .75 inches when he jumped over the 6-6.75 mark in the high jump to give him a tie for first place Saturday. He finished ninth in Sunday’s finals with the same heighth."
+717,8,11,"TXT","10",0,0,"After a tough start, placing fifth in the prelims, junior Andrew Hill gave one of the best shows for Cal Poly. He took first place in the triple jump during the finals Sunday."
+718,8,11,"TXT","11",0,0,"“Saturday was a really otT day, and I felt pretty lucky to qualify for the finals,” Hill said. “I wasn’t feeling good with the approach. It was a real fast track, so the next day I got out there early to"
+719,8,11,"ME","0",0,0,"See TRACK & FIELD, page 7"
+720,8,12,"HL","0",0,0,"Rangers hot enough to melt ice and end 54-year title drought"
+721,8,12,"BL","0",0,0,"Associated Piess"
+722,8,12,"TXT","1",0,0,"NEW YORK — The New York Rangers are suddenly faced with a prospect alien to their long-suffering fans — they’re favored to snap a 54-year drought without a Stanley Cup."
+723,8,12,"TXT","2",0,0,"Only three baseball teams — the Chicago Cubs, Boston Red Sox and Chicago White Sox — have gone longer without winning their sport’s ultimate prize."
+724,8,12,"TXT","3",0,0,"Not only are the Rangers, who finished the regular season with the best record, unbeaten in five playoff games after outscoring the opposition 28-6. But some teams they feared most — Pittsburgh, Montreal and Detroit to name three — were eliminated in the first round of the playoffs."
+725,8,12,"TXT","4",0,0,"Also, the Rangers are free of major injuries and at the top of their game."
+726,8,12,"TXT","5",0,0,"“We have been successful because everyone has been contributing,” said Rangers’ goaltender Mike Richter. “We have enough pieces of the puzzle together so that evei-y night it’s a different piece.”"
+727,8,12,"TXT","6",0,0,"The Rangers swept the New York Islanders, outscoring them 22-3 in four games. Then the Rangers beat the Capitals 6-3 in the second-round opener Sunday."
+728,8,12,"TXT","7",0,0,"The Capitals are worn down by a seven-game series with Pittsburgh while the Rangers had a week oft' to heal what minor injruries they had."
+729,8,12,"TXT","8",0,0,"The two square off once again tonight in Madison Square Garden."
+730,,,,,,,
+731,,,,,,,
+732,,,,,,,
+733,,,,,,,
+734,,,,,,,
+735,,,,,,,
+736,,,,,,,
+737,,,,,,,
+738,,,,,,,
+739,,,,,,,
+740,,,,,,,
+741,,,,,,,
+742,,,,,,,
+743,,,,,,,
+744,,,,,,,
+745,,,,,,,
+746,,,,,,,
+747,,,,,,,
+748,,,,,,,
+749,,,,,,,
+750,,,,,,,
+751,,,,,,,
+752,,,,,,,
+753,,,,,,,
+754,,,,,,,
+755,,,,,,,
+756,,,,,,,
+757,,,,,,,
+758,,,,,,,
+759,,,,,,,
+760,,,,,,,
+761,,,,,,,
+762,,,,,,,
+763,,,,,,,
+764,,,,,,,
+765,,,,,,,
+766,,,,,,,
+767,,,,,,,
+768,,,,,,,
+769,,,,,,,
+770,,,,,,,
+771,,,,,,,
+772,,,,,,,
+773,,,,,,,
+774,,,,,,,
+775,,,,,,,
+776,,,,,,,
+777,,,,,,,
+778,,,,,,,
+779,,,,,,,
+780,,,,,,,
+781,,,,,,,
+782,,,,,,,
+783,,,,,,,
+784,,,,,,,
+785,,,,,,,
+786,,,,,,,
+787,,,,,,,
+788,,,,,,,
+789,,,,,,,
+790,,,,,,,
+791,,,,,,,
+792,,,,,,,
+793,,,,,,,
+794,,,,,,,
+795,,,,,,,
+796,,,,,,,
+797,,,,,,,
+798,,,,,,,
+799,,,,,,,
+800,,,,,,,
+801,,,,,,,
+802,,,,,,,
+803,,,,,,,
+804,,,,,,,
+805,,,,,,,
+806,,,,,,,
+807,,,,,,,
+808,,,,,,,
+809,,,,,,,
+810,,,,,,,
+811,,,,,,,
+812,,,,,,,
+813,,,,,,,
+814,,,,,,,
+815,,,,,,,
+816,,,,,,,
+817,,,,,,,
+818,,,,,,,
+819,,,,,,,
+820,,,,,,,
+821,,,,,,,
+822,,,,,,,
+823,,,,,,,
+824,,,,,,,
+825,,,,,,,
+826,,,,,,,
+827,,,,,,,
+828,,,,,,,
+829,,,,,,,
+830,,,,,,,
+831,,,,,,,
+832,,,,,,,
+833,,,,,,,
+834,,,,,,,
+835,,,,,,,
+836,,,,,,,
+837,,,,,,,
+838,,,,,,,
+839,,,,,,,
+840,,,,,,,
+841,,,,,,,
+842,,,,,,,
+843,,,,,,,
+844,,,,,,,
+845,,,,,,,
+846,,,,,,,
+847,,,,,,,
+848,,,,,,,
+849,,,,,,,
+850,,,,,,,
+851,,,,,,,
+852,,,,,,,
+853,,,,,,,
+854,,,,,,,
+855,,,,,,,
+856,,,,,,,
+857,,,,,,,
+858,,,,,,,
+859,,,,,,,
+860,,,,,,,
+861,,,,,,,
+862,,,,,,,
+863,,,,,,,
+864,,,,,,,
+865,,,,,,,
+866,,,,,,,
+867,,,,,,,
+868,,,,,,,
+869,,,,,,,
+870,,,,,,,
+871,,,,,,,
+872,,,,,,,
+873,,,,,,,
+874,,,,,,,
+875,,,,,,,
+876,,,,,,,
+877,,,,,,,
+878,,,,,,,
+879,,,,,,,
+880,,,,,,,
+881,,,,,,,
+882,,,,,,,
+883,,,,,,,
+884,,,,,,,
+885,,,,,,,
+886,,,,,,,
+887,,,,,,,
+888,,,,,,,
+889,,,,,,,
+890,,,,,,,
+891,,,,,,,
+892,,,,,,,
+893,,,,,,,
+894,,,,,,,
+895,,,,,,,
+896,,,,,,,
+897,,,,,,,
+898,,,,,,,
+899,,,,,,,
+900,,,,,,,
+901,,,,,,,
+902,,,,,,,
+903,,,,,,,
+904,,,,,,,
+905,,,,,,,
+906,,,,,,,
+907,,,,,,,
+908,,,,,,,
+909,,,,,,,
+910,,,,,,,
+911,,,,,,,
+912,,,,,,,
+913,,,,,,,
+914,,,,,,,
+915,,,,,,,
+916,,,,,,,
+917,,,,,,,
+918,,,,,,,
+919,,,,,,,
+920,,,,,,,
+921,,,,,,,
+922,,,,,,,
+923,,,,,,,
+924,,,,,,,
+925,,,,,,,
+926,,,,,,,
+927,,,,,,,
+928,,,,,,,
+929,,,,,,,
+930,,,,,,,
+931,,,,,,,
+932,,,,,,,
+933,,,,,,,
+934,,,,,,,
+935,,,,,,,
+936,,,,,,,
+937,,,,,,,
+938,,,,,,,
+939,,,,,,,
+940,,,,,,,
+941,,,,,,,
+942,,,,,,,
+943,,,,,,,
+944,,,,,,,
+945,,,,,,,
+946,,,,,,,
+947,,,,,,,
+948,,,,,,,
+949,,,,,,,
+950,,,,,,,
+951,,,,,,,
+952,,,,,,,
+953,,,,,,,
+954,,,,,,,
+955,,,,,,,
+956,,,,,,,
+957,,,,,,,
+958,,,,,,,
+959,,,,,,,
+960,,,,,,,
+961,,,,,,,
+962,,,,,,,
+963,,,,,,,
+964,,,,,,,
+965,,,,,,,
+966,,,,,,,
+967,,,,,,,
+968,,,,,,,
+969,,,,,,,
+970,,,,,,,
+971,,,,,,,
+972,,,,,,,
+973,,,,,,,
+974,,,,,,,
+975,,,,,,,
+976,,,,,,,
+977,,,,,,,
+978,,,,,,,
+979,,,,,,,
+980,,,,,,,
+981,,,,,,,
+982,,,,,,,
+983,,,,,,,
+984,,,,,,,
+985,,,,,,,
+986,,,,,,,
+987,,,,,,,
+988,,,,,,,
+989,,,,,,,
+990,,,,,,,
+991,,,,,,,
+992,,,,,,,
+993,,,,,,,
+994,,,,,,,
+995,,,,,,,
+996,,,,,,,
+997,,,,,,,
+998,,,,,,,
+999,,,,,,,
+1000,,,,,,,
+1001,,,,,,,
+1002,,,,,,,
+1003,,,,,,,
+1004,,,,,,,
+1005,,,,,,,
+1006,,,,,,,
+1007,,,,,,,
+1008,,,,,,,
+1009,,,,,,,
+1010,,,,,,,
+1011,,,,,,,
+1012,,,,,,,
+1013,,,,,,,
+1014,,,,,,,
+1015,,,,,,,
+1016,,,,,,,
+1017,,,,,,,
+1018,,,,,,,
+1019,,,,,,,
+1020,,,,,,,
+1021,,,,,,,
+1022,,,,,,,
+1023,,,,,,,
+1024,,,,,,,
+1025,,,,,,,
+1026,,,,,,,
+1027,,,,,,,
+1028,,,,,,,
+1029,,,,,,,
+1030,,,,,,,
+1031,,,,,,,
+1032,,,,,,,
+1033,,,,,,,
+1034,,,,,,,
+1035,,,,,,,
+1036,,,,,,,
+1037,,,,,,,
+1038,,,,,,,
+1039,,,,,,,
+1040,,,,,,,
+1041,,,,,,,
+1042,,,,,,,
+1043,,,,,,,
+1044,,,,,,,
+1045,,,,,,,
+1046,,,,,,,
+1047,,,,,,,
+1048,,,,,,,
+1049,,,,,,,
+1050,,,,,,,
+1051,,,,,,,
+1052,,,,,,,
+1053,,,,,,,
+1054,,,,,,,
+1055,,,,,,,
+1056,,,,,,,
+1057,,,,,,,
+1058,,,,,,,
+1059,,,,,,,
+1060,,,,,,,
+1061,,,,,,,
+1062,,,,,,,
+1063,,,,,,,
+1064,,,,,,,
+1065,,,,,,,
+1066,,,,,,,
+1067,,,,,,,
+1068,,,,,,,
+1069,,,,,,,
+1070,,,,,,,
+1071,,,,,,,
+1072,,,,,,,
+1073,,,,,,,
+1074,,,,,,,
+1075,,,,,,,
+1076,,,,,,,
+1077,,,,,,,
+1078,,,,,,,
+1079,,,,,,,
+1080,,,,,,,
+1081,,,,,,,
+1082,,,,,,,
+1083,,,,,,,
+1084,,,,,,,
+1085,,,,,,,
+1086,,,,,,,
+1087,,,,,,,
+1088,,,,,,,
+1089,,,,,,,
+1090,,,,,,,
+1091,,,,,,,
+1092,,,,,,,
+1093,,,,,,,
+1094,,,,,,,
+1095,,,,,,,
+1096,,,,,,,
+1097,,,,,,,
+1098,,,,,,,
+1099,,,,,,,
+1100,,,,,,,
+1101,,,,,,,
+1102,,,,,,,
+1103,,,,,,,
+1104,,,,,,,
+1105,,,,,,,
+1106,,,,,,,
+1107,,,,,,,
+1108,,,,,,,
+1109,,,,,,,
+1110,,,,,,,
+1111,,,,,,,
+1112,,,,,,,
+1113,,,,,,,
+1114,,,,,,,
+1115,,,,,,,
+1116,,,,,,,
+1117,,,,,,,
+1118,,,,,,,
+1119,,,,,,,
+1120,,,,,,,
+1121,,,,,,,
+1122,,,,,,,
+1123,,,,,,,
+1124,,,,,,,
+1125,,,,,,,
+1126,,,,,,,
+1127,,,,,,,
+1128,,,,,,,
+1129,,,,,,,
+1130,,,,,,,
+1131,,,,,,,
+1132,,,,,,,
+1133,,,,,,,
+1134,,,,,,,
+1135,,,,,,,
+1136,,,,,,,
+1137,,,,,,,
+1138,,,,,,,
+1139,,,,,,,
+1140,,,,,,,
+1141,,,,,,,
+1142,,,,,,,
+1143,,,,,,,
+1144,,,,,,,
+1145,,,,,,,
+1146,,,,,,,
+1147,,,,,,,
+1148,,,,,,,
+1149,,,,,,,
+1150,,,,,,,
+1151,,,,,,,
+1152,,,,,,,
+1153,,,,,,,
+1154,,,,,,,
+1155,,,,,,,
+1156,,,,,,,
+1157,,,,,,,
+1158,,,,,,,
+1159,,,,,,,
+1160,,,,,,,
+1161,,,,,,,
+1162,,,,,,,
+1163,,,,,,,
+1164,,,,,,,
+1165,,,,,,,
+1166,,,,,,,
+1167,,,,,,,
+1168,,,,,,,
+1169,,,,,,,
+1170,,,,,,,
+1171,,,,,,,
+1172,,,,,,,
+1173,,,,,,,
+1174,,,,,,,
+1175,,,,,,,
+1176,,,,,,,
+1177,,,,,,,
+1178,,,,,,,
+1179,,,,,,,
+1180,,,,,,,
+1181,,,,,,,
+1182,,,,,,,
+1183,,,,,,,
+1184,,,,,,,
+1185,,,,,,,
+1186,,,,,,,
+1187,,,,,,,
+1188,,,,,,,
+1189,,,,,,,
+1190,,,,,,,
+1191,,,,,,,
+1192,,,,,,,
+1193,,,,,,,
+1194,,,,,,,
+1195,,,,,,,
+1196,,,,,,,
+1197,,,,,,,
+1198,,,,,,,
+1199,,,,,,,
+1200,,,,,,,

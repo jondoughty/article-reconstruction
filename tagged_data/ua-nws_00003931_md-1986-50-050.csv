@@ -1,0 +1,1202 @@
+"Function Key: TXT = article text; HL = headline; BL = byline; PH = photo caption/information; ME = meta directives outside of an article; NA = unintelligible; NP = nameplate; PI = publication information; B = blank; AT = advertisement text; MH = masthead; BQT = block quote text; BQA = block quote attribution; CN = comic strip title; CT = comic strip text; SH = section heading; OT = other text",,,,,,,
+"LINE","PAGE (0 if unintelligable)","ARTICLE NUMBER (use 0 if outside of text of any article/letter)","FUNCTION (see key above)","PARAGRAPH NUMBER (start with the first content paragraph, 0 if not part of the main text)","JUMP (if line contains a ""jump to"" directive, it's the page target. If it's a ""jumped from"" directive then the negative (-) of the soure page. otherwise 0)","AD #. If line is part of advertisement, it is the number of the ad. Start from top left column. 0 otherwise.","SCANNED TEXT"
+1,0,0,"B","0",0,0,
+2,1,0,"NP","0",0,0,"Mustang Daily"
+3,1,0,"NP","0",0,0,"California Polytechnic State University San Luis O bT‘s p o"
+4,1,0,"PI","0",0,0,"50th year. No. 50"
+5,1,0,"PI","0",0,0,"Tuesday, January 14,1986"
+6,1,1,"HL","0",0,0,"Plans for DOwer and leat plant underway"
+7,1,1,"BL","0",0,0,"By Ron Nieben"
+8,1,1,"BL","0",0,0,"suit WtIWr"
+9,1,1,"TXT","1",0,0,"The future of a three-year-old plan to construct a co-generation facility at Cal Poly will be decided in the next several months, the executive dean said Friday."
+10,1,1,"TXT","2",0,0,"Douglas Gerard said that the Allied Signal Corporation of Connecticut is evaluating final legal technicalities and the tax advantages of constructing the plant before making its final proposal. The privately owned and built plant will provide steam for campus heating and cooling as well as generate profit for Cal Poly and the state from the sale of electricity."
+11,1,1,"TXT","3",0,0,"“It is now to the point that within the next three months we will know if it’s a go or no-go situation,"" Gerard said. While the profits from the sale of an estimated 28 megawatts of electricity each year is still an attractive incentive to Allied Signal Corporation, changes in the tax laws proposed by the Reagan Administration may drastically lower returns from the $30 million plant."
+12,1,1,"TXT","4",0,0,"Co-generation was first developed in the late 1800s and uses waste heat from the production of steam to turn a turbine and produce electricity. With the availability of cheap energy beginning in the 1950s, co-generation fell out of favor. By 1977, only four percent of energy for industry was cogenerated compared with nearly 50 percent at the turn of the century."
+13,1,1,"TXT","5","back page",0,"High energy prices in the last two decades have prompted large energy users such as universities, hospitals and factories to reinvestigate co-generation as a cost-saving strategy. A well-designed system, Gerard said, will produ« more than 1.60 times more usable energy from See PLANT, hack page"
+14,1,0,"PH",,0,0,"Stolen seals"
+15,,,,,0,0,"TOM ANDCaSOMMiMMiit MIy"
+16,1,2,"HL",,0,0,"US concedes Iranian actions may be legal"
+17,1,2,"TXT","1",0,0,"WASHINGTON (AP) — The United States acknowledged Monday that Iran may have acted within traditional naval warfare	rules	in	stopping	and"
+18,1,2,"TXT","1",,0,"searching an American merchant ship near the Persian Gulf to determine if it was carrying arms for Iraq."
+19,1,2,"TXT","2",0,0,"A final judgment on how to respond	to	the	incident	was"
+20,1,2,"TXT","2",0,0,"withheld	until	the	American	ambassador	to	the	United Arab"
+21,1,2,"TXT","2",0,0,"Emirates completes his questioning of the capuin of the President Taylor, and other facu are assessed. State Department spokesman Bernard Kalb said."
+22,1,2,"TXT","3",0,0,"Kalb’s sutement seemed to"
+23,1,2,"TXT","3",0,0,"represent an effort by the Reagan administration to avoid a flareup with the fundamentalism Moslem regime in Tehran, which is listed by the department as a supporter of terrorism."
+24,1,2,"TXT","4",0,0,"Asked what the United States intended to do about the incident, Kalb said “we are evaluating our option."" He declined to elaborate."
+25,1,2,"TXT","5",0,0,"However, the spokesman did say in a statement that a belligerent nation traditionally has ""certain rights” under the rules of naval warfare, to find out whether neutral shipping is being used to provide contraband to its"
+26,1,2,"TXT","5",0,0,"enemy."
+27,1,2,"TXT","6",0,0,"Meanwhile, G. Quincy Lumb-sden Jr., the U.S. ambassador to the United Arab Emirates, was sent to Fujaira to meet with the freighter’s captain, Robert Reimann."
+28,1,22,"TXT","7",0,0,"In a precautionary move, two American combat ships — the destroyer Conolly and the frigate Boone — had been moved to the Gulf of Oman, where seven armed Iranian sailors halted and then boarded the President Taylor on Sunday."
+29,1,2,"TXT","8",0,0,"The ships were there “to prevent anything other than what happened,"" Defense Secretary"
+30,1,2,"TXT","8",0,0,"Caspar W. Weinberger told reporters at a breakfast meeting at the Pentagon. “The boarders left very quietly after an hour, an hour-and-a-half. There wasn’t any need for the kind of naval protection that the ship was seeking.”"
+31,1,2,"TXT","9",0,0,"The Conolly and the Boone were near the Persian Gulf, but too far north to prevent the boarding, and yet “they were close enough that they could have prevented the Iranians from taking that ship under tow or forcing it to an Iranian port,” said a Navy source, insisting on anonymity."
+32,1,0,"OT","0",0,0,"Although th* Las PHItas fire destroyed thousands of acres last summer, new growth Is forming on the hillsides. See page 7."
+33,0,0,"B","0",0,0,
+34,0,0,"B","0",0,0,
+35,1,0,"OT","0",0,0,"IN A WORD"
+36,1,0,"OT","0",0,0,"mo»k)Ch — n., a tyrannical power to be propitiated by human subaervlence or sacrifice."
+37,1,0,"OT","0",0,0,"WEATHER"
+38,1,0,"OT","0",0,0,"Partly cloudy Wednesday with highs In the upper 60s. PoeelbItIty of light sprinkles In the afternoon and earty evenifig."
+39,1,0,"SH","0",0,0,"Cal Poly"
+40,1,3,"HL","0",0,0,"Research is alive and well"
+41,1,3,"BL","0",0,0,"By Kathi Peoples"
+42,1,3,"BL","0",0,0,"Special to the DaNy"
+43,1,3,"TXT","1",0,0,"Innovations through research are usually not associated with non-land grant universities such as Cal Poly, but there is a variety of ongoing research and development on campus."
+44,1,3,"TXT","2",0,0,"Land grant universities were set up in the late 19th century by President Abraham Lincoln with the primary purpose of doing research, said Ed Carnegie of the Cal Poly agricultural engineering department.	, , , ."
+45,1,3,"TXT","3",0,0,"■The largest, f^jgricu|t)iral solsf ,4ehydfator in the world was. designed at Cal P<My and cdnstructjed in Fresno by studenu and faculty of"
+46,1,3,"ME","0",0,0,"Saa RESEARCH, pme 4"
+47,0,0,"NA","0",0,0,"i I \ •"
+48,0,0,"NA","0",0,0,". -'S"
+49,0,0,"B","0",0,0,
+50,0,0,"NA","0",0,0,"'V ,"
+51,0,0,"NA","0",0,0,"S..>¿	' Ä""i«' #«íi«.~ «>--'''"
+52,2,0,"SH","0",0,0,"ON THE STREET"
+53,2,0,"OT","0",0,0,"Should Foundation divest from companies doing business in S. Africa?!"
+54,2,0,"OT","0",0,0,"Nkk Aihanasakos, sanlor, ia-dustrial engincciiag:"
+55,2,0,"OT","0",0,0,"I'm for it. I don’t agree with South Afnai's policy and the only way we can put pressure on them is through economic sanctions because we’re obviously not going to war against them."
+56,2,0,"SH","0",0,0,"LEnERS"
+57,2,0,"OT","0",0,0,"Keith SimoB, teoior, cb< virooBiealal eagiBcciiag, tcBalor from the School of EaglBcciiBg:"
+58,2,0,"OT","0",0,0,"It's a complicated question. I’m torn. On one hand 1 feel we shouldn't divest because if you hold stock in a company, you can influence it ... on the other hand you divest to make a sutemcnt that you don't like the politics of the country."
+59,0,0,"B","0",0,0,
+60,2,0,"OT","0",0,0,"FItaroy Raphael, senior, OMchaBlzed agrlcBlturc:"
+61,2,0,"OT","0",0,0,"They should divest for humanitarian reasons and I can’t think of anything more humanitarian than divesting. They (U.S.) do military intervention for lesser problems than apartheid ... look at Grenada ... though I don’t think violence is the answer."
+62,0,0,"B","0",0,0,
+63,0,0,"B","0",0,0,
+64,0,0,"B","0",0,0,
+65,0,0,"B","0",0,0,
+66,2,0,"NA","0",0,0,"K •^rrij hi"
+67,2,,"OT","0",0,0,"Anne Green, Junior, child development:"
+68,2,0,"OT","0",0,0,"I'm opposed to divestment. I feel if we stop supporting businesses completely, then in the long run, it will hurt blacks working in the area more than whites."
+69,2,0,"OT","0",0,0,"MOtc Mendcs, ASI Presidrni:"
+70,2,0,"OT","0",0,0,"I favor partial divestmem I feel I that the Foundation ¡>hould divest in all companies noi ad hering to the Sullivan Principles. The principles are guidelines | which provide an environment for the employer to make a positive contribution toward the fight against apartheid."
+71,2,4,"HL","0",0,0,"Sexual harassment can take many forms"
+72,22,4,"TXT","1",0,0,"Editor — Regarding the Jan. 10 article on aexual hareasment at Cal Poly — Whan moat people think about sexual harassment, they probably envision some guy pawing at a girl or a group of ""good ol' boys"" shouting rude comments at a vary shocked and distraught young lady."
+73,2,4,"TXT","2",0,0,"A not-soconsldarad type of harassment Is hetarosax-ual-homoaaxual conflicts. Many people sea no harm In calling someone a ""faggot"" or a ""dyke,"" but the harsh reality Is that thia conatitutea a form of sexual harassment. It la also i)ot proper for gays to call haterosaxuala things Ilka ""braadars,"" ate."
+74,2,4,"TXT","3",0,0,"This type ol torment causes many gays and lasbiana to restrain their natural feelings. This causes stress which leads to anything from impaired academic performance to substance abuse to sulclda."
+75,2,4,"TXT","4",0,0,"1 applaud the university In Its decision to maintain a sexual harassment policy. I only hope that It Includes harassment's many forms and that the administration enforces the policy heavy-handedly SCOTT R MILLER Gay and Lesbian Student Union"
+76,2,0,"SH","0",0,0,"No holds barred"
+77,2,5,"HL","0",0,0,"Tell me, why'did the ad man jump out the window?"
+78,2,5,"TXT","1",0,0,"Note: This inter-office memo was found clutched in (he hand of the president of A. Varice Ad Agency. He jumped from the company’s tenth story window on New Year’s Eve. The coroner believes the memo is a suicide note — of sorts."
+79,2,5,"TXT","2",0,0,"Dear Dan;"
+80,2,5,"TXT","3",0,0,"We’d best get Research and Development moving full throttle. America’s back, America’s strong, America's ready for computer-generated advertisements and fantabulous new products. And here’s some ideas to help our company capture America’s heart and bank accounts;"
+81,2,5,"TXT","4",0,0,"OK, so someone’s beat us to dog food containing breath fresheners. So what?! We’ll dazzle ’em with doggie deodorants and canine cologne. People love their pets, and they’ve got millions to spend on them now that giving money to famine victims is out of style."
+82,2,5,"TXT","5",0,0,"What about celebritiea, Dan, the new American hero? I- Kids are dancin' in the streets all night long, hoisting Pepai caiu in worship to Lionel Richie. It’s a new generation cornin’ at ya, God yes I Picture Springsteen label sincere jeans made by laid-off"
+83,2,5,"TXT","6",0,0,"sends his camera to the Grand Canyon on motorized tripod, it takes pictures better than Ansel Adams, while Joe guzzles the king of beers at home on the couch. Let’s design gadgets that do everything for the American consumer."
+84,2,5,"BQT","0",0,0,"Kids are dancin* in the streets all night long, hoisting Pepsi cans in worship to Lionel Richie."
+85,2,5,"TXT","5",0,0,"steelworkers ^ folks will stand in line for hours to spend a hundred bucks apiece for them. Let’s reach for the stars. Dan, they all have their price, and America loves ’em all."
+86,2,5,"TXT","6",0,0,"Gadgets, Dan, gadgets are America’s specialty. How about cameras that load, wind, focus, compose, shoot, develop, and make enlargements all by themselves?! Joe Consumer"
+87,2,5,"TXT","7",0,0,"But I haven’t forgotten the marketer’s dream- holy health and hygiene! Let’s exploit everyone’s fears about their bodies. Girls hate guys who sweat, and vice versa. Our medical crew could create a pill (hat plugs the pores so they’ll never sweat again! Pills, I love the darlings, they’re an ad man’s dream babies. Pills to stop congestion, sore throat, runny nose."
+88,2,5,"TXT","7",0,0,"insomnia, hemorrhoids, fever, ihc heartbreak of psoriasis, nagging backache, unwanted pregnanoes. and fear of nuclear war Huey Lewis can spread (he news: ""\ke made a new drug, one that cures everything. Gets rid of tears and fears, it even uught me to sing """
+89,2,5,"TXT","8",0,0,"And now that we’ve made them all superhuman, Dan. we can keep them occupied wtPr toys and more toys. Cars that drive best at twice the speed limit, with dual turbos and quick conversion to all-terrain vehicle for easy destruction of wilderness areas. At night, pop on the camper top and hook up the Amana radar range «.ause it’s Miller time."
+90,2,5,"TXT","9",0,0,"Yes, Dan, as our beloved President said when he returned from Geneva, freedom is ibe byword that spurs us on. \^cre free to make as much monev us we can. Let’s go for it like loial ly, all the way. May the spun ot Rambo be with us."
+91,2,0,"MH","0",0,0,"Mustang Daily"
+92,2,0,"MH","0",0,0,"Donald Munro	Editor"
+93,2,0,"MH","0",0,0,"Dan Ruthemayer	Managing Editor"
+94,2,0,"MH","0",0,0,"Rebecca Berner	Lifaatyla Editor"
+95,2,0,"MH","0",0,0,"Susan Edmondson	Spotlight Editor"
+96,2,0,"MH","0",0,0,"Gregg Schroeder	Insight Editor"
+97,2,0,"MH","0",0,0,"Julia Prodis	Editorial Page Editor"
+98,2,0,"MH","0",0,0,"Margarat Apodaca	Photo Editor"
+99,2,0,"MH","0",0,0,"T. Williams	Sports Editor"
+100,2,0,"MH","0",0,0,"Grant Shaffer	Illustrator"
+101,2,0,"MH","0",0,0,"Jeanne Smofer	Advertising Manager"
+102,2,0,"MH","0",0,0,"Claudia Snow	General Manager"
+103,2,0,"MH","0",0,0,"NIshan Havandjlan	Faculty Adviser"
+104,2,0,"MH","0",0,0,"	Unlvnralty Graphic Systems"
+105,2,0,"MH","0",0,0,"Dave Oslund	Qnnnral Manager"
+106,2,0,"MH","0",0,0,"LaurnI Tossy	Publlahing Manager"
+107,2,0,"MH","0",0,0,"NIcofa Dueeberg	Asst. Mgr. Newspaper Production"
+108,2,0,"MH","0",0,0,"Laura Ward Scott Baudnr	Asst. Mgr. Special Publications Asst. Mgr. Web Operations 	• 1 1 > t 1 , , ■ ^. . . 1 1 . 1"
+109,0,0,"B","0",0,0,"	"
+110,2,0,"CN","0",0,0,"BLOOM COUNTY"
+111,2,0,"CT","0",0,0,"mmtT. NOU. HNÍN IHf"
+112,2,0,"CT","0",0,0,"fmsea/KK iouf yovm ^ ccum srr nicveR •van.no' I vMt menen"
+113,2,0,"CT","0",0,0,"mu ne mut uexcA-"
+114,0,0,"B","0",0,0,
+115,0,0,"NA","0",0,0,"cm"
+116,2,0,"CT","0",0,0,"TWy IT LOfP NO •"
+117,2,0,"CT","0",0,0,"ÒOON^."
+118,0,0,"NA","0",0,0,"\"
+119,2,0,"CT","0",0,0,"by Berkie Breathed"
+120,0,0,"NA","0",0,0,"im's"
+121,0,0,"NA","0",0,0,"nun."
+122,0,0,"B","0",0,0,
+123,0,0,"B","0",0,0,
+124,0,0,"NA","0",0,0,",im ^"
+125,0,0,"NA","0",0,0,"5WI66CÌ"
+126,0,0,"NA","0",0,0,"Cêfimr"
+127,0,0,"NA","0",0,0,"■"
+128,2,0,"CT","0",0,0,"NOI"
+129,2,0,"CT","0",0,0,"lOunr"
+130,0,0,"B","0",0,0,
+131,0,0,"B","0",0,0,
+132,2,0,"OT","0",0,0,"Musían^ fbiy la puhfcifccë dally laMcf«	Imlidayv. tml cmni prrisRi^| by iIk Jminialhin	C'^àfiv^b l^nbiirtmn Siaif I'”'"
+133,2,0,"OT","0",0,0,"lala Oh^	ho«« Mdcly Im"
+134,2,0,"OT","0",0,0,"m iKc IhíiYcrMiy	etrrrvicd m Mfnrü «ühiKiaK «h wiKlca «fc ih»»sc «*f iKr *ri|«t and do am nnramih iwmm iIk MÉainm oí ataf* •**"
+135,2,0,"OT","0",0,0,"Ihr PwhbshcT. UtiMfocd rdmmaK reUtai ibe majmtty *»cw »»f ihc Idii octal Board «msniM« of til» rdàm	taaSimlMtw cdno''"
+136,2,0,"OT","0",0,0,"^c^iknalfMwcrdiMK^PnidacfdtiyUM^	r	)"
+137,0,0,"NA","0",0,0,"^	^	* a * * * « - - - -	. J a ^ a ^ . . . . .	■•»»«>	« = %	« •________"
+138,0,0,"B","0",0,0,
+139,0,0,"NA","0",0,0,"fe"
+140,0,0,"B","0",0,0,
+141,2,0,"PI","0",0,0,"Mustang DaHy Tuesckiy, Jon 14. I960"
+142,0,0,"NA","0",0,0,"itS»"
+143,0,0,"B","0",0,0,
+144,0,0,"B","0",0,0,
+145,0,0,"B","0",0,0,
+146,0,0,"NA","0",0,0,"l^r"""
+147,0,0,"NA","0",0,0,"P'%3^~-*V1| '/'-i^"
+148,0,0,"B","0",0,0,
+149,3,6,"HL","0",0,0,"US still working to return MIAs"
+150,3,6,"TXT","1",0,0,"WASHINGTON (AP) — A top Pentagon official, condemning private attempts to locate missing American servicemen in Indochina, said Monday the United Stata Is making progress with iu campaign to determine what happened to the 1,797 Amerkarastifl^nissing in Vietnam.	—"
+151,3,6,"TXT","2",0,0,"Richard L. Armitage, the assistant defense secretary for international murity affairs, told reporters that the Pentagon has 93 “live^ighting repohs** of Americans on file that it cannot dismiss as fabrications."
+152,3,6,"TXT","3",0,0,"But he added that the Vietnamese government,' in negotiations concluded last week, has pledged to investigate those reports. The Vietnamese also have begun investigating reports from their own people invoiving the status of missing Americans, and they arc allowing joint U^S.-Vietnamese teams to conduct “multiple” excavations at sites where American planes are known.to have crashed during the war. he said."
+153,3,7,"HL","0",0,0,"Divestment up for vote in SF"
+154,,7,"TXT","1",0,0,"SAN FRANCISCO (AP) — An ordinanee forcing San Francisco to divest South African investments faced a city supervisors' vote Monday amid a battle over an amendment that would weaken the measure."
+155,,7,"TXT","2",0,0,"The ordinance would prohibit the city from contracting with or investing money in businesses that have ties to South Africa to protest that nation’s policy of enforced segregation, called apsutheid.	___________1....................—"
+156,,7,"TXT","3",0,0,"A controversial amendment that also would prohibit the city from buying goods produced by companies with ties to South Africa was adopted on a 6-3 vote two weeks ago."
+157,0,0,"B","0",0,0,
+158,0,0,"B","0",0,0,
+159,0,0,"NA","0",0,0,". jTiMo sinag,» pcvice X Mut>r"
+160,3,0,"CT","0",0,0,"ÒP«N PlMCNSIc _______ -"
+161,0,0,"NA","0",0,0,"-TO PlffgRgNT r\t^ PHtlOPS:"
+162,0,0,"NA","0",0,0,"IN W I RING TMIg I ASt.g to POIKTAV9IN'"
+163,3,0,"CT","0",0,0,"Hgy, MHOS THAT GUV ? TMf"
+164,3,0,"CT","0",0,0,"pRofT ooesriT seem too"
+165,3,0,"CT","0",0,0,".. .ANO i.*T tvm coNviNcg >ou.«r,"
+166,3,8,"HL","0",0,0,"Seatbelt laws violate rights of individualis"
+167,3,8,"TXT","1",0,0,"ROCKFORD, Mich. (AP) —-There’s a town in Michigan where not wearing seat belts is a crime without penahy. •"
+168,3,8,"TXT","2",0,0,"Judge Stephen R. Servaas admitted he suspended the fines of 23 to 30 people ticketed for not wearing seat beiu. Michigan law has required seat belt use since July I, but Servaas said that infringes on individual righu."
+169,3,8,"TXT","3",0,0,"”I can’t imagine what he’s got on his mind.” said resident Mike Cooper. ”1 think he’s out of line.” Servaas hasn’t heard such criticism since he requested bullet-proof panels in his courtroom and a cache for a pistol."
+170,0,0,"NA","0",0,0,"voulu."
+171,3,0,"CT","0",0,0,"NiveR"
+172,3,0,"CT","0",0,0,"Get"
+173,3,0,"CT","0",0,0,"AWAV"
+174,3,0,"CT","0",0,0,"WITH"
+175,3,0,"AT","0",0,1,"SPIRI"
+176,3,0,"AT","0",0,1,"creta woRsta"
+177,0,0,"NA","0",0,0,"Ihw aserctoa, • ama4 ••«••••rfaa"
+178,0,0,"NA","0",0,0,"aaa r—nna wms."
+179,0,0,"NA","0",0,0,"muthorlMmd dmmimrm of:"
+180,3,0,"AT","0",0,1,"MIYÂTÂ"
+181,3,0,"AT","0",0,1,"5PEDMBED"
+182,3,0,"AT","0",0,1,"TO"
+183,0,0,"B","0",0,0,
+184,3,0,"AT","0",0,1,"•<> r.«.j"
+185,3,0,"AT","0",0,1,"• rmcinw, commutino é tourino oooeimlêmi»"
+186,3,0,"AT","0",0,1,"•eumtom witmol é frèmo building •ooll urn lor gour biko morwieo é rogolrm ott"
+187,3,0,"AT","0",0,1,"S41-SeT3"
+188,3,0,"AT","0",0,2,"MUSTANG VILLAGE SPECIAL!!"
+189,0,0,"NA","0",0,0,"'L"
+190,3,0,"AT","0",0,2,"YOU CAN LIVE IN A MUSTANG VILLAGE TOWNHOUSE FOR"
+191,3,0,"AT","0",0,2,"AS LITTLE AS $140 PER MONTH"
+192,3,0,"AT","0",0,2,"Mustang Village Is the CLOSEST student housing to Cal Poly campus. A short walk to and from campus."
+193,3,0,"AT","0",0,2,"Live In an envimment that enhances both your social and academic life. Mustang Village offers beautiful new units with kitchens, study areas, laundry facilities, swimming pool, BBQ area, recreation area, meeting room and security patrols."
+194,3,0,"AT","0",0,2,"Now Available"
+195,3,0,"AT","0",0,2,"2 Bedroom/1 Bath Townhouses from $140 2 Bedroom/2 Bath Flats from $170"
+196,0,0,"NA","0",0,0,"tt	~"
+197,3,0,"AT","0",0,2,"Convenient to shopping, banks, markets, transportation and churches."
+198,3,0,"AT","0",0,2,"VIEW MODELS NOW"
+199,3,0,"AT","0",0,2,"For your convenience we are open Monday thru Saturday from QMam-SMpm, Stop by and see what Mustang Village has to offer or you can call us for Information or special appointments."
+200,3,0,"AT","0",0,2,"UNDER NEW MANAGEMENT"
+201,0,0,"NA","0",0,0,",i ■"
+202,0,0,"NA","0",0,0,"teso"
+203,3,0,"AT","0",0,2,"MUSTANG VILLAGE"
+204,3,0,"AT","0",0,2,"ONE MUSTANG DR."
+205,3,0,"AT","0",0,2,"SAN LUIS OBISPO, CA 93401"
+206,4,0,"PI","0",0,0,"TuMday, Jon. 14. I960 Mustang Dd<^"
+207,4,3,"TXT","6",0,0,"the unversity. said Camesie. The facility dries one-half ton of raisins per hour. It has been operating for sevep years and has proven to be one of the most economical designs known for a solar dehydrator^ It has a much shorter pay-off period than other government-funded ’ projects, Carnegie said. .."
+208,4,3,"TXT","7",0,0,"“A lot of OUT projects start off aa student projecu,"" Carnegie .said. ^'I like to bring real-life problems into the classroom' and have my students work on solutions.”"
+209,4,3,"TXT","8",0,0,"One of Carnegie’s^ best project memories began when the direc-tor of research for the California Almond Advisory Board called 'him looking for a way to get rid of bio-mass in almond orchards left after the aop has been pruned."
+210,4,3,"TXT","9",0,0,"The board was concerned with not being able to bum waste products in the future, said Carnegie. ”1 invited him to talk to my design class about the problem. He wasn’t Very optimistic, but agreed to com and talk to the class."
+211,4,3,"TXT","10",0,0,"They presented their infor-"
+212,4,3,"TXT","10",0,0,"-mation -as if they war* in business.”"
+213,4,,"TXT","11",0,0,"The' clan guest seemed, unim-""^ pressed'at first. ”but pretty soon he was sitting on the edge of his chair,” Carnegie said.	("
+214,4,3,"TXT","12",0,0,"The research director said he got more information in four weeks from the students than he had ^in several months from a consuhing firm he paid $30,000, , according to Carnegie."
+215,4,3,"TXT","13",0,0,"The concept was further developed and resulted in a USDA grant to build a prototype' solid waste compactor designed spedficaly for the California almond grower. It is currently being built on campus by students, said Carnegie."
+216,4,3,"TXT","14",0,0,"Charigs Burt,^also of the agri- teg,”Ilicaisaid."
+217,4,3,"TXT","14",0,0,"cultural engineering department, is involved with starting a"
+218,4,3,"TXT","17",0,0,"Besides creating advanced facilities for studenu to do their"
+219,4,3,"TXT","14",0,0,"weather sution on campus. The senior pcojects and companies to station will soon be hooked up to experiment on prototypes, there a number of other stations are other reasons for doing throughout the sttte, Burt said, research,” said Carnegie."
+220,4,,"TXT","14",0,0,"“The sution	will	give	weather"
+221,4,3,"TXT","18",0,0,"reports and recommend the He added, “I gueu there are amount of water and time to ir- really two reasons. One is it’s rigatecrops.^’~’	exciting and	fulfiUs	professional"
+222,4,3,"TXT","18",0,0,",	requiremenu.	Second,	it	provides"
+223,4,3,"TXT","15",0,0,"• Agriculture is not the only fu^ both personal and profes-department on campus with skmal that 1 would not have research and	development	capa-	otherwise.”"
+224,4,3,"TXT","15",0,0,"bilities,- said Robert A. Lucas, director of university research."
+225,4,3,"TXT","14",0,0,"“1 think research at universities like Cal Poly is special"
+226,4,3,"TXT","16",0,0,"’Oranu are awarded to pro- because we’re doing it because fessors in department from we want to — not' because we political science, physics and have to. That makes a dif-theater to aeronautical engineer- ferenoe,” said Carnegie."
+227,4,0,"AT","0",0,1,"Rise to the top."
+228,0,0,"B","0",0,0,
+229,0,0,"NA","0",0,0,"."
+230,0,0,"NA","0",0,0,"VouYc a	■"
+231,0,0,"NA","0",0,0,"I >llu Cl 11 l!' H.'- : H ■"
+232,0,0,"NA","0",0,0,"li ' I'liti ' Alui ."
+233,0,0,"NA","0",0,0,"I I'lK'. I' an ‘I ' ■"
+234,4,0,"AT","0",0,1,"NAVI ■* OFFICER. LEAD THE ADV1ÌNTURE"
+235,4,0,"AT","0",0,2,"$33.95"
+236,4,0,"AT","0",0,2,"EL-^"
+237,4,0,"AT","0",0,2,"512/T"
+238,4,0,"AT","0",0,2,"THIN MAN”^* WAUET-SIZE WITH"
+239,4,0,"AT","0",0,2,"128 PROGRAM STEPS"
+240,4,0,"AT","0",0,2,"Improved scientific calculator with Multi Formula"
+241,4,0,"AT","0",0,2,"Reserve'and decimai/hexadecimal system"
+242,4,0,"AT","0",0,2,"■	In addition to performing the scientific functions, the EL-512 permits the user to store up to 128 program steps built-up from any of its preprogrammed' functions."
+243,4,0,"AT","0",0,2,"a Hyperbolic (sinh, cosh, tanh) and their inverses."
+244,4,0,"AT","0",0,2,"■	Rectangular/polar coordinate conversions"
+245,4,0,"AT","0",0,2,"a Mean, sum, and standard deviation."
+246,4,0,"AT","0",0,2,"a 4-Multi Formula Reserv^ for storing formulas, and 9 Data Memories for storing numbers."
+247,4,0,"AT","0",0,2,"a Direct formula entry enters formulas the way they are written."
+248,4,0,"AT","0",0,2,"a Computer-age hexadecimal conversionsr ^"
+249,4,0,"AT","0",0,2,"a Easy-to-read 10-digit liquid crystal display with scientific notation expression."
+250,4,0,"AT","0",0,2,"a Independently accessible 3-key memory ‘ *"
+251,4,0,"AT","0",0,2,"a 15 levels of parentheses with up to 7 pending h operations."
+252,4,0,"AT","0",0,2,"EIGdooI"
+253,0,0,"B","0",0,0,
+254,0,0,"NA","0",0,0,"J	wi."
+255,0,0,"B","0",0,0,
+256,0,0,"B","0",0,0,
+257,5,0,"PI","0",0,0,"Ti,iMday, Jan. 14.1986 Mutkxtg DoHy"
+258,0,0,"NA","0",0,0,"-X--"
+259,0,0,"B","0",0,0,
+260,6,0,"SH","0",0,0,"NOTABLES"
+261,6,0,"OT","0",0,0,"The foUowtng Cal Poly students, faculty and schools'recently have made noteworthy achievements:	____________"
+262,6,0,"OT","0",0,0,"Student"
+263,6,0,"OT","0",0,0,"Achievement"
+264,6,0,"OT","0",0,0,"□ Fat TItai — \a naturdl resources managemint senior, recently received an''outstandint service award from the National Park Service. He was recognized for his work at Joshua Tree National Monument last summer where he was responsible for development of a full fire protection plan for the Southern California desert monument. A S250 stipend accompanied the award."
+265,6,0,"OT","0",0,0,"Faculty"
+266,6,0,"OT","0",0,0,"Swart — home economics professors, planned and conducted a Los Angeles tour of the textiles/ clothing industry. Students visited an apparel design/ production firm with textile testing facility, a vertically integrated carpet manufactuing Firm, the California Apparel Marts and apparel/fabric sales representatives including two profeuional alumni."
+267,6,0,"OT","0",0,0,"□John Harrington — this Cal Poly English pressor is currently in Norway at the Univer-si^ of Baryen as a visiting research fellow where he will lecture to the faculty on American film genre and do extensive research on fUnu."
+268,6,0,"OT","0",0,0,"Harrington will be in Norway throughout winter quarter and will travel to England in the spring to participate in the Cal Poly London Study program. There he will teach courses in Shakespeare and and conduct film research at the British Film Institute."
+269,6,0,"OT","0",0,0,"□Manns Long — this poUtkal science professor recently participated in a panel on ""The Wake of Intergovernmental Revenue Sharing” at the Western American Society for Public Administration annual meeting in Monterey."
+270,6,0,"OT","0",0,0,"□Joanne Beanie Ragglao — an vt professor, had some of her work exhibited at the University of Hawaii at Hilo in a<group exhibition featuring California artists."
+271,6,0,"OT","0",0,0,"□John MendenhoB — this art professor has had his book, “High Tech Trademarks,"" published by the Art Direction Book Company, New York. It is an intematioMl survey of the corporate identity of computer hardware/software, semiconductor and laser technology industries."
+272,6,0,"OT","0",0,0,"□M. BHgl Dcnei — architecture professor, gave a series of"
+273,6,0,"AT","0",0,1,"Pilot nnka"
+274,6,0,"AT","0",0,1,"The"
+275,6,0,"AT","0",0,1,"Pilot Predse fomntbaBom-' tücMOOth,"
+276,6,0,"AT","0",0,1,"slctknay_____"
+277,6,0,"AT","0",0,1,"to get it on papen"
+278,6,0,"AT","0",0,1,"It’s tfaepen that V"
+279,6,0,"AT","0",0,1,"tiny ball bdd by a oecdie-like collar is the secftt to the comfort and smoothness you’ll"
+280,6,0,"AT","0",0,1,"experience. And because of ittW.theF"
+281,6,0,"AT","0",0,1,", the Pfcciae will write crisply through caibons."
+282,6,0,"AT","0",0,1,"Iky eidier the floe or extra flric polnL Only fl. 19 each."
+283,6,0,"AT","0",0,1,"pnzeise'"
+284,6,0,"OT","0",0,0,"three public lectures at the Schools of Architecture of the University of Detroit, University of Michigan and Pennsylvania State University. The lectures were ""Architecture Without WalU,"" ""Vernacular Architecture"" and ""Traditions Versus Maxims/Myths	Versus"
+285,6,0,"OT","0",0,0,"Mistakes."""
+286,6,0,"OT","0",0,0,"□Anthony KnnMe — this Mo^ logical sciences professor haT been appointed by the president of the American' Phherics Society to the professionalism committee of the organizadon."
+287,6,0,"OT","0",0,0,"□Rnhsrt McCoride — an ogri-culturml business management professor, wrote the project completion report published by the US State Deparönent for the joint USAID — Lutheran World Relief Project dried, ""Village Environmental Improvement, Singida Tanzania.”"
+288,6,0,"OT","0",0,0,"^ □Carolyn Shank — this pfotifcn/ education and recreation administration professor recendy precented the Cal Poly Wellneu Project at the annual conference of California Society of Park and Recreation Educators in Monterey."
+289,6,0,"OT","0",0,0,"□Gary Dwyer — professor of landscape architecture, was requested by the State Architect, the General Services Ad-ministradoo and the California Arts Council to help select the design team for the new cultural center in the Candlestick Point Recreadon Area in San Francisco. It is the first time that a cultural center is to be located in a national park, the Golden Sute Nadonal Recreadon Area."
+290,6,0,"OT","0",0,0,"was accepted Tor inclusion in ""Resources in Education."""
+291,6,0,"OT","0",0,0,"□Gary FIsM — this graphic communication professor had an article, ""Print Quality and iu Measurement — Part 1,” published in the September/ October 1983 iuue of the British journal ""Professional Printer."""
+292,6,0,"OT","0",0,0,"□ Harvey Leveasoa — this I graphic communication department head was the keynote speaker at the November meeting of the Mission Bay Craftsman Club in Palo Aho. The title of his talk was ""Prepartag Human Resources for the Graphic Communication Profession Over the Next 10 Yean: Cal Poly's Approach."""
+293,6,0,"OT","0",0,0,"MkliasI Bhua — a graphic communication professor, had an article, ""How to Duplicate Films ACcqrately,” pubfished in the November issue of ""Printing Journal."""
+294,6,0,"OT","0",0,0,"□Harold Cola — this civil and ‘environmental engineering professor has been appointed vice chairman of the Air Pollution Control Association EducaUon Council."
+295,6,,"OT","0",0,0,"Gifts"
+296,6,0,"OT","0",0,0,"□ Charles, Slcai — this phsychology and human development professor was notified that “Type A Bchavior/Stress R the Person: Environment Fit Hypothesis"""
+297,6,0,"OT","0",0,0,"□Eagiaecring — this Cal Poly school recently received a total of almost S60,000 in donadons from companies and foundadons as follows:"
+298,6,0,"OT","0",0,0,"— Santa Barbara Research Center donated S25,000 to the school. The center, a subsidiary of Hugha Aircraft Co., designated 113,000 of its gift spedflcally for the teaching of manufacturing engineering and technology in the school. The remaining S10,000 will be used by various programs in the eight departmenu of the School of Engineering."
+299,6,0,"AT","0",0,2,"CASSETTES and RECORDS."
+300,6,0,"AT","0",0,2,"MAJOR LABELS TOP ARTISTS"
+301,6,0,"AT","0",0,2,"AFFORDABLE PRICES Something (or Everyone"
+302,6,0,"AT","0",0,2,"Pop, Rock, Folk, Jazz and CÌassicB"
+303,6,0,"AT","0",0,2,"On Sale for Limited Time Shop Early for Best Selection"
+304,6,0,"AT","0",0,2,"Bookstore"
+305,6,0,"OT","0",0,0,"—	Pacific Oas and Electric Co."
+306,6,0,"OT","0",0,0,"recently donated $13,000 to campus engineering programs to bring the total of iu 1983 gifts to $18,400. Of the total, $3,000 ij designated for the School of Engineering Electric Power In stitute, $4,000 for | computer-aided design and manufactunn)i programs, $3,000 for an assistantship in mechanical enginaaring and $1,000 to support affinnative action efforts in engUwcfing.---------"
+307,6,0,"OT","0",0,0,"—	The Lockheed Missiles and Space Co, has donated $10,000 to support Cal Poly engineering progranu and has given 12 large photographs of space projects to help ftmiish offices in the new Engineering Building."
+308,6,0,"OT","0",0,0,"— The Lockheed California Co. donated $3,000 to be used primarily tor professional development of the engineering fooiltiu^"
+309,6,0,"OT","0",0,0,"^ Dallas-based Halliburton Foundation dontated $3,000 to the school to . support faculty devdopment programs for the 1983-86 academic year. The foundadon also contributed S500 to supplement operadons of the Placement Center. Halliburton Co., the parent company of the foundation, is an oil field services and construedon and engineering Arm."
+310,6,0,"OT","0",0,,"□Graphic conunaalcadon —"
+311,6,0,"OT","0",0,0,"this department has received a screen printing preu from Advance Process Supply Co. of Chicago. The American Tempo printer, valued at $13,000, will be used in the screen paring laboratory. The preu it the flrst of the new generadon of compact screen printing presses offering features that were previously included only on much Ivger, higher priced machinery."
+312,6,0,"AT","0",0,3,"Russia T rip"
+313,6,0,"AT","0",0,3,"s 10.‘)0 air & 1."
+314,6,0,"AT","0",0,3,"Stu- 1>. Davii"
+315,6,0,"AT","0",0,4,"Ask Mrs. HuJ,"
+316,6,0,"AT","0",0,4,"FeeNng lonely? Having problems with get that wine ataln out of the carpet b fomtatlon, advioe and helpful hints j every Thumday In Muatang Dally and i anewer your queatlons."
+317,6,0,"AT","0",0,5,"Ina"
+318,6,0,"AT","0",0,5,"stop!"
+319,6,0,"AT","0",0,5,"foM"
+320,0,0,"B","0",0,0,
+321,0,0,"B","0",0,0,
+322,0,0,"NA","0",0,0,"■•I'Vjc-'-—-tiüiii	.*r'"
+323,0,0,"NA","0",0,0,"I'—a JU-Ji"
+324,0,0,"B","0",0,0,
+325,7,0,"PI","0",0,0,"MuilangOallyTuMday.Jan. 14.1986"
+326,0,0,"NA","0",0,0,"?T"
+327,7,9,"HL","0",0,0,"eiiciai"
+328,0,0,"NA","0",0,0,".	m--"
+329,0,0,"NA","0",0,0,"rST' -, *■*9"
+330,0,0,"NA","0",0,0,"tilling <MHhnbovyr«i«ftJI.	pnÍMntmiMiriiiltproMtiM for Um mu"
+331,7,0,"NA","0",0,0,", Kill widt tlx bcMito —y be	twoorthi«ty«wt,""Firk«ruid."
+332,7,9,"TXT","11",0,0,"Parker mU ilM UoriM in IM*"
+333,7,9,"TXT","11",0,0,"rfMIleafkera	Noeember and early PecMibcr, were ^"
+334,7,9,"TXT","11",0,0,"pndiciailo drop one-hair inch of rain per hear,** the norm only prodneed ihraa<fnii9ofap inch of rain. •‘AeidereonoerB hihe hydrophobic"
+335,7,9,"TXT","12",0,0,"rforaMiathe"
+336,7,9,"TXT","12",0,0,"hnitrialadn« pretty Mndhr.** he eaid."
+337,7,9,"TXT","15",0,0,"M Wahkan^t oTthtUnlvcraity of eWeraia Cooperative InwÉon SeFffci Mid dw hwMdiaie ht^na of the fire on local agrkidtace was the ioaa of graedandto cattle."
+338,7,9,"TXT","15",0,0,"Weitkaapk the iveuock and range"
+339,7,9,"TXT","17",0,0,"tioneetofthnrhei"
+340,7,9,"TXT","17",0,0,"affecndhyflresasi"
+341,0,0,"B","0",0,0,
+342,7,0,"AT","0",0,1,"Spring Hrcak"
+343,0,0,"NA","0",0,0,"ind 7i\\ Mt ■>on. IMi. 1 )"
+344,7,0,"AT","0",0,2,"^nag^l"
+345,7,0,"AT","0",0,2,"lyour roommates? Wondering how to Vors the landlord aaeo H7 For any In-jst ask Mrs. Huffnagel. She appears re's ready to solve your probloma and"
+346,7,0,"AT","0",0,3,"ittppy.™.?"
+347,7,0,"AT","0",0,3,"itlningqrY"
+348,7,0,"AT","0",0,3,"Nir Exprws Wladwei lat lva«li«i Um runt"
+349,7,0,"AT","0",0,4,"Remainders & Publishers Overstock"
+350,7,0,"AT","0",0,4,"$1.99"
+351,7,0,"AT","0",0,4,"Book Sale!"
+352,7,0,"AT","0",0,4,"- This Week-"
+353,7,0,"AT","0",0,4,"P!"
+354,7,0,"AT","0",0,4,"EJ Corral ty¿!l Bookstore"
+355,0,0,"NA","0",0,0,"m"
+356,7,0,"AT","0",0,5,"I PIZZA I GRANDE j*new hours*"
+357,7,0,"AT","0",0,5,"I 5pm-12mn"
+358,7,0,"AT","0",0,5,"I Take-out or Delivered on Campus—S46-1233"
+359,7,0,"AT","0",0,5,"$5.98	I"
+360,7,0,"AT","0",0,5,"One large 2 item Pizza '"
+361,7,0,"AT","0",0,6,"BACK TO SCHOOL SPECIALS"
+362,0,0,"B","0",0,0,
+363,7,0,"AT","0",0,6,"WnXBUYYOU ANYOFOim RAdNCOR TOURING BIKES INSTOCK"
+364,7,0,"AT","0",0,6,"COUPON expiras t/l/gg COUPON"
+365,7,0,"AT","0",0,6,"rtCtCl®"
+366,7,0,"AT","0",0,6,"%sss^^"
+367,7,0,"AT","0",0,6,"•A1HU8T BRAKES •LUBE CABLES •LUBE CHAIN •SAFETY CHECK •ADJUST GEARS	a."
+368,7,0,"AT","0",0,6,"•SPOT TRUE WHEELS ^*<9$ •AIHUST HEADSET"
+369,7,0,"AT","0",0,6,"^CLE"
+370,7,0,"AT","0",0,6,"BICYCLE ACCESSORY SPECIALS"
+371,7,0,"AT","0",0,6,"•Solito Combtndtlon U-Lock S14.9S $350 Gocnrcmtne from manufacturer rag. S22.00"
+372,7,0,"AT","0",0,6,"• Cot Eyn Headlight $4.50 rag. $5.U ^"
+373,7,0,"AT","0",0,6,"FREE TUBE W/PURCHA8E OF AMY TIRE"
+374,7,0,"AT","0",0,6,"COPPI» axphreat/l/W _TOUP«f_ 741 Humbert 8«."
+375,7,0,"AT","0",0,6,"oH the $700 blodt oi Soutft Broad jMl-StTB"
+376,0,0,"NA","0",0,0,"sir::"
+377,0,0,"B","0",0,0,
+378,0,0,"NA","0",0,0,"w f*-."
+379,0,0,"NA","0",0,0,"( -"
+380,0,0,"NA","0",0,0,"« ^ ¿4 * “"
+381,0,0,"NA","0",0,0,"Ir,	: ■"
+382,0,0,"B","0",0,0,
+383,0,0,"B","0",0,0,
+384,0,0,"B","0",0,0,
+385,0,0,"NA","0",0,0,"i"
+386,8,0,"AT","0",0,1,"SPOW"
+387,8,0,"AT","0",0,1,"shoes CHMNWI^"
+388,0,0,"B","0",0,0,
+389,0,0,"NA","0",0,0,"-Z1"
+390,0,0,"NA","0",0,0,"■■f"
+391,0,0,"B","0",0,0,
+392,0,0,"NA","0",0,0,"[fssli"
+393,8,0,"AT","0",0,1,"your"
+394,8,0,"AT","0",0,1,"CHOICE"
+395,8,0,"AT","0",0,1,"*4.9«"
+396,0,0,"NA","0",0,0,"'.::j"
+397,0,0,"B","0",0,0,
+398,0,0,"NA","0",0,0,"ira"
+399,0,0,"B","0",0,0,
+400,0,0,"NA","0",0,0,"ilS-TW	Mil"
+401,0,0,"NA","0",0,0,"iU««*"
+402,8,0,"AT","0",0,1,"37.99"
+403,8,0,"AT","0",0,1,"®9"
+404,8,0,"AT","0",0,1,"34.95"
+405,0,0,"NA","0",0,0,"— jiJfiSiSi'"""
+406,8,0,"AT","0",0,1,"*^	45.99"
+407,8,0,"AT","0",0,1,"T ,34.99"
+408,8,0,"AT","0",0,1,"'37.99"
+409,8,0,"AT","0",0,1,"34.99"
+410,0,0,"B","0",0,0,
+411,8,0,"AT","0",0,1,"^•SanSiXS ■»••»*' SSi»^"
+412,8,0,"AT","0",0,1,".34:99"
+413,8,0,"AT","0",0,1,"MPJgMnS^ ******"
+414,8,0,"AT","0",0,1,"39.95"
+415,8,0,"AT","0",0,1,",37.95"
+416,8,0,"AT","0",0,1,"SSSSWSW»	14.94"
+417,8,0,"AT","0",0,1,"46.99"
+418,8,0,"AT","0",0,1,"s«sa»"
+419,0,0,"NA","0",0,0,"_	agmSvS"""""
+420,0,0,"NA","0",0,0,"tL. *»•’’"
+421,8,0,"AT","0",0,1,"“*	5*.99	""**■"
+422,8,0,"AT","0",0,1,"37.99"
+423,8,0,"AT","0",0,1,"43.99"
+424,8,0,"AT","0",0,1,"50.99"
+425,8,0,"AT","0",0,1,"■^S^SSS»“ ^ ^ *3.99"
+426,0,0,"NA","0",0,0,"!S«2S£"
+427,0,0,"NA","0",0,0,"lac-i *	««tnstonu»"
+428,0,0,"NA","0",0,0,"«i-gr*	»1««“**^"
+429,8,0,"AT","0",0,1,"HOURS: SAT. 9-9 SUM. 10-6 DAIIY 10-9"
+430,8,0,"AT","0",0,1,"^	3 SttilS 4V4 vns J"
+431,,0,"NA","0",0,0,"nU«'» ■*“"
+432,8,0,"AT","0",0,1,"^ HUNTINC & FISHINC LICENSES AT ALL BIG 5 STORES"
+433,8,0,"AT","0",0,1,"HM LUIS OBISPO"
+434,8,0,"AT","0",0,1,"iS--."
+435,8,0,"AT","0",0,1,"MADONNA PLAZA SH0PPIN8 CENTEN"
+436,,0,"NA","0",0,0,"•	. • I • ♦ I I"
+437,8,0,"AT","0",0,1,"Th« Watt Cooft'« Laoding Chain of Sporting Goods Storas. Sarving California, Navada and Woshington Ovar 32 Yaori."
+438,0,0,"NA","0",0,0,"T —"
+439,9,0,"PI","0",0,0,"Tu*tctay,Jan. 14,"
+440,9,0,"PI","0",0,0,"14,1986 9"
+441,0,0,"NA","0",0,0,"lumw TrfUinwin o—>"
+442,9,0,"PH","0",0,0,"Mutlang QrappM« e«iM from toMnd WadnMday niglit to pull,out a 28-15 win ovar tha Tampta Owla. Tha Muatanga tralad 11-7 witti oniy four botila lanMlnlng, but ralllad lata In ttia matob wMi eluto»i wbw by Anthony Romaro, Mark traey and DavM Lanham to axtand tha MusUnga* dual maat laoord to 8-1. Tha Muatanna apant tha waakand In Hampton. Va. at tha Virginia Ouala and tl)an Mt lor Oklahoma whara thay mat third rankad Oklahoma Stata Unkraralty and Fifth rankad Oklahoma both Monday. Tha Muatang Qrapplara wM mtum to CaHlomla lor tha CaSfomla Stata Univaralty FuSarton Ouala on Sunday."
+443,9,0,"SH","0",0,0,"Hoopsters split 2ames"
+444,9,10,"HL","0",0,0,"Mustangs home after roadtrip, 1-1"
+445,9,11,"HL","0",0,0,"Superbowl: Why bother with it?"
+446,9,11,"BL","0",0,0,"By The Aaaodatad Proa"
+447,9,11,"TXT","1",0,0,"It's starting out aa the Why Bother Super Bowl. As in, why bother to play it when the National Football League can just declare the Chicago Bears the champion?"
+448,9,11,"TXT","2",0,0,"No sooner had the New England Patriots followed Chicago's 244) shutout of the Los Angeles Rams by upsetting the> Miami Dolphins 31-14 Sunday than the predictions about the Jan. 26 title game in New Orleans started rolling in."
+449,9,11,"TXT","3",0,0,"Sixteen-three Bears, “in a very boring game,“ predicted a Miami television anal^. Twenty-four-seven Bears predicted a respected national football"
+450,9,11,"TXT","3",0,0,"writer."
+451,9,11,"TXT","4",0,0,"That may be a bit premature, particularly since for only the third time in 20 ‘ years, both teams are playing in their First Super Bowls, a disorienting experience for a lot of players."
+452,9,11,"TXT","5",0,0,"The Bears, 13-1 in the regular season, have long since been anointed as the National Foot-bidl League’s best team. They solidified that position by becoming the Fust team ever to register two straight shutouu in the playoffs — 21-0 over the New York Giants, then Sunday's whitewash of the Rams."
+453,9,11,"TXT","6",0,0,"But while everyone’s been eyeing the Bears, the Patriou have"
+454,9,11,"TXT","6",0,0,"quietly snuck up on people, winning 12 of their last 14, including three road victories in the playoffs."
+455,9,11,"TXT","7",0,0,"Their only losses in the last three months were by 16-13 to the New York Jett in overtime and 30-27 in Miami, losses they avenged in the playoffs."
+456,9,11,"TXT","8",0,0,"They beat the Raiders at the Los Angeles Colisetim a week ago, then eitded an eight-game Miami winning streak and their own 18-game losing streak at the Orange Bowl — giving them quality road victories over quality teams in games in which their season was on the line."
+457,9,10,"BL","0",0,0,"By Um A. Honk"
+458,0,0,"NA","0",0,0,"apaoUMe Dm 0«Ny"
+459,9,10,"TXT","1",0,0,"The Cal Poly women’s basketball team broke even in iu first pair of league games over the weekend."
+460,9,10,"TXT","2",0,0,"The Lady Mustangs played in a warm University of Califoniia Riverside gym Thursday, but could only connect on a cold 23 of 70 shots from the floor for a 32 percent average."
+461,9,10,"TXT","3",0,0,"“We only lost by* seven, but they (Riverside) beat us worse than the score showed,” said assistant coach Jill Orrock. “There was a lack of intensity and drive — we went out flat.’’"
+462,9,10,"TXT","4",0,0,"The score at halftime set Riverside ahead 31-23. The Highlanders maintained their lead by outrebounding the Mustangs 31-40 and hitting 27 of 37 from the Field for a 47 percent average from the field."
+463,9,10,"TXT","5",0,0,"The Lady Mustangs trailed most of the game and didn’t pull to within seven until the last two and a half minutes of the game."
+464,9,10,"TXT","6",0,0,"“We Finally started to play some basketball in the last two and a half minutes,” Orrock said. Nonetheleu, it was too little too late. The Musungs lost 63-31."
+465,9,10,"TXT","7",0,0,"Barb Blackburn, a 6’2"" senior out of De Anza Junior College, hit nine of 21 shots for a game high 21 points. Teammate Janet Jorgensen poured in 14 points to go seven for 18 on the night."
+466,9,10,"TXT","8",0,0,"In another league match-up Saturday, Poly showed more in-"
+467,9,10,"TXT","8",0,0,"tensity as it beat the Toros of Cal Sute Dominguez Hills- at their own game."
+468,9,10,"TXT","9",0,0,"The Toros, known for their agreuive play, lost to an equally agressive Cal Poly squad 63-39."
+469,9,10,"TXT","10",0,0,"“The Toros are very tenacious.” Orrock said. “But we were pretty tenacious ourselves. We made things happen and got to the (foul) line a lot.’’"
+470,9,10,"TXT","11",0,0,"The Mustangs showed a lot of hustle and determination, making 41 percent of their shou for the game and 47 percent in the second half. The second win “renewed our faith,” Orrock said."
+471,9,10,"TXT","12",0,0,"^.Trish Oroo led the Musung attisek against the Toros scoring 16 poinu, while BUckbum continued her hot streak with 14 poinu. Jorgensen also checked in with a well-balanced effort of 12 poinu and nine boards."
+472,9,10,"TXT","13",0,0,"The Lady Musungs ended up the weekend with a 9-3 overall record and 1-1 in league play."
+473,9,10,"TXT","14",0,0,"The Musungs are awaiting the | challenge of the Maudors of California Suue University Nor-thridge. The Maudors will arrive in San Luis Obispo Thursday for a 7:30 p.m. match-up in Cal Poly’s Main Gym. The Matadors are 11-2 on the season and 1-0 in"
+474,9,10,"TXT","14",0,0,"league play."
+475,0,0,"NA","0",0,0,"*"
+476,9,10,"TXT","15",0,0,"The Lady Musungs will host California Sute University Los Angeles Saturday at 7:30 p.m. in the Main Gym. Cal Sute L.A. is 4-7 on the season and O-I in league play."
+477,9,0,"AT","0",0,1,"gNERO'S"
+478,9,0,"AT","0",0,1,"pizza 9 pasta"
+479,9,0,"AT","0",0,1,"LARGE PIZZA 4»»."
+480,9,0,"AT","0",0,1,"® PASTAS"
+481,9,0,"AT","0",0,1,"BAKED /N HOTMOZZARELA CHEESE"
+482,9,0,"AT","0",0,1,"® HOT & COLD ITALIAN SUBS ® MIXED ANTIPASTOS & SALAD ® BEER&WINE"
+483,9,0,"AT","0",0,1,"FAST FREE DEXIVERY CALL 543-1114"
+484,9,0,"AT","0",0,2,"Sleepy? late night study blahs?"
+485,9,0,"AT","0",0,2,"Hot Food & Snacks"
+486,9,0,"AT","0",0,2,"Served till 10:30pm Sun.-Thur."
+487,9,0,"AT","0",0,2,"12mn. Fri. & Sat."
+488,9,0,"AT","0",0,2,"Mention 'SLEEPY*' & get"
+489,9,0,"AT","0",0,2,"3(Woff"
+490,9,0,"AT","0",0,2,"any food order after 4pm"
+491,9,0,"AT","0",0,2,"Burger Bar"
+492,9,0,"AT","0",0,2,"Icxated lower level U.U."
+493,0,0,"NA","0",0,0,"• Vt « «	.	% • >1 f t j	; I . t I K ‘""'t - s ■ • •	•••"
+494,0,0,"NA","0",0,0,"• g-. ,	9.» '"
+495,0,0,"NA","0",0,0,"•k ^	>«ta9e# »#,••• e* •"
+496,0,0,"NA","0",0,0,"• gl •	•' kI* . •»"
+497,0,0,"NA","0",0,0,". • «tk.8.4^	9 « 4 W* * •"
+498,0,0,"NA","0",0,0,"wmm"
+499,0,0,"NA","0",0,0,"4.«.»^ • « 4 B »4"
+500,0,0,"NA","0",0,0,"9	* IBI'"
+501,0,0,"NA","0",0,0,"w"
+502,0,0,"NA","0",0,0,"10"
+503,10,0,"PI","0",0,0,"TuMday. Jan. 14.1986 Mustang OaHy"
+504,10,0,"SH","0",0,0,"CALENDAR"
+505,10,0,"OT","0",0,0,"— The Cal Poly"
+506,10,0,"OT","0",0,0,"jan 1	"".-i:"
+507,10,0,"OT","0",0,0,"14 I *«*<k.""Bubblc"
+508,10,0,"OT","0",0,0,"Trouble."" wUl be on display through Friday in the University Union Plaza."
+509,10,0,"OT","0",0,0,"— The nationally-known founder and president of PNI Archilecu in San Francisco. Penny Kerry, will speak on ""This Strange Business We Call Architecture"" at 7:30 p.m. in the Gal^ of the Architecture and Environmental Design Building. The speech is pan of ""Women in Architecture Week"" and admission is SI. In addition, the work of Julia Morgan and other famous California women architects will be on display in the Gallery throughout the week from I a.m. to 5 p.m."
+510,10,0,"OT","0",0,0,"classes offered this quarter: bike repair, calligraphy, tilkscreening and ceramics. Studenu, faculty and staff are welcome to sign up."
+511,10,0,"OT","0",0,0,"— The Learning Assistance Center wiH offer a seminar on ""Time Management for the Student With Little or No Time to Waste'Vfrom II a.m. to 12 p.m. inU.U.2l9."
+512,10,0,"OT","0",0,0,"— Dr. Ban-J	jamin Spock is"
+513,10,0,"OT","0",0,0,"I	JAN	among the"
+514,10,0,"OT","0",0,0,"■	speakers who"
+515,10,0,"OT","0",0,0,"I	id ^	will discuu the"
+516,10,0,"OT","0",0,0,"I	If	issues of nu-"
+517,10,0,"OT","0",0,0,"J	______ clear war in a"
+518,10,0,"OT","0",0,0,"two-day peace forum entitled,	""Preventing the"
+519,10,0,"OT","0",0,0,"Last	Epidemic:	Prescriptions for"
+520,10,0,"OT","0",0,0,"Survival"" from 7:30 to 10 p.m. on Friday and 8:30 a.m. to 12:30 p.m. on Saturday in the Main Gym. The event is sponeored by"
+521,10,0,"OT","0",0,0,"the ASl Speakers Fqrum and the San Luis Obispo Chapter of Physicians for Social Responsibility. Passes are $4.50 Tor students and $5 for the public."
+522,10,0,"OT","0",0,0,"— Filipino Cultural Exchange will sponsor a V o 11 e y b k 11 Tournament from 10 a.m. to"
+523,10,0,"OT","0",0,0,"Greta Garbo says,	I"
+524,10,0,"OT","0",0,0,"van! to be	^"
+525,10,0,"OT","0",0,0,"alona — with my Muatang Dallyl’^-"
+526,10,0,"OT","0",0,0,"J------------- - The ASl"
+527,10,0,"OT","0",0,0,"I	JAN	films committee"
+528,10,0,"OT","0",0,0,"I	will present the"
+529,10,0,"OT","0",0,0,"■	H	C	movie, ""CO-"
+530,10,0,"OT","0",0,0,"■	I	vJ	COON"" at 7"
+531,10,0,"OT","0",0,0,"and 9:30 p.m. in C h u m a s h Auditorium. Admission is $1.50."
+532,10,0,"OT","0",0,0,"— The Craft Center will hold class sign-ups iit, the University Craft Center, U.U. 111. beginning at 7 p.m. Just a few of the"
+533,10,0,"OT","0",0,0,"--------------- —	The ASl"
+534,10,0,"OT","0",0,0,"JAN	Special Events"
+535,10,0,"OT","0",0,0,"Committee will 4 A	sponsor a coo-"
+536,10,0,"OT","0",0,0,"1cert by a group called ""Intrinsic"" from 11 a.m. to noon in the University Union Plaza."
+537,10,0,"OT","0",0,0,"— San Luis Obispo native and poHtical theorist. Langdon Winner. wiU speak on ""SiHcon Valley — California's High-Tech Cuhure"" at II a.m. in U.U. 220 as part of the School of Communicative Arts and Humanities ""California Vision"" lecture series."
+538,10,0,"OT","0",0,0,"—' Recreational Sports will sponsor a wrist wrestling competition at II a.m. in the University Union Plaza."
+539,10,0,"OT","0",0,0,"— The Learning Assistance Center will offer a seminar in ""Overcoming Procrastination"" from 10 a.m. to 12 p.m. in U.U. 219."
+540,10,0,"OT","0",0,0,"S p.m. in the Main Gym."
+541,0,0,"B","0",0,0,
+542,0,0,"NA","0",0,0,"/"
+543,0,0,"B","0",0,0,
+544,0,0,"NA","0",0,0,"(i"
+545,0,0,"B","0",0,0,
+546,0,0,"NA","0",0,0,"A'O/.s;"
+547,0,0,"NA","0",0,0,"■off."
+548,0,0,"B","0",0,0,
+549,0,0,"NA","0",0,0,"A"
+550,0,0,"B","0",0,0,
+551,0,0,"NA","0",0,0,"/"
+552,0,0,"NA","0",0,0,"f"
+553,0,0,"NA","0",0,0,"/"
+554,0,0,"NA","0",0,0,"/ !"
+555,0,0,"NA","0",0,0,"k:i"
+556,10,0,"AT","0",0,1,"CRlvXM PARLOUR"
+557,0,0,"NA","0",0,0,"in thc lill"
+558,0,0,"B","0",0,0,
+559,0,0,"B","0",0,0,
+560,0,0,"NA","0",0,0,"/"
+561,0,0,"NA","0",0,0,". )"
+562,0,0,"B","0",0,0,
+563,10,0,"AT","0",0,1,"OpeniMon.-Fri."
+564,10,0,"AT","0",0,1,"/ 30 a.m.- l():(K)p.m."
+565,0,0,"NA","0",0,0,"FexxJ Service"
+566,10,0,"AT","0",0,2,"We’re Not All Pomp And Circumstance."
+567,10,0,"AT","0",0,2,"Some companies give recent graduates a fancy title and not much else."
+568,10,0,"AT","0",0,2,"At Applied Magnetics, we value your ingenuity. We give business and engineering graduates the opportunity to assume significant responsibility early in their career by placing them in a position to make key decisions that affect the way we do business."
+569,10,0,"AT","0",0,2,"If you’d like to find out more about us, just drop by the Placement Center and read our literature."
+570,10,0,"AT","0",0,2,"If you’re interested in discussing the many challenging career paths we have available, please sign up for an interview."
+571,10,0,"AT","0",0,2,"j We’ll be on Campus on January’ 28th and 29th."
+572,10,0,"AT","0",0,2,"Lynmt Detmoitd ColUg« Kecruiting Manager"
+573,10,0,"AT","0",0,2,"Appltmd Mmgnmtic»"
+574,10,0,"AT","0",0,2,"Corpormtion"
+575,10,0,"AT","0",0,2,"71 Robin Hill Road; Gohta, CA 9JU7 (9*5) 6S3-SW"
+576,10,0,"AT","0",0,3,"79<p BIG MAC"
+577,0,0,"NA","0",0,0,"■	wmmm vw w t"
+578,0,0,"NA","0",0,0,"I rtpm an W| Mic. LM"
+579,0,0,"NA","0",0,0,"IPWVM. flMM piWMN"
+580,10,0,"AT","0",0,3,"VZM untH Mw. 31,1986"
+581,10,0,"AT","0",0,3,"CMh valu« 1(20 •! 1 cant"
+582,10,0,"AT","0",0,3,"%"
+583,10,0,"AT","0",0,3,"IT^A I GOOD TIME I FORTHE I GREAT TASTE I"
+584,10,0,"AT","0",0,3,"I I"
+585,10,0,"AT","0",0,3,"Good only at | Foothill McDonalds S San Luis Obispo I"
+586,10,0,"AT","0",0,3,"FOOTHILL McDonalds ONLY J"
+587,10,0,"NA","0",0,0,"fV\"
+588,10,0,"AT","0",0,4,"Grand Opening"
+589,10,0,"AT","0",0,4,"OF"
+590,10,0,"AT","0",0,4,"Foothoj. Plaza cleanebs"
+591,10,0,"AT","0",0,4,"(NEXT DOOR TO THRIFTY DRUGS)"
+592,0,0,"NA","0",0,0,"■ ~"" ■■■"""" ■■■"" ■ ' """
+593,10,0,"AT","0",0,4,"‘WE’LL CLEAN ANYTHINQ EXCEPT YOUR FISH, AND ALTER ANYTHING BUT YOUR CAT”	'	"""
+594,10,0,"AT","0",0,4,"roOOHlCC fCAZA CCEWtXS IS NOW OPEN 30 OFFE» VOU OHt TINZSa IN SERVICE AND QUAOCIÌI WORK. COCXCCi OWNED AND ÔPEXOED. WaH yEARS OF EXPERIENCE IN CHE DRU CCEANINQ riECD"
+595,10,0,"AT","0",0,4,"763BFOOTHIUBLVD."
+596,10,0,"AT","0",0,4,"544-114S"
+597,0,0,"NA","0",0,0,"« Ê*"
+598,11,0,"PI","0",0,0,"Tiwdoy.Jan. 14.1966"
+599,11,0,"PI","0",0,0,"11"
+600,11,0,"OT","0",0,0,"ama MMOfloTOOAY IMI Afeli 238 OST SPEAKBI \MuW Heneen AOo. liVP All Welcome, tee Bfeeker Fil. 17,8pm"
+601,11,0,"OT","0",0,0,"WEEKLY MOHmiEMWSOe NITESI IF interested call OAV» S414028."
+602,11,0,"OT","0",0,0,"PAW.E ITALIANO?"
+603,11,0,"OT","0",0,0,"Cal PoN Crew Wente You! Pereone weighing i"
+604,11,0,"OT","0",0,0,"Cel Poly Wine toele^ Meete Thure"
+605,11,0,"OT","0",0,0,"1/16 at 11am In 8cL82 A4. FUm on . CHAMPAGNE to be ehown."
+606,11,0,"OT","0",0,0,"0PM A ITS BIGGER AND BETTERII More toura, apeekara A a aid trip for thia quarter. Coma join uat Tuaedey Jan. IS 11O0 In Architecture Rm. 104"
+607,11,0,"OT","0",0,0,"GAY A LESBIAN STUDENT UNION MMtIng Jan. IS SolenoeJMI 7d0 elac-tlona. FIMi: The Tknaa ol Harvey Milk. New membera weloome."
+608,11,0,"OT","0",0,0,"GIRLS"
+609,11,0,"OT","0",0,0,"ENJOY DANCmOTTHlN TRY OUT FOR THE CAL POLY DANCE TEAM. MEETING"
+610,11,0,"OT","0",0,0,"JAN. 16 ram mustang lounge."
+611,11,0,"OT","0",0,0,"OH CLÜËIlfEETÎNÛ"
+612,11,0,"OT","0",0,0,"Join ua fora funJIlleO a GueelaBaaliar,i Jan 15. Wad. 7:00 PM in AE133."
+613,11,0,"OT","0",0,0,"“PÖL7ÜÖÄTS—"
+614,11,0,"OT","0",0,0,"Poly Qoata 4Awd okib maaMng Wad. Jen. 15 at 7:30 In ahop 3 Ag Eng Bldg. AH new mambera weloome."
+615,11,0,"OT","0",0,0,"POWER ENGINEERINQ SOCIETY Wawlll have our flret meeting ol thequarter Jan 14,CSC447at 700 come and aee whet we are abouti"
+616,11,0,"OT","0",0,0,"PUBLIC REULTIONB STUDENT SOCIETY OF AMS1ICA New club lor ell mejore"
+617,11,0,"OT","0",0,0,"lat meeting Jen. 23,11 am, UU220 Doni leave o^lgyrlthoot joining"
+618,11,0,"OT","0",0,0,"Society of Flight Toot Englneem mooting: 8O0pm M6BA, Flohor 3N Winter Quarter ActlvHleo, FHm."
+619,11,0,"OT","0",0,0,"TAU beta W"
+620,11,0,"OT","0",0,0,"ActlvHleo Meeting TuooBay Jen 14 6pm, Sclenoe Nonti Room as"
+621,11,0,"OT","0",0,0,"TRAVCLCLUB"
+622,11,0,"OT","0",0,0,"JOIN INOURISTMMnNQTHIBaTR AFTER, LEARN TRAVEUNQ aiROPE. SLIDES, SNACKS. TOOAYtBPMUUaD"
+623,11,0,"OT","0",0,0,"Undergrad Bue. Law Aaeoa meete Tuoe-déyJan. 14 In BA A E 314 at BPM. AH malora welcome."
+624,11,0,"OT","0",0,0,"WATERSKICljÜB"
+625,11,0,"OT","0",0,0,"Firat meeting Winter querter Tuee. 1-14 In Sci E-47 at 7M«. Pleno lor trlpo. party,"
+626,11,0,"OT","0",0,0,"and banquet"
+627,11,0,"OT","0",0,0,"CRAFT CLABBBtGNAiP MONT wM be Wed. Jan. IS at 7pm Hi the U.U."
+628,11,0,"OT","0",0,0,"CRAFT CENTER. Photo. BHkacraanlng Bike repair and more. Como orw A aH."
+629,11,0,"OT","0",0,0,"TRENCH"
+630,11,0,"OT","0",0,0,"ConveraaHon In the MutttouNural Center Mondeya, 4PM Venae Nombraux.______"
+631,11,0,"OT","0",0,0,"Loat Tlaaot watoh during IktaN weak. Haa brown apottod lealhor band. Gift-pieaae ratum. CaM S4t-013B or leave at UUunfodeok."
+632,11,0,"OT","0",0,0,"NEW YEARS RE80UnX>N Send tOK Run Sat Jen IS Look tor deteIN MthoUU.M-Ftt-1"
+633,11,0,"OT","0",0,0,"OVERCOhNNQ PROCRASTBtATION JAN 16lh 10-12 NOON CHASE HAU S4B-1SBB"
+634,11,0,"OT","0",0,0,"We'ra orwUng an lUHan diacuaelon In the MumcuHural Ctr. Come by UU 217D"
+635,11,0,"OT","0",0,0,"I app. 120 Rw needed to"
+636,11,0,"OT","0",0,0,"coxawabi racing boote. No exp. necee-sary. Meeting tm., Jan 1SUU220. For more Info, cat JuHO H. 541-42B7"
+637,11,0,"OT","0",0,0,"endaignup."
+638,11,0,"OT","0",0,0,"TIME MANAGEMENT FOR STUDENTS WITH LITTLE OR NO TIME TO WASTE JAN 14th TH 3:15 430PM UNIVERSITY UNION 546-1286."
+639,11,0,"OT","0",0,0,"TN4E MANAGEMENT FOR STUDENTS WITH LITTLE OR NO TIME TO WASTE JAN IS. 3:16430PM UNIVERSITY UNION 546-12S6"
+640,11,0,"OT","0",0,0,"WIN! WIN! WIN!"
+641,11,0,"OT","0",0,0,"Win a Honda and moral From thè Poly Pangulna Motorcycle Club. Stay tuned for detalla hera A UU."
+642,11,0,"OT","0",0,0,"wm A FREE OTRE. REOISTfUTION (or caah equivj Buy Si raffio tkt on Tuee A Thura In UU or fri of library thru 2/6 Spone, by ASME"
+643,11,0,"OT","0",0,0,"Women’s H20 Polo"
+644,11,0,"OT","0",0,0,"lat meeting Jan 1S, S30-PE rm 216 come or cali: S41-091B or 54S4)202."
+645,11,0,"OT","0",0,0,"ASSERTIVENESS TRAINING MONOAY834PM STRESS MANAGEMENT MONDAYS 36 PM JESPERSEN HALL S46-2S11"
+646,11,0,"OT","0",0,0,"BIOFEEDBACK FOR STRESS MOT TUESDAYS 130-330 PM FORQIVINO YOUR PARENTS TUESDAYS 36 PM JESPERSEN HAU S462S11"
+647,11,0,"OT","0",0,0,"COPING WITH BULIMIA THURSDAYS 161130 AM PROCRASTINATION THURSDAYS 34 pm RE-ENTRY STUDENTS BROWN BAG LUNCH THURSDAYS 11-12 NOON JESPERSEN HALL5462S11"
+648,11,0,"OT","0",0,0,"DEFEATING SELF-DEFEATING BEHAVIORS ON WEDNESDAYS 36 PM INCEST: A SUPPORT GROUP FOR WOMEN ON WEDNESDAYS 24 PM JESPERSEN HALLS462S11"
+649,11,0,"OT","0",0,0,"DONALD A DAPHNE"
+650,11,0,"OT","0",0,0,"CONGRATULATIONS: I am ao vary happy for the two of you."
+651,11,0,"OT","0",0,0,"Wlahing you eH the beet Mark"
+652,11,0,"OT","0",0,0,"What on earth la a Knechtia??? Find out Jan. 21-34. Poly UUPIaxe."
+653,11,0,"OT","0",0,0,"LITTLE SISTER RUSH I"
+654,11,0,"OT","0",0,0,"JAN. 14th - “MAGNUM PARTY"" - 6PM VETS HALL - GO HAWAIIANI"
+655,11,0,"OT","0",0,0,"JAN. 10th - “PINK A BLUE PARTY"" 6 pm VETS HALL"
+656,11,0,"OT","0",0,0,"JAN. 17th - ""LADIES NtOffT - 730 PM"
+657,11,0,"OT","0",0,0,"Semi Formal Dry Party"
+658,11,0,"OT","0",0,0,"For mom Info call S466243."
+659,11,0,"OT","0",0,0,"DONT MISS AGR LIL’ SIS RUSH"
+660,11,0,"OT","0",0,0,"AGR HOUSE 1/14-1S 730 PM. For Info caNS436S27"
+661,11,0,"OT","0",0,0,"Football Champions"
+662,11,0,"OT","0",0,0,". Cortgrelulallofw to the Brotham A Little"
+663,11,0,"OT","0",0,0,"“dèlta SIGMA PHI"
+664,11,0,"OT","0",0,0,"on their undefaetadfootbeH eeeeonel"
+665,11,0,"OT","0",0,0,"t"
+666,11,0,"OT","0",0,0,"Get Inspired Gamma Phi Beta Omicronsll"
+667,11,0,"OT","0",0,0,"A two6ay Educettonal Forum by ASl. Speaker'a Forum A Phyalclane for Soolel Reaponalblllty. Seven apeekere lncludli«o Beniamin Spock."
+668,11,0,"OT","0",0,0,"FRI. JAN 17 730PM A SAT JAN 16 6:30 AM - 1230 PM. Tickets S4.S0 students 5 public at UU ticket office, Boo Boo's A Cheap Thrills."
+669,11,0,"OT","0",0,0,"OPEN HOUSE"
+670,11,0,"OT","0",0,0,"to kick off MuHicuHural Month. Celebrate the MCC's 4th Anniv. and Or. King Jr's birthday Wed. Jan. IS. »4pm UU 217D Come enjoy ethnic food A coffee."
+671,11,0,"OT","0",0,0,"LOBT^EYRING Mon AM 1/6-vlolnRy: Psiklrtg lot H4, Bookalom and English BWg."
+672,11,0,"OT","0",0,0,"6*34463(after S30p.mJ"
+673,11,0,"OT","0",0,0,"WANTEOt OVERWEIGHT f Conoamed about good health and nutmion. Ifearlouaartd determirted.oall for guaranteed roauHa.CHm4Bl-1l3A"
+674,11,0,"OT","0",0,0,"COMPUTER TERMINAL WITH 300 BAUD MODEM FOR RENT. $78 PER QUARTER. CAUS266671."
+675,11,0,"OT","0",0,0,"A” PAPERS oome horn Unde Stack. Proleaelortal Typing Bervtoe S41-3BB3."
+676,11,0,"OT","0",0,0,"COMFUT-rr 544643» High qusHty Word Proceaaing, term papers, and profeesionel rseumaa with top qusMty laser printing. We know now to make you look good In prInL"
+677,11,0,"OT","0",0,0,"ARB YOU"
+678,11,0,"OT","0",0,0,"IN"
+679,11,0,"OT","0",0,0,"LTURAL"
+680,11,0,"OT","0",0,0,"AFFANW AND FNOORAMMINO PON CAL POLY? WORK STUDY POBITtONB IN THE MULTICULTURAL CENTER C06t-TACT STEVE IN UUt17O,X140A."
+681,11,0,"OT","0",0,0,"Iitauienoeofflce4>arttlmeto fit olaae seheduls. Rseponsibte soM-molivalod person wHIIng to learn. CeHS416370 for sppoIntmenL"
+682,11,0,"OT","0",0,0,"Don't be left out hi the ooM this wlntsr. CeH Susie fortyping. S3B7B05."
+683,11,0,"OT","0",0,0,"PROTYPE S4B607B WordPro Bseelne. Feet servloe, oorteol spelling, leeumee. Senior"
+684,11,0,"OT","0",0,0,"R A R WORDPROCEBSINa AND TYPINQ (NONA); MBat; BantBpm; S446SB1"
+685,11,0,"OT","0",0,0,"RESUBin OOMPOSBOfBOITEO TERM PAP«W TYPED THE WORD ENGINEER B2M70B"
+686,11,0,"OT","0",0,0,"BLACK AM—CA Photoseeay Me weak"
+687,11,0,"OT","0",0,0,"In the UnN. Urdon. Sponaoreo by Ihe MuHIcultufal Center."
+688,11,0,"OT","0",0,0,"Chlldoara needed lor 8 yr. old boy. Big sleisr typo wanted. Need storlee, take waSis, Nkos to have fun. Poealbty aa-change aervica for room for rant S43-saw or 8443112. Aek lor Rosemary."
+689,11,0,"OT","0",0,0,"—$K1 AUSTRIA INNSBRUCK"
+690,11,0,"OT","0",0,0,"Maks It hap^ this Spring braaki A 10 day voyage, 7 da •Ml • tlop In Including ah fere, 7 nighia hi the Union Hotel breekleele end dhineie. New gwapi 16 aaanbigs. For mom mio oaH Marto at Carolilo OuHIvom Tamel Oentm hi the Unkromily Union. 54B6B12."
+691,11,0,"OT","0",0,0,"LOOKING FOR A CREATIVE JOB? The UU Cmll Center neoda Cratt Instr-uctom. Apply now at the ASl Buahiaes office hi the UU."
+692,11,0,"OT","0",0,0,"$106360 Weokly/Up Mailing Chcularsl. No quotasi Slncwrely Interested ntsh aelf addrseaed stamped envelope: Succaas, PO Box 470CF8. Woodstock II600BA"
+693,11,0,"OT","0",0,0,"APPLE COMPUTER SYSTEM SPECIAL PURCHASE OF MAC 812K WITH IMAGEWRITERII PRINTER $1$B6"
+694,11,0,"OT","0",0,0,"EL CORRAL BOOKSTORE"
+695,11,0,"OT","0",0,0,"cohiFUTER Terminal FOR bale."
+696,11,0,"OT","0",0,0,"TELEVIOEO 910 torminal and 300 I Hayes Bmartmodom. $460 S3B6B71."
+697,11,0,"OT","0",0,0,"Can"
+698,11,0,"OT","0",0,0,"refrigerator for sale Small sM^ perfect for dorms. $78644 6B46"
+699,11,0,"OT","0",0,0,"Bkl brwts. Mane. Caber, aim 12. Xhii oond., near new $46 S367417."
+700,11,0,"OT","0",0,0,"Sola. Orlentni prtnt Zip cushions 102"" long. Uke new 7726211. $200 OBO."
+701,11,0,"OT","0",0,0,"STAR GB4INI-1B PRINTER USED DOT-MATRIX PRINTER, 120 CPBjpRAFT), 30 CP6(NLQA WIDE CAf^GE $166 CALL KARYN OR TOM AT 8446664 (EVENINGS)."
+702,11,0,"OT","0",0,0,"HONDA ASCOT 800 oaatvtrade? Also, WATERBED. 6416021 BSTalksI"
+703,11,0,"OT","0",0,0,"HONDA CL48a Qrsel bate for SLO use. $800 original mHao. 'TSbul vary clean, never thrashed. Extras 800118446610"
+704,11,0,"OT","0",0,0,"$2 Yamaha Beoe 780 7000 mNae, greet corrdttlon. Extras $1700, Lsave mseiegs at 7733482"
+705,11,0,"OT","0",0,0,"BMSlIACiNfr GItANB lUI TUBING CAMPY, ETC. ONLY $B2B 77306»."
+706,11,0,"OT","0",0,0,"GIRLS 10 SPEED BIKE FOR BALE. Only"
+707,11,0,"OT","0",0,0,"hAM UMd	AOMfItlOA. CaM"
+708,11,0,"OT","0",0,0,"JuBeS416246."
+709,11,0,"OT","0",0,0,"MEN'S 21"" mefrikl TEN SPEED Brand New. Ca$ Sue 844-7741"
+710,11,0,"OT","0",0,0,"21"" TrakSSOwIM ShimanoSOa Riden leas than SO mSae. 6466418"
+711,11,0,"OT","0",0,0,"CHEVY NOVA 1670 RUNS WEU $480 84662B7 BICYCLE INCLUOB}"
+712,11,0,"OT","0",0,0,"'76 Corolla LIfIbaok Gd oond. nme $1280 8436686. Mark svWwknd."
+713,11,0,"OT","0",0,0,"ÄU"
+714,11,0,"OT","0",0,0,"Fern, to sham rm In apt 8 min. to Poly. A beaut at $17Smw. i utH. Don’t mies 8466367 or 8410181"
+715,11,0,"OT","0",0,0,"Chartge your Mo: Room for rard In custom furnished home on 2000 aores of foreeted Mud. Only $1» monthlyl Can Steve only at »30 am 843667$ DO IT NOWICtoee to campus."
+716,11,0,"OT","0",0,0,"CHEy CHEAP CHEAP CHEAP cheap' FemeM nonemoher rteeded to ahem room"
+717,11,0,"OT","0",0,0,"■I i^l HW MMy WQ WQBBHIQ. viMMIO"
+718,11,0,"OT","0",0,0,"CaS84S07Sl"
+719,11,0,"OT","0",0,0,"Come up and taa ma aomatlma and bring a copy of Mustang Dallÿr’"
+720,11,0,"OT","0",0,0,"Fare, needed to sham Ig. rni. In nice oondavreMiy mieto 1 mom 84367SS."
+721,11,0,"OT","0",0,0,"FemeM toommaM for shared room. Patio, mieiowavo, nrepMco, sauna, pool avali-abM now. does to Poly. 841-6419 or 84461» leave message."
+722,11,0,"OT","0",0,0,"FEMALE ROOMMATE NEEDED. 1 BLOCK FROM CAMPUS. CAU 5461602."
+723,11,0,"OT","0",0,0,"FoinaM toommaM nosdsd to sham room In Laguna Lake condo; $160/mo.. all utllllMs paid washer/dryer, Jacual. Call 5416603"
+724,11,0,"OT","0",0,0,"FEMALE RMMTE WANTED OWN RM $280/SHARE $178 IN HOUSE 1 Ml FROM POLY. N8MKR ONLY. 1/4 UTIL. PATTI^ ROBIN. LYNNE 84160»._________"
+725,11,0,"OT","0",0,0,"FemeM roommsM needed lo shars rm. witjt fotitsM In co«d apt., to Inquho: Call Lynn at 5446601."
+726,11,0,"OT","0",0,0,"FML ROOMMATE NEEDED ASAP CLOSE TO POLY, MICROWAVE, POOL, ETC. FUN ROOMIE8 $210 TO SHARE S4137W"
+727,11,0,"OT","0",0,0,"MALE ROOMMATE WANTED MURRAY STREET STATION. CLOSE TO SCHOOL, HEATED POOL, LAUNDRY ROOM, HBO, SHARE ONE BEDROOM FULLY FURNISHED $178 MONTH CALL KEVIN 844-7M1."
+728,11,0,"OT","00",0,0,"MALE ROOMMATE nsoded, sham room In oondo wM, dMhwashar, micro, Jacuzzi, llrepMoe. call 8416412"
+729,11,0,"OT","0",0,0,"Matum but funlovlno woman wanted to sham large house own room $275 6 1/3 util. 6 dep. Can 84132» eves._______"
+730,11,0,"OT","0",0,0,"Own Rm In 4 bed house must be reaponsMM, PeM neog, 2» month First Last ittdepoeN, M or F. 3miM from Pewy, 644 »46 aak tor Mark"
+731,11,0,"OT","0",0,0,"PrhrsM room tor Mm. $22S/mo. Includos ulUltleo. Jacuzzi, pooL Mundry lac. Call Ruth8436»1."
+732,11,0,"OT","0",0,0,"ROOM FOR RENT	>"
+733,11,0,"OT","0",0,0,"Beautltul houea. very close to Poly. Waeh/dry, micro, garage, car port, sun patio, will taiko 1 or 2 In room. $28mno. 5443791"
+734,11,0,"OT","0",0,0,"ROOMMATE NEEDED (WINTER QUARTER ONLY)"
+735,11,0,"OT","0",0,0,"SHARE ROOM IN TWOSEDROOM APFT. CLOSE TO POLY GREAT GUYS $140/MO94366»"
+736,11,0,"OT","0",0,0,"ROOMMATE NEEDED - CLEAN DUPLEX BEHIND FRENCH HOI GREAT VIEW PLUS FREE PARKSIG. CALL 6466702"
+737,11,0,"OT","0",0,0,"WALK TO POLY 2 needed to sham room w/evm baBi 1 bl from schoeL Stop by 174 Carpenter or 8436871________"
+738,11,0,"OT","0",0,0,"2 bdrm,l be oondo, no pets. One parson to sham rent 6 udUtMa. $301 AvaNabM now, 6» Chotro, Call Craig, 9466411 aftarSPM."
+739,11,0,"OT","0",0,0,"OWN ROOM LRG LAGUNA LK HOUSE $200640 64336» DUNA._____________"
+740,11,0,"OT","0",0,0,"OWN room cloae te Poly. Houaa wNh-S housemates. AvaHabM now. CaM 944 0316 or 54379» $1$6hno."
+741,11,0,"OT","0",0,0,"PMessnthome2br2ba.ftrepMce.grg. lo maint Mndacape. No paM. 1467 Tth St. Beywood Park. $6» 84177»"
+742,11,0,"OT","0",0,0,"PrIvaM room M a 3 bdrm house, M/F nonamokar, garage, avaN. now 10 min. lo Poly, $294hno 6 last 6 dap. 8446611"
+743,11,0,"OT","0",0,0,"Buying e heuee?"
+744,11,0,"OT","0",0,0,"For a Dee »t of sM affordabM houses and oondoe ter saM M SLO, cali Btovo NeMon, FIB Me. 8436370."
+745,11,0,"OT","0",0,0,"NO ROOMMATE: 966» Cal Jack 64"
+746,11,0,"OT","0",0,0,"for SaleONLY"
+747,0,0,"B","0",0,0,
+748,11,0,"OT","0",0,0,"awpoN"
+749,0,0,"NA","0",0,0,"y"
+750,11,0,"AT","0",0,1,"HAPPY HOUR"
+751,11,0,"AT","0",0,1,"3pfn-6pro"
+752,11,0,"AT","0",0,1,"LÀRGE 1 ITEM PIZZA"
+753,11,0,"AT","0",0,1,"PITCHER OF BEER"
+754,11,0,"AT","0",0,1,"$250"
+755,11,0,"AT","0",0,1,"544-7330"
+756,11,0,"AT","0",0,1,"FOOTHILL*"
+757,11,0,"AT","0",0,0,"SANTA"
+758,0,0,"B","0",0,0,
+759,0,0,"B","0",0,0,
+760,0,0,"NA","0",0,0,"-Hi"
+761,0,0,"NA","0",0,0,"«ir"
+762,0,0,"NA","0",0,0,"12"
+763,0,0,"NA","0",0,0,"j-"
+764,12,0,"PI","0",0,0,"Tueedoy.Jan. 14,4966MMliC»gQQl)("
+765,0,0,"B","0",0,0,
+766,0,0,"B","0",0,0,
+767,0,0,"B","0",0,0,
+768,12,12,"HL","0",0,0,"American music: a hit in Mexico"
+769,12,12,"TXT","1",0,0,"MONTERREY, Mexico (AP) — A crowd of young musk fans at the phish video bar, Heaven, watches Bruce Springsteen stmt his stuff with the hit song, ""Bom intheU.S.A.”"
+770,12,12,"TXT","2",0,0,"' Formally attired waiters serve ^drinks as Madonna, Phil Collins, Sade, Rod Stewart, Santana, Stevie Wonder and the Eurythmics follow Springsteen on a video screen. It's nonstop rock. The crowd loves it, but not everyone understands the lyrics."
+771,12,12,"TXT","3",0,0,"' American music is popular throughout Mexico, and is even more so in Monterrey, a 214-hour drive from, the Texas border at Laredo."
+772,12,12,"TXT","4",0,0,"Monterrey music buffs can view three musk video programs"
+773,12,12,"TXT","4",0,0,"a day that offer the latest American and British releases. Those with satellite antennas in the wealthy suburbs get nonstop MTV. Radio listeners have an assortment of English-language roek and record stares are ftill of the inpst popular releases."
+774,12,12,"TXT","5",0,0,"We’re very close to the United Sutes so the influence is in-evitabk, said Edgardo Resen-diz, a local television cuhural commenutor. ""These influenees are giving us a new musk culture. We have to learn to live within this cultural mix."
+775,12,12,"TXT","6",0,0,"Yet, the bombardment of American musk, which began in the 1960s, has not eclipsed the popularity of most styles of musk from Mexico and otho"
+776,12,12,"TXT","6",0,0,"countries."
+777,12,12,"TXT","7",0,0,"Sergeant Peppers, a Monterrey discotheque, and dozens of other discos in cities near the U.S. border offer something for every musk lover. Dtec Jockeys spin lively ""salsa"" or ""cumbia"" melt^ies and patrons switch easily from rock to the Latin dances they learned as children."
+778,12,12,"TXT","8",0,0,"The popular national TV program, ""Siempre cn Domingo,"" features Latin entertainers singing Uve on Sundays for 4)4 hours."
+779,12,12,"TXT","9",0,0,"Mexicans were listening to the Spanish romantk singer Julio Iglesias long before duets with WilUe Nelson and Diana Rou helped launch his career in the United Slates."
+780,0,0,"NA","0",0,0,"'■wiwmlli Is—H-"
+781,12,1,"HL",,0,0,"PLANT"
+782,12,0,"NA","0",0,0,"! ! HI |l I"
+783,12,0,"NA","0",0,0,"Frampatsl"
+784,12,1,"TXT","6",0,0,"each unit of gas than a conventional system."
+785,12,1,"TXT","7",0,0,"Sevend companies have made proposals for the plant in the last three years, but the recent recession and the volatik natural gas and oil price situation have in-crestsed the ' risk of building alternative energy facilities that require large capital outlays. The state decided not to flnance the plant itself, Gerard said, because it would tie up too much of the sute’s resources. With a private firm, the state invests only land."
+786,12,1,"TXT","8",0,0,"The builder will own and operate the facility and sell steam to the university and power to PO R E. Part of the income from electricity sales and the profits from the lease of land to the bulkier will be split between the state and the university to be used for energy related projects."
+787,12,1,"TXT","9",0,0,"The advantage to the university is primarily an aconomk one. Ocirard said. An estimated $5 miUioo will be generated over the first five yesus of operation. The university, which uses approximately five megawatts of clectrkity each year, will continue to buy power directly from PO R E and will purchase steam fropi the new faidlity."
+788,12,1,"TXT","10",0,0,"Under the current proposal, steam from the natural gas fueled plant would be piped nearly two miles to the current steam plant across from the Health"
+789,12,1,"TXT","10",0,0,"Center, The 4,000 pounds of steam produced each hour would then enter the 36,000 feet of underground pipe that heat and cool the major buildings on cam-pus._"
+790,12,1,"TXT","11",0,0,"The distance from the plant to the campus core required a. redesigning of the delivery pipe to increase the efficiency of the system. ""There are some losses associated with the distance."" Gerard said, ""but it is not a"
+791,12,1,"BQT","0",0,0,"* ... within the next threife months we will know if it*s a go or no-go situation.*"
+792,12,1,"BQA","0",0,0,"— Doug Gerard"
+793,12,1,"TXT","11",0,0,"signifkant item."""
+794,12,1,"TXT","12",0,0,"The present steam plam. whkh is showing signs of old age, has nof been maintained in top condition in antidpation of the new facility being built. Chief engineer for Cal Poly, Robert Pahlow,, said that rust is starting to detwriorata some pumps and tanks ahhough “then is probably a lot of good yean kfl in the boilers."""
+795,12,1,"TXT","13",0,0,"If a CO gensratioa facility is' buflt, the machinery and welding programs would be rdooated in the old steam plant."
+796,12,0,"AT","0",0,1,"Move Ahead With the HP-IOC"
+797,0,0,"B","0",0,0,
+798,12,0,"AT","0",0,1,"HP-IOC ..$39.95"
+799,12,0,"AT","0",0,1,"HewIctt-PackaitTg lowest-priced programmable ever!"
+800,12,0,"AT","0",0,1,"The new HP-IOC scientific calculator can make problem solving easier with:"
+801,12,0,"AT","0",0,1,"•	79 Program Lines, Conditional BrarKhing"
+802,12,0,"AT","0",0,1,"•	Built-in Trigonometries and , Statistics Functions"
+803,12,0,"AT","0",0,1,"•	RPN Logic, Merged Keycodes"
+804,12,0,"AT","0",0,1,"•	Continuous Memory"
+805,12,0,"AT","0",0,1,"•	Liquid-Crystal Display"
+806,0,0,"NA","0",0,0,"L J vjDMQ"
+807,12,0,"AT","0",0,1,"Bcokstote"
+808,,,,,,,
+809,,,,,,,
+810,,,,,,,
+811,,,,,,,
+812,,,,,,,
+813,,,,,,,
+814,,,,,,,
+815,,,,,,,
+816,,,,,,,
+817,,,,,,,
+818,,,,,,,
+819,,,,,,,
+820,,,,,,,
+821,,,,,,,
+822,,,,,,,
+823,,,,,,,
+824,,,,,,,
+825,,,,,,,
+826,,,,,,,
+827,,,,,,,
+828,,,,,,,
+829,,,,,,,
+830,,,,,,,
+831,,,,,,,
+832,,,,,,,
+833,,,,,,,
+834,,,,,,,
+835,,,,,,,
+836,,,,,,,
+837,,,,,,,
+838,,,,,,,
+839,,,,,,,
+840,,,,,,,
+841,,,,,,,
+842,,,,,,,
+843,,,,,,,
+844,,,,,,,
+845,,,,,,,
+846,,,,,,,
+847,,,,,,,
+848,,,,,,,
+849,,,,,,,
+850,,,,,,,
+851,,,,,,,
+852,,,,,,,
+853,,,,,,,
+854,,,,,,,
+855,,,,,,,
+856,,,,,,,
+857,,,,,,,
+858,,,,,,,
+859,,,,,,,
+860,,,,,,,
+861,,,,,,,
+862,,,,,,,
+863,,,,,,,
+864,,,,,,,
+865,,,,,,,
+866,,,,,,,
+867,,,,,,,
+868,,,,,,,
+869,,,,,,,
+870,,,,,,,
+871,,,,,,,
+872,,,,,,,
+873,,,,,,,
+874,,,,,,,
+875,,,,,,,
+876,,,,,,,
+877,,,,,,,
+878,,,,,,,
+879,,,,,,,
+880,,,,,,,
+881,,,,,,,
+882,,,,,,,
+883,,,,,,,
+884,,,,,,,
+885,,,,,,,
+886,,,,,,,
+887,,,,,,,
+888,,,,,,,
+889,,,,,,,
+890,,,,,,,
+891,,,,,,,
+892,,,,,,,
+893,,,,,,,
+894,,,,,,,
+895,,,,,,,
+896,,,,,,,
+897,,,,,,,
+898,,,,,,,
+899,,,,,,,
+900,,,,,,,
+901,,,,,,,
+902,,,,,,,
+903,,,,,,,
+904,,,,,,,
+905,,,,,,,
+906,,,,,,,
+907,,,,,,,
+908,,,,,,,
+909,,,,,,,
+910,,,,,,,
+911,,,,,,,
+912,,,,,,,
+913,,,,,,,
+914,,,,,,,
+915,,,,,,,
+916,,,,,,,
+917,,,,,,,
+918,,,,,,,
+919,,,,,,,
+920,,,,,,,
+921,,,,,,,
+922,,,,,,,
+923,,,,,,,
+924,,,,,,,
+925,,,,,,,
+926,,,,,,,
+927,,,,,,,
+928,,,,,,,
+929,,,,,,,
+930,,,,,,,
+931,,,,,,,
+932,,,,,,,
+933,,,,,,,
+934,,,,,,,
+935,,,,,,,
+936,,,,,,,
+937,,,,,,,
+938,,,,,,,
+939,,,,,,,
+940,,,,,,,
+941,,,,,,,
+942,,,,,,,
+943,,,,,,,
+944,,,,,,,
+945,,,,,,,
+946,,,,,,,
+947,,,,,,,
+948,,,,,,,
+949,,,,,,,
+950,,,,,,,
+951,,,,,,,
+952,,,,,,,
+953,,,,,,,
+954,,,,,,,
+955,,,,,,,
+956,,,,,,,
+957,,,,,,,
+958,,,,,,,
+959,,,,,,,
+960,,,,,,,
+961,,,,,,,
+962,,,,,,,
+963,,,,,,,
+964,,,,,,,
+965,,,,,,,
+966,,,,,,,
+967,,,,,,,
+968,,,,,,,
+969,,,,,,,
+970,,,,,,,
+971,,,,,,,
+972,,,,,,,
+973,,,,,,,
+974,,,,,,,
+975,,,,,,,
+976,,,,,,,
+977,,,,,,,
+978,,,,,,,
+979,,,,,,,
+980,,,,,,,
+981,,,,,,,
+982,,,,,,,
+983,,,,,,,
+984,,,,,,,
+985,,,,,,,
+986,,,,,,,
+987,,,,,,,
+988,,,,,,,
+989,,,,,,,
+990,,,,,,,
+991,,,,,,,
+992,,,,,,,
+993,,,,,,,
+994,,,,,,,
+995,,,,,,,
+996,,,,,,,
+997,,,,,,,
+998,,,,,,,
+999,,,,,,,
+1000,,,,,,,
+1001,,,,,,,
+1002,,,,,,,
+1003,,,,,,,
+1004,,,,,,,
+1005,,,,,,,
+1006,,,,,,,
+1007,,,,,,,
+1008,,,,,,,
+1009,,,,,,,
+1010,,,,,,,
+1011,,,,,,,
+1012,,,,,,,
+1013,,,,,,,
+1014,,,,,,,
+1015,,,,,,,
+1016,,,,,,,
+1017,,,,,,,
+1018,,,,,,,
+1019,,,,,,,
+1020,,,,,,,
+1021,,,,,,,
+1022,,,,,,,
+1023,,,,,,,
+1024,,,,,,,
+1025,,,,,,,
+1026,,,,,,,
+1027,,,,,,,
+1028,,,,,,,
+1029,,,,,,,
+1030,,,,,,,
+1031,,,,,,,
+1032,,,,,,,
+1033,,,,,,,
+1034,,,,,,,
+1035,,,,,,,
+1036,,,,,,,
+1037,,,,,,,
+1038,,,,,,,
+1039,,,,,,,
+1040,,,,,,,
+1041,,,,,,,
+1042,,,,,,,
+1043,,,,,,,
+1044,,,,,,,
+1045,,,,,,,
+1046,,,,,,,
+1047,,,,,,,
+1048,,,,,,,
+1049,,,,,,,
+1050,,,,,,,
+1051,,,,,,,
+1052,,,,,,,
+1053,,,,,,,
+1054,,,,,,,
+1055,,,,,,,
+1056,,,,,,,
+1057,,,,,,,
+1058,,,,,,,
+1059,,,,,,,
+1060,,,,,,,
+1061,,,,,,,
+1062,,,,,,,
+1063,,,,,,,
+1064,,,,,,,
+1065,,,,,,,
+1066,,,,,,,
+1067,,,,,,,
+1068,,,,,,,
+1069,,,,,,,
+1070,,,,,,,
+1071,,,,,,,
+1072,,,,,,,
+1073,,,,,,,
+1074,,,,,,,
+1075,,,,,,,
+1076,,,,,,,
+1077,,,,,,,
+1078,,,,,,,
+1079,,,,,,,
+1080,,,,,,,
+1081,,,,,,,
+1082,,,,,,,
+1083,,,,,,,
+1084,,,,,,,
+1085,,,,,,,
+1086,,,,,,,
+1087,,,,,,,
+1088,,,,,,,
+1089,,,,,,,
+1090,,,,,,,
+1091,,,,,,,
+1092,,,,,,,
+1093,,,,,,,
+1094,,,,,,,
+1095,,,,,,,
+1096,,,,,,,
+1097,,,,,,,
+1098,,,,,,,
+1099,,,,,,,
+1100,,,,,,,
+1101,,,,,,,
+1102,,,,,,,
+1103,,,,,,,
+1104,,,,,,,
+1105,,,,,,,
+1106,,,,,,,
+1107,,,,,,,
+1108,,,,,,,
+1109,,,,,,,
+1110,,,,,,,
+1111,,,,,,,
+1112,,,,,,,
+1113,,,,,,,
+1114,,,,,,,
+1115,,,,,,,
+1116,,,,,,,
+1117,,,,,,,
+1118,,,,,,,
+1119,,,,,,,
+1120,,,,,,,
+1121,,,,,,,
+1122,,,,,,,
+1123,,,,,,,
+1124,,,,,,,
+1125,,,,,,,
+1126,,,,,,,
+1127,,,,,,,
+1128,,,,,,,
+1129,,,,,,,
+1130,,,,,,,
+1131,,,,,,,
+1132,,,,,,,
+1133,,,,,,,
+1134,,,,,,,
+1135,,,,,,,
+1136,,,,,,,
+1137,,,,,,,
+1138,,,,,,,
+1139,,,,,,,
+1140,,,,,,,
+1141,,,,,,,
+1142,,,,,,,
+1143,,,,,,,
+1144,,,,,,,
+1145,,,,,,,
+1146,,,,,,,
+1147,,,,,,,
+1148,,,,,,,
+1149,,,,,,,
+1150,,,,,,,
+1151,,,,,,,
+1152,,,,,,,
+1153,,,,,,,
+1154,,,,,,,
+1155,,,,,,,
+1156,,,,,,,
+1157,,,,,,,
+1158,,,,,,,
+1159,,,,,,,
+1160,,,,,,,
+1161,,,,,,,
+1162,,,,,,,
+1163,,,,,,,
+1164,,,,,,,
+1165,,,,,,,
+1166,,,,,,,
+1167,,,,,,,
+1168,,,,,,,
+1169,,,,,,,
+1170,,,,,,,
+1171,,,,,,,
+1172,,,,,,,
+1173,,,,,,,
+1174,,,,,,,
+1175,,,,,,,
+1176,,,,,,,
+1177,,,,,,,
+1178,,,,,,,
+1179,,,,,,,
+1180,,,,,,,
+1181,,,,,,,
+1182,,,,,,,
+1183,,,,,,,
+1184,,,,,,,
+1185,,,,,,,
+1186,,,,,,,
+1187,,,,,,,
+1188,,,,,,,
+1189,,,,,,,
+1190,,,,,,,
+1191,,,,,,,
+1192,,,,,,,
+1193,,,,,,,
+1194,,,,,,,
+1195,,,,,,,
+1196,,,,,,,
+1197,,,,,,,
+1198,,,,,,,
+1199,,,,,,,
+1200,,,,,,,
