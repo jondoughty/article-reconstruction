@@ -37,7 +37,10 @@ def main():
         print("False Negatives:")
         print(actual[~actual.isin(matched)].dropna())
         print("\n")
-#        tag(issue)
+#    issue = pd.read_csv(path, header = 2, names = columns)
+    #TODO if ocr-aug option: "-o image1.tiff image2.tiff image3.tiff"
+    # then call ocrmerge.py and get back box data
+#    tag(issue)
 
 
 def tag(issue):

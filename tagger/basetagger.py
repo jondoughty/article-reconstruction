@@ -95,9 +95,9 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
     untagged issues with certain columns and tags set to np.nan.
     Owner: Nupur Garg
 
-    folder: str 
+    folder: str
         Folder name.
-    columns: list 
+    columns: list
         Columns to set to None.
     tags: list
         Function tags to keep.
@@ -202,7 +202,7 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
     if total_expected > 0 and total_actual > 0:
         recall = (total_expected - total_missing) / total_expected
         precision = (total_actual - total_extra) / total_actual
-        print("\recall \'%s\': %.3f" %(tag, recall))
+        print("\nrecall \'%s\': %.3f" %(tag, recall))
         print("precision \'%s\': %.3f\n" %(tag, precision))
 
 

@@ -1,0 +1,185 @@
+[2016-10-27 17:44:29,035][INFO ][node                     ] [Strong Guy] version[2.2.0], pid[6452], build[8ff36d1/2016-01-27T13:32:39Z]
+[2016-10-27 17:44:29,036][INFO ][node                     ] [Strong Guy] initializing ...
+[2016-10-27 17:44:29,425][INFO ][plugins                  ] [Strong Guy] modules [lang-expression, lang-groovy], plugins [], sites []
+[2016-10-27 17:44:29,453][INFO ][env                      ] [Strong Guy] using [1] data paths, mounts [[OS (C:)]], net usable_space [407.7gb], net total_space [466.1gb], spins? [unknown], types [NTFS]
+[2016-10-27 17:44:29,454][INFO ][env                      ] [Strong Guy] heap size [910.5mb], compressed ordinary object pointers [true]
+[2016-10-27 17:44:31,042][INFO ][node                     ] [Strong Guy] initialized
+[2016-10-27 17:44:31,044][INFO ][node                     ] [Strong Guy] starting ...
+[2016-10-27 17:44:31,257][INFO ][transport                ] [Strong Guy] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-27 17:44:31,264][INFO ][discovery                ] [Strong Guy] aditya/cP3gtXsESjyVQOi26ntU8Q
+[2016-10-27 17:44:35,333][INFO ][cluster.service          ] [Strong Guy] new_master {Strong Guy}{cP3gtXsESjyVQOi26ntU8Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-27 17:44:35,431][INFO ][gateway                  ] [Strong Guy] recovered [0] indices into cluster_state
+[2016-10-27 17:44:35,555][INFO ][http                     ] [Strong Guy] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-27 17:44:35,556][INFO ][node                     ] [Strong Guy] started
+[2016-10-27 17:45:05,630][INFO ][rest.suppressed          ] /sample/ Params: {index=sample}
+[sample] IndexNotFoundException[no such index]
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver$WildcardExpressionResolver.resolve(IndexNameExpressionResolver.java:586)
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver.concreteIndices(IndexNameExpressionResolver.java:133)
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver.concreteIndices(IndexNameExpressionResolver.java:77)
+	at org.elasticsearch.action.admin.indices.get.TransportGetIndexAction.checkBlock(TransportGetIndexAction.java:64)
+	at org.elasticsearch.action.admin.indices.get.TransportGetIndexAction.checkBlock(TransportGetIndexAction.java:48)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction$AsyncSingleAction.doStart(TransportMasterNodeAction.java:129)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction$AsyncSingleAction.start(TransportMasterNodeAction.java:121)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction.doExecute(TransportMasterNodeAction.java:93)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction.doExecute(TransportMasterNodeAction.java:50)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:70)
+	at org.elasticsearch.client.node.NodeClient.doExecute(NodeClient.java:58)
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:351)
+	at org.elasticsearch.client.FilterClient.doExecute(FilterClient.java:52)
+	at org.elasticsearch.rest.BaseRestHandler$HeadersAndContextCopyClient.doExecute(BaseRestHandler.java:83)
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:351)
+	at org.elasticsearch.client.support.AbstractClient$IndicesAdmin.execute(AbstractClient.java:1187)
+	at org.elasticsearch.client.support.AbstractClient$IndicesAdmin.getIndex(AbstractClient.java:1287)
+	at org.elasticsearch.rest.action.admin.indices.get.RestGetIndicesAction.handleRequest(RestGetIndicesAction.java:83)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:363)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-27 17:45:11,601][INFO ][cluster.metadata         ] [Strong Guy] [sample] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-10-27 17:45:12,075][INFO ][cluster.routing.allocation] [Strong Guy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sample][4]] ...]).
+[2016-10-27 17:45:27,989][INFO ][cluster.metadata         ] [Strong Guy] [sample] create_mapping [1]
+[2016-10-27 17:47:18,216][INFO ][rest.suppressed          ] /sample/ Params: {index=sample}
+[sample] IndexAlreadyExistsException[already exists]
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validateIndexName(MetaDataCreateIndexService.java:138)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:473)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:97)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$1.execute(MetaDataCreateIndexService.java:192)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:458)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:762)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-27 17:48:08,422][INFO ][cluster.metadata         ] [Strong Guy] [sample] update_mapping [1]
+[2016-10-27 17:50:37,129][INFO ][rest.suppressed          ] /sample/ Params: {index=sample}
+[sample] IndexNotFoundException[no such index]
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver$WildcardExpressionResolver.resolve(IndexNameExpressionResolver.java:586)
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver.concreteIndices(IndexNameExpressionResolver.java:133)
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver.concreteIndices(IndexNameExpressionResolver.java:77)
+	at org.elasticsearch.action.admin.indices.get.TransportGetIndexAction.checkBlock(TransportGetIndexAction.java:64)
+	at org.elasticsearch.action.admin.indices.get.TransportGetIndexAction.checkBlock(TransportGetIndexAction.java:48)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction$AsyncSingleAction.doStart(TransportMasterNodeAction.java:129)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction$AsyncSingleAction.start(TransportMasterNodeAction.java:121)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction.doExecute(TransportMasterNodeAction.java:93)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction.doExecute(TransportMasterNodeAction.java:50)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:70)
+	at org.elasticsearch.client.node.NodeClient.doExecute(NodeClient.java:58)
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:351)
+	at org.elasticsearch.client.FilterClient.doExecute(FilterClient.java:52)
+	at org.elasticsearch.rest.BaseRestHandler$HeadersAndContextCopyClient.doExecute(BaseRestHandler.java:83)
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:351)
+	at org.elasticsearch.client.support.AbstractClient$IndicesAdmin.execute(AbstractClient.java:1187)
+	at org.elasticsearch.client.support.AbstractClient$IndicesAdmin.getIndex(AbstractClient.java:1287)
+	at org.elasticsearch.rest.action.admin.indices.get.RestGetIndicesAction.handleRequest(RestGetIndicesAction.java:83)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:363)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-27 17:50:42,811][INFO ][cluster.metadata         ] [Strong Guy] [sample] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-10-27 17:50:43,054][INFO ][cluster.routing.allocation] [Strong Guy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sample][1], [sample][1]] ...]).
+[2016-10-27 17:52:52,883][INFO ][cluster.metadata         ] [Strong Guy] [sample] create_mapping [1]
+[2016-10-27 17:54:03,463][INFO ][cluster.metadata         ] [Strong Guy] [sample] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-10-27 17:54:03,678][INFO ][cluster.routing.allocation] [Strong Guy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sample][4]] ...]).
+[2016-10-27 17:54:15,916][INFO ][cluster.metadata         ] [Strong Guy] [sample] create_mapping [1]
+[2016-10-27 18:04:08,862][INFO ][cluster.metadata         ] [Strong Guy] [sample] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-10-27 18:04:09,034][INFO ][cluster.routing.allocation] [Strong Guy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sample][4]] ...]).
+[2016-10-27 18:04:17,191][INFO ][cluster.metadata         ] [Strong Guy] [sample] create_mapping [1]
+[2016-10-27 18:07:22,198][INFO ][cluster.metadata         ] [Strong Guy] [sample] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-10-27 18:07:22,337][INFO ][cluster.routing.allocation] [Strong Guy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sample][4]] ...]).
+[2016-10-27 18:07:28,428][INFO ][cluster.metadata         ] [Strong Guy] [sample] create_mapping [1]
+[2016-10-27 18:08:49,376][INFO ][rest.suppressed          ] /sample/ Params: {index=sample}
+[sample] IndexAlreadyExistsException[already exists]
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validateIndexName(MetaDataCreateIndexService.java:138)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:473)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:97)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$1.execute(MetaDataCreateIndexService.java:192)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:458)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:762)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

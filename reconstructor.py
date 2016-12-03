@@ -1,11 +1,12 @@
 # reconstructor.py
 # Jon Doughty
 
+import argparse
+import pandas as pd
+import json
 import glob
 import sys
-import json
-
-import pandas as pd
+import re
 
 from tagger.basetagger import *
 import tagger.pubtagger as pbt
@@ -16,38 +17,139 @@ import tagger.txttagger as ttt
 import tagger.jumptagger as jpt
 import tagger.articlenumtagger as ant
 
+DEBUG = False
 
 def main():
+    # parse command line args.
+    parser = setup_args()
+    args = parser.parse_args()
+
     # set panda options
     set_pd_options()
 
-    # get all csv files in tagged_data directory
-    paths = glob.glob("tagged_data/*.csv")
+    # get type of file we are working with (csv for tagged data, txt for raw)
+    file_type = '*.csv' if args.tagged_data else '*.txt'
+
+    # get all files in specified directory
+    paths = glob.glob(args.data_dir[0] + file_type)
 
     # set columns for csv file
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
 
-    # create empty DataFrame
-    tmp_df = pd.DataFrame(columns=columns)
+    issue_list = []
+    # generate a list of Issue() objects to work with
+    for path in paths:
+        # strip publication information from file name
+        pub_info = get_pub_info(path)
 
-    # create Issue object
-    issue_obj = Issue(tmp_df)
+        if args.raw_data:
+            # read in raw txt and conver to df
+            df = gen_blank_df(path, columns)
+        elif args.tagged_data:
+            # read in the csv file and store as df
+            df = pd.read_csv(path, header=2, names=columns)
 
-    # call respective tag functions
+        # Wrap df with in Issue() and add to list with publication info
+        # TODO: add pub_info to Issue()
+        issue_list.append((pub_info, Issue(df)))
+
+    # dictionary for tagged issues
+    issue_dict = {}
+
+    # list of all taggers
     taggers = [pbt.tag, hlt.tag, blt.tag, jkt.tag, ttt.tag, jpt.tag, ant.tag]
 
-    for tag in taggers:
-        issue_obj = tag(issue_obj)
+    # if raw_data - call respective tag functions
+    for (pub_info, issue_obj) in issue_list:
+        if args.raw_data:
+            # XXX: double check results on this
+            for tag in taggers:
+                issue_obj = tag(issue_obj)
 
-    # load csv
-    # for path in paths:
-    #     issue = pd.read_csv(path, header=2, names=columns)
-    #     construct_tagged(issue)
+        # create a dataframe for the entire issue
+        issue_df = construct_tagged(issue_obj, pub_info)
+
+        tmp = issue_df.to_dict('records')
+        issue_dict[pub_info] = tmp
+
+    # output all data to JSON - one JSON file per article
+    json_dump(issue_dict)
 
 
-def construct_tagged(issue):
+def gen_blank_df(txt_path, columns):
+    '''Given the path for a single text file, create a data frame for that
+       contains its text in the text column.'''
+    # create an empty data frame
+    df = pd.DataFrame(columns=columns)
+
+    # gata data in lines variable
+    with open(txt_path, 'r') as file_in:
+        lines = [line for line in file_in.readlines()]
+
+    df['text'] = lines
+
+    # print (df)
+    return df
+
+
+def get_pub_info(file_name):
+    '''Use RE to extract the publication info from a path.
+       Info has numerical format XXXX-XX-XXX'''
+    pub_info = None
+
+    match = re.search('\d{4}-\d{2}-\d{3}', file_name)
+    if match:
+        # print (match.group(0))
+        pub_info = match.group(0)
+
+    return pub_info
+
+
+def setup_args():
+    parser = argparse.ArgumentParser(description='Article reconstruction \
+    driver script to call and amalgamate results from various taggers.')
+
+    parser.add_argument('--debug',
+                    action='store_true',
+                    dest='debug_flag',
+                    help='Enable for debugging information.')
+
+    mut_exc = parser.add_mutually_exclusive_group(required=True)
+
+    mut_exc.add_argument('--tagged',
+                    # metavar='STUB',
+                    action='store_true',
+                    dest='tagged_data',
+                    help='Flag to indicate training.')
+
+    mut_exc.add_argument('--raw',
+                    # metavar='STUB',
+                    action='store_true',
+                    dest='raw_data',
+                    help='Flag to indicate testing.')
+
+
+    req = parser.add_argument_group('required arguments')
+
+    req.add_argument('--data',
+                    required=True,
+                    metavar='DATA_DIR',
+                    type=str,
+                    nargs=1,
+                    dest='data_dir',
+                    help='Directory which contains data for training or \
+                    testing')
+    return parser
+
+
+
+def construct_tagged(issue_obj, pub_info):
     '''Reconstruct all articles of a single issue from a manually tagged csv
-       file.'''
+       file. Add to issue_dict.'''
+    # get the tagged df from the Issue()
+    issue = issue_obj.tags_df
+
+    # get the article numbers
     article_nums = issue[(issue.article.notnull()) &
                          (issue.article != 0)].article.unique()
     articles = []
@@ -59,22 +161,65 @@ def construct_tagged(issue):
             author = get_byline(article)
             text = get_text(article)
             pages = get_pages(article)
-            article_number = int(article.article.values[0])
-            article_data = {"article_date": "today",
-                            "article_headline": headline, "page_number": pages,
-                            "author": author, "article_number": n,
-                            "article_text": text}
+            article_number = str(article.article.values[0])
+            num_paragraphs = get_num_paragraphs(article)
+            subheading = get_subheading(article)
+            id_num = get_id()
+            article_data = {"id": id_num,
+                            "publication" : pub_info,
+                            "article_date": "today",
+                            "article_headline": headline,
+                            "page_number": pages,
+                            "author": author,
+                            "article_number": article_number,
+                            "article_text": text,
+                            "article_subheading": subheading,
+                            "number_of_paragraphs":num_paragraphs,
+                            "link_image": [],
+                            "link_article": []}
+
         articles.append(pd.Series(article_data))
-    issue_df = pd.DataFrame(articles, index = range(1, len(articles) + 1))
+
+    issue_df = pd.DataFrame(articles, index=range(1, len(articles) + 1))
     issue_df.index.name = "id"
-    print(issue_df)
-    #json_dump(issue_df)
+
+    # print (issue_df)
+    # input()
+
+    return issue_df
 
 
-def json_dump(issue_df):
-    '''Dump an entire issue to json.'''
-    tmp = issue_df.to_dict('records')
-    print (json.dumps(tmp, indent=4))
+def json_dump(issue_dict):
+    '''Dump an entire issue to JSON, creating a separate JSON file for
+       each article.'''
+    # TODO: add command line argument to specify a directory output
+    directory = "json_output/"
+
+    # issue_dict is a dictionary of {pub_info : [articles]}
+    for key, articles in issue_dict.items():
+        for article in articles:
+            article_num = article['article_number']
+            file_name = directory + key + "_" + article_num
+            with open(file_name, 'w') as json_out:
+                json.dump(article, json_out, indent=4)
+
+
+id_count = 0
+def get_id():
+    # TODO: will need to persist the last ID number used for creating
+    # additional JSON output
+    global id_count
+    id_count += 1
+    return str(id_count)
+
+
+def get_subheading(article):
+    return None
+
+
+def get_num_paragraphs(article):
+    paragraph_nums = article.paragraph[article.paragraph != 0].unique().tolist()
+    return str(len(paragraph_nums))
 
 
 def check_article(article):
@@ -82,7 +227,7 @@ def check_article(article):
     # check correct paragraph ordering
     paragraph_nums = article.paragraph[article.paragraph != 0].unique().tolist()
     lst = list(range(1, len(paragraph_nums) + 1))
-    if paragraph_nums != lst:
+    if DEBUG and paragraph_nums != lst:
         article_num = article.article.unique()[0]
         print ('Paragraph numbering for article {} appears incorrect,'\
                ' please check.'.format(article_num))
@@ -104,7 +249,8 @@ def get_headline(article):
     '''Extract headline from article.'''
     try:
         headline = article[article.function == "HL"].text.values[0]
-    except:
+    except Exception as e:
+        if DEBUG: print ('Headline exception: ', e)
         headline = None
 
     return headline
@@ -113,21 +259,25 @@ def get_headline(article):
 def get_byline(article):
     '''Extract author from article.'''
     try:
-        byline = article[article.function == "BL"].text.values[0]
-        match = re.match("[Bb][Yy]\s+(.*)", byline)
-        author = match.group(1) if match else byline
-    except:
+        # byline = article[article.function == "BL"].text.values[0]
+        author = article[article.function == "BL"].text.values[0]
+        # match = re.match("[Bb][Yy]\s+(.*)", byline)
+        # author = match.group(1) if match else byline
+    except Exception as e:
+        if DEBUG: print ('Byline exception: ', e)
         author = None
+
     return author
 
 
 def get_pages(article):
     '''Extract pages from article.'''
     try:
-        pages = list(map(int, article.page.unique()))
+        pages = str(list(map(int, article.page.unique()))).strip('[]')
     except Exception as e:
-        print ('Page exception: ', e)
+        if DEBUG: print ('Page exception: ', e)
         pages = None
+
     return pages
 
 
@@ -135,33 +285,6 @@ def set_pd_options():
     '''Set option for pandas.'''
     pd.set_option("display.width", None)
     pd.set_option("display.max_rows", None)
-
-
-# def find_date(issue, max_error = 5):
-#     dows = "|".join(calendar.day_name)
-#     months = "|".join(calendar.month_name)[1:]
-#     fmt_str = "(?:\s*({0})\s*.\s*({1})\s*([1-3]*[0-9]+)\s*.\s*" + \
-#               "((?:19|20)[0-9]{{2}})\s*){{e<{2}}}"
-#     pattern = regex.compile(fmt_str.format(dows, months, max_error),
-#                             flags = regex.ENHANCEMATCH)
-#     best_match = None
-#     best_counts = sys.maxsize
-#     for _, row in issue[issue.function == "PI"].iterrows():
-#         match = regex.search(pattern, row.text, concurrent = True)
-#         if match:
-#             if best_match is None or match.fuzzy_counts < best_counts:
-#                 best_match = match
-#                 best_counts = match.fuzzy_counts
-#     dow = edit_match(match.group(1), calendar.day_name)
-#     month = edit_match(match.group(2), calendar.month_name)
-#     day = edit_match(match.group(3), map(str, range(1, 32)))
-#     year = edit_match(match.group(4), map(str, range(1901, 2021)))
-#     return dow, month, day, year
-
-
-# def edit_match(match, candidates):
-#     return min(candidates,
-#                key = lambda candidate: distance.edit_distance(match, candidate))
 
 
 if __name__ == "__main__":

@@ -34,7 +34,7 @@ def main():
     #TODO validate arguments
     #TODO usage?
     hOCRFilePath = sys.argv[1]
-    abbyyFilePath = sys.argv[2]
+    #abbyyFilePath = sys.argv[2]
 
     hOCRTree = ET.parse(hOCRFilePath)
 
@@ -77,7 +77,7 @@ def main():
         w = Word(node)
         print(w.text, w.bbox.values)
 
-    abbyyLines = open(abbyyFilePath, encoding="utf-8").readlines()
+    #abbyyLines = open(abbyyFilePath, encoding="utf-8").readlines()
 
     #for line in abbyyLines:
         #print(line)

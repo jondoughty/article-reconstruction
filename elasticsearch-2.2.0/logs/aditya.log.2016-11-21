@@ -1,0 +1,14 @@
+[2016-11-21 14:59:40,568][INFO ][node                     ] [Stonecutter] version[2.2.0], pid[4752], build[8ff36d1/2016-01-27T13:32:39Z]
+[2016-11-21 14:59:40,571][INFO ][node                     ] [Stonecutter] initializing ...
+[2016-11-21 14:59:41,056][INFO ][plugins                  ] [Stonecutter] modules [lang-expression, lang-groovy], plugins [], sites []
+[2016-11-21 14:59:41,085][INFO ][env                      ] [Stonecutter] using [1] data paths, mounts [[OS (C:)]], net usable_space [410.7gb], net total_space [466.1gb], spins? [unknown], types [NTFS]
+[2016-11-21 14:59:41,085][INFO ][env                      ] [Stonecutter] heap size [910.5mb], compressed ordinary object pointers [true]
+[2016-11-21 14:59:43,071][INFO ][node                     ] [Stonecutter] initialized
+[2016-11-21 14:59:43,071][INFO ][node                     ] [Stonecutter] starting ...
+[2016-11-21 14:59:43,373][INFO ][transport                ] [Stonecutter] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-11-21 14:59:43,384][INFO ][discovery                ] [Stonecutter] aditya/5zww_UYuSFCc5zqsRG9OAg
+[2016-11-21 14:59:47,443][INFO ][cluster.service          ] [Stonecutter] new_master {Stonecutter}{5zww_UYuSFCc5zqsRG9OAg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-21 14:59:47,522][INFO ][gateway                  ] [Stonecutter] recovered [1] indices into cluster_state
+[2016-11-21 14:59:48,060][INFO ][http                     ] [Stonecutter] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-11-21 14:59:48,075][INFO ][node                     ] [Stonecutter] started
+[2016-11-21 14:59:48,283][INFO ][cluster.routing.allocation] [Stonecutter] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sample][4]] ...]).

@@ -1,0 +1,3 @@
+[2016-11-01 12:42:02,304][INFO ][cluster.metadata         ] [Veil] [sample] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-11-01 12:42:02,514][INFO ][cluster.routing.allocation] [Veil] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[sample][4]] ...]).
+[2016-11-01 12:45:30,899][INFO ][cluster.metadata         ] [Veil] [sample] create_mapping [1]
