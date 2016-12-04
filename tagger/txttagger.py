@@ -144,22 +144,53 @@ def _features_stats_uppercase(text):
     #                                             ranges=[0, 2]))
     return features
 
-# TODO: This is not working.
+
+def _check_line_prefix(word):
+    """
+    Determines whether the given word for the sentence prefix.
+    """
+    # print("word: %s" %word)
+
+    if word.lower() == "editor":
+        return True
+
+    upper_chars = [c for c in word if c.isupper()]
+    ratio = len(upper_chars) / len(word)
+    # print("ratio %f" %ratio)
+    return ratio > 0.5
+
+
+def _has_quotes(text):
+    return '“' in text[:-1] and '”' in text[1:]
+
+
 def _features_sent_prefix(text):
+    """
+    Gets features based on whether the line is in the following format:
+
+        SOMETHING_IN_CAPS -
+        Something_not_in_caps –
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+
+    """
     features = {}
 
     words = word_tokenize(text)
-    if '—' in words[0:5]:
-        if words[0].isalpha() and words[0].isupper():
-            features["sent_prefix_with_hyphen"] = 1
-        else:
-            features["sent_prefix_with_hyphen"] = 2
-        print(str(words[0:5]) + ' = ' + str(features["sent_prefix_with_hyphen"]))
 
+    if _has_quotes(text):
+        features["has_quotes"] = True
+
+    # if len(words) >= 5 and ('-' in words[1:5] or '—' in words[1:5]):
+    #     if _check_line_prefix(words[0]):
+    #         # print("\tTXT: " + str(words[0:5]))
+    #         features["upper_sent_prefix_hyphen"] = True
     #     else:
-    #         features["sent_prefix_with_hyphen"] = "non-upper"
-    # else:
-    #     features["sent_prefix_with_hyphen"] = None
+    #         # print("\tNONE: " + str(words[0:5]))
+    #         features["non_upper_sent_prefix_hyphen"] = True
 
     return features
 
@@ -184,7 +215,7 @@ def _generate_features_txt(row_data):
     features.update(_features_stats_readable_word_percentage(text))
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_alpha_char_percentage(text))
-    # features.update(_features_sent_prefix(text))
+    features.update(_features_sent_prefix(text))
     return features
 
 
@@ -273,6 +304,19 @@ def smooth(issue):
             issue.tags_df.loc[index, "function"] = None
 
         # Revise
+        if not pd.isnull(row.text):
+            words = word_tokenize(row.text)
+            if words and words[0].islower() == "editor":
+                # print(words)
+                issue.tags_df.loc[index, "function"] = "TXT"
+
+        #     if len(words) >= 5 and ('-' in words[1:5] or '—' in words[1:5]):
+        #         if _check_line_prefix(words[0]): #words[0].isalpha() and words[0].isupper():
+        #             print("\tTXT: " + str(words[0:5]))
+        #             issue.tags_df.loc[index, "function"] = "TXT"
+        #         else:
+        #             print("\tNONE: " + str(words[0:5]))
+        #             issue.tags_df.loc[index, "function"] = None
 
     _drop_surrounding_funcs_references(issue)
 
@@ -325,7 +369,7 @@ def main():
     tagged_issues[2].to_csv('txt_test.csv')
 
     # Print the accuracy of the results.
-    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=True)
+    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=False)
 
 
 if __name__ == "__main__":
