@@ -144,6 +144,24 @@ def _features_stats_uppercase(text):
     #                                             ranges=[0, 2]))
     return features
 
+# TODO: This is not working.
+def _features_sent_prefix(text):
+    features = {}
+
+    words = word_tokenize(text)
+    if '—' in words[0:5]:
+        if words[0].isalpha() and words[0].isupper():
+            features["sent_prefix_with_hyphen"] = 1
+        else:
+            features["sent_prefix_with_hyphen"] = 2
+        print(str(words[0:5]) + ' = ' + str(features["sent_prefix_with_hyphen"]))
+
+    #     else:
+    #         features["sent_prefix_with_hyphen"] = "non-upper"
+    # else:
+    #     features["sent_prefix_with_hyphen"] = None
+
+    return features
 
 
 # ========================================
@@ -166,6 +184,7 @@ def _generate_features_txt(row_data):
     features.update(_features_stats_readable_word_percentage(text))
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_alpha_char_percentage(text))
+    # features.update(_features_sent_prefix(text))
     return features
 
 
@@ -241,6 +260,25 @@ def _tag_txt(row, classifier, features_func):
 # ==================================
 
 
+def smooth(issue):
+    _setup_surrounding_funcs_references(issue)
+
+    for index, row in issue.tags_df.iterrows():
+        # Fill in gaps
+        if pd.isnull(row.function) and row.func_prev == "TXT" and row.func_next == "TXT":
+            issue.tags_df.loc[index, "function"] = "TXT"
+
+        # Remove outliers
+        if row.function == "TXT" and pd.isnull(row.func_prev) and pd.isnull(row.func_next):
+            issue.tags_df.loc[index, "function"] = None
+
+        # Revise
+
+    _drop_surrounding_funcs_references(issue)
+
+    return issue
+
+
 def tag(issue):
     """
     Tags the issue with the TXT tag.
@@ -257,17 +295,7 @@ def tag(issue):
 
     issue.apply_classifier(col="function", filename=filename,
                             features_func=features_func, label_func=label_func)
-
-    # Smoothing
-    _setup_surrounding_funcs_references(issue)
-    for index, row in issue.tags_df.iterrows():
-        # Fill in gaps
-        if pd.isnull(row.function) and row.func_prev == "TXT" and row.func_next == "TXT":
-            issue.tags_df.loc[index, "function"] = "TXT"
-        # Remove outliers
-        if row.function == "TXT" and pd.isnull(row.func_prev) and pd.isnull(row.func_next):
-            issue.tags_df.loc[index, "function"] = None
-    _drop_surrounding_funcs_references(issue)
+    issue = smooth(issue)
 
     return issue
 
@@ -291,6 +319,9 @@ def main():
 
     # Tag the untagged issues.
     tagged_issues = [tag(issue) for issue in untagged_issues]
+    # for index, issue in enumerate(tagged_issues):
+    #     name = 'txt_test' + str(index) + '.csv'
+    #     issue.to_csv(name)
     tagged_issues[2].to_csv('txt_test.csv')
 
     # Print the accuracy of the results.
