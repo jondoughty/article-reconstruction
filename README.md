@@ -18,17 +18,18 @@
     CT      Comic strip text        junktagger.py
     MH      Masthead                junktagger.py
     PH      Photo caption           junktagger.py
+    BQN     Block quote name        junktagger.py
+    BQA     Block quote author      junktagger.py
 
   Not Labeled
 
-    PI      Publication info
-    SH      Section heading
-    HL      Headline
-    BL      Byline
-    NP      Nameplate
-    ME      Meta directives
-    BQT     Block quote text
-    BQN     Block quote name
+    PI      Publication info        pubtagger.py
+    SH      Section heading         ?
+    HL      Headline                hltagger.py
+    BL      Byline                  bltagger.py
+    NP      Nameplate               ?
+    ME      Meta directives         jumptagger.py
+    BQT     Block quote text        junktagger.py
 
 ## Setup
 

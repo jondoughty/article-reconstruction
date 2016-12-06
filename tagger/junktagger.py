@@ -3,21 +3,35 @@
 
 from nltk.corpus import names
 import enchant
+import regex
 import re
 
 from tagger.basetagger import *
 
 
+# TODO(ngarg): Improve accuracy - 3/4 in top 2 and bottom 2 are JNK
+# TODO(ngarg): Add BQT
+
+
+# Global classifiers metadata.
+_REGENERATE_CLASSIFIERS = True
 _JUNKTAGGER_CLASSIFIERS = []
+
+# Required function tags metadata.
+_REQUIRED_TAGS = ["PI", "HL", "BL", "SH"]
+_TAGS_TO_KEEP = _REQUIRED_TAGS + ["NP"]
+
+# English dictionary.
 _ENGLISH_DICTIONARY = enchant.Dict("en_US")
 
+# All English names.
 _ENGLISH_ALL_NAMES = names.words("female.txt") + names.words("male.txt")
 _ENGLISH_ALL_NAMES_STR = "|".join(_ENGLISH_ALL_NAMES)
 
+# English names not in the dictionary.
 _ENGLISH_NAMES = [word.lower() for word in _ENGLISH_ALL_NAMES
                                if not _ENGLISH_DICTIONARY.check(word)]
 _ENGLISH_NAMES_STR = "\W|\W".join(_ENGLISH_NAMES)
-_REQUIRED_TAGS = ["PI", "HL", "BL", "SH"]
 
 
 # ===============================================
@@ -34,7 +48,13 @@ def _has_page_jump(text):
 
     returns: bool
     """
-    return bool(re.search(r"page \d+", text))
+    fmt_str = ("(((See \w{1,10}, \w{1,10} page)|"
+               "(See \w{1,10}, page \d{1,2})|"
+               "(From page)){e<=4})|"
+               "(page \d{1,2}){e<=1}")
+    pattern = regex.compile(fmt_str, flags=regex.ENHANCEMATCH)
+    match = regex.search(pattern, text, concurrent=True)
+    return bool(match)
 
 
 def _features_stats_alphabetic(text):
@@ -107,6 +127,8 @@ def _features_stats_dictionary(text):
 
     returns: dict
     """
+    # TODO: Occurence of "by".
+
     features = {}
     words = text.lower().split(" ")
     words_synset = [word for word in words
@@ -160,6 +182,18 @@ def _features_stats_names(text):
     features.update(create_features_for_ranges(feature_name="num_non_names",
                                                variable=len(words),
                                                ranges=[1, 3, 5]))
+
+    # Number of words with capital first letter.
+    titles = [word for word in words if re.sub(r'\W+', '', word).istitle()]
+    features.update(create_features_for_ranges(feature_name="num_titles",
+                                               variable=len(titles),
+                                               ranges=[2, 5, 10, 20]))
+
+    # Finds "- <NAME>" pattern.
+    starts_dash = ord(text.strip()[0]) in [45, 8212]
+    features["starts_dash"] = starts_dash
+    features["starts_dash_num_titles"] = starts_dash and len(titles) < 5
+
     return features
 
 
@@ -199,6 +233,34 @@ def _features_stats_non_ascii(text):
     return features
 
 
+# TODO(ngarg): Try adding this to other classifiers.
+def _features_stats_positional(text):
+    """
+    Gets features based on the position in the text.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    # TODO(ngarg): Expand quotes (from _patterns) and make it positional as well.
+    #              Make sure moving the quotes condition doesn't negatively affect other classifiers.
+    #       - Contains different types of quotations
+    #       - Ends with ."
+    #       - Ends with "
+
+    features = {}
+    words = text.lower().split(" ")
+
+    # Last word has a period.
+    features["ends_period"] = bool(re.search(r"\.$", text))
+    features["ends_word_period"] = (_ENGLISH_DICTIONARY.check(words[-1][:-1])
+                                    if features["ends_period"] and words[-1][:-1].strip() else False)
+    features["ends_word_period_1_word"] = features["ends_word_period"] and len(words) == 1
+
+    return features
+
+
 def _features_stats_patterns(text):
     """
     Gets features on the patterns within the text.
@@ -208,11 +270,14 @@ def _features_stats_patterns(text):
 
     returns: dict
     """
+    # TODO(ngarg): Count of "\t" pattern. - re.findall
+    # TODO(ngarg): Determine if I should comment in has_page_jump feature.
+
     features = {}
     text = text.lower()
 
     # Special number types to exclude.
-    features["has_page_jump"] = _has_page_jump(text)
+    # features["has_page_jump"] = _has_page_jump(text)
     features["has_year"] = bool(re.search(r"[^\d]((1[7-9])|2[0-1])\d{2}([^\d]|$)", text))
     features["has_full_phone_number"] = bool(re.search(r"\(\d{3}\) \d{3}\-\d{4}", text))
     features["has_thousands"] = bool(re.search(r"\d+\,\d{3}", text))
@@ -256,6 +321,7 @@ def _generate_features_advertisement(data):
     features.update(_features_stats_dictionary(text))
     features.update(_features_stats_numerals(text))
     features.update(_features_stats_non_ascii(text))
+    features.update(_features_stats_positional(text))
     features.update(_features_stats_patterns(text))
 
     return features
@@ -278,6 +344,7 @@ def _generate_features_unintelligible(data):
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_numerals(text))
     features.update(_features_stats_non_ascii(text))
+    features.update(_features_stats_positional(text))
     features.update(_features_stats_patterns(text))
 
     return features
@@ -341,6 +408,21 @@ def _tag_blank(row):
     return row.function
 
 
+def _tag_jump(row):
+    """
+    Tags any row with a jump (JUMP).
+
+    row: obj
+        DataFrame row to return value for.
+
+    returns: str
+    """
+    if pd.isnull(row.function):
+        if _has_page_jump(row.text):
+            return "JUMP"
+    return row.function
+
+
 def _tag_unintelligible(row, classifier, features_func):
     """
     Tags the row as unintelligible (N) if there are not two consequtive
@@ -355,10 +437,10 @@ def _tag_unintelligible(row, classifier, features_func):
 
     returns: str
     """
-    if pd.isnull(row.function) and not pd.isnull(row.text):
+    if pd.isnull(row.function):
         if not re.search(r"\w+", row.text):
             return "N"
-        if not _has_page_jump(row.text) and classifier.classify(features_func(row)):
+        if classifier.classify(features_func(row)):
             return "N"
     return row.function
 
@@ -376,8 +458,8 @@ def _tag_advertisement(row, classifier, features_func):
 
     returns: str
     """
-    if pd.isnull(row.function) and not pd.isnull(row.text):
-        if not _has_page_jump(row.text) and classifier.classify(features_func(row)):
+    if pd.isnull(row.function):
+        if classifier.classify(features_func(row)):
             return "AT"
     return row.function
 
@@ -395,8 +477,8 @@ def _tag_other(row, classifier, features_func):
 
     returns: str
     """
-    if pd.isnull(row.function) and not pd.isnull(row.text):
-        if not _has_page_jump(row.text) and classifier.classify(features_func(row)):
+    if pd.isnull(row.function):
+        if classifier.classify(features_func(row)):
             return "OT"
     return row.function
 
@@ -414,8 +496,8 @@ def _tag_headers(row, classifier, features_func):
 
     returns: str
     """
-    if pd.isnull(row.function) and not pd.isnull(row.text):
-        if not _has_page_jump(row.text) and classifier.classify(features_func(row)):
+    if pd.isnull(row.function):
+        if classifier.classify(features_func(row)):
             return "MH"
     return row.function
 
@@ -433,7 +515,7 @@ def _tag_in_range(row):
     returns: str
     """
     valid_funcs = ["N", "OT", "AT"]
-    if pd.isnull(row.function) and not pd.isnull(row.text):
+    if pd.isnull(row.function):
         if row.func_prev in valid_funcs and row.func_next in valid_funcs:
             words = row.text.lower().split(" ")
             words_synset = [word for word in words
@@ -484,6 +566,7 @@ def tag(issue):
     # Labels rows.
     issue = copy.deepcopy(issue)
     issue.apply(col="function", label_func=_tag_blank)
+    issue.apply(col="function", label_func=_tag_jump)
 
     # Labels rows with classifiers.
     for classifiers in _JUNKTAGGER_CLASSIFIERS:
@@ -495,6 +578,9 @@ def tag(issue):
 
     # Labels rows based labels on nearby rows.
     _apply_in_range(issue)
+
+    # Remove JUMP tag prior to returning the issue.
+    issue.tags_df.function.replace("JUMP", np.nan, inplace=True)
     return issue
 
 
@@ -516,7 +602,8 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
     if replace_nan:
         tags.append(np.nan)
     if replace_all:
-        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH"])
+        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN"])
+        # tags.extend(["MH", "PH", "BQN", "BQA"])
 
     for tag in tags:
         issue.tags_df.function.replace(tag, "JNK", inplace=True)
@@ -527,24 +614,26 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
 # List of junk classifiers.
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_AT_naive_bayes.pickle", _generate_features_advertisement, ["AT"], _tag_advertisement))
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_unintelligible, ["N", "CT", "CN"], _tag_unintelligible))
-_JUNKTAGGER_CLASSIFIERS.append(("junktagger_MH_naive_bayes.pickle", _generate_features_header, ["MH", "PH"], _tag_headers))
+_JUNKTAGGER_CLASSIFIERS.append(("junktagger_MH_naive_bayes.pickle", _generate_features_header, ["MH", "PH", "BQN", "BQA"], _tag_headers))
+_JUNKTAGGER_CLASSIFIERS.append(("junktagger_BQ_naive_bayes.pickle", _generate_features_header, ["PH", "BQN", "BQA"], _tag_headers))
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_other, ["OT"], _tag_other))
 
 
 def main():
     # Gets issues with and without tags.
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump", "ad"],
-                                         tags=_REQUIRED_TAGS)
+                                         tags=_TAGS_TO_KEEP)
 
     # Create classifiers.
-    for classifiers in _JUNKTAGGER_CLASSIFIERS:
-        filename = classifiers[0]
-        func = classifiers[1]
-        tags = classifiers[2]
-        create_classifier(issues=issues,
-                          classifier_func=create_naive_bayes_classifier,
-                          features_func=func, filename=filename, tags=tags,
-                          stats=True, debug=False)
+    if _REGENERATE_CLASSIFIERS:
+        for classifiers in _JUNKTAGGER_CLASSIFIERS:
+            filename = classifiers[0]
+            func = classifiers[1]
+            tags = classifiers[2]
+            create_classifier(issues=issues[:10],
+                              classifier_func=create_naive_bayes_classifier,
+                              features_func=func, filename=filename, tags=tags,
+                              stats=True, debug=False)
 
     # Tags the untagged issues.
     tagged_issues = [tag(issue) for issue in untagged_issues]
@@ -564,7 +653,7 @@ def main():
     jnk_issues[0].to_csv("test3.csv")
 
     # Prints the accuracy of the results.
-    print_accuracy_tag(jnk_issues, final_issues, tag="JNK", print_incorrect=True)
+    print_accuracy_tag(jnk_issues[10:], final_issues[10:], tag="JNK", print_incorrect=True)
 
 
 if __name__ == "__main__":
