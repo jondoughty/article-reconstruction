@@ -1,5 +1,16 @@
 # article-reconstruction
 
+## Running the reconstructor
+
+### With tagged data
+    $ python3 reconstructor.py --tagged --data TAGGED_DATA_DIR
+
+### With raw data
+    $ python3 reconstructor.py --raw --data RAW_DATA_DIR
+
+### For help with reconstructor.py
+    $ python3 reconstructor.py --help
+
 ## Running Taggers
 
   Junk Tagger     python3 -m tagger.junktagger      Ads, classifiers, BQT
@@ -77,4 +88,3 @@ See the **/examples** directory for an hOCR file and the image it came from. See
   ]
 }
 ```
-
