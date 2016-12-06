@@ -17,12 +17,17 @@ import tagger.txttagger as ttt
 import tagger.jumptagger as jpt
 import tagger.articlenumtagger as ant
 
-DEBUG = False
+DEBUG = None
 
 def main():
+    global DEBUG
+
     # parse command line args.
     parser = setup_args()
     args = parser.parse_args()
+
+    # set debug flag
+    DEBUG = args.debug_flag
 
     # set panda options
     set_pd_options()
@@ -33,32 +38,21 @@ def main():
     # get all files in specified directory
     paths = glob.glob(args.data_dir[0] + file_type)
 
-    # set columns for csv file
-    columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
-
-    issue_list = []
-    # generate a list of Issue() objects to work with
-    for path in paths:
-        # strip publication information from file name
-        pub_info = get_pub_info(path)
-
-        if args.raw_data:
-            # read in raw txt and conver to df
-            df = gen_blank_df(path, columns)
-        elif args.tagged_data:
-            # read in the csv file and store as df
-            df = pd.read_csv(path, header=2, names=columns)
-
-        # Wrap df with in Issue() and add to list with publication info
-        # TODO: add pub_info to Issue()
-        issue_list.append((pub_info, Issue(df)))
+    # generate list of untagged Issues()
+    issue_list = gen_issue_list(args, paths)
 
     # dictionary for tagged issues
-    issue_dict = {}
+    issue_dict = gen_issue_dict(args, issue_list)
 
-    # list of all taggers
+    # output all data to JSON - one JSON file per article
+    json_dump(issue_dict)
+
+
+def gen_issue_dict(args, issue_list):
+    # taggers
     taggers = [pbt.tag, hlt.tag, blt.tag, jkt.tag, ttt.tag, jpt.tag, ant.tag]
 
+    issue_dict = {}
     # if raw_data - call respective tag functions
     for (pub_info, issue_obj) in issue_list:
         if args.raw_data:
@@ -72,8 +66,33 @@ def main():
         tmp = issue_df.to_dict('records')
         issue_dict[pub_info] = tmp
 
-    # output all data to JSON - one JSON file per article
-    json_dump(issue_dict)
+    return issue_dict
+
+
+def gen_issue_list(args, paths):
+    issue_list = []
+
+    # columns for data frames
+    columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
+
+    # generate a list of Issue() objects to work with
+    for path in paths:
+        # strip publication information from file name
+        pub_info = get_pub_info(path)
+
+        if args.raw_data:
+            # read in raw txt and convert to df
+            df = gen_blank_df(path, columns)
+
+        elif args.tagged_data:
+            # read in the csv file and store as df
+            df = pd.read_csv(path, header=2, names=columns)
+
+        # Wrap df with in Issue() and add to list with publication info
+        # TODO: add pub_info to Issue()
+        issue_list.append((pub_info, Issue(df)))
+
+    return issue_list
 
 
 def gen_blank_df(txt_path, columns):
@@ -156,7 +175,7 @@ def construct_tagged(issue_obj, pub_info):
     for n in article_nums:
         article = issue[issue.article == n]
         if len(article) > 0:
-            check_article(article)
+            if DEBUG: check_article(article)
             headline = get_headline(article)
             author = get_byline(article)
             text = get_text(article)
@@ -199,9 +218,9 @@ def json_dump(issue_dict):
     for key, articles in issue_dict.items():
         for article in articles:
             article_num = article['article_number']
-            file_name = directory + key + "_" + article_num
+            file_name = directory + key + "_" + article_num + '.json'
             with open(file_name, 'w') as json_out:
-                json.dump(article, json_out, indent=4)
+                json.dump(article, json_out, indent=4, ensure_ascii=False)
 
 
 id_count = 0
@@ -227,7 +246,7 @@ def check_article(article):
     # check correct paragraph ordering
     paragraph_nums = article.paragraph[article.paragraph != 0].unique().tolist()
     lst = list(range(1, len(paragraph_nums) + 1))
-    if DEBUG and paragraph_nums != lst:
+    if paragraph_nums != lst:
         article_num = article.article.unique()[0]
         print ('Paragraph numbering for article {} appears incorrect,'\
                ' please check.'.format(article_num))
