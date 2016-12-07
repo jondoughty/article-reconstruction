@@ -146,7 +146,7 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
 
 
 # TODO(ngarg): Confirm this calculates precision and recall correctly.
-def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
+def print_accuracy_tag(orig_issues, tagged_issues, tag, jump_col=False, print_incorrect=False):
     """
     Prints the precision, recall of the function tag for the given issue.
     Owner: Nupur Garg
@@ -157,6 +157,8 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
         Issue objects with code produced tags.
     tag: str
         Function tag to test.
+    jump_col: bool
+        Compare JUMP column instead of FUNCTION (default: False).
     print_incorrect: bool
         Prints the incorrectly tagged lines (default: False).
 
@@ -171,10 +173,14 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
     print("============ Tag \'%s\' ============" %tag)
     print("=================================")
     for orig_issue, tagged_issue in zip(orig_issues, tagged_issues):
-        expected_tags = orig_issue.tags_df[orig_issue.tags_df.function == tag]
-        expected_tags_idx = set(expected_tags.index.values)
+        if jump_col:
+            expected_tags = orig_issue.tags_df["jump"]
+            actual_tags = tagged_issue.tags_df["jump"]
+        else:
+            expected_tags = orig_issue.tags_df[orig_issue.tags_df.function == tag]
+            actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.function == tag]
 
-        actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.function == tag]
+        expected_tags_idx = set(expected_tags.index.values)
         actual_tags_idx = set(actual_tags.index.values)
 
         missing_tags = expected_tags_idx - actual_tags_idx
