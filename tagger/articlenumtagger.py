@@ -2,6 +2,8 @@
 # Brandon Livitski
 
 from tagger.basetagger import *
+import sklearn
+from sklearn import metrics
 
 
 def tag(issue):
@@ -127,15 +129,52 @@ def main():
 	                                     tags=["PI", "BL", "HL", "N", "B", "TXT", "AT"])
 	pd.set_option('display.max_rows', 700)
 	pd.set_option("display.width", None)
-	print(issues[1].tags_df)
+	# print(issues[1].tags_df)
 	# print(tag(untagged_issues[0]).tags_df)
-	output = tag(untagged_issues[1]).tags_df
-	print (output)
+	# tagged = tag(untagged_issues[1]).tags_df
+	# truth = issues[1].tags_df
+	# print (tagged)
 
-	# for i, row in output.iterrows():
-	# 	if row.function == "TXT":
-	# 		# print(row)
-	# 		pass
+	# article_numbering_scores(tagged, truth, "HL")
+	# article_numbering_scores(tagged, truth, "TXT")
+
+	hl_homogeneity_sum = 0
+	hl_completeness_sum = 0
+	hl_v_score_sum = 0
+	txt_homogeneity_sum = 0
+	txt_completeness_sum = 0
+	txt_v_score_sum = 0
+	for i in range(len(issues)):
+		h1, c1, v1 = article_numbering_scores(tag(untagged_issues[i]).tags_df, issues[i].tags_df, "HL")
+		h2, c2, v2 = article_numbering_scores(tag(untagged_issues[i]).tags_df, issues[i].tags_df, "TXT")
+		hl_completeness_sum = hl_completeness_sum + c1
+		hl_homogeneity_sum = hl_homogeneity_sum + h1
+		hl_v_score_sum = hl_v_score_sum + v1
+		txt_homogeneity_sum = txt_homogeneity_sum + h2
+		txt_completeness_sum = txt_completeness_sum + c2
+		txt_v_score_sum = txt_v_score_sum + v2
+	hl_homogeneity_sum = hl_homogeneity_sum / len(issues)
+	hl_completeness_sum = hl_completeness_sum / len(issues)
+	hl_v_score_sum = hl_v_score_sum / len(issues)
+	txt_homogeneity_sum = txt_homogeneity_sum / len(issues)
+	txt_completeness_sum = txt_completeness_sum / len(issues)
+	txt_v_score_sum = txt_v_score_sum / len(issues)
+	print("\nHL article numbering completeness, homogeneity, and v score:")
+	print("{0}, {1}, {2}".format(hl_completeness_sum, hl_homogeneity_sum, hl_v_score_sum))
+	print("\nTXT article numbering completeness, homogeneity, and v score:")
+	print("{0}, {1}, {2}".format(txt_completeness_sum, txt_homogeneity_sum, txt_v_score_sum))
+
+
+def article_numbering_scores(tagged, truth, function):
+	predicted_articles = []
+	for i, row in tagged.iterrows():
+		if tagged.loc[i, "function"] == function:
+			predicted_articles.append(row.article)
+	actual_articles = []
+	for i, row in truth.iterrows():
+		if truth.loc[i, "function"] == function:
+			actual_articles.append(row.article)
+	return metrics.homogeneity_completeness_v_measure(actual_articles, predicted_articles)
 
 
 if __name__ == "__main__":
