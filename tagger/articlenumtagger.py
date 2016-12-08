@@ -24,6 +24,8 @@ def tag(issue):
 
 		if issue.tags_df.loc[i, "function"] == "HL":
 			if not on_HL:
+				# print(row.text)
+				# print(i)
 				num_articles = num_articles + 1
 			#TODO make this an int??	
 			issue.tags_df.loc[i, "article"] = int(num_articles)
@@ -36,6 +38,7 @@ def tag(issue):
 			current_page = []
 			current_page_num = current_page_num + 1
 		current_page.append((i, row))
+	pages.append(current_page)
 
 	article_stubs = []
 	article_chunks = []
@@ -89,7 +92,6 @@ def tag(issue):
 				article_stubs.append(current_segment)
 			else:
 				article_chunks.append(current_segment)
-
 	stub_bags = []
 	for stub in article_stubs:
 		tokens = []
@@ -106,7 +108,6 @@ def tag(issue):
 			article_stubs[index].append((i, row))
 
 	current_article_num = 1
-	print(len(article_stubs))
 	for article in article_stubs:
 		current_paragraph_num = 1
 		for i, row in article:
@@ -121,9 +122,16 @@ def tag(issue):
 def main():
 	issues, untagged_issues = get_issues(columns=["paragraph", "article"],
 	                                     tags=["PI", "BL", "HL", "N", "B", "TXT", "AT"])
+	# pd.set_option('display.max_rows', 700)
+	# print(issues[1].tags_df)
+	# print(tag(untagged_issues[0]).tags_df)
+	output = tag(untagged_issues[1]).tags_df
+	print (output)
 
-	print(issues[0].tags_df)
-	print(tag(untagged_issues[0]).tags_df)
+	# for i, row in output.iterrows():
+	# 	if row.function == "TXT":
+	# 		# print(row)
+	# 		pass
 
 
 if __name__ == "__main__":
