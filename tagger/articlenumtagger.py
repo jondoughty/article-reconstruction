@@ -102,9 +102,12 @@ def tag(issue):
 		stub_bags.append(tokens)
 
 	for chunk in article_chunks:
+		chunk_bag = set()
 		for i, row in chunk:
-			chunk_bag = set(row.text.split())
-			index = stub_bags.index(max(stub_bags, key = lambda x: len(x & chunk_bag)))
+			for token in row.text.split():
+				chunk_bag.add(token)
+		index = stub_bags.index(max(stub_bags, key = lambda x: len(x & chunk_bag)))
+		for i, row in chunk:
 			article_stubs[index].append((i, row))
 
 	current_article_num = 1
@@ -122,8 +125,9 @@ def tag(issue):
 def main():
 	issues, untagged_issues = get_issues(columns=["paragraph", "article"],
 	                                     tags=["PI", "BL", "HL", "N", "B", "TXT", "AT"])
-	# pd.set_option('display.max_rows', 700)
-	# print(issues[1].tags_df)
+	pd.set_option('display.max_rows', 700)
+	pd.set_option("display.width", None)
+	print(issues[1].tags_df)
 	# print(tag(untagged_issues[0]).tags_df)
 	output = tag(untagged_issues[1]).tags_df
 	print (output)
