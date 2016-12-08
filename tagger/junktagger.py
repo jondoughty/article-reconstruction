@@ -584,32 +584,6 @@ def tag(issue):
     return issue
 
 
-def tag_junk(issue, replace_nan=True, replace_all=False):
-    """
-    Tags any untagged rows in 'function' column as junk (JNK).
-
-    issue: obj
-        Issue object to apply tags to.
-    replace_nan: bool
-        Whether to replace np.nan with JNK.
-    replace_all: bool
-        Whether to replace the tag on other junk coumns with JNK.
-
-    returns: obj
-    """
-    issue = copy.deepcopy(issue)
-    tags = []
-    if replace_nan:
-        tags.append(np.nan)
-    if replace_all:
-        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN"])
-        # tags.extend(["MH", "PH", "BQN", "BQA"])
-
-    for tag in tags:
-        issue.tags_df.function.replace(tag, "JNK", inplace=True)
-    return issue
-
-
 # TODO(ngarg): Determine a better place/method to do this.
 # List of junk classifiers.
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_AT_naive_bayes.pickle", _generate_features_advertisement, ["AT"], _tag_advertisement))

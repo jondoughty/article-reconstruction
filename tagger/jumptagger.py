@@ -76,6 +76,7 @@ def tag(issue):
     issue = copy.deepcopy(issue)
 
     for index, row in issue.tags_df.iterrows():
+        issue.tags_df.loc[index, "jump"] = 0
         if not pd.isnull(row.text):
             jump = _has_page_jump(row.text)
             if jump:
@@ -97,7 +98,10 @@ def main():
         tagged_issues[i].to_csv('jump_test' + str(i) + '.csv')
 
     # Print the accuracy of the results.
-    print_accuracy_tag(issues, tagged_issues, tag="JUMP", jump_col=True, print_incorrect=True)
+    # print_accuracy_tag(issues, tagged_issues, tag="JUMP", jump_col=True, print_incorrect=True)
+
+    compute_jump_metric(issues, tagged_issues)
+
 
 
 if __name__ == "__main__":
