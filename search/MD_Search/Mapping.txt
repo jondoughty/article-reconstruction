@@ -31,6 +31,11 @@
 					"analyzer": "english_analyzer",
 					"search_analyzer": "english_analyzer"
 				},
+				"publication": {
+					"type": "string",
+					"analyzer": "english_analyzer",
+					"search_analyzer": "english_analyzer"
+				},
 				"article_headline": {
 					"type": "string",
 					"analyzer": "english_analyzer",
