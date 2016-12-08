@@ -86,3 +86,14 @@ See the **/examples** directory for an hOCR file and the image it came from. See
   ]
 }
 ```
+
+## Search 
+- Run elasticsearch : Copy search/elasticsearch2.2.0 folder to the server execute following command from bin folder, 
+   
+  ./elsaticsearch -d
+ 
+- Indexing : Index the data by executing the python script from search/MDSearch
+
+  $python3 index.py <path to json_data>
+  
+- Search UI is currently hosted at http://frank.ored.calpoly.edu/MDSearch/index.html  

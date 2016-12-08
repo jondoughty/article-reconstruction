@@ -29,25 +29,25 @@ def search(url):
 
 def main(argv):
 
-    if (len(argv) < 4):
-        print("Usage : Python ES.py data_dir url settings_file")
+    if (len(argv) < 2):
+        print("Usage : Python ES.py data_dir ")
         #python ES.py /NLP/Project_ArticleR/json_output http://localhost:9200/sample/ /NLP/Project_ArticleR/Mapping.txt
         return
 
     data_dir = argv[1]
-    url = argv[2]
-    settings_file = argv[3]
+    url = "http://localhost:9200/sample/"
+    settings_file = "Mapping.txt"
     with open(settings_file, 'r') as settings_f:
         settings = settings_f.read()
 
     createIndex(url, settings)
     indexData(data_dir, url + "/article_search")
 
-    while (True):
-        x = input("Type the search query('q' to quit): ")
-        if x == 'q':
-            break
-        search(url + "_search?q=article_text:" + x)
+    #while (True):
+        #x = input("Type the search query('q' to quit): ")
+        #if x == 'q':
+            #break
+        #search(url + "_search?q=article_text:" + x)
 
 if __name__ == "__main__":
     main(sys.argv)
