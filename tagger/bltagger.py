@@ -21,7 +21,7 @@ def main():
     for path in paths:
         issue = pd.read_csv(path, header = 2, names = columns)
         issue = issue.dropna(how = "all")
-        issue = tag(issue).join(issue.function, rsuffix = "_act")
+        issue = tag(issue, test = True).join(issue.function, rsuffix = "_act")
         print(issue)
         tp += len(issue[(issue.function_act == "BL") &
                         (issue.function == "BL")])
@@ -43,9 +43,10 @@ def main():
     print("Recall", tp / (tp + fn))
 
 
-def tag(issue):
+def tag(issue, test = False):
     issue = copy.deepcopy(issue)
-    issue.function = None
+    if test:
+        issue.function = None
     matched = pd.concat([find_byline(issue), find_description(issue)])
     matched = matched.drop_duplicates().sort_index()
     for i, row in matched.iterrows():
