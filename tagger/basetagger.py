@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import copy
+import math
 import nltk
 import os
 
@@ -121,6 +122,7 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
                       os.path.basename(os.path.normpath(csv_file)))
         # TODO(ngarg): Remove next line. Use anther approach to replace N.
         issue.tags_df.function.replace(np.nan, "N", inplace=True)
+        issue.tags_df.function = issue.tags_df.function.str.strip()
         issues.append(issue)
         issue = copy.deepcopy(issue)
 
@@ -146,7 +148,7 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
 
 
 # TODO(ngarg): Confirm this calculates precision and recall correctly.
-def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
+def print_accuracy_tag(orig_issues, tagged_issues, tag, jump_col=False, print_incorrect=False):
     """
     Prints the precision, recall of the function tag for the given issue.
     Owner: Nupur Garg
@@ -157,6 +159,8 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
         Issue objects with code produced tags.
     tag: str
         Function tag to test.
+    jump_col: bool
+        Compare JUMP column instead of FUNCTION (default: False).
     print_incorrect: bool
         Prints the incorrectly tagged lines (default: False).
 
@@ -171,10 +175,14 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, print_incorrect=False):
     print("============ Tag \'%s\' ============" %tag)
     print("=================================")
     for orig_issue, tagged_issue in zip(orig_issues, tagged_issues):
-        expected_tags = orig_issue.tags_df[orig_issue.tags_df.function == tag]
-        expected_tags_idx = set(expected_tags.index.values)
+        if jump_col:
+            expected_tags = orig_issue.tags_df["jump"]
+            actual_tags = tagged_issue.tags_df["jump"]
+        else:
+            expected_tags = orig_issue.tags_df[orig_issue.tags_df.function == tag]
+            actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.function == tag]
 
-        actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.function == tag]
+        expected_tags_idx = set(expected_tags.index.values)
         actual_tags_idx = set(actual_tags.index.values)
 
         missing_tags = expected_tags_idx - actual_tags_idx
@@ -349,4 +357,94 @@ def create_classifier(issues, classifier_func, features_func, tags,
     full_filename = os.path.join(os.path.abspath(path), filename)
     pfile = open(full_filename, "wb")
     pickle.dump(classifier, pfile)
+
+
+# ===========================================
+# ================= METRICS =================
+# ===========================================
+
+
+def tag_junk(issue, replace_nan=True, replace_all=False):
+    """
+    Tags any untagged rows in 'function' column as junk (JNK).
+
+    issue: obj
+        Issue object to apply tags to.
+    replace_nan: bool
+        Whether to replace np.nan with JNK.
+    replace_all: bool
+        Whether to replace the tag on other junk coumns with JNK.
+
+    returns: obj
+    """
+    issue = copy.deepcopy(issue)
+    tags = []
+    if replace_nan:
+        tags.append(np.nan)
+    if replace_all:
+        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN"])
+
+    for tag in tags:
+        issue.tags_df.function.replace(tag, "JNK", inplace=True)
+    return issue
+
+
+def _function_accuracy(expected_funcs, actual_funcs):
+    length = len(expected_funcs)
+    matches = 0
+    for expected, actual in zip(expected_funcs, actual_funcs):
+        if expected == actual:
+            matches += 1
+    return (matches / length, length - matches)
+
+
+def _jump_accuracy(expected_jumps, actual_jumps):
+    actual_jump_count = 0
+    matches = 0
+    for expected, actual in zip(expected_jumps, actual_jumps):
+        if isinstance(expected, int) and expected != 0:
+            actual_jump_count += 1
+            if expected == actual:
+                matches += 1
+    accuracy = matches / actual_jump_count if actual_jump_count > 0 else 1
+    return (accuracy, actual_jump_count - matches)
+
+
+def compute_function_metric(original_issues, tagged_issues):
+    """
+    Computes the average accuracy of the function tagging, with all junk items
+    labeled as JNK.
+    """
+    original_issues_jnk_tag = [tag_junk(issue, replace_all=True) for issue in original_issues]
+    tagged_issues_jnk_tag = [tag_junk(issue, replace_all=True) for issue in tagged_issues]
+    accuracies = []
+
+    for original_issue, tagged_issue in zip(original_issues_jnk_tag, tagged_issues_jnk_tag):
+        original_vector = original_issue.tags_df["function"].tolist()
+        tagged_vector = tagged_issue.tags_df["function"].tolist()
+        accuracy, num_misses = _function_accuracy(original_vector, tagged_vector)
+        accuracies.append(accuracy)
+
+    avg_accuracy = sum(accuracies) / len(accuracies)
+    return avg_accuracy
+
+
+def compute_jump_metric(original_issues, tagged_issues):
+    """
+    Computes the average accuracy of the jump tagging.
+    """
+    accuracies = []
+
+    for original_issue, tagged_issue in zip(original_issues, tagged_issues):
+        original_vector = original_issue.tags_df["jump"].tolist()
+        tagged_vector = tagged_issue.tags_df["jump"].tolist()
+        accuracy, num_misses = _jump_accuracy(original_vector, tagged_vector)
+        accuracies.append(accuracy)
+
+    return sum(accuracies) / len(accuracies)
+
+
+def compute_article_num_metric(original_issue, tagged_issue):
+    # TODO
+    pass
 

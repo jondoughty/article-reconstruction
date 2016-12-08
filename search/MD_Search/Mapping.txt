@@ -1,0 +1,47 @@
+{
+	"settings": {
+		"analysis": {
+			"filter": {
+				"english_stop": {
+					"type": "stop",
+					"stopwords": "stop_words.txt"
+				},
+				"english_stemmer": {
+					"type": "stemmer",
+					"language": "english"
+				}
+			},
+			"analyzer": {
+				"english_analyzer": {
+					"tokenizer": "standard",
+					"filter": [
+						"lowercase",
+						"english_stop",
+						"english_stemmer"
+					]
+				}
+			}
+		}
+	},
+	"mappings": {
+		"article_search": {
+			"properties": {
+				"article_text": {
+					"type": "string",
+					"analyzer": "english_analyzer",
+					"search_analyzer": "english_analyzer"
+				},
+				"publication": {
+					"type": "string",
+					"analyzer": "english_analyzer",
+					"search_analyzer": "english_analyzer"
+				},
+				"article_headline": {
+					"type": "string",
+					"analyzer": "english_analyzer",
+					"search_analyzer": "english_analyzer"
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,16 @@
 # article-reconstruction
 
+## Running the reconstructor
+
+### With tagged data
+    $ python3 reconstructor.py --tagged --data TAGGED_DATA_DIR
+
+### With raw data
+    $ python3 reconstructor.py --raw --data RAW_DATA_DIR
+
+### For help with reconstructor.py
+    $ python3 reconstructor.py --help
+
 ## Running Taggers
 
   Junk Tagger     python3 -m tagger.junktagger      Ads, classifiers, BQT
@@ -18,17 +29,15 @@
     CT      Comic strip text        junktagger.py
     MH      Masthead                junktagger.py
     PH      Photo caption           junktagger.py
-
-  Not Labeled
-
-    PI      Publication info
-    SH      Section heading
-    HL      Headline
-    BL      Byline
-    NP      Nameplate
-    ME      Meta directives
-    BQT     Block quote text
-    BQN     Block quote name
+    BQN     Block quote name        junktagger.py
+    BQA     Block quote author      junktagger.py
+    BQT     Block quote text        junktagger.py
+    PI      Publication info        pubtagger.py
+    NP      Nameplate               pubtagger.py
+    SH      Section heading         pubtagger.py
+    HL      Headline                hltagger.py
+    BL      Byline                  bltagger.py
+    ME      Meta directives         jumptagger.py
 
 ## Setup
 
@@ -78,3 +87,13 @@ See the **/examples** directory for an hOCR file and the image it came from. See
 }
 ```
 
+## Search 
+- Run elasticsearch : Copy search/elasticsearch2.2.0 folder to the server execute following command from bin folder, 
+   
+  ./elsaticsearch -d
+ 
+- Indexing : Index the data by executing the python script from search/MDSearch
+
+  $python3 index.py <path to json_data>
+  
+- Search UI is currently hosted at http://frank.ored.calpoly.edu/MDSearch/index.html  

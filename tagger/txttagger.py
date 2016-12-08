@@ -112,10 +112,16 @@ def _features_stats_alpha_char_percentage(text):
 
     char_count = len(text)
     alpha_char_count = len([c for c in text if c.isalpha()])
-    percent = alpha_char_count / char_count
+    random_symbol_count = len([c for c in text if c not in string.punctuation and not c.isalpha() and not c.isdigit()])
+    alpha_char_percent = alpha_char_count / char_count if char_count else 0
+    random_symbol_percent = random_symbol_count / char_count if char_count else 0
+
     features.update(create_features_for_ranges(feature_name="alpha_char_percentage",
-                                                variable=percent,
+                                                variable=alpha_char_percent,
                                                 ranges=[.25, .5, .75]))
+    # features.update(create_features_for_ranges(feature_name="random_symbol_percentage",
+    #                                             variable=random_symbol_percent,
+    #                                             ranges=[.25, .5, .75]))
     return features
 
 
@@ -145,6 +151,68 @@ def _features_stats_uppercase(text):
     return features
 
 
+def _check_line_prefix(word):
+    """
+    Determines whether the given word for the sentence prefix.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: boolean
+    """
+    # print("word: %s" %word)
+
+    if word.lower() == "editor":
+        return True
+
+    upper_chars = [c for c in word if c.isupper()]
+    ratio = len(upper_chars) / len(word)
+    # print("ratio %f" %ratio)
+    return ratio > 0.5
+
+
+def _features_sent_prefix(text):
+    """
+    Gets features based on whether the line is in the following format:
+
+        SOMETHING_IN_CAPS -
+        Something_not_in_caps –
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+
+    """
+    features = {}
+
+    words = word_tokenize(text)
+
+    if '“' in text or '”' in text:
+        features["has_quotes"] = True
+
+    if text and text[0] in "-—":
+        features["starts_with_hyphen"] = True
+
+    if len(words) >= 5 and ('-' in words[1:5] or '—' in words[1:5]):
+        if _check_line_prefix(words[0]):
+            # print("\tTXT: " + str(words[0:5]))
+            features["upper_sent_prefix_hyphen"] = True
+        else:
+            # print("\tNONE: " + str(words[0:5]))
+            features["non_upper_sent_prefix_hyphen"] = True
+
+    return features
+
+
+def _features_full_sentence(text):
+    features = {}
+
+    if text[0].isupper() and text[-1] in ".?!":
+        features["full_sentence"] = True
+
+    return features
+
 
 # ========================================
 # ========= CLASSIFIER FUNCTIONS =========
@@ -166,6 +234,9 @@ def _generate_features_txt(row_data):
     features.update(_features_stats_readable_word_percentage(text))
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_alpha_char_percentage(text))
+    features.update(_features_sent_prefix(text))
+    # TODO: Increases recall, reduces precision
+    # features.update(_features_full_sentence(text))
     return features
 
 
@@ -217,19 +288,6 @@ def _tag_txt(row, classifier, features_func):
 
     if pd.isnull(row.function) and not pd.isnull(row.text):
         features = features_func(row)
-
-        # features["func_prev_two"] = row.func_prev_two
-        # features["func_prev"] = row.func_prev
-
-        # If row is directly after HL or BL.
-        # if row.func_prev in valid_funcs:
-        #     features["after_HL_BL"] = True
-
-        # # If previous row is TXT.
-        # if row.func_prev == "TXT":
-        #     print("**PREV_TXT**")
-        #     features["after_TXT"] = 2 if row.func_prev_two == "TXT" else 1
-
         if classifier.classify(features):
             return "TXT"
 
@@ -241,6 +299,64 @@ def _tag_txt(row, classifier, features_func):
 # ==================================
 
 
+def _is_non_text_prefix(text):
+    if len(words) < 5:
+        return False
+
+    if words[0] in '-—':
+        return True
+
+    if '-' in words[1:5] or '—' in words[1:5]:
+        if not _check_line_prefix(words[0]):
+            return True
+
+    for word in words:
+        if '-' in word or '—' in word:
+            return True
+
+    return False
+
+
+def smooth(issue):
+    _setup_surrounding_funcs_references(issue)
+
+    for index, row in issue.tags_df.iterrows():
+        curr_func = row.function if row.function != "TXT" else None
+        valid_prev_funcs = ["TXT", "HL", "BL"]
+
+        # Fill in gaps
+        if (pd.isnull(row.function) and
+            (row.func_prev_two == "TXT" or row.func_next_two == "TXT") and
+            row.func_prev in valid_prev_funcs and # TODO: Try to make this into a feature?
+            row.func_next == "TXT"):
+            issue.tags_df.loc[index, "function"] = "TXT"
+
+        # Remove outliers
+        if (row.function == "TXT" and
+            (row.func_prev_two not in valid_prev_funcs or row.func_next_two != "TXT") and
+            row.func_prev not in valid_prev_funcs and
+            row.func_next != "TXT"):
+            issue.tags_df.loc[index, "function"] = curr_func
+
+        # Revise
+        if not pd.isnull(row.text):
+            words = word_tokenize(row.text)
+            if words:
+                if words[0].islower() == "editor":
+                    issue.tags_df.loc[index, "function"] = "TXT"
+                elif len(words) >= 5 and ('-' in words[1:5] or '—' in words[1:5]):
+                    if not _check_line_prefix(words[0]):
+                        issue.tags_df.loc[index, "function"] = curr_func
+
+            # if len(words) <= 5 and ('from page' in row.text.lower() or 'to page' in row.text.lower()):
+            #     issue.tags_df.loc[index, "function"] = None
+            #
+
+    _drop_surrounding_funcs_references(issue)
+
+    return issue
+
+
 def tag(issue):
     """
     Tags the issue with the TXT tag.
@@ -248,7 +364,7 @@ def tag(issue):
     issue: obj
         Issue object to apply tags to.
     """
-    assert check_tags_exist(issue, ["PI", "HL", "BL", "B", "N", "AT"])
+    assert check_tags_exist(issue, ["PI", "BL", "HL", "N", "B"])
     issue = copy.deepcopy(issue)
 
     filename = _TXTTAGGER_CLASSIFIER[0]
@@ -257,17 +373,7 @@ def tag(issue):
 
     issue.apply_classifier(col="function", filename=filename,
                             features_func=features_func, label_func=label_func)
-
-    # Smoothing
-    _setup_surrounding_funcs_references(issue)
-    for index, row in issue.tags_df.iterrows():
-        # Fill in gaps
-        if pd.isnull(row.function) and row.func_prev == "TXT" and row.func_next == "TXT":
-            issue.tags_df.loc[index, "function"] = "TXT"
-        # Remove outliers
-        if row.function == "TXT" and pd.isnull(row.func_prev) and pd.isnull(row.func_next):
-            issue.tags_df.loc[index, "function"] = None
-    _drop_surrounding_funcs_references(issue)
+    issue = smooth(issue)
 
     return issue
 
@@ -278,7 +384,7 @@ _TXTTAGGER_CLASSIFIER = ("txttagger_TXT_naive_bayes.pickle", _generate_features_
 def main():
     # Get issues with and without tags.
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump"],
-                                         tags=["PI", "HL", "BL", "B", "N", "AT"])
+                                         tags=["PI", "BL", "HL", "N", "B"])
 
     # Create classifier.
     filename = _TXTTAGGER_CLASSIFIER[0]         # "txttagger_TXT_naive_bayes.pickle"
@@ -291,10 +397,15 @@ def main():
 
     # Tag the untagged issues.
     tagged_issues = [tag(issue) for issue in untagged_issues]
+    # for index, issue in enumerate(tagged_issues):
+    #     name = 'txt_test' + str(index) + '.csv'
+    #     issue.to_csv(name)
     tagged_issues[2].to_csv('txt_test.csv')
 
     # Print the accuracy of the results.
-    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=True)
+    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=False)
+
+    compute_function_metric([issues[1]], [tagged_issues[1]])
 
 
 if __name__ == "__main__":
