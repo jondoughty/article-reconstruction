@@ -31,16 +31,13 @@
     PH      Photo caption           junktagger.py
     BQN     Block quote name        junktagger.py
     BQA     Block quote author      junktagger.py
-
-  Not Labeled
-
+    BQT     Block quote text        junktagger.py
     PI      Publication info        pubtagger.py
-    SH      Section heading         ?
+    NP      Nameplate               pubtagger.py
+    SH      Section heading         pubtagger.py
     HL      Headline                hltagger.py
     BL      Byline                  bltagger.py
-    NP      Nameplate               ?
     ME      Meta directives         jumptagger.py
-    BQT     Block quote text        junktagger.py
 
 ## Setup
 

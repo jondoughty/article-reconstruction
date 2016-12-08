@@ -122,6 +122,7 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
                       os.path.basename(os.path.normpath(csv_file)))
         # TODO(ngarg): Remove next line. Use anther approach to replace N.
         issue.tags_df.function.replace(np.nan, "N", inplace=True)
+        issue.tags_df.function = issue.tags_df.function.str.strip()
         issues.append(issue)
         issue = copy.deepcopy(issue)
 
