@@ -65,17 +65,19 @@ def e(error):
 
 
 def find_byline(issue, error = 3):
-    adjs = "|".join(["ASSOCIATED", "STAFF", "MANAGING", "CONTRIBUTING", "COMMENTARY",
-            "SPORTS", "OUTDOOR"])
-    nouns = "|".join(["PRESS", "EDITOR", "WRITER", "REPORTER", "ARTIST"])
-    fmt_str = (r"^(?:(?:(?:STORY)" + e(2) + "\s+)?" +       # "story"
-                    "(?:BY)" + e(1) + "\s+" +               # "by"
-                    "(?:[A-Z]+\s*){{2,3}}" +                # name
-                    "(?:(?:AND)" + e(1) + "\s*" +           # "and"
-                        "(?:[A-Z]+\s*){{2,3}})?)?" +        # name
-                "(?:(?:(?:DAILY|AP)" + e(1) + "\s+)?" +     # "Daily" or "AP"
-                    "(?:(?:{0})" + e(2) + "\s*)?" +         # title adj
-                    "(?:(?:{1})" + e(2) + "\s*)?)?" +       # title noun
+    adjs = "|".join(["ASSOCIATED", "STAFF", "EDITORIAL", "MANAGING",
+                     "CONTRIBUTING", "COMMENTARY", "SPORTS", "OUTDOOR"])
+    nouns = "|".join(["PRESS", "STAFF", "EDITOR", "WRITER", "REPORT",
+                      "REPORTER", "ARTIST"])
+    fmt_str = (r"^(?:(?:(?:STORY)" + e(2) + "\s+)?" +   # "story"
+                    "(?:BY)" + e(1) + "\s+" +           # "by"
+                    "(?:[A-Z]+\s*){{2,3}}" +            # name
+                    "(?:(?:AND)" + e(1) + "\s*" +       # "and"
+                        "(?:[A-Z]+\s*){{2,3}})?)?" +    # name
+                "(?:(?:(?:DAILY|AP)" + e(1) + "\s+)?" + # "Daily" or "AP"
+                    "(?:(?:{0})" + e(2) + "\s*)?" +     # title adj
+                    "(?:(?:{1})" + e(2) + "\s*)?)?" +   # title noun
+                "(?:SPEACIAL TO THE DAILY)?" +          # "Special to the Daily"
                 "$").format(adjs, nouns)
     pattern = regex.compile(fmt_str, flags = regex.ENHANCEMATCH)
     matched = []
@@ -96,18 +98,16 @@ def find_description(issue):
     fmt_str = (r"^(?:[A-Z]+\s*){{2,3}}" +   # name
                 "(?:IS A)\s*" +             # "is a"
                 "(?:CAL POLY\s*)?" +        # "Cal Poly"
-                "(?:[A-Z]+\s*){{1,2}}" +    # title adj
+                "([A-Z]+\s*){{1,2}}" +      # title adj
                 "(?:{0})" +                 # title noun
+                "(?:AND\s+.+)?" +           # "and ..."
                 "$").format(nouns)
-#    print(fmt_str)
     pattern = regex.compile(fmt_str, flags = regex.ENHANCEMATCH)
     matched = []
     for _, row in issue.iterrows():
         if pd.notnull(row.text):
-            text = remove_punctuation(row.text)
+            text = remove_punctuation(row.text).strip()
             match = regex.match(pattern, text, concurrent = True)
-#            if row.function == "BL" and not match:
-#                print(text)
             if match:
                 matched.append(row)
     return pd.DataFrame(matched)
