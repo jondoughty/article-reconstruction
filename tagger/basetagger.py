@@ -176,8 +176,8 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, jump_col=False, print_in
     print("=================================")
     for orig_issue, tagged_issue in zip(orig_issues, tagged_issues):
         if jump_col:
-            expected_tags = orig_issue.tags_df["jump"]
-            actual_tags = tagged_issue.tags_df["jump"]
+            expected_tags = orig_issue.tags_df[orig_issue.tags_df.jump.notnull()]
+            actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.jump.notnull()]
         else:
             expected_tags = orig_issue.tags_df[orig_issue.tags_df.function == tag]
             actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.function == tag]
@@ -198,12 +198,12 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, jump_col=False, print_in
             print("----------- %s -----------" %orig_issue.filename)
             if missing_tags:
                 print("\t\t----------- Missing -----------")
-                diff = tagged_issue.tags_df.loc[list(missing_tags)][["text", "function"]]
+                diff = tagged_issue.tags_df.loc[list(missing_tags)][["text", "function", "jump"]]
                 diff.sort_index(inplace=True)
                 print(diff)
             if extra_tags:
                 print("\t\t----------- Extra -----------")
-                diff = orig_issue.tags_df.loc[list(extra_tags)][["text", "function"]]
+                diff = orig_issue.tags_df.loc[list(extra_tags)][["text", "function", "jump"]]
                 diff.sort_index(inplace=True)
                 print(diff)
 
