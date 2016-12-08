@@ -8,7 +8,7 @@ import glob
 import sys
 import re
 
-import ocrmerge
+#import ocrmerge
 from tagger.basetagger import *
 import tagger.pubtagger as pbt
 import tagger.hltagger as hlt
@@ -43,11 +43,8 @@ def main():
     # generate list of untagged Issues()
     issue_list = gen_issue_list(args, paths)
 
-    # TODO Call ocrmerge here?
-    if not (args.tagged_data):
-        print(args.data_dir)
-        print(paths)
-        ocrmerge.get_location_data(issue_list, image_dir="image_data", txt_dir=args.data_dir[0], hocr_dir="hOCR_data")
+    #if not (args.tagged_data):
+        #ocrmerge.get_location_data(issue_list, image_dir="image_data", txt_dir=args.data_dir[0], hocr_dir="hOCR_data")
 
     # dictionary for tagged issues
     issue_dict = gen_issue_dict(args, issue_list)

@@ -9,6 +9,7 @@ from distutils.spawn import find_executable
 import glob
 import os
 import re
+import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
@@ -34,6 +35,7 @@ class Word:
         self.bbox = BBox(self._propertyMap["bbox"])
         self.confidence = self._propertyMap["x_wconf"][0]
 
+
 def run_tesseract(img_path, out_hocr_path):
 
     if not find_executable("tesseract"):
@@ -41,7 +43,25 @@ def run_tesseract(img_path, out_hocr_path):
 
     #Example:
     #tesseract ..\image_data\ua-nws_00000991_001.tif -l eng out hocr
-    subprocess.run(["tesseract", img_path, re.sub(r"\.hocr$", "", hocr_path), "-l", "eng", "hocr"]);
+    print("Running tesseract on", img_path)
+    subprocess.run(["tesseract", img_path, re.sub(r"\.hocr$", "", out_hocr_path), "-l", "eng", "hocr"]);
+    print("tesseract complete")
+
+def get_tess_words(img_path, hocr_path):
+
+    #Skip tesseract if already run because image and tesseract settings
+    #unlikely to change
+    if not os.path.isfile(hocr_path):
+        run_tesseract(img_path, hocr_path)
+
+    hocr_tree = ET.parse(hocr_path)
+    tree_root = hocr_tree.getroot()
+    raw_nodes = tree_root.findall(r".//*[@class='ocrx_word']")
+    words = []
+    for node in raw_nodes:
+        words.append(Word(node))
+    return words
+
 
 def get_location_data(issue_list, image_dir, txt_dir, hocr_dir):
     print("Starting get_location_data()")
@@ -50,45 +70,45 @@ def get_location_data(issue_list, image_dir, txt_dir, hocr_dir):
     vocab = Vocabulary()
     print(issue_list)
     for (pub_info, issue) in issue_list:
-        print("Iterating through issue ", pub_info)
+        print("Iterating through issue", pub_info)
 
         abbyy_line_idx_to_bbox_info = {}
         abbyy_lines = open(issue.filename, encoding="utf-8").readlines()
 
-        images_glob = os.path.join(image_dir, issue.get_issue_id() + "*.tif")
         nodes = []
-        for (img_path) in glob.glob(images_glob).sort():
-            str_img_idx = re.search(r"_(\d{3})\.tif$", img_path).group(1)
+        images_glob = os.path.join(image_dir, "*" + issue.get_issue_id() + "*.tif")
+        print(images_glob)
+        image_paths = glob.glob(images_glob)
+        print(image_paths)
+        for (img_path) in image_paths:
+            str_img_idx = re.match(r"^.*_(\d{3})\.tif$", img_path).group(1)
             hocr_path = os.path.join(hocr_dir, "tess_" + issue.get_issue_id() + "_" + str_img_idx + ".hocr")
+            nodes += get_tess_words(img_path, hocr_path)
 
-            run_tesseract(img_path, hocr_path)
-
-            hocr_tree = ET.parse(hocr_path)
-            tree_root = hocr_tree.getroot()
-            raw_nodes = tree_root.findall(r".//*[@class='ocrx_word']")
-            for node in raw_nodes:
-                nodes.append(Word(node))
-
-
+        
         # Map t_page idx to nodes idx for letters that begin words
         t_page_idx_to_node_idx = {}
         i = 0
         t_page = ""
+        #print("nodes:", nodes)
         for j, node in enumerate(nodes):
             t_page_idx_to_node_idx[i] = j
             i += len(node.text)
             t_page += node.text
+        #print (t_page)
 
         #TODO maybe the whole rest of the function could be done encoded?
-        t_page_encoded = vocab.encodeSequence(t_page)
+        t_page_seq = Sequence(t_page)
+        t_page_encoded = vocab.encodeSequence(t_page_seq)
         scoring = SimpleScoring(2, -1)
         aligner = GlobalSequenceAligner(scoring, -2)
 
         # TODO maybe do a check here that t_page matches tree_root.itertext()
 
-        for l_num, a_line in abbyy_lines:
+        for l_num, a_line in enumerate(abbyy_lines):
             #TODO filter alignment quality here
-            start, align_t, align_a = alignment(a_line, t_page, t_page_encoded, vocab, aligner)
+            #print(a_line)
+            start, align_t, align_a = align(a_line, t_page_seq, t_page_encoded, vocab, aligner)
 
             # Map t_align idx to t_page idx
             t_align_idx_to_t_page_idx = {}
@@ -116,10 +136,12 @@ def get_location_data(issue_list, image_dir, txt_dir, hocr_dir):
 
 #TODO make sure the gap character is set right, see sequence.py
 #start, align_t, align_a = alignment(a_line, t_page)
-def align(first, second, second_encoded, aligner):
-    first_encoded = vocab.encodeSequence(first)
+def align(first, second_seq, second_encoded, vocab, aligner):
+    first_seq = Sequence(first)
+    first_encoded = vocab.encodeSequence(first_seq)
     score, encodeds = aligner.align(first_encoded, second_encoded, backtrace=True)
     alignment = vocab.decodeSequenceAlignment(encodeds[0])
+    #print("alignment:", alignment)
     firstSequence = alignment.first
     secondSequence = alignment.second
     align_t = secondSequence

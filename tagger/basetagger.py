@@ -8,6 +8,7 @@ import copy
 import math
 import nltk
 import os
+import re
 
 
 # TODO(ngarg): CHANGE 'NA' to 'N' becuase pandas processes 'NA' as np.nan
@@ -74,7 +75,7 @@ class Issue(object):
         self.tags_df.to_csv(filename)
 
     def get_issue_id(self):
-        return re.search(r"\d{8}\.txt$", self.filename).group(0)
+        return re.search(r"(\d{8})\.txt$", self.filename).group(1)
 
 
 def check_tags_exist(issue, tags):
