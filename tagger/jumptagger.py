@@ -9,12 +9,12 @@ import re
 
 _REQUIRED_TAGS = ["PI", "BL", "HL", "N", "B", "AT", "OT", "TXT"]
 _FORMAT_STRINGS = [
-    ("(From page (\d{1,2})){e<=3}", 2, -1),        # (format_string, group_num, direction)
+    ("(See page (\d{1,2})){e<=1}", 2, -1),         # (format_string, group_num, direction)
+    ("(From page (\d{1,2})){e<=3}", 2, -1),
     ("(Please see page (\d{1,2})){e<=4}", 2, 1),
     ("(Please saa page (\d{1,2})){e<=5}", 2, 1),
-    ("(See ([\w\.]{1,10} ?(& )?){1,3}, page (\d{1,2})){e<=2}", 4, 1),
-    ("(See \w{1,10}, (\w{1,10}) page){e<=2}", 2, 1),
-    # ("((Front) page){e<=1}", 2, 1)
+    ("(See\s{1,3}([\w\.\-’]{1,10} ?(& )?){1,3}, page (\d{1,2})){e<=2}", 4, 1),
+    ("(See\s{1,3}\w{1,10}, (\w{1,10}) page){e<=2}", 2, 1),
 ]
 
 
@@ -38,10 +38,7 @@ def _get_jump_with_pattern(text, format_tuple):
     group = format_tuple[1]
     direction = format_tuple[2]
 
-    # text = "Frontpage*"
     match = _match_pattern(text, fmt_str)
-    # print(match.fuzzy_counts)
-    # exit()
     if match and match[group]:
         page = match[group]
         if page.isdigit() and int(page) < 20:
@@ -61,11 +58,16 @@ def _has_page_jump(text):
 
     returns: bool
     """
+    # Determines matches with format strings.
     for format_tuple in _FORMAT_STRINGS:
         jump = _get_jump_with_pattern(text, format_tuple)
         if jump:
-            # print(jump)
             return jump
+
+    # Recognizes common OCR for "From page 1".
+    match = _match_pattern(text, r"(^Frompagel$){e<=3}")
+    if match and text[-1] == 'l':
+        return -1
 
 
 def tag(issue):
@@ -86,7 +88,7 @@ def tag(issue):
         issue.tags_df.loc[index, "jump"] = '0'
 
         # If text is not null then search for JUMP.
-        if not pd.isnull(row.text) and (pd.isnull(row.function) or row.function == "TXT"):
+        if not pd.isnull(row.text):
             text = row.text.strip()
             jump = _has_page_jump(text)
             if jump:
@@ -96,7 +98,6 @@ def tag(issue):
                 if pd.isnull(row.function):
                     is_ME = len(text.split()) < 5
                     issue.tags_df.loc[index, "function"] = "ME" if is_ME else "TXT"
-
     return issue
 
 
