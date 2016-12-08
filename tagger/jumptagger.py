@@ -14,6 +14,7 @@ _FORMAT_STRINGS = [
     ("(Please saa page (\d{1,2})){e<=5}", 2, 1),
     ("(See ([\w\.]{1,10} ?(& )?){1,3}, page (\d{1,2})){e<=2}", 4, 1),
     ("(See \w{1,10}, (\w{1,10}) page){e<=2}", 2, 1),
+    # ("((Front) page){e<=1}", 2, 1)
 ]
 
 
@@ -37,7 +38,7 @@ def _get_jump_with_pattern(text, format_tuple):
     group = format_tuple[1]
     direction = format_tuple[2]
 
-    # text = "I-rom Pag* 2"
+    # text = "Frontpage*"
     match = _match_pattern(text, fmt_str)
     # print(match.fuzzy_counts)
     # exit()
@@ -77,6 +78,7 @@ def tag(issue):
     return: obj
     """
     # assert check_tags_exist(issue, _REQUIRED_TAGS)
+    print("Tagging %s..." %issue.filename)
 
     # Labels rows.
     issue = copy.deepcopy(issue)
@@ -84,7 +86,7 @@ def tag(issue):
         issue.tags_df.loc[index, "jump"] = '0'
 
         # If text is not null then search for JUMP.
-        if not pd.isnull(row.text):
+        if not pd.isnull(row.text) and (pd.isnull(row.function) or row.function == "TXT"):
             text = row.text.strip()
             jump = _has_page_jump(text)
             if jump:
@@ -103,27 +105,20 @@ def main():
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump"],
                                          tags=_REQUIRED_TAGS)
 
-    # Tests a single issue.
-    # idx = len(issues)-1
-    # issue = untagged_issues[idx]
-    # issue = tag(issue)
-    # print_accuracy_tag([issues[idx]], [issue], tag="JUMP", jump_col=True, print_incorrect=True)
-    # issue.to_csv('test1.csv')
-    # exit()
-
     # Tags the untagged issues.
+    print("Tagging issues...")
     tagged_issues = [tag(issue) for issue in untagged_issues]
 
     # Prints the tags for the issues.
+    print("Printing issues...")
     for idx, issue in enumerate(tagged_issues):
         print(idx, issue.filename)
         issue.to_csv('jump_test' + str(idx) + '.csv')
 
     # Print the accuracy of the results.
+    print("Calculating accuracy...")
     print_accuracy_tag(issues, tagged_issues, tag="JUMP", jump_col=True, print_incorrect=True)
-
     compute_jump_metric(issues, tagged_issues)
-
 
 
 if __name__ == "__main__":
