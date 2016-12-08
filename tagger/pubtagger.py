@@ -19,37 +19,32 @@ def main():
     paths = glob.glob("tagged_data/*.csv")
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
     content_tags = ["HL", "BL", "TXT"]
+    tp = fp = fn = 0
     for path in paths:
-#    for path in paths[:1] + paths[2:]:
-#    if True:
-#        import sys
-#        path = paths[int(sys.argv[1])]
-        print(path)
         issue = pd.read_csv(path, header = 2, names = columns)
-        matched = pd.concat([find_volume(issue), find_page_info(issue),
-                             find_date(issue), find_pub_name(issue)])
-        matched = matched.drop_duplicates().sort_index()
-        actual = issue[issue.function == "PI"]
-        print("True Positives:")
-        print(matched[~matched.function.isin(content_tags)])
-        print("False Positives:")
-        print(matched[matched.function.isin(content_tags)])
-        print("False Negatives:")
-        print(actual[~actual.isin(matched)].dropna())
-        print("\n")
-#    issue = pd.read_csv(path, header = 2, names = columns)
-    #TODO if ocr-aug option: "-o image1.tiff image2.tiff image3.tiff"
-    # then call ocrmerge.py and get back box data
-#    tag(issue)
+        issue = issue.dropna(how = "all")
+        issue = tag(issue)
+        tp += len(issue[(issue.function == "PI") &
+                        (issue.prediction == "PI")])
+        fp += len(issue[(issue.function.isin(content_tags)) &
+                        (issue.prediction == "PI")])
+        fn += len(issue[(issue.function == "PI") &
+                        (issue.prediction != "PI")])
+    print("Precision", tp / (tp + fp))
+    print("Recall", tp / (tp + fn))
 
 
 def tag(issue):
     issue = copy.deepcopy(issue)
+    matched = pd.concat([find_volume(issue), find_page_info(issue),
+                         find_date(issue), find_pub_name(issue)])
+    matched = matched.drop_duplicates().sort_index()
+    predictions = ["PI" if i in matched.index else None for i in issue.index]
+    issue["prediction"] = predictions
     return issue
 
 
 def remove_punctuation(text):
-#    text = text.translate(str.maketrans("", "", string.punctuation))
     table = str.maketrans(string.punctuation, " " * len(string.punctuation))
     return text.translate(table).strip().upper()
 
@@ -78,8 +73,8 @@ def find_volume(issue, error = 3):
 
 def find_page_info(issue, error = 1):
     err_str = "{{s<={0},i<=1,d<=1,e<={0}}}".format(error)
-    fmt_str = (r"(?:^(?:PAGE){0}\s*" +
-                ".{{1,2}}" +
+    fmt_str = (r"(?:^(?:PAGE){0}\s*" +      # "Page"
+                ".{{1,2}}" +                # "page number"
                 "$){0}").format(err_str)
     pattern = regex.compile(fmt_str, flags = regex.ENHANCEMATCH)
     matched = []
@@ -155,9 +150,9 @@ def find_date(issue, error = 3):
 #    return (dow, month)
 
 
-def edit_match(match, candidates):
-    return min(candidates,
-               key = lambda candidate: distance.edit_distance(match, candidate))
+#def edit_match(match, candidates):
+#    return min(candidates,
+#               key = lambda candidate: distance.edit_distance(match, candidate))
 
 
 if __name__ == "__main__":
