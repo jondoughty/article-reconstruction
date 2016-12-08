@@ -16,7 +16,7 @@
 14,1,1,"TXT","8",0,0,"   “We won’t even consider bidding, which means Concerts is at a standstill,’’ remarked Morales. ""It's very frustrating for the committee because we haven’t been able to do anything about concerts. As a result we’re going to lose out on a lot of acts.’’"
 15,1,1,"TXT","9",0,0,"   Morales said the performers that are available before June have been finalizing their tour dates over the past two weeks. As a consequence. Cal Poly’s, chance of contracting one of these acts is getting slimmer as they wait for the Facility Uae Committee to makes decision."
 16,1,1,"ME",0,5,0,"                                                                                                                                                                                       Please see page 5"
-17,1,0,"OT",0,0,0,"   A broken down press in University Graphics Systems prevented Tuesday’s Mustang Daily from being printed. For that reason, the Valentine's Day classified advertisements are being run today. Please see page 6 for a belated valentine greeting."
+17,1,0,"OT",0,"6",0,"   A broken down press in University Graphics Systems prevented Tuesday’s Mustang Daily from being printed. For that reason, the Valentine's Day classified advertisements are being run today. Please see page 6 for a belated valentine greeting."
 18,1,2,"HL",0,0,0,"Six more instructors arrested in latest of Diabto protests"
 19,1,2,"BL",0,0,0,"by Jaaaa Chavarria"
 20,1,2,"BL",0,0,0,"Staff Witter"
@@ -182,7 +182,7 @@
 180,5,6,"PH",0,0,0,"The group X was one of few this year able to perform in the Cal Poly main gym."
 181,0,0,"NA",0,0,0,"U__n_______"
 182,0,0,"NA",0,0,0,"r ~ ""■ny vess"
-183,5,1,"TXT",10,0,0,"V** .vi
+183,5,1,"TXT",10,"-1",0,"V** .vi
 
   From page 1
 

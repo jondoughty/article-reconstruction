@@ -8,6 +8,7 @@ import glob
 import sys
 import re
 
+#import ocrmerge
 from tagger.basetagger import *
 import tagger.pubtagger as pbt
 import tagger.hltagger as hlt
@@ -32,14 +33,18 @@ def main():
     # set panda options
     set_pd_options()
 
+    #TODO set a global setting instead of just filetype so other code can use it
     # get type of file we are working with (csv for tagged data, txt for raw)
     file_type = '*.csv' if args.tagged_data else '*.txt'
 
     # get all files in specified directory
-    paths = glob.glob(args.data_dir[0] + file_type)
+    paths = glob.glob(os.path.join(args.data_dir[0], file_type))
 
     # generate list of untagged Issues()
     issue_list = gen_issue_list(args, paths)
+
+    #if not (args.tagged_data):
+        #ocrmerge.get_location_data(issue_list, image_dir="image_data", txt_dir=args.data_dir[0], hocr_dir="hOCR_data")
 
     # dictionary for tagged issues
     issue_dict = gen_issue_dict(args, issue_list)
@@ -83,14 +88,19 @@ def gen_issue_list(args, paths):
         if args.raw_data:
             # read in raw txt and convert to df
             df = gen_blank_df(path, columns)
+            # Wrap df with in Issue()
+            # TODO: add pub_info to Issue()
+            issue = Issue(df, path)
 
         elif args.tagged_data:
             # read in the csv file and store as df
             df = pd.read_csv(path, header=2, names=columns)
+            # Wrap df with in Issue()
+            # TODO: add pub_info to Issue()
+            issue = Issue(df)
 
-        # Wrap df with in Issue() and add to list with publication info
-        # TODO: add pub_info to Issue()
-        issue_list.append((pub_info, Issue(df)))
+        # Add to list with publication info
+        issue_list.append((pub_info, issue))
 
     return issue_list
 
@@ -102,7 +112,7 @@ def gen_blank_df(txt_path, columns):
     df = pd.DataFrame(columns=columns)
 
     # gata data in lines variable
-    with open(txt_path, 'r') as file_in:
+    with open(txt_path, 'r', encoding="utf-8") as file_in:
         lines = [line for line in file_in.readlines()]
 
     df['text'] = lines
@@ -226,7 +236,9 @@ def json_dump(issue_dict):
 id_count = 0
 def get_id():
     # TODO: will need to persist the last ID number used for creating
-    # additional JSON output
+    # additional JSON output.
+    # TODO Maybe use a random number or GUID instead? Something
+    # like this? https://stackoverflow.com/questions/534839/how-to-create-a-guid-uuid-in-python#534851
     global id_count
     id_count += 1
     return str(id_count)

@@ -4,14 +4,17 @@
 from tagger.basetagger import *
 
 import regex
+import re
 
 
-_REQUIRED_TAGS = ["PI", "BL", "HL", "N", "B", "AT", "TXT"]
+_REQUIRED_TAGS = ["PI", "BL", "HL", "N", "B", "AT", "OT", "TXT"]
 _FORMAT_STRINGS = [
-    ("(From page (\d{1,2})){e<=2}", 2, -1),        # (format_string, group_num, direction)
+    ("(See page (\d{1,2})){e<=1}", 2, -1),         # (format_string, group_num, direction)
+    ("(From page (\d{1,2})){e<=3}", 2, -1),
     ("(Please see page (\d{1,2})){e<=4}", 2, 1),
-    ("(See \w{1,10}, page (\d{1,2})){e<=2}", 2, 1),
-    ("(See \w{1,10}, (\w{1,10}) page){e<=2}", 2, 1),
+    ("(Please saa page (\d{1,2})){e<=5}", 2, 1),
+    ("(See\s{1,3}([\w\.\-’]{1,10} ?(& )?){1,3}, page (\d{1,2})){e<=2}", 4, 1),
+    ("(See\s{1,3}\w{1,10}, (\w{1,10}) page){e<=2}", 2, 1),
 ]
 
 
@@ -55,10 +58,16 @@ def _has_page_jump(text):
 
     returns: bool
     """
+    # Determines matches with format strings.
     for format_tuple in _FORMAT_STRINGS:
         jump = _get_jump_with_pattern(text, format_tuple)
         if jump:
             return jump
+
+    # Recognizes common OCR for "From page 1".
+    match = _match_pattern(text, r"(^Frompagel$){e<=3}")
+    if match and text[-1] == 'l':
+        return -1
 
 
 def tag(issue):
@@ -70,21 +79,25 @@ def tag(issue):
 
     return: obj
     """
-    assert check_tags_exist(issue, _REQUIRED_TAGS)
+    # assert check_tags_exist(issue, _REQUIRED_TAGS)
+    print("Tagging %s..." %issue.filename)
 
     # Labels rows.
     issue = copy.deepcopy(issue)
-
     for index, row in issue.tags_df.iterrows():
-        issue.tags_df.loc[index, "jump"] = 0
-        if not pd.isnull(row.text):
-            jump = _has_page_jump(row.text)
-            if jump:
-                issue.tags_df.loc[index, "jump"] = jump
-                if pd.isnull(row.function):
-                    is_ME = len(row.text.split()) < 5
-                    issue.tags_df.loc[index, "function"] = "ME" if is_ME else "TXT"
+        issue.tags_df.loc[index, "jump"] = '0'
 
+        # If text is not null then search for JUMP.
+        if not pd.isnull(row.text):
+            text = row.text.strip()
+            jump = _has_page_jump(text)
+            if jump:
+                issue.tags_df.loc[index, "jump"] = str(jump)
+
+                # If 'function' column is not null set based on number of words.
+                if pd.isnull(row.function):
+                    is_ME = len(text.split()) < 5
+                    issue.tags_df.loc[index, "function"] = "ME" if is_ME else "TXT"
     return issue
 
 
@@ -92,16 +105,21 @@ def main():
     # Gets issues with and without tags.
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump"],
                                          tags=_REQUIRED_TAGS)
+
     # Tags the untagged issues.
+    print("Tagging issues...")
     tagged_issues = [tag(issue) for issue in untagged_issues]
-    for i in range(len(tagged_issues)):
-        tagged_issues[i].to_csv('jump_test' + str(i) + '.csv')
+
+    # Prints the tags for the issues.
+    print("Printing issues...")
+    for idx, issue in enumerate(tagged_issues):
+        print(idx, issue.filename)
+        issue.to_csv('jump_test' + str(idx) + '.csv')
 
     # Print the accuracy of the results.
-    # print_accuracy_tag(issues, tagged_issues, tag="JUMP", jump_col=True, print_incorrect=True)
-
+    print("Calculating accuracy...")
+    print_accuracy_tag(issues, tagged_issues, tag="JUMP", jump_col=True, print_incorrect=True)
     compute_jump_metric(issues, tagged_issues)
-
 
 
 if __name__ == "__main__":
