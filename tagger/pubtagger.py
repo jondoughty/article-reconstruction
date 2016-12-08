@@ -46,6 +46,7 @@ def main():
 
 def tag(issue):
     issue = copy.deepcopy(issue)
+    issue = issue.tags_df
     issue.page = None
     issue.function = None
     matched = pd.concat([find_volume(issue), find_page_info(issue),

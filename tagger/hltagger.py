@@ -47,6 +47,7 @@ def main():
 
 def tag(issue, test = False):
     issue = copy.deepcopy(issue)
+    issue = issue.tags_df
     if test:
         issue.function = None
     matched = pd.concat([find_headline(issue)])
