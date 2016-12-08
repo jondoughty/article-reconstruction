@@ -3,6 +3,7 @@
 
 import copy
 import glob
+import pprint
 import regex
 import string
 
@@ -14,6 +15,8 @@ from tagger.basetagger import *
 def main():
     pd.set_option("display.width", None)
     pd.set_option("display.max_rows", None)
+#    get_pos_patterns()
+#    return
     paths = glob.glob("tagged_data/*.csv")
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
     content_tags = ["BL", "TXT"]
@@ -21,22 +24,22 @@ def main():
     for path in paths:
         issue = pd.read_csv(path, header = 2, names = columns)
         issue = issue.dropna(how = "all")
-        issue = tag(issue)
-        tp += len(issue[(issue.function == "HL") &
-                        (issue.prediction == "HL")])
-        fp += len(issue[(issue.function.isin(content_tags)) &
-                        (issue.prediction == "HL")])
-        fn += len(issue[(issue.function == "HL") &
-                        (issue.prediction != "HL")])
+        issue = tag(issue).join(issue.function, rsuffix = "_act")
+        tp += len(issue[(issue.function_act == "HL") &
+                        (issue.function == "HL")])
+        fp += len(issue[(issue.function_act.isin(content_tags)) &
+                        (issue.function == "HL")])
+        fn += len(issue[(issue.function_act == "HL") &
+                        (issue.function != "HL")])
         print("\n\nTrue Positives:")
-        print(issue[(issue.function == "HL") &
-                        (issue.prediction == "HL")])
+        print(issue[(issue.function_act == "HL") &
+                    (issue.function == "HL")])
         print("\n\nFalse Positives:")
-        print(issue[(issue.function.isin(content_tags)) &
-                        (issue.prediction == "HL")])
+        print(issue[(issue.function_act.isin(content_tags)) &
+                    (issue.function == "HL")])
         print("\n\nFalse Negatives:")
-        print(issue[(issue.function == "HL") &
-                        (issue.prediction != "HL")])
+        print(issue[(issue.function_act == "HL") &
+                    (issue.function != "HL")])
         print("\n\n\n")
     print("Precision", tp / (tp + fp))
     print("Recall", tp / (tp + fn))
@@ -44,10 +47,12 @@ def main():
 
 def tag(issue):
     issue = copy.deepcopy(issue)
+    issue.function = None
     matched = pd.concat([find_headline(issue)])
     matched = matched.drop_duplicates().sort_index()
-    predictions = ["HL" if i in matched.index else None for i in issue.index]
-    issue["prediction"] = predictions
+    for i, row in matched.iterrows():
+        if issue.loc[i].function is None:
+            issue.set_value(i, "function", "HL")
     return issue
 
 
@@ -66,15 +71,40 @@ def find_headline(issue):
         if i > issue.index.min():
             prev = issue.loc[i - 1]
             if pd.notnull(prev.text):
-                is_hl = (pd.isnull(prev.function) or \
-                         prev.function not in ["PI", "BL"]) and \
-                        "." not in prev.text and len(prev.text) < 80 and \
-                        (row.function == "BL" or \
-                         (len(prev.text.split()) > 1 and \
-                          len(prev.text.split()) <= 6))
-                if is_hl:
-                    matched.append(prev)
+                tokens = nltk.word_tokenize(prev.text)
+                if len(tokens) > 1 and len(tokens) < 10:
+                    pos_tags = [pos for _, pos in nltk.pos_tag(tokens, tagset = "universal")]
+                    is_hl = (pd.isnull(prev.function) or \
+                             prev.function not in ["PI", "BL"]) and \
+                            "." not in prev.text and len(prev.text) < 80 and \
+                            pos_tags[0] == "NOUN" and pos_tags.count("NOUN") > 1
+#                            (row.function == "BL")
+                    if is_hl:
+                        matched.append(prev)
     return pd.DataFrame(matched)
+
+
+def get_pos_patterns():
+    paths = glob.glob("tagged_data/*.csv")
+    columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
+    hl_pos_sent_list = []
+    txt_pos_sent_list = []
+    for path in paths:
+        issue = pd.read_csv(path, header = 2, names = columns)
+        issue = issue.dropna(how = "all")
+        for _, row in issue.iterrows():
+            if pd.notnull(row.text):
+                if row.function == "HL" or row.function == "TXT":
+                    tokens = nltk.word_tokenize(row.text)
+                    if len(tokens) < 10:
+                        pos_tags = nltk.pos_tag(tokens, tagset = "universal")
+                        if row.function == "HL":
+                            hl_pos_sent_list.append([pos for _, pos in pos_tags])
+                        elif row.function == "TXT":
+                            txt_pos_sent_list.append([pos for _, pos in pos_tags])
+    pprint.pprint(dict(nltk.FreqDist(tuple(pos) for pos in hl_pos_sent_list).most_common(40)))
+    print("\n")
+    pprint.pprint(dict(nltk.FreqDist(tuple(pos) for pos in txt_pos_sent_list).most_common(40)))
 
 
 if __name__ == "__main__":

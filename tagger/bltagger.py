@@ -21,22 +21,23 @@ def main():
     for path in paths:
         issue = pd.read_csv(path, header = 2, names = columns)
         issue = issue.dropna(how = "all")
-        issue = tag(issue)
-        tp += len(issue[(issue.function == "BL") &
-                        (issue.prediction == "BL")])
-        fp += len(issue[(issue.function.isin(content_tags)) &
-                        (issue.prediction == "BL")])
-        fn += len(issue[(issue.function == "BL") &
-                        (issue.prediction != "BL")])
+        issue = tag(issue).join(issue.function, rsuffix = "_act")
+        print(issue)
+        tp += len(issue[(issue.function_act == "BL") &
+                        (issue.function == "BL")])
+        fp += len(issue[(issue.function_act.isin(content_tags)) &
+                        (issue.function == "BL")])
+        fn += len(issue[(issue.function_act == "BL") &
+                        (issue.function != "BL")])
         print("\n\nTrue Positives:")
-        print(issue[(issue.function == "BL") &
-                        (issue.prediction == "BL")])
+        print(issue[(issue.function_act == "BL") &
+                    (issue.function == "BL")])
         print("\n\nFalse Positives:")
-        print(issue[(issue.function.isin(content_tags)) &
-                        (issue.prediction == "BL")])
+        print(issue[(issue.function_act.isin(content_tags)) &
+                    (issue.function == "BL")])
         print("\n\nFalse Negatives:")
-        print(issue[(issue.function == "BL") &
-                        (issue.prediction != "BL")])
+        print(issue[(issue.function_act == "BL") &
+                    (issue.function != "BL")])
         print("\n\n\n")
     print("Precision", tp / (tp + fp))
     print("Recall", tp / (tp + fn))
@@ -44,10 +45,12 @@ def main():
 
 def tag(issue):
     issue = copy.deepcopy(issue)
+    issue.function = None
     matched = pd.concat([find_byline(issue), find_description(issue)])
     matched = matched.drop_duplicates().sort_index()
-    predictions = ["BL" if i in matched.index else None for i in issue.index]
-    issue["prediction"] = predictions
+    for i, row in matched.iterrows():
+        if issue.loc[i].function is None:
+            issue.set_value(i, "function", "BL")
     return issue
 
 
