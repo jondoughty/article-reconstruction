@@ -1,0 +1,155 @@
+[2016-10-27 17:23:06,220][INFO ][node                     ] [Spider Doppelganger] version[2.2.0], pid[8316], build[8ff36d1/2016-01-27T13:32:39Z]
+[2016-10-27 17:23:06,221][INFO ][node                     ] [Spider Doppelganger] initializing ...
+[2016-10-27 17:23:06,618][INFO ][plugins                  ] [Spider Doppelganger] modules [lang-expression, lang-groovy], plugins [], sites []
+[2016-10-27 17:23:06,649][INFO ][env                      ] [Spider Doppelganger] using [1] data paths, mounts [[OS (C:)]], net usable_space [407.7gb], net total_space [466.1gb], spins? [unknown], types [NTFS]
+[2016-10-27 17:23:06,649][INFO ][env                      ] [Spider Doppelganger] heap size [910.5mb], compressed ordinary object pointers [true]
+[2016-10-27 17:23:08,301][INFO ][node                     ] [Spider Doppelganger] initialized
+[2016-10-27 17:23:08,301][INFO ][node                     ] [Spider Doppelganger] starting ...
+[2016-10-27 17:23:08,539][INFO ][transport                ] [Spider Doppelganger] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-27 17:23:08,547][INFO ][discovery                ] [Spider Doppelganger] elasticsearch/msJsBR8eSiaHc0aNLoCR4A
+[2016-10-27 17:23:12,616][INFO ][cluster.service          ] [Spider Doppelganger] new_master {Spider Doppelganger}{msJsBR8eSiaHc0aNLoCR4A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-27 17:23:12,716][INFO ][gateway                  ] [Spider Doppelganger] recovered [0] indices into cluster_state
+[2016-10-27 17:23:12,813][INFO ][http                     ] [Spider Doppelganger] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-27 17:23:12,814][INFO ][node                     ] [Spider Doppelganger] started
+[2016-10-27 17:26:55,680][INFO ][cluster.metadata         ] [Spider Doppelganger] [index] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-10-27 17:29:11,092][DEBUG][action.admin.indices.create] [Spider Doppelganger] [ind] failed to create
+ProcessClusterEventTimeoutException[failed to process cluster event (create-index [ind], cause [api]) within 30s]
+	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:343)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-27 17:33:43,944][INFO ][rest.suppressed          ] /ind Params: {index=ind}
+ProcessClusterEventTimeoutException[failed to process cluster event (create-index [ind], cause [api]) within 30s]
+	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:343)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-27 17:33:44,177][WARN ][cluster.service          ] [Spider Doppelganger] cluster state update task [create-index [index], cause [api]] took 6.8m above the warn threshold of 30s
+[2016-10-27 17:33:44,196][INFO ][cluster.metadata         ] [Spider Doppelganger] [sample] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-10-27 17:33:44,217][INFO ][node                     ] [Spider Doppelganger] stopping ...
+[2016-10-27 17:33:44,325][WARN ][cluster.action.shard     ] [Spider Doppelganger] failed to send shard started to [{Spider Doppelganger}{msJsBR8eSiaHc0aNLoCR4A}{127.0.0.1}{127.0.0.1:9300}]
+SendRequestTransportException[[Spider Doppelganger][127.0.0.1:9300][internal:cluster/shard/started]]; nested: TransportException[TransportService is closed stopped can't send request];
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:323)
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:282)
+	at org.elasticsearch.cluster.action.shard.ShardStateAction.shardStarted(ShardStateAction.java:122)
+	at org.elasticsearch.cluster.action.shard.ShardStateAction.shardStarted(ShardStateAction.java:116)
+	at org.elasticsearch.indices.cluster.IndicesClusterStateService$2.onRecoveryDone(IndicesClusterStateService.java:639)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:156)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: TransportException[TransportService is closed stopped can't send request]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:303)
+	... 8 more
+[2016-10-27 17:33:44,325][WARN ][cluster.action.shard     ] [Spider Doppelganger] failed to send shard started to [{Spider Doppelganger}{msJsBR8eSiaHc0aNLoCR4A}{127.0.0.1}{127.0.0.1:9300}]
+SendRequestTransportException[[Spider Doppelganger][127.0.0.1:9300][internal:cluster/shard/started]]; nested: TransportException[TransportService is closed stopped can't send request];
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:323)
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:282)
+	at org.elasticsearch.cluster.action.shard.ShardStateAction.shardStarted(ShardStateAction.java:122)
+	at org.elasticsearch.cluster.action.shard.ShardStateAction.shardStarted(ShardStateAction.java:116)
+	at org.elasticsearch.indices.cluster.IndicesClusterStateService$2.onRecoveryDone(IndicesClusterStateService.java:639)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:156)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: TransportException[TransportService is closed stopped can't send request]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:303)
+	... 8 more
+[2016-10-27 17:33:44,325][WARN ][cluster.action.shard     ] [Spider Doppelganger] failed to send shard started to [{Spider Doppelganger}{msJsBR8eSiaHc0aNLoCR4A}{127.0.0.1}{127.0.0.1:9300}]
+SendRequestTransportException[[Spider Doppelganger][127.0.0.1:9300][internal:cluster/shard/started]]; nested: TransportException[TransportService is closed stopped can't send request];
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:323)
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:282)
+	at org.elasticsearch.cluster.action.shard.ShardStateAction.shardStarted(ShardStateAction.java:122)
+	at org.elasticsearch.cluster.action.shard.ShardStateAction.shardStarted(ShardStateAction.java:116)
+	at org.elasticsearch.indices.cluster.IndicesClusterStateService$2.onRecoveryDone(IndicesClusterStateService.java:639)
+	at org.elasticsearch.index.shard.StoreRecoveryService$1.run(StoreRecoveryService.java:156)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: TransportException[TransportService is closed stopped can't send request]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:303)
+	... 8 more
+[2016-10-27 17:33:44,343][INFO ][node                     ] [Spider Doppelganger] stopped
+[2016-10-27 17:33:44,347][INFO ][node                     ] [Spider Doppelganger] closing ...
+[2016-10-27 17:33:44,355][INFO ][node                     ] [Spider Doppelganger] closed
+[2016-10-27 17:34:04,143][INFO ][node                     ] [Giganto] version[2.2.0], pid[5528], build[8ff36d1/2016-01-27T13:32:39Z]
+[2016-10-27 17:34:04,144][INFO ][node                     ] [Giganto] initializing ...
+[2016-10-27 17:34:04,519][INFO ][plugins                  ] [Giganto] modules [lang-expression, lang-groovy], plugins [], sites []
+[2016-10-27 17:34:04,538][INFO ][env                      ] [Giganto] using [1] data paths, mounts [[OS (C:)]], net usable_space [407.7gb], net total_space [466.1gb], spins? [unknown], types [NTFS]
+[2016-10-27 17:34:04,539][INFO ][env                      ] [Giganto] heap size [910.5mb], compressed ordinary object pointers [true]
+[2016-10-27 17:34:06,103][INFO ][node                     ] [Giganto] initialized
+[2016-10-27 17:34:06,104][INFO ][node                     ] [Giganto] starting ...
+[2016-10-27 17:34:06,329][INFO ][transport                ] [Giganto] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-27 17:34:06,339][INFO ][discovery                ] [Giganto] elasticsearch/Sth8n1HARWuqC9DN67Dusg
+[2016-10-27 17:34:10,414][INFO ][cluster.service          ] [Giganto] new_master {Giganto}{Sth8n1HARWuqC9DN67Dusg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-27 17:34:10,523][INFO ][gateway                  ] [Giganto] recovered [2] indices into cluster_state
+[2016-10-27 17:34:10,602][INFO ][http                     ] [Giganto] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-27 17:34:10,602][INFO ][node                     ] [Giganto] started
+[2016-10-27 17:34:15,914][INFO ][rest.suppressed          ] /sample Params: {index=sample}
+[sample] IndexAlreadyExistsException[already exists]
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validateIndexName(MetaDataCreateIndexService.java:138)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:473)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:97)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$1.execute(MetaDataCreateIndexService.java:192)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:458)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:762)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-27 17:42:05,594][INFO ][rest.suppressed          ] /sample/1 Params: {index=sample, type=1}
+UnavailableShardsException[[sample][2] primary shard is not active Timeout: [1m], request: [index {[sample][1][AVgIu6cEaHkunSde67tR], source[{
+  "1987_57_45": [
+    {
+      "id": "001",
+      "article_date": "12/12/2019",
+      "article_headline": "How to go while You are enjoying",
+      "page_number": "2",
+      "author": "kapoor and sons",
+      "article_number": "2",
+      "article_text": "The already strained ties between India and Pakistan dipped further Thursday when New Delhi and Islamabad expelled a staffer each at their High Commissions, declaring them ‘persona non-grata’ in tit-for-tat action after Delhi Police said it had uncovered a spy ring involving an employee of the Pakistani mission",
+      "article_subheading": "Hey enjoying t he party",
+      "number of paragraphs": "3"
+    }
+    ]
+}]}]]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$ReroutePhase.retryBecauseUnavailable(TransportReplicationAction.java:555)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$ReroutePhase.doRun(TransportReplicationAction.java:431)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$ReroutePhase$2.onTimeout(TransportReplicationAction.java:520)
+	at org.elasticsearch.cluster.ClusterStateObserver$ObserverClusterStateListener.onTimeout(ClusterStateObserver.java:239)
+	at org.elasticsearch.cluster.service.InternalClusterService$NotifyTimeout.run(InternalClusterService.java:794)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-27 17:43:37,020][INFO ][rest.suppressed          ] /sample/1 Params: {index=sample, type=1}
+UnavailableShardsException[[sample][4] primary shard is not active Timeout: [1m], request: [index {[sample][1][AVgIvQxZaHkunSde67tS], source[{
+  "1987_57_45": [
+    {
+      "id": "001",
+      "article_date": "12/12/2019",
+      "article_headline": "How to go while You are enjoying",
+      "page_number": "2",
+      "author": "kapoor and sons",
+      "article_number": "2",
+      "article_text": "The already strained ties between India and Pakistan dipped further Thursday when New Delhi and Islamabad expelled a staffer each at their High Commissions, declaring them ‘persona non-grata’ in tit-for-tat action after Delhi Police said it had uncovered a spy ring involving an employee of the Pakistani mission",
+      "article_subheading": "Hey enjoying t he party",
+      "number of paragraphs": "3"
+    }
+    ]
+}]}]]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$ReroutePhase.retryBecauseUnavailable(TransportReplicationAction.java:555)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$ReroutePhase.doRun(TransportReplicationAction.java:431)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$ReroutePhase$2.onTimeout(TransportReplicationAction.java:520)
+	at org.elasticsearch.cluster.ClusterStateObserver$ObserverClusterStateListener.onTimeout(ClusterStateObserver.java:239)
+	at org.elasticsearch.cluster.service.InternalClusterService$NotifyTimeout.run(InternalClusterService.java:794)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-27 17:44:24,055][INFO ][node                     ] [Giganto] stopping ...
+[2016-10-27 17:44:24,087][INFO ][node                     ] [Giganto] stopped
+[2016-10-27 17:44:24,088][INFO ][node                     ] [Giganto] closing ...
+[2016-10-27 17:44:24,104][INFO ][node                     ] [Giganto] closed
