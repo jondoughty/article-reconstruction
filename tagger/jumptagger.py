@@ -9,9 +9,10 @@ import re
 
 _REQUIRED_TAGS = ["PI", "BL", "HL", "N", "B", "AT", "TXT"]
 _FORMAT_STRINGS = [
-    ("(From page (\d{1,2})){e<=2}", 2, -1),        # (format_string, group_num, direction)
+    ("(From page (\d{1,2})){e<=3}", 2, -1),        # (format_string, group_num, direction)
     ("(Please see page (\d{1,2})){e<=4}", 2, 1),
-    ("(See (\w{1,10} ?(& )?){1,3}, page (\d{1,2})){e<=2}", 4, 1),
+    ("(Please saa page (\d{1,2})){e<=5}", 2, 1),
+    ("(See ([\w\.]{1,10} ?(& )?){1,3}, page (\d{1,2})){e<=2}", 4, 1),
     ("(See \w{1,10}, (\w{1,10}) page){e<=2}", 2, 1),
 ]
 
@@ -36,7 +37,10 @@ def _get_jump_with_pattern(text, format_tuple):
     group = format_tuple[1]
     direction = format_tuple[2]
 
+    # text = "I-rom Pag* 2"
     match = _match_pattern(text, fmt_str)
+    # print(match.fuzzy_counts)
+    # exit()
     if match and match[group]:
         page = match[group]
         if page.isdigit() and int(page) < 20:
@@ -82,7 +86,6 @@ def tag(issue):
         # If text is not null then search for JUMP.
         if not pd.isnull(row.text):
             text = row.text.strip()
-            # text = re.sub(r"\W+", "", text)
             jump = _has_page_jump(text)
             if jump:
                 issue.tags_df.loc[index, "jump"] = str(jump)
