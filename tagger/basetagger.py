@@ -120,9 +120,15 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
     for csv_file in files:
         issue = Issue(Issue.generate_tags_df(csv_file),
                       os.path.basename(os.path.normpath(csv_file)))
-        # TODO(ngarg): Remove next line. Use anther approach to replace N.
+
+        # TODO(ngarg): Consider another approach to replace these columns.
+        # Edit the default values within the issue.
         issue.tags_df.function.replace(np.nan, "N", inplace=True)
         issue.tags_df.function = issue.tags_df.function.str.strip()
+        issue.tags_df.jump = issue.tags_df.jump.astype(str)
+        issue.tags_df.jump.replace("0.0", "0", inplace=True)
+        issue.tags_df.jump.replace("nan", "0", inplace=True)
+
         issues.append(issue)
         issue = copy.deepcopy(issue)
 
@@ -176,8 +182,8 @@ def print_accuracy_tag(orig_issues, tagged_issues, tag, jump_col=False, print_in
     print("=================================")
     for orig_issue, tagged_issue in zip(orig_issues, tagged_issues):
         if jump_col:
-            expected_tags = orig_issue.tags_df[orig_issue.tags_df.jump.notnull()]
-            actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.jump.notnull()]
+            expected_tags = orig_issue.tags_df[orig_issue.tags_df.jump != '0']
+            actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.jump != '0']
         else:
             expected_tags = orig_issue.tags_df[orig_issue.tags_df.function == tag]
             actual_tags = tagged_issue.tags_df[tagged_issue.tags_df.function == tag]

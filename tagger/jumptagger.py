@@ -58,6 +58,7 @@ def _has_page_jump(text):
     for format_tuple in _FORMAT_STRINGS:
         jump = _get_jump_with_pattern(text, format_tuple)
         if jump:
+            # print(jump)
             return jump
 
 
@@ -74,13 +75,16 @@ def tag(issue):
 
     # Labels rows.
     issue = copy.deepcopy(issue)
-
     for index, row in issue.tags_df.iterrows():
-        issue.tags_df.loc[index, "jump"] = 0
+        issue.tags_df.loc[index, "jump"] = '0'
+
+        # If text is not null then search for JUMP.
         if not pd.isnull(row.text):
             jump = _has_page_jump(row.text)
             if jump:
-                issue.tags_df.loc[index, "jump"] = jump
+                issue.tags_df.loc[index, "jump"] = str(jump)
+
+                # If 'function' column is not null set based on number of words.
                 if pd.isnull(row.function):
                     is_ME = len(row.text.split()) < 5
                     issue.tags_df.loc[index, "function"] = "ME" if is_ME else "TXT"
@@ -92,13 +96,25 @@ def main():
     # Gets issues with and without tags.
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump"],
                                          tags=_REQUIRED_TAGS)
+
+    # Tests a single issue.
+    # idx = len(issues)-1
+    # issue = untagged_issues[idx]
+    # issue = tag(issue)
+    # print_accuracy_tag([issues[idx]], [issue], tag="JUMP", jump_col=True, print_incorrect=True)
+    # issue.to_csv('test1.csv')
+    # exit()
+
     # Tags the untagged issues.
     tagged_issues = [tag(issue) for issue in untagged_issues]
-    for i in range(len(tagged_issues)):
-        tagged_issues[i].to_csv('jump_test' + str(i) + '.csv')
+
+    # Prints the tags for the issues.
+    for idx, issue in enumerate(tagged_issues):
+        print(idx, issue.filename)
+        issue.to_csv('jump_test' + str(idx) + '.csv')
 
     # Print the accuracy of the results.
-    # print_accuracy_tag(issues, tagged_issues, tag="JUMP", jump_col=True, print_incorrect=True)
+    print_accuracy_tag(issues, tagged_issues, tag="JUMP", jump_col=True, print_incorrect=True)
 
     compute_jump_metric(issues, tagged_issues)
 
