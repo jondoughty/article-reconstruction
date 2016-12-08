@@ -47,14 +47,14 @@ def main():
 def tag(issue):
     issue = copy.deepcopy(issue)
     issue = issue.tags_df
-    issue.page = None
-    issue.function = None
-    matched = pd.concat([find_volume(issue), find_page_info(issue),
-                         find_date(issue), find_pub_name(issue)])
+    issue.tags_df.page = None
+    issue.tags_df.function = None
+    matched = pd.concat([find_volume(issue.tags_df), find_page_info(issue.tags_df),
+                         find_date(issue.tags_df), find_pub_name(issue.tags_df)])
     matched = matched.drop_duplicates().sort_index()
     for i, row in matched.iterrows():
-        if issue.loc[i].function is None:
-            issue.set_value(i, "function", "PI")
+        if issue.tags_df.loc[i].function is None:
+            issue.tags_df.set_value(i, "function", "PI")
     pages = count_pages(matched)
 #    print(issue.drop_duplicates("page"))
 #    print("actual:", len(issue.page.unique()))
@@ -64,7 +64,7 @@ def tag(issue):
 #    print("\n\n")
     ptr = 0
     for i, row in matched.iterrows():
-        issue.set_value(i, "page", pages[ptr])
+        issue.tags_df.set_value(i, "page", pages[ptr])
         if i >= pages[ptr]:
             ptr += 1
     return issue

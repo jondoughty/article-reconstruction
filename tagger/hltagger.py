@@ -47,14 +47,13 @@ def main():
 
 def tag(issue, test = False):
     issue = copy.deepcopy(issue)
-    issue = issue.tags_df
     if test:
-        issue.function = None
-    matched = pd.concat([find_headline(issue)])
+        issue.tags_df.function = None
+    matched = pd.concat([find_headline(issue.tags_df)])
     matched = matched.drop_duplicates().sort_index()
     for i, row in matched.iterrows():
-        if issue.loc[i].function is None:
-            issue.set_value(i, "function", "HL")
+        if issue.tags_df.loc[i].function is None:
+            issue.tags_df.set_value(i, "function", "HL")
     return issue
 
 
