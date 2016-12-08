@@ -23,9 +23,6 @@ def main():
     for path in paths:
         issue = pd.read_csv(path, header = 2, names = columns)
         issue = issue.dropna(how = "all")
-        print(issue.drop_duplicates("page"))
-        print("actual:", len(issue.page.unique()))
-        count_pages(issue)
         issue = tag(issue).join(issue.function, rsuffix = "_act")
         tp += len(issue[(issue.function_act == "PI") &
                         (issue.function == "PI")])
@@ -49,6 +46,7 @@ def main():
 
 def tag(issue):
     issue = copy.deepcopy(issue)
+    issue.page = None
     issue.function = None
     matched = pd.concat([find_volume(issue), find_page_info(issue),
                          find_date(issue), find_pub_name(issue)])
@@ -56,6 +54,18 @@ def tag(issue):
     for i, row in matched.iterrows():
         if issue.loc[i].function is None:
             issue.set_value(i, "function", "PI")
+    pages = count_pages(matched)
+#    print(issue.drop_duplicates("page"))
+#    print("actual:", len(issue.page.unique()))
+#    print()
+#    print(matched)
+#    print("found:", len(pages), pages)
+#    print("\n\n")
+    ptr = 0
+    for i, row in matched.iterrows():
+        issue.set_value(i, "page", pages[ptr])
+        if i >= pages[ptr]:
+            ptr += 1
     return issue
 
 
@@ -117,24 +127,19 @@ def find_pub_name(issue, error = 5):
     return pd.DataFrame(matched)
 
 
-def count_pages(issue, error = 3):
-    dows = "|".join(map(str.upper, calendar.day_name))
+def count_pages(matched, error = 2):
     months = "|".join(map(str.upper, calendar.month_name))[1:]
     err_str = "{{s<={0},i<=1,d<=1,e<={0}}}".format(error)
-    fmt_str = (r"({1}){0}\s*" +                # day of week
-                "({2}){0}\s*" +                # month
-                "[1-3]?[0-9]{{s<=2}}\s*" +          # day
-                "(?:19|20)[0-9]{{s<=2}}\s*" +          # year
-                "").format(err_str, dows, months)
+    fmt_str = r"(?:{1}){0}".format(err_str, months)
     pattern = regex.compile(fmt_str)
     pages = []
-    for i, row in issue.iterrows():
+    for i, row in matched.iterrows():
         if pd.notnull(row.text):
             text = remove_punctuation(row.text)
             match = regex.search(pattern, text, concurrent = True)
             if match and i not in pages:
                 pages.append(i)
-    print("found:", len(pages))
+    return pages
 
 
 def find_date(issue, error = 3):
