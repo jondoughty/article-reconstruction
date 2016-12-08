@@ -4,13 +4,14 @@
 from tagger.basetagger import *
 
 import regex
+import re
 
 
 _REQUIRED_TAGS = ["PI", "BL", "HL", "N", "B", "AT", "TXT"]
 _FORMAT_STRINGS = [
     ("(From page (\d{1,2})){e<=2}", 2, -1),        # (format_string, group_num, direction)
     ("(Please see page (\d{1,2})){e<=4}", 2, 1),
-    ("(See \w{1,10}, page (\d{1,2})){e<=2}", 2, 1),
+    ("(See (\w{1,10} ?(& )?){1,3}, page (\d{1,2})){e<=2}", 4, 1),
     ("(See \w{1,10}, (\w{1,10}) page){e<=2}", 2, 1),
 ]
 
@@ -80,13 +81,15 @@ def tag(issue):
 
         # If text is not null then search for JUMP.
         if not pd.isnull(row.text):
-            jump = _has_page_jump(row.text)
+            text = row.text.strip()
+            # text = re.sub(r"\W+", "", text)
+            jump = _has_page_jump(text)
             if jump:
                 issue.tags_df.loc[index, "jump"] = str(jump)
 
                 # If 'function' column is not null set based on number of words.
                 if pd.isnull(row.function):
-                    is_ME = len(row.text.split()) < 5
+                    is_ME = len(text.split()) < 5
                     issue.tags_df.loc[index, "function"] = "ME" if is_ME else "TXT"
 
     return issue
