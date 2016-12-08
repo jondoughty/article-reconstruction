@@ -2,6 +2,8 @@
 # Brandon Livitski
 
 from tagger.basetagger import *
+import sklearn
+from sklearn import metrics
 
 
 def tag(issue):
@@ -127,15 +129,31 @@ def main():
 	                                     tags=["PI", "BL", "HL", "N", "B", "TXT", "AT"])
 	pd.set_option('display.max_rows', 700)
 	pd.set_option("display.width", None)
-	print(issues[1].tags_df)
+	# print(issues[1].tags_df)
 	# print(tag(untagged_issues[0]).tags_df)
-	output = tag(untagged_issues[1]).tags_df
-	print (output)
+	tagged = tag(untagged_issues[1]).tags_df
+	truth = issues[1].tags_df
+	print (tagged)
+
+	article_numbering_scores(tagged, truth, "HL")
+	article_numbering_scores(tagged, truth, "TXT")
 
 	# for i, row in output.iterrows():
 	# 	if row.function == "TXT":
 	# 		# print(row)
 	# 		pass
+
+
+def article_numbering_scores(tagged, truth, function):
+	predicted_articles = []
+	for i, row in tagged.iterrows():
+		if tagged.loc[i, "function"] == function:
+			predicted_articles.append(row.article)
+	actual_articles = []
+	for i, row in truth.iterrows():
+		if truth.loc[i, "function"] == function:
+			actual_articles.append(row.article)
+	print(metrics.homogeneity_completeness_v_measure(actual_articles, predicted_articles))
 
 
 if __name__ == "__main__":
