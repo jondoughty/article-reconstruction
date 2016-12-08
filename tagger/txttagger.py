@@ -403,7 +403,9 @@ def main():
     tagged_issues[2].to_csv('txt_test.csv')
 
     # Print the accuracy of the results.
-    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=True)
+    print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=False)
+
+    compute_function_metric([issues[1]], [tagged_issues[1]])
 
 
 if __name__ == "__main__":
