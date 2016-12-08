@@ -73,6 +73,9 @@ class Issue(object):
         # Prints the DataFrame to a file.
         self.tags_df.to_csv(filename)
 
+    def get_issue_id(self):
+        return re.search(r"\d{8}\.txt$", self.filename).group(0)
+
 
 def check_tags_exist(issue, tags):
     """

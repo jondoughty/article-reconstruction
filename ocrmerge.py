@@ -1,8 +1,14 @@
 #!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+# Daniel Moore
 
-import re
+from alignment.sequence import Sequence, GAP_ELEMENT
+from alignment.vocabulary import Vocabulary
+from alignment.sequencealigner import SimpleScoring, GlobalSequenceAligner
+from distutils.spawn import find_executable
+import glob
 import os
+import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -28,62 +34,101 @@ class Word:
         self.bbox = BBox(self._propertyMap["bbox"])
         self.confidence = self._propertyMap["x_wconf"][0]
 
-def main():
-    ART_HOME=os.getcwd()
-    NUM_WORDS=5
-    #TODO validate arguments
-    #TODO usage?
-    hOCRFilePath = sys.argv[1]
-    #abbyyFilePath = sys.argv[2]
+def run_tesseract(img_path, out_hocr_path):
 
-    hOCRTree = ET.parse(hOCRFilePath)
+    if not find_executable("tesseract"):
+        raise Exception("'tesseract.exe' not found on PATH")
 
-     #I don't know if i can handle the lack of camel case here...twitch...
-    treeRoot = hOCRTree.getroot()
+    #Example:
+    #tesseract ..\image_data\ua-nws_00000991_001.tif -l eng out hocr
+    subprocess.run(["tesseract", img_path, re.sub(r"\.hocr$", "", hocr_path), "-l", "eng", "hocr"]);
 
-    # nodes = treeRoot.findall(".//*[@class='ocr_line']")
-    # All descendants of "ocrx_word" elements
-    #nodes = treeRoot.findall(".//*[@class='ocrx_word']//*")
+def get_location_data(issue_list, image_dir, txt_dir, hocr_dir):
+    print("Starting get_location_data()")
+    # TODO what if tesseract's ocr is *REALLY* bad?
+    # maybe do a single global match score between the two to see
+    vocab = Vocabulary()
+    print(issue_list)
+    for (pub_info, issue) in issue_list:
+        print("Iterating through issue ", pub_info)
 
-    # TODO check for meta ocr-capabilities (ocrx_word vs ocr_word)
-    # TODO if that doesn't work, look at actual tags
-    # TODO Maybe we should find lines first so that we can preserve the association
-    # between words and the line bbox
-    nodes = treeRoot.findall(".//*[@class='ocrx_word']")
+        abbyy_line_idx_to_bbox_info = {}
+        abbyy_lines = open(issue.filename, encoding="utf-8").readlines()
 
-#1 find all ocrx_word elements
-#2 for each
-#3    get title -> get bbox
-#4    get all child elements
-#5    for each
-#6      get child nodes 
-#
-#      node.itertext?
-#      node.tail?
+        images_glob = os.path.join(image_dir, issue.get_issue_id() + "*.tif")
+        nodes = []
+        for (img_path) in glob.glob(images_glob).sort():
+            str_img_idx = re.search(r"_(\d{3})\.tif$", img_path).group(1)
+            hocr_path = os.path.join(hocr_dir, "tess_" + issue.get_issue_id() + "_" + str_img_idx + ".hocr")
 
-    print("Nodes found:", len(nodes))
+            run_tesseract(img_path, hocr_path)
 
-    hocrLines = []
-    i = 0
-    phraseLength = 3
-    while i < len(nodes):
-        j = 0
-        while j < phraseLength & i + j < len(nodes):
-            hocrLines += nodes[i + j]
-            j+=1
-        i+=phraseLength
+            hocr_tree = ET.parse(hocr_path)
+            tree_root = hocr_tree.getroot()
+            raw_nodes = tree_root.findall(r".//*[@class='ocrx_word']")
+            for node in raw_nodes:
+                nodes.append(Word(node))
 
-    for node in nodes:
-        w = Word(node)
-        print(w.text, w.bbox.values)
 
-    #abbyyLines = open(abbyyFilePath, encoding="utf-8").readlines()
+        # Map t_page idx to nodes idx for letters that begin words
+        t_page_idx_to_node_idx = {}
+        i = 0
+        t_page = ""
+        for j, node in enumerate(nodes):
+            t_page_idx_to_node_idx[i] = j
+            i += len(node.text)
+            t_page += node.text
 
-    #for line in abbyyLines:
-        #print(line)
+        #TODO maybe the whole rest of the function could be done encoded?
+        t_page_encoded = vocab.encodeSequence(t_page)
+        scoring = SimpleScoring(2, -1)
+        aligner = GlobalSequenceAligner(scoring, -2)
+
+        # TODO maybe do a check here that t_page matches tree_root.itertext()
+
+        for l_num, a_line in abbyy_lines:
+            #TODO filter alignment quality here
+            start, align_t, align_a = alignment(a_line, t_page, t_page_encoded, vocab, aligner)
+
+            # Map t_align idx to t_page idx
+            t_align_idx_to_t_page_idx = {}
+            i = start
+            for j in range(len(align_t)):
+                if (align_t[j] != GAP_ELEMENT):
+                    t_align_idx_to_t_page_idx[j] = i
+                    # this second if line is going to throw off my Java...
+                    i+=1
+
+            a_idx_to_bbox = {}
+            #TODO handle start < 0
+            i = start
+            for j in range(len(align_a)):
+                # If this character is at the beginning of a word
+                if t_align_idx_to_t_page_idx[i] in t_page_idx_to_node_idx:
+                    for k in range(len(t_page_idx_to_node_idx[t_align_idx_to_t_page_idx[i]].text)):
+                        if align_a[j+k] != GAP_ELEMENT:
+                            a_idx_to_bbox[j+k] = t_page_idx_to_node_idx[t_align_idx_to_t_page_idx[i]].bbox.values
+                            break
+            #TODO or just add to the dataframe?
+            #TODO what if there was no data returned
+            abbyy_line_idx_to_bbox_info[l_num] = a_idx_to_bbox.items()
+            print(abbyy_line_idx_to_bbox_info[0])
+
+#TODO make sure the gap character is set right, see sequence.py
+#start, align_t, align_a = alignment(a_line, t_page)
+def align(first, second, second_encoded, aligner):
+    first_encoded = vocab.encodeSequence(first)
+    score, encodeds = aligner.align(first_encoded, second_encoded, backtrace=True)
+    alignment = vocab.decodeSequenceAlignment(encodeds[0])
+    firstSequence = alignment.first
+    secondSequence = alignment.second
+    align_t = secondSequence
+    align_a = firstSequence
+    start = alignment.firstOffset
+    return (start, align_t, align_a)
 
 
 if __name__ == "__main__":
-    main()
+    get_location_data(*sys.argv[1:])
 
 
