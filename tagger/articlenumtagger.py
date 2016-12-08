@@ -174,7 +174,7 @@ def article_numbering_scores(tagged, truth, function):
 	for i, row in truth.iterrows():
 		if truth.loc[i, "function"] == function:
 			actual_articles.append(row.article)
-	metrics.homogeneity_completeness_v_measure(actual_articles, predicted_articles)
+	return metrics.homogeneity_completeness_v_measure(actual_articles, predicted_articles)
 
 
 if __name__ == "__main__":
