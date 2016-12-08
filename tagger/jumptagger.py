@@ -7,7 +7,7 @@ import regex
 import re
 
 
-_REQUIRED_TAGS = ["PI", "BL", "HL", "N", "B", "AT", "TXT"]
+_REQUIRED_TAGS = ["PI", "BL", "HL", "N", "B", "AT", "OT", "TXT"]
 _FORMAT_STRINGS = [
     ("(From page (\d{1,2})){e<=3}", 2, -1),        # (format_string, group_num, direction)
     ("(Please see page (\d{1,2})){e<=4}", 2, 1),
@@ -76,7 +76,7 @@ def tag(issue):
 
     return: obj
     """
-    assert check_tags_exist(issue, _REQUIRED_TAGS)
+    # assert check_tags_exist(issue, _REQUIRED_TAGS)
 
     # Labels rows.
     issue = copy.deepcopy(issue)
