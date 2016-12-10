@@ -16,8 +16,9 @@ _JUNKTAGGER_CLASSIFIERS = []
 _SHUFFLE = False
 
 # Required function tags metadata.
-_REQUIRED_TAGS = ["PI", "HL", "BL", "SH"]
-_TAGS_TO_KEEP = _REQUIRED_TAGS + ["NP", "PL"]
+_REQUIRED_TAGS = ["PI", "HL", "BL"]
+# XXX: Move SH tags back to REQUIRED_TAGS after testing
+_TAGS_TO_KEEP = _REQUIRED_TAGS + ["NP", "PL", "SH"]
 
 # English dictionary.
 _ENGLISH_DICTIONARY = enchant.Dict("en_US")
