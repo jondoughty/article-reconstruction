@@ -7,7 +7,7 @@ import string
 
 import pandas as pd
 
-import basetagger
+import tagger.basetagger as basetagger
 
 
 def run_tests(tag_str, tag_fun, content_tags = []):

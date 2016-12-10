@@ -7,8 +7,8 @@ import regex
 
 import pandas as pd
 
-import basetagger
-import libntc
+import tagger.basetagger as basetagger
+import tagger.libntc as libntc
 
 
 def main():
