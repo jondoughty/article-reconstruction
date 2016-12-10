@@ -63,9 +63,8 @@ def gen_issue_dict(args, issue_list):
         if args.raw_data:
             for tag in taggers:
                 issue_obj = tag(issue_obj)
-                # print ('after ', tag.__file__)
-                # print (issue_obj.tags_df)
-                # input()
+                print (issue_obj.tags_df)
+                input()
 
         # create a dataframe for the entire issue
         issue_df = construct_tagged(issue_obj, pub_info)
