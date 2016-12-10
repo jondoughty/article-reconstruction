@@ -111,10 +111,10 @@ def main():
     tagged_issues = [tag(issue) for issue in untagged_issues]
 
     # Prints the tags for the issues.
-    print("Printing issues...")
-    for idx, issue in enumerate(tagged_issues):
-        print(idx, issue.filename)
-        issue.to_csv('jump_test' + str(idx) + '.csv')
+    # print("Printing issues...")
+    # for idx, issue in enumerate(tagged_issues):
+    #     print(idx, issue.filename)
+    #     issue.to_csv('jump_test' + str(idx) + '.csv')
 
     # Print the accuracy of the results.
     print("Calculating accuracy...")

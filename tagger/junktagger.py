@@ -10,17 +10,15 @@ import re
 from tagger.basetagger import *
 
 
-# TODO(ngarg): Add BQT
-# TODO(ngarg): Add features to each individual classifier to see if they improve.
-
 # Global classifiers metadata.
-_REGENERATE_CLASSIFIERS = True
+_REGENERATE_CLASSIFIERS = False
 _JUNKTAGGER_CLASSIFIERS = []
-_SHUFFLE = True
+_SHUFFLE = False
 
 # Required function tags metadata.
-_REQUIRED_TAGS = ["PI", "HL", "BL", "SH"]
-_TAGS_TO_KEEP = _REQUIRED_TAGS + ["NP", "PL"]
+_REQUIRED_TAGS = ["PI", "HL", "BL"]
+# XXX: Move SH tags back to REQUIRED_TAGS after testing
+_TAGS_TO_KEEP = _REQUIRED_TAGS + ["PL", "SH"]
 
 # English dictionary.
 _ENGLISH_DICTIONARY = enchant.Dict("en_US")
@@ -265,7 +263,7 @@ def _features_stats_non_alphabetic(text):
     return features
 
 
-def _features_stats_positional(text, temp=None):
+def _features_stats_positional(text):
     """
     Gets features based on the position in the text.
 
@@ -282,11 +280,9 @@ def _features_stats_positional(text, temp=None):
     features["ends_period"] = bool(re.search(r"\.|\!$", text))
     features["ends_word"] = (_ENGLISH_DICTIONARY.check(word)
                              if word and word[-1].isalpha() else False)
-    # features["ends_word_1_word"] = features["ends_word"] and len(words) == 1
+    features["ends_word_1_word"] = features["ends_word"] and len(words) == 1
     features["ends_word_long"] = features["ends_word"] and len(word) >= 5
     features["ends_word_period"] = features["ends_period"] and features["ends_word"]
-    features["ends_word_long_period"] = features["ends_period"] and features["ends_word_long"]
-    features["ends_word_period_1_word"] = features["ends_word_period"] and len(words) == 1
 
     # Ends with comma.
     features["ends_comma"] = bool(re.search(r"\,|\;", text))
@@ -295,24 +291,17 @@ def _features_stats_positional(text, temp=None):
     # Ends with quotation.
     quotations = r"(\u0022|\u0027|\u0060|\u00B4|\u2018|\u2019|\u201C|\u201D)"
     features["has_simple_quotation"] = bool(re.search(r"\“.*\”", text))
-    features["has_quotation"] = bool(re.search(r"%s" %quotations, text))
     features["starts_quotation"] = bool(re.search(r"^%s" %quotations, text))
-    features["ends_quotation"] = bool(re.search(r"%s$" %quotations, text))
     features["ends_period_quotation"] = bool(re.search(r"\.%s$" %quotations, text))
-    features["ends_word_quotation"] = (_ENGLISH_DICTIONARY.check(word)
-                                       if (features["ends_quotation"] and
-                                           word and word[-1].isalpha()) else False)
     features["ends_word_period_quotation"] = (_ENGLISH_DICTIONARY.check(word[:-1])
                                               if (features["ends_period_quotation"] and
                                                   word[:-1] and word[-2].isalpha()) else False)
 
-    # Capital first letter. 
+    # # Capital first letter.
     features["has_title_first_word"] = text[0].istitle() and len(words) > 2
-    features["is_sentence"] = features["has_title_first_word"] and features["ends_period"]
     features["is_proper_sentence"] = features["has_title_first_word"] and features["ends_word_long"]
     features["is_quoted_sentence"] = features["has_title_first_word"] and features["ends_word_period_quotation"]
     features["is_full_quoted_sentence"] = features["starts_quotation"] and features["ends_word_period_quotation"]
-    features["is_full_quoted_sentence_no_period"] = features["starts_quotation"] and features["ends_word_quotation"]
     return features
 
 
@@ -380,6 +369,7 @@ def _features_stats_patterns(text):
 # ========================================
 
 
+# TODO(ngarg): Increase complexity.
 def _generate_features_advertisement(data):
     """
     Generates a classifier that identify an advertisement (AT).
@@ -393,12 +383,11 @@ def _generate_features_advertisement(data):
     text = _preprocess_text(data.text)
 
     features.update(_features_stats_alphabetic(text))
-    features.update(_features_stats_names(text))
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_dictionary(text))
     features.update(_features_stats_numerals(text))
     features.update(_features_stats_non_alphabetic(text))
-    features.update(_features_stats_positional(text, data.function))
+    features.update(_features_stats_positional(text))
     features.update(_features_stats_word_patterns(text))
     features.update(_features_stats_patterns(text))
 
@@ -422,7 +411,7 @@ def _generate_features_unintelligible(data):
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_numerals(text))
     features.update(_features_stats_non_alphabetic(text))
-    features.update(_features_stats_positional(text, data.function))
+    features.update(_features_stats_positional(text))
     features.update(_features_stats_word_patterns(text))
     features.update(_features_stats_patterns(text))
 
@@ -443,7 +432,7 @@ def _generate_features_other(data):
 
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_non_alphabetic(text))
-    features.update(_features_stats_positional(text, data.function))
+    features.update(_features_stats_positional(text))
     features.update(_features_stats_word_patterns(text))
     features.update(_features_stats_patterns(text))
 
@@ -697,8 +686,7 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
     if replace_nan:
         tags.append(np.nan)
     if replace_all:
-        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT"])
-        # tags.extend(["MH", "PH", "BQN", "BQA"])
+        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP"])
 
     for tag in tags:
         issue.tags_df.function.replace(tag, "JNK", inplace=True)
@@ -709,16 +697,10 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_MH_naive_bayes.pickle", _generate_features_header, ["MH", "PH", "BQN", "BQA"], _tag_headers))
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_BQ_naive_bayes.pickle", _generate_features_header, ["PH", "BQN", "BQA"], _tag_headers))
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_N_naive_bayes.pickle", _generate_features_unintelligible, ["N", "CT", "CN"], _tag_unintelligible))
-
+_JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_other, ["OT", "BQT"], _tag_other))
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_AT_naive_bayes.pickle", _generate_features_advertisement, ["AT"], _tag_advertisement))
-_JUNKTAGGER_CLASSIFIERS.append(("junktagger_OT_naive_bayes.pickle", _generate_features_other, ["OT"], _tag_other))
 
 
-# TODO(ngarg): Examine 'ua-nws_00003140_md-1983-47-053.csv'
-#                      'ua-nws_00004948_md-1995-60-009.csv'
-#                      'ua-nws_00003008_md-1982-46-047.csv'
-#                      'ua-nws_00003972_md-1986-50-091.csv'
-#                      'ua-nws_00003459_md-1985-49-097.csv'
 def main():
     # Gets issues with and without tags.
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump", "ad"],

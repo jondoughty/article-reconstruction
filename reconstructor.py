@@ -61,9 +61,10 @@ def gen_issue_dict(args, issue_list):
     # if raw_data - call respective tag functions
     for (pub_info, issue_obj) in issue_list:
         if args.raw_data:
-            # XXX: double check results on this
             for tag in taggers:
                 issue_obj = tag(issue_obj)
+                print (issue_obj.tags_df)
+                input()
 
         # create a dataframe for the entire issue
         issue_df = construct_tagged(issue_obj, pub_info)
@@ -89,15 +90,14 @@ def gen_issue_list(args, paths):
             # read in raw txt and convert to df
             df = gen_blank_df(path, columns)
             # Wrap df with in Issue()
-            # TODO: add pub_info to Issue()
-            issue = Issue(df, path)
+
 
         elif args.tagged_data:
             # read in the csv file and store as df
             df = pd.read_csv(path, header=2, names=columns)
-            # Wrap df with in Issue()
-            # TODO: add pub_info to Issue()
-            issue = Issue(df)
+
+        # TODO: add pub_info to Issue()
+        issue = Issue(df, path)
 
         # Add to list with publication info
         issue_list.append((pub_info, issue))
@@ -237,8 +237,6 @@ id_count = 0
 def get_id():
     # TODO: will need to persist the last ID number used for creating
     # additional JSON output.
-    # TODO Maybe use a random number or GUID instead? Something
-    # like this? https://stackoverflow.com/questions/534839/how-to-create-a-guid-uuid-in-python#534851
     global id_count
     id_count += 1
     return str(id_count)

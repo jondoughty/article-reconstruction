@@ -45,7 +45,7 @@ def main():
 
 def tag(issue, test = False):
     issue = copy.deepcopy(issue)
-    issue = issue.tags_df
+    # issue = issue.tags_df
     if test:
         issue.tags_df.function = None
     matched = pd.concat([find_byline(issue.tags_df), find_description(issue.tags_df)])
