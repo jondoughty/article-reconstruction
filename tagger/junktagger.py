@@ -473,7 +473,8 @@ def _tag_blank(row):
     returns: str
     """
     if (pd.isnull(row.function) and
-        (pd.isnull(row.text) or re.search(r"^[\t\s]+$", row.text))):
+        (pd.isnull(row.text) or (not bool(row.text)) or
+         re.search(r"^[\t\s]+$", row.text))):
         return "B"
     return row.function
 
