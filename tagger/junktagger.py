@@ -11,14 +11,14 @@ from tagger.basetagger import *
 
 
 # Global classifiers metadata.
-_REGENERATE_CLASSIFIERS = True
+_REGENERATE_CLASSIFIERS = False
 _JUNKTAGGER_CLASSIFIERS = []
 _SHUFFLE = False
 
 # Required function tags metadata.
 _REQUIRED_TAGS = ["PI", "HL", "BL"]
 # XXX: Move SH tags back to REQUIRED_TAGS after testing
-_TAGS_TO_KEEP = _REQUIRED_TAGS + ["NP", "PL", "SH"]
+_TAGS_TO_KEEP = _REQUIRED_TAGS + ["PL", "SH"]
 
 # English dictionary.
 _ENGLISH_DICTIONARY = enchant.Dict("en_US")
@@ -383,9 +383,6 @@ def _generate_features_advertisement(data):
     text = _preprocess_text(data.text)
 
     features.update(_features_stats_alphabetic(text))
-    # TODO: Comment in for lower precision, higher recall.
-    #       86% recall & 98.5% precision   vs.  88.5% recall + 97% precision
-    # features.update(_features_stats_names(text))
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_dictionary(text))
     features.update(_features_stats_numerals(text))
@@ -689,7 +686,7 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
     if replace_nan:
         tags.append(np.nan)
     if replace_all:
-        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT"])
+        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP"])
 
     for tag in tags:
         issue.tags_df.function.replace(tag, "JNK", inplace=True)
