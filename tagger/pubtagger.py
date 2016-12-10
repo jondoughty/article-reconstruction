@@ -3,76 +3,37 @@
 
 import calendar
 import copy
-import glob
 import regex
-import string
 
-from nltk.metrics import distance
 import pandas as pd
 
-from tagger.basetagger import *
+import basetagger
+import libntc
 
 
 def main():
-    pd.set_option("display.width", None)
-    pd.set_option("display.max_rows", None)
-    paths = glob.glob("tagged_data/*.csv")
-    columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
-    content_tags = ["HL", "BL", "TXT"]
-    tp = fp = fn = 0
-    for path in paths:
-        issue = pd.read_csv(path, header = 2, names = columns)
-        issue = issue.dropna(how = "all")
-        issue = tag(issue).join(issue.function, rsuffix = "_act")
-        tp += len(issue[(issue.function_act == "PI") &
-                        (issue.function == "PI")])
-        fp += len(issue[(issue.function_act.isin(content_tags)) &
-                        (issue.function == "PI")])
-        fn += len(issue[(issue.function_act == "PI") &
-                        (issue.function != "PI")])
-        print("\n\nTrue Positives:")
-        print(issue[(issue.function_act == "PI") &
-                    (issue.function == "PI")])
-        print("\n\nFalse Positives:")
-        print(issue[(issue.function_act.isin(content_tags)) &
-                    (issue.function == "PI")])
-        print("\n\nFalse Negatives:")
-        print(issue[(issue.function_act == "PI") &
-                    (issue.function != "PI")])
-        print("\n\n\n")
-    print("Precision", tp / (tp + fp))
-    print("Recall", tp / (tp + fn))
+    libntc.run_tests("PI", tag, content_tags = ["HL", "BL"])
 
 
 def tag(issue):
     issue = copy.deepcopy(issue)
-    issue = issue.tags_df
     issue.tags_df.page = None
     issue.tags_df.function = None
-    matched = pd.concat([find_volume(issue.tags_df), find_page_info(issue.tags_df),
-                         find_date(issue.tags_df), find_pub_name(issue.tags_df)])
+    matched = pd.concat([find_volume(issue.tags_df),
+                         find_page_info(issue.tags_df),
+                         find_date(issue.tags_df),
+                         find_pub_name(issue.tags_df)])
     matched = matched.drop_duplicates().sort_index()
     for i, row in matched.iterrows():
         if issue.tags_df.loc[i].function is None:
             issue.tags_df.set_value(i, "function", "PI")
-    pages = count_pages(matched)
-#    print(issue.drop_duplicates("page"))
-#    print("actual:", len(issue.page.unique()))
-#    print()
-#    print(matched)
-#    print("found:", len(pages), pages)
-#    print("\n\n")
+    breaks = get_page_breaks(matched)
     ptr = 0
-    for i, row in matched.iterrows():
-        issue.tags_df.set_value(i, "page", pages[ptr])
-        if i >= pages[ptr]:
+    for i, _ in issue.tags_df.iterrows():
+        issue.tags_df.set_value(i, "page", ptr + 1)
+        if ptr < len(breaks) - 1 and i >= breaks[ptr + 1]:
             ptr += 1
     return issue
-
-
-def remove_punctuation(text):
-    table = str.maketrans(string.punctuation, " " * len(string.punctuation))
-    return text.translate(table).strip().upper()
 
 
 def find_nameplate(issue, error = 5):
@@ -90,7 +51,7 @@ def find_volume(issue, error = 3):
     pattern = regex.compile(fmt_str, flags = regex.ENHANCEMATCH)
     for i, row in issue.iterrows():
         if pd.notnull(row.text):
-            text = remove_punctuation(row.text)
+            text = libntc.remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
             if match:
                 return issue.loc[i:i]
@@ -106,7 +67,7 @@ def find_page_info(issue, error = 1):
     matched = []
     for _, row in issue.iterrows():
         if pd.notnull(row.text):
-            text = remove_punctuation(row.text)
+            text = libntc.remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
             if match:
                 matched.append(row)
@@ -121,26 +82,26 @@ def find_pub_name(issue, error = 5):
     matched = []
     for _, row in issue.iterrows():
         if pd.notnull(row.text):
-            text = remove_punctuation(row.text)
+            text = libntc.remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
             if match:
                 matched.append(row)
     return pd.DataFrame(matched)
 
 
-def count_pages(matched, error = 2):
+def get_page_breaks(matched, error = 2):
     months = "|".join(map(str.upper, calendar.month_name))[1:]
     err_str = "{{s<={0},i<=1,d<=1,e<={0}}}".format(error)
     fmt_str = r"(?:{1}){0}".format(err_str, months)
     pattern = regex.compile(fmt_str)
-    pages = []
+    breaks = [0]
     for i, row in matched.iterrows():
         if pd.notnull(row.text):
-            text = remove_punctuation(row.text)
+            text = libntc.remove_punctuation(row.text)
             match = regex.search(pattern, text, concurrent = True)
-            if match and i not in pages:
-                pages.append(i)
-    return pages
+            if match and i > breaks[-1] + 20:
+                breaks.append(i)
+    return breaks
 
 
 def find_date(issue, error = 3):
@@ -161,7 +122,7 @@ def find_date(issue, error = 3):
     prev_text = None
     for i, row in issue.iterrows():
         if pd.notnull(row.text):
-            text = remove_punctuation(row.text)
+            text = libntc.remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
             if match:
                 matched.append(row)
@@ -174,26 +135,6 @@ def find_date(issue, error = 3):
             prev_i = i
             prev_text = text
     return pd.DataFrame(matched)
-
-
-#def parse_date(rows):
-#    best_match = None
-#    best_counts = None
-#    for row in rows:
-#        match = regex.match(pattern, row.text, concurrent = True)
-#        if match:
-#            fuzzy_counts = sum(match.fuzzy_counts)
-#            if best_match is None or fuzzy_counts < best_counts:
-#                best_match = match
-#                best_counts = fuzzy_counts
-#    dow = edit_match(best_match.group(1), calendar.day_name)
-#    month = edit_match(best_match.group(2), calendar.month_name)
-#    return (dow, month)
-
-
-#def edit_match(match, candidates):
-#    return min(candidates,
-#               key = lambda candidate: distance.edit_distance(match, candidate))
 
 
 if __name__ == "__main__":
