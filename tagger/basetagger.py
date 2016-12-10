@@ -452,9 +452,3 @@ def compute_jump_metric(original_issues, tagged_issues):
         accuracies.append(accuracy)
 
     return sum(accuracies) / len(accuracies)
-
-
-def compute_article_num_metric(original_issue, tagged_issue):
-    # TODO
-    pass
-
