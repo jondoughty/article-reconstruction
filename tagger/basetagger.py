@@ -372,21 +372,16 @@ def create_classifier(issues, classifier_func, features_func, tags,
     pickle.dump(classifier, pfile)
 
 
-# ===========================================
-# ================= METRICS =================
-# ===========================================
-
-
-def tag_junk(issue, replace_nan=True, replace_all=False):
+def tag_junk(issue, replace_nan=False, replace_all=True):
     """
     Tags any untagged rows in 'function' column as junk (JNK).
 
     issue: obj
         Issue object to apply tags to.
     replace_nan: bool
-        Whether to replace np.nan with JNK.
+        Whether to replace np.nan with JNK (default=False).
     replace_all: bool
-        Whether to replace the tag on other junk coumns with JNK.
+        Whether to replace the tag on other junk coumns with JNK (default=True).
 
     returns: obj
     """
@@ -395,11 +390,16 @@ def tag_junk(issue, replace_nan=True, replace_all=False):
     if replace_nan:
         tags.append(np.nan)
     if replace_all:
-        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN"])
+        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP"])
 
     for tag in tags:
         issue.tags_df.function.replace(tag, "JNK", inplace=True)
     return issue
+
+
+# ===========================================
+# ================= METRICS =================
+# ===========================================
 
 
 def _function_accuracy(expected_funcs, actual_funcs):

@@ -17,7 +17,6 @@ _SHUFFLE = False
 
 # Required function tags metadata.
 _REQUIRED_TAGS = ["PI", "HL", "BL"]
-# XXX: Move SH tags back to REQUIRED_TAGS after testing
 _TAGS_TO_KEEP = _REQUIRED_TAGS + ["PL", "SH"]
 
 # English dictionary.
@@ -369,7 +368,6 @@ def _features_stats_patterns(text):
 # ========================================
 
 
-# TODO(ngarg): Increase complexity.
 def _generate_features_advertisement(data):
     """
     Generates a classifier that identify an advertisement (AT).
@@ -669,31 +667,6 @@ def tag(issue):
     return issue
 
 
-def tag_junk(issue, replace_nan=True, replace_all=False):
-    """
-    Tags any untagged rows in 'function' column as junk (JNK).
-
-    issue: obj
-        Issue object to apply tags to.
-    replace_nan: bool
-        Whether to replace np.nan with JNK.
-    replace_all: bool
-        Whether to replace the tag on other junk coumns with JNK.
-
-    returns: obj
-    """
-    issue = copy.deepcopy(issue)
-    tags = []
-    if replace_nan:
-        tags.append(np.nan)
-    if replace_all:
-        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP"])
-
-    for tag in tags:
-        issue.tags_df.function.replace(tag, "JNK", inplace=True)
-    return issue
-
-
 # List of junk classifiers.
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_MH_naive_bayes.pickle", _generate_features_header, ["MH", "PH", "BQN", "BQA"], _tag_headers))
 _JUNKTAGGER_CLASSIFIERS.append(("junktagger_BQ_naive_bayes.pickle", _generate_features_header, ["PH", "BQN", "BQA"], _tag_headers))
@@ -742,8 +715,8 @@ def main():
     print_accuracy_tag(issues, tagged_issues, tag="MH", print_incorrect=False)
 
     # Replaces the tags in the issues with JNK.
-    final_issues = [tag_junk(issue, replace_nan=False, replace_all=True) for issue in tagged_issues]
-    jnk_issues = [tag_junk(issue, replace_all=True) for issue in issues]
+    final_issues = [tag_junk(issue) for issue in tagged_issues]
+    jnk_issues = [tag_junk(issue) for issue in issues]
     final_issues[final_idx].to_csv("test2.csv")
     jnk_issues[final_idx].to_csv("test3.csv")
 

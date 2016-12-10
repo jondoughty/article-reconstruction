@@ -113,7 +113,7 @@ def gen_blank_df(txt_path, columns):
 
     # gata data in lines variable
     with open(txt_path, 'r', encoding="utf-8") as file_in:
-        lines = [line for line in file_in.readlines()]
+        lines = [line.rstrip("\n") for line in file_in.readlines()]
 
     df['text'] = lines
 
