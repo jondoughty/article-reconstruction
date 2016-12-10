@@ -1,14 +1,17 @@
 # basetagger.py
 
-from random import shuffle
-import pandas as pd
-import numpy as np
-import pickle
 import copy
+import glob
 import math
-import nltk
 import os
+import pickle
+import random
 import re
+import sys
+
+import nltk
+import numpy as np
+import pandas as pd
 
 
 # TODO(ngarg): CHANGE 'NA' to 'N' becuase pandas processes 'NA' as np.nan
@@ -235,7 +238,7 @@ def split_training_test(data, percent=0.75):
 
     returns: (obj, obj)
     """
-    shuffle(data)
+    random.shuffle(data)
     split = int(len(data) * percent)
     training = data[:split]
     test = data[split:]
@@ -452,3 +455,65 @@ def compute_jump_metric(original_issues, tagged_issues):
         accuracies.append(accuracy)
 
     return sum(accuracies) / len(accuracies)
+
+
+def get_progress(stop):
+    """
+    Write |fmt_str| to stdout, overwriting previous messages using a carriage
+    return. If this generator is called |stop| times, end with a newline.
+    """
+    fmt_str = "PROGRESS: {0:.1f}%"
+    start = 1
+    while True:
+        sys.stdout.write("\r" + fmt_str.format(start / stop * 100))
+        sys.stdout.flush()
+        if start >= stop:
+            break
+        start += 1
+        yield
+    sys.stdout.write("\n")
+    sys.stdout.flush()
+    yield
+
+
+def measure_precision_recall(tag_str, tag_fun, limit = sys.maxsize):
+    pd.set_option("display.width", None)
+    pd.set_option("display.max_rows", None)
+    paths = glob.glob("tagged_data/*.csv")
+    columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
+    content_tags = ["HL", "BL", "TXT"]
+    if tag_str in content_tags:
+        content_tags.remove(tag_str)
+    tps = []
+    fps = []
+    fns = []
+    message = get_progress(len(paths))
+    for path in paths[:limit]:
+        next(message)
+#        path = "tagged_data/ua-nws_00003203_md-1983-47-118.csv"
+        tags_df = pd.read_csv(path, header = 2, names = columns)
+        tags_df = tags_df.dropna(how = "all")
+        issue = Issue(tags_df)
+        actual = issue.tags_df.function.rename("actual")
+        issue.tags_df.function = None
+        issue = tag_fun(issue)
+        issue.tags_df = issue.tags_df.join(actual)
+        tps.append(issue.tags_df[(issue.tags_df.actual == tag_str) &
+                                 (issue.tags_df.function == tag_str)])
+        fps.append(issue.tags_df[(issue.tags_df.actual.isin(content_tags)) &
+                                 (issue.tags_df.function == tag_str)])
+        fns.append(issue.tags_df[(issue.tags_df.actual == tag_str) &
+                                 (issue.tags_df.function != tag_str)])
+    tps = pd.concat(tps)
+    fps = pd.concat(fps)
+    fns = pd.concat(fns)
+    print("\n\nTrue Positives:")
+    print(tps)
+    print("\n\nFalse Positives:")
+    print(fps)
+    print("\n\nFalse Negatives:")
+    print(fns)
+    print("\n\n\n")
+    print("Precision", len(tps) / (len(tps) + len(fps)))
+    print("Recall", len(tps) / (len(tps) + len(fns)))
+

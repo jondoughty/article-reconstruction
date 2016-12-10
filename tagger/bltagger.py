@@ -2,52 +2,20 @@
 # Daniel Kauffman
 
 import copy
-import glob
 import regex
 import string
 
 import pandas as pd
 
-from tagger.basetagger import *
+import tagger.basetagger as basetagger
 
 
 def main():
-    pd.set_option("display.width", None)
-    pd.set_option("display.max_rows", None)
-    paths = glob.glob("tagged_data/*.csv")
-    columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
-    content_tags = ["HL", "TXT"]
-    tp = fp = fn = 0
-    for path in paths:
-        issue = pd.read_csv(path, header = 2, names = columns)
-        issue = issue.dropna(how = "all")
-        issue = tag(issue, test = True).join(issue.function, rsuffix = "_act")
-        print(issue)
-        tp += len(issue[(issue.function_act == "BL") &
-                        (issue.function == "BL")])
-        fp += len(issue[(issue.function_act.isin(content_tags)) &
-                        (issue.function == "BL")])
-        fn += len(issue[(issue.function_act == "BL") &
-                        (issue.function != "BL")])
-        print("\n\nTrue Positives:")
-        print(issue[(issue.function_act == "BL") &
-                    (issue.function == "BL")])
-        print("\n\nFalse Positives:")
-        print(issue[(issue.function_act.isin(content_tags)) &
-                    (issue.function == "BL")])
-        print("\n\nFalse Negatives:")
-        print(issue[(issue.function_act == "BL") &
-                    (issue.function != "BL")])
-        print("\n\n\n")
-    print("Precision", tp / (tp + fp))
-    print("Recall", tp / (tp + fn))
+    basetagger.measure_precision_recall("BL", tag)
 
 
-def tag(issue, test = False):
+def tag(issue):
     issue = copy.deepcopy(issue)
-    # issue = issue.tags_df
-    if test:
-        issue.tags_df.function = None
     matched = pd.concat([find_byline(issue.tags_df), find_description(issue.tags_df)])
     matched = matched.drop_duplicates().sort_index()
     for i, row in matched.iterrows():

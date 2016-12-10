@@ -4,15 +4,15 @@
 import calendar
 import copy
 import regex
+import string
 
 import pandas as pd
 
 import tagger.basetagger as basetagger
-import tagger.libntc as libntc
 
 
 def main():
-    libntc.run_tests("PI", tag, content_tags = ["HL", "BL"])
+    basetagger.measure_precision_recall("PI", tag)
 
 
 def tag(issue):
@@ -36,6 +36,11 @@ def tag(issue):
     return issue
 
 
+def remove_punctuation(text):
+    table = str.maketrans(string.punctuation, " " * len(string.punctuation))
+    return text.translate(table).strip().upper()
+
+
 def find_nameplate(issue, error = 5):
     pub_name = "MUSTANG DAILY"
     school_name = "CALIFORNIA POLYTECHNIC STATE UNIVERSITY"
@@ -51,7 +56,7 @@ def find_volume(issue, error = 3):
     pattern = regex.compile(fmt_str, flags = regex.ENHANCEMATCH)
     for i, row in issue.iterrows():
         if pd.notnull(row.text):
-            text = libntc.remove_punctuation(row.text)
+            text = remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
             if match:
                 return issue.loc[i:i]
@@ -67,7 +72,7 @@ def find_page_info(issue, error = 1):
     matched = []
     for _, row in issue.iterrows():
         if pd.notnull(row.text):
-            text = libntc.remove_punctuation(row.text)
+            text = remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
             if match:
                 matched.append(row)
@@ -82,7 +87,7 @@ def find_pub_name(issue, error = 5):
     matched = []
     for _, row in issue.iterrows():
         if pd.notnull(row.text):
-            text = libntc.remove_punctuation(row.text)
+            text = remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
             if match:
                 matched.append(row)
@@ -97,7 +102,7 @@ def get_page_breaks(matched, error = 2):
     breaks = [0]
     for i, row in matched.iterrows():
         if pd.notnull(row.text):
-            text = libntc.remove_punctuation(row.text)
+            text = remove_punctuation(row.text)
             match = regex.search(pattern, text, concurrent = True)
             if match and i > breaks[-1] + 20:
                 breaks.append(i)
@@ -122,7 +127,7 @@ def find_date(issue, error = 3):
     prev_text = None
     for i, row in issue.iterrows():
         if pd.notnull(row.text):
-            text = libntc.remove_punctuation(row.text)
+            text = remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
             if match:
                 matched.append(row)
