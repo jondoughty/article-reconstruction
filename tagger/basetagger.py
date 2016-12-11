@@ -5,6 +5,7 @@ import glob
 import math
 import os
 import pickle
+import pprint
 import random
 import re
 import sys
@@ -457,6 +458,23 @@ def compute_jump_metric(original_issues, tagged_issues):
     return sum(accuracies) / len(accuracies)
 
 
+def get_pos_patterns(tag, limit = 20):
+    paths = glob.glob("tagged_data/*.csv")
+    columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
+    pos_list = []
+    for path in paths:
+        issue = pd.read_csv(path, header = 2, names = columns)
+        issue = issue.dropna(how = "all")
+        for _, row in issue.iterrows():
+            if pd.notnull(row.text):
+                if row.function == tag:
+                    tokens = nltk.word_tokenize(row.text)
+                    pos_tags = nltk.pos_tag(tokens, tagset = "universal")
+                    pos_list.append([pos for _, pos in pos_tags])
+    fd = nltk.FreqDist(tuple(pos) for pos in pos_list)
+    pprint.pprint(dict(fd.most_common(limit)))
+
+
 def get_progress(stop):
     """
     Write |fmt_str| to stdout, overwriting previous messages using a carriage
@@ -487,20 +505,18 @@ def measure_precision_recall(tag_str, tag_fun, limit = sys.maxsize):
     tps = []
     fps = []
     fns = []
-    message = get_progress(len(paths))
+    message = get_progress(len(paths[:limit]))
     for path in paths[:limit]:
         next(message)
-#        path = "tagged_data/ua-nws_00003203_md-1983-47-118.csv"
         tags_df = pd.read_csv(path, header = 2, names = columns)
         tags_df = tags_df.dropna(how = "all")
         issue = Issue(tags_df)
         actual = issue.tags_df.function.rename("actual")
-        issue.tags_df.function = None
-        issue = tag_fun(issue)
+        issue = tag_fun(issue, test = True)
         issue.tags_df = issue.tags_df.join(actual)
         tps.append(issue.tags_df[(issue.tags_df.actual == tag_str) &
                                  (issue.tags_df.function == tag_str)])
-        fps.append(issue.tags_df[(issue.tags_df.actual.isin(content_tags)) &
+        fps.append(issue.tags_df[(issue.tags_df.actual != tag_str) &
                                  (issue.tags_df.function == tag_str)])
         fns.append(issue.tags_df[(issue.tags_df.actual == tag_str) &
                                  (issue.tags_df.function != tag_str)])
@@ -516,4 +532,5 @@ def measure_precision_recall(tag_str, tag_fun, limit = sys.maxsize):
     print("\n\n\n")
     print("Precision", len(tps) / (len(tps) + len(fps)))
     print("Recall", len(tps) / (len(tps) + len(fns)))
+
 

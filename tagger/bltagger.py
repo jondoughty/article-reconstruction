@@ -14,8 +14,10 @@ def main():
     basetagger.measure_precision_recall("BL", tag)
 
 
-def tag(issue):
+def tag(issue, test = False):
     issue = copy.deepcopy(issue)
+    if test:
+        issue.tags_df[~issue.tags_df.function.isin("PI")].function = None
     matched = pd.concat([find_byline(issue.tags_df), find_description(issue.tags_df)])
     matched = matched.drop_duplicates().sort_index()
     for i, row in matched.iterrows():

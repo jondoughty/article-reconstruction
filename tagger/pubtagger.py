@@ -15,7 +15,7 @@ def main():
     basetagger.measure_precision_recall("PI", tag)
 
 
-def tag(issue):
+def tag(issue, test = False):
     issue = copy.deepcopy(issue)
     issue.tags_df.page = None
     issue.tags_df.function = None
@@ -39,11 +39,6 @@ def tag(issue):
 def remove_punctuation(text):
     table = str.maketrans(string.punctuation, " " * len(string.punctuation))
     return text.translate(table).strip().upper()
-
-
-def find_nameplate(issue, error = 5):
-    pub_name = "MUSTANG DAILY"
-    school_name = "CALIFORNIA POLYTECHNIC STATE UNIVERSITY"
 
 
 def find_volume(issue, error = 3):
@@ -106,6 +101,7 @@ def get_page_breaks(matched, error = 2):
             match = regex.search(pattern, text, concurrent = True)
             if match and i > breaks[-1] + 20:
                 breaks.append(i)
+    # TODO: tags "Mustang Daily"
     return breaks
 
 
