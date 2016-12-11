@@ -5,6 +5,7 @@ import copy
 import regex
 import string
 
+import nltk
 import numpy as np
 import pandas as pd
 
@@ -25,10 +26,11 @@ def tag(issue, test = False):
                                                                 regex = True)
     matched = pd.concat([find_byline(issue.tags_df),
                          find_description(issue.tags_df)])
-    matched = matched.drop_duplicates().sort_index()
-    for i, row in matched.iterrows():
-        if pd.isnull(issue.tags_df.loc[i].function):
-            issue.tags_df.set_value(i, "function", "BL")
+    if len(matched) > 0:
+        matched = matched.drop_duplicates().sort_index()
+        for i, row in matched.iterrows():
+            if pd.isnull(issue.tags_df.loc[i].function):
+                issue.tags_df.set_value(i, "function", "BL")
     return issue
 
 
@@ -64,7 +66,8 @@ def find_byline(issue, error = 3):
         if pd.notnull(row.text) and len(row.text) < 100 and ":" not in row.text:
             text = remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
-            if match:
+            tokens = nltk.word_tokenize(text)
+            if len(tokens) > 1 and match:
                 matched.append(row)
     return pd.DataFrame(matched)
 
@@ -85,7 +88,8 @@ def find_description(issue):
         if pd.notnull(row.text):
             text = remove_punctuation(row.text).strip()
             match = regex.match(pattern, text, concurrent = True)
-            if match:
+            tokens = nltk.word_tokenize(text)
+            if len(tokens) > 1 and match:
                 matched.append(row)
     return pd.DataFrame(matched)
 

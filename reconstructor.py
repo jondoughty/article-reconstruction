@@ -55,7 +55,7 @@ def main():
 
 def gen_issue_dict(args, issue_list):
     # taggers
-    taggers = [pbt.tag, hlt.tag, blt.tag, jkt.tag, ttt.tag, jpt.tag, ant.tag]
+    taggers = [pbt.tag, blt.tag, hlt.tag, jkt.tag, ttt.tag, jpt.tag, ant.tag]
 
     issue_dict = {}
     # if raw_data - call respective tag functions
