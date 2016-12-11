@@ -48,8 +48,6 @@ def main():
         import ocrmerge
         ocrmerge.get_location_data(issue_list, image_dir="image_data", hocr_dir="hOCR_data")
 
-    #TODO REMOVE
-    exit(0)
     # dictionary for tagged issues
     issue_dict = gen_issue_dict(args, issue_list)
 
