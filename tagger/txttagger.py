@@ -1,10 +1,9 @@
 # txttagger.py
 # Vivian Fong
-#
+
 from nltk.corpus import names
 from nltk import sent_tokenize
 from nltk import word_tokenize
-import difflib
 import enchant
 import re
 import string
@@ -15,6 +14,7 @@ _PUNCTUATION = string.punctuation + "''"
 _ENGLISH_DICTIONARY = enchant.Dict("en_US")
 _ENGLISH_NAMES = [word.lower() for word in (names.words("female.txt") + names.words("male.txt"))
                                if not _ENGLISH_DICTIONARY.check(word)]
+_REQUIRED_TAGS = ["PI", "BL", "B", "N", "MH"]
 
 
 # ===============================================
@@ -22,9 +22,9 @@ _ENGLISH_NAMES = [word.lower() for word in (names.words("female.txt") + names.wo
 # ===============================================
 
 
-def _features_stats_sent_word_count(text):
+def _features_stats_word_count(text):
     """
-    Gets the features on sentence and word count.
+    Gets the features on word count.
 
     text: str
         Text to perform analysis on.
@@ -33,18 +33,53 @@ def _features_stats_sent_word_count(text):
     """
     features = {}
 
-    # Sentence count.
-    # sent_count = len(sent_tokenize(text))
-    # features.update(create_features_for_ranges(feature_name="sent_count",
-    #                                             variable=sent_count,
-    #                                             ranges=[1, 2, 3]))
-    # Word count.
     words = word_tokenize(text)
     alpha_only = [w for w in words if w not in _PUNCTUATION]
     word_count = len(alpha_only)
     features.update(create_features_for_ranges(feature_name="word_count",
                                                 variable=word_count,
-                                                ranges=[5, 15, 25, 35]))
+                                                ranges=[1, 3, 5, 15, 25]))
+    return features
+
+
+def _features_stats_punctuation(text):
+    """
+    Gets the features on punctuation.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: dict
+    """
+    features = {}
+
+    sents = sent_tokenize(text)
+    words = word_tokenize(text)
+
+    if '“' in text or '”' in text:
+        features["has_quotes"] = True
+
+    period_count = 0
+    question_mark_count = 0
+    exclamation_mark_count = 0
+    for sent in sents:
+        if len(sent) > 1:
+            if sent[-1] == "." and sent[-2] != ".":
+                period_count += 1
+            elif sent[-1] == "?":
+                question_mark_count += 1
+            elif sent[-1] == "!":
+                exclamation_mark_count += 1
+
+    features.update(create_features_for_ranges(feature_name="sent_period_count",
+                                                variable=period_count,
+                                                ranges=[0, 1, 2, 3]))
+    features.update(create_features_for_ranges(feature_name="sent_exclamation_count",
+                                                variable=exclamation_mark_count,
+                                                ranges=[0, 1, 2]))
+    features.update(create_features_for_ranges(feature_name="sent_question_count",
+                                                variable=question_mark_count,
+                                                ranges=[0, 1, 2]))
     return features
 
 
@@ -52,50 +87,34 @@ def _features_stats_readable_word_percentage(text):
     """
     Gets the percentage of readable words.
 
-    Each word that exists in a dictionary adds 1 point.
-    # For all other words, the edit distance is computed with the most similar
-    # dictionary word. If the similarity score is above the threshold, the score
-    # is added to the total score. The percentage is computed at the end with by
-    # dividing the score by the total number of words.
-
     text: str
         Text to perform analysis on.
 
     returns: dict
     """
-    THRESHOLD = 0.75
     features = {}
 
     words = word_tokenize(text)
     alpha_only = [w.lower() for w in words if w not in _PUNCTUATION]
     word_count = len(alpha_only)
     readable_word_percent = 0
-    potential_word_percent = 0
+    name_count = 0
 
     if word_count:
         readable_word_score = 0
-        potential_word_score = 0
-
         for word in alpha_only:
-            potential_word_score += 1
             if _ENGLISH_DICTIONARY.check(word):
                 readable_word_score += 1
-            # else:
-            #     suggestions = _ENGLISH_DICTIONARY.suggest(word)
-            #     if suggestions:
-            #         matcher = difflib.SequenceMatcher(None, word, suggestions[0])
-            #         sim = matcher.real_quick_ratio()
-            #         if sim > THRESHOLD:
-            #             readable_word_score += sim
+            if word in _ENGLISH_NAMES:
+                name_count += 1
         readable_word_percent = readable_word_score / word_count
-        potential_word_percent = potential_word_score / word_count
 
+    features.update(create_features_for_ranges(feature_name="name_count",
+                                                variable=name_count,
+                                                ranges=[1, 3]))
     features.update(create_features_for_ranges(feature_name="readable_word_percent",
                                                 variable=readable_word_percent,
                                                 ranges=[.75]))
-    features.update(create_features_for_ranges(feature_name="potential_word_percent",
-                                                variable=potential_word_percent,
-                                                ranges=[.90]))
     return features
 
 
@@ -118,10 +137,10 @@ def _features_stats_alpha_char_percentage(text):
 
     features.update(create_features_for_ranges(feature_name="alpha_char_percentage",
                                                 variable=alpha_char_percent,
+                                                ranges=[.25, .75]))
+    features.update(create_features_for_ranges(feature_name="random_symbol_percentage",
+                                                variable=random_symbol_percent,
                                                 ranges=[.25, .5, .75]))
-    # features.update(create_features_for_ranges(feature_name="random_symbol_percentage",
-    #                                             variable=random_symbol_percent,
-    #                                             ranges=[.25, .5, .75]))
     return features
 
 
@@ -144,72 +163,38 @@ def _features_stats_uppercase(text):
 
     features.update(create_features_for_ranges(feature_name="uppercase_percentage",
                                                 variable=percent,
-                                                ranges=[.25, .5, .75]))
-    # features.update(create_features_for_ranges(feature_name="uppercase_count",
-    #                                             variable=uppercase_count,
-    #                                             ranges=[0, 2]))
+                                                ranges=[.25, .75]))
+    features.update(create_features_for_ranges(feature_name="uppercase_count",
+                                                variable=uppercase_count,
+                                                ranges=[0, 2]))
     return features
 
 
-def _check_line_prefix(word):
+def _features_stats_prefix(text):
     """
-    Determines whether the given word for the sentence prefix.
-
-    text: str
-        Text to perform analysis on.
-
-    returns: boolean
-    """
-    # print("word: %s" %word)
-
-    if word.lower() == "editor":
-        return True
-
-    upper_chars = [c for c in word if c.isupper()]
-    ratio = len(upper_chars) / len(word)
-    # print("ratio %f" %ratio)
-    return ratio > 0.5
-
-
-def _features_sent_prefix(text):
-    """
-    Gets features based on whether the line is in the following format:
-
-        SOMETHING_IN_CAPS -
-        Something_not_in_caps –
+    Gets features for the first character and first word.
 
     text: str
         Text to perform analysis on.
 
     returns: dict
-
     """
     features = {}
 
-    words = word_tokenize(text)
+    if text:
+        first_char = text[0]
+        if first_char.isalpha():
+            features["first_char"] = "upper" if first_char.isupper() else "lower"
+        elif first_char.isdigit():
+            features["first_char"] = "digit"
+        elif first_char == '“':
+            features["first_char"] = "quote"
 
-    if '“' in text or '”' in text:
-        features["has_quotes"] = True
-
-    if text and text[0] in "-—":
-        features["starts_with_hyphen"] = True
-
-    if len(words) >= 5 and ('-' in words[1:5] or '—' in words[1:5]):
-        if _check_line_prefix(words[0]):
-            # print("\tTXT: " + str(words[0:5]))
-            features["upper_sent_prefix_hyphen"] = True
-        else:
-            # print("\tNONE: " + str(words[0:5]))
-            features["non_upper_sent_prefix_hyphen"] = True
-
-    return features
-
-
-def _features_full_sentence(text):
-    features = {}
-
-    if text[0].isupper() and text[-1] in ".?!":
-        features["full_sentence"] = True
+        words = word_tokenize(text)
+        if words:
+            first_word = words[0]
+            if first_word.isalpha():
+                features["first_word"] = "upper" if first_word.isupper() else "lower"
 
     return features
 
@@ -230,13 +215,12 @@ def _generate_features_txt(row_data):
     """
     features = {}
     text = row_data.text.strip()
-    features.update(_features_stats_sent_word_count(text))
+    features.update(_features_stats_word_count(text))
+    features.update(_features_stats_punctuation(text))
     features.update(_features_stats_readable_word_percentage(text))
     features.update(_features_stats_uppercase(text))
     features.update(_features_stats_alpha_char_percentage(text))
-    features.update(_features_sent_prefix(text))
-    # TODO: Increases recall, reduces precision
-    # features.update(_features_full_sentence(text))
+    features.update(_features_stats_prefix(text))
     return features
 
 
@@ -284,8 +268,6 @@ def _tag_txt(row, classifier, features_func):
 
     returns: str
     """
-    valid_funcs = ["HL", "BL"]
-
     if pd.isnull(row.function) and not pd.isnull(row.text):
         features = features_func(row)
         if classifier.classify(features):
@@ -299,25 +281,47 @@ def _tag_txt(row, classifier, features_func):
 # ==================================
 
 
+def _check_line_prefix(word):
+    """
+    Determines whether the given word for the sentence prefix.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: boolean
+    """
+    if word.lower() == "editor":
+        return True
+
+    upper_chars = [c for c in word if c.isupper()]
+    ratio = len(upper_chars) / len(word)
+    return ratio > 0.5
+
+
 def _is_non_text_prefix(text):
     if len(words) < 5:
         return False
-
     if words[0] in '-—':
         return True
-
     if '-' in words[1:5] or '—' in words[1:5]:
         if not _check_line_prefix(words[0]):
             return True
-
     for word in words:
         if '-' in word or '—' in word:
             return True
-
     return False
 
 
 def smooth(issue):
+    """
+    Additional rules to clean up the results after statistical analysis.
+
+    text: Issue
+        Issue to clean up.
+
+    returns: Issue
+    """
+
     _setup_surrounding_funcs_references(issue)
 
     for index, row in issue.tags_df.iterrows():
@@ -327,7 +331,7 @@ def smooth(issue):
         # Fill in gaps
         if (pd.isnull(row.function) and
             (row.func_prev_two == "TXT" or row.func_next_two == "TXT") and
-            row.func_prev in valid_prev_funcs and # TODO: Try to make this into a feature?
+            row.func_prev in valid_prev_funcs and
             row.func_next == "TXT"):
             issue.tags_df.loc[index, "function"] = "TXT"
 
@@ -340,21 +344,29 @@ def smooth(issue):
 
         # Revise
         if not pd.isnull(row.text):
+            if "(AP) —" in row.text:
+                issue.tags_df.loc[index, "function"] = "TXT"
+
             words = word_tokenize(row.text)
             if words:
-                if words[0].islower() == "editor":
+                if len(words) == 1 and row.function == "TXT":
+                    issue.tags_df.loc[index, "function"] = None
+                elif words[0].islower() == "editor":
                     issue.tags_df.loc[index, "function"] = "TXT"
                 elif len(words) >= 5 and ('-' in words[1:5] or '—' in words[1:5]):
-                    if not _check_line_prefix(words[0]):
+                    if  _check_line_prefix(words[0]):
+                        issue.tags_df.loc[index, "function"] = "TXT"
+                    else:
                         issue.tags_df.loc[index, "function"] = curr_func
-
-            # if len(words) <= 5 and ('from page' in row.text.lower() or 'to page' in row.text.lower()):
-            #     issue.tags_df.loc[index, "function"] = None
-            #
+                elif len(words) <= 7 and ('page' in words[:5]):
+                    issue.tags_df.loc[index, "function"] = None
 
     _drop_surrounding_funcs_references(issue)
 
     return issue
+
+
+_TXTTAGGER_CLASSIFIER = ("txttagger_TXT_naive_bayes.pickle", _generate_features_txt, ["TXT"], _tag_txt)
 
 
 def tag(issue):
@@ -364,32 +376,28 @@ def tag(issue):
     issue: obj
         Issue object to apply tags to.
     """
-    assert check_tags_exist(issue, ["PI", "BL", "HL", "N", "B"])
+    assert check_tags_exist(issue, _REQUIRED_TAGS)
     issue = copy.deepcopy(issue)
 
-    filename = _TXTTAGGER_CLASSIFIER[0]
-    features_func = _TXTTAGGER_CLASSIFIER[1]
-    label_func = _TXTTAGGER_CLASSIFIER[3]
+    filename = _TXTTAGGER_CLASSIFIER[0]         # "txttagger_TXT_naive_bayes.pickle"
+    features_func = _TXTTAGGER_CLASSIFIER[1]    # _generate_features_txt
+    label_func = _TXTTAGGER_CLASSIFIER[3]       # _tag_txt
 
     issue.apply_classifier(col="function", filename=filename,
                             features_func=features_func, label_func=label_func)
     issue = smooth(issue)
-
     return issue
-
-
-_TXTTAGGER_CLASSIFIER = ("txttagger_TXT_naive_bayes.pickle", _generate_features_txt, ["TXT"], _tag_txt)
 
 
 def main():
     # Get issues with and without tags.
     issues, untagged_issues = get_issues(columns=["article", "paragraph", "jump"],
-                                         tags=["PI", "BL", "HL", "N", "B"])
+                                         tags=_REQUIRED_TAGS)
 
     # Create classifier.
     filename = _TXTTAGGER_CLASSIFIER[0]         # "txttagger_TXT_naive_bayes.pickle"
     features_func = _TXTTAGGER_CLASSIFIER[1]    # _generate_features_txt
-    tags = _TXTTAGGER_CLASSIFIER[2]             # _tag_txt
+    tags = _TXTTAGGER_CLASSIFIER[2]             # ["TXT"]
     create_classifier(issues=issues,
                       classifier_func=create_naive_bayes_classifier,
                       features_func=features_func, tags=tags, filename=filename,
@@ -400,12 +408,10 @@ def main():
     # for index, issue in enumerate(tagged_issues):
     #     name = 'txt_test' + str(index) + '.csv'
     #     issue.to_csv(name)
-    tagged_issues[2].to_csv('txt_test.csv')
+    # tagged_issues[2].to_csv('txt_test.csv')
 
     # Print the accuracy of the results.
     print_accuracy_tag(issues, tagged_issues, tag="TXT", print_incorrect=False)
-
-    compute_function_metric([issues[1]], [tagged_issues[1]])
 
 
 if __name__ == "__main__":

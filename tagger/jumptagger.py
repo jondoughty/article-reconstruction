@@ -1,5 +1,6 @@
 # jumptagger.py
 # Vivian Fong
+# Nupur Garg
 
 from tagger.basetagger import *
 
@@ -119,7 +120,6 @@ def main():
     # Print the accuracy of the results.
     print("Calculating accuracy...")
     print_accuracy_tag(issues, tagged_issues, tag="JUMP", jump_col=True, print_incorrect=True)
-    compute_jump_metric(issues, tagged_issues)
 
 
 if __name__ == "__main__":
