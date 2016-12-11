@@ -5,6 +5,7 @@ import copy
 import glob
 import regex
 import string
+import re
 
 import enchant
 import nltk
@@ -52,18 +53,34 @@ def find_headline(issue):
                        pd.notnull(prev.text) and \
                        "." not in prev.text
             if is_valid:
-                if row.function == "BL":
+                tokens = nltk.word_tokenize(prev.text)
+                pos_tags = [tag for _, tag in
+                            nltk.pos_tag(tokens, tagset = "universal")]
+                n_real = [en_dict.check(token)
+                          for token in tokens if not token.isdigit()].count(True)
+                if row.function == "BL" and n_real > 1:
                     matched.append(prev)
                 else:
-                    tokens = nltk.word_tokenize(prev.text)
-#                    pos_tags = [tag for _, tag in
-#                                nltk.pos_tag(tokens, tagset = "universal")]
-                    n_real = [en_dict.check(token)
-                              for token in tokens].count(True)
-                    is_hl = len(tokens) > 1 and len(tokens) < 10 and \
-                            len(prev.text) < 80 and \
-                            n_real / len(tokens) > 0.5 and \
-                            not any(c.isdigit for c in prev.text)
+                    non_alphabetic = re.sub(r"[A-Za-z\ ]+", "", str(prev.text))
+                    all_uppercase_words = [token for token in tokens
+                                           if token and token.isupper()]
+                    title_words = [token for token in tokens
+                                   if token and token[0].isupper()]
+                    punctuation = re.findall(r"\*|\"|\,", prev.text)
+
+                    is_hl = (len(tokens) > 1 and len(tokens) < 10 and
+                             len(prev.text) < 70 and
+                             n_real > 3 and n_real < 10 and
+                             (len(tokens) - n_real) <= 2 and
+                             len(non_alphabetic) <= 2 and
+                             not len(all_uppercase_words) and
+                             len(title_words) <= 2 and
+                             (tokens and tokens[0].istitle()) and
+                             not punctuation and
+                             pos_tags.count("NOUN") >= 3 and
+                             pos_tags.count("VERB") <= 2 and
+                             not pos_tags.count("DET") and
+                             not pos_tags.count("PRON"))
                     if is_hl:
                         matched.append(prev)
     return pd.DataFrame(matched)
