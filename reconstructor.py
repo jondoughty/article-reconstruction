@@ -8,7 +8,6 @@ import glob
 import sys
 import re
 
-#import ocrmerge
 from tagger.basetagger import *
 import tagger.pubtagger as pbt
 import tagger.hltagger as hlt
@@ -39,13 +38,18 @@ def main():
 
     # get all files in specified directory
     paths = glob.glob(os.path.join(args.data_dir[0], file_type))
+    #TODO remove
+    #paths = glob.glob(os.path.join('./raw_data/*00003872*.txt'))
 
     # generate list of untagged Issues()
     issue_list = gen_issue_list(args, paths)
 
-    #if not (args.tagged_data):
-        #ocrmerge.get_location_data(issue_list, image_dir="image_data", txt_dir=args.data_dir[0], hocr_dir="hOCR_data")
+    if args.raw_data and args.coord:
+        import ocrmerge
+        ocrmerge.get_location_data(issue_list, image_dir="image_data", hocr_dir="hOCR_data")
 
+    #TODO REMOVE
+    exit(0)
     # dictionary for tagged issues
     issue_dict = gen_issue_dict(args, issue_list)
 
@@ -156,6 +160,12 @@ def setup_args():
                     action='store_true',
                     dest='raw_data',
                     help='Flag to indicate testing.')
+
+    #TODO this really should be made only valid when --raw is also given
+    parser.add_argument('--coord',
+                    action='store_true',
+                    dest='coord',
+                    help='Flag to use coordinate data (experimental)')
 
 
     req = parser.add_argument_group('required arguments')
