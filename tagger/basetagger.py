@@ -459,20 +459,35 @@ def compute_jump_metric(original_issues, tagged_issues):
     return sum(accuracies) / len(accuracies)
 
 
-def get_pos_patterns(tag, limit = 20):
+def get_pos_by_tag(tag):
     paths = glob.glob("tagged_data/*.csv")
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
-    pos_list = []
+    tagged_sents = []
     for path in paths:
         issue = pd.read_csv(path, header = 2, names = columns)
         issue = issue.dropna(how = "all")
         for _, row in issue.iterrows():
-            if pd.notnull(row.text):
-                if row.function == tag:
+            if row.function == tag and pd.notnull(row.text):
+                tokens = nltk.word_tokenize(row.text)
+                if len(tokens) < 10:
                     tokens = nltk.word_tokenize(row.text)
-                    pos_tags = nltk.pos_tag(tokens, tagset = "universal")
-                    pos_list.append([pos for _, pos in pos_tags])
-    fd = nltk.FreqDist(tuple(pos) for pos in pos_list)
+                    pos_tags = nltk.pos_tag(tokens)
+                    tagged_sents.append([pos for _, pos in pos_tags])
+    return tagged_sents
+
+
+def find_unique_pos_tags(this_tag, other_tag):
+    tagged_sents = get_pos_by_tag(this_tag)
+    this_set = set([tag for tagged_sent in tagged_sents
+                        for tag in tagged_sent])
+    tagged_sents = get_pos_by_tag(other_tag)
+    other_set = set([tag for tagged_sent in tagged_sents
+                         for tag in tagged_sent])
+    return (this_set - other_set, other_set - this_set)
+
+
+def print_pos_freq_dist(tagged_sents, limit = 20):
+    fd = nltk.FreqDist(tuple(tagged_sent) for tagged_sent in tagged_sents)
     pprint.pprint(dict(fd.most_common(limit)))
 
 

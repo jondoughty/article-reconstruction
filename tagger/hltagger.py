@@ -15,6 +15,7 @@ import tagger.basetagger as basetagger
 
 
 def main():
+#    hl_pos, txt_pos = basetagger.find_unique_pos_tags("HL", "TXT")
     basetagger.measure_precision_recall("HL", tag, limit = 5)
 
 
@@ -52,20 +53,22 @@ def find_headline(issue):
                        pd.notnull(prev.text) and \
                        "." not in prev.text
             if is_valid:
-                if row.function == "BL":
-                    matched.append(prev)
-                else:
-                    tokens = nltk.word_tokenize(prev.text)
-#                    pos_tags = [tag for _, tag in
-#                                nltk.pos_tag(tokens, tagset = "universal")]
-                    n_real = [en_dict.check(token)
-                              for token in tokens].count(True)
-                    is_hl = len(tokens) > 1 and len(tokens) < 10 and \
-                            len(prev.text) < 80 and \
-                            n_real / len(tokens) > 0.5 and \
-                            not any(c.isdigit for c in prev.text)
-                    if is_hl:
+                tokens = nltk.word_tokenize(prev.text)
+                pos_tags = set([tag for _, tag in nltk.pos_tag(tokens)])
+#                hl_only = set(["FW", "UH", "JJS"])
+                txt_only = set(["EX", "NNPS", "("])
+                if not pos_tags & txt_only:
+                    if row.function == "BL":
                         matched.append(prev)
+                    else:
+                        n_real = [en_dict.check(token)
+                                  for token in tokens].count(True)
+                        is_hl = len(tokens) > 1 and len(tokens) < 10 and \
+                                len(prev.text) < 80 and \
+                                n_real / len(tokens) > 0.5 and \
+                                not any(c.isdigit for c in prev.text)
+                        if is_hl:
+                            matched.append(prev)
     return pd.DataFrame(matched)
 
 
