@@ -23,16 +23,17 @@ def tag(issue, test = False):
                          find_page_info(issue.tags_df),
                          find_date(issue.tags_df),
                          find_pub_name(issue.tags_df)])
-    matched = matched.drop_duplicates().sort_index()
-    for i, row in matched.iterrows():
-        if issue.tags_df.loc[i].function is None:
-            issue.tags_df.set_value(i, "function", "PI")
-    breaks = get_page_breaks(matched)
-    ptr = 0
-    for i, _ in issue.tags_df.iterrows():
-        issue.tags_df.set_value(i, "page", ptr + 1)
-        if ptr < len(breaks) - 1 and i >= breaks[ptr + 1]:
-            ptr += 1
+    if len(matched) > 0:
+        matched = matched.drop_duplicates().sort_index()
+        for i, row in matched.iterrows():
+            if issue.tags_df.loc[i].function is None:
+                issue.tags_df.set_value(i, "function", "PI")
+        breaks = get_page_breaks(matched)
+        ptr = 0
+        for i, _ in issue.tags_df.iterrows():
+            issue.tags_df.set_value(i, "page", ptr + 1)
+            if ptr < len(breaks) - 1 and i >= breaks[ptr + 1]:
+                ptr += 1
     return issue
 
 
