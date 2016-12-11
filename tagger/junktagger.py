@@ -17,7 +17,7 @@ _SHUFFLE = False
 
 # Required function tags metadata.
 _REQUIRED_TAGS = ["PI", "HL", "BL"]
-_TAGS_TO_KEEP = _REQUIRED_TAGS + ["PL", "SH"]
+_TAGS_TO_KEEP = _REQUIRED_TAGS + ["PL"]
 
 # English dictionary.
 _ENGLISH_DICTIONARY = enchant.Dict("en_US")
@@ -66,6 +66,52 @@ def _has_page_jump(text):
     pattern = regex.compile(fmt_str, flags=regex.ENHANCEMATCH)
     match = regex.search(pattern, text, concurrent=True)
     return bool(match)
+
+
+def _is_section_header(text):
+    """
+    Determines if the text is a section header (SH).
+
+    text: str
+        Text to perform analysis on.
+
+    returns: bool
+    """
+    # Compile regex.
+    text = re.sub(r"[^A-Za-z\ ]+", "", text)
+    fmt_str = ("(^(WELLNESS)$){e<=1}|"
+               "(^(NOTEBOOK)$){e<=1}|"
+               "(^(editorial)$){e<=0}|"
+               "(^(IN QUOTES)$){e<=1}|"
+               "(^(Newsbriefs)$){e<=1}|"
+               "(^(SCOREBOARD)$){e<=1}|"
+               "(^(ON THE STREET)$){e<=1}|"
+               "(^(MUSTANG DAILY)$){e<=1}|"
+               "(^(Sports|SPORTS)$){e<=2}|"
+               "(^(Campus|CAMPUS)$){e<=1}|"
+               "(^(Opinion|OPINION)$){e<=1}|"
+               "(^(Letters|LETTERS)$){e<=2}|"
+               "(^(Calendar|CALENDAR)$){e<=1}|"
+               "(^(QUOTE OE THE DAY)$){e<=1}|"
+               "(^(Reader Viewpoint)$){e<=1}|"
+               "(^(Newsline|NEWSLINE)$){e<=1}|"
+               "(^(Notables|NOTABLES)$){e<=1}|"
+               "(^(Commentary|COMMENTARY)$){e<=1}|"
+               "(^(LETTERS TO THE EDITOR)$){e<=1}|"
+               "(^(Editorials|EDITORIALS)$){e<=1}|"
+               "(^(Reporter's|REPORTER'S)$){e<=1}|"
+               "(^(Perspectives|PERSPECTIVES)$){e<=1}|"
+               "(^(Classified|CLASSIFIED|CiassifieD)$){e<=1}")
+    pattern = regex.compile(fmt_str, flags=regex.ENHANCEMATCH)
+    match = regex.search(pattern, text, concurrent=True)
+
+    # Determine if a match is found.
+    if match:
+        num_words = len(text.split(" "))
+        diff = sum(match.fuzzy_counts)
+        is_match = bool(match) and (num_words < 10 if diff > 1 else True)
+        return is_match
+    return False
 
 
 def _features_stats_alphabetic(text):
@@ -492,6 +538,21 @@ def _tag_jump(row):
     return row.function
 
 
+def _tag_section_header(row):
+    """
+    Tags any row as a section header (SH).
+
+    row: obj
+        DataFrame row to return value for.
+
+    returns: str
+    """
+    if pd.isnull(row.function):
+        if _is_section_header(row.text):
+            return "SH"
+    return row.function
+
+
 def _tag_unintelligible(row, classifier, features_func):
     """
     Tags the row as unintelligible (N) if there are not two consequtive
@@ -570,6 +631,7 @@ def _tag_headers(row, classifier, features_func):
             return "MH"
     return row.function
 
+
 def _tag_in_range(row):
     """
     Tags the row based on previous row if the previous or next row are:
@@ -584,7 +646,7 @@ def _tag_in_range(row):
     """
     _get_synset = lambda text: [word for word in text.lower().split(" ")
                                if word and _ENGLISH_DICTIONARY.check(word)]
-    valid_funcs = ["N", "OT", "AT"]
+    valid_funcs = ["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP", "SH"]
     if pd.isnull(row.function):
         surrounding = {"prev": row.func_prev in valid_funcs,
                        "next": row.func_next in valid_funcs,
@@ -650,6 +712,7 @@ def tag(issue):
     issue = copy.deepcopy(issue)
     issue.apply(col="function", label_func=_tag_blank)
     issue.apply(col="function", label_func=_tag_jump)
+    issue.apply(col="function", label_func=_tag_section_header)
 
     # Labels rows with classifiers.
     for classifiers in _JUNKTAGGER_CLASSIFIERS:
@@ -713,6 +776,7 @@ def main():
     print_accuracy_tag(issues, tagged_issues, tag="AT", print_incorrect=False)
     print_accuracy_tag(issues, tagged_issues, tag="OT", print_incorrect=False)
     print_accuracy_tag(issues, tagged_issues, tag="MH", print_incorrect=False)
+    print_accuracy_tag(issues, tagged_issues, tag="SH", print_incorrect=False)
 
     # Replaces the tags in the issues with JNK.
     final_issues = [tag_junk(issue) for issue in tagged_issues]
