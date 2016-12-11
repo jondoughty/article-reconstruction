@@ -391,7 +391,7 @@ def tag_junk(issue, replace_nan=False, replace_all=True):
     if replace_nan:
         tags.append(np.nan)
     if replace_all:
-        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP"])
+        tags.extend(["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP", "SH"])
 
     for tag in tags:
         issue.tags_df.function.replace(tag, "JNK", inplace=True)
