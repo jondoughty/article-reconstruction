@@ -327,6 +327,10 @@ def smooth(issue):
     for index, row in issue.tags_df.iterrows():
         curr_func = row.function if row.function != "TXT" else None
         valid_prev_funcs = ["TXT", "HL", "BL"]
+        do_not_override_funcs = ["PI", "HL", "BL"]
+
+        if row.function in do_not_override_funcs:
+            continue
 
         # Fill in gaps
         if (pd.isnull(row.function) and

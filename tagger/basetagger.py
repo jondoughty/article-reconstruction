@@ -47,6 +47,7 @@ class Issue(object):
         self.filename = filename
         self.date = None
         self.edition = None
+        self.tess_words = None
 
     def __str__(self):
         return '%s, %s' %(str(self.date), str(self.edition))
@@ -79,7 +80,7 @@ class Issue(object):
         self.tags_df.to_csv(filename)
 
     def get_issue_id(self):
-        return re.search(r"(\d{8})\.txt$", self.filename).group(1)
+        return re.search(r"ua-nws_(\d{8}).*\.txt$", self.filename).group(1)
 
 
 def check_tags_exist(issue, tags):
