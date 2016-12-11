@@ -646,7 +646,7 @@ def _tag_in_range(row):
     """
     _get_synset = lambda text: [word for word in text.lower().split(" ")
                                if word and _ENGLISH_DICTIONARY.check(word)]
-    valid_funcs = ["N", "OT", "AT"]
+    valid_funcs = ["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP", "SH"]
     if pd.isnull(row.function):
         surrounding = {"prev": row.func_prev in valid_funcs,
                        "next": row.func_next in valid_funcs,
