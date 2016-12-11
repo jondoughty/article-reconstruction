@@ -5,30 +5,34 @@ import copy
 import regex
 import string
 
+import numpy as np
 import pandas as pd
 
 import tagger.basetagger as basetagger
 
 
 def main():
-    basetagger.measure_precision_recall("BL", tag)
+    basetagger.measure_precision_recall("BL", tag, limit = 30)
 
 
 def tag(issue, test = False):
     issue = copy.deepcopy(issue)
     if test:
-        issue.tags_df[~issue.tags_df.function.isin("PI")].function = None
-    matched = pd.concat([find_byline(issue.tags_df), find_description(issue.tags_df)])
+        all_tags = "|".join(t for t in issue.tags_df.function.unique()
+                              if pd.notnull(t) and t != "PI")
+        pattern = r"^(?:{0})$".format(all_tags)
+        issue.tags_df.function = issue.tags_df.function.replace(pattern, np.NaN,
+                                                                regex = True)
+    matched = pd.concat([find_byline(issue.tags_df),
+                         find_description(issue.tags_df)])
     matched = matched.drop_duplicates().sort_index()
     for i, row in matched.iterrows():
-        if issue.tags_df.loc[i].function is None:
+        if pd.isnull(issue.tags_df.loc[i].function):
             issue.tags_df.set_value(i, "function", "BL")
     return issue
 
 
 def remove_punctuation(text):
-#    table = str.maketrans(string.punctuation, " " * len(string.punctuation))
-#    return text.translate(table).strip().upper()
     replaced = regex.sub("[^{0}]".format("\s:"), "", text)
     replaced = regex.sub("[^{0}]".format(string.ascii_letters + string.digits),
                          " ", text)
@@ -60,8 +64,6 @@ def find_byline(issue, error = 3):
         if pd.notnull(row.text) and len(row.text) < 100 and ":" not in row.text:
             text = remove_punctuation(row.text)
             match = regex.match(pattern, text, concurrent = True)
-#            if row.function == "BL" and not match:
-#                print(text)
             if match:
                 matched.append(row)
     return pd.DataFrame(matched)

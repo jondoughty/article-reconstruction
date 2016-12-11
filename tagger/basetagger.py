@@ -497,6 +497,7 @@ def get_progress(stop):
 def measure_precision_recall(tag_str, tag_fun, limit = sys.maxsize):
     pd.set_option("display.width", None)
     pd.set_option("display.max_rows", None)
+    pd.set_option("display.max_colwidth", 100)
     paths = glob.glob("tagged_data/*.csv")
     columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
     content_tags = ["HL", "BL", "TXT"]
