@@ -4,7 +4,6 @@
 from nltk.corpus import names
 import enchant
 import random
-import regex
 import re
 
 from tagger.basetagger import *
@@ -47,25 +46,6 @@ def _preprocess_text(text):
     returns: str
     """
     return text.strip().replace("\t", " ")
-
-
-def _has_page_jump(text):
-    """
-    Determines if the text has a page jump.
-
-    text: str
-        Text to perform analysis on.
-
-    returns: bool
-    """
-    fmt_str = ("(((See \w{1,10}, \w{1,10} page)|"
-               "(See \w{1,10}, page \d{1,2})|"
-               "(See page \d{1,2})|"
-               "(From page)){e<=4})|"
-               "(page \d{1,2}){e<=1}")
-    pattern = regex.compile(fmt_str, flags=regex.ENHANCEMATCH)
-    match = regex.search(pattern, text, concurrent=True)
-    return bool(match)
 
 
 def _is_section_header(text):
@@ -533,7 +513,7 @@ def _tag_jump(row):
     returns: str
     """
     if pd.isnull(row.function):
-        if _has_page_jump(row.text):
+        if has_page_jump(row.text):
             return "JUMP"
     return row.function
 
@@ -646,8 +626,8 @@ def _tag_in_range(row):
     """
     _get_synset = lambda text: [word for word in text.lower().split(" ")
                                if word and _ENGLISH_DICTIONARY.check(word)]
-    valid_funcs = ["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP", "SH"]
-    if pd.isnull(row.function):
+    valid_funcs = ["B", "AT", "N", "CT", "CN", "OT", "PH", "MH", "BQA", "BQN", "BQT", "NP", "SH", "HL"]
+    if pd.isnull(row.function) or row.function == "HL":
         surrounding = {"prev": row.func_prev in valid_funcs,
                        "next": row.func_next in valid_funcs,
                        "prev_two": row.func_prev_two in valid_funcs,
@@ -659,10 +639,10 @@ def _tag_in_range(row):
 
             # Returns previous row function if fewer than 5 words.
             if len(words_synset) <= 5:
-                return row.func_prev
+                return "N"
             # Returns previous row function two above and below are junk.
             if surrounding["prev_two"] and surrounding["next_two"]:
-                return row.func_prev
+                return "N"
 
         # Returns "N" if 3 out of 4 are junk and words synset is less than 20.
         if sum(surrounding.values()) >= 3:
@@ -723,7 +703,8 @@ def tag(issue):
                                features_func=features_func, label_func=label_func)
 
     # Labels rows based labels on nearby rows.
-    _apply_in_range(issue)
+    for idx in range(3):
+        _apply_in_range(issue)
 
     # Remove JUMP tag prior to returning the issue.
     issue.tags_df.function.replace("JUMP", np.nan, inplace=True)

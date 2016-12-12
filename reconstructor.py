@@ -66,6 +66,7 @@ def gen_issue_dict(args, issue_list):
             for tag in taggers:
                 issue_obj = tag(issue_obj)
                 print (issue_obj.tags_df)
+                print("num headlines:", len(issue_obj.tags_df[issue_obj.tags_df.function == "HL"]))
                 input()
 
         # create a dataframe for the entire issue

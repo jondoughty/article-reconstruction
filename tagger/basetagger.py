@@ -7,6 +7,7 @@ import os
 import pickle
 import pprint
 import random
+import regex
 import re
 import sys
 
@@ -160,6 +161,25 @@ def get_issues(folder='tagged_data', columns=None, tags=None):
 # ========================================
 # ========= CLASSIFIER FUNCTIONS =========
 # ========================================
+
+
+def has_page_jump(text):
+    """
+    Determines if the text has a page jump.
+
+    text: str
+        Text to perform analysis on.
+
+    returns: bool
+    """
+    fmt_str = ("(((See \w{1,10}, \w{1,10} page)|"
+               "(See \w{1,10}, page \d{1,2})|"
+               "(See page \d{1,2})|"
+               "(From page)){e<=4})|"
+               "(page \d{1,2}){e<=1}")
+    pattern = regex.compile(fmt_str, flags=regex.ENHANCEMATCH)
+    match = regex.search(pattern, text, concurrent=True)
+    return bool(match)
 
 
 # TODO(ngarg): Confirm this calculates precision and recall correctly.
