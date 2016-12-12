@@ -17,7 +17,7 @@ import tagger.basetagger as basetagger
 
 def main():
 #    hl_pos, txt_pos = basetagger.find_unique_pos_tags("HL", "TXT")
-    basetagger.measure_precision_recall("HL", tag)#, limit = 5)
+    basetagger.measure_precision_recall("HL", tag, limit = 5)
 
 
 def tag(issue, test = False):
@@ -44,11 +44,31 @@ def remove_punctuation(text):
     return replaced.upper()
 
 
+def find_unique_pos_groups(size = 2):
+    hls = set(basetagger.create_tag_pattern("HL").split("|"))
+    txts = set(basetagger.create_tag_pattern("TXT").split("|"))
+    hl_patterns = []
+    for hl in hls:
+        split = hl.split()
+        if len(split) > size - 1:
+            for i in range(len(split) - size - 1):
+                hl_patterns.append(" ".join(split[i:i + size]))
+    txt_patterns = []
+    for txt in txts:
+        split = txt.split()
+        if len(split) > size - 1:
+            for i in range(len(split) - size - 1):
+                txt_patterns.append(" ".join(split[i:i + size]))
+    hl_set = set(hl_patterns) - set(txt_patterns)
+    txt_set = set(txt_patterns) - set(hl_patterns)
+    return (hl_set, txt_set)
+
+
 def find_headline(issue):
     MAX_HEADLINE_LEN = 10
     en_dict = enchant.Dict("en_US")
     matched = []
-
+    _, txt_set = find_unique_pos_groups(size = 2)
     for i, row in issue.iterrows():
         if i > issue.index.min():
             prev = issue.loc[i - 1]
@@ -57,15 +77,19 @@ def find_headline(issue):
                        "." not in prev.text
             if is_valid:
                 tokens = nltk.word_tokenize(prev.text)
-                all_pos_tags = set([tag for _, tag in nltk.pos_tag(tokens)])
-#                hl_only = set(["FW", "UH", "JJS"])
-                txt_only = set(["EX", "NNPS", "("])
+                all_pos_tags = [tag for _, tag in nltk.pos_tag(tokens)]
+                has_txt_pat = any([pattern in " ".join(all_pos_tags)
+                                       for pattern in txt_set])
+                print(has_txt_pat)
+                txt_only = ["EX", "NNPS", "("]
+                
 
-                if not all_pos_tags & txt_only:
+                if not set(all_pos_tags) & set(txt_only) and not has_txt_pat:
                     pos_tags = [tag for _, tag in
                                 nltk.pos_tag(tokens, tagset = "universal")]
                     n_real = [en_dict.check(token)
-                              for token in tokens if not token.isdigit()].count(True)
+                              for token in tokens
+                              if not token.isdigit()].count(True)
                     all_uppercase_words = [token for token in tokens
                                            if token and token.isupper()]
 

@@ -472,8 +472,15 @@ def get_pos_by_tag(tag):
                 if len(tokens) < 10:
                     tokens = nltk.word_tokenize(row.text)
                     pos_tags = nltk.pos_tag(tokens)
-                    tagged_sents.append([pos for _, pos in pos_tags])
+                    tagged_sents.append([pos for _, pos in pos_tags
+                                             if pos != ")"])
     return tagged_sents
+
+
+def create_tag_pattern(tag):
+    tagged_sents = set(tuple(tagged_sent)
+                       for tagged_sent in get_pos_by_tag(tag))
+    return "|".join(" ".join(tagged_sent) for tagged_sent in tagged_sents)
 
 
 def find_unique_pos_tags(this_tag, other_tag):
