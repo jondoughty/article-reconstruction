@@ -32,24 +32,24 @@ def main():
     # set panda options
     set_pd_options()
 
-    #TODO set a global setting instead of just filetype so other code can use it
     # get type of file we are working with (csv for tagged data, txt for raw)
     file_type = '*.csv' if args.tagged_data else '*.txt'
 
     # get all files in specified directory
     paths = glob.glob(os.path.join(args.data_dir[0], file_type))
-    #TODO remove
-    #paths = glob.glob(os.path.join('./raw_data/*00003872*.txt'))
 
     # generate list of untagged Issues()
-    issue_list = gen_issue_list(args, paths)
+    issue_list = gen_issue_list(args, paths)    #paths = glob.glob(os.path.join('./raw_data/*00003872*.txt'))
+
 
     for (pub_info, issue_obj) in issue_list:
         get_date(issue_obj)
 
     if args.raw_data and args.coord:
         import ocrmerge
-        ocrmerge.get_location_data(issue_list, image_dir="image_data", hocr_dir="hOCR_data")
+        ocrmerge.get_location_data(issue_list,
+                                   image_dir="image_data",
+                                   hocr_dir="hOCR_data")
 
     # dictionary for tagged issues
     issue_dict = gen_issue_dict(args, issue_list)
@@ -94,13 +94,11 @@ def gen_issue_list(args, paths):
         if args.raw_data:
             # read in raw txt and convert to df
             df = gen_blank_df(path, columns)
-            # Wrap df with in Issue()
 
         elif args.tagged_data:
             # read in the csv file and store as df
             df = pd.read_csv(path, header=2, names=columns)
 
-        # TODO: add pub_info to Issue()
         issue = Issue(df, path)
 
         # Add to list with publication info
@@ -143,30 +141,26 @@ def setup_args():
     driver script to call and amalgamate results from various taggers.')
 
     parser.add_argument('--debug',
-                    action='store_true',
-                    dest='debug_flag',
-                    help='Enable for debugging information.')
+                        action='store_true',
+                        dest='debug_flag',
+                        help='Enable for debugging information.')
 
     mut_exc = parser.add_mutually_exclusive_group(required=True)
 
     mut_exc.add_argument('--tagged',
-                    # metavar='STUB',
-                    action='store_true',
-                    dest='tagged_data',
-                    help='Flag to indicate training.')
+                        action='store_true',
+                        dest='tagged_data',
+                        help='Flag to indicate training.')
 
     mut_exc.add_argument('--raw',
-                    # metavar='STUB',
-                    action='store_true',
-                    dest='raw_data',
-                    help='Flag to indicate testing.')
+                        action='store_true',
+                        dest='raw_data',
+                        help='Flag to indicate testing.')
 
-    #TODO this really should be made only valid when --raw is also given
     parser.add_argument('--coord',
-                    action='store_true',
-                    dest='coord',
-                    help='Flag to use coordinate data (experimental)')
-
+                        action='store_true',
+                        dest='coord',
+                        help='Flag to use coordinate data (experimental)')
 
     req = parser.add_argument_group('required arguments')
 
@@ -232,7 +226,7 @@ def construct_tagged(issue_obj, pub_info):
 def json_dump(issue_dict):
     '''Dump an entire issue to JSON, creating a separate JSON file for
        each article.'''
-    # TODO: add command line argument to specify a directory output
+    # Add command line argument to specify a directory output
     directory = "json_output/"
 
     # issue_dict is a dictionary of {pub_info : [articles]}
@@ -246,15 +240,9 @@ def json_dump(issue_dict):
 
 id_count = 0
 def get_id():
-    # TODO: will need to persist the last ID number used for creating
-    # additional JSON output.
     global id_count
     id_count += 1
     return str(id_count)
-
-
-def get_subheading(article):
-    return None
 
 
 def get_num_paragraphs(article):
