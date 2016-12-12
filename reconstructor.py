@@ -277,14 +277,24 @@ def check_article(article):
 
 
 def get_date(issue_obj):
-    date_sheet = '/home/jon/repos/article-reconstruction/newspaper_dates.csv'
-    date_df = pd.read_csv(date_sheet)
+    '''Look up the issue date in an external spreadsheet.'''
+    # external spreadsheet
+    file_name = 'newspaper_dates.csv'
+    # read spreadsheet into dataframe
+    date_df = pd.read_csv(file_name)
+    # get name to lookup row
     ids = issue_obj.filename.split('-')
-    name = ids[4] + '-' + ids[5].split('.')[0]
-    row = date_df.loc[date_df['Identifier'] == name]
-    art_date = row['pub_date'].values[0]
+    try:
+        name = ids[4] + '-' + ids[5].split('.')[0]
+        row = date_df.loc[date_df['Identifier'] == name]
+        art_date = row['pub_date'].values[0]
+    except:
+        if DEBUG: print ('Date exception: ', e)
+        art_date = None
+
     return art_date
-    
+
+
 def get_text(article):
     '''Return joined article text.'''
     # sort article by paragraph numbering before join
