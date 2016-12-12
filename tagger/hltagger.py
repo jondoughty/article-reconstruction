@@ -17,7 +17,7 @@ import tagger.basetagger as basetagger
 
 def main():
 #    hl_pos, txt_pos = basetagger.find_unique_pos_tags("HL", "TXT")
-    basetagger.measure_precision_recall("HL", tag, limit = 5)
+    basetagger.measure_precision_recall("HL", tag)#, limit = 5)
 
 
 def tag(issue, test = False):
@@ -45,8 +45,10 @@ def remove_punctuation(text):
 
 
 def find_headline(issue):
+    MAX_HEADLINE_LEN = 10
     en_dict = enchant.Dict("en_US")
     matched = []
+
     for i, row in issue.iterrows():
         if i > issue.index.min():
             prev = issue.loc[i - 1]
@@ -58,44 +60,61 @@ def find_headline(issue):
                 all_pos_tags = set([tag for _, tag in nltk.pos_tag(tokens)])
 #                hl_only = set(["FW", "UH", "JJS"])
                 txt_only = set(["EX", "NNPS", "("])
+
                 if not all_pos_tags & txt_only:
                     pos_tags = [tag for _, tag in
                                 nltk.pos_tag(tokens, tagset = "universal")]
                     n_real = [en_dict.check(token)
                               for token in tokens if not token.isdigit()].count(True)
-                    if row.function == "BL" and n_real > 1:
+                    all_uppercase_words = [token for token in tokens
+                                           if token and token.isupper()]
+
+                    # Titles have to have minimum one token.
+                    if not tokens or not pos_tags:
+                        pass
+                    # Titles have less than MAX_HEADLINE_LEN and 1 real word.
+                    elif len(tokens) >= MAX_HEADLINE_LEN or n_real <= 1:
+                        pass
+                    # Titles have less than 3 all uppercase words.
+                    elif len(all_uppercase_words) >= 4:
+                        pass
+                    # Titles cannot end with "CONJ".
+                    elif pos_tags[-1] == "CONJ":
+                        pass
+                    # Titles do not have more than one punctuation.
+                    elif pos_tags.count(".") > 2:
+                        pass
+                    # Likely a title if previous row is BL.
+                    elif row.function == "BL":
                         matched.append(prev)
                     else:
                         non_alphabetic = re.sub(r"[A-Za-z\ ]+", "", str(prev.text))
-                        all_uppercase_words = [token for token in tokens
-                                               if token and token.isupper()]
                         title_words = [token for token in tokens
                                        if token and token[0].isupper()]
                         punctuation = re.findall(r"\*|\"|\,", prev.text)
 
-                        is_hl = (len(tokens) > 1 and len(tokens) < 10 and
-                                 len(prev.text) < 70 and
-                                 n_real > 3 and n_real < 10 and
-                                 (len(tokens) - n_real) <= 2 and
-                                 len(non_alphabetic) <= 2 and
-                                 not len(all_uppercase_words) and
-                                 len(title_words) <= 2 and
-                                 (tokens and tokens[0].istitle()) and
-                                 not punctuation and
-                                 pos_tags.count("NOUN") >= 3 and
-                                 pos_tags.count("VERB") <= 2 and
-                                 not pos_tags.count("DET") and
-                                 not pos_tags.count("PRON"))
-                        if is_hl:
-                            matched.append(prev)
-                        else:
-                            n_real = [en_dict.check(token)
-                                      for token in tokens].count(True)
-                            is_hl = len(tokens) > 1 and len(tokens) < 10 and \
-                                    len(prev.text) < 80 and \
-                                    n_real / len(tokens) > 0.5 and \
-                                    not any(c.isdigit for c in prev.text)
-                            if is_hl:
+                        # Gets a subset of the headlines.
+                        is_hl_generic = (len(tokens) > 1 and len(tokens) < MAX_HEADLINE_LEN and
+                                         len(prev.text) < 70 and
+                                         (len(tokens) - n_real) <= 2 and
+                                         len(non_alphabetic) <= 2 and
+                                         (tokens and tokens[0].istitle()) and
+                                         not punctuation and
+                                         pos_tags.count("NOUN") >= 3 and
+                                         pos_tags.count("VERB") <= 2 and
+                                         not pos_tags.count("DET") and
+                                         not pos_tags.count("PRON"))
+
+                        if is_hl_generic:
+                            if (n_real > 3 and n_real < 10 and
+                                not len(all_uppercase_words) and
+                                len(title_words) <= 2):
+                                matched.append(prev)
+                            elif (n_real > 1 and n_real < 10 and
+                                  len(all_uppercase_words) <= 1 and
+                                  len(title_words) / len(tokens) <= 0.5 and
+                                  not pos_tags.count("PRT") and
+                                  not pos_tags.count("ADP")):
                                 matched.append(prev)
     return pd.DataFrame(matched)
 
