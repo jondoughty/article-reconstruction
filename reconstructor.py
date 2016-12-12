@@ -44,6 +44,9 @@ def main():
     # generate list of untagged Issues()
     issue_list = gen_issue_list(args, paths)
 
+    for (pub_info, issue_obj) in issue_list:
+        get_date(issue_obj)
+
     if args.raw_data and args.coord:
         import ocrmerge
         ocrmerge.get_location_data(issue_list, image_dir="image_data", hocr_dir="hOCR_data")
@@ -65,8 +68,8 @@ def gen_issue_dict(args, issue_list):
         if args.raw_data:
             for tag in taggers:
                 issue_obj = tag(issue_obj)
-                print (issue_obj.tags_df)
-                input()
+                # print (issue_obj.tags_df)
+                # input()
 
         # create a dataframe for the entire issue
         issue_df = construct_tagged(issue_obj, pub_info)
@@ -92,7 +95,6 @@ def gen_issue_list(args, paths):
             # read in raw txt and convert to df
             df = gen_blank_df(path, columns)
             # Wrap df with in Issue()
-
 
         elif args.tagged_data:
             # read in the csv file and store as df
@@ -198,13 +200,14 @@ def construct_tagged(issue_obj, pub_info):
             author = get_byline(article)
             text = get_text(article)
             pages = get_pages(article)
+            article_date = get_date(issue_obj)
             article_number = str(article.article.values[0])
             num_paragraphs = get_num_paragraphs(article)
             subheading = get_subheading(article)
             id_num = get_id()
             article_data = {"id": id_num,
                             "publication" : pub_info,
-                            "article_date": "today",
+                            "article_date": article_date,
                             "article_headline": headline,
                             "page_number": pages,
                             "author": author,
@@ -273,6 +276,15 @@ def check_article(article):
         print ('\n')
 
 
+def get_date(issue_obj):
+    date_sheet = '/home/jon/repos/article-reconstruction/newspaper_dates.csv'
+    date_df = pd.read_csv(date_sheet)
+    ids = issue_obj.filename.split('-')
+    name = ids[4] + '-' + ids[5].split('.')[0]
+    row = date_df.loc[date_df['Identifier'] == name]
+    art_date = row['pub_date'].values[0]
+    return art_date
+    
 def get_text(article):
     '''Return joined article text.'''
     # sort article by paragraph numbering before join
