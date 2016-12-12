@@ -80,7 +80,6 @@ def find_headline(issue):
                 all_pos_tags = [tag for _, tag in nltk.pos_tag(tokens)]
                 has_txt_pat = any([pattern in " ".join(all_pos_tags)
                                        for pattern in txt_set])
-                print(has_txt_pat)
                 txt_only = ["EX", "NNPS", "("]
                 
 
