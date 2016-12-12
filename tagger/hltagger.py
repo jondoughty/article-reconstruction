@@ -87,17 +87,15 @@ def find_headline(issue):
                 if not set(all_pos_tags) & set(txt_only) and not has_txt_pat:
                     pos_tags = [tag for _, tag in
                                 nltk.pos_tag(tokens, tagset = "universal")]
-                    n_real = [en_dict.check(token)
+                    n_real = [en_dict.check(token.lower())
                               for token in tokens
-                              if not token.isdigit()].count(True)
+                              if not token.isdigit() and len(token) > 1].count(True)
                     all_uppercase_words = [token for token in tokens
                                            if token and token.isupper()]
 
-                    # Titles have to have minimum one token.
-                    if not tokens or not pos_tags:
-                        pass
-                    # Titles have less than MAX_HEADLINE_LEN and 1 real word.
-                    elif len(tokens) >= MAX_HEADLINE_LEN or n_real <= 1:
+                    # Ensure titles are within a certain size.
+                    if (len(tokens) < 1 or len(tokens) >= MAX_HEADLINE_LEN or
+                        n_real <= 1 or len(prev.text) > 70):
                         pass
                     # Titles have less than 3 all uppercase words.
                     elif len(all_uppercase_words) >= 4:
@@ -118,9 +116,7 @@ def find_headline(issue):
                         punctuation = re.findall(r"\*|\"|\,", prev.text)
 
                         # Gets a subset of the headlines.
-                        is_hl_generic = (len(tokens) > 1 and len(tokens) < MAX_HEADLINE_LEN and
-                                         len(prev.text) < 70 and
-                                         (len(tokens) - n_real) <= 2 and
+                        is_hl_generic = ((len(tokens) - n_real) <= 2 and
                                          len(non_alphabetic) <= 2 and
                                          (tokens and tokens[0].istitle()) and
                                          not punctuation and
