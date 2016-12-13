@@ -1,12 +1,13 @@
 # reconstructor.py
 # Jon Doughty
 
+from fuzzywuzzy import fuzz
 import argparse
 import pandas as pd
 import json
+import re
 import glob
 import sys
-import re
 
 from tagger.basetagger import *
 import tagger.pubtagger as pbt
@@ -38,54 +39,68 @@ def main():
     # get all files in specified directory
     paths = glob.glob(os.path.join(args.data_dir[0], file_type))
 
+    # columns for data frames
+    columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
+
     # generate list of untagged Issues()
-    issue_list = gen_issue_list(args, paths)    #paths = glob.glob(os.path.join('./raw_data/*00003872*.txt'))
+    issue_list = gen_issue_list(args, paths, columns)
 
-
-    for (pub_info, issue_obj) in issue_list:
-        get_date(issue_obj)
-
+    # add supplemental coordinate data from tesseract
     if args.raw_data and args.coord:
         import ocrmerge
         ocrmerge.get_location_data(issue_list,
                                    image_dir="image_data",
                                    hocr_dir="hOCR_data")
 
-    # dictionary for tagged issues
-    issue_dict = gen_issue_dict(args, issue_list)
+
+    # If running raw data, tag all data with taggers and return in list
+    if args.raw_data:
+        tagged_issue_objs = run_taggers(issue_list)
+
+    # if running metrics, don't output to JSON, output results of metrics.
+    if args.metric_flag:
+        run_metrics(tagged_issue_objs, columns)
+        sys.exit(0)
+
+    # create dictionary for tagged issues
+    issue_dict = gen_issue_dict(issue_list)
 
     # output all data to JSON - one JSON file per article
     json_dump(issue_dict)
 
 
-def gen_issue_dict(args, issue_list):
+def run_taggers(issue_list):
     # taggers
     taggers = [pbt.tag, blt.tag, hlt.tag, jkt.tag, ttt.tag, jpt.tag, ant.tag]
 
-    issue_dict = {}
-    # if raw_data - call respective tag functions
-    for (pub_info, issue_obj) in issue_list:
-        if args.raw_data:
-            for tag in taggers:
-                issue_obj = tag(issue_obj)
-                # print (issue_obj.tags_df)
-                # print("num headlines:", len(issue_obj.tags_df[issue_obj.tags_df.function == "HL"]))
-                # input()
+    tagged_results = []
 
-        # create a dataframe for the entire issue
+    for (pub_info, issue_obj) in issue_list:
+        for tag in taggers:
+            issue_obj = tag(issue_obj)
+        if DEBUG:
+            print (issue_obj.tags_df)
+            input('Dataframe output above for debugging. Press any key to \
+                   continue')
+
+        # add tagged issue to results
+        tagged_results.append((pub_info, issue_obj))
+
+    return tagged_results
+
+
+def gen_issue_dict(args, issue_list):
+    issue_dict = {}
+    for (pub_info, issue_obj) in issue_list:
         issue_df = construct_tagged(issue_obj, pub_info)
 
-        tmp = issue_df.to_dict('records')
-        issue_dict[pub_info] = tmp
+        issue_dict[pub_info] = issue_df.to_dict('records')
 
     return issue_dict
 
 
-def gen_issue_list(args, paths):
+def gen_issue_list(args, paths, columns):
     issue_list = []
-
-    # columns for data frames
-    columns = ["page", "article", "function", "paragraph", "jump", "ad", "text"]
 
     # generate a list of Issue() objects to work with
     for path in paths:
@@ -145,6 +160,12 @@ def setup_args():
                         action='store_true',
                         dest='debug_flag',
                         help='Enable for debugging information.')
+
+    parser.add_argument('--metrics',
+                        action='store_true',
+                        dest='metric_flag',
+                        help='Enable to print metrics, comparing tagged data \
+                              to performance on raw data.')
 
     mut_exc = parser.add_mutually_exclusive_group(required=True)
 
@@ -333,6 +354,105 @@ def set_pd_options():
     '''Set option for pandas.'''
     pd.set_option("display.width", None)
     pd.set_option("display.max_rows", None)
+
+
+def run_metrics(issue_list, columns):
+    results = []   # (pub_info, precision, recall)
+    # get the tagged data files and create dfs
+    tagged_paths = glob.glob('tagged_data/*.csv')
+
+    for (pub_info, issue_obj) in issue_list:
+        issue_obj = tag_junk(issue_obj)
+        tagged_fname = None
+        for tagged_path in tagged_paths:
+            if pub_info in tagged_path:
+                tagged_fname = tagged_path
+                break
+
+        # open the tagged path as a df
+        tagged_df = pd.read_csv(tagged_fname,
+                                skiprows=[0,1],
+                                header=None,
+                                names=columns)
+
+        # convert tags to JNK
+        tagged_issue = tag_junk(Issue(tagged_df), replace_nan=True)
+
+        # pass the two dataframes to comparison function
+        precision,recall = compare_dfs(issue_obj.tags_df, tagged_issue.tags_df)
+
+        # add result to list for writing to file
+        results.append((pub_info, precision, recall))
+
+    # write results to file
+    with open('metrics.txt', 'w') as file_out:
+        total_prec = 0
+        total_rec = 0
+        for pub_info,precision,recall in results:
+            total_prec += precision
+            total_rec += recall
+            file_out.write('{} {:03f} {:03f}\n'.format(pub_info,precision,recall))
+        total_prec /= len(results)
+        total_rec /= len(results)
+        file_out.write('Average precision: {:03f}\n'.format(total_prec))
+        file_out.write('Average recall: {:03f}\n'.format(total_rec))
+
+
+def compare_dfs(raw_df, tagged_df):
+    '''Compare dfs line by line looking at various components to see how
+       accurate they are.'''
+    # assert dataframes have the same number of rows
+    assert len(raw_df.index) == len(tagged_df.index)
+
+    true_pos = 0    # row tagged correctly
+    false_pos = 0   # row tagged incorrectly
+    false_negs = 0  # row not tagged
+
+    # raw_df.to_csv('raw_df_tag_junk.csv', na_rep='NAN')
+    # tagged_df.to_csv('tagd_df_tag_junk.csv' ,na_rep='NAN')
+    for i in range(len(raw_df.index)):
+        # assert a text match to continue
+        raw_text = str(raw_df.loc[i,'text'])
+        tagd_text = str(tagged_df.loc[i+1,'text'])
+        if i < 20 and raw_text and tagd_text != 'nan':
+            fuzz_ratio = fuzz.partial_ratio(raw_text, tagd_text)
+            assert fuzz_ratio >= 50, "row {} - text not equal: ^{}^:^{}^\n\
+                ratio: {}".format(i, raw_text, tagd_text, fuzz_ratio)
+
+        # get the function tags
+        raw_func_tag = raw_df.loc[i,'function']
+        tagd_func_tag = tagged_df.loc[i+1,'function']
+
+        # test to see results ignoring JNK
+        # if tagd_func_tag != 'JNK':
+
+        # if not tag for raw_func_tag, false negative
+        if not raw_func_tag:
+            false_negs += 1
+            continue
+
+        # check if tags match
+        if raw_func_tag == tagd_func_tag:
+            true_pos += 1
+        else:
+            false_pos += 1
+
+    # double check we counted every row
+    assert true_pos + false_pos + false_negs == len(raw_df.index), 'missing \
+        counts of some data, true_pos {}, false_pos: {}, false_negs {}'\
+        .format(true_pos, false_pos, false_negs)
+
+    # print ('true pos: ', true_pos)
+    # print ('false pos: ', false_pos)
+    # print ('false negs: ', false_negs)
+    # print ('total rows ', len(raw_df.index))
+
+    precision = true_pos / (true_pos + false_pos)
+    recall = true_pos / (true_pos + false_negs)
+    # print ("Precision", precision)
+    # print ("Recall", recall)
+
+    return precision,recall
 
 
 if __name__ == "__main__":
