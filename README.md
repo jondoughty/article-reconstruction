@@ -21,6 +21,7 @@
   - `pip3 install scipy`
   - `pip3 install sklearn`
   - `pip3 install fuzzywuzzy`
+  - `pip3 install numpy`
 
 
 ## Running the Reconstructor
