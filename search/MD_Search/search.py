@@ -25,6 +25,8 @@ def main(argv):
         search_filter = "article_headline"
     elif (filter_str == 'publication'):
         search_filter = "publication"
+    elif (filter_str == 'author'):
+        search_filter = "author"
     else:
         search_filter = "article_text"
 
@@ -70,7 +72,16 @@ def main(argv):
                                 author = val["_source"]["author"]
                                 article_date = val["_source"]["article_date"]
    
-    print(headline)
+    test_head = ''
+    if not (headline is None):
+    	for d in headline:
+            if re.match('[a-zA-Z0-9 ]',d) or d in string.punctuation:
+                test_head += d
+    if(test_head == ''):
+        print(headline)
+    else:	
+    	print(test_head)
+    
     print(publication)
     test = ''
     if not (article is None):
@@ -81,9 +92,20 @@ def main(argv):
         print(article)
     else:	
     	print(test)
+    
     print(article_number)
     print(page_number)
-    print(author)
+    
+    test_author = ''
+    if not (author is None):
+    	for e in author:
+            if re.match('[a-zA-Z0-9 ]',e) or e in string.punctuation:
+                test_author += e
+    if(test_author == ''):
+        print(author)
+    else:	
+    	print(test_author)
+    
     print(article_date)
 
 if __name__ == "__main__":
