@@ -223,7 +223,6 @@ def construct_tagged(issue_obj, pub_info):
             pages = get_pages(article)
             article_number = str(article.article.values[0])
             num_paragraphs = get_num_paragraphs(article)
-            # subheading = get_subheading(article)
             id_num = get_id()
             article_data = {"id": id_num,
                             "publication" : pub_info,
@@ -296,7 +295,7 @@ def get_date(issue_obj):
     file_name = 'newspaper_dates.csv'
     # read spreadsheet into dataframe
     date_df = pd.read_csv(file_name)
-    
+
     try:
         # use re to get the issue information needed for lookup
         match = re.search('ua-nws_\d{8}', issue_obj.filename)
@@ -338,10 +337,7 @@ def get_headline(article):
 def get_byline(article):
     '''Extract author from article.'''
     try:
-        # byline = article[article.function == "BL"].text.values[0]
         author = article[article.function == "BL"].text.values[0]
-        # match = re.match("[Bb][Yy]\s+(.*)", byline)
-        # author = match.group(1) if match else byline
     except Exception as e:
         if DEBUG: print ('Byline exception: ', e)
         author = None
@@ -392,12 +388,11 @@ def run_metrics(issue_list, columns):
         # pass the two dataframes to comparison functions
         precision,recall = compare_dfs(issue_obj.tags_df, tagged_issue.tags_df,
                                        pub_info)
-        art_dict_results = article_completeness(issue_obj.tags_df,
-                                                tagged_issue.tags_df)
-
-        # add result to list for writing to file
         function_results.append((pub_info, precision, recall))
-        article_results.append(art_dict_results)
+
+        # art_dict_results = article_completeness(issue_obj.tags_df,
+        #                                         tagged_issue.tags_df)
+        # article_results.append(art_dict_results)
 
     # write results to file
     with open('metrics.txt', 'w') as file_out:
@@ -441,7 +436,6 @@ def run_metrics(issue_list, columns):
         file_out.write('Byline recall: {}\n'.format(avg_bl_rec))
         file_out.write('Text precision: {}\n'.format(avg_txt_prec))
         file_out.write('Text recall: {}\n'.format(avg_txt_rec))
-        # file_out.write('Text order ratio: {}\n'.format(txt_order_total))
 
 
 def extract_data(lst, tuple_val, key_name):
@@ -495,9 +489,6 @@ def compare_dfs(raw_df, tagged_df, pub_info):
         raw_func_tag = raw_df.loc[i,'function']
         tagd_func_tag = tagged_df.loc[i+1,'function']
 
-        # test to see results ignoring JNK
-        # if tagd_func_tag != 'JNK':
-
         # if not tag for raw_func_tag, false negative
         if not raw_func_tag:
             false_negs += 1
@@ -525,6 +516,7 @@ def compare_dfs(raw_df, tagged_df, pub_info):
     # print ("Recall", recall)
 
     return precision,recall
+
 
 def article_completeness(raw_df, tagged_df):
     '''Check articles to see if headlines, bylines, and paragraph text are
@@ -554,36 +546,39 @@ def article_completeness(raw_df, tagged_df):
     # try to match up articles based on text values
     found_matching = False
     results = []
-    num_non_matching = 0
 
-    for tag_art in tagged_articles:
-        # print ('-----------------------------------')
+    for tval, tag_art in enumerate(tagged_articles):
         tagd_text_list = tag_art['text'].tolist()
         tagd_str = ' '.join(tagd_text_list)
-        for raw_art in raw_articles:
+        for rval, raw_art in enumerate(raw_articles):
             raw_text_list = raw_art['text'].tolist()
             raw_str = ' '.join(raw_text_list)
             fr = fuzz.ratio(raw_str, tagd_str)
-            # Could find highest fuzz ratio of all, then compare them
             if fr > 80:
                 results_dict = compare_articles(raw_art, tag_art)
                 results.append(results_dict)
-                # found_matching = True
 
-        # Resolution needed for when no text match
+    return results
 
-        # if flag not set by this time, then no raw article matched
-        # if not found_matching:
-            # do something for tagged article that had no matches
-            # maybe just track the total number of articles that don't align
-            # num_non_matching += 1
-            # pass
 
-        # reset flag for next iteration
-        # found_matching = False
+def pair_similar(raw_articles, tagged_articles):
+    '''For every article in tagged, find most similar in raw, return paired.'''
+    tag_id = [(i,t) for i,t in enumerate(tagged_articles)]
+    raw_id = [(i,t) for i,t in enumerate(raw_articles)]
+    results = []
 
-    # for the entire article, append the number of non-matching articles
-    # results.append(('num_non_matching', num_non_matching))
+    for tid, tag_art in enumerate(tagged_articles):
+        tagd_text_list = tag_art['text'].tolist()
+        tagd_str = ' '.join(tagd_text_list)
+        for rid, raw_art in enumerate(raw_articles):
+            raw_text_list = raw_art['text'].tolist()
+            raw_str = ' '.join(raw_text_list)
+            fr = fuzz.ratio(raw_str, tagd_str)
+            results.append((tid, rid, fr))
+
+    # now have tuple list with (tid, fid, fr), sort by tid, then by fuzz ratio
+    results.sort(key=lambda tup: (tup[0], tup[2]))
+
     return results
 
 
@@ -678,11 +673,6 @@ def compare_articles(raw_article, tagged_article):
         txt_fp = len(raw_tuple_vals) - txt_match
         if not matched:
             txt_fn += 1
-
-    # print ('hl matches: ', hl_match)
-    # print ('bl matches: ', bl_match)
-    # print ('txt matches: ', txt_match)
-    # print ('num text in order: ', num_in_order)
 
     hl_precision, hl_recall = calc_prec_recall(hl_tp, hl_fp, hl_fn)
     bl_precision, bl_recall = calc_prec_recall(bl_tp, bl_fp, bl_fn)
