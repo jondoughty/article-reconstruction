@@ -82,7 +82,7 @@ See the `/examples` directory for an hOCR file and the image it came from. See [
 
 ## Article Reconstructor Output Format
 
-The fields which are decided as final output for the Article regeneration, are mentioned below as JSON. These fields will act as input to search module for indexing and searching.
+The JSON data output from Article Reconstructor used by Search Engine had the following fields for indexing and searching:
 
 ```
 {
@@ -115,8 +115,9 @@ The fields which are decided as final output for the Article regeneration, are m
 ## Running Search
 - Run Elasticsearch:
     - Copy `search/elasticsearch2.2.0` folder to the server
-    - Execute following command from  folder `./elasticsearch -d`
+    - `cd search/elasticsearch2.2.0` (on server)
+    - `./elasticsearch -d`
 - Indexing:
     - `cd search/MD_Search`
-    - `$python3 index.py <path to json_data>`
-- Search: UI is hosted at `http://frank.ored.calpoly.edu/MD_Search/index.html`
+    - `python3 index.py <path to json_data>`
+- Search: UI is hosted at [http://frank.ored.calpoly.edu/MDSearch/index.html](http://frank.ored.calpoly.edu/MDSearch/index.html)
