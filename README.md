@@ -8,6 +8,9 @@
 ### With raw data
     $ python3 reconstructor.py --raw --data RAW_DATA_DIR
 
+### To run calculations on raw data (data output to metrics.txt)
+    $ python3 reconstructor.py --metrics --raw --data RAW_DATA_DIR
+
 ### For help with reconstructor.py
     $ python3 reconstructor.py --help
 
@@ -87,13 +90,13 @@ See the **/examples** directory for an hOCR file and the image it came from. See
 }
 ```
 
-## Search 
-- Run elasticsearch : Copy search/elasticsearch2.2.0 folder to the server execute following command from bin folder, 
-   
+## Search
+- Run elasticsearch : Copy search/elasticsearch2.2.0 folder to the server execute following command from bin folder,
+
   ./elsaticsearch -d
- 
+
 - Indexing : Index the data by executing the python script from search/MDSearch
 
   $python3 index.py <path to json_data>
-  
+
 - Search UI is currently hosted at http://frank.ored.calpoly.edu/MDSearch/index.html  
