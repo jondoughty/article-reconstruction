@@ -1,25 +1,59 @@
 # article-reconstruction
 
-## Running the reconstructor
+
+## Contributors
+
+    Aditya Budhwar
+    Jon Doughty
+    Vivian Fong
+    Nupur Garg
+    Daniel Kauffman
+    Brandon Livitski
+
+
+## Setup
+
+  - Python 3
+  - Pip 3
+  - `pip3 install pyenchant`
+  - `pip3 install pandas`
+  - `pip3 install regex`
+  - `pip3 install scipy`
+  - `pip3 install sklearn`
+  - `pip3 install fuzzywuzzy`
+
+
+## Running the Reconstructor
 
 ### With tagged data
+
     $ python3 reconstructor.py --tagged --data TAGGED_DATA_DIR
 
 ### With raw data
+
     $ python3 reconstructor.py --raw --data RAW_DATA_DIR
 
 ### For help with reconstructor.py
+
     $ python3 reconstructor.py --help
+
 
 ## Running Taggers
 
-  Junk Tagger     python3 -m tagger.junktagger      Ads, classifiers, BQT
-  Text Tagger     python3 -m tagger.txttagger       TXT
+    Publication Tagger        python3 -m tagger.pubtagger
+    Byline Tagger             python3 -m tagger.bltagger
+    Headline Tagger           python3 -m tagger.hltagger
+    Junk Tagger               python3 -m tagger.junktagger
+    Text Tagger               python3 -m tagger.txttagger
+    Jump Tagger               python3 -m tagger.pubtagger
+    Article Number Tagger     python3 -m tagger.articlenumtagger
+
 
 ## Tag Information
 
-  Labeled
-
+    PI      Publication info        pubtagger.py
+    BL      Byline                  bltagger.py
+    HL      Headline                hltagger.py
     TXT     Article text            txttagger.py
     B       Blank line              junktagger.py
     N       Unidentifiable          junktagger.py
@@ -32,23 +66,20 @@
     BQN     Block quote name        junktagger.py
     BQA     Block quote author      junktagger.py
     BQT     Block quote text        junktagger.py
-    PI      Publication info        pubtagger.py
-    NP      Nameplate               pubtagger.py
-    SH      Section heading         pubtagger.py
-    HL      Headline                hltagger.py
-    BL      Byline                  bltagger.py
+    SH      Section heading         junktagger.py
     ME      Meta directives         jumptagger.py
+    NP      Nameplate               Incomplete
 
-## Setup
-
-  pip3 install pyenchant
 
 ## Tesseract Output Format (hOCR)
-See the **/examples** directory for an hOCR file and the image it came from. See [the hOCR spec](https://kba.github.io/hocr-spec/1.2/) for more info. Note that Tesseract may use an older version of the spec.
+
+See the `/examples` directory for an hOCR file and the image it came from. See [the hOCR spec](https://kba.github.io/hocr-spec/1.2/) for more info. Note that Tesseract may use an older version of the spec.
+
 
 ## Article Reconstructor Output Format
 
-- The fields which are decided as final output for the Article regeneration, are mentioned below as JSON. These fields will act as input to search module for indexing and searching. {Items commented still TBD}
+The fields which are decided as final output for the Article regeneration, are mentioned below as JSON. These fields will act as input to search module for indexing and searching. {Items commented still TBD}
+
 ```
 {
   "articles": [
@@ -87,13 +118,10 @@ See the **/examples** directory for an hOCR file and the image it came from. See
 }
 ```
 
-## Search 
-- Run elasticsearch : Copy search/elasticsearch2.2.0 folder to the server execute following command from bin folder, 
-   
-  ./elsaticsearch -d
- 
-- Indexing : Index the data by executing the python script from search/MDSearch
 
-  $python3 index.py <path to json_data>
-  
-- Search UI is currently hosted at http://frank.ored.calpoly.edu/MDSearch/index.html  
+## Running Search
+
+- Run elasticsearch: Copy search/elasticsearch2.2.0 folder to the server execute following command from bin folder, `./elasticsearch -d`
+- Indexing: Index the data by executing the python script from search/MDSearch
+  `$python3 index.py <path to json_data>`
+- Search UI is currently hosted at `http://frank.ored.calpoly.edu/MDSearch/index.html`
