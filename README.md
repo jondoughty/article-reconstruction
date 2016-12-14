@@ -29,6 +29,12 @@
 
 ### With tagged data
 
+Manully tagged data supplied to the reconstructor (stored in the tagged_data/ directory) must be in CSV format. To convert from XLSX to CSV, first place all XLSX files in the tagged_data/ directory. Then run the following BASH script (tested on linux only).
+
+    $ ./convert_to_csv.sh
+
+Then the reconstructor can be run on the data.
+
     $ python3 reconstructor.py --tagged --data TAGGED_DATA_DIR
 
 ### With raw data
