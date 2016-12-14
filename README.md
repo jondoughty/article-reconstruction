@@ -86,39 +86,28 @@ The fields which are decided as final output for the Article regeneration, are m
 
 ```
 {
-  "articles": [
-    {
-      "id": "001",
-      "article_date": "<DATE/PL>",
-      "article_headline": "title/HL",
-      "page_number": "<number/PL>",
-      "author": "<BY LINE/BL>",
-      "article_number": "<number>/PL",
-      "article_text": "text/TXT",
-      "link to article image": [
-        {
+    "article_date": "<DATE/PL>",
+    "id": "<number>",
+    "page_number": "<number>",
+    "article_headline": "<headline/HL>",
+    "article_text": "<text/TXT>",
+    "article_number": "<number/NUM>",
+    "publication": "<publication/PUB>",
+    "author": <ByLine/BL>,
+    "number_of_paragraphs": "<number>",
+    "article_subheading": "<string>",
+    "link_article": [
+		{
           "id": "",
           "link": ""
-        },
-        {
+		}
+	],
+	"link_image": [
+		{
           "id": "",
           "link": ""
-        }
-      ],
-      "link to images in article": [ //TBD
-        {
-          "id": "",
-          "link": ""
-        },
-        {
-          "id": "",
-          "link": ""
-        }
-      ],
-      "article_subheading": "XYZ/TXT", //TBD
-      "number of paragraphs": "3/TXT" //TBD
-    }
-  ]
+		}
+	]    
 }
 ```
 
