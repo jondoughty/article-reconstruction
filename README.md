@@ -33,6 +33,10 @@
 
     $ python3 reconstructor.py --raw --data RAW_DATA_DIR
 
+### To run calculations on raw data (data output to metrics.txt)
+
+    $ python3 reconstructor.py --metrics --raw --data RAW_DATA_DIR
+
 ### For help with reconstructor.py
 
     $ python3 reconstructor.py --help
@@ -120,8 +124,10 @@ The fields which are decided as final output for the Article regeneration, are m
 
 
 ## Running Search
-
-- Run elasticsearch: Copy search/elasticsearch2.2.0 folder to the server execute following command from bin folder, `./elasticsearch -d`
-- Indexing: Index the data by executing the python script from search/MDSearch
-  `$python3 index.py <path to json_data>`
-- Search UI is currently hosted at `http://frank.ored.calpoly.edu/MDSearch/index.html`
+- Run Elasticsearch:
+    - Copy `search/elasticsearch2.2.0` folder to the server
+    - Execute following command from  folder `./elasticsearch -d`
+- Indexing:
+    - `cd search/MD_Search`
+    - `$python3 index.py <path to json_data>`
+- Search: UI is hosted at `http://frank.ored.calpoly.edu/MD_Search/index.html`
