@@ -4,10 +4,11 @@
 ## Contributors
 
     Aditya Budhwar
-    Jon Doughty
+    Jon Doughty (CPE 582 only)
     Vivian Fong
     Nupur Garg
     Daniel Kauffman
+    Daniel Moore (CPE 580 only)
     Brandon Livitski
 
 
@@ -15,13 +16,13 @@
 
   - Python 3
   - Pip 3
-  - `pip3 install pyenchant`
+  - `pip3 install fuzzywuzzy`
+  - `pip3 install numpy`
   - `pip3 install pandas`
+  - `pip3 install pyenchant`
   - `pip3 install regex`
   - `pip3 install scipy`
   - `pip3 install sklearn`
-  - `pip3 install fuzzywuzzy`
-  - `pip3 install numpy`
 
 
 ## Running the Reconstructor
