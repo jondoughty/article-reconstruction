@@ -14,13 +14,16 @@
 
 ## Setup
 
-  - Python 3
-  - Pip 3
+  - Install `Python 3`
+  - Install `pip 3`
+  - `pip3 install demjson`
   - `pip3 install fuzzywuzzy`
+  - `pip3 install nltk`
   - `pip3 install numpy`
   - `pip3 install pandas`
   - `pip3 install pyenchant`
   - `pip3 install regex`
+  - `pip3 install requests`
   - `pip3 install scipy`
   - `pip3 install sklearn`
 
@@ -29,7 +32,7 @@
 
 ### With tagged data
 
-Manully tagged data supplied to the reconstructor (stored in the tagged_data/ directory) must be in CSV format. To convert from XLSX to CSV, first place all XLSX files in the tagged_data/ directory. Then run the following BASH script (tested on linux only).
+Manually tagged data supplied to the reconstructor (stored in the `tagged_data/` directory) must be in `CSV` format. To convert from `XLSX` to `CSV`, place all `XLSX` files in the `tagged_data/` directory. Then run the following BASH script (tested on linux only).
 
     $ ./convert_to_csv.sh
 
