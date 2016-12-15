@@ -56,6 +56,8 @@ def main():
     # If running raw data, tag all data with taggers and return in list
     if args.raw_data:
         tagged_issue_objs = run_taggers(issue_list)
+    else:
+        tagged_issue_objs = issue_list
 
     # if running metrics, don't output to JSON, output results of metrics.
     if args.metric_flag:
@@ -63,7 +65,7 @@ def main():
         sys.exit(0)
 
     # create dictionary for tagged issues
-    issue_dict = gen_issue_dict(tagged_issue_objs)
+    issue_dict = gen_issue_dict(args, tagged_issue_objs)
 
     # output all data to JSON - one JSON file per article
     json_dump(issue_dict)
@@ -89,10 +91,10 @@ def run_taggers(issue_list):
     return tagged_results
 
 
-def gen_issue_dict(issue_list):
+def gen_issue_dict(args, issue_list):
     issue_dict = {}
     for (pub_info, issue_obj) in issue_list:
-        issue_df = construct_tagged(issue_obj, pub_info)
+        issue_df = construct_tagged(issue_obj, pub_info, args)
 
         issue_dict[pub_info] = issue_df.to_dict('records')
 
@@ -198,7 +200,7 @@ def setup_args():
 
 
 
-def construct_tagged(issue_obj, pub_info):
+def construct_tagged(issue_obj, pub_info, args):
     '''Reconstruct all articles of a single issue from a manually tagged csv
        file. Add to issue_dict.'''
     # get the tagged df from the Issue()
@@ -242,8 +244,10 @@ def construct_tagged(issue_obj, pub_info):
     issue_df = pd.DataFrame(articles, index=range(1, len(articles) + 1))
     issue_df.index.name = "id"
 
-    # print (issue_df)
-    # input()
+    if args.tagged_data:
+        print (issue_df)
+        input('\n\n Reconstructed issue shown above in dataframe. Press any '\
+              'key to continue. CTRL-C to quit.')
 
     return issue_df
 
@@ -390,10 +394,6 @@ def run_metrics(issue_list, columns):
                                        pub_info)
         function_results.append((pub_info, precision, recall))
 
-        # art_dict_results = article_completeness(issue_obj.tags_df,
-        #                                         tagged_issue.tags_df)
-        # article_results.append(art_dict_results)
-
     # write results to file
     with open('metrics.txt', 'w') as file_out:
         prec_val_list = [p for (i,p,r) in function_results]
@@ -409,33 +409,6 @@ def run_metrics(issue_list, columns):
         file_out.write('Average recall: {:03f}\n'.format(avg_rec))
 
         file_out.write('\n\n')
-
-        # article_results is a list of lists of dictionaries where
-        # dictionary {'hl':(p,r), 'bl':(p,r), 'txt':(p,r)}
-        article_results = flatten_lsts(article_results)
-
-        hl_prec = extract_data(article_results, 0, 'hl')
-        hl_rec = extract_data(article_results, 1, 'hl')
-        avg_hl_prec = calc_avg(hl_prec)
-        avg_hl_rec = calc_avg(hl_rec)
-
-        bl_prec = extract_data(article_results, 0, 'bl')
-        bl_rec = extract_data(article_results, 1, 'bl')
-        avg_bl_prec = calc_avg(bl_prec)
-        avg_bl_rec = calc_avg(bl_rec)
-
-        txt_prec = extract_data(article_results, 0, 'txt')
-        txt_rec = extract_data(article_results, 1, 'txt')
-
-        avg_txt_prec = calc_avg(txt_prec)
-        avg_txt_rec = calc_avg(txt_rec)
-
-        file_out.write('Headline precision: {}\n'.format(avg_hl_prec))
-        file_out.write('Headline recall: {}\n'.format(avg_hl_rec))
-        file_out.write('Byline precision: {}\n'.format(avg_bl_prec))
-        file_out.write('Byline recall: {}\n'.format(avg_bl_rec))
-        file_out.write('Text precision: {}\n'.format(avg_txt_prec))
-        file_out.write('Text recall: {}\n'.format(avg_txt_rec))
 
 
 def extract_data(lst, tuple_val, key_name):
@@ -472,10 +445,6 @@ def compare_dfs(raw_df, tagged_df, pub_info):
     false_pos = 0   # row tagged incorrectly
     false_negs = 0  # row not tagged
 
-    # write dfs to csv (for debugging)
-    # raw_df.to_csv('raw_df_tag_junk.csv', na_rep='NAN')
-    # tagged_df.to_csv('tagd_df_tag_junk.csv' ,na_rep='NAN')
-
     for i in range(len(raw_df.index)):
         # assert a text match to continue
         raw_text = str(raw_df.loc[i,'text'])
@@ -505,15 +474,8 @@ def compare_dfs(raw_df, tagged_df, pub_info):
         counts of some data, true_pos {}, false_pos: {}, false_negs {}'\
         .format(true_pos, false_pos, false_negs)
 
-    # print ('true pos: ', true_pos)
-    # print ('false pos: ', false_pos)
-    # print ('false negs: ', false_negs)
-    # print ('total rows ', len(raw_df.index))
-
     precision = true_pos / (true_pos + false_pos)
     recall = true_pos / (true_pos + false_negs)
-    # print ("Precision", precision)
-    # print ("Recall", recall)
 
     return precision,recall
 
@@ -576,7 +538,6 @@ def pair_similar(raw_articles, tagged_articles):
             fr = fuzz.ratio(raw_str, tagd_str)
             results.append((tid, rid, fr))
 
-    # now have tuple list with (tid, fid, fr), sort by tid, then by fuzz ratio
     results.sort(key=lambda tup: (tup[0], tup[2]))
 
     return results
@@ -597,9 +558,6 @@ def calc_prec_recall(true_pos, false_pos, false_negs):
 def compare_articles(raw_article, tagged_article):
     '''Given two articles represented as dataframes, compare them.'''
     results = {}
-    # print (raw_article)
-    # print ('------------------------')
-    # print (tagged_article)
 
     raw_hl_lst = raw_article[(raw_article['function'] == 'HL')].text.values
     raw_bl_lst = raw_article[(raw_article['function'] == 'BL')].text.values
@@ -666,8 +624,6 @@ def compare_articles(raw_article, tagged_article):
                 txt_tp += 1
                 txt_match += 1
                 matched = True
-                # NOTE: this could be changed to relative order for better
-                # results
                 if tag_num == raw_num:
                     num_in_order += 1
         txt_fp = len(raw_tuple_vals) - txt_match
@@ -682,10 +638,6 @@ def compare_articles(raw_article, tagged_article):
         txt_order_ratio = num_in_order / len(tagged_txt_lst)
     else:
         txt_order_ratio = 'na'
-
-    # print ('headline: ', hl_precision, hl_recall)
-    # print ('byline: ', bl_precision, bl_recall)
-    # print ('text: ', txt_precision, txt_recall)
 
     results['hl'] = (hl_precision, hl_recall)
     results['bl'] = (bl_precision, bl_recall)
