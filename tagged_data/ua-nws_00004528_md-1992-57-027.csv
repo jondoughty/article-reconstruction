@@ -1,0 +1,1202 @@
+"Function Key: TXT = article text; HL = headline; BL = byline; PH = photo caption/information; ME = meta directives outside of an article; NA = unintelligible; NP = nameplate; PI = publication information; B = blank; AT = advertisement text; MH = masthead; BQT = block quote text; BQA = block quote attribution; CN = comic strip title; CT = comic strip text",,,,,,,
+"LINE","PAGE (0 if unintelligable)","ARTICLE NUMBER (use 0 if outside of text of any article/letter)","FUNCTION (see key above)","PARAGRAPH NUMBER (start with the first content paragraph, 0 if not part of the main text)","JUMP (if line contains a ""jump to"" directive, it's the page target. If it's a ""jumped from"" directive then the negative (-) of the soure page. otherwise 0)","AD #. If line is part of advertisement, it is the number of the ad. Start from top left column. 0 otherwise.","SCANNED TEXT"
+1,1,0,"NP","0",0,0,"CALIFORNIA POLYTECHNIC"
+2,1,0,"NP","0",0,0,"U. N I V E R Sl TY SAN LUIS"
+3,1,0,"NP","0",0,0,"Musiang Daiiy"
+4,1,0,"PI","0",0,0,"VOLUME 57, NO. 27 ★ FRIDAY, OCTOBER 30, 1992"
+5,1,0,"PH","0",0,0,"It’s pumpkin time"
+6,0,0,"NA","0",0,0,"—----"
+7,0,0,"NA","0",0,0,"mn *."
+8,0,0,"B","0",0,0,
+9,0,0,"B","0",0,0,
+10,0,0,"B","0",0,0,
+11,0,0,"B","0",0,0,
+12,0,0,"NA","0",0,0,"-'W'"
+13,0,0,"B","0",0,0,
+14,0,0,"NA","0",0,0,"*££"
+15,0,0,"B","0",0,0,
+16,0,0,"B","0",0,0,
+17,0,0,"NA","0",0,0,"1"
+18,0,0,"B","0",0,0,
+19,0,0,"NA","0",0,0,"wmä"
+20,0,0,"NA","0",0,0,"I >'"
+21,0,0,"B","0",0,0,
+22,0,0,"B","0",0,0,
+23,0,0,"B","0",0,0,
+24,0,0,"B","0",0,0,
+25,0,0,"B","0",0,0,
+26,0,0,"NA","0",0,0,"\"
+27,0,0,"NA","0",0,0,"*4"
+28,0,0,"NA","0",0,0,"! LäJ"
+29,0,0,"B","0",0,0,
+30,0,0,"B","0",0,0,
+31,0,0,"B","0",0,0,
+32,0,0,"B","0",0,0,
+33,1,0,"PH","0",0,0,"PHOTOS BY STEVE PIERCE"
+34,1,0,"PH","0",0,0,"Above, a member of the Pi Kappa Alpha fraternity helps with the pumpkin carving at the Children’s Center on campus. Below, little Stephanie Page Cox uses both hands to clean out her pumpkin."
+35,1,3,"HL","0",0,0,"Rec center almost done; UEC plans to do student survey on alcohol sales"
+36,1,3,"BL","0",0,0,"By Marla R. Van Schuyver"
+37,1,3,"BL","0",0,0,"Staff Writer	_"
+38,1,3,"TXT","1",0,0,"Cal Poly’s $14-million recreation center is 80 to 85 percent complete and is well ahead of its construction schedule, the ASI Board of Directors learned Wednesday."
+39,1,3,"TXT","2",0,0,"Mike De Neve, ASI project coordinator, told the board that, although the contract did not call for construction to be completed until March 21, he expects the construction to be completed between late December and the middle of January."
+40,1,3,"TXT","3",0,0,"Once construction is completed and control of the building"
+41,1,1,"HL","0",0,0,"SNAP approved by board"
+42,1,1,"HL","0",0,0,"Student policing program passes with little opposition"
+43,1,1,"BL","0",0,0,"By Todd Hogan Staff Writer"
+44,1,1,"TXT","1",0,0,"Student patrols may soon be on the streets as the ASI Board of Directors gave the go ahead Wednesday for peer policing in the San Luis Obispo community."
+45,1,1,"TXT","2",0,0,"The Student Neighborhood Assistance Program, or ‘SNAP,’ was approved by directors on a 23 to 3 vote. The fate of the program now rests with the San"
+46,1,1,"BQT","0",0,0,"“It’s a great opportunity for (students) and the community in general.’’"
+47,1,1,"BQA","0",0,0,"Jim Gardiner SLO Police Chief"
+48,1,1,"TXT","2",0,0,"Luis Obispo City Council."
+49,1,1,"TXT","3",0,0,"The student patrol program is a joint venture between the San Luis Obispo Police Department and ASI to use students as inter-mediiiries between community complaints — usually involving loud parties — and the Police Department."
+50,1,1,"TXT","4",0,0,"Ideally, student intervention would eliminate police involvement altogether, according to program officials."
+51,1,1,"TXT","5",0,0,"“I’m very happy ASI approved the proposal,” said San Luis"
+52,1,1,"TXT","5",0,0,"Obispo police Chief Jim Gardiner in a Thursday interview. “I think it’s a great opportunity for the student community and the community in general.”"
+53,1,1,"TXT","6",0,0,"Once the proposal, or Bill 9301, is signed by ASI President Kristin Burnett, Gardiner will review the finalized proposal."
+54,1,1,"TXT","7",0,0,"His staff will then “work out the nuts and bolts” with ASI, nailing down specifics on who does what, Gardiner said."
+55,1,1,"TXT","8",0,0,"Finally, the proposal will go before the City Council with a staff report and recommendations for funding, Gardiner said. However, it isn’t likely to be brought before the council before January 1993, he added."
+56,1,1,"TXT","9",0,0,"Gardiner is optimistic the progfram will be effective in San Luis Obispo once it is worked through a “break in period.”"
+57,1,1,"TXT","10",0,0,"“I think (SNAP) will be seen as a positive thing in the community,” Gardiner said. “If it works like it does in other communities, (it) will free up police officers, help reduce cost to the city and, in conjunction with other programs, decrease noise complaints.”"
+58,1,1,"TXT","11",0,0,"College of Business board member James Johnson-Hill, one of the three directors to vote against the program, disagreed, questioning the program’s effectiveness."
+59,1,1,"TXT","12",0,0,"“I don’t think it will work in our community,” he said. “I realize it works in filinois, but it’s different here.”"
+60,1,1,"TXT","13",0,0,"One of those differences is the structure of the campus. At the University of Illinois, Champaign — the model school for San Luis Obispo’s peer policing program — the campus is centralized. Most of the student housing areas patrolled by students is adjacent to the campus, according to Illinois Student Patrol officials."
+61,1,1,"TXT","14",0,0,"“Our community just isn’t centralized enough” for the"
+62,1,1,"BQT","0",0,0,"“I don’t think it wili work in our community. It works in Illinois, but it’s different here.”"
+63,1,1,"BQA","0",0,0,"James Johnson-Hill Boarid member"
+64,1,1,"TXT","14",0,0,"program to be effective, Johnson-Hill said."
+65,1,1,"TXT","15",0,0,"The College of Engineering’s Jon Cristobal, who also voted against the proposal, said he believes the program gives to much authority to students."
+66,1,1,"TXT","16",0,0,"“Student patrols are supposed to give out written warning cards” to noise offenders, he said."
+67,1,1,"TXT","17",0,0,"“I’m not sure if SNAP patrols should have that kind of responsibility. That’s a police job.”"
+68,1,2,"HL","0",0,0,"PolySCOPE picks candidates"
+69,1,2,"HL","0",0,0,"Endorses Reiss for mayor; Settle, Petersen for council"
+70,1,2,"BL","0",0,0,"By Brad Hamilton Staff Writer"
+71,1,3,"TXT","3",0,0,"is relinquished to Cal Poly, it is expected it will take 45 days to complete the installation of e-quipment, said ASI Executive Director Roger Conway."
+72,1,3,"TXT","4",0,0,"De Neve noted that most of the tiling and interior work in the building are done and the pool also is complete. Bleachers have been ordered and it will take 30 to 60 days to assemble them once they reach campus, he said."
+73,1,3,"TXT","5",0,0,"He also said all facilities in the recreation center have been certified and are of proper specifications for NCAA competition."
+74,1,3,"ME","0",8,0,"See ASI, page 8"
+75,1,2,"TXT","1",0,0,"PolySCOPE announced Thursday in front of a rain- drizzled crowd its endorsement of mayoral candidate Jerry Reiss and City Council candidate Allen Settle."
+76,1,2,"TXT","2",0,0,"Cal Poly senior Brent Petersen was endorsed by the caucus before voting ever l^gan. In the citywide election, voters choose two candidates. However, for the polySCOPE endorsement, one vote was automatically cast for Petersen and only one was left open for students to choose."
+77,1,2,"TXT","3",0,0,"PolySCOPE student caucus director Jason Dennis would not release figures to Mustang Daily of how many clubs participated in the endorsement. However, he said, “We are impressed with the number of votes turned in.”"
+78,1,2,"TXT","4",0,0,"Settle won the City Council endorsement by collecting 71 percent of the clubs’ votes. Settle was followed by David Friend and John Lybarger with 8.3 percent. David Romero finished with 4.2 percent. Richie Ray Walker received 4.2 percent of the votes. David Jeffrey and Dodie Wil-"
+79,1,2,"TXT","4",0,0,"liams collected no votes."
+80,1,2,"TXT","5",0,0,"On the mayoral side, Reiss won with 46 percent. TVailing him were Peg Pinard, 33 percent. Penny Rappa, 21 percent and Cal Massey at zero."
+81,1,2,"TXT","6",0,0,"“(The endorsement) is just a great happening,” Reiss said at a Thursday press conference. “I am excited about Mustang Daily and polySCOPE endorsing me. It tells me something has happened the last five years that is positive in the students’ eyes, and I give credit to (Mayor Ron) Dunin.”"
+82,1,2,"TXT","7",0,0,"Settle, too, was pleased. “I am very honored to receive the endorsement. I am very pleased to have been given the opportunity to serve as the bridge between students and the community.”"
+83,1,2,"TXT","8",0,0,"Settle said the endorsement will be indicative if the students turn out to vote."
+84,1,2,"TXT","9",0,0,"Reiss voiced his support for the organizers of the caucus. “I totally agree with what (polySCOPE) has done,” he said."
+85,1,2,"TXT","10",0,0,"He said he had concerns about polySCOPE being able to keep its momentum going from the first phase last year. But he said this is the biggest push for com-"
+86,1,2,"TXT","10",0,0,"munity awareness that he has seen."
+87,1,2,"TXT","11",0,0,"PolySCOPE Caucus Director Jason Dennis agreed. He said the purpose of the caucus is to give students direction."
+88,1,2,"TXT","12",0,0,"“(Students) don’t want to be the dark horse anymore,” Dennis said. “We’re sending a message that we can’t be ignored.”"
+89,1,2,"TXT","13",0,0,"The endorsement was the second phase of the student caucus program. The first phase took place last spring when students chose Brent Petersen over Mike Schmidt and Tbdd Fernandes to represent the campus in the City Council race."
+90,1,2,"TXT","14",0,0,"The “Student Caucus” officially began with a notice to all ASI clubs on campus, which said they will receive one vote for a City Council candidate and one vote for a mayoral candidate. Each club’s vote was turned in by 5 p.m. on Wednesday."
+91,1,2,"TXT","15",0,0,"All clubs were given an election packet in their boxes which included a description of the caucus, and official ballot and the candidate’s statements as they appear in the city’s sample ballot."
+92,1,0,"SH","0",0,0,"INSIDE"
+93,1,0,"OT","0",0,0,"Campus"
+94,1,0,"OT","0",0,0,"Chicano students speak out about the extra pressures they face in college / page three"
+95,1,0,"OT","0",0,0,"Opinion"
+96,1,0,"OT","0",0,0,"Mustang Daily's editorial staff endorses congressional and presi' dential candidates / page four"
+97,1,0,"OT","0",0,0,"Sports"
+98,1,0,"OT","0",0,0,"Two Mustang wide receivers discuss the injuries that put them out for the season/ page five"
+99,2,0,"PI","0",0,0,"Friday. October 30, 1992"
+100,2,0,"PI","0",0,0,"MUSTANG Daily"
+101,2,4,"HL","0",0,0,"Hollywood: PEROTWOOD Boy robs mom at gunpoint Man charged drunk riding"
+102,2,4,"TXT","1",0,0,"LOS ANGELES (AP) — The 50-foot letters of the Hollywood sign were doctored Thursday to spell P-E-R-O-T-W-O-O-D, but the California spokesman for presidential candidate Ross Perot didn’t know who was responsible."
+103,2,4,"TXT","2",0,0,"“We don’t have a clue,” said Bob Hayden, California coordinator for the Perot campaign."
+104,2,4,"TXT","3",0,0,"The king-sized campaign advertisement for the independent candidate was apparently completed under cover of darkness. It was discovered at dawn and the sheeting used to alter the sign was removed by 7:30 a.m."
+105,2,4,"TXT","4",0,0,"The huge sign looming over Hollywood from the slope of Mount Lee has often been the target of vandals. Over the years, for example, the sign was changed to read HOLLYWEED by marijuana legalization forces, HOLYWOOD when the pope visited the city and OL-LX’WOOD for Iran-Contra figure Lt. Col. Oliver North."
+106,2,7,"HL","0",0,0,"Maggots give good clues"
+107,2,7,"TXT","1",0,0,"DES MOINES, Iowa (AP) — Most people shudder at the image of a maggot-infested body, but Ken Hölscher figures those bugs can help solve a murder."
+108,2,7,"TXT","2",0,0,"Hölscher, an assistant professor of entomology at Iowa State University in Ames, says insects can tell a detective how long a body has been dead and even, sometimes, where it came from."
+109,2,7,"TXT","3",0,0,"William C. Rodriguez, a forensic expert at the Pentagon’s Institute of Pathology, said insects are useful because many indicators experts use, such as tissue changes and chemical tests, are only useful during the first 24 or 48 hours after death."
+110,2,7,"TXT","4",0,0,"“First come the flies. They’ll find a body within one or two days, sometimes within hours,” he said. “Then a few days later, probably two to five days, you’ll still have flies but there will also be certain wasps and ants.”"
+111,2,7,"TXT","5",0,0,"In five to 12 days the beetles arrive, he said. In 12 to 16 days, most of the fleshy parts have been devoured and the flies depart. Mites are the final creatures to arrive."
+112,2,7,"TXT","6",0,0,"Hölscher said he helped solve a double murder in Louisiana, which he estimated the slaying had occurred 60 hours before the bodies were found. The information helped police direct their investigation toward a man who eventually confessed to the crime, admitting he had done it 63 hours before."
+113,2,5,"TXT","1",0,0,"CLOVIS, Calif. (AP) — She loves her 14-year-old son, but a Clovis woman still wants him prosecuted for helping two other boys rob her at gunpoint."
+114,2,5,"TXT","2",0,0,"The 52-year-old woman came home for lunch Monday and found her son there with two companions ages 14 and 16. The other boys were armed with pistols, and one stuck a pistol in the woman’s face, she told police."
+115,2,5,"TXT","3",0,0,"Her son told her “I treated him like a dog” because she had grounded him for getting poor grades."
+116,2,5,"TXT","4",0,0,"But the son talked his friends out of tying his mother up with a telephone cord, although they forced her to sit on the floor, then took the keys to her van and left. The boys said they planned to run away and live off the land."
+117,2,5,"TXT","5",0,,"The mother called police who checked the 16-year-old’s home and found that his father’s .38-caliber and .22-caliber revolvers were missing."
+118,2,5,"TXT","6",0,0,"A few hours later, police dispatcher Darlene Myatt got a telephone call asking if officers were searching for three runaways. She suspected the call came from the runaways, so she asked the caller to use the emergency 911 line."
+119,2,5,"TXT","7",0,0,"The 911 system tells law enforcerhent exactly where calls come from, so Myatt was able to dispatch patrol officers to a laundry where they took the boys into custody."
+120,2,8,"HL","0",0,0,"Baby girl ends string of boys"
+121,2,8,"TXT","1",0,0,"FARGO, N.D. (AP) — It took 110 years, but the Westerholm family finally has a newborn it ftin dress in pink."
+122,2,8,"TXT","2",0,0,"Skylar Dae Westerholm was born Thursday, breaking a string of 16 boys bom in the Westerholm family during the past 110 years."
+123,2,8,"TXT","3",0,0,"“I’ve been telling people this is going to be news when it does happen,” said Bill Westerholm, the father. “But I think everybody thought I was kidding.”"
+124,2,8,"TXT","4",0,0,"Westerholm, who is the stepfather of two daughters, has three brothers — Douglas, John and Tom."
+125,2,8,"TXT","5",0,,"They’ve had seven children, but not one girl."
+126,2,8,"TXT","6",0,0,"Their father was an only son; their grandfather was one 6f four brothers."
+127,2,8,"TXT","7",0,0,"Medical tests had shown that the family weis going to have a girl this time, but Westerholm’s wife. Dee, said her husband was skeptical."
+128,2,6,"TXT","1",0,0,"PIKEVILLE, Ky. (AP) — A man charged with drunk driving says he doesn’t think his horse should be considered a non-motorized vehicle under the law."
+129,2,6,"TXT","2",0,0,"“She’s got a mind of her own,” Mark A. Whitt said of his trusty 2-year-old filly, Mable. “I don’t think a vehicle has a mind.”"
+130,2,6,"TXT","3",0,0,"Kentucky amended its drunken-driving law in 1991 to include drivers of non-motorized vehicles. At least 23 Kentuckians have been charged under the new law, including a bicyclist (twice) and a man in a wheelchair."
+131,2,6,"TXT","4",0,0,"But officials say the Pike County case might be the first involving a horse."
+132,2,6,"TXT","5",0,0,"“It’s humorous,” Pike District Judge Howard Keith Hall said Friday. “But I don’t know where it’ll end up in court or how it might affect his (driver’s) license. We just don’t run into these things.”"
+133,2,6,"TXT ","6",0,0,"Whitt, 20, of Ransom, was arrested early on Oct. 10 when a state trooper found him sitting on his horse in the middle of a state highway talking to a man on a motorcycle."
+134,2,9,"HL","0",0,0,"Sinead Brigade rips Pope"
+135,2,9,"TXT","1",0,0,"NEW YORK (AP) — After two weeks of steady bashing, Sinead O’Connor got some support Sunday from a loosely knit group that tore up pictures of Pope John Paul II in front of St. Patrick’s Cathedral."
+136,2,9,"TXT","2",0,0,"Calling themselves the “Sinead Brigade,” about a dozen women and several men from different activist groups held a brief protest outside the church as Cardinal John J. O’Connor said Mass inside."
+137,2,9,"TXT","3",0,0,"Many posed wearing Sinead masks."
+138,2,9,"TXT","4",0,0,"“We are here to demonstrate our support for Sinead O’Connor in her efforts to expose the Catholic hierarchy as agents of oppression, and to say that there are many, many people who stand with her in this,” said Mary Lou Greenberg of the group. Refuse and Resist!"
+139,2,9,"TXT","5",0,0,"Two weeks ago, the Irish singer tore up a picture of the pope on “Saturday Night Live.” She said she wanted to draw attention to child abuse, which she believes stems in part from the teachings of the Catholic Church."
+140,2,9,"TXT","6",0,0,"Carrying signs reading “The Pope Must Apologize, Not Sinead,” one woman and one man separately tore up pictures of the pope while a crowd gathered."
+141,0,0,"NA","0",0,0,"I"
+142,0,0,"NA","0",0,0,"I"
+143,0,0,"NA","0",0,0,"I"
+144,0,0,"NA","0",0,0,"I"
+145,2,0,"AT","0",0,1,"★"
+146,2,0,"AT","0",0,1,"ELECTION RALLY"
+147,2,0,"AT","0",0,1,"ü'JL^LIZOl, Lliavi -Lt-U 'Ll Z-ÜL'L-S. LHi'L"
+148,2,0,"AT","0",0,1,"CAL POLY * CHUMASH AUDITORIUM"
+149,2,0,"AT","0",0,1,"EIUTERTAIIMMEIUT • SPEAKERS • PEROT COLLECTIBLES"
+150,2,0,"AT","0",0,2,"5lLPRfH'5 ACxlVlTy H©UR"
+151,2,0,"B","0",0,0,
+152,2,0,"AT","0",0,2,"SATURDAY, OCT )1ST 10AM-11AM"
+153,0,0,"NA","0",0,0,"EIG>tral"
+154,2,0,"AT","0",0,2,"Bookstore"
+155,0,0,"NA","0",0,0,"11'S rm: w m ln"
+156,2,0,"B","0",0,0,
+157,2,0,"B","0",0,0,
+158,2,0,"B","0",0,0,
+159,2,0,"B","0",0,0,
+160,2,0,"B","0",0,0,
+161,2,0,"B","0",0,0,
+162,2,0,"B","0",0,0,
+163,2,0,"B","0",0,0,
+164,2,0,"B","0",0,0,
+165,2,0,"B","0",0,0,
+166,2,0,"AT","0",0,3,"WE NEPy WATER NOW! vote NO| on Measure 'H'"
+167,3,0,"PI","0",0,0,"MUSTANG Daily"
+168,3,0,"PI","0",0,0,"Friday, October 30. 1992"
+169,3,10,"HL","0",0,0,"Chicano college students face extra challenges"
+170,3,10,"BL","0",0,0,"By Cynthia Nelson"
+171,3,10,"BL","0",0,0,"Staff Writer"
+172,3,10,"TXT","1",0,0,"Rare is the Cal Poly student who does hot have to walk the tightrope from freshman year to graduation."
+173,3,10,"TXT","2",0,0,"Each must juggle schedules to beat the looming threat of bankruptcy, academic probation and social isolation."
+174,3,10,"TXT","3",0,0,"But some find themselves with added pressures. Many Chicano or Mexican-American students also battle feelings of guilt and isolation."
+175,3,10,"TXT","4",0,0,"Coming to Cal Poly can be a culture shock, even to students from Santa Maria and Los Angeles. The campus of 16,380 students — of which 13,580 are white and 1,503 are Chicano — presents challenges to their norms."
+176,3,10,"TXT","5",0,0,"Beginning today. Cal Poly will be the site of a two-day conference of Chicano college students from across California. Cal Poly’s Movemiento Estudiantil Chicano de Atzldn, — or MEChA — will host the event."
+177,3,10,"TXT","6",0,0,"Armando Pezo Silva of Cal Poly’s Student Academic Services said Chicano students need reinforcement and knowledge of their history."
+178,3,10,"TXT","7",0,0,"“They are told to give up their music, language and family to become like us (white students),” Pezo said."
+179,3,10,"TXT","8",0,0,"They also must enter a competitive atmosphere, which for many may be an added challenge."
+180,3,10,"TXT","9",0,0,"In addition to adjusting to the self-centered atmosphere of college, many students say they feel labeled by the assumption that"
+181,3,10,"HL","0",0,0,"MEChA hosts two-day conference on problems"
+182,3,10,"TXT","9",0,0,"they have been admitted due to special programs."
+183,3,10,"TXT","10",0,0,"However, the opposite is often the case, Pezo said."
+184,3,10,"TXT","11",0,0,"“Students that get here are the survivors,” he said. “They are the toughest kids, the cream of the crop.”"
+185,3,10,"TXT","12",0,0,"He added that their past accomplishments are rarely considered."
+186,3,10,"TXT","13",0,0,"Many Chicano students enter with grade point averages as high as 4.0 and 3.8, he said."
+187,3,10,"TXT","14",0,0,"Chicano students also may feel a deep separation when away from home."
+188,3,10,"TXT","15",0,0,"In ‘Mexican-American — as well as other Latino cultures — the needs of family members come first."
+189,3,10,"TXT","16",0,0,"“When you say ‘familia,’ you may be talking about an army,” Pezo said."
+190,3,10,"TXT","17",0,0,"The traditional Latino family consists of the nuclear family and all distant relatives. The ties are often very strong."
+191,3,10,"TXT","18",0,0,"“We hate being away from our family,” said one Chicano student."
+192,3,10,"TXT","19",0,0,"Some who come from a large immediate family feel guilt, Pezo said."
+193,3,10,"TXT","20",0,0,"Their parents and siblings may be struggling financially to put food on the table and pay rent, often working some of the filthiest and most dangerous jobs, he said."
+194,3,10,"TXT","21",0,0,"Then, one child goes to college. This becomes a source of pride for the family, but can also cause more stress as the need for added income increases, Pezo said."
+195,3,0,"AT","0",0,1,"Paid Political Advertisement"
+196,3,0,"AT","0",0,1,"COUNCIL"
+197,3,10,"TXT","22",0,0,"Thke, for example, Pedro Arroyo, president of Cal Poly’s MEChA."
+198,3,10,"TXT","23",0,0,"He said his family of six was living comfortably in a roomy house. However, when he began college, they moved into a one bedroom apartment to help support him financially."
+199,3,10,"TXT","24",0,0,"Chicano students, like many others, continue to work to support themselves. “They may still have to send money home to their family,” Pezo said."
+200,3,10,"TXT","25",0,0,"According to a June 1992 study by Cal Poly’s Institutional Studies department, it takes six to seven years for Chicano students to graduate from Cal Poly — if they remain."
+201,3,10,"TXT","26",0,0,"According to the report, underrepresented ethnic ■ groups tend not to continue their education at Cal Poly. If they attend another California State University, half are unaccounted for"
+202,3,0,"OT","0",0,0,"The struggle for Chicano equality"
+203,3,0,"OT","0",0,0,"Thursday: Area professionals discuss problems besetting Chicanos. Today: Poly Chicano students say they face an uphill battle."
+204,0,0,"NA","0",0,0,"fr"
+205,3,10,"TXT","26",0,0,"after five years."
+206,3,10,"TXT","27",0,0,"“It’s a hostile environment,” Arroyo said. “I sense it in the classroom.”"
+207,3,10,"TXT","28",0,0,"The enrollment of Chicano students is increasing, but Chicano faculty is declining. Over the past year, four Chicano instructors have left Cal Poly for various reasons."
+208,3,10,"TXT","29",0,0,"Needing role models and professionals to go to for guidance, Chicano students say they feel frustrated by the loss."
+209,3,10,"TXT","30",0,0,"“We don’t have anyone to go to for help academically,” said José Juan Urguizo, a human development sophomore. There are less than a dozen Chicano faculty among 1,000 at Cal Poly."
+210,3,10,"TXT","31",0,0,"When political science lecturer Jorge Aguiniga was dismissed earlier this year, students protested the department’s reasoning."
+211,3,10,"TXT","32",0,0,"Urguizo and others rallied and sent letters voicing their concerns. However, they said, they received no reply."
+212,3,10,"TXT","33",0,0,"“We weren’t taken into consideration,” Urguizo said."
+213,3,10,"TXT","34",0,0,"Chicano students say they also are frustrated by the lack of an ethnic studies program, which Arroyo said would easily fall under the school’s learn-by-doing motto."
+214,3,10,"TXT","35",0,0,"Arroyo said exposure to many cultures will prepare students for the future."
+215,3,10,"TXT","36",0,0,"“It’s so important to have a Chicano studies department,” he said. “(Then) our people will know their history. Many believe that they were discovered by Christopher Columbus.”"
+216,3,10,"TXT","37",0,0,"Arroyo said a Chicano friend"
+217,3,10,"TXT","37",0,0,"of Arroyo studied their history and told him, “Pedro, I didn’t know we were that important.”"
+218,3,10,"TXT","38",0,0,"Robert Gish, director of Poly’s new ethnic studies department, agrees with Arroyo."
+219,3,10,"TXT","39",0,0,"“The school is living in a bygone era,” Gish said. All other schools in the state have strong ethnic studies and multicultural centers except Cal Poly, he said."
+220,3,10,"TXT","40",0,0,"But the university is working toward greater sensitivity, Gish added. Classes are being formed that will broaden students awareness of cultural issues, providing the Academic Senate"
+221,3,10,"TXT","40",0,0,"approves them on Nov. 3."
+222,3,10,"TXT","41",0,0,"The school has also attempted to hire more Chicano faculty, Gish said, but the surrounding area’s ethnicity — and the salaries offered — aren’t appealing."
+223,3,10,"TXT","42",0,0,"Pezo said the opportunity for education is essential for Chicanos to change their social status."
+224,3,10,"TXT","43",0,0,"He told of a Chicano man living in Santa Maria whose parents were farm workers. The man went on to become a lawyer."
+225,3,10,"TXT","44",0,0,"All it takes in the United States is for one generation to become educated, Pezo said."
+226,3,10,"TXT","45",0,0,"“That is the objective,” he said, “to turn people into taxpayers and stimulate the economy.”"
+227,3,10,"TXT","46",0,0,"However, this is threatened by the Leticia A case, which already is forcing undocumented students to pay out-of-state tuition in community colleges and University of California schools."
+228,3,10,"TXT","47",0,0,"Undocumented but taxpaying students who attend California State Universities may also be facing the same court ruling."
+229,0,0,"NA","0",0,0,"À"
+230,0,0,"B","0",0,0,
+231,3,0,"AT","0",0,1,"Cal Poly lecturer for past 25 years."
+232,3,0,"AT","0",0,1,"Accessible now via on-campus office hours. Participant in WOW activities regularly."
+233,3,0,"AT","0",0,1,"Two of his children are Cal Poly Alumni."
+234,3,0,"AT","0",0,1,"As Public Works Director for the city Dave has:"
+235,3,0,"AT","0",0,1,"-	Installed 20 miles of bike lanes"
+236,3,0,"AT","0",0,1,"-	Planted 10,000 street trees"
+237,3,0,"AT","0",0,1,"-	Initiated and operated our public bus system"
+238,0,0,"B","0",0,0,
+239,3,0,"AT","0",0,1,"The right person for an important job."
+240,0,0,"NA","0",0,0,"V"
+241,0,0,"NA","0",0,0,"ri"
+242,0,0,"NA","0",0,0,"Iv"
+243,0,0,"B","0",0,0,
+244,0,0,"NA","0",0,0,"kiA"
+245,0,0,"B","0",0,0,
+246,0,0,"B","0",0,0,
+247,0,0,"B","0",0,0,
+248,0,0,"B","0",0,0,
+249,3,0,"AT","0",0,2,"G-R-R R R-REAT COSTUMES!"
+250,3,0,"AT","0",0,2,"Reserve Yours Now For Halloween!"
+251,3,0,"AT","0",0,2,"We have a huge selection of Adult and Kids' Costumes. We’ve doubled our inventory of accessories & make-up for all your party & costume needs."
+252,3,0,"AT","0",0,2,"COSTUME"
+253,3,0,"AT","0",0,2,"^984 Chorro St., SLO 544-2373,"
+254,0,0,"B","0",0,0,
+255,0,0,"B","0",0,0,
+256,0,0,"B","0",0,0,
+257,0,0,"NA","0",0,0,"u"
+258,0,0,"NA","0",0,0,"u"
+259,0,0,"B","0",0,0,
+260,0,0,"NA","0",0,0,"A"
+261,4,0,"SH","0",0,0,"Opinion"
+262,4,0,"PI","0",0,0,"Friday. October 30. 1992"
+263,4,0,"PI","0",0,0,"Mustang Daily"
+264,0,0,"B","0",0,0,
+265,0,0,"B","0",0,0,
+266,4,11,"HL","0",0,0,"ELECTION"
+267,0,0,"NA","0",0,0,"—"
+268,4,11,"HL","0",0,0,"NimH."
+269,4,11,"HL","0",0,0,"ENDORSEMENTS"
+270,4,11,"HL","0",0,0,"NATIONAL"
+271,4,11,"HL","0",0,0,"ENDORSEMENTS"
+272,4,11,"HL","0",0,0,"UNITED STATES"
+273,4,0,"OT","0",0,0,"Candidate"
+274,4,0,"OT","0",0,0,"PRESIDENT"
+275,4,0,"OT","0",0,0,"Bill Clinton"
+276,4,0,"OT","0",0,0,"SENATE"
+277,4,0,"OT","0",0,0,"Dianne Feinstein Barbara E>oxer Richard Boddie Abstentions"
+278,4,0,"OT","0",0,0,"CONGRESS"
+279,4,0,"OT","0",0,0,"Michael Hiiffington Gloria Ochoa"
+280,4,0,"OT","0",0,0,"Totul Editorial Votes"
+281,4,11,"HL","0",0,0,"SENATE, CONGRESS, and PRESIDENT"
+282,4,11,"TXT","1",0,0,"♦ Presidential Endorsement: Bill Clinton. In"
+283,4,11,"TXT","1",0,0,"endorsing Democratic candidate Bill Clinton of Ai kansas for the presidency, Mustang Daily found it helpful to borrow a catch-phrase from the Republican Party platform of years past: Are you better off now than you were four years ago?"
+284,4,11,"TXT","2",0,0,"The Daily thinks it's time for a change and feels that Clinton offers the most avenues out of this year's field of candidates. His strong stands for social reform aimed at aiding a struggling ""middle-class"" are sorely needed."
+285,4,11,"TXT","3",0,0,"Clinton's stances on environmental issues and defense budgets also demonstrate a concise grasp of current issues which have yet to be addressed."
+286,4,11,"TXT","4",0,0,"Clinton brings with him not only good ideas but a competent team as well. His choice of A1 Gore for a running-mate helps to round out a Democratic ticket which would work well with a congress of the same bent, hopefully resulting in a government more responsive to the people's needs than the desires of special interest groups."
+287,4,11,"TXT","5",0,0,"Bill Clinton has promised to bring a policy of change to the White House, and Mustang Daily agrees with this platform."
+288,4,11,"TXT","6",0,0,"♦	Senatorial Endorsement: Dianne Feinstein & Barbara Boxer, Both Dianne Feinstein and Barbara Boxer supported the freedom of choice act, a positive move in the eyes of the editorial staff. These Democratic candidates would complement an increasingly Democratic Congress and help to cut down the amount of political infighting."
+289,4,11,"TXT","7",0,0,"Both candidates have proven themselves to be pro-active rather than re-active, choosing to attack problems rather than sit back and watch."
+290,4,11,"TXT","8",0,0,"Feinstein's work in San Francisco has proven her ability to handle the job in question, and her desire to create new jobs and strengthen the national economy coupled with Barbara Boxer's strong environmental stance echoes some of the most positive points of both the Republican and Democratic parties this year."
+291,4,11,"TXT","9",0,0,"Mustang Daily casts its endorsement for this pair in the hopes they will revitalize a somewhat stagnant political system."
+292,4,11,"TXT","10",0,0,"♦	Congressional Endorsement: Michael Huffington. Michael Huffington would not be the obvious choice of an editorial board which seems to be running along Democratic lines; however, Huffington proved to this editorial board's satisfaction that his sense of ""team play"" would be effective across any party lines."
+293,4,11,"TXT","11",0,0,"While Huffington is admittedly not a member of the ""middle-class,"" he displays a sense of responsibility to people which proved'a trustworthy and personable trait. Once heavily involved in the oil industry, he has now separated himself from it and is opposed to offshore drilling. This convinced the editorial board that Michael Huffington is beholden to no one; indeed, he has received no money from special interest groups."
+294,4,11,"TXT","12",0,0,"Michael Huffington proved that he is ready to tackle the issues, and Mustang Daily feels he should be given the chance."
+295,4,11,"BL","0",0,0,"MusUiriff Daily editorial staff national erulorsement-s are based primarily on newspaper coverage ami campaign literature."
+296,4,0,"SH","0",0,0,"LETTERS TO THE EDITOR"
+297,4,13,"HL","0",0,0,"Facts of measure F are questioned"
+298,4,13,"T","1",0,0,"The opponents of Measure F have listed some “facts” that I feel should be disputed, or at least questioned."
+299,4,13,"T","2",0,0,"If the private hospitals can accommodate General Hospital’s patients, why don’t they already? And when they do happen to get an uninsured, indigent patient, why are they so quick to transfer them to General Hospital? Maybe because it isr’i economically feasible to keep them?"
+300,4,13,"T","3",0,0,"How much do you suppose it would cost to pay for all of the medically indigent patients in the County contracts with the private hospitals? Certainly more than $28 a year."
+301,4,13,"T","4",0,0,"Contracting with private hospitals hasn’t worked in Shasta County since the closing of Shasta General, and I certainly haven’t heard glowing reports on the Santa Barbara Health Initiative since closing Santa Barbara’s County Hospital."
+302,4,13,"T","5",0,0,"If the voters of San Luis ObisfK) County don’t approve Measure F, they will regret it. Defeating this measure will not absolve us of the tax burden for indigent care. Once General Hospital is closed, it is gone forever, leaving us at the mercy of corporations whose main purpKJse is making money — and guess who wdll be footing the bill."
+303,4,13,"BL","0",0,0,"Mr.A Mrs. Doane Spencer Cayucos residents"
+304,4,0,"SH","0",0,0,"Letters Policy"
+305,4,0,"OT","0",0,0,"Letters to the editor should be typed, less than 250 words and include the author's name, phone number and major or occupation. Because of space limitations, shorter letters have a better chance of appearing in Mustang Daily."
+306,4,0,"OT","0",0,0,"Letters may be edited for length and clarity. Submission does not insure publication. Letters should be turned into the letters box in the Mustang Daily office, Graphic Arts Building, room 226."
+307,4,0,"SH","0",0,0,"REPORTER'S NOTEBOOK"
+308,4,12,"HL","0",0,0,"l.v. family Halloween"
+309,0,0,"NA","0",0,0,"/"
+310,0,0,"NA","0",0,0,".Á.C/77S'"
+311,4,12,"BL","0",0,0,"By Jackie Jones"
+312,4,12,"TXT","1",0,0,"When I went away to college four years ago, so did my parents and my little brother. When I began experiencing college life, my parents did too, only better. It’s been right about this time of year, for the past four years, that I am reminded of my parents’ college life."
+313,4,12,"TXT","2",0,0,"Yes, this is the time of year when the witches, goblins and jack-o’-lantems remind me just where my parents live. Each passing day in October creeps closer to the big blow-out that my parents kx)k forward to. It’s almost like the night of Halloween brings spirited youth to my parents. Yes, it is true; my calm, comfortable, happily-married parents live in Isla Vista, and the3^1 be out and about with the other thousands of local and visiting college students celebrating Halloween in IV."
+314,4,12,"TXT","3",0,0,"Stop. You’d think living in the college community of Isla Vista would be enough for my parents, but no. My parents picked the famous street of Del Playa to reside on. Del Playa, to UCSB students, is “the place* to live, so much so that they are wrilling to pay over $400 to share a room in a shack."
+315,4,12,"TXT","4",0,0,"You’d think it would be enough to live on the famous college street. Not quite; my parents chose the 6600 block, “grand central station” for IV parties."
+316,4,12,"TXT","5",0,0,"Yes, my parents are famous for being the only family on Del Playa. My mom rides her bike dowm to Isla Vista’s grocery store and IS greeted by the student clerk with a “are you the family that lives on Del Playa?” My mother, the friendly and warm person that she is, easily replies “yes.”"
+317,4,12,"TXT","6",0,0,"My parents and l8-year-old brother live amid trampolines that Snowboarders use to improve their tricks, couches on lawns (one of which is my parents’ old family room couch), beer signs, kegs, surfboards and the beautiful ocean.	-"
+318,4,12,"TXT","7",0,0,"That ocean is what convinces me of my parents’ sanity. That’s what drew my beach-loving family to the place. Looking out one end of the house, there’s a street full of active students running, biking, tanning, playing volleyball and Prisbee. But at the other end of the house is a view of a tranquil sea. My parents enjoy looking into the vast ocean off our backyard cliff; the same"
+319,4,12,"TXT","7",0,0,"cliff that many students have fallen off at overcrowded Del Playa parties."
+320,4,12,"TXT","8",0,0,"My house itself is famous. My high school tennis coach, Lisa Saltzman, as a UCSB student went to many a party at my house when it was termed by the student residents as the “Beach House.* *"
+321,4,12,"TXT","9",0,0,"Well, this Halloween and like every Halloween, my parents will be watching the blowout atop the boathouse balcony. Last year, my Mom took two rolls of film of students marching up and down Del playa in their costumes. Their favorite was a student dressed as a kissing both. Under her breath, my mom said she also saw someone dressed as a sperm and as a condom."
+322,4,12,"TXT","10",0,0,"Amazingly enough, I have never driven the hour and 20 minutes it takes to get to IV for Halloween. My protective Mom doesn’t like the idea."
+323,4,12,"TXT","11",0,0,"That’s okay. TU let my parents have this college experience and just live vicariously through them. That’s funny, doesn’t it happen the other way around? Oh, well."
+324,4,12,"TXT","12",0,0,"So, if you head down to IV this Halloween, from my mom’s pictures it looks like a lot of fun and a definite experience. Youll probably have a long walk from where you park to the party."
+325,4,12,"TXT","13",0,0,"Be careful, there’s a lot of policemen on horseback, and if you see a friendly blonde mother, say “hi.” The next time I go home, she’ll tell me that she met you and if you are male, she’ll probably tell me your major, religion, life goals, etc."
+326,4,12,"TXT","14",0,0,"Well, please do not think that I don’t approve of my parents. They are always worried about this, especially my Mom. I think it is the complete opposite. Actually, I am proud that my parents are young at heart. Sometimes it has it’s disadvantages, like when my mom tells me that she never sees anyone studying and asks me if I study."
+327,4,12,"TXT","15",0,0,"But all in all, it’s been fun. My parents enjoy the ocean, my little brother enjoys the surf and I get I a kick out of telling people where I live. Most importantly, it’s not where they live, it’s just that they are my family, and how lucky I am to have them."
+328,4,12,"BL","0",0,0,"Jackie Jones is a journalism senior. This is her second quarter reporting for Mustang Daily."
+329,4,0,"MH","0",0,0,"MUSTANG DAILY STAFF 1992 - 1993"
+330,4,0,"MH","0",0,0,"Kdiior-in-Chief - Peter Hartlaub News Editor - John Hubbell Opinion Editor - Bryan Bailey A&E Editor - Katherine Gill Eeatures Editor - Edwin Bill Sports Editor - Cam Inman City Editor - Carolyn Nielsen Photo Editor - Sherry Gürtler Illustrator - Matthew Hubal"
+331,4,0,"OT","0",0,0,"Mvitiang Daily officaa «f« iocaiad in Qftphic Art« Room approval from ma Muaiang Daily adilorial ataff and"
+332,4,0,"MH","0",0,0,"Art Director - Craig Stout Photo Staff - Mark Daybell. Steve Pierce. Steve Mueller. Ray Cesar Sanchez Computer Operations -Dan Malone. Carlos Relova Adviser - Herb Kamm Ixgal Analyst - Ilan Funke-Bilu Political Analyst - Ron Dun in"
+333,4,0,"MH","0",0,0,"Business Mgr. - A J. Schuermann Ad Director - Matt Macomber National Sales Mgr. - Lisa Martínez Ad Production Mgr. - Alex Salazar Credit Manager - John Brashears Classifieds - Leeandra Church. Cathy Lung. Kelly Maciver, Joy Nieman"
+334,4,0,"MH","0",0,0,"Subscriptions - Kristy Kelley"
+335,4,0,"MH","0",0,0,"Account Kxecutives -Steve Betterly, Dan Burke, Mary Kay Duffy, Jeff Hollister, Tiffany Jordan, Gabe Joynt, Matt Leutza. Nelsene Toriano Ad Design - Denise Meyer. Todd Straka, James Hanley, Miles Stegall"
+336,4,0,"MH","0",0,0,"Production Mgrs. - Joe tarica, Jason foster Ih-oduction - Ali Bottomley. Coral Dawson. Amy Hummel, Jodi Meyer, Kris Rockhold, Carol Reynoso Circulation Manager - Scott Karle Recycling.Mgr. - Jane Wooding Maintenance Engineer - Jeff Ellis"
+337,4,0,"MH","0",0,0,"226. C*l Poly Univ»r.ity San Lui* OtM»po, CA 9Ï407 Phon» (605)7S6-n43. Fa» (ê05)7S6 e7S4 • Ail m4l*n4l in MutUng Daily Iti* pioparty ol Mustang Daily No adilonal malanal oi pHotographt may ba rapubliahad without tf>a Mualang Daily butinasa managai Advaibaamanta and aloriaa ara copyiigMad by Mustang Daily and may not ba rapiinlad widioul wntlan parmiaaion Irom dis buainaaa managai Pnnlad by Univaraily Qrapbic Syalsma"
+338,5,0,"SH","0",0,0,"Sports"
+339,5,0,"PI","0",0,0,"MUSTANG Daily"
+340,5,0,"PI","0",0,0,"Friday, October 30. 1992"
+341,5,14,"HL","0",0,0,"Shoulder injuries devastate Thomas, Wade"
+342,5,14,"BL","0",0,0,"By John Cristofano"
+343,5,14,"BL","0",0,0,"Staff Writer"
+344,5,0,"NA","0",0,0,"N"
+345,5,0,"NA","0",0,0,"‘ - ""J"
+346,5,14,"PH","0",0,0,"STEVE PIERCE/Mustang Daily"
+347,5,14,"PH","0",0,0,"Similar shoulder separations have forced Poly wide receivers Chris Thomas (left) and Joe Wade to cope with views from the sidelines."
+348,5,14,"TXT","1",0,0,"Entering the 1992 seeison, much of the Cal Poly football team’s hopes and expectations rested on the shoulders of wide receivers Chris Thomas and Joe Wade. Ironically, that seems to be the one part of their bodies that couldn’t hold the weight."
+349,5,14,"TXT","2",0,0,"In the Mustangs’ first home game .of the season (only their third overall) against Cal State Hayward, Thomas, an All-American candidate primed to lead the team, went down in the first quarter with a separated right shoulder."
+350,5,14,"TXT","3",0,0,"“I landed wrong and then a (Hayward) guy landed'on me,” Thomas said at the time."
+351,5,14,"TXT","4",0,0,"Three games later against Sacramento State, junior Joe Wade suffered - the same fate when he too landed wrong on his right shoulder."
+352,5,14,"TXT","5",0,0,"“I kind of knew (how serious the injury was) once I landed on it,” Wade said."
+353,5,14,"TXT","6",0,0,"'Thomas and Wade’s collective status: lost for the season."
+354,5,14,"TXT","7",0,0,"Cal Poly football’s collective status: A limited receiving core, a lack of speed at the wide receiver position and a dependency on the run."
+355,5,14,"TXT","8",0,0,"How important were Thomas and Wade to the Mustangs’ chances?"
+356,5,14,"TXT","9",0,0,"Just ask head coach Lyle Setencich, who claimed Thomas wasn’t only the best"
+357,5,14,"TXT","9",0,0,"player on the team, but also the best offensive player in the conference."
+358,5,14,"TXT","10",0,0,"“You can’t replace him,” Setencich said. “He’s a team leader and, was voted team captain.”"
+359,5,14,"TXT","11",0,0,"Setencich said when Thomas was injured, he thought his team “would still be okay.”"
+360,5,14,"TXT","12",0,0,"“We still had Wade, and he gave us some vertical push up the field,” he said."
+361,5,14,"TXT","13",0,0,"'Then Wade went down."
+362,5,14,"TXT","14",0,0,"“I knew we were in trouble then,” Setencich said."
+363,0,0,"NA","0",0,0,"• • •"
+364,5,14,"TXT","15",0,0,"Speaking to Chris Thomas one month after his injury is still a heart-wrenching experience. A mixture of both hurt and disbelief blanket the melancholy tone of his soft voice."
+365,5,14,"TXT","16",0,0,"“I was pretty devastated (when I got injured),” he says. “I worked so hard this summer to get ready for my last year. It was a blow, and I still haven’t really gotten over it.”"
+366,5,14,"TXT","17",0,0,"'Thomas says having to stand on the sidelines and watch his team lose tight games has been one of the hardest things in his life."
+367,5,14,"TXT","18",0,0,"“Football’s been my first love,” he says. “And when you know there’s nothing you can do but sit on the sidelines and watch ... it can almost bring tears to your eyes.”"
+368,5,14,"TXT","19",0,0,"'Thomas, who just this week was able to take off his sling"
+369,5,14,"TXT","19",0,0,"and begin rehabilitation, says he still goes to practice every day and hasn’t missed a game."
+370,5,14,"TXT","20",0,0,"“I want our team to do well whether or not I can be out there playing,” he says. “'They’re a bunch of great guys and they all work hard.”"
+371,5,14,"TXT","21",0,0,"Joe Wade, a junior who will be fully recovered and ready to go again next season, maintains his optimism despite the injury he suffered just less than two weeks ago."
+372,5,14,"TXT","22",0,0,"At the timé’ of his injury, though, his attitude was a little different."
+373,5,14,"TXT","23",0,0,"“I was pretty mad (when I realized I was injured),” Wade says. “'The (Sacramento State) guy who hit me said. That’ll teach you to come over on my side.’ All I could do was scream at him.”"
+374,5,14,"TXT","24",0,0,"Wade says he wasn’t positive how serious his injury was until he got up after the play."
+375,5,14,"TXT","25",0,0,"“I could feel the bone sticking into my shoulder pad,” he says. “It was then when I knew things weren’t looking too good.”"
+376,5,14,"TXT","26",0,0,"He says the injury is frustrating because he’s never been hurt “bad enough to the point where I couldn’t play.”"
+377,5,14,"TXT","27",7,0,"Watching his team lose in the closing seconds last week at Cal State Northridge was a SEE SHOULDERS, page 7"
+378,5,15,"HL","0",0,0,"Mustangs look to end skid"
+379,5,15,"BL","0",0,0,"By Cam Inman"
+380,5,15,"BL","0",0,0,"Sports Editor"
+381,5,15,"T","1",0,0,"As if the last few games haven’t been emotional enough."
+382,5,15,"T","2",0,0,"Cal Poly, coming off a heartbreaking 14-13 loss at Cal State Northridge last week, is expected to undergo yet another battle Saturday at Santa Clara University."
+383,5,15,"T","3",0,0,"Although Cal Poly has won the last three meetings against the Broncos, Cal Poly entered last week’s Northridge game also with a three-game win streak in the series versus the Matadors."
+384,5,15,"T","4",0,0,"“'They’ve always played us very hard,” Cal Poly head coach Lyle Setencich said of Santa Clara."
+385,5,15,"T","5",0,0,"'The Broncos were idle last week after a 42-18 loss to Northridge on Oct. 17."
+386,5,15,"T","6",0,0,"Saturday’s non-conference"
+387,5,15,"T","6",0,0,"game pits two teams who are struggling to keep their noses above the playoff waters."
+388,5,15,"T","7",0,0,"Cal Poly (2-4-1 overall) enters on a four-game winless streak while Santa Clara sports 4-3-0 mark."
+389,5,15,"T","8",0,0,"“It should be an emotional game,” said Setencich. “A lot of the guys played together before going off to college.”"
+390,5,15,"T","9",0,0,"Most of those who played together hail from the Bay Area."
+391,5,15,"T","10",0,0,"Cal Poly’s offense has been forced to switch to a run-oriented offense, as was evident in the Northridge loss. Of Cal Poly’s 278 total yards, 198 came from the running game."
+392,5,15,"T","11",0,0,"Leading the Mustangs’ attack is Brian Fitz, who is averaging 5.5 yards per carry and 92 yards per game."
+393,5,15,"T","12",0,0,"Santa Clara’s offensive threats come from all-time lead-"
+394,5,0,"OT","0",0,0,"Western Football Conference wStaiulings"
+395,4,0,"OT","0",0,0,"Piirtland Slate Cal St. Norlliriilgc Cal St. Sacranienit Southern Ulali Cal Poly Sl.O"
+396,5,0,"OT","0",0,0,"Saturday's games:"
+397,5,0,"OT","0",0,0,"Cal Poly at Santa Clara. Cal St Norlliriilge at So. Utah*, Portland St at Cal St Saeranieiilo* •conferemo g:une"
+398,5,0,"OT","0",0,0,"CONKKKK.NCE		OVKRAI.L"
+399,5,0,"OT","0",0,0,"	L I	Ä1L I"
+400,5,0,"OT","0",0,0,"1	0 0	5 2 0"
+401,5,0,"OT","0",0,0,"1	0 0	4 3 0"
+402,5,0,"OT","0",0,0,", 1	1 0	5 2 0"
+403,5,0,"OT","0",0,0,"1	1 0	4 4 0"
+404,5,0,"OT","0",0,0,"Ü	2 0	2 4 1"
+405,0,0,"B","0",0,0,
+406,5,0,"AT","0",0,1,"Not tor honor. Not for country. For his wife and child."
+407,0,0,"B","0",0,0,
+408,0,0,"NA","0",0,0,"ÏTÎ"
+409,0,0,"NA","0",0,0,"T"
+410,0,0,"B","0",0,0,
+411,0,0,"B","0",0,0,
+412,5,15,"TXT","12",0,0,"ing rusher Aron Wise and speedy wide receiver Hector Siquieros."
+413,5,15,"TXT","13",0,0,"Wise holds seven career records at Santa Clara, including rushing yardage. 'The 5-10, 190-pound senior saw limited playing time in last year’s 15-10 Mustang win, carrying nine times for five yards."
+414,5,15,"TXT","14",0,0,"“We saw enough of him (Wise) over the last couple years to say he’s a very good running back,” Setencich said."
+415,5,0,"AT","0",0,2,"Plus a chance to"
+416,5,0,"AT","0",0,2,"WIN"
+417,5,0,"AT","0",0,2,"free rentals of"
+418,5,0,"AT","0",0,2,"Gameboy video games"
+419,5,0,"AT","0",0,2,"Compliments of"
+420,5,16,"HL","0",0,0,"Poly wins fourth straight"
+421,5,16,"BL","0",0,0,"By John Cristofano"
+422,5,16,"BL","0",0,0,"Staff Writer"
+423,5,16,"TXT","1",0,0,"Maybe the Cal Poly men’s soccer team should have just begun the season one loss away from having no chance at the playoffs."
+424,5,16,"TXT","2",0,0,"Since the Mustangs have played under that pressure, they have posted four straight victories, including a 2-0 win over Division I U.C. Santa Barbara Wednesday night at Mustang Stadium."
+425,5,16,"TXT","3",0,0,"Playing under wet conditions, Cai Poly scored once in each half, played solid defense and got some luck en route to its third straight shutout."
+426,5,16,"TXT","4",0,0,"“'Ibnight we were a little lucky they didn’t put any shots in the net,” said Cal Poly coach Wolfgang Gartner. “It was a shaky shutout.”"
+427,5,16,"TXT","5",0,0,"The Mustangs struggled early against the Gauchos, with much of the first half played in Cal Poly’s end of the field."
+428,5,16,"TXT","6",0,0,"But the game took on a new complexion when junior forward Mike Black scored with 15 minutes left in the half."
+429,5,16,"TXT","7",0,0,"Black took a pass from midfielder Chris Fisher, dribbled down the left side of the field and shot past Gaucho goalkeeper 'Tim Cooney, who came out of goal in an attempt to smother the ball."
+430,5,16,"TXT","8",0,0,"After surviving a few serious scoring threats'-' from U.C. Santa Barbara in the remainder of the first half. Cal Poly clung to a 1-0 lead at halftime."
+431,5,16,"TXT","9",6,0,"With less than seven SEE SOCCER, page 6"
+432,0,0,"NA","0",0,0,"........... i	T —"
+433,0,0,"NA","0",0,0,"I"
+434,0,0,"B","0",0,0,
+435,0,0,"B","0",0,0,
+436,5,0,"AT","0",0,1,"Showing 7:30 and 9:45pni in Chumash"
+437,5,0,"AT","0",0,1,"FRIDAY OCTOBER 3QTH"
+438,5,0,"AT","0",0,1,"ONLY"
+439,5,0,"AT","0",0,1,"Presented by ASl Fofns"
+440,5,0,"AT","0",0,2,"This may also be used as a $2 OFF coupon on any Regular priced CD/Cassette at your local Wherehouse."
+441,5,0,"AT","0",0,2,"Not Valid wKh any other offer, good until 1/31/93"
+442,5,0,"AT","0",0,3,"Brent Petersen Endorses Measure H"
+443,5,0,"AT","0",0,3,"7 urge everyone to vote for Measure H. I worked to qualify Measure H for the ballot because the state water project's a bad deal, and because the city council was wrong to ignore the previous vote of the people against the project."""
+444,5,0,"AT","0",0,3,"- Brent Petersen, the student candidate for the City Council."
+445,5,0,"AT","0",0,3,"Vote ""YES"" On Measure H"
+446,5,0,"AT","0",0,3,"(The Citizens Referendum to Repeal the State Project) ""Yes"" on ’H’ Means ""No"" to the Failed State Project."
+447,6,0,"AT","0",0,1,"Paid Political Advertisement"
+448,0,0,"B","0",0,0,
+449,0,0,"B","0",0,0,
+450,0,0,"NA","0",0,0,"'	JL"
+451,0,0,"NA","0",0,0,"V ¿.li.	.*r> I -"
+452,6,0,"AT","0",0,1,"I'm Mike Knikow, Cal Poly Alumni, local businessman and former pitcher for the San Francisco Giants."
+453,6,0,"AT","0",0,1,"I wholeheartedly endorse Wendy Nogle because she is the candidate who truly appreciates the contribution of Cal Poly students to our community. She will work for real job and career opportunities for students and graduates."
+454,6,0,"AT","0",0,1,"After all, we Cal Poly students and graduates are not just ''tourists."" We support this community, and we deserve jobs and better representation."
+455,6,0,"AT","0",0,1,"SUPERVISOR"
+456,6,0,"AT","0",0,1,"Paid for by the Committee to Elect Wendy Nogle Supervisor Ed Shaw, Treasurer 438-5525"
+457,6,0,"PI","0",0,0,"FRIDAY. OCTOBER 30, 1992"
+458,6,0,"PI","0",0,0,"Mustang Daily"
+459,6,16,"HL","0",0,0,"SOCCER"
+460,6,16,"ME","0",-5,0,"From page 5"
+461,6,16,"TXT","10",0,0,"minutes left in the game, Gaucho Patrick Griffin had a clean shot at the Mustang net, but the ball sailed over the goal."
+462,6,16,"TXT","11",0,0,"' With under two minutes remaining in the contest, U.C. Santa Barbara brought their goalkeeper forward in a furious attempt to tie the score."
+463,6,16,"TXT","12",0,0,"The Mustangs seized the opportunity of playing against the open goal when Black took a pass from Tbdd Henry and shot past a chasing Gaucho defender from near midfield."
+464,6,16,"TXT","13",0,0,"Black’s second goal, which capped the scoring, gave him a"
+465,6,16,"TXT","13",0,0,"team-leading nine for the season."
+466,6,16,"TXT","14",0,0,"Schwartz said the shutout of U.C. Santa Barbara was the result of a tough Cal Poly defense as much as his own play."
+467,6,16,"TXT","15",0,0,"“We’ve been playing some dominating defense,” Schwartz said. “I can’t say (the shutout) means anything special about the goalkeeper. It means your defense is playing well.”"
+468,6,16,"TXT","16",0,0,"Gartner said the win “keeps us alive. That’s the main thing.”"
+469,6,16,"TXT","17",0,0,"Cal Poly plays its next game Saturday at 1 p.m. at Mustang Stadium against Cal State Dominguez Hills."
+470,6,0,"AT","0",0,2,"Planned Parenthood Acrion Fund ELECTION HOTLINE"
+471,6,0,"AT","0",0,2,"Find out where the candidates stand on reproductive health care and reproductive choice."
+472,6,0,"AT","0",0,2,"CALL: 546-2657"
+473,6,0,"AT","0",0,2,"VOTE NOVEMBER 3rd. THE CHOICE IS YOURS!"
+474,6,0,"AT","0",0,2,"Paid for by the Planned Parenthood Action Fund 518 Garden Street, Santa Barbara, CA93101"
+475,0,0,"NA","0",0,0,"M'"
+476,6,0,"AT","0",0,4,"General Electric"
+477,6,0,"AT","0",0,4,"Information Session"
+478,6,0,"AT","0",0,4,"Monday, November 2 7:00- 9:00 pm Staff Dining Room Bldg. 19 room C"
+479,6,0,"AT","0",0,4,"For positions in:"
+480,6,0,"AT","0",0,4,"Field Engineering Program, Technical Sales Program, Edison Engineering Program"
+481,0,0,"NA","0",0,0,"k"
+482,6,0,"AT","0",0,6,"SEHLE"
+483,6,0,"AT","0",0,6,"Council"
+484,6,0,"B","0",0,0,
+485,6,0,"AT","0",0,7,"ÜVÉ"
+486,6,0,"AT","0",0,7,"ELECTION"
+487,6,0,"AT","0",0,7,"COVEHAGE"
+488,6,0,"AT","0",0,7,"November 3"
+489,0,0,"NA","0",0,0,"l<s»l"
+490,7,0,"PI","0",0,0,"MUSTANG Daily"
+491,7,0,"PI","0",0,0,"Friday, October 30. 1992"
+492,7,14,"HL","0",0,0,"SHOULDERS"
+493,7,14,"ME","0",-5,0,"From page 5"
+494,7,14,"TXT","28",0,0,"helpless feeling, Wade says."
+495,7,14,"TXT","29",0,0,"“I look out there and there’s nothing I can do except cheer the guys on and keep giving them encouragement,” he says. “It’s frustrating because I want to run on the field, but I just can’t.”"
+496,7,14,"TXT","30",0,0,"Wade speaks proudly of the remaining receivers who have stepped in under tough circumstances."
+497,7,14,"TXT","31",0,0,"“(The receivers) have made it through everything, and they’re doing well,” Wade says."
+498,7,0,"NA","0",0,0,"• • •"
+499,7,14,"TXT","32",0,0,"For one of the fallen players, future football prospects are uncertain. For the other, next season means a fresh start with a new set of high expectations."
+500,7,14,"TXT","33",0,0,"Since this is his senior season, it’s doubtful that Thomas will ever catch another pass or score another touchdown for Cal Poly."
+501,7,14,"TXT","34",0,0,"In order to qualify as a medical redshirt and retain a year of"
+502,7,14,"TXT","34",0,0,"eligibility, a player must play in 20 percent or less of a team’s games."
+503,7,14,"TXT","35",0,0,"By playing the less than one quarter against Cal State Hayward, Thomas pushed himself over the 20 percent limit."
+504,7,14,"TXT","36",0,0,"“Basically what I’m going to do is appeal to the NCAA,” Thomas said. “Hopefully I’ll have a good enough appeal that (the NCAA) will be sympathetic to my case.”"
+505,7,14,"TXT","37",0,0,"Thomas plans to appeal as a hardship in an effort to restore his final year of eligibility."
+506,7,14,"TXT","38",0,0,"Wade, on the other hand, will be playing again for the Mustangs next season."
+507,7,14,"TXT","39",0,0,"He'll tote the sling he’s been wearing around for about two more weeks. When he gets it off, he’ll immediately begin rehabilitation."
+508,7,14,"TXT","40",0,0,"“I’m looking forward to next year,” said Wade. “I think we’re going to have a great team.”"
+509,7,0,"AT","0",0,1,"VOTE	_"
+510,7,0,"AT","0",0,1,"VOTE DR. ROBERT BERNS"
+511,7,0,"AT","0",0,1,"VOTE"
+512,7,0,"AT","0",0,1,"SAN LUIS COASTAL SCHOOL BOARD"
+513,7,0,"AT","0",0,1,"VOTE"
+514,7,0,"AT","0",0,1,"VOTE"
+515,7,0,"AT","0",0,1,"VOTE"
+516,7,0,"AT","0",0,1,"VOTE"
+517,7,0,"AT","0",0,1,"VOTE"
+518,7,0,"AT","0",0,1,"VOTE"
+519,7,0,"AT","0",0,1,"VOTE"
+520,7,0,"AT","0",0,1,"Endorsed by"
+521,7,0,"AT","0",0,1,"SAN LUIS COASTAL TEACHERS ASSOCIATION"
+522,7,0,"AT","0",0,1,"PAID FOR By Robert Berns Campaign Fund"
+523,0,0,"NA","0",0,0,"0)"
+524,0,0,"NA","0",0,0,"si"
+525,0,0,"NA","0",0,0,"Si"
+526,0,0,"NA","0",0,0,"o"
+527,0,0,"NA","0",0,0,"o"
+528,0,0,"NA","0",0,0,"u>"
+529,0,0,"NA","0",0,0,"ss"
+530,0,0,"NA","0",0,0,"Ul"
+531,0,0,"NA","0",0,0,"2"
+532,7,0,"AT","0",0,2,"HAVE SAN LUIS OBISPO COUNTY'S LARGEST SELECTION OF MOUNTAIN & ROAD BIKES!"
+533,7,0,"AT","0",0,2,"NISHIKI"
+534,7,0,"AT","0",0,2,"BRIDGESTONE"
+535,7,0,"AT","0",0,2,"SCHWINN"
+536,7,0,"AT","0",0,2,"trek"
+537,7,0,"AT","0",0,2,"CYCLERY"
+538,7,0,"AT","0",0,2,"^6strel"
+539,7,0,"AT","0",0,2,"SPECIAUIED"
+540,7,0,"AT","0",0,2,"' ""	• I ' » E S « » T t S"
+541,7,0,"AT","0",0,2,"diamond back"
+542,7,0,"AT","0",0,2,"^ OiCCeöt0(U*' COKpttltot'S OOttfOKs!"
+543,0,0,"NA","0",0,0,"* h/e lav'C tU"
+544,7,0,"AT","0",0,2,"198 SOUTH ST. 543-4416"
+545,7,0,"AT","0",0,2,"LOS OSOS 2179 lOTH S"
+546,0,0,"B","0",0,0,
+547,7,0,"SH","0",0,0,"CiassifieD"
+548,7,0,"OT","0",0,0,"Campus Clubs AVIATION CLUB"
+549,7,0,"OT","0",0,0,"EXCITING TRIPS! FLYING! FUN! MEETING MON 11-3 6PM GR. ARTS 302"
+550,7,0,"OT","0",0,0,"STUDENT COMMUNITY SERVICES Special Events Dir, Secretary,"
+551,7,0,"OT","0",0,0,"Public Relations Committee APPLICATIONS In UU217, X5834 Come see us today!"
+552,7,0,"OT","0",0,0,"Announcements"
+553,7,0,"OT","0",0,0,"GMAT GRE LSAT TEST PREP!"
+554,7,0,"OT","0",0,0,"CALL THE PRINCETON REVIEW ANY TIME AT 995-0176 IN CAYUCOS."
+555,7,0,"OT","0",0,0,"Models Wanted for Hair Show International Stylists are looking tor people interested in tree cuts, perms, highlights and more. Pre-show meeting 5PM 10-31-92 Embassy Suites Hotel Lobby lor into 1-800-350-5152"
+556,7,0,"OT","0",0,0,"MUSTANG DAILY CLASSIFIEDS"
+557,7,0,"OT","0",0,0,"HAS A CONVENIENT DROP BOX LOCATED AT THE U.U. INFO DESK. THE ADS WILL BE PICKED UP DAILY AT 11:00 AM"
+558,7,0,"OT","0",0,0,"RECYCLE MUSTANG DAILY"
+559,7,0,"OT","0",0,0,"AT ANY OF OUR SIX CONVENIENT LOCATIONS: KENNEDY LIBRARY, AG BRIDGE (BLDG 10) CAMPUS STORE, THE CELLAR, THE UNIVERSITY UNION, FISHER SCIENCE. MUSTANG DAILY..."
+560,7,0,"OT","0",0,0,"ONCE AGAIN LEADING THE WAY"
+561,7,0,"OT","0",0,0,"STRESS FREE WEDDING PLANNING! Details Nov 5 or Call 546-9969"
+562,7,0,"OT","0",0,0,"Announcements"
+563,7,0,"OT","0",0,0,"UNDERSTANDING"
+564,7,0,"OT","0",0,0,"RELATIONSHIPS"
+565,7,0,"OT","0",0,0,"A 2 PART SEMINAR OCT 26 & NOV 2 7-9PM AT ALUMNI HOUSE PRESENTER MARY CICHOWSKI SPONSORED BY THE UNIVERSITY CHRISTIAN CENTER 544-3710 For Into"
+566,7,0,"OT","0",0,0,"VOTE"
+567,7,0,"OT","0",0,0,"BLAKELY!"
+568,7,0,"OT","0",0,0,"Personals"
+569,7,0,"OT","0",0,0,"KATY W."
+570,7,0,"OT","0",0,0,"Would you please attend my lormal on Nov. 20 with me? Awaiting your reply, Chris M"
+571,7,0,"OT","0",0,0,"KENDALL"
+572,7,0,"OT","0",0,0,"Happy"
+573,7,0,"OT","0",0,0,"Love, your fav"
+574,7,0,"OT","0",0,0,"21st!"
+575,7,0,"OT","0",0,0,"ivorite editor"
+576,7,0,"OT","0",0,0,"KRISTIN:"
+577,7,0,"OT","0",0,0,"HAPPY 1-YEAR ANNIVERSARY!"
+578,7,0,"OT","0",0,0,"I LOVE YOU, HON!"
+579,7,0,"OT","0",0,0,"LIBERAL SOCIALIST DEMOCRATS. CAN WE AFFORD THE RISK?"
+580,7,0,"OT","0",0,0,"Greek Mews"
+581,7,0,"OT","0",0,0,"AOn^ IN, ATP!"
+582,7,0,"OT","0",0,0,"CAN T WAIT FOR THE OCTOBERFEST TONIGHT! LOVE, KA0"
+583,7,0,"OT","0",0,0,"lOE STUD PLEDGE"
+584,7,0,"OT","0",0,0,"RICH MARTIN"
+585,7,0,"OT","0",0,0,"TODAY'S THE DAY! ANY CLUE? GET READY FOR YOUR BIG NIGHT!"
+586,7,0,"OT","0",0,0,"Lost & Found"
+587,7,0,"OT","0",0,0,"LOST"
+588,7,0,"OT","0",0,0,"HP CALCULATOR"
+589,7,0,"OT ","0",0,0,"IF FOUND PLEASE CALL 545-8167"
+590,7,0,"OT","0",0,0,"CASH REWARD"
+591,7,0,"OT","0",0,0,"Lost Gold Pinkey Ring on 10/15 sentimental value JB 547-9822 Reward"
+592,7,0,"OT","0",0,0,"Services"
+593,7,0,"OT","0",0,0,"ALPHA CRISIS PREGNANCY CENTER 24 HOUR LIFELINE 541-3367 FREE PREGNANCY TESTING •A FRIEND FOR LIFE"""
+594,7,0,"OT","0",0,0,"COLLEGE MONEY"
+595,7,0,"OT","0",0,0,"GUARANTEED FINANCIAL AID FOR FREE INFORMATION CONTACT STUDENT SOURCE (805) 473-3281"
+596,7,0,"OT","0",0,0,"MAC TRAINING!"
+597,7,0,"OT","0",0,0,"l-l&Classes. MacTeacher 543-2460"
+598,7,0,"OT","0",0,0,"STUDY ABROAD IN AUSTRALIA"
+599,7,0,"OT","0",0,0,"Information on semester,year, graduate,summer and internship programs in Australia. We represent 28 Australian Universities Call us loll free 1-800-245-2575"
+600,7,0,"OT","0",0,0,"Word Processing"
+601,7,0,"OT","0",0,0,"A SECRETARIAL SERVICE ACCURACY/SPEED 541-6170 ZEENA"
+602,7,0,"OT","0",0,0,"LOW-RATE LOCAL WORD-PROCESSING GREAT FONTS! CALL MARY 481-5143"
+603,7,0,"OT","0",0,0,"PAPER CHASE WORD PROCESSING 7 YRS EXP-CALL KAREN 544-2692"
+604,7,0,"OT","0",0,0,"Travel"
+605,7,0,"OT","0",0,0,"TRAVEL SCHOOL"
+606,7,0,"OT","0",0,0,"in 10 weeks. Hands on SABRE training & more. Enroll now!"
+607,7,0,"OT","0",0,0,"Day & weekend classes."
+608,7,0,"OT","0",0,0,"Call 543-7301"
+609,7,0,"OT","0",0,0,"Travel"
+610,7,0,"OT","0",0,0,"SUMMER MGMT. INTERNSHIPS Most positions tilled by Nov. Gain val exp. managing 6-8 employees, customers, and suppliers. Avg. earnings 6-16,000>.Call ""University Painting Pros"" Inlo/appl. Call 800-525-5877."
+611,7,0,"OT","0",0,0,"For Sale"
+612,7,0,"OT","0",0,0,"Desktop Publishing Printer Lazer Max 1000 with Macintosh Control-board. Ideal desktop output (1000dpi) with 135 typefaces included.Only two years old-new $7500,asking $3500obo.Call Larry at VEP-756-2295 lor demo."
+613,7,0,"OT","0",0,0,"GIGANTIC T-SHIRT SALE SAT 10/31 8-1PM DOLPHIN SHIRT CO 757 BUCKLEY RD SLO"
+614,7,0,"OT","0",0,0,"Mopeds & Cycles"
+615,7,0,"OT","0",0,0,"1981 HONDA PASSPORT,9800ml S4250B0 CALL 543-1259,544-8741"
+616,7,0,"OT","0",0,0,"86 YAMAHA FAZER 700 cc Unique cycle. Genesis engine, lairing $1300/oller must SELL! 595-9226"
+617,7,0,"OT","0",0,0,"Roommates"
+618,7,0,"OT","0",0,0,"Bicycles"
+619,7,0,"OT","0",0,0,"BICYCLES Boys and girls 3- and 5-speed classics. 545-8119/msg"
+620,7,0,"OT","0",0,0,"Automobiles"
+621,7,0,"OT","0",0,0,"91 MUSTANG,LEATHER,LOADED 12000 OBO 489-4080 OR 773-1409"
+622,0,0,"B","0",0,0,
+623,7,0,"CT","0",0,0,"ACKLPTh '"
+624,7,0,"CT","0",0,0,"TUM h FlifABLE.'"
+625,7,0,"CT","0",0,0,"NOU QOIHG TO GET TWE ß^VL’"
+626,7,0,"CT","0",0,0,"ITS HOT MUCW T\jK PlMlHG YUTU SOMtOHE YWO WOULD RATHER TACyCLE THAN WIN."
+627,7,0,"CT","0",0,0,"GO OH, TA<.E /L QUNHtHG"
+628,7,0,"CT","0",0,0,"START Jr^"
+629,7,0,"OT","0",0,0,"Rental Housing"
+630,7,0,"OT","0",0,0,"2 BDRM APART. S625/MNTH CLOSE TO POLY & SHOPPING ® 406 FERRINI, SLO 544-9267"
+631,7,0,"OT","0",0,0,"Homes for Sale"
+632,7,0,"OT","0",0,0,"0	BEST PRICED CONDOS & HOMES LISTED FREE SPECIALIZING IN"
+633,7,0,"OT","0",0,0,"STUDENT/PARENT INVESTMENTS. INFORMATION PACKET AVAILABLE ON CAMPUS CALL MARGUERITE 541-3432 CENTURY 21-SLO PROP."
+634,7,0,"OT","0",0,0,"Opportunities"
+635,7,0,"OT","0",0,0,"CAUTION: Make no investments before Investigating advertisements in Opportunities which require investments in slock samples, equipment or cash bonds."
+636,7,0,"OT","0",0,0,"COME FLY WITH EAGLES $25 INTRODUCTORY FLIGHT LESSON 473-2001"
+637,7,0,"OT","0",0,0,"International Employment.Make money leaching Errglish abroad. Japan and Taiwan Room & Board provided Make S2,000-$4.000-*per month. Financially & Culturally rewarding! For program and application, call the Inlemalional EmploymenI Group:"
+638,7,0,"OT","0",0,0,"(206) 632-1146 ext.J6005."
+639,7,0,"OT","0",0,0,"LEARN TO SKYDIVE!! Questions? Call 805-239-DIVE"
+640,7,0,"OT","0",0,0,"Employment"
+641,7,0,"OT","0",0,0,"NEED PART TIME ESTIMATOR FOR CONSTRUCTON OFFICE TO START IMMEDIATELY 489-4080"
+642,7,0,"OT","0",0,0,"01	BUYING A HOUSE OR CONDO? FOR A FREE LIST OF ALL LEAST EXPENSIVE HOUSES & CONDOS"
+643,7,0,"OT","0",0,0,"FOR SALE IN SLO,CALL STEVE NELSON 543-8370-FARRELL SMYTH R/E."
+644,8,0,"AT","0",0,1,"Re-elect"
+645,0,0,"AT","0",0,1,"EVELYN DELANY"
+646,0,0,"NA","0",0,0,"^	«I"
+647,0,0,"NA","0",0,0,"■ .V -"
+648,0,0,"B","0",0,0,
+649,0,0,"B","0",0,0,
+650,0,0,"NA","0",0,0,"■•••'. V	4.'	'T* '"
+651,0,0,"NA","0",0,0,"■'J tAÍ<- - Vs"
+652,0,0,"NA","0",0,0,"O"
+653,8,0,"AT","0",0,1,"Êvi/jn Delany"
+654,8,0,"AT","0",0,1,"Founder, Ocean Sanctuary Coalition"
+655,8,0,"AT","0",0,1,"Will Support:"
+656,8,0,"AT","0",0,1,"Bike Lanes & Public Transit Better Community Relations Preserving the Beauty of SLO County Protecting Open Space"
+657,8,0,"AT","0",0,1,"We Need Evelyn for Her Strong Community Concern and for Her Environmental and Neighborhood Preservation"
+658,8,0,"AT","0",0,1,"- Allen Settle, Cal Poly Professor"
+659,8,0,"AT","0",0,1,"Experienced, Effective and She Listens"
+660,8,0,"AT","0",0,1,"Reelect Evelyn Delany Supervisor, 3rd District"
+661,8,0,"AT","0",0,1,"November 3"
+662,8,0,"AT","0",0,1,"Paid political advertisement. Evelyn Delany Campaign, Valerie Endres, Treasurer, 790 Islay St., San Luis Obispo, CA 93401"
+663,8,0,"PI","0",0,0,"8 Friday. October 30, 1992"
+664,8,0,"PI","0",0,0,"Mustang Daily"
+665,8,3,"HL","0",0,0,"ASI"
+666,8,3,"ME","0",-1,0,"From page 1"
+667,8,3,"TXT","6",0,0,"In other ASI business, Union Executive Committee Chair Basse! Anber said he has begun a feasibility study to determine the effects of alcohol sales on cam-pus."
+668,8,3,"TXT","7",0,0,"Foundation and administration officials have said previously they are opposed to alcohol sales on campus."
+669,8,3,"TXT","8",0,0,"Officials at other California State University campuses say"
+670,8,3,"TXT","8",0,0,"they have been successful in selling beer and wine."
+671,8,3,"TXT","9",0,0,"Anber said he plans to conduct a student survey on what students like and don’t like about on-campus services, followed by another survey directly related to student attitudes regarding alcohol sales on campus."
+672,8,3,"TXT","10",0,0,"He said he plans to report back to the ASI board at the end of fall quarter or beginning of winter quarter."
+673,8,0,"AT","0",0,2,"AiAcrs"
+674,8,0,"AT","0",0,2,"IS HIRING FOR THE HOLIDAYS"
+675,8,0,"AT","0",0,2,"Mocy's is ollering lull or part time positions, selling or non-selling; a great employment package and store discount. Apply in person Monday through Saturday 10 a.m. -6 p.m."
+676,8,0,"AT","0",0,2,"Macy's is an equal opportunity employer"
+677,0,0,"B","0",0,0,
+678,8,0,"AT","0",0,3,"in th^foundation plaza between the ATM and Sandwich Plant"
+679,8,0,"AT","0",0,3,"8am-4pm"
+680,8,0,"AT","0",0,3,"EIGDiral Bookstore"
+681,8,0,"AT","0",0,4,"First come the flies. They'll find a body in one or two days, sometimes within hours."
+682,8,0,"AT","0",0,4,"WILLIAM C. RODRIGUEZ"
+683,8,0,"AT","0",0,4,"Pentagon Institute of Pathology"
+684,8,0,"AT","0",0,4,"To find out"
+685,8,0,"AT","0",0,4,"new uses"
+686,8,0,"AT","0",0,4,"maggots, turn to page two."
+687,0,0,"NA","0",0,0,"I % / T 'T/ ' ■ r"" «"
+688,0,0,"NA","0",0,0,"? 4/lg = ..... ."
+689,0,0,"NA","0",0,0,"Í Ti /	|	; .	% Í	;"
+690,0,0,"NA","0",0,0,".*>>:V.NNV"
+691,0,0,"NA","0",0,0,"AW.V»^VwV^V.»^^W.VS^W»WA^VW,%^^WlW.S%V>%^W.VAWAV^.VVV«.V^V>,^Vl<M,V»Wy^wW.V^wWl.^.W♦W.«.S^•.«.^VAVW.*"
+692,8,0,"B","0",0,0,
+693,8,0,"AT","0",0,4,"The only paper in America pnxiuced and printed entirely by students."
+694,,,,,,,
+695,,,,,,,
+696,,,,,,,
+697,,,,,,,
+698,,,,,,,
+699,,,,,,,
+700,,,,,,,
+701,,,,,,,
+702,,,,,,,
+703,,,,,,,
+704,,,,,,,
+705,,,,,,,
+706,,,,,,,
+707,,,,,,,
+708,,,,,,,
+709,,,,,,,
+710,,,,,,,
+711,,,,,,,
+712,,,,,,,
+713,,,,,,,
+714,,,,,,,
+715,,,,,,,
+716,,,,,,,
+717,,,,,,,
+718,,,,,,,
+719,,,,,,,
+720,,,,,,,
+721,,,,,,,
+722,,,,,,,
+723,,,,,,,
+724,,,,,,,
+725,,,,,,,
+726,,,,,,,
+727,,,,,,,
+728,,,,,,,
+729,,,,,,,
+730,,,,,,,
+731,,,,,,,
+732,,,,,,,
+733,,,,,,,
+734,,,,,,,
+735,,,,,,,
+736,,,,,,,
+737,,,,,,,
+738,,,,,,,
+739,,,,,,,
+740,,,,,,,
+741,,,,,,,
+742,,,,,,,
+743,,,,,,,
+744,,,,,,,
+745,,,,,,,
+746,,,,,,,
+747,,,,,,,
+748,,,,,,,
+749,,,,,,,
+750,,,,,,,
+751,,,,,,,
+752,,,,,,,
+753,,,,,,,
+754,,,,,,,
+755,,,,,,,
+756,,,,,,,
+757,,,,,,,
+758,,,,,,,
+759,,,,,,,
+760,,,,,,,
+761,,,,,,,
+762,,,,,,,
+763,,,,,,,
+764,,,,,,,
+765,,,,,,,
+766,,,,,,,
+767,,,,,,,
+768,,,,,,,
+769,,,,,,,
+770,,,,,,,
+771,,,,,,,
+772,,,,,,,
+773,,,,,,,
+774,,,,,,,
+775,,,,,,,
+776,,,,,,,
+777,,,,,,,
+778,,,,,,,
+779,,,,,,,
+780,,,,,,,
+781,,,,,,,
+782,,,,,,,
+783,,,,,,,
+784,,,,,,,
+785,,,,,,,
+786,,,,,,,
+787,,,,,,,
+788,,,,,,,
+789,,,,,,,
+790,,,,,,,
+791,,,,,,,
+792,,,,,,,
+793,,,,,,,
+794,,,,,,,
+795,,,,,,,
+796,,,,,,,
+797,,,,,,,
+798,,,,,,,
+799,,,,,,,
+800,,,,,,,
+801,,,,,,,
+802,,,,,,,
+803,,,,,,,
+804,,,,,,,
+805,,,,,,,
+806,,,,,,,
+807,,,,,,,
+808,,,,,,,
+809,,,,,,,
+810,,,,,,,
+811,,,,,,,
+812,,,,,,,
+813,,,,,,,
+814,,,,,,,
+815,,,,,,,
+816,,,,,,,
+817,,,,,,,
+818,,,,,,,
+819,,,,,,,
+820,,,,,,,
+821,,,,,,,
+822,,,,,,,
+823,,,,,,,
+824,,,,,,,
+825,,,,,,,
+826,,,,,,,
+827,,,,,,,
+828,,,,,,,
+829,,,,,,,
+830,,,,,,,
+831,,,,,,,
+832,,,,,,,
+833,,,,,,,
+834,,,,,,,
+835,,,,,,,
+836,,,,,,,
+837,,,,,,,
+838,,,,,,,
+839,,,,,,,
+840,,,,,,,
+841,,,,,,,
+842,,,,,,,
+843,,,,,,,
+844,,,,,,,
+845,,,,,,,
+846,,,,,,,
+847,,,,,,,
+848,,,,,,,
+849,,,,,,,
+850,,,,,,,
+851,,,,,,,
+852,,,,,,,
+853,,,,,,,
+854,,,,,,,
+855,,,,,,,
+856,,,,,,,
+857,,,,,,,
+858,,,,,,,
+859,,,,,,,
+860,,,,,,,
+861,,,,,,,
+862,,,,,,,
+863,,,,,,,
+864,,,,,,,
+865,,,,,,,
+866,,,,,,,
+867,,,,,,,
+868,,,,,,,
+869,,,,,,,
+870,,,,,,,
+871,,,,,,,
+872,,,,,,,
+873,,,,,,,
+874,,,,,,,
+875,,,,,,,
+876,,,,,,,
+877,,,,,,,
+878,,,,,,,
+879,,,,,,,
+880,,,,,,,
+881,,,,,,,
+882,,,,,,,
+883,,,,,,,
+884,,,,,,,
+885,,,,,,,
+886,,,,,,,
+887,,,,,,,
+888,,,,,,,
+889,,,,,,,
+890,,,,,,,
+891,,,,,,,
+892,,,,,,,
+893,,,,,,,
+894,,,,,,,
+895,,,,,,,
+896,,,,,,,
+897,,,,,,,
+898,,,,,,,
+899,,,,,,,
+900,,,,,,,
+901,,,,,,,
+902,,,,,,,
+903,,,,,,,
+904,,,,,,,
+905,,,,,,,
+906,,,,,,,
+907,,,,,,,
+908,,,,,,,
+909,,,,,,,
+910,,,,,,,
+911,,,,,,,
+912,,,,,,,
+913,,,,,,,
+914,,,,,,,
+915,,,,,,,
+916,,,,,,,
+917,,,,,,,
+918,,,,,,,
+919,,,,,,,
+920,,,,,,,
+921,,,,,,,
+922,,,,,,,
+923,,,,,,,
+924,,,,,,,
+925,,,,,,,
+926,,,,,,,
+927,,,,,,,
+928,,,,,,,
+929,,,,,,,
+930,,,,,,,
+931,,,,,,,
+932,,,,,,,
+933,,,,,,,
+934,,,,,,,
+935,,,,,,,
+936,,,,,,,
+937,,,,,,,
+938,,,,,,,
+939,,,,,,,
+940,,,,,,,
+941,,,,,,,
+942,,,,,,,
+943,,,,,,,
+944,,,,,,,
+945,,,,,,,
+946,,,,,,,
+947,,,,,,,
+948,,,,,,,
+949,,,,,,,
+950,,,,,,,
+951,,,,,,,
+952,,,,,,,
+953,,,,,,,
+954,,,,,,,
+955,,,,,,,
+956,,,,,,,
+957,,,,,,,
+958,,,,,,,
+959,,,,,,,
+960,,,,,,,
+961,,,,,,,
+962,,,,,,,
+963,,,,,,,
+964,,,,,,,
+965,,,,,,,
+966,,,,,,,
+967,,,,,,,
+968,,,,,,,
+969,,,,,,,
+970,,,,,,,
+971,,,,,,,
+972,,,,,,,
+973,,,,,,,
+974,,,,,,,
+975,,,,,,,
+976,,,,,,,
+977,,,,,,,
+978,,,,,,,
+979,,,,,,,
+980,,,,,,,
+981,,,,,,,
+982,,,,,,,
+983,,,,,,,
+984,,,,,,,
+985,,,,,,,
+986,,,,,,,
+987,,,,,,,
+988,,,,,,,
+989,,,,,,,
+990,,,,,,,
+991,,,,,,,
+992,,,,,,,
+993,,,,,,,
+994,,,,,,,
+995,,,,,,,
+996,,,,,,,
+997,,,,,,,
+998,,,,,,,
+999,,,,,,,
+1000,,,,,,,
+1001,,,,,,,
+1002,,,,,,,
+1003,,,,,,,
+1004,,,,,,,
+1005,,,,,,,
+1006,,,,,,,
+1007,,,,,,,
+1008,,,,,,,
+1009,,,,,,,
+1010,,,,,,,
+1011,,,,,,,
+1012,,,,,,,
+1013,,,,,,,
+1014,,,,,,,
+1015,,,,,,,
+1016,,,,,,,
+1017,,,,,,,
+1018,,,,,,,
+1019,,,,,,,
+1020,,,,,,,
+1021,,,,,,,
+1022,,,,,,,
+1023,,,,,,,
+1024,,,,,,,
+1025,,,,,,,
+1026,,,,,,,
+1027,,,,,,,
+1028,,,,,,,
+1029,,,,,,,
+1030,,,,,,,
+1031,,,,,,,
+1032,,,,,,,
+1033,,,,,,,
+1034,,,,,,,
+1035,,,,,,,
+1036,,,,,,,
+1037,,,,,,,
+1038,,,,,,,
+1039,,,,,,,
+1040,,,,,,,
+1041,,,,,,,
+1042,,,,,,,
+1043,,,,,,,
+1044,,,,,,,
+1045,,,,,,,
+1046,,,,,,,
+1047,,,,,,,
+1048,,,,,,,
+1049,,,,,,,
+1050,,,,,,,
+1051,,,,,,,
+1052,,,,,,,
+1053,,,,,,,
+1054,,,,,,,
+1055,,,,,,,
+1056,,,,,,,
+1057,,,,,,,
+1058,,,,,,,
+1059,,,,,,,
+1060,,,,,,,
+1061,,,,,,,
+1062,,,,,,,
+1063,,,,,,,
+1064,,,,,,,
+1065,,,,,,,
+1066,,,,,,,
+1067,,,,,,,
+1068,,,,,,,
+1069,,,,,,,
+1070,,,,,,,
+1071,,,,,,,
+1072,,,,,,,
+1073,,,,,,,
+1074,,,,,,,
+1075,,,,,,,
+1076,,,,,,,
+1077,,,,,,,
+1078,,,,,,,
+1079,,,,,,,
+1080,,,,,,,
+1081,,,,,,,
+1082,,,,,,,
+1083,,,,,,,
+1084,,,,,,,
+1085,,,,,,,
+1086,,,,,,,
+1087,,,,,,,
+1088,,,,,,,
+1089,,,,,,,
+1090,,,,,,,
+1091,,,,,,,
+1092,,,,,,,
+1093,,,,,,,
+1094,,,,,,,
+1095,,,,,,,
+1096,,,,,,,
+1097,,,,,,,
+1098,,,,,,,
+1099,,,,,,,
+1100,,,,,,,
+1101,,,,,,,
+1102,,,,,,,
+1103,,,,,,,
+1104,,,,,,,
+1105,,,,,,,
+1106,,,,,,,
+1107,,,,,,,
+1108,,,,,,,
+1109,,,,,,,
+1110,,,,,,,
+1111,,,,,,,
+1112,,,,,,,
+1113,,,,,,,
+1114,,,,,,,
+1115,,,,,,,
+1116,,,,,,,
+1117,,,,,,,
+1118,,,,,,,
+1119,,,,,,,
+1120,,,,,,,
+1121,,,,,,,
+1122,,,,,,,
+1123,,,,,,,
+1124,,,,,,,
+1125,,,,,,,
+1126,,,,,,,
+1127,,,,,,,
+1128,,,,,,,
+1129,,,,,,,
+1130,,,,,,,
+1131,,,,,,,
+1132,,,,,,,
+1133,,,,,,,
+1134,,,,,,,
+1135,,,,,,,
+1136,,,,,,,
+1137,,,,,,,
+1138,,,,,,,
+1139,,,,,,,
+1140,,,,,,,
+1141,,,,,,,
+1142,,,,,,,
+1143,,,,,,,
+1144,,,,,,,
+1145,,,,,,,
+1146,,,,,,,
+1147,,,,,,,
+1148,,,,,,,
+1149,,,,,,,
+1150,,,,,,,
+1151,,,,,,,
+1152,,,,,,,
+1153,,,,,,,
+1154,,,,,,,
+1155,,,,,,,
+1156,,,,,,,
+1157,,,,,,,
+1158,,,,,,,
+1159,,,,,,,
+1160,,,,,,,
+1161,,,,,,,
+1162,,,,,,,
+1163,,,,,,,
+1164,,,,,,,
+1165,,,,,,,
+1166,,,,,,,
+1167,,,,,,,
+1168,,,,,,,
+1169,,,,,,,
+1170,,,,,,,
+1171,,,,,,,
+1172,,,,,,,
+1173,,,,,,,
+1174,,,,,,,
+1175,,,,,,,
+1176,,,,,,,
+1177,,,,,,,
+1178,,,,,,,
+1179,,,,,,,
+1180,,,,,,,
+1181,,,,,,,
+1182,,,,,,,
+1183,,,,,,,
+1184,,,,,,,
+1185,,,,,,,
+1186,,,,,,,
+1187,,,,,,,
+1188,,,,,,,
+1189,,,,,,,
+1190,,,,,,,
+1191,,,,,,,
+1192,,,,,,,
+1193,,,,,,,
+1194,,,,,,,
+1195,,,,,,,
+1196,,,,,,,
+1197,,,,,,,
+1198,,,,,,,
+1199,,,,,,,
+1200,,,,,,,
